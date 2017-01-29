@@ -1,10 +1,24 @@
 # Authors
 
-Max Barrass:
+max.barrass@gmail.com:
   name        : "Max Barrass"
   uri         : "http://maxbarrass.com"
   email       : "max.barrass@gmail.com"
-  bio         : "What do you want, jewels? I am a very extravagant man."
-  avatar      : "/assets/images/bio-photo.jpg"
+  bio         : "Founder"
+  avatar      : "/assets/images/profile/maxbarrass2.jpg"
   twitter     : "maxbarrass"
   google_plus : "maxbarrass"
+  linkedin    : "maxbarrass"
+
+yaw.ly@gmail.com:
+  name        : "Yaw Ly"
+  bio         : "Founder"
+  avatar      : "/assets/images/profile/bio-photo.jpg"
+  linkedin    : "yaw-ly-16805514"
+  github      : "yawly"
+
+katreencook@yahoo.com.au:
+  name        : "Katreen Cook"
+  bio         : "Chief Editor"
+  avatar      : "/assets/images/profile/bio-photo.jpg"
+  linkedin    : "katreencook"

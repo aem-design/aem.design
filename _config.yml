@@ -19,9 +19,9 @@ theme                    : minimal-mistakes-jekyll
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : staticman # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "aem-design" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -49,7 +49,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification :
+google_site_verification : "nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -73,24 +73,26 @@ social:
 analytics:
   provider               : google-universal # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-90746663-1
 
+advertising:
+  show                   : true
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  name             : # "Max Barrass"
+  avatar           : # "/assets/images/profile/maxbarrass2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : # "Founder"
+  location         : # "Melbourne, AU"
   email            :
-  uri              :
+  uri              : # http://maxbarrass.com
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : # https://github.com/aem-design
   google_plus      :
   keybase          :
   instagram        :
@@ -245,3 +247,47 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      comments: true
+      layout: single
+      author_profile: true
+  # _docs
+  - scope:
+      path: "/quick-start-guide/"
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: true
+      share: true
+      comments: true
+      sidebar:
+        nav: "quick-start-guide"
+  # _manifesto
+  - scope:
+      path: ""
+      type: manifesto
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
+      related: true
+      sidebar:
+        nav: "manifesto"
+
+
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+  manifesto:
+    output: true
+    permalink: /:collection/:path/

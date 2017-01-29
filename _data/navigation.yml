@@ -1,36 +1,54 @@
 # main links
 main:
-   - title: "About"
-     url: /about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Quick-Start Guide"
+    url: /quick-start-guide/
+  - title: "Manifesto"
+    url: /manifesto/
+  - title: "About"
+    url: /about/
+#  - title: "Sample Posts"
+#    url: /year-archive/
+#  - title: "Sample Collections"
+#    url: /collection-archive/
+#  - title: "Page Archive"
+#    url: /page-archive/
+#  - title: "Portfolio Archive"
+#    url: /portfolio/
+#  - title: "Tag Archive"
+#    url: /tags/
+#  - title: "Terms &amp; Privacy Policy"
+#    url: /terms/
 
 # documentation links
-about:
-  - title: Getting Started
+docs:
+  - title: Docs
+    url: /quick-start-guide/
     children:
       - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
-      - title: "Structure"
-        url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+        url: /quick-start-guide/
+      - title: "Contributing"
+        url: /contributing/
+      - title: "License"
+        url: /license/
+      - title: "Terms &amp; Privacy Policy"
+        url: /terms/
 
-# sidebar navigation list sample
-sidebar-sample:
-  - title: "Parent Page A"
+#manifesto links
+manifesto:
+  - title: Manifesto
+    url: /manifesto/
     children:
-      - title: "Child Page A1"
-        url: /
-      - title: "Child Page A2"
-        url: /
-      - title: "Child Page A3"
-        url: /
-      - title: "Child Page A4"
-        url: /
+      - title: "Introduction"
+        url: /manifesto/introduction/
+      - title: "Principles"
+        url: /manifesto/principles/
+      - title: "Capabilities"
+        url: /manifesto/capabilities/
+      - title: "Delivery"
+        url: /manifesto/delivery/
+      - title: "Project"
+        url: /manifesto/project/
+      - title: "Content"
+        url: /manifesto/content/
+      - title: "Technical"
+        url: /manifesto/technical/
