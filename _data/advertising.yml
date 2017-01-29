@@ -1,6 +1,6 @@
-# Authors
+# Advertising
 
-show          : &block_show false
+show          : &block_show true
 url           : &script_url "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 
 #appears above title on single template

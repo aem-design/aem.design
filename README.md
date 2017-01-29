@@ -16,3 +16,7 @@ You can update this repo using your favorite IDE or use a web based editor
 When creating pages in this repo use the markdown syntax, you can find syntax here:
 
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Icons
+
+Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)

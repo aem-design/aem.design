@@ -6,17 +6,17 @@ github:
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/background/mm-home-page-feature.jpg
-  cta_label: "<i class='fa fa-book'></i> Start Here"
+  cta_label: "<i class='fa fa-lightbulb-o'></i> Start Here"
   cta_url: "/quick-start-guide/"
   caption:
-excerpt: 'Enable your AEM'
-#feature_row:
-#  - image_path: /assets/images/mm-customizable-feature.png
-#    alt: "customizable"
-#    title: "Super Customizable"
-#    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-#    url: "/docs/configuration/"
-#    btn_label: "Learn More"
+excerpt: 'Unlock your knowledge and enable your AEM implementations to evolve beyond cognitive bias of the past'
+feature_row:
+  - image_path: /assets/images/cards/mm-free-feature.png
+    alt: "manifesto"
+    title: "Read the Manifesto"
+    excerpt: "Learn here about AEM"
+    url: "/manifesto/"
+    btn_label: "Learn More"
 #  - image_path: /assets/images/mm-responsive-feature.png
 #    alt: "fully responsive"
 #    title: "Responsive Layouts"
@@ -29,8 +29,8 @@ excerpt: 'Enable your AEM'
 #    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
 #    url: "/docs/license/"
 #    btn_label: "Learn More"
-#intro:
-#  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fa fa-twitter"></i> @mmistakes](https://twitter.com/mmistakes){: .btn .btn--twitter}'
+intro:
+  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fa fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
 ---
 
 {% include feature_row id="intro" type="center" %}
