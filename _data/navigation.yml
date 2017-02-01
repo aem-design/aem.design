@@ -4,6 +4,8 @@ main:
     url: /quick-start-guide/
   - title: "Manifesto"
     url: /manifesto/
+  - title: "Blog"
+    url: /blog/
   - title: "About"
     url: /about/
   - title: "Search"
