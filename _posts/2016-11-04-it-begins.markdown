@@ -1,9 +1,14 @@
 ---
 layout: single
+permalink: /blog/2016/11/04/it-begins
 title:  "The Journey begins..."
 date:   2016-11-04 18:57:00 +1100
-categories: jekyll update
-tags: about
+author: max.barrass@gmail.com
+categories:
+  - blog
+tags:
+  - journey
+  - start
 ---
 
 Over last few years we have done lots of great work. We have worked hard and learned even harder. We meet along the way and have stuck together working tirelessly to better each other.
