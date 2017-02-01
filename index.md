@@ -17,6 +17,12 @@ feature_row:
     excerpt: "Learn here about AEM"
     url: "/manifesto/"
     btn_label: "Learn More"
+  - image_path: /assets/images/cards/blog-hero.jpg
+    alt: "blog"
+    title: "Read the Blog"
+    excerpt: "More pages on AEM"
+    url: "/blog/"
+    btn_label: "Blog"
 #  - image_path: /assets/images/mm-responsive-feature.png
 #    alt: "fully responsive"
 #    title: "Responsive Layouts"
