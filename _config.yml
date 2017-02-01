@@ -115,6 +115,7 @@ include:
   - .htaccess
   - _pages
   - CNAME
+  - search.html
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
