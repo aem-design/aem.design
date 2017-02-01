@@ -32,12 +32,15 @@ To get started with development on AEM you will need the following:
 * IntelliJ
 * Java 1.8
 * Maven
+* AEM Jar file and valid license #
+
+You can email SPP help desk to get a copy, if you are not registered follow these instruction (How to Join the Adobe Solution Partner Program)[https://spark.adobe.com/page/sE8JD/]
 
 On a Mac you can use the following configuration project to set everything up in one go
 
 * [dev-setup](https://github.com/wildone/dev-setup)
 
-When you have the prequsites ready, follow this guide to build your first demo project.
+When you have the perquisites ready, follow this guide to build your first demo project.
 
 * [How to Build AEM Projects using Apache Maven](https://docs.adobe.com/docs/en/aem/6-2/develop/dev-tools/ht-projects-maven.html)
 

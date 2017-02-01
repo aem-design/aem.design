@@ -15,6 +15,6 @@ This goes for author sidebar links and "share button" additions -- I have no int
 
 ## Pull Requests
 
-To help me out try to avoid creating pull requests on `master` and instead branch off of `develop`. It's much easier for me to test, merge, and roll them into new releases this way.
+To help out try to avoid creating pull requests on `master` and instead branch off of `develop`. It's much easier to test, merge, and roll them into new releases this way.
 
 Theme documentation and demo pages can be found in the [`/docs`](https://github.com/{{ site.repository }}/blob/master/docs) if submitting improvements, typo corrections, etc.
