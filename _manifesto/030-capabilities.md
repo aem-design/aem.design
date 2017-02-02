@@ -3,6 +3,7 @@ title: "Capabilities"
 permalink: /manifesto/capabilities/
 excerpt: "AEM stands for Experience"
 modified: 2016-11-03T10:01:43-04:00
+author: max.barrass@gmail.com
 redirect_from:
   - /manifesto/principles
 ---

@@ -3,6 +3,7 @@ title: "Project Guide"
 permalink: /manifesto/project/
 excerpt: "It's important that documentation is seen as a journey not a deliverable"
 modified: 2016-11-03T10:01:43-04:00
+author: max.barrass@gmail.com
 redirect_from:
   - /manifesto/delivery/
 ---

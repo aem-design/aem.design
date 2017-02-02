@@ -3,6 +3,7 @@ title: "Platform Principles"
 permalink: /manifesto/principles/
 excerpt: "Consider that when creating content structures you are creating them once and forever."
 modified: 2016-11-03T10:01:43-04:00
+author: max.barrass@gmail.com
 redirect_from:
   - /manifesto/introduction/
 ---
