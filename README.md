@@ -3,7 +3,7 @@ AEM.Design blog
 
 [![Codeship release](https://codeship.com/projects/9248b2c0-c41b-0134-b8f0-621863df2064/status?branch=master)](https://github.com/aem-design/aem.design)
 
-![statuscake](https://app.statuscake.com/button/index.php?Track=sKW7chwd8h&Days=1&Design=1 "statuscake")
+![statuscake](https://app.statuscake.com/button/index.php?Track=sKW7chwd8h&Days=7&Design=3 "statuscake")
 
 ## Updating this Repo
 
