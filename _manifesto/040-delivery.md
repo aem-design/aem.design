@@ -64,6 +64,8 @@ Here are initial list of CMS Functional Groups for components:
 
 * List - find content and show data in listing, contain layout and style related content
 
+* Details - used to create and display custom metadata for different page types
+
 * Widgets - used to provide client-side functionality, integrating 3rd party services
 
 * Commerce - used for eComponents, shopping carts, checkouts, product listing etc
