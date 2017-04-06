@@ -3,7 +3,7 @@ layout: single
 permalink: /blog/2016/11/04/it-begins
 title:  "The Journey begins..."
 date:   2016-11-04 18:57:00 +1100
-author: max.barrass@gmail.com
+author: max@aem.design
 categories:
   - blog
 tags:
