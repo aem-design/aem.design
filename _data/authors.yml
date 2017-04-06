@@ -3,7 +3,7 @@
 max.barrass@gmail.com:
   name        : "Max Barrass"
   uri         : "http://maxbarrass.com"
-  email       : "max.barrass@gmail.com"
+  email       : "max@aem.design"
   bio         : "Founder"
   avatar      : "/assets/images/profile/maxbarrass3.jpg"
   twitter     : "maxbarrass"
@@ -13,6 +13,7 @@ max.barrass@gmail.com:
 yaw.ly@gmail.com:
   name        : "Yaw Ly"
   bio         : "Founder"
+  email       : "yaw@aem.design"
   avatar      : "/assets/images/profile/yawly.jpg"
   linkedin    : "yaw-ly-16805514"
   github      : "yawly"
