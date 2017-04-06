@@ -3,7 +3,7 @@ title: "Delivery Guide"
 permalink: /manifesto/delivery/
 excerpt: "Components are the basic building blocks in AEM"
 modified: 2016-11-03T10:01:43-04:00
-author: max.barrass@gmail.com
+author: max@aem.design
 redirect_from:
   - /manifesto/capabilities/
 ---

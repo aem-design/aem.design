@@ -3,7 +3,7 @@ title: "Technical Standards"
 permalink: /manifesto/technical/
 excerpt: "Simple to understand, easy to follow."
 modified: 2016-11-03T10:01:43-04:00
-author: max.barrass@gmail.com
+author: max@aem.design
 redirect_from:
   - /manifesto/content/
 ---

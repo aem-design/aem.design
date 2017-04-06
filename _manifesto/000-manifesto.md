@@ -2,8 +2,8 @@
 title: "Manifesto"
 permalink: /manifesto/
 excerpt: "Platform Principles, Capabilities and Developer Guide"
-author: max.barrass@gmail.com
-editor: katreencook@yahoo.com.au
+author: max@aem.design
+editor: katreen@aem.design
 comments: true
 redirect_from:
   - /quick-start-guide/
