@@ -2,7 +2,7 @@
 permalink: /about/
 layout: single
 title: "About"
-author: max.barrass@gmail.com
+author: max@aem.design
 excerpt: "About AEM Design"
 modified: 2017-01-24T16:44:22-10:00
 header:
