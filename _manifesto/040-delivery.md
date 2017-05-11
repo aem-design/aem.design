@@ -70,7 +70,7 @@ Here are initial list of CMS Functional Groups for components:
 
 * Commerce - used for eComponents, shopping carts, checkouts, product listing etc
 
-* Admin - used for hidden components that are available to limited authors and/or are not used though normal authoring interface
+* Common - used for shared components that are available to authors
 
 * Forms - used to contain all the components that are used in forms
 
