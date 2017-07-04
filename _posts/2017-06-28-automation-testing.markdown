@@ -13,15 +13,15 @@ tags:
 
 Automation Testing is the validation of your DevOps operations.
 
-Without Automated Testing DevOps efforts cant be verified. When writing automated pipelines some form of verification always takes place to verify service, api and general availability of targets before tasks are executed.
+Without Automated Testing DevOps efforts can’t be verified. When writing automated pipelines some form of verification always takes place to verify service, api and general availability of targets before tasks are executed.
 
 However a more systemic and pragmatic approach is required for verifying if your System works as you expect post Deployment pipeline.
 
-It's 2017 and testing tools have came a very long way, you can do so much these days with free tools it's inexcusable not to use one or a combination of available frameworks.
+It's 2017 and testing tools have come a very long way, you can do so much these days with free tools it's inexcusable not to use one or a combination of available frameworks.
 
 Over last few days we have been refactoring our Test Suite to add some needed design to the reports. And after several late nights I am happy with the results.
 
-We believe that Automation Testing has to be at the heart of you project. And what a better way to show off your Testing efforts by parading a nice looking report!
+We believe that Automation Testing has to be at the heart of you project. And what a better way to show off your Testing efforts by parading a nice-looking report!
 
 ![Automation Testing Report](/assets/images/automation-testing/phantomjs-reports.png)
 
@@ -50,13 +50,13 @@ and in MD viewport:
 
 Another very simple yet powerful feature used in automation testing is screenshot diff.
 
-The process is very simple you create a master image of your expected outcome for a particular screen and you call that a reference master that corresponds to a particular test case. Then when ever you run same test case you take another screenshot and compare it with the reference master.
+The process is very simple you create a master image of your expected outcome for a particular screen and you call that a reference master that corresponds to a particular test case. Then whenever you run same test case you take another screenshot and compare it with the reference master.
 
 ![AEM Touch UI Diff MD PhantomJS](/assets/images/automation-testing/phantomjs-diff-md.png)
 
 Usually if a difference is within 10% then the test considered as ok, but you can go lower if you want pixel perfect output.
 
-We hope this will inspire you to try this your self!
+We hope this will inspire you to try this yourself!
 
 If you want to try this at home take a look Geb framework, it will save you a lot of time and together with Behaviour Driven Development practice you will always find time to test your experiences!
 

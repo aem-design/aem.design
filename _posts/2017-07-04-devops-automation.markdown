@@ -11,13 +11,13 @@ tags:
   - update
 ---
 
-Over last few weeks we have spend considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.
+Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.
 
 ![DevOps Bootstrap](/assets/images/devops/bootstrap.png)
 
-Out of all of the operating systems Windows was the hardest and easiest to get working! Yes it can be like that!
+Out of all of the operating systems Windows was the hardest and easiest to get working! Yes, it can be like that!
 
-In the hindsight Windows its the easiest as you do not have a lot of choice for proper bash that can interact with Windows Processes directly, so and Cygwin handles this very well. In addition to this some corporates have Dual Account setup for all developers that requires developers to login as Local Admin account to install software. This is was challenging to play with and we would recommend to avoid as much as possible but in the end it work.
+In the hindsight Windows it’s the easiest as you do not have a lot of choice for proper bash that can interact with Windows Processes directly, so and Cygwin handles this very well. In addition to this some corporates have Dual Account setup for all developers that requires developers to login as Local Admin account to install software. This is was challenging to play with and we would recommend to avoid as much as possible but in the end it work.
 
 ![DevOps Bootstrap Success Win10 Cygwin](/assets/images/devops/success-win10-cygwin1.png)
 
