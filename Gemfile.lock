@@ -92,7 +92,7 @@ DEPENDENCIES
   minimal-mistakes-jekyll
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.4.1p111
 
 BUNDLED WITH
-   1.14.2
+   1.15.1
