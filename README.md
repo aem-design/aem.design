@@ -1,7 +1,7 @@
 # aem.design
 AEM.Design blog
 
-[![Codeship release](https://codeship.com/projects/9248b2c0-c41b-0134-b8f0-621863df2064/status?branch=master)](https://github.com/aem-design/aem.design)
+[ ![Codeship Status for aem-design/aem.design](https://app.codeship.com/projects/9248b2c0-c41b-0134-b8f0-621863df2064/status?branch=master)](https://app.codeship.com/projects/197854)
 
 ![statuscake](https://app.statuscake.com/button/index.php?Track=sKW7chwd8h&Days=7&Design=3 "statuscake")
 
