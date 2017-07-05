@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /blog/2017/07/04/devops-automation
-title:  "DevOps Automaton"
+title:  "DevOps Automation"
 date:   2017-07-04 21:25:00 +1100
 author: max@aem.design
 categories:
