@@ -282,6 +282,19 @@ defaults:
       related: true
       sidebar:
         nav: "manifesto"
+  # _manual
+  - scope:
+      path: ""
+      type: manual
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
+      related: true
+      sidebar:
+        nav: "manual"
 
 
 
@@ -291,5 +304,8 @@ collections:
     output: true
     permalink: /:collection/:path/
   manifesto:
+    output: true
+    permalink: /:collection/:path/
+  manual:
     output: true
     permalink: /:collection/:path/

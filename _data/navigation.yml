@@ -4,6 +4,8 @@ main:
     url: /quick-start-guide/
   - title: "Manifesto"
     url: /manifesto/
+  - title: "Manual"
+    url: /manual/
   - title: "Blog"
     url: /blog/
   - title: "About"
@@ -56,3 +58,20 @@ manifesto:
         url: /manifesto/content/
       - title: "Technical"
         url: /manifesto/technical/
+
+#manual links
+manual:
+  - title: Manual
+    url: /manual/
+    children:
+      - title: "Projects"
+        url: /manual/projects/
+      - title: "Development Tools"
+        url: /manual/devtools/
+      - title: "Management"
+        url: /manual/management/
+      - title: "Operating Environment"
+        url: /manual/osenv/
+      - title: "Process"
+        url: /manual/process/
+
