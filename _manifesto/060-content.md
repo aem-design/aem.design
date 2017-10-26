@@ -140,7 +140,7 @@ This section covers Secondary content that is stored in the repository, secondar
 
 ### Dictionaries
 
-In AEM, Dictionaries Capabilities provides Author and developers with set of functions that can be used to manage static labels and text in AEM UI and Custom Components. Primary function of dictionaries to enable Translations of Static Labels, which is done through a[ Dictionary Translator Tool](https://docs.adobe.com/docs/en/aem/6-1/develop/components/i18n/translator.html).
+In AEM, Dictionaries Capabilities provides Author and developers with set of functions that can be used to manage static labels and text in AEM UI and Custom Components. Primary function of dictionaries to enable Translations of Static Labels, which is done through a[ Dictionary Translator Tool](https://docs.adobe.com/docs/en/aem/6-3/develop/components/i18n/translator.html).
 
 ![image alt text](/assets/images/manifesto/content-dictionaries-editor.png)
 
@@ -176,7 +176,7 @@ AEM is a Multi-Language aware CMS and has numerous tools that support Localisati
 
 ### Micro-Sites - Communities
 
-[AEM Communities](https://docs.adobe.com/docs/en/aem/6-1/develop/communities.html) simplifies the creation and customizaton of community features such as forums, blogs, Q&A, calendars, comments, reviews, voting, and ratings. AEM introduced a[ Social Component Framework (SCF)](https://docs.adobe.com/docs/en/aem/6-1/develop/communities/scf.html) that provided structure for creating pre built templates that in turn enable rapid development of themes and functionality for Community type sites.
+[AEM Communities](https://docs.adobe.com/docs/en/aem/6-3/develop/communities.html) simplifies the creation and customizaton of community features such as forums, blogs, Q&A, calendars, comments, reviews, voting, and ratings. AEM introduced a[ Social Component Framework (SCF)](https://docs.adobe.com/docs/en/aem/6-3/develop/communities/scf.html) that provided structure for creating pre built templates that in turn enable rapid development of themes and functionality for Community type sites.
 
 ![image alt text](/assets/images/manifesto/content-communities-list.png)
 
@@ -280,7 +280,7 @@ When using Landing pages in AEM a Design Importer mechanism can be used to impor
 
 ![image alt text](/assets/images/manifesto/content-design-importer.png)
 
-More Info :[ AEM Landing Pages](https://docs.adobe.com/docs/en/aem/6-1/author/personalization/campaigns/landingpages.html) and[ Extending and Configuring the Design Importer for Landing Pages](http://docs.adobe.com/docs/en/aem/6-1/administer/personalization/campaigns/extending-the-design-importer-for-landingpages.html)
+More Info :[ AEM Landing Pages](https://docs.adobe.com/docs/en/aem/6-3/author/personalization/campaigns/landingpages.html) and[ Extending and Configuring the Design Importer for Landing Pages](http://docs.adobe.com/docs/en/aem/6-3/administer/personalization/campaigns/extending-the-design-importer-for-landingpages.html)
 
 
 
@@ -338,7 +338,7 @@ As AEM has two distinct UI experiences, each Component and Interface has two ind
 
 
 
-Related:[ Dialog Conversion Tool](http://docs.adobe.com/docs/en/aem/6-1/develop/dev-tools/dialog-conversion.html)
+Related:[ Dialog Conversion Tool](http://docs.adobe.com/docs/en/aem/6-3/develop/dev-tools/dialog-conversion.html)
 
 #### New UI - Page Properties
 
