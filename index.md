@@ -39,6 +39,6 @@ intro:
   - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fa fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
 ---
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row.html id="intro" type="center" %}
 
-{% include feature_row %}
+{% include feature_row.html %}
