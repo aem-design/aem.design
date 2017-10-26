@@ -20,3 +20,20 @@ When creating pages in this repo use the markdown syntax, you can find syntax he
 ## Icons
 
 Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
+
+
+## Getting Started
+
+* setup ```ruby```
+
+* install dependecies run
+
+```bash
+./install.sh
+```
+
+* run server while editing
+
+```bash
+./serve.sh
+```
