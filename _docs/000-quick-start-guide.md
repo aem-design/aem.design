@@ -23,7 +23,7 @@ AEM has been developed over many years and has a history of concepts that have b
 
 These are the resourcse that would enable you to get a glimpse of the platform, its capabilities and take you on a journey of discovery.
 
-[Manifesto]({{ "/docs/manifesto/" }}) - light weight preparation of concepts
+[Manifesto]({{ "/manifesto/" }}) - light weight preparation of concepts
 
 ## Developing in AEM
 
