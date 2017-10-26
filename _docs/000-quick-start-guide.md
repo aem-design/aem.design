@@ -25,6 +25,10 @@ These are the resourcse that would enable you to get a glimpse of the platform, 
 
 [Manifesto]({{ "/manifesto/" }}) - light weight preparation of concepts
 
+## Learning AEM.Design Framework (implementation of Manifesto)
+
+[Manual]({{ "/manual/" }}) - AEM.Design documentation
+
 ## Developing in AEM
 
 To get started with development on AEM you will need the following:
