@@ -205,8 +205,6 @@ When starting an AEM project it’s important to get the initial project artifac
 
         * Content - repo that contains initial site content
 
-        * DAM - repo that contains initial site DAM content
-
         * Author - repo that contains all of the updates to the Authoring interface in AEM
 
         * Config - repo that contains all of the configuration setting
@@ -248,8 +246,6 @@ Sample project hierarchy naming convention
     * {project}-aem-services
 
     * {project}-aem-content
-
-    * {project}-aem-dam
 
     * {project}-aem-showcase
 
