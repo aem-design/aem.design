@@ -37,3 +37,21 @@ Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
 ```bash
 ./serve.sh
 ```
+
+## CI Commands
+
+Clone repo
+
+```bash
+git clone --branch "aem.design-manual" --depth 50 git@github.com:aem-design/aem.design.git ~/src/github.com/aem-design/aem.design
+cd clone
+```
+
+Ruby setup commands on CI once repo
+
+```bash
+if [ "$CI_BRANCH" != "gh-pages" ]; then rvm use ruby-2.1.7 --install; fi
+if [ "$CI_BRANCH" != "gh-pages" ]; then bundle install; fi
+if [ "$CI_BRANCH" != "gh-pages" ]; then rake generate; fi
+if [ "$CI_BRANCH" != "gh-pages" ]; then rake publish; fi
+```
