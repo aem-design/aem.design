@@ -2,7 +2,7 @@
 layout: single
 permalink: /blog/2017/12/06/touch-ui-migration
 title:  "Touch UI Migration"
-date:   2017-07-06 18:22:00 +1100
+date:   2017-12-06 18:22:00 +1100
 author: max@aem.design
 categories:
   - blog
