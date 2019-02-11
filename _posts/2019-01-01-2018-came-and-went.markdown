@@ -1,0 +1,28 @@
+---
+layout: single
+permalink: /blog/2019/02/02/2018-came-and-went
+title:  "Touch UI Test"
+date:   2019-02-02 19:23:00 +1100
+author: max@aem.design
+categories:
+  - blog
+tags:
+  - update
+---
+
+2018 was just! It came and went!
+
+So 1 Year on on since what has changed:
+- upgrade to AEM 6.4 was transparent without any side-effects
+- "so many repos" are now 4 and parent! This means quicker releases, everything has been compacted along functional need
+- its all about automation testing, selenium hub grid is used for local and pipeline builds
+- refactoring, refactoring, refactoring shredding all the old and adding cleaner ways of doing things
+- create a simple way to allow authors to select renditions per media query (view port / breakpoint) on components
+- integrated analytics DataLayer industry standard into templates
+- create new way of creating tag content when translating CSS into authors language
+- created a new prototype that uses (https://patternlab.io)[https://patternlab.io] as a base to demo your cool work
+- released all of the docker containers to Docker Hub (https://hub.docker.com/u/aemdesign/)[https://hub.docker.com/u/aemdesign/] with pipelines straight from gitlab
+- created tenant archetype that allow quickstart for tenants projects, that has tenant naming thought out including component groups and has all the tests ready to go
+- updated playbooks and deployment scripts
+- reconfigured version for pom files to be automated
+- refactored and and added new components and added more automation tests
