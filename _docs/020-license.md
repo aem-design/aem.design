@@ -7,8 +7,8 @@ redirect_from:
   - /contributing/
 ---
 
-AEM.Design knowledge is released under AGPL 3.0 license.
+AEM.Design knowledge is released under Apache 2.0 license.
 
 Copyright (c) {{ site.time | date: '%Y' }} AEM.Design Team
 
-You can read about [AGPL v3 here](https://opensource.org/licenses/AGPL-3.0)
+You can read about [Apache 2](https://www.apache.org/licenses/LICENSE-2.0)
