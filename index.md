@@ -11,7 +11,7 @@ header:
   caption:
 excerpt: 'Unlock your knowledge and enable your AEM implementations to evolve beyond cognitive bias of the past'
 feature_row:
-  - image_path: /assets/images/cards/aem6.5-1280x768.png
+  - image_path: /assets/images/cards/aem6.5-1280x768.jpg
     alt: "components"
     title: "Component List"
     excerpt: "See component list"
