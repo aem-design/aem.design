@@ -20,7 +20,7 @@ We strongly believe that open source provides most transparent way of giving fee
 We believe that having a common goal for creating and spreading good practices on making your AEM experience awesome.
 We do open source to encourage sharing of great things that can be done in AEM.
 
-Here is the list of all components that we currently have in the framework. [Gitlab Wiki](https://gitlab.com/aem.design/aemdesign-aem-core/wikis/home)
+Here is the list of all components that we currently have in the framework. [Wiki](https://github.com/aem-design/aemdesign-aem-core/wiki/Component-List)
 
 | Type                | Group          | Sub Category        | Name                     | Purpouse             | Usage        | Description                                                                                 |
 |---------------------|----------------|---------------------|--------------------------|----------------------|--------------|---------------------------------------------------------------------------------------------|
