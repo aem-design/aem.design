@@ -11,6 +11,12 @@ header:
   caption:
 excerpt: 'Unlock your knowledge and enable your AEM implementations to evolve beyond cognitive bias of the past'
 feature_row:
+  - image_path: /assets/images/cards/aem6.5-1280x768.png
+    alt: "components"
+    title: "Component List"
+    excerpt: "See component list"
+    url: "/blog/2019/06/05/open-source-is-for-feedback"
+    btn_label: "View"
   - image_path: /assets/images/cards/mm-free-feature.png
     alt: "manifesto"
     title: "Read the Manifesto"
@@ -20,7 +26,7 @@ feature_row:
   - image_path: /assets/images/cards/blog-hero.jpg
     alt: "blog"
     title: "Read the Blog"
-    excerpt: "More pages on AEM"
+    excerpt: "More posts from us"
     url: "/blog/"
     btn_label: "Blog"
 #  - image_path: /assets/images/mm-responsive-feature.png
