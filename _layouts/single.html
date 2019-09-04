@@ -40,7 +40,16 @@ pagination:
                 {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
             </section>
 
+            <style>
+                .page__content_adspace_bottom {
+                    height: 200px;
+                    display: inline-block;
+                    width: 100%;
+                }
+            </style>
+            <section class="page__content_adspace_bottom">
             {% include adds/adsense.html block=site.data.advertising.bottom %}
+            </section>
 
             <footer class="page__meta">
                 {% if site.data.ui-text[site.locale].meta_label %}
