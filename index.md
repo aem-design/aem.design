@@ -9,7 +9,7 @@ header:
   cta_label: "<i class='fa fa-lightbulb-o'></i> Start Here"
   cta_url: "/quick-start-guide/"
   caption:
-excerpt: 'Unlock your knowledge and enable your AEM implementations to evolve beyond cognitive bias of the past'
+excerpt: 'Create consistency in your AEM implementations by providing your team with AEM language they can use to describe things they want to achieve.'
 feature_row:
   - image_path: /assets/images/cards/aem6.5-1280x768.jpg
     alt: "components"
