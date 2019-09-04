@@ -19,15 +19,9 @@ addons:
 notifications:
   email: false
   
-# branch whitelist, only for GitHub Pages
-branches:
-  only:
-    - master     # test the gh-pages branch
-
-
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site
+  - bundle exec htmlproofer --check-html --internal-domains localhost:4000 --assume-extension --disable-external --url-ignore "/#.*/" _site
 
 
 ## Create release in GitHub

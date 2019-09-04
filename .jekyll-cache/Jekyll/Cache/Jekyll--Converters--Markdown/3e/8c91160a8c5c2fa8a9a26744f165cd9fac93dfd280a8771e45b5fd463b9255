@@ -1,0 +1,70 @@
+I"æ<h1 id="aemdesign">AEM.Design</h1>
+
+<p>Framework Documentation</p>
+
+<h1 id="document-purpose">Document Purpose</h1>
+
+<p>The purpose of this document is to introduce you to the AEM Platform and of its related projects, tools and processes. This knowledge is required to maintain and extend the AEM Platform.</p>
+
+<h2>Table of Contents</h2>
+
+<nav class="nav__list">
+  
+  <ul class="nav__items" style="max-height: 100% !important;">
+    
+      
+      <li>
+        
+
+        
+        <ol>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manual/projects/" class="">Projects</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manual/devtools/" class="">Development Tools</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manual/management/" class="">Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manual/osenv/" class="">Operating Environment</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manual/process/" class="">Process</a></li>
+          
+        </ol>
+        
+      </li>
+      
+    
+  </ul>
+</nav>
+
+:ET

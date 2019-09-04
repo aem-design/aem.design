@@ -1,0 +1,24 @@
+I"�<p>Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.</p>
+
+<p><img src="/assets/images/devops/bootstrap.png" alt="DevOps Bootstrap" /></p>
+
+<p>Out of all of the operating systems Windows was the hardest and easiest to get working! Yes, it can be like that!</p>
+
+<p>In the hindsight Windows it’s the easiest as you do not have a lot of choice for proper bash that can interact with Windows Processes directly, so and Cygwin handles this very well. In addition to this some corporates have Dual Account setup for all developers that requires developers to login as Local Admin account to install software. This is was challenging to play with and we would recommend to avoid as much as possible but in the end it work.</p>
+
+<p><img src="/assets/images/devops/success-win10-cygwin1.png" alt="DevOps Bootstrap Success Win10 Cygwin" /></p>
+
+<p>Mac on the other hand poses sever other challenges it comes bundles with Python so a use of private virtual environments for isolating from system installation was implemented and used across all OS’s.</p>
+
+<p><img src="/assets/images/devops/success-mac.png" alt="DevOps Bootstrap Success Mac" /></p>
+
+<p>Linux Ubuntu on the other hand was the simplest to setup and use, even if you have Secure Boot enabled only VirtualBox installation had extra steps to install signed driver.</p>
+
+<p><img src="/assets/images/devops/success-ubuntu.png" alt="DevOps Bootstrap Success Mac" /></p>
+
+<p>Also during this update autocomplete was added to DevOps bootstrap!</p>
+
+<p><a href="https://asciinema.org/a/3GrVPCGnClzzQQW9MWWqpZ9Vt"><img src="https://asciinema.org/a/3GrVPCGnClzzQQW9MWWqpZ9Vt.png" alt="asciicast" /></a></p>
+
+<p>As always let us know what you think.</p>
+:ET

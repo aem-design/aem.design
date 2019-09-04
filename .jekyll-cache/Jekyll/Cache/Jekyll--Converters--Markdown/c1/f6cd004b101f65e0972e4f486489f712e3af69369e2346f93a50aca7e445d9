@@ -1,0 +1,20 @@
+I"j<p>End of the Year is a few days away!</p>
+
+<p>It’s was great feeling to bring the Touch UI Migration so close to the end of the year!</p>
+
+<p>But it’s almost as exciting as completing the Touch UI Testing of exact same components that just have been migrated!</p>
+
+<p><img src="/assets/images/testing/touch-ui-testing.png" alt="TouchUI Testing" /></p>
+
+<p>Testing utils and all Specs have been migrated from Classic UI to TouchUI.</p>
+
+<p>Additionally PhantomJS has been depreciated in favor of Headless Chrome!!</p>
+
+<p>As you all know development of PhantomJS has been abandoned in favour of Chrome Headless. This comes as a welcome move as lots of latest JS and CSS features where hard to test using PhantomJS.</p>
+
+<p>This is another awesome milestone to be carried as a great base for upcoming projects in 2018!</p>
+
+<p>Happy New Year to all!!! See you all next year!!!</p>
+
+<p>PS. Look forward to our <a href="http://www.jecis.com/">JECIS</a> integration coming early next year!!! We are going to use <a href="http://www.jecis.com/">JECIS Framework</a> to deliver eCommerce capability blueprint to your projects!!!</p>
+:ET

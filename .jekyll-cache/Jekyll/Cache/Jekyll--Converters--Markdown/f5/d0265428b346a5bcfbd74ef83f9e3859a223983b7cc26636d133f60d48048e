@@ -1,0 +1,19 @@
+I"�<p>2018 was just! It came and went!</p>
+
+<p>So 1 Year on on since what has changed:</p>
+<ul>
+  <li>upgrade to AEM 6.4 was transparent without any side-effects</li>
+  <li>“so many repos” are now 4 and parent! This means quicker releases, everything has been compacted along functional need</li>
+  <li>its all about automation testing, selenium hub grid is used for local and pipeline builds</li>
+  <li>refactoring, refactoring, refactoring shredding all the old and adding cleaner ways of doing things</li>
+  <li>create a simple way to allow authors to select renditions per media query (view port / breakpoint) on components</li>
+  <li>integrated analytics DataLayer industry standard into templates</li>
+  <li>create new way of creating tag content when translating CSS into authors language</li>
+  <li>created a new prototype that uses (https://patternlab.io)[https://patternlab.io] as a base to demo your cool work</li>
+  <li>released all of the docker containers to Docker Hub (https://hub.docker.com/u/aemdesign/)[https://hub.docker.com/u/aemdesign/] with pipelines straight from gitlab</li>
+  <li>created tenant archetype that allow quickstart for tenants projects, that has tenant naming thought out including component groups and has all the tests ready to go</li>
+  <li>updated playbooks and deployment scripts</li>
+  <li>reconfigured version for pom files to be automated</li>
+  <li>refactored and and added new components and added more automation tests</li>
+</ul>
+:ET

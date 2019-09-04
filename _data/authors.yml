@@ -1,0 +1,38 @@
+# Authors
+
+max@aem.design:
+  name        : "Max Barrass"
+  uri         : "http://maxbarrass.com"
+  email       : "max@aem.design"
+  bio         : "Founder"
+  avatar      : "/assets/images/profile/maxbarrass4.jpg"
+  twitter     : "maxbarrass"
+  google_plus : "maxbarrass"
+  linkedin    : "maxbarrass"
+
+yaw@aem.design:
+  name        : "Yaw Ly"
+  bio         : "Founder"
+  email       : "yaw@aem.design"
+  avatar      : "/assets/images/profile/yawly.jpg"
+  linkedin    : "yaw-ly-16805514"
+  github      : "yawly"
+
+katreen@aem.design:
+  name        : "Katreen Cook"
+  bio         : "Chief Editor"
+  email       : "katreen@aem.design"
+  avatar      : "/assets/images/profile/bio-photo.jpg"
+  linkedin    : "katreencook"
+
+anton@aem.design:
+  name        : "Anton Zhukov"
+  bio         : "Snr Dev"
+  email       : "anton@aem.design"
+  avatar      : "/assets/images/profile/anton.jpg"
+
+alex@aem.design:
+  name        : "Alex Zhukov"
+  bio         : "Dev"
+  email       : "alex@aem.design"
+  avatar      : "/assets/images/profile/alex.jpg"

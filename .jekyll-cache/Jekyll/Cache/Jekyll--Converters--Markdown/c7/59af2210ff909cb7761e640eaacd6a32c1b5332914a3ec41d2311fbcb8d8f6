@@ -1,0 +1,83 @@
+I"—<p>This manifesto aims at capturing aspects important to understanding and learning of AEM.</p>
+
+<p>Like AEM this work is in still evolving so follow our twitter of check back when you can.</p>
+
+<p>Please note this is <strong>WORK IN PROGRESS</strong> you are welcome to contribute with content or comments of what you would like to see in this work.</p>
+
+<h2>Table of Contents</h2>
+
+<nav class="nav__list">
+  
+  <ul class="nav__items" style="max-height: 100% !important;">
+    
+      
+      <li>
+        
+
+        
+        <ol>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/introduction/" class="">Introduction</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/principles/" class="">Principles</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/capabilities/" class="">Capabilities</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/delivery/" class="">Delivery</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/project/" class="">Project</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/content/" class="">Content</a></li>
+          
+            
+            
+
+            
+            
+
+            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/technical/" class="">Technical</a></li>
+          
+        </ol>
+        
+      </li>
+      
+    
+  </ul>
+</nav>
+:ET

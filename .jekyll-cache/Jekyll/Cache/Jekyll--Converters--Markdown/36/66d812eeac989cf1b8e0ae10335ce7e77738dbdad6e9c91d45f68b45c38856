@@ -1,0 +1,18 @@
+I"ñ<p>Quick update to showcase upcoming automated tests results using Github Pages.</p>
+
+<p>On previous occasions the only way to show off how automation test suite result should look was to show some screenshots similar to this:</p>
+
+<p><img src="/assets/images/automation-testing/summary-all.png" alt="Automation Test Summary" />
+<img src="/assets/images/automation-testing/summary-errorsonly.png" alt="Automation Test Summary - Errors Only" /></p>
+
+<p><img src="/assets/images/automation-testing/spec.png" alt="Automation Test Spec" />
+<img src="/assets/images/automation-testing/spec-expanded.png" alt="Automation Test Spec - Expanded" /></p>
+
+<p>From now on the results will be published to github pages to provide an experience you should be having with your automate test suites.</p>
+
+<p>You can view the output from test suite on github.</p>
+
+<p><a href="https://aem-design.github.io/aemdesign-aem-support/">https://aem-design.github.io/aemdesign-aem-support/</a></p>
+
+<p>Let us know what you think!</p>
+:ET

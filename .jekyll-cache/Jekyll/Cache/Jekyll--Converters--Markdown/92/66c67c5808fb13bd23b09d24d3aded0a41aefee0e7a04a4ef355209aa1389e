@@ -1,0 +1,495 @@
+I"X=<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#project-documentation" id="markdown-toc-project-documentation">Project Documentation</a></li>
+  <li><a href="#component-specification" id="markdown-toc-component-specification">Component Specification</a></li>
+  <li><a href="#project-artifacts" id="markdown-toc-project-artifacts">Project Artifacts</a>    <ul>
+      <li><a href="#naming-convention" id="markdown-toc-naming-convention">Naming Convention</a></li>
+    </ul>
+  </li>
+  <li><a href="#project-archetype" id="markdown-toc-project-archetype">Project Archetype</a></li>
+  <li><a href="#project-concept-to-creation" id="markdown-toc-project-concept-to-creation">Project Concept to Creation</a>    <ul>
+      <li><a href="#knowledge-flow-map" id="markdown-toc-knowledge-flow-map">Knowledge Flow Map</a></li>
+      <li><a href="#evolution-of-artifacts" id="markdown-toc-evolution-of-artifacts">Evolution of Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="#development-flow" id="markdown-toc-development-flow">Development Flow</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="project-documentation">Project Documentation</h2>
+
+<p>Important principle on project is to understand why you are creating content, primary driver for creating must be for reuse by someone else on the project. It’s important that documentation is seen as a journey not a deliverable. Everyone should be using documentation as a way of sharing knowledge with another person on the project. The documentation that is written without an audience on a project is wasted.</p>
+
+<p>This is a sample TOC that can be used as a starting point for projects, you may not require all of the sections but at some point in your project question and need for information will arise and will require a placeholder to communication knowledge to the team.</p>
+
+<ol>
+  <li>
+    <p>Project Library</p>
+
+    <ol>
+      <li>
+        <p>Management Design</p>
+
+        <ol>
+          <li>
+            <p>Knowledge Management</p>
+
+            <ol>
+              <li>
+                <p>Project FAQ - Getting started with documentation</p>
+              </li>
+              <li>
+                <p>Keyword Index - auto generated from page Tags</p>
+              </li>
+              <li>
+                <p>Comments</p>
+              </li>
+              <li>
+                <p>Recent Activity</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>Deliverables - list of all deliverables</p>
+          </li>
+          <li>
+            <p>Roles - team, support, ops</p>
+          </li>
+          <li>
+            <p>Guidelines</p>
+
+            <ol>
+              <li>
+                <p>Task Management - Jira usage, stories, tests, bugs</p>
+              </li>
+              <li>
+                <p>Knowledge Management - Confluence usage, specs, review</p>
+              </li>
+              <li>
+                <p>Page Specification - Template Description</p>
+              </li>
+              <li>
+                <p>Component Specification - Template Description</p>
+
+                <ol>
+                  <li>
+                    <p>User Story</p>
+                  </li>
+                  <li>
+                    <p>Acceptance Criteria</p>
+                  </li>
+                  <li>
+                    <p>Behaviour Driven Testing</p>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>Meeting Notes</p>
+
+            <ol>
+              <li>
+                <p>Meetings</p>
+              </li>
+              <li>
+                <p>Retrospectives</p>
+              </li>
+              <li>
+                <p>Discovery Sessions</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>Reporting</p>
+
+            <ol>
+              <li>
+                <p>Status Reports</p>
+              </li>
+              <li>
+                <p>Reporting Documents - list of pages tagged for reporting</p>
+              </li>
+              <li>
+                <p>Automated Test Result Reports</p>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Component Design</p>
+
+        <ol>
+          <li>
+            <p>Project Artifacts - project repos</p>
+          </li>
+          <li>
+            <p>Style Guide - Style to Component Mapping</p>
+          </li>
+          <li>
+            <p>Unique Pages</p>
+
+            <ol>
+              <li>Page Specification</li>
+            </ol>
+          </li>
+          <li>
+            <p>Component Catalog</p>
+
+            <ol>
+              <li>
+                <p>Component Group</p>
+
+                <ol>
+                  <li>Component Specification</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>Content Hierarchy</p>
+          </li>
+          <li>
+            <p>Dialogs - Shared Dialogs</p>
+          </li>
+          <li>
+            <p>Frameworks - Design Frameworks listing</p>
+          </li>
+          <li>
+            <p>Scaffolding - Forms that will be used by Authors</p>
+          </li>
+          <li>
+            <p>Blueprints - Site templates</p>
+          </li>
+          <li>
+            <p>Styles - General Styles applied to all components</p>
+          </li>
+          <li>
+            <p>Tag Namespaces - Tagging for Content</p>
+          </li>
+          <li>
+            <p>Dictionaries - Labels for component</p>
+          </li>
+          <li>
+            <p>Templates - Available Templates</p>
+          </li>
+          <li>
+            <p>Workflows - Workflows to be built</p>
+          </li>
+          <li>
+            <p>Error Pages - Error pages that will appear</p>
+          </li>
+          <li>
+            <p>Translations - Translations to be used</p>
+          </li>
+          <li>
+            <p>Selectors - Selectors available</p>
+          </li>
+          <li>
+            <p>Services - Services available</p>
+          </li>
+          <li>
+            <p>Dashboards - Updates to Dashboards</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Platform Design</p>
+
+        <ol>
+          <li>
+            <p>Architecture</p>
+
+            <ol>
+              <li>
+                <p>Logical Architecture</p>
+              </li>
+              <li>
+                <p>Physical Architecture</p>
+              </li>
+              <li>
+                <p>Service Architecture - service, data, interfaces</p>
+              </li>
+              <li>
+                <p>Delivery Architecture - ci/cd cycles</p>
+              </li>
+              <li>
+                <p>Content Architecture</p>
+              </li>
+              <li>
+                <p>Information Architecture</p>
+              </li>
+              <li>
+                <p>Testing Architecture</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>Config</p>
+
+            <ol>
+              <li>
+                <p>Development Config</p>
+              </li>
+              <li>
+                <p>Workstation Config</p>
+              </li>
+              <li>
+                <p>Tools</p>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Operations Design</p>
+
+        <ol>
+          <li>
+            <p>Content Migration</p>
+          </li>
+          <li>
+            <p>Integrations Services</p>
+          </li>
+          <li>
+            <p>Service Licensing</p>
+          </li>
+          <li>
+            <p>Environment Config - service addresses</p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="component-specification">Component Specification</h2>
+
+<p>Content specification is the single document which is used to describe the component to be build and all of the relevant information needed. From this document a developer can determine if the component can be built. The whole team spends their effort to ensure this document is in an acceptable state so that developers can carry out their work using this document as a guide.</p>
+
+<p>The document covers these main areas</p>
+
+<table>
+  <tr>
+    <td>Management</td>
+    <td>Authoring</td>
+    <td>Design</td>
+  </tr>
+  <tr>
+    <td>User Stories
+Component Summary
+Component Hierarchy
+Acceptance Criteria
+Test Cases
+
+</td>
+    <td>Authoring Dialogs
+- Design
+- Content
+Related
+- Tags
+- Dialogs
+
+</td>
+    <td>Variants
+Badges
+Theme
+
+</td>
+  </tr>
+  <tr>
+    <td>Input From
+BA, PO, TS, DEV, DES</td>
+    <td>Input From
+BA, DEV </td>
+    <td>Input From
+BA, DEV, DES</td>
+  </tr>
+</table>
+
+<h2 id="project-artifacts">Project Artifacts</h2>
+
+<p>When starting an AEM project it’s important to get the initial project artifacts created early, as refactoring of code later will be complicated and time consuming. Creating Project artifacts early puts in place placeholders for content as the team progresses through the project.</p>
+
+<ul>
+  <li>
+    <p>Parent - parent repo used to contain all of the repo and build sequences, project primarily used to managing builds and scripting</p>
+
+    <ul>
+      <li>
+        <p>Component Suite - repo from common component that will be build in the first phase</p>
+
+        <ul>
+          <li>
+            <p>Services - repo for all Services that will be built</p>
+          </li>
+          <li>
+            <p>Content - repo that contains initial site content</p>
+          </li>
+          <li>
+            <p>Author - repo that contains all of the updates to the Authoring interface in AEM</p>
+          </li>
+          <li>
+            <p>Config - repo that contains all of the configuration setting</p>
+          </li>
+          <li>
+            <p>API - repo containing all of the API related services</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Showcase Suite - repo for Static content used by the Testing Framework and for demonstration of components for use stories</p>
+      </li>
+      <li>
+        <p>Testing Suite - repo that contains the Load Testing</p>
+      </li>
+      <li>
+        <p>Prototype - repo for UI prototype</p>
+      </li>
+      <li>
+        <p>Deploy Suite - contains all of the Ansible deploy scripts</p>
+
+        <ul>
+          <li>
+            <p>AEM - repo that contains all the AEM program itself and its initial configuration</p>
+          </li>
+          <li>
+            <p>VM - repo that contains all of configs for building VM Templates</p>
+          </li>
+          <li>
+            <p>Docker - contains all of the Docker configs</p>
+          </li>
+          <li>
+            <p>Jenkins - containing all of the Jenins configurations</p>
+          </li>
+          <li>
+            <p>Security - contains all of the Security, CIS VM hardening playbooks</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Training Suite - repo containing the Training site</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="naming-convention">Naming Convention</h3>
+
+<p>Sample project hierarchy naming convention</p>
+
+<ul>
+  <li>
+    <p>{project}-aem-parent</p>
+
+    <ul>
+      <li>
+        <p>{project}-aem</p>
+      </li>
+      <li>
+        <p>{project}-aem-author</p>
+      </li>
+      <li>
+        <p>{project}-aem-common</p>
+      </li>
+      <li>
+        <p>{project}-aem-services</p>
+      </li>
+      <li>
+        <p>{project}-aem-content</p>
+      </li>
+      <li>
+        <p>{project}-aem-showcase</p>
+      </li>
+      <li>
+        <p>{project}-aem-training</p>
+      </li>
+      <li>
+        <p>{project}-testing</p>
+      </li>
+      <li>
+        <p>{project}-prototype</p>
+      </li>
+      <li>
+        <p>{project}-deploy</p>
+      </li>
+      <li>
+        <p>{project}-docker</p>
+      </li>
+      <li>
+        <p>{project}-jenkins</p>
+      </li>
+      <li>
+        <p>{project}-security</p>
+      </li>
+      <li>
+        <p>{project}-vm</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="project-archetype">Project Archetype</h2>
+
+<p>Recommended practice to build AEM projects is to use Apache Maven tool. To make it easier to create new project Adobe maintains a Maven Archetype that consist of basic project and content structure as well as has the required project dependencies. More information on how to use the maven archetype when creating new project can be found here <a href="http://docs.adobe.com/docs/en/aem/6-0/develop/dev-tools/ht-projects-maven.html">AEM6 Archetype</a> more <a href="http://docs.adobe.com/docs/en/cq/current/developing/developmenttools/how-to-build-aem-projects-using-apache-maven.html">AEM5 Archetype</a>.</p>
+
+<p>At the high level an AEM project consist of Bundle and Content packages.  Bundle package contains all the code that is required for the Application, it should contain any services, servlets and helper functions. Content package contains the configuration content, all the component configuration and code as well as Designs content. Its a best practice to divide projects into multiple project as soon as first release occurs. This help with maintenance, bug fixing and dependency management. It also creates a practice of ensuring that component and code does not become tightly coupled.</p>
+
+<h2 id="project-concept-to-creation">Project Concept to Creation</h2>
+
+<h3 id="knowledge-flow-map">Knowledge Flow Map</h3>
+
+<p>The diagram below illustrates how a business concept flows through the necessary parties to get to the desired end state, which is a functional component that can be tested (and passed) on a showcase site, so that the business owner can utilize it in the organization’s production environment.</p>
+
+<p><img src="/assets/images/manifesto/project-knowledge-flow.png" alt="image alt text" /></p>
+
+<h3 id="evolution-of-artifacts">Evolution of Artifacts</h3>
+
+<p>All artifacts on a project evolve over time and give input in other artifacts.</p>
+
+<p><img src="/assets/images/manifesto/project-artifact-flow.png" alt="image alt text" /></p>
+
+<h2 id="development-flow">Development Flow</h2>
+
+<p>This is a high level flow for development cycles</p>
+
+<p><img src="/assets/images/manifesto/project-development-flow.png" alt="image alt text" /></p>
+
+<ul>
+  <li>
+    <p><strong>Build Deploy Test</strong>: Developers work on local environment which is a replicate of target production, using same codebase as build server and performs all Build, Deploy and Test functions on local instances of AEM</p>
+  </li>
+  <li>
+    <p><strong>Maven Dependency Resolution</strong>: Local Developers build environment uses centralised Maven repository to resolve dependencies in Build cycle</p>
+  </li>
+  <li>
+    <p><strong>Commit</strong>: Developers code is commit code to Code repository</p>
+  </li>
+  <li>
+    <p><strong>Tracing</strong>: Code is linked to Stories by Story ID added to each commit</p>
+  </li>
+  <li>
+    <p><strong>Trigger</strong>: Each commit triggers a Build Test Deploy cycle on the Automation server</p>
+  </li>
+  <li>
+    <p><strong>Build Tracking</strong>: Build tracking is reported into Jira</p>
+  </li>
+  <li>
+    <p><strong>Build Artifact Storage</strong>: Build Artifacts are stored in Jira to be used in Depoy cycles</p>
+  </li>
+  <li>
+    <p><strong>Build Test</strong>: Automated testing of Code is performed after Build an before Deploy cycle</p>
+  </li>
+  <li>
+    <p><strong>Build Analysts</strong>: Automated Code Quality review is performed after Build an before Deploy cycle</p>
+  </li>
+  <li>
+    <p><strong>Deploy</strong>: Deploy cycle is triggered automatically and manually to a defined environment</p>
+  </li>
+</ul>
+:ET
