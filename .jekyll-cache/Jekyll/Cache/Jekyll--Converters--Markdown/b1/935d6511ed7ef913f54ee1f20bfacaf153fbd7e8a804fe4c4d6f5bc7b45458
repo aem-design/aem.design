@@ -1,6 +1,0 @@
-I"A<p>The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). 
-Secondary drive is that it provides absolute templating without opportunity to embed code with template code. 
-Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance.
-So if you are not careful you could end up with code plaguing your template and that would break your conventions.
-This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.</p>
-:ET

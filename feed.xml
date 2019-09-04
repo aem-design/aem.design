@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-04T06:10:57+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
+
+&lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
+
+&lt;p&gt;You might even think/say “I thought AEM does not work in Docker”?!&lt;/p&gt;
+
+&lt;p&gt;And the answer to both of those questions is no. You should be using Docker in production, if you are not you are missing out.&lt;/p&gt;
+
+&lt;p&gt;Docker is awesome, period. It once and for all creates a method for establishing consistency with pure simplicity. One of Docker best practices is to have one process per container, many great reasons why but not going to go into them, which is what AEM and mainly java does not play along with easily and we will return to this in a moment.&lt;/p&gt;
+
+&lt;p&gt;As far as AEM is concerned the issues that you might experience running AEM in a container comes from underlying Java Forking. Googling this will give more technical details but at high level this means that Java main process creates new process that are not “children” on the main process.&lt;/p&gt;
+
+&lt;p&gt;So AEM runs on Java and it forks. In AEM most obvious things that trigger this are workflows that execute external processes, external services that AEM hosts like image service and repository services that handle all of the content wiring and reading, sounds important right. So if we can solve this forking thing then the issue will go away.&lt;/p&gt;
+
+&lt;p&gt;This manifest a problem of running AEM in a container creates following situation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you start a docker container&lt;/li&gt;
+  &lt;li&gt;docker container starts and binds to main java process
+    &lt;ul&gt;
+      &lt;li&gt;any of its subsequent children processes are not managed by container&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;you try to stop the container docker will send a shutdown signal to container
+    &lt;ul&gt;
+      &lt;li&gt;that will pass that to the java process
+        &lt;ul&gt;
+          &lt;li&gt;that java process will then respect that signal and gracefully close things it controls
+            &lt;ul&gt;
+              &lt;li&gt;but will leave a bunch of processes orphaned 😞&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;docker container becomes unresponsive/hangs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;you try to &lt;code class=&quot;highlighter-rouge&quot;&gt;docker kill&lt;/code&gt; the container and all its internal orphaned processes
+    &lt;ul&gt;
+      &lt;li&gt;one of which will be the repository so you will lose content 😱 no happy ending here&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok so yeah not so cool!&lt;/p&gt;
+
+&lt;p&gt;But what is cool is a project tini by Thomas Orozco that provides &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;A tiny but valid &lt;code class=&quot;highlighter-rouge&quot;&gt;init&lt;/code&gt; for containers&lt;/a&gt;. This solves the forking issue once and for all.&lt;/p&gt;
+
+&lt;p&gt;Adding &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; as the entry point into your docker containers allows consistency in handling processes in that container.&lt;/p&gt;
+
+&lt;p&gt;This is how the implementation in a base container &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; looks like.&lt;/p&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;       centos:latest&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;MAINTAINER&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; devops &amp;lt;devops@aem.design&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;   os=&quot;centos&quot; \&lt;/span&gt;
+        container.description=&quot;centos with tini&quot; \
+        version=&quot;0.18.0&quot; \
+        imagename=&quot;centos-tini&quot;
+
+
+&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_VERSION=&quot;v0.18.0&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_KEY=&quot;595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_URL=&quot;https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-amd64&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /bin/tini &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.asc &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /bin/tini.asc &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gpg &lt;span class=&quot;nt&quot;&gt;--keyserver&lt;/span&gt; hkp://p80.pool.sks-keyservers.net:80 &lt;span class=&quot;nt&quot;&gt;--recv-keys&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_KEY&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gpg &lt;span class=&quot;nt&quot;&gt;--verify&lt;/span&gt; /bin/tini.asc &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x /bin/tini
+
+&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;/bin/tini&quot;, &quot;--&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Very simple image with key line &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT [&quot;/bin/tini&quot;, &quot;--&quot;]&lt;/code&gt; that ensures that all container commands will be handled by &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt;. So this means that anytime a process is spawned in the container it will be a child of &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt;. So when it comes to closing the container &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; will close all processes and thus you will have a graceful container stoppage.&lt;/p&gt;
+
+&lt;p&gt;Further reviewing the image for &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;aem&lt;/a&gt; you will find similar &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT [&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/aem/run-tini.sh&quot;]&lt;/code&gt; that uses an adopted script to run command &lt;code class=&quot;highlighter-rouge&quot;&gt;exec java $AEM_JVM_OPTS $AEM_RUNMODE -jar $AEM_JARFILE $AEM_START_OPTS&lt;/code&gt; to stat the AEM java process. This ensure that the execute command is passed to &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; for handling.&lt;/p&gt;
+
+&lt;p&gt;You can also use the &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD [&quot;/dispatcher/start.sh&quot;]&lt;/code&gt; as used in &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; image to the same effect. Docker appends the &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD&lt;/code&gt; statement to &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; command and as &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; is based on &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; its final command that will be executed will be &lt;code class=&quot;highlighter-rouge&quot;&gt;[&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/dispatcher/start.sh&quot;]&lt;/code&gt;, once again letting tini manage processes.&lt;/p&gt;
+
+&lt;p&gt;Hopefully if you were scared of using java in docker containers after using &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; your fears will wash away with tears of happiness 😂&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="tini" /><summary type="html">I thought AEM does not work in Docker?</summary></entry><entry><title type="html">Docker AEM Bundle</title><link href="http://aem.design/blog/2019/08/30/docker-aem-bundle" rel="alternate" type="text/html" title="Docker AEM Bundle" /><published>2019-08-30T23:37:00+00:00</published><updated>2019-08-30T23:37:00+00:00</updated><id>http://aem.design/blog/2019/08/30/docker-aem-bundle</id><content type="html" xml:base="http://aem.design/blog/2019/08/30/docker-aem-bundle">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; we have added a new AEM 6.5 Bundle image.&lt;/p&gt;
+
+&lt;p&gt;This image has the following packages that are installed on first start-up.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;File&lt;/th&gt;
+      &lt;th&gt;Notes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;AEM-6.5.1.0-6.5.1.zip&lt;/td&gt;
+      &lt;td&gt;sp 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;AEM-Forms-6.5.1.0-LX-6.0.88.zip&lt;/td&gt;
+      &lt;td&gt;aem forms&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;aem-compat-cq65-to-cq64-0.18.zip&lt;/td&gt;
+      &lt;td&gt;aem forms backwards compatibility&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;com.adobe.acs.bundles.twitter4j-content-1.0.0.zip&lt;/td&gt;
+      &lt;td&gt;acs twitter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;acs-aem-commons-content-4.3.0.zip&lt;/td&gt;
+      &lt;td&gt;acs commons&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;core.wcm.components.all-2.5.0.zip&lt;/td&gt;
+      &lt;td&gt;adobe corecomponents&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;accesscontroltool-package-2.3.2.zip&lt;/td&gt;
+      &lt;td&gt;netcentric acl tools&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;accesscontroltool-oakindex-package-2.3.2.zip&lt;/td&gt;
+      &lt;td&gt;netcentric acl tools&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;vanityurls-components-1.0.2.zip&lt;/td&gt;
+      &lt;td&gt;vanity url servlet&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;aemdesign-aem-core-deploy-2.0.424.zip&lt;/td&gt;
+      &lt;td&gt;aem design core&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/aem:6.5.0-bundle 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You will need a license to active the instance once it ready.&lt;/p&gt;
+
+&lt;p&gt;Please checkout the docker hub &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; for further details.&lt;/p&gt;
+
+&lt;p&gt;If you would like to contribute or fork the code you can get it on github &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;https://github.com/aem-design/aem&lt;/a&gt;.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.</summary></entry><entry><title type="html">Docker Containers Everywhere</title><link href="http://aem.design/blog/2019/07/01/docker-containers-everywhere" rel="alternate" type="text/html" title="Docker Containers Everywhere" /><published>2019-07-01T23:37:00+00:00</published><updated>2019-07-01T23:37:00+00:00</updated><id>http://aem.design/blog/2019/07/01/docker-containers-everywhere</id><content type="html" xml:base="http://aem.design/blog/2019/07/01/docker-containers-everywhere">&lt;p&gt;Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+AEM in docker allows you to run multiple instances of AEM at a drop of a hat. 
+No need to copy files around or look for Jar’s.&lt;/p&gt;
+
+&lt;p&gt;If you want to quickly start a local demo AEM 6.5 instance on port &lt;code class=&quot;highlighter-rouge&quot;&gt;4502&lt;/code&gt; with debug port &lt;code class=&quot;highlighter-rouge&quot;&gt;30303&lt;/code&gt; all you have to do is run this command using &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; image&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/aem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Don’t forget to have your AEM License key handy you gona need it for the AEM license page, and&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Don’t forget the debug port you can use it in your IntelliJ Ultimate, you can read more about this here &lt;a href=&quot;https://www.jetbrains.com/help/idea/run-debug-configuration-jsr45-compatible-server.html&quot;&gt;Run/Debug Configuration: JSR45 Compatible Server&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then you decide that you want to compare latest AEM to AEM 6.4 with a tweak to port &lt;code class=&quot;highlighter-rouge&quot;&gt;4512&lt;/code&gt; and image tag &lt;code class=&quot;highlighter-rouge&quot;&gt;aemdesign/aem:6.4.0&lt;/code&gt; you are instantly in business&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p4512&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p30313&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/aem:6.4.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then if you decide to run AEM 6.5 publish instance, same command with minor update to &lt;code class=&quot;highlighter-rouge&quot;&gt;AEM_RUNMODE&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;publish&lt;/code&gt; using same &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; image and you have a clean publish starting up&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; publish &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,dev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p4503&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p40404&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/aem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Wait there is more, if you like the sound and simplicity of AEM containers you gona love the &lt;a href=&quot;https://hub.docker.com/r/aemdesign/dispatcher&quot;&gt;aemdesign/dispatcher&lt;/a&gt; container!&lt;/p&gt;
+
+&lt;p&gt;Setting up Dispatcher is hard! 
+For one you have to know apache which is about 20 years old. 
+Then you need to know Dispatcher… which is also a tricky as it docs.. oh the docs.. you gona love trolling though them all to create your ultimate dispatcher config!&lt;/p&gt;
+
+&lt;p&gt;OR you run this to start your publish dispatcher pointing to your publish docker&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; publish-dispatcher &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_MODULES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/dispatcher/httpd/modules&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_SSL_SUBJ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/C=AU/ST=VIC/L=Melbourne/O=AEM.Design/CN=dispatcher&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apache&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_GROUP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apache&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_USERID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1100 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_GROUPID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1100 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_LOGLEVEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;debug&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2.4&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;4.3.2&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_LOGLEVEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_CONFIG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dispatcher&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_PROPOGATESYNDPOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_SERVESTALEONERROR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_STATLEVEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_CACHEAUTHORIZED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_SESSIONMANAGEMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;route &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; get 0.0.0.0 2&amp;gt;/dev/null | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/interface: / {print $2}'&lt;/span&gt; | xargs ifconfig  | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'inet '&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'127.0.0.1'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_PORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4503 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_TIMEOUT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10000 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_RESOLVE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8433:8433 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/dispatcher
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Yes RENDERER_HOST does run an intimidating bash command to establish your local IP address&lt;/em&gt; 😎😻&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You don’t need to access dispatcher container files to check the logs as they are all being redirected to container log, like all good container should! 
+In JSON format native to all your log monitoring tool! 😎😻
+You can monitor logs with docker logs command&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs &lt;span class=&quot;nt&quot;&gt;-tf&lt;/span&gt; publish-dispatcher &lt;span class=&quot;nt&quot;&gt;--since&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2019-07-16
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command will tail the error log from the container for you to see. 
+Change the parameter &lt;code class=&quot;highlighter-rouge&quot;&gt;since&lt;/code&gt; to the date from wich you want to view the log from, log will get long, but that what log shipping is for 😎😻&lt;/p&gt;
+
+&lt;p&gt;Hope this will help you with your AEM Docker journey!&lt;/p&gt;
+
+&lt;p&gt;Have a look at our other handy docker containers at &lt;a href=&quot;https://hub.docker.com/u/aemdesign&quot;&gt;https://hub.docker.com/u/aemdesign&lt;/a&gt;&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="dispatcher" /><summary type="html">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances. But AEM will always be better with Docker. AEM in docker allows you to run multiple instances of AEM at a drop of a hat. No need to copy files around or look for Jar’s.</summary></entry><entry><title type="html">Docker Automation Testing</title><link href="http://aem.design/blog/2019/07/05/docker-automation-testing" rel="alternate" type="text/html" title="Docker Automation Testing" /><published>2019-07-01T23:37:00+00:00</published><updated>2019-07-01T23:37:00+00:00</updated><id>http://aem.design/blog/2019/07/05/docker-automation-testing</id><content type="html" xml:base="http://aem.design/blog/2019/07/05/docker-automation-testing">&lt;p&gt;Quick update to showcase upcoming automated tests results using Github Pages.&lt;/p&gt;
+
+&lt;p&gt;On previous occasions the only way to show off how automation test suite result should look was to show some screenshots similar to this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/automation-testing/summary-all.png&quot; alt=&quot;Automation Test Summary&quot; /&gt;
+&lt;img src=&quot;/assets/images/automation-testing/summary-errorsonly.png&quot; alt=&quot;Automation Test Summary - Errors Only&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/automation-testing/spec.png&quot; alt=&quot;Automation Test Spec&quot; /&gt;
+&lt;img src=&quot;/assets/images/automation-testing/spec-expanded.png&quot; alt=&quot;Automation Test Spec - Expanded&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From now on the results will be published to github pages to provide an experience you should be having with your automate test suites.&lt;/p&gt;
+
+&lt;p&gt;You can view the output from test suite on github.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aem-design.github.io/aemdesign-aem-support/&quot;&gt;https://aem-design.github.io/aemdesign-aem-support/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let us know what you think!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="dispatcher" /><category term="automation" /><category term="testing" /><summary type="html">Quick update to showcase upcoming automated tests results using Github Pages.</summary></entry><entry><title type="html">Open source is for feedback</title><link href="http://aem.design/blog/2019/06/05/open-source-is-for-feedback" rel="alternate" type="text/html" title="Open source is for feedback" /><published>2019-06-05T11:00:00+00:00</published><updated>2019-06-05T11:00:00+00:00</updated><id>http://aem.design/blog/2019/06/05/open-source-release</id><content type="html" xml:base="http://aem.design/blog/2019/06/05/open-source-is-for-feedback">&lt;p&gt;Open source is at the core of AEM.&lt;/p&gt;
+
+&lt;p&gt;Supporting community is core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice.
+Our components are tested though practice and implemented so that you can use them the way you want.
+We aim at developing component that are free of noise and deliver exactly what you are looking for clean, lean HTML footprint that speaks content and does not get on the way.&lt;/p&gt;
+
+&lt;p&gt;We strongly believe that open source provides most transparent way of giving feedback about our work.
+We believe that having a common goal for creating and spreading good practices on making your AEM experience awesome.
+We do open source to encourage sharing of great things that can be done in AEM.&lt;/p&gt;
+
+&lt;p&gt;Here is the list of all components that we currently have in the framework. &lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/wiki/Component-List&quot;&gt;Component List&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Component Category&lt;/th&gt;
+      &lt;th&gt;Link&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Cloud Services / Rest&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/rest&quot;&gt;Rest&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Cloud Services / Salesforce API&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/salesforceapi&quot;&gt;Salesforce API&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Common / Redirection Notification&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/common/redirectnotification/v2/redirectnotification&quot;&gt;Redirection Notification&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Common / Static Content Include&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/common/staticinclude/v2/staticinclude&quot;&gt;Static Content Include&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Common / Timing Component&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/common/timing/v2/timing&quot;&gt;Timing Component&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / File Download Link&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/download/v2/download&quot;&gt;File Download Link&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Embed Source&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/embedsource/v2/embedsource&quot;&gt;Embed Source&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / External&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/external/v2/external&quot;&gt;External&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Link&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/link/v2/link&quot;&gt;Link&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Content Reference&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/reference/v2/reference&quot;&gt;Content Reference&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Table&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/table/v2/table&quot;&gt;Table&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Rich Text&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/text/v2/text&quot;&gt;Rich Text&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Tool Tip&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/tooltip/v2/tooltip&quot;&gt;Tool Tip&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Page Author&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pageauthor/v2/pageauthor&quot;&gt;Page Author&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Page Date&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagedate/v2/pagedate&quot;&gt;Page Date&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Page Description&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagedescription/v2/pagedescription&quot;&gt;Page Description&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Page Tags&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagetags/v2/pagetags&quot;&gt;Page Tags&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content / Page Title&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagetitle/v2/pagetitle&quot;&gt;Page Title&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Details / Contact Details&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/contact-details/v2/contact-details&quot;&gt;Contact Details&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Details / Event Details&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/event-details/v2/event-details&quot;&gt;Event Details&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Details / Location Details&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/location-details/v2/location-details&quot;&gt;Location Details&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Details / News Details&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/news-details/v2/news-details&quot;&gt;News Details&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Details / Page Details&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/page-details/v2/page-details&quot;&gt;Page Details&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Article&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/article/v2/article&quot;&gt;Article&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Aside&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/aside/v2/aside&quot;&gt;Aside&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Breadcrumb&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/breadcrumb/v2/breadcrumb&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Columns&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/colctrl/v2/colctrl&quot;&gt;Columns&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Content Block&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contentblock/v2/contentblock&quot;&gt;Content Block&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Content Block Lock&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contentblocklock&quot;&gt;Content Block Lock&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Content Block Menu&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contentblocklock/v2/contentblocklock&quot;&gt;Content Block Menu&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Content Tabs&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contenttabs/v2/contenttabs&quot;&gt;Content Tabs&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Footer&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/footer/v2/footer&quot;&gt;Footer&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Header&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/header/v2/header&quot;&gt;Header&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Nav Bar&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/navbar/v2/navbar&quot;&gt;Nav Bar&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout / Container&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/container&quot;&gt;Container&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Asset List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/assetlist/v2/assetlist&quot;&gt;Asset List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Contact List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/contactlist/v2/contactlist&quot;&gt;Contact List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Event List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/eventlist/v2/eventlist&quot;&gt;Event List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Lang Nav&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/langnav/v2/langnav&quot;&gt;Lang Nav&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/list/v2/list&quot;&gt;List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / List Nav&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/listnav/v2/listnav&quot;&gt;List Nav&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Location List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/locationlist/v2/locationlist&quot;&gt;Location List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / News List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/newslist/v2/newslist&quot;&gt;News List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Page List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/pagelist/v2/pagelist&quot;&gt;Page List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Search Results List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/searchlist/v2/searchlist&quot;&gt;Search Results List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Tag List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/taglist/v2/taglist&quot;&gt;Tag List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lists / Nav List&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/navlist/v2/navlist&quot;&gt;Nav List&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Media / Audio&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/media/audio/v2/audio&quot;&gt;Audio&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Media / Image&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/media/image/v2/image&quot;&gt;Image&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Media / Video&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/media/video/v2/video&quot;&gt;Video&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Analytics / Analytics Data Layer&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/analytics/datalayer/v2/datalayer&quot;&gt;Analytics Data Layer&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / AEM.Design Base Page&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/base/v3/base&quot;&gt;AEM.Design Base Page&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Cloud Config / AddThis&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/cloudconfig/addthisconnect/config&quot;&gt;AddThis&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Cloud Config / Google Analytics&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/cloudconfig/googleanalytics/config&quot;&gt;Google Analytics&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Cloud Config / Google Map&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/cloudconfig/googlemap/config&quot;&gt;Google Map&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Column / AEM.Design One Column Page&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/column/one/v2/one&quot;&gt;AEM.Design One Column Page&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Column / AEM.Design Three Column Page&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/column/three/v2/three&quot;&gt;AEM.Design Three Column Page&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Column / AEM.Design Two Column Page&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/column/two/v2/two&quot;&gt;AEM.Design Two Column Page&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Common / Design Importer&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/common/design-importer&quot;&gt;Design Importer&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Template / Experience Fragment / AEM.Design Experience Fragment&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/experience-fragments/base/v2/xfpage&quot;&gt;AEM.Design Experience Fragment&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Widgets / AddThis / Addthis Button&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/addthis/sharebutton/v2/sharebutton&quot;&gt;Addthis Button&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Widgets / Online Media&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/onlinemedia/v2/onlinemedia&quot;&gt;Online Media&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Widgets / Search Box&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/search/v2/search&quot;&gt;Search Box&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Workflow / Process Payload&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/processpayload&quot;&gt;Process Payload&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Workflow / Project Task Manager&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/projecttaskmanager&quot;&gt;Project Task Manager&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Workflow / Project Update&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/projectupdate&quot;&gt;Project Update&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Workflow / Rest&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/rest&quot;&gt;Rest&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Workflow / Salesforce API&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/salesforceapi&quot;&gt;Salesforce API&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Workflow / Send Email&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/sendemail&quot;&gt;Send Email&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coral / Common/Form / Tag Field&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/common/form/tagfield&quot;&gt;Tag Field&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coral / Datasources / Forms&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/datasources/forms&quot;&gt;Forms&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coral / Datasources / Tags&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/datasources/tags&quot;&gt;Tags&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coral / Foundation / Accordion&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/foundation/accordion&quot;&gt;Accordion&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coral / Widgets/Form / Asset Options&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/widgets/form/assetoptions&quot;&gt;Asset Options&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">Open source is at the core of AEM.</summary></entry><entry><title type="html">Migration from JSP to Sightly</title><link href="http://aem.design/blog/2019/04/04/migration-from-jsp-to-sightly" rel="alternate" type="text/html" title="Migration from JSP to Sightly" /><published>2019-05-02T09:00:00+00:00</published><updated>2019-05-02T09:00:00+00:00</updated><id>http://aem.design/blog/2019/04/04/migration-from-jsp-to-sightly</id><content type="html" xml:base="http://aem.design/blog/2019/04/04/migration-from-jsp-to-sightly">&lt;p&gt;The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). 
+Secondary drive is that it provides absolute templating without opportunity to embed code with template code. 
+Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance.
+So if you are not careful you could end up with code plaguing your template and that would break your conventions.
+This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.&lt;/p&gt;
+
+&lt;p&gt;On the Sightly side the conventions is simple, Model has your code and your template has just the presentation.
+Sightly syntax docs are very easy to consume and anyone on this side of the keyboard can follow.
+Having pure JSTL implementation for your templates provides less opportunities to pollute your templates.&lt;/p&gt;
+
+&lt;p&gt;How to migrate your existing component to Sightly is not apparently clear. 
+Writing new component using Sightly in parallel with your existing component is not migration.
+Moving existing JSP component logic into Models is not a copy paste exercise, unless you have a solid convention across all component like AEM.Design.
+So the only sustainable option is to start a new project from scratch and use Sightly from the start.&lt;/p&gt;
+
+&lt;p&gt;Another way is to version your existing JSP components into V1 and create V2 for the Sighlty implementation.
+This is the approach we followed, this allow you to substitute all existing components with new Sightly verisons without having to migrate content.&lt;/p&gt;
+
+&lt;p&gt;Consider your existing component structure, when this component would be used in pages the reference to the component will be stored with each instance on component.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apps
+    aemdesign
+        component
+            text
+                text.jsp
+                .content.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using this structure will effectively hardcode &lt;code class=&quot;highlighter-rouge&quot;&gt;aemdesign/component/content/text&lt;/code&gt; into your pages and experience fragments.
+This creates a long term situation that when you want to update the component you need to update in place and in turn this updates all of the instances of your component everywhere it appears.
+This is the best approach as it ensure that you continue to update your component code and update content with latest version without adding unnecessary path version numbering into content.
+It best that versioning of component is kept to the component code and not hardcoded into content.&lt;/p&gt;
+
+&lt;p&gt;There could be rare scenarios when you may need to have a versioned path for a component but it would be hard to track of these paths over time.
+Additional authors will be exposed to versioned components where they will need to decide which version they need to use for a particular design they are creating.
+This would seem trivial but over time it will be affecting authoring experience due to number of component they need to understand to create designs.&lt;/p&gt;
+
+&lt;p&gt;Another approach elegant approach provides a simplified pattern to have versioning of component without exposing version to author and without hardcoding version into content.
+This pattern allow you to have one component path with localised versions that are not exposed to authors.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apps
+    aemdesign
+        component
+            text [ sling:resourceSuperType==aemdesign/component/content/text/v1/text ]
+                .content.xml
+                v1
+                    text
+                        .content.xml [ componentGroup=&quot;hidden&quot; ]
+                        text.jsp
+                v2
+                    text
+                        .content.xml [ componentGroup=&quot;hidden&quot; ]
+                        text.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To implement this pattern you create a sub folder for each version of your component as child of component.
+And point parent component path to the version you are currently want the authors to use.
+This pattern allow you to leverage version toggling without exposing versioned component to authors.&lt;/p&gt;
+
+&lt;p&gt;Furthermore AEM.Design framework uses this pattern to expose component into tenant applications.
+When you deploy AEM.Design core component you will have aemdesign application folder available to be used in a tenant component space.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apps
+    aemdesign
+        component
+            text [ sling:resourceSuperType==aemdesign/component/content/text/v1/text ]
+apps
+    tenant
+        component
+            text [ sling:resourceSuperType==aemdesign/component/content/text ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This pattern combined with &lt;a href=&quot;/manifesto/project/&quot;&gt;Variants and Badges&lt;/a&gt; provide number of benefits that&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;provide a way of component reuse across tenants without referencing core framework&lt;/li&gt;
+  &lt;li&gt;ensures that tenant specific component paths are used in tenant code&lt;/li&gt;
+  &lt;li&gt;allow customised metadata like title, description, category and readme’s for components where required&lt;/li&gt;
+  &lt;li&gt;with use of badges and variants provides a way of extending component presentation without changing component core functionality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Considering the approach we took and the benefits that we have now attained make the migration successful!
+Further demonstrating to us that our determined efforts with AEM.Design principles can scale from “old” tech to new.
+And it is important to note that this was only possible due to the fact that we have had a strict component convention that allowed this process to occur.
+If design pattern were not maintained the rewrite of all component would have been the costly option.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). Secondary drive is that it provides absolute templating without opportunity to embed code with template code. Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance. So if you are not careful you could end up with code plaguing your template and that would break your conventions. This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.</summary></entry><entry><title type="html">Simple to Understand Easy to To Follow</title><link href="http://aem.design/blog/2019/02/02/simple-to-understand-easy-to-follow" rel="alternate" type="text/html" title="Simple to Understand Easy to To Follow" /><published>2019-02-02T08:29:00+00:00</published><updated>2019-02-02T08:29:00+00:00</updated><id>http://aem.design/blog/2019/02/02/simple-to-understand-easy-to-follow</id><content type="html" xml:base="http://aem.design/blog/2019/02/02/simple-to-understand-easy-to-follow">&lt;p&gt;One of the biggest challenges when creating frameworks is to drive a convention that can be easily used by those who will use it. 
+AEM is not exception, being Java based its open for interpretation and development in many ways that fit the bill, which is the beauty of software development.
+This does make creating frameworks a challenge as you are constantly need to evaluate and refactor any deviation to your conventions.&lt;/p&gt;
+
+&lt;p&gt;When it comes to it refactoring of codebase comes in flavours of accepting the change and rejecting the change.
+Interestingly any choice you make has impacts that are hard to understand at the time and usually manifest in the long term.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rejecting changes means that you stand a good chance of no one using your conventions.&lt;/li&gt;
+  &lt;li&gt;Accepting any changes without consideration will result in a spaghetti monster.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is no one answer to make it all work like as its complicated to solve and predict.
+But it does mean that conventions should be created and followed and improved over time.
+Having people on your project that understand conventions and have experience doing this does help, but this is possible by every one who strives towards it.
+Less experience leads to con&lt;/p&gt;
+
+&lt;p&gt;Having generalised conventions that apply across technology changes should be your aim.
+In practice these should be derived over time by evaluating the implemented technologies and conventions that they bring.
+Throughout refactoring efforts the conventions and patters will eagerly present themselves.
+Once a pattern appears repeatable it should be generalised so that its better understood.&lt;/p&gt;
+
+&lt;p&gt;Having a pattern or a set of patterns that apply in general across your project bring number of benefits:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;it allow everyone on the team to achieve common understanding, having all team members speak the same language is essential&lt;/li&gt;
+  &lt;li&gt;its easier to identify deviation from conventions that prompt change, without conventions comparing patterns will be a challenge&lt;/li&gt;
+  &lt;li&gt;it enables a consistent experience for developers, ability to transition between projects without learning from scratch&lt;/li&gt;
+  &lt;li&gt;it provides a simplified on-boarding process for new team members, it usually takes a while to on-board to a new project and it becomes harder if the project is a spaghetti monster&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Over time reusable patterns on projects should be leveraged on new project to test their strength.
+Doing this allow you to evaluate and test your pattens in a new environment, new people and new set of requirements.
+This is a great method for improving your conventions and patterns.
+Most importantly by doing this it enables you to test if your pattern works.&lt;/p&gt;
+
+&lt;p&gt;Creating patterns should be about converting great ideas into simple pattern everyone can understand and easily follow without needing lessons in history.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">One of the biggest challenges when creating frameworks is to drive a convention that can be easily used by those who will use it. AEM is not exception, being Java based its open for interpretation and development in many ways that fit the bill, which is the beauty of software development. This does make creating frameworks a challenge as you are constantly need to evaluate and refactor any deviation to your conventions.</summary></entry><entry><title type="html">Touch UI Test</title><link href="http://aem.design/blog/2019/01/01/2018-came-and-went" rel="alternate" type="text/html" title="Touch UI Test" /><published>2019-01-01T08:23:00+00:00</published><updated>2019-01-01T08:23:00+00:00</updated><id>http://aem.design/blog/2019/01/01/2018-came-and-went</id><content type="html" xml:base="http://aem.design/blog/2019/01/01/2018-came-and-went">&lt;p&gt;2018 was just! It came and went!&lt;/p&gt;
+
+&lt;p&gt;So 1 Year on on since what has changed:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;upgrade to AEM 6.4 was transparent without any side-effects&lt;/li&gt;
+  &lt;li&gt;“so many repos” are now 4 and parent! This means quicker releases, everything has been compacted along functional need&lt;/li&gt;
+  &lt;li&gt;its all about automation testing, selenium hub grid is used for local and pipeline builds&lt;/li&gt;
+  &lt;li&gt;refactoring, refactoring, refactoring shredding all the old and adding cleaner ways of doing things&lt;/li&gt;
+  &lt;li&gt;create a simple way to allow authors to select renditions per media query (view port / breakpoint) on components&lt;/li&gt;
+  &lt;li&gt;integrated analytics DataLayer industry standard into templates&lt;/li&gt;
+  &lt;li&gt;create new way of creating tag content when translating CSS into authors language&lt;/li&gt;
+  &lt;li&gt;created a new prototype that uses (https://patternlab.io)[https://patternlab.io] as a base to demo your cool work&lt;/li&gt;
+  &lt;li&gt;released all of the docker containers to Docker Hub (https://hub.docker.com/u/aemdesign/)[https://hub.docker.com/u/aemdesign/] with pipelines straight from gitlab&lt;/li&gt;
+  &lt;li&gt;created tenant archetype that allow quickstart for tenants projects, that has tenant naming thought out including component groups and has all the tests ready to go&lt;/li&gt;
+  &lt;li&gt;updated playbooks and deployment scripts&lt;/li&gt;
+  &lt;li&gt;reconfigured version for pom files to be automated&lt;/li&gt;
+  &lt;li&gt;refactored and and added new components and added more automation tests&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">2018 was just! It came and went!</summary></entry><entry><title type="html">Touch UI Test</title><link href="http://aem.design/blog/2017/12/29/touch-ui-test" rel="alternate" type="text/html" title="Touch UI Test" /><published>2017-12-29T07:22:00+00:00</published><updated>2017-12-29T07:22:00+00:00</updated><id>http://aem.design/blog/2017/12/29/touch-ui-tests</id><content type="html" xml:base="http://aem.design/blog/2017/12/29/touch-ui-test">&lt;p&gt;End of the Year is a few days away!&lt;/p&gt;
+
+&lt;p&gt;It’s was great feeling to bring the Touch UI Migration so close to the end of the year!&lt;/p&gt;
+
+&lt;p&gt;But it’s almost as exciting as completing the Touch UI Testing of exact same components that just have been migrated!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/testing/touch-ui-testing.png&quot; alt=&quot;TouchUI Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Testing utils and all Specs have been migrated from Classic UI to TouchUI.&lt;/p&gt;
+
+&lt;p&gt;Additionally PhantomJS has been depreciated in favor of Headless Chrome!!&lt;/p&gt;
+
+&lt;p&gt;As you all know development of PhantomJS has been abandoned in favour of Chrome Headless. This comes as a welcome move as lots of latest JS and CSS features where hard to test using PhantomJS.&lt;/p&gt;
+
+&lt;p&gt;This is another awesome milestone to be carried as a great base for upcoming projects in 2018!&lt;/p&gt;
+
+&lt;p&gt;Happy New Year to all!!! See you all next year!!!&lt;/p&gt;
+
+&lt;p&gt;PS. Look forward to our &lt;a href=&quot;http://www.jecis.com/&quot;&gt;JECIS&lt;/a&gt; integration coming early next year!!! We are going to use &lt;a href=&quot;http://www.jecis.com/&quot;&gt;JECIS Framework&lt;/a&gt; to deliver eCommerce capability blueprint to your projects!!!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="testing" /><category term="update" /><summary type="html">End of the Year is a few days away!</summary></entry><entry><title type="html">Touch UI Migration</title><link href="http://aem.design/blog/2017/12/06/touch-ui-migration" rel="alternate" type="text/html" title="Touch UI Migration" /><published>2017-12-06T07:22:00+00:00</published><updated>2017-12-06T07:22:00+00:00</updated><id>http://aem.design/blog/2017/12/06/touch-ui-migration</id><content type="html" xml:base="http://aem.design/blog/2017/12/06/touch-ui-migration">&lt;p&gt;It’s always great to head into the end of the year with a good milestone.&lt;/p&gt;
+
+&lt;p&gt;Last week migration to Touch UI has been completed!&lt;/p&gt;
+
+&lt;p&gt;You can now manage all of the template and create new templates with ease using OOTB template authoring tool available in AEM 6.3+!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-templates.png&quot; alt=&quot;TouchUI Template&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As usual content containers have been upgraded lo allow switching from Responsive Grid to Parsys as you need.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-template-structure.png&quot; alt=&quot;TouchUI Structure&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All Showcase pages has been updated to ensure that new components can be used and tested.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-showcase-updates.png&quot; alt=&quot;TouchUI Showcase Updates Styles&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Including all dialogs for all components that have Classic Dialogs now have TouchUI dialogs as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-showcase-updates-accessibility.png&quot; alt=&quot;TouchUI Showcasw Updates Accessibility&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As always all dialogs have the common configuration features that allow complete control of styling for all components.&lt;/p&gt;
+
+&lt;p&gt;This has been a great outcome which was long coming and its further complimented by awesome features in AEM TouchUI!&lt;/p&gt;
+
+&lt;p&gt;Looking forward to testing further in AEM 6.4 Beta!!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="update" /><summary type="html">It’s always great to head into the end of the year with a good milestone.</summary></entry></feed>

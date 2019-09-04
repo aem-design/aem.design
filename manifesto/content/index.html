@@ -1,0 +1,1291 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Content Modeling - AEM.Design</title>
+
+
+
+
+<meta name="description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Content Modeling">
+
+
+  <link rel="canonical" href="http://aem.design/manifesto/content/">
+  <meta property="og:url" content="http://aem.design/manifesto/content/">
+
+
+
+  <meta property="og:description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://aem.design/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2019-09-04T06:10:57+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://aem.design",
+      "logo": "http://aem.design/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "http://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://aem.design/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          AEM.Design
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/quick-start-guide/" >Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manifesto/" >Manifesto</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manual/" >Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/" >Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://aem.design/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        <li>
+          <a href="http://maxbarrass.com" itemprop="url">
+            <i class="fa fa-fw fa-globe" aria-hidden="true"></i> Website
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:max@aem.design">
+            <meta itemprop="email" content="max@aem.design" />
+            <i class="fa fa-fw fa-envelope" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://plus.google.com/+maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-google-plus" aria-hidden="true"></i> Google+
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/manifesto/"><span class="nav__sub-title">Manifesto</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/introduction/" class="">Introduction</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/principles/" class="">Principles</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/capabilities/" class="">Capabilities</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/delivery/" class="">Delivery</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/project/" class="">Project</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/content/" class="active">Content</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/technical/" class="">Technical</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Content Modeling">
+        <meta itemprop="description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
+        <meta itemprop="datePublished" content="September 04, 2019">
+        <meta itemprop="dateModified" content="November 03, 2016">
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+
+                <h1 class="page__title" itemprop="headline">Content Modeling
+</h1>
+                
+                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  22 minute read
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#content-types" id="markdown-toc-content-types">Content Types</a>    <ul>
+      <li><a href="#content-experiences" id="markdown-toc-content-experiences">Content Experiences</a></li>
+    </ul>
+  </li>
+  <li><a href="#primary-content" id="markdown-toc-primary-content">Primary Content</a>    <ul>
+      <li><a href="#pages" id="markdown-toc-pages">Pages</a></li>
+      <li><a href="#assets" id="markdown-toc-assets">Assets</a></li>
+      <li><a href="#tags" id="markdown-toc-tags">Tags</a></li>
+      <li><a href="#apps" id="markdown-toc-apps">Apps</a></li>
+      <li><a href="#screens" id="markdown-toc-screens">Screens</a></li>
+      <li><a href="#forms" id="markdown-toc-forms">Forms</a></li>
+      <li><a href="#commerce---pim" id="markdown-toc-commerce---pim">Commerce - PIM</a></li>
+    </ul>
+  </li>
+  <li><a href="#secondary-content" id="markdown-toc-secondary-content">Secondary Content</a>    <ul>
+      <li><a href="#dictionaries" id="markdown-toc-dictionaries">Dictionaries</a></li>
+      <li><a href="#user" id="markdown-toc-user">User</a></li>
+      <li><a href="#cloud-services" id="markdown-toc-cloud-services">Cloud Services</a></li>
+    </ul>
+  </li>
+  <li><a href="#multi-site-manager" id="markdown-toc-multi-site-manager">Multi Site Manager</a>    <ul>
+      <li><a href="#sites" id="markdown-toc-sites">Sites</a></li>
+      <li><a href="#languages" id="markdown-toc-languages"><strong>Languages</strong></a></li>
+      <li><a href="#micro-sites---communities" id="markdown-toc-micro-sites---communities">Micro-Sites - Communities</a></li>
+      <li><a href="#micro-sites---blog-depreciated" id="markdown-toc-micro-sites---blog-depreciated">Micro-Sites - Blog (Depreciated)</a>        <ul>
+          <li><a href="#blog-entry" id="markdown-toc-blog-entry">Blog Entry</a></li>
+        </ul>
+      </li>
+      <li><a href="#blueprints" id="markdown-toc-blueprints">Blueprints</a>        <ul>
+          <li><a href="#blueprints-language-requirement" id="markdown-toc-blueprints-language-requirement">Blueprints Language Requirement</a></li>
+        </ul>
+      </li>
+      <li><a href="#scaffolds" id="markdown-toc-scaffolds">Scaffolds</a>        <ul>
+          <li><a href="#new-ui---scaffold" id="markdown-toc-new-ui---scaffold">New UI - Scaffold</a></li>
+          <li><a href="#new-ui---compatibility-more-for-scaffolds-that-have-not-been-converted" id="markdown-toc-new-ui---compatibility-more-for-scaffolds-that-have-not-been-converted">New UI - Compatibility more for Scaffolds that have not been converted</a></li>
+          <li><a href="#classic-ui---classic-scaffolds-can-be-access-from-the-sidekick" id="markdown-toc-classic-ui---classic-scaffolds-can-be-access-from-the-sidekick">Classic UI - Classic scaffolds can be access from the sidekick</a></li>
+        </ul>
+      </li>
+      <li><a href="#campaigns-depreciated" id="markdown-toc-campaigns-depreciated">Campaigns (Depreciated)</a></li>
+      <li><a href="#email-authoring" id="markdown-toc-email-authoring">Email Authoring</a></li>
+      <li><a href="#design-importer" id="markdown-toc-design-importer">Design Importer</a></li>
+    </ul>
+  </li>
+  <li><a href="#metadata-experience" id="markdown-toc-metadata-experience">Metadata Experience</a>    <ul>
+      <li><a href="#tags-1" id="markdown-toc-tags-1">Tags</a></li>
+      <li><a href="#page" id="markdown-toc-page">Page</a></li>
+      <li><a href="#asset" id="markdown-toc-asset">Asset</a></li>
+      <li><a href="#components" id="markdown-toc-components">Components</a></li>
+      <li><a href="#designs" id="markdown-toc-designs">Designs</a></li>
+    </ul>
+  </li>
+  <li><a href="#components-1" id="markdown-toc-components-1">Components</a>    <ul>
+      <li><a href="#interfaces" id="markdown-toc-interfaces">Interfaces</a>        <ul>
+          <li><a href="#new-ui---also-know-as-touch-ui-granite-ui-and-coral-ui" id="markdown-toc-new-ui---also-know-as-touch-ui-granite-ui-and-coral-ui">New UI - Also know as Touch UI, Granite UI and Coral UI</a></li>
+          <li><a href="#classic-ui---build-with-sencha-js-framework" id="markdown-toc-classic-ui---build-with-sencha-js-framework">Classic UI - Build with Sencha JS framework</a></li>
+        </ul>
+      </li>
+      <li><a href="#dialogs" id="markdown-toc-dialogs">Dialogs</a>        <ul>
+          <li><a href="#new-ui---page-properties" id="markdown-toc-new-ui---page-properties">New UI - Page Properties</a></li>
+          <li><a href="#classic-ui---page-properties" id="markdown-toc-classic-ui---page-properties">Classic UI - Page Properties</a></li>
+        </ul>
+      </li>
+      <li><a href="#design-dialogs" id="markdown-toc-design-dialogs">Design Dialogs</a>        <ul>
+          <li><a href="#new-ui---design-dialog" id="markdown-toc-new-ui---design-dialog">New UI - Design Dialog</a></li>
+          <li><a href="#classic-ui---design-dialog" id="markdown-toc-classic-ui---design-dialog">Classic UI - Design Dialog</a></li>
+        </ul>
+      </li>
+      <li><a href="#translations" id="markdown-toc-translations">Translations</a>        <ul>
+          <li><a href="#language-copies" id="markdown-toc-language-copies">Language Copies</a></li>
+          <li><a href="#create-translation" id="markdown-toc-create-translation">Create Translation</a></li>
+          <li><a href="#translation-projects" id="markdown-toc-translation-projects">Translation Projects</a></li>
+          <li><a href="#custom-or-legacy" id="markdown-toc-custom-or-legacy">Custom or Legacy</a>            <ul>
+              <li><a href="#human-and-machine" id="markdown-toc-human-and-machine">Human and Machine</a></li>
+              <li><a href="#human-translation" id="markdown-toc-human-translation">Human Translation</a>                <ul>
+                  <li><a href="#side-by-side" id="markdown-toc-side-by-side">Side-By-Side</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#content-best-practices" id="markdown-toc-content-best-practices">Content Best Practices</a></li>
+    </ul>
+  </li>
+  <li><a href="#content-migration" id="markdown-toc-content-migration">Content Migration</a></li>
+  <li><a href="#content-import" id="markdown-toc-content-import">Content Import</a></li>
+  <li><a href="#content-and-seo" id="markdown-toc-content-and-seo">Content and SEO</a></li>
+  <li><a href="#deployment-practices" id="markdown-toc-deployment-practices">Deployment Practices</a>    <ul>
+      <li><a href="#package-deployment-and-replication" id="markdown-toc-package-deployment-and-replication">Package Deployment and Replication</a></li>
+      <li><a href="#deployment-cycle" id="markdown-toc-deployment-cycle">Deployment Cycle</a>        <ul>
+          <li><a href="#build-stage" id="markdown-toc-build-stage">Build Stage</a></li>
+          <li><a href="#deploy-stage" id="markdown-toc-deploy-stage">Deploy Stage</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>Organisations that dedicate resources on planning and designing Content Management Practices within the core business at some point implement a Content Management System that support the Business Processes of managing content. So it is important to keep in mind that Business Process which is part of Business Architecture comes first and foremost, their implementation in a computer system such as a CMS comes second.</p>
+
+<p>Please consider that information in this document is based on capabilities that are present in the AEM platform. This is done for a reason to simplify the understanding of the concepts, as each Capability and Functions with the Platform can be explored to derive exact business process that it’s meant to support. During the process of exploration the business practitioners are able to build an understanding of Context of all features and how the apply to their business.</p>
+
+<p>This document covers concepts in AEM that relate to Content Modeling and Information Management. AEM is Content Driven, which means that all activities within AEM revolve around content in its repository. This means that Content Modeling has to be a first and foremost activity of any Feature/Capability planning, as it will enable understanding of the content at the lowest level where it exist, and then enables planning of other higher level features that streamline and guide workflow for that content.</p>
+
+<h2 id="content-types">Content Types</h2>
+
+<p>To be able to effectively plan content needs for a CMS it’s important to segregate content into its high level Primary and Secondary content types. These content types should be used to describe business requirements and functions that needed by customers. Doing this from beginning enables a more specific context for Business and Technical analysis, as you are able understand impact on the content and derive any required updates to the Authoring experiences that link to those content types.</p>
+
+<p>Primary content types are exposed to Authors and they are managed either directly or with help of additional experiences:</p>
+
+<p>●      <strong>Pages</strong> - a container for Authored content, <strong><em>NOTE:</em></strong>* this is different from ALL other traditional CMS platforms*</p>
+
+<p>●      <strong>Assets</strong> - assets and metadata including tags that is used in pages and products</p>
+
+<p>●      <strong>Tags</strong> - metadata tags used to enrich content</p>
+
+<p>●      <strong>PIM</strong> - products catalog</p>
+
+<p>Primary content types are aimed at being Authored once into AEM and reused for multiple purposes. Reuse can be in a form of linking content types together such as adding a Tag to an Asset, or displaying an Asset on a Web Page. That ability of content Reuse comes from AEM Platform Components, that are added to enable different required perspectives.</p>
+
+<p>Secondary content types that also equally important but vary in exposure Authors:</p>
+
+<p>●      <strong>User</strong> - metadata for a user, synchronisable with external systems</p>
+
+<p>●      <strong>Designs</strong> - UX static content and Template Component configurations</p>
+
+<p>●      <strong>Cloud Configuration</strong> - cloud services configurations</p>
+
+<p>●      <strong>Workflows</strong> - workflow designer</p>
+
+<p>These content types are aimed at managed by Specific group of Authors that have a deeper knowledge into the content and the integration nature of these types.</p>
+
+<h3 id="content-experiences">Content Experiences</h3>
+
+<p>Each of the content types in AEM has a predefined experiences, these experiences are represented in Capabilities and Functions of the platform. Its important to understand and leverage existing capabilities as much as possible. These capabilities and function support a wide range of functions and customisations, additional customisation can be applied as a last resort.</p>
+
+<ol>
+  <li>
+    <p>Pages</p>
+
+    <ol>
+      <li>
+        <p>Multi-Site Manager (MSM)</p>
+      </li>
+      <li>
+        <p>Social</p>
+      </li>
+      <li>
+        <p>Apps</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Assets</p>
+
+    <ol>
+      <li>
+        <p>Assets - Digital Asset Management (DAM)</p>
+      </li>
+      <li>
+        <p>Publications</p>
+      </li>
+      <li>
+        <p>Content Fragments - Reusable asset content</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Tags</p>
+
+    <ol>
+      <li>Tag Management</li>
+    </ol>
+  </li>
+  <li>
+    <p>Commerce</p>
+
+    <ol>
+      <li>Product Information Management (PIM)</li>
+    </ol>
+  </li>
+  <li>
+    <p>Screens</p>
+
+    <ol>
+      <li>Screens Management</li>
+    </ol>
+  </li>
+  <li>
+    <p>Forms</p>
+
+    <ol>
+      <li>Forms Management</li>
+    </ol>
+  </li>
+</ol>
+
+<p>AEM as a repository can be used to store any form of Content Type. Planning for these Content Types outside of AEM is critical for that contents proper usage and lifetime. It’s important that content types are thought though from business usage and function perspective before touching AEM. Translation of Content Types into AEM will enable proper implementation and allow understanding of features and components of AEM platform that will support that Content Type.</p>
+
+<h2 id="primary-content">Primary Content</h2>
+
+<p>This section covers the primary content which is stored in AEM repository.</p>
+
+<h3 id="pages">Pages</h3>
+
+<p>AEM Sites provides all the necessary tools to content authors to create “Pages” that are targeted to be consumed by the end-users through a web browser. Fundamentally the act of authoring simply creates content structures that translate into visual designs developed by developers. Majority of the time a WYSIWYG approach is used to facilitate an inplace authoring workflow that enables a more realistic representation of target state to the Authors.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-editor.png" alt="image alt text" /></p>
+
+<h3 id="assets">Assets</h3>
+
+<p>Digital Asset Management refers largely at a practice of managing Assets. As a whole it’s a combination of management practices and metadata content that is associated with an Asset. In AEM Images and Videos are the primary Assets in addition to other</p>
+
+<p><img src="/assets/images/manifesto/content-assets-list.png" alt="image alt text" /></p>
+
+<h3 id="tags">Tags</h3>
+
+<p>Tags are a quick and easy method of classifying content within a website. They can be thought of as keywords or labels (metadata) that allow content to be more quickly found as the result of a search. OOTB in AEM tags can be added to Pages, Assets, User Generated content and in addition to this they feature in OOTB components to allow search and filtering of content for presentation.</p>
+
+<p><a href="http://docs.adobe.com/docs/en/cq/current/wcm/tag_admin.html">Tags</a> must be used to classify content within CMS. Tags structured in namespaces provide a flexible and extendable layer when designing<a href="http://docs.adobe.com/docs/en/aem/6-0/administer/content/assets/metadata.html"> metadata</a> for assets and content. The OOB components associated with Tags provide simple and effective authoring experience and should be used to drive Authoring Experience where Lists and Arbitrary Structures are required on dialogs. Management of Tags in AEM allows ability for the Business users to extend their content experience without needing to update code.</p>
+
+<p><img src="/assets/images/manifesto/content-tags-list.png" alt="image alt text" /></p>
+
+<p>Tags can be thought of a structured classification hierarchies that can be added to content metadata. For example if a tag for a Country Location is added to a group of Assets/Pages then a Authors can easily locate All Assets/Pages that belong to that particular Location when building Galleries or when creating list of Pages. Tags can be used by authors without explicit design, but it’s recommended to perform an explicit Planning and Strategy activity to understand the long term growth of tags and their use across the whole Content Model.</p>
+
+<h3 id="apps">Apps</h3>
+
+<p><img src="/assets/images/manifesto/content-apps-list.png" alt="image alt text" /></p>
+
+<h3 id="screens">Screens</h3>
+
+<p><img src="/assets/images/manifesto/content-screens-list.png" alt="image alt text" /></p>
+
+<h3 id="forms">Forms</h3>
+
+<p><img src="/assets/images/manifesto/content-forms-list.png" alt="image alt text" /></p>
+
+<h3 id="commerce---pim">Commerce - PIM</h3>
+
+<p>Commerce content can be synced from an external e-Commerce platform such as Hybris and enable its usage in the sites.</p>
+
+<p><img src="/assets/images/manifesto/content-commerce-list.png" alt="image alt text" /></p>
+
+<h2 id="secondary-content">Secondary Content</h2>
+
+<p>This section covers Secondary content that is stored in the repository, secondary content types are not not limited to this content.</p>
+
+<h3 id="dictionaries">Dictionaries</h3>
+
+<p>In AEM, Dictionaries Capabilities provides Author and developers with set of functions that can be used to manage static labels and text in AEM UI and Custom Components. Primary function of dictionaries to enable Translations of Static Labels, which is done through a<a href="https://docs.adobe.com/docs/en/aem/6-3/develop/components/i18n/translator.html"> Dictionary Translator Tool</a>.</p>
+
+<p><img src="/assets/images/manifesto/content-dictionaries-editor.png" alt="image alt text" /></p>
+
+<h3 id="user">User</h3>
+
+<p>User profiles are one of the components that enable OOTB personalisation for End-Users. Ability to synchronize users from external sources enables Personalisation components to adjust Targeting and Pages content as required. User metadata can be stored to enable personalized output of content to end users.</p>
+
+<p><img src="/assets/images/manifesto/content-user-editor.png" alt="image alt text" /></p>
+
+<h3 id="cloud-services">Cloud Services</h3>
+
+<p>Cloud services is configuration content that is created and update by the admin authors to enable integration with cloud services. Cloud Services configurations enable interaction with services without</p>
+
+<p><img src="/assets/images/manifesto/content-cloudconfig-list.png" alt="image alt text" /></p>
+
+<h2 id="multi-site-manager">Multi Site Manager</h2>
+
+<h3 id="sites">Sites</h3>
+
+<p>Sites is the primary containers of content, they allow creation of content structures so that they can be present to End-users and reused in other pages. All content created under sites is targeted to be consumed by end-user. Sites enable ability to create replicate content as reusable structure and facilitate Multi-lingual content structures that are managed through translation services or through manual language translations.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-list.png" alt="image alt text" /></p>
+
+<h3 id="languages"><strong>Languages</strong></h3>
+
+<p>AEM is a Multi-Language aware CMS and has numerous tools that support Localisation of Language content for Sites. OOTB these tools are dependent on Site content to have particular structure for proper operation and as a best practice principles. Primary tools that are dependant on Locale are Blueprints and Language-Copy functions. Guiding principle of creating sites is that Root Level of the site has siblings of all the available Languages for the content of that site. Content is authored in one of the languages and Language-Copy tool is used to copy and initiate translation of that page into target Languages.</p>
+
+<p><img src="/assets/images/manifesto/content-localization-list.png" alt="image alt text" /></p>
+
+<h3 id="micro-sites---communities">Micro-Sites - Communities</h3>
+
+<p><a href="https://docs.adobe.com/docs/en/aem/6-3/develop/communities.html">AEM Communities</a> simplifies the creation and customizaton of community features such as forums, blogs, Q&amp;A, calendars, comments, reviews, voting, and ratings. AEM introduced a<a href="https://docs.adobe.com/docs/en/aem/6-3/develop/communities/scf.html"> Social Component Framework (SCF)</a> that provided structure for creating pre built templates that in turn enable rapid development of themes and functionality for Community type sites.</p>
+
+<p><img src="/assets/images/manifesto/content-communities-list.png" alt="image alt text" /></p>
+
+<h3 id="micro-sites---blog-depreciated">Micro-Sites - Blog (Depreciated)</h3>
+
+<p>A Blog Experience sample site is provided part of the Sample content with AEM. This experience covers a creation of sample Blog listing, entry creation and blog help tools. This sample content can be used as a reference or adaptation into blog sites.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-blog.png" alt="image alt text" /></p>
+
+<h4 id="blog-entry">Blog Entry</h4>
+
+<p>Blog Experience is based on Blog Posting and Blog Entry experiences, whereby creation of Blog Entries creates a Data Segmented hierarchy of content which is then resurfaced by the Blog Listing page.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-blog-entry.png" alt="image alt text" /></p>
+
+<h3 id="blueprints">Blueprints</h3>
+
+<p>Ability to create sites from existing Site Structure Templates and provide an ability to link and keep in sync the target site content. In addition to this they provide an ability to chose Languages and Starting content that should be copied from the Template reference.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-blueprint.png" alt="image alt text" /></p>
+
+<h4 id="blueprints-language-requirement">Blueprints Language Requirement</h4>
+
+<p>Unlike Language-Copy tools, Blueprints require to have a site structure to have a language subfolder to be one level under the site root. The Name on of the Language folder needs to be in the format of <language-code> or <language-code>_<country-code>, for example en, en_US, en_us, en_GB, en_gb</country-code></language-code></language-code></p>
+
+<p>●      The supported language code is lower-case, two-letter code as defined by ISO-639-1</p>
+
+<p>●      The supported country code is lower-case or upper-case, two-letter code as defined by ISO 3166</p>
+
+<p><img src="/assets/images/manifesto/content-sites-blueprint-languages.png" alt="image alt text" /></p>
+
+<p>Not having this pattern configuration on your site will not allow Blueprints to detect languages of your site.</p>
+
+<h3 id="scaffolds">Scaffolds</h3>
+
+<p><a href="http://dev.day.com/docs/en/cq/current/wcm/scaffolding.html">Scaffolding</a> should be used to streamline authoring experience of particular pages. It should be used to create authoring experiences for creating and updating content. A scaffold is a dialog, that is made up of limited fields that are tailored for that particular authoring experience requirements.</p>
+
+<p>Scaffold provide an ability to provide a Summary authoring experience without limiting locking the ability to customise page if required, as would be with having a Page template document that forces a particular page structure. Scaffolds are exposed to the authors either though editing tools or can be explicitly served through guided process.</p>
+
+<h4 id="new-ui---scaffold">New UI - Scaffold</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-scaffold.png" alt="image alt text" /></p>
+
+<h4 id="new-ui---compatibility-more-for-scaffolds-that-have-not-been-converted">New UI - Compatibility more for Scaffolds that have not been converted</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-scaffold-classic-compatibility.png" alt="image alt text" /></p>
+
+<h4 id="classic-ui---classic-scaffolds-can-be-access-from-the-sidekick">Classic UI - Classic scaffolds can be access from the sidekick</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-scaffold-classic.png" alt="image alt text" /></p>
+
+<h3 id="campaigns-depreciated">Campaigns (Depreciated)</h3>
+
+<p>Existing Campaigns Management in AEM is being depreciated in favor of Adobe Campaign platform that has an extensive feature set and integration capabilities.</p>
+
+<p><img src="/assets/images/manifesto/content-campaigns.png" alt="image alt text" /></p>
+
+<p>Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors.</p>
+
+<p>It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors. You can create content, segment visitors, push and promote targeted content for specific user profiles and manage campaigns across multiple channels.</p>
+
+<p>Overall Experiences that AEM Supports</p>
+
+<ul>
+  <li>
+    <p>Brands - In CQ, brands are the top level unit and form a collection of Campaigns.</p>
+  </li>
+  <li>
+    <p>Campaigns - A campaign is a collection of individual Experiences.</p>
+  </li>
+  <li>
+    <p>Experiences - The focused content forms the various experiences, presented to the visitor at Touchpoints. There are several types of experience available:</p>
+  </li>
+  <li>
+    <p>Teasers - Teaser Pages / Paragraphs are used to steer specific visitor Segments to content that is focused on their interests. Teaser pages present a range of options for the visitor to choose from, show only one teaser paragraph that is based on the specific visitor segment; for example, the teaser paragraph shown may be dependent on the age of the visitor. Typically a teaser page is a temporary action that will last for a specific period of time, until it is replaced by the next teaser page.</p>
+  </li>
+  <li>
+    <p>Newsletters - E-mail Communications are used to engage users and encourage them to visit your web site. These usually take the form of a newsletter, sent to your Leads (which are usually grouped into Lists).</p>
+  </li>
+  <li>
+    <p>Test&amp;Target - This allows integration with Adobe’s Test&amp;Target which gives marketers a conversion website optimization tool with the necessary capabilities to continually make their online content and offers more relevant to their customers—yielding greater conversion. Test&amp;Target provides an intuitive interface for designing and executing tests, creating audience segments and targeting content—all from a single application.</p>
+  </li>
+  <li>
+    <p>Touchpoints - These are the points of contact between the visitor and your campaign. The touchpoints are connected to the experiences that you have created. For example, for teasers it is the content page where the teaser paragraph is located, for a newsletter it is the mailing list.</p>
+  </li>
+  <li>
+    <p>Leads - The information that you have collected about your visitors and how to contact them forms the basis for your leads.</p>
+  </li>
+  <li>
+    <p>Lists - Leads are usually grouped into lists so that you can take collective action on them.</p>
+  </li>
+  <li>
+    <p>Segments - Site visitors have different interests and objectives when they come to a site. Analyzing this according to factors such as activity on the website, profile information registered and activity on other websites, helps you to define segments. Content can then be specifically targeted to the visitor’s needs and interests according to the segment(s) they match.</p>
+  </li>
+</ul>
+
+<h3 id="email-authoring">Email Authoring</h3>
+
+<p>Campaign authoring tools enable creation of Email templates and enable integration with External Mail services such as SIlverpop. Email can be authored in AEM and published into existing  EMail Campaign management platforms, in addition to this content from AEM can be reused by external tool directly from AEM, for example partial page content can be reuse from pages that use Components.</p>
+
+<p><img src="/assets/images/manifesto/content-campaigns-email-authoring.png" alt="image alt text" /></p>
+
+<h3 id="design-importer">Design Importer</h3>
+
+<p>When using Landing pages in AEM a Design Importer mechanism can be used to import a design into the current page. Design Importer mechanism provides a structured way external designers can create Designs for landing pages that then can be imported into AEM.</p>
+
+<p><img src="/assets/images/manifesto/content-design-importer.png" alt="image alt text" /></p>
+
+<p>More Info :<a href="https://docs.adobe.com/docs/en/aem/6-3/author/personalization/campaigns/landingpages.html"> AEM Landing Pages</a> and<a href="http://docs.adobe.com/docs/en/aem/6-3/administer/personalization/campaigns/extending-the-design-importer-for-landingpages.html"> Extending and Configuring the Design Importer for Landing Pages</a></p>
+
+<h2 id="metadata-experience">Metadata Experience</h2>
+
+<p>Structured metadata management with tags enables usage of Tags in all parts of Authoring experience. When tags are created they can be used to tag all Assets and can be used to search for those Assets and Pages when required.</p>
+
+<h3 id="tags-1">Tags</h3>
+
+<p>Tag management and authoring interface support multi-lingual translation and can be further extended to support additional metadata as needed. An example extension data point that can be added is creating Reference fields for Tags to enable specifying relevant Reference content that describes or details this Tag, an example would be linking an Airport Code tag to an Airport Information Page that has additional information for any component that requires more information about Airport. In this scenario new Attribute is a generic in nature and can be used for all tags as needed.</p>
+
+<p><img src="/assets/images/manifesto/content-tags-localization.png" alt="image alt text" /></p>
+
+<h3 id="page">Page</h3>
+
+<p>Each page has several metadata attributes that support OOTB functions. Majority of metadata is optional and is used only when needed. Page metadata can be extended to support additional configuration and its recommended to inherit OOTB page management tools to ensure new functions become available after upgrades.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-page-metadata.png" alt="image alt text" /></p>
+
+<h3 id="asset">Asset</h3>
+
+<p>Assets have extensive metadata configuration options, majority of the image associate metadata can be derived from images if its provided initially part of the image Metadata. Asset processing tools would scan the image for this data and automatically add it to the Asset. Metadata profiles management tool for assets can be used to configure the Authoring interface and metadata requirements for each different Asset type.</p>
+
+<p><img src="/assets/images/manifesto/content-assets-asset-metadata.png" alt="image alt text" /></p>
+
+<h3 id="components">Components</h3>
+
+<p>Primary input of content into AEM is done through Component Dialogs. These dialogs are configurable by developers and can be extended to provide a very rich authoring functionality. Several OOTB functions exist to enable a more simplified interaction with these dialogs. Dialogs exist in two distinctly unique modes Instance and Design. Component Instance dialog allows entry of content into the component and storing it in a Page. Component Design dialog allows storing of content initial values in the Design of a site specified part for the Page or Inherited from parent Page.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-component-dialog.png" alt="image alt text" /></p>
+
+<h3 id="designs">Designs</h3>
+
+<p>Designs provide an ability to segregate Designs from Content. Component Design content is persisted into Design content structure for each site. Site Design folder is created initially and contains all of the Static Content that is used to present a site to End-User. In addition to this Site Design contains configuration of the Authoring interface. Such as availability of Component on Templates and Component default values.</p>
+
+<h2 id="components-1">Components</h2>
+
+<h3 id="interfaces">Interfaces</h3>
+
+<p>AEM comes with two primary interface types New UI and Classic UI. New UI refers to mobile friendly responsive UI Framework that is consistently used across all Adobe Marketing Cloud products.  Classic UI refers to the original AEM/CQ interface. Latest version of AEM have migrated majority of Classic UI feature into New UI and provide a much more comprehensive and simpler to use Authoring Experience to authors. Classic UI can still be accessed from New UI and still has several advanced features that required to be used by Advanced Authors.</p>
+
+<h4 id="new-ui---also-know-as-touch-ui-granite-ui-and-coral-ui">New UI - Also know as Touch UI, Granite UI and Coral UI</h4>
+
+<p><img src="/assets/images/manifesto/content-project-list.png" alt="image alt text" /></p>
+
+<h4 id="classic-ui---build-with-sencha-js-framework">Classic UI - Build with Sencha JS framework</h4>
+
+<p><img src="/assets/images/manifesto/content-project-list-classic.png" alt="image alt text" /></p>
+
+<h3 id="dialogs">Dialogs</h3>
+
+<p>As AEM has two distinct UI experiences, each Component and Interface has two individual interfaces. Classic dialogs can be migrated to New UI either through Conversion Tool or manually build to support only specific functions. Both interfaces have distinct features and behaviours, New UI has been developed with simplicity in mind.</p>
+
+<p>Related:<a href="http://docs.adobe.com/docs/en/aem/6-3/develop/dev-tools/dialog-conversion.html"> Dialog Conversion Tool</a></p>
+
+<h4 id="new-ui---page-properties">New UI - Page Properties</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-page-dialog-metadata.png" alt="image alt text" /></p>
+
+<h4 id="classic-ui---page-properties">Classic UI - Page Properties</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-page-dialog-metadata-classic.png" alt="image alt text" /></p>
+
+<h3 id="design-dialogs">Design Dialogs</h3>
+
+<p>For component to show in the Side Kick on a particular template they are first required to be added to the design of the template. This is done through design mode and required components are selected to be available to authors. Special Authoring privileges can be assigned to prevent unauthorised modification of Designs.</p>
+
+<h4 id="new-ui---design-dialog">New UI - Design Dialog</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-page-dialog-design.png" alt="image alt text" /></p>
+
+<h4 id="classic-ui---design-dialog">Classic UI - Design Dialog</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-page-dialog-design-classic.png" alt="image alt text" /></p>
+
+<h3 id="translations">Translations</h3>
+
+<p>AEM supports both Manual and Automated translation of content. For checking and initiating translation a Language Copy function is used with a workflow if automation is required.</p>
+
+<h4 id="language-copies">Language Copies</h4>
+
+<p>Language copies allow copying a particular version of a page from one Language into Another and provide assistance of starting a workflow for translation. As well as provide visual list of existing copies of selected page in different languages.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-languagecopy.png" alt="image alt text" /></p>
+
+<h4 id="create-translation">Create Translation</h4>
+
+<p>When creating a translation of a page a workflow can be triggered to either notify another person to conduct a Manual translation or have an external Automated script to perform initial translation.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-translations-create.png" alt="image alt text" /></p>
+
+<h4 id="translation-projects">Translation Projects</h4>
+
+<p>New functionality in AEM enables better status reporting on translation progress for all pages. A translation project is created to which page all required translations are assigned, progress of all workflows per pages is reflected on dashboard.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-translations-project.png" alt="image alt text" /></p>
+
+<h4 id="custom-or-legacy">Custom or Legacy</h4>
+
+<h5 id="human-and-machine">Human and Machine</h5>
+
+<p>AEM supports human and machine translation workflows. To automate translation workflows, you integrate translation service providers with AEM and create projects for translating content into multiple languages. These project provide you with a dashboard that allow you to keep track of the progress of translation.</p>
+
+<ul>
+  <li>
+    <p>Human translation: Content is sent to your translation provider and translated by professional translators. When complete, the translated content is returned and imported into AEM. When your translation provider is integrated with AEM, content is automatically sent between AEM and the translation provider.</p>
+  </li>
+  <li>
+    <p>Machine translation: The machine translation service immediately translates your content.</p>
+  </li>
+</ul>
+
+<h5 id="human-translation">Human Translation</h5>
+
+<h6 id="side-by-side">Side-By-Side</h6>
+
+<p>When AEM is exposed to Translation providers for Human Translation it Side-By-Side view of pages enables much better context sensitive translation, which increases quality of translation.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-page-side-by-side.png" alt="image alt text" /></p>
+
+<h3 id="content-best-practices">Content Best Practices</h3>
+
+<p>References</p>
+
+<ul>
+  <li>
+    <p><a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/msm/msm-bp.html">MSM Best Practices</a></p>
+  </li>
+  <li>
+    <p><a href="https://docs.adobe.com/docs/en/aem/6-2/administer/sites/translation/tc-bp.html">Translation Best Practices</a></p>
+  </li>
+</ul>
+
+<h2 id="content-migration">Content Migration</h2>
+
+<p><em>Content Migration all of the processes that take place outside of AEM to create a Content Package that is subsequently imported into AEM.</em></p>
+
+<p>Migration of content into AEM can be done in many ways. Some methods require more effort than other. The best effort is spent creating your site and not put too much development overhead on developing repeatable code for migration purpose as its a one off exercise. Simplest of all methods is a Content Transformation flow of Source Data to JCR Content hierarchy. Process of creating a transformation of Source Data to JCR Content hierarchy is straightforward, auditable and can be rolled back easily, as you are effectively installing content using normal content package. This process allows repeatability of whole process without very low overhead. Once the pattern for one content type is developed then all content can be migrated same way with little effort.</p>
+
+<p>The overall data migration process is as follows:</p>
+
+<p><img src="/assets/images/manifesto/content-migration.png" alt="image alt text" /></p>
+
+<p>This process can be adjusted to suit your needs. The fundamental is to keep this simple and iterate through the process as quick as possible.</p>
+
+<h2 id="content-import">Content Import</h2>
+
+<p><em>Content Import all of the processes that take place to create a Content Package that is subsequently imported into AEM.</em></p>
+
+<p>It’s important that all content that is imported into AEM can be rolled-back easily or can be overridden by authors if needed. Exceptions to this can fall into Commerce implementation and Cloud Asset services which become source of truth for content that is being imported. Fundamentally if content is imported from Origin System there should be a way to update and rollback by author and the importing process. When building AEM Hosted Service approach session blocking for content updates on large scale would create content consistence complications. Using same approach on dedicated services would create a redundant licensing. If these are not of concern then the Dedicated Server that imports and replicates content can be used ensuring that component that is imported does not replace any overridden content, this can be effectively done by writing components that update attributes as if it’s a language translations. This means that attribute value that has not been translated to EN does not have an override specified by the user. For example if data imported it written to a field “text” for a particular component then the if a user has decided to override new attribute would be created “text.en” this will enable the processes that update the content to update from source system without worrying about overriding content in AEM.</p>
+
+<h2 id="content-and-seo">Content and SEO</h2>
+
+<p>How does content created during Authoring is Structured and Surfaced to ensure its SEO friendly? These day and age Google does a reasonable job of ensuring and filtering content from a page. But as always there are lots of ways this can be viewed. Measuring SEO has always been an interesting concept and concentrating on providing proper structured content will always work better now and in long term.</p>
+
+<p>Primary guideline is to ensure that the meaning a URL conveys is represented in its content. This means that URL should as a whole be a summary of page content, for example one should expect that URL file name and title of the page should be similar. And for segmented content the date of article and its categorisation should also be derived from metadata visible on the page.</p>
+
+<h2 id="deployment-practices">Deployment Practices</h2>
+
+<p>To be able to support CI/CD practice automation should used to minimise deployment overheads and avoid conflicts. When segregating infrastructure and security, production artifacts and environments should be replicated to other environments so that its configurations can be tested throughout normal development cycles. Practices must be continually refactored to be simple and transparent so that they can be used without manual intervention. It’s important to utilise same practices across all environments without exceptions, this ensures continuous improvement on practices as they are used by wider group of users.</p>
+
+<p><img src="/assets/images/manifesto/content-deployment-practice.png" alt="image alt text" /></p>
+
+<p>The whole environment should be able to be replicated in different configurations in a local environment. Using Docker and Ansible for streamlining the deployment architecture and inventory enable consistency of environment and enables persistence of operations functions.</p>
+
+<p>General practice is to only allow System Console and Package Installation in Local Dev environment. This practice ensures that all efforts to update a node a persisted into Code and do not create conflict of the Node configuration state.</p>
+
+<h3 id="package-deployment-and-replication">Package Deployment and Replication</h3>
+
+<p>Packages should be used to deploy system content and for bulk content operations (backup, archive, migration etc). Replication should be used to replicate content by authors during normal operations.</p>
+
+<p>It’s important that package can be installed and uninstalled from a node. This is to ensure that update by the package can be rolled back in cases where testing has failed. Replicating packages from one node to another removes ability to Uninstall the package from the target node. Additionally replication of a package does not allow for additional processes to be carried out on the node during a deployment process.</p>
+
+<h3 id="deployment-cycle">Deployment Cycle</h3>
+
+<p>Deployment cycle is deployment steps that run automatically triggered by Code updates by developers or triggered manually or automatically by other jobs. The cycle is divided into Build and Deploy Stages. Build stage is used to respond to Code updates and carry out subsequent build processes and artifact storage. Deploy Stage is used for Deploying a particular versioned artifact to an environment.</p>
+
+<h4 id="build-stage">Build Stage</h4>
+
+<ol>
+  <li>
+    <p>Commit - Developer commits code to Repository</p>
+  </li>
+  <li>
+    <p>Pull - Jenkins monitors updates and pulls code into workspace</p>
+  </li>
+  <li>
+    <p>Build - Jenkins build the code using a Docker Container</p>
+  </li>
+  <li>
+    <p>Store - on successful build artifact is stored in Nexus</p>
+  </li>
+</ol>
+
+<h4 id="deploy-stage">Deploy Stage</h4>
+
+<ol>
+  <li>
+    <p>Retrieve - Jenkins deploy job retrieves a package from Nexus into workspace</p>
+  </li>
+  <li>
+    <p>Deploy - Jenkins deploys package to target Node</p>
+  </li>
+  <li>
+    <p>Test - Jenkins runs Testing job for the target Node</p>
+  </li>
+  <li>
+    <p>Push - Push project version update to repo</p>
+  </li>
+  <li>
+    <p>Cache - Optional, if docker containers are updated then containers is cached in shared docker registry</p>
+  </li>
+</ol>
+
+<p><img src="/assets/images/manifesto/content-deployment-cycle.png" alt="image alt text" /></p>
+
+                
+            </section>
+
+            
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+            <footer class="page__meta">
+                
+                
+
+
+                
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-03">November 03, 2016</time></p>
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Content+Modeling%20http%3A%2F%2Faem.design%2Fmanifesto%2Fcontent%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fmanifesto%2Fcontent%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fmanifesto%2Fcontent%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/manifesto/project/" class="pagination--pager" title="Project Guide
+">Previous</a>
+    
+    
+      <a href="/manifesto/technical/" class="pagination--pager" title="Technical Standards
+">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://aem.design/manifesto/content/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/manifesto/060-content"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>

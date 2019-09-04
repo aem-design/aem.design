@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Delivery Guide - AEM.Design</title>
+
+
+
+
+<meta name="description" content="Components are the basic building blocks in AEM">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Delivery Guide">
+
+
+  <link rel="canonical" href="http://aem.design/manifesto/delivery/">
+  <meta property="og:url" content="http://aem.design/manifesto/delivery/">
+
+
+
+  <meta property="og:description" content="Components are the basic building blocks in AEM">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://aem.design/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2019-09-04T06:10:57+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://aem.design",
+      "logo": "http://aem.design/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "http://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://aem.design/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          AEM.Design
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/quick-start-guide/" >Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manifesto/" >Manifesto</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manual/" >Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/" >Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://aem.design/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        <li>
+          <a href="http://maxbarrass.com" itemprop="url">
+            <i class="fa fa-fw fa-globe" aria-hidden="true"></i> Website
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:max@aem.design">
+            <meta itemprop="email" content="max@aem.design" />
+            <i class="fa fa-fw fa-envelope" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://plus.google.com/+maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-google-plus" aria-hidden="true"></i> Google+
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/manifesto/"><span class="nav__sub-title">Manifesto</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/introduction/" class="">Introduction</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/principles/" class="">Principles</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/capabilities/" class="">Capabilities</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/delivery/" class="active">Delivery</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/project/" class="">Project</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/content/" class="">Content</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manifesto/technical/" class="">Technical</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Delivery Guide">
+        <meta itemprop="description" content="Components are the basic building blocks in AEM">
+        <meta itemprop="datePublished" content="September 04, 2019">
+        <meta itemprop="dateModified" content="November 03, 2016">
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+
+                <h1 class="page__title" itemprop="headline">Delivery Guide
+</h1>
+                
+                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#mobile-first---responsive" id="markdown-toc-mobile-first---responsive">Mobile First - Responsive</a></li>
+  <li><a href="#components" id="markdown-toc-components">Components</a>    <ul>
+      <li><a href="#experience" id="markdown-toc-experience">Experience</a></li>
+      <li><a href="#presentation" id="markdown-toc-presentation">Presentation</a>        <ul>
+          <li><a href="#concept-component-to-designstyle-relationship" id="markdown-toc-concept-component-to-designstyle-relationship">Concept: Component to Design/Style Relationship</a></li>
+          <li><a href="#concept-details-and-list" id="markdown-toc-concept-details-and-list">Concept: Details and List</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#component-categories" id="markdown-toc-component-categories">Component Categories</a></li>
+  <li><a href="#sling-selectors" id="markdown-toc-sling-selectors">Sling Selectors</a></li>
+  <li><a href="#content-modelling" id="markdown-toc-content-modelling">Content Modelling</a>    <ul>
+      <li><a href="#content-segmentation" id="markdown-toc-content-segmentation">Content Segmentation</a></li>
+      <li><a href="#segmentation-reference" id="markdown-toc-segmentation-reference">Segmentation Reference</a>        <ul>
+          <li><a href="#pages" id="markdown-toc-pages">Pages</a></li>
+          <li><a href="#assets" id="markdown-toc-assets">Assets</a></li>
+          <li><a href="#tags" id="markdown-toc-tags">Tags</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#component-templating" id="markdown-toc-component-templating">Component Templating</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="mobile-first---responsive">Mobile First - Responsive</h2>
+
+<h2 id="components">Components</h2>
+
+<p>Components are the basic building blocks in AEM. When designing components two aspects must be considered, experience and presentation. Experience will help to understand out how the component is used by authors, how it is linked to content within CMS and how it will be used by the end user. Presentation will help to understand the presentation of the component in different content contexts (on its own, in admin view, in a list), its integration into front end frameworks and its indirect interaction with other components (on same page, across pages, across sessions).</p>
+
+<p>It is important to keep the component’s (authoring) experience simple and separate from the presentation:</p>
+
+<ul>
+  <li>
+    <p>Mixing presentation behaviour with authoring experience will complicate the component’s design. For example, the frameworks used for presentation may introduce incompatibilities with the authoring environment.</p>
+  </li>
+  <li>
+    <p>Mixing presentation behaviour with authoring experience would introduce additional ways of authoring for the content authors.</p>
+  </li>
+  <li>
+    <p>The presentation will (and should) change more rapidly than the authoring experience.</p>
+  </li>
+</ul>
+
+<h3 id="experience">Experience</h3>
+
+<p>Component presentation is divided into two primary dialogs, Content Dialog and Design Dialog. Content Dialog is also known as “Dialog” and refers to the interface an Author uses to input content for component. When an Author uses the Content Dialog to input content they are providing actual Content, Layout and Style values for that instance of the component on a page. Design Dialog on the other hand is used to configure the Default Content for the component instance within a Page Template. This allows for creating default Style configuration and possible content Placeholders for component Presentation. This enables a default Component Layout that matches a Style Guide and that does not require initial Style input per each component placed on pages by the authors.</p>
+
+<h3 id="presentation">Presentation</h3>
+
+<p>Component presentation should be broken down to two main areas: Variants and Badges. Variants is an output of components content on a Page, Badges is an output of the components content in a List Component. This means that if component is not going to be used in a List component it should not have any Badges. All components will have a Default Variant that will be used by default that component is placed on a page.</p>
+
+<p>Variants for a component display content, so each Variant should have different content output, Title for the Variant should also be representative of the Content that the Variant uses, this makes it easier to teach Authors. Each variant will have a Default Style and other styles that will be created over time.</p>
+
+<p><img src="/assets/images/manifesto/delivery-component-to-variant.png" alt="image alt text" /></p>
+
+<p>This breakdown enables ability to update the Look And Feel of component without having to update the component code.</p>
+
+<h4 id="concept-component-to-designstyle-relationship">Concept: Component to Design/Style Relationship</h4>
+
+<p>This concept allows few components that can be authored in unlimited layouts to create the end experience.</p>
+
+<p><img src="/assets/images/manifesto/delivery-component-to-design.png" alt="image alt text" /></p>
+
+<h4 id="concept-details-and-list">Concept: Details and List</h4>
+
+<p>Details is about providing a place holder for a placeholder for structure content</p>
+
+<p>List is about proving a placeholder for display of content in a list</p>
+
+<p><img src="/assets/images/manifesto/delivery-page-to-list.png" alt="image alt text" /></p>
+
+<h2 id="component-categories">Component Categories</h2>
+
+<p>It’s important that each component is understood from its CMS perspective, this planning for a component should start from inception of component, before its development has started. Keeping component isolated into their CMS functional groups is important as its keeps the component library organised and it fundamentally defines the component expected behaviour.</p>
+
+<p>Here are initial list of CMS Functional Groups for components:</p>
+
+<ul>
+  <li>
+    <p>Content - primary components used to store authored content, content from these components is used by other components for display</p>
+  </li>
+  <li>
+    <p>Layout - provide layout ability, grouping and structuring of content, contain layout and style related content</p>
+  </li>
+  <li>
+    <p>List - find content and show data in listing, contain layout and style related content</p>
+  </li>
+  <li>
+    <p>Details - used to create and display custom metadata for different page types</p>
+  </li>
+  <li>
+    <p>Widgets - used to provide client-side functionality, integrating 3rd party services</p>
+  </li>
+  <li>
+    <p>Commerce - used for eComponents, shopping carts, checkouts, product listing etc</p>
+  </li>
+  <li>
+    <p>Common - used for shared components that are available to authors</p>
+  </li>
+  <li>
+    <p>Forms - used to contain all the components that are used in forms</p>
+  </li>
+  <li>
+    <p>Template - used to store all the available Template components that contain HTML page structures</p>
+  </li>
+  <li>
+    <p>Media - Assets related component, galleries, asset lists, videos etc</p>
+  </li>
+  <li>
+    <p>Workflow - steps that appear in workflow editor</p>
+  </li>
+</ul>
+
+<p>NOTE: Adding new items to this list should be communicated and designed thoroughly, as these groups reflect and relate to CMS functions</p>
+
+<h2 id="sling-selectors">Sling Selectors</h2>
+
+<p><a href="http://sling.apache.org/">Apache Sling</a> is at the core of AEM, it enables all the authoring and content serving functions. Here is the high level overview of the framework:</p>
+
+<ul>
+  <li>
+    <p>REST based web framework</p>
+  </li>
+  <li>
+    <p>Content-driven, using a JCR content repository</p>
+  </li>
+  <li>
+    <p>Powered by OSGi</p>
+  </li>
+  <li>
+    <p>Scripting inside, multiple languages (JSP, server-side javascript, Scala, etc.)</p>
+  </li>
+  <li>
+    <p>Apache Open Source project</p>
+  </li>
+</ul>
+
+<p>Sling selectors should be used to pass parameters specific to rendering and not content filtering. (<a href="http://docs.adobe.com/docs/en/cq/current/developing/the_basics.html">reference</a>)</p>
+
+<p>If selectors are used for content filtering, then you are allowing unlimited number of URLs for a particular piece of content. This opens up opportunity for DDOS attacks in two ways:</p>
+
+<ul>
+  <li>
+    <p>Attackers can flooding the Publishers with content requests using bogus selector values, making the publishers unable to serve legitimate requests.</p>
+  </li>
+  <li>
+    <p>Attackers can overload the Dispatchers’ filesystem with cached files generated from bogus selector requests.</p>
+  </li>
+</ul>
+
+<h2 id="content-modelling">Content Modelling</h2>
+
+<p>At best content authored should be located either below current page being authored or be on the page. Situation where you require content located outside current page and its descendants should be kept to a minimum, as OOB functionality only detect relationships between Tags and Assets. This plays a primary role when activating and deactivating content pages, to detect indirect relationships additions code will need to be written.</p>
+
+<h3 id="content-segmentation">Content Segmentation</h3>
+
+<table>
+  <tr>
+    <td>Pattern</td>
+    <td>Description</td>
+    <td>Examples</td>
+  </tr>
+  <tr>
+    <td>By Site</td>
+    <td>Content should be segregated by sites first, this allows simple management and can be easily secured</td>
+    <td>/content/site/..
+/content/site-showcase/..
+/content/dam/site/..
+/content/projects/site/..</td>
+  </tr>
+  <tr>
+    <td>By Language</td>
+    <td>Content should be segregated into Language Locale subfolder so that it can be translated into appropriate language</td>
+    <td>/content/site/en/..
+/content/site/ru/..</td>
+  </tr>
+  <tr>
+    <td>By Date Range</td>
+    <td>Any content that is generated over time and has a long life should be segregated into date range Hierarchy YYYY/MM/DD. Day is optional and should be omitted if no more than 200 assets are added per day, if more than 200 items required then additional segmentation should be used, either HH or functional grouping, which segments content in an even manner</td>
+    <td>/content/site/en/news/{year}/{month}/title
+/content/site/en/news/{yyyy}/{mm}/{dd}/title</td>
+  </tr>
+  <tr>
+    <td>By Functional Group</td>
+    <td>Content at any level should be grouped into functional groups that make sense to the Authors when searching content manually. eg. Banners, Advertising, Posters, Portraits</td>
+    <td>/content/dam/site/assets/accounts/..
+/content/dam/site/assets/designers/..</td>
+  </tr>
+  <tr>
+    <td>By Content Collection</td>
+    <td>Where possible when Assets belong to a group/set/collection they should be segregated into Collections, for example uploading a set of images that will be used in a Photo Gallery they should be placed into a folder describing the Collection</td>
+    <td>/content/dam/site/galleries/collection/..
+/content/dam/site/videos/collection/..</td>
+  </tr>
+  <tr>
+    <td>Content Metadata</td>
+    <td>Content must have at least a legible Title, Description and Tags assigned when being added</td>
+    <td>/content/site/en/specials {title: Specials }
+/content/site/en/corporate {title: Corporate}</td>
+  </tr>
+  <tr>
+    <td>Content Tagging</td>
+    <td>Content must be tagged to describe its nature, this helps in ability for Authors to find this content. One must not rely on content structure to find content, free text search should be considered first</td>
+    <td>/content/site/en/specials {tag: Products}
+/content/site/en/corporate {tag: Corporate}</td>
+  </tr>
+</table>
+
+<h3 id="segmentation-reference">Segmentation Reference</h3>
+
+<h4 id="pages">Pages</h4>
+
+<ol>
+  <li>
+    <p>Content Root</p>
+
+    <ol>
+      <li>
+        <p>Site Root</p>
+
+        <ol>
+          <li>
+            <p>Language</p>
+
+            <ol>
+              <li>
+                <p>Section</p>
+
+                <ol>
+                  <li>
+                    <p>Sub-Section</p>
+
+                    <ol>
+                      <li>
+                        <p>Content</p>
+
+                        <ol>
+                          <li>
+                            <p>Sub Content</p>
+
+                            <ol>
+                              <li>…n</li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="assets">Assets</h4>
+
+<ol>
+  <li>
+    <p>Content Root</p>
+
+    <ol>
+      <li>
+        <p>Site Root</p>
+
+        <ol>
+          <li>
+            <p>Language</p>
+
+            <ol>
+              <li>
+                <p>Section</p>
+
+                <ol>
+                  <li>
+                    <p>Category</p>
+
+                    <ol>
+                      <li>Asset</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="tags">Tags</h4>
+
+<ol>
+  <li>
+    <p>Etc Root</p>
+
+    <ol>
+      <li>
+        <p>Tags Root</p>
+
+        <ol>
+          <li>
+            <p>Namespace</p>
+
+            <ol>
+              <li>
+                <p>Category</p>
+
+                <ol>
+                  <li>
+                    <p>Group</p>
+
+                    <ol>
+                      <li>Tag</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="component-templating">Component Templating</h2>
+
+<p>These are several methods that can be employed to create templates for components. The most basic method is to use simple HTML fragments that can be kept in separate JSP files and included using logic that relies on content input into the component. This practice allows for simple authoring and maintenance mechanism whereby Frontend Designers can participate in updates of component HTML structure. This collaborative activities create agility and does not require continued developer effort.</p>
+
+<p>In AEM 6 a new templating engine called <a href="http://docs.adobe.com/docs/en/aem/6-0/develop/sightly.html">Sightly</a> has been introduced that aligns better with the design practices and development efforts. It is based on JSTL and has been tailored specifically around component templating and content structures. It provides a familiar HTML syntax with Templating variable conventions similar to JSTL and other Javascript frameworks. To help with Templating development a <a href="https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl">Evaluation Console</a> is available to allow testing of templates before they are added to components.</p>
+
+                
+            </section>
+
+            
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+            <footer class="page__meta">
+                
+                
+
+
+                
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-03">November 03, 2016</time></p>
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Delivery+Guide%20http%3A%2F%2Faem.design%2Fmanifesto%2Fdelivery%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fmanifesto%2Fdelivery%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fmanifesto%2Fdelivery%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/manifesto/capabilities/" class="pagination--pager" title="Capabilities
+">Previous</a>
+    
+    
+      <a href="/manifesto/project/" class="pagination--pager" title="Project Guide
+">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://aem.design/manifesto/delivery/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/manifesto/040-delivery"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>

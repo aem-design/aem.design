@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Open source is for feedback - AEM.Design</title>
+
+
+
+
+<meta name="description" content="Open source is at the core of AEM.">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Open source is for feedback">
+
+
+  <link rel="canonical" href="http://aem.design/blog/2019/06/05/open-source-is-for-feedback">
+  <meta property="og:url" content="http://aem.design/blog/2019/06/05/open-source-is-for-feedback">
+
+
+
+  <meta property="og:description" content="Open source is at the core of AEM.">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://aem.design/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2019-06-05T11:00:00+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://aem.design",
+      "logo": "http://aem.design/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "http://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://aem.design/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          AEM.Design
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/quick-start-guide/" >Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manifesto/" >Manifesto</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manual/" >Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/" >Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://aem.design/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        <li>
+          <a href="http://maxbarrass.com" itemprop="url">
+            <i class="fa fa-fw fa-globe" aria-hidden="true"></i> Website
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:max@aem.design">
+            <meta itemprop="email" content="max@aem.design" />
+            <i class="fa fa-fw fa-envelope" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://plus.google.com/+maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-google-plus" aria-hidden="true"></i> Google+
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Open source is for feedback">
+        <meta itemprop="description" content="Open source is at the core of AEM.">
+        <meta itemprop="datePublished" content="June 05, 2019">
+        
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+
+                <h1 class="page__title" itemprop="headline">Open source is for feedback
+</h1>
+                
+                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <p>Open source is at the core of AEM.</p>
+
+<p>Supporting community is core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice.
+Our components are tested though practice and implemented so that you can use them the way you want.
+We aim at developing component that are free of noise and deliver exactly what you are looking for clean, lean HTML footprint that speaks content and does not get on the way.</p>
+
+<p>We strongly believe that open source provides most transparent way of giving feedback about our work.
+We believe that having a common goal for creating and spreading good practices on making your AEM experience awesome.
+We do open source to encourage sharing of great things that can be done in AEM.</p>
+
+<p>Here is the list of all components that we currently have in the framework. <a href="https://github.com/aem-design/aemdesign-aem-core/wiki/Component-List">Component List</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component Category</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud Services / Rest</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/rest">Rest</a></td>
+    </tr>
+    <tr>
+      <td>Cloud Services / Salesforce API</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/salesforceapi">Salesforce API</a></td>
+    </tr>
+    <tr>
+      <td>Common / Redirection Notification</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/common/redirectnotification/v2/redirectnotification">Redirection Notification</a></td>
+    </tr>
+    <tr>
+      <td>Common / Static Content Include</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/common/staticinclude/v2/staticinclude">Static Content Include</a></td>
+    </tr>
+    <tr>
+      <td>Common / Timing Component</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/common/timing/v2/timing">Timing Component</a></td>
+    </tr>
+    <tr>
+      <td>Content / File Download Link</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/download/v2/download">File Download Link</a></td>
+    </tr>
+    <tr>
+      <td>Content / Embed Source</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/embedsource/v2/embedsource">Embed Source</a></td>
+    </tr>
+    <tr>
+      <td>Content / External</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/external/v2/external">External</a></td>
+    </tr>
+    <tr>
+      <td>Content / Link</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/link/v2/link">Link</a></td>
+    </tr>
+    <tr>
+      <td>Content / Content Reference</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/reference/v2/reference">Content Reference</a></td>
+    </tr>
+    <tr>
+      <td>Content / Table</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/table/v2/table">Table</a></td>
+    </tr>
+    <tr>
+      <td>Content / Rich Text</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/text/v2/text">Rich Text</a></td>
+    </tr>
+    <tr>
+      <td>Content / Tool Tip</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/tooltip/v2/tooltip">Tool Tip</a></td>
+    </tr>
+    <tr>
+      <td>Content / Page Author</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pageauthor/v2/pageauthor">Page Author</a></td>
+    </tr>
+    <tr>
+      <td>Content / Page Date</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagedate/v2/pagedate">Page Date</a></td>
+    </tr>
+    <tr>
+      <td>Content / Page Description</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagedescription/v2/pagedescription">Page Description</a></td>
+    </tr>
+    <tr>
+      <td>Content / Page Tags</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagetags/v2/pagetags">Page Tags</a></td>
+    </tr>
+    <tr>
+      <td>Content / Page Title</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/content/pagetitle/v2/pagetitle">Page Title</a></td>
+    </tr>
+    <tr>
+      <td>Details / Contact Details</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/contact-details/v2/contact-details">Contact Details</a></td>
+    </tr>
+    <tr>
+      <td>Details / Event Details</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/event-details/v2/event-details">Event Details</a></td>
+    </tr>
+    <tr>
+      <td>Details / Location Details</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/location-details/v2/location-details">Location Details</a></td>
+    </tr>
+    <tr>
+      <td>Details / News Details</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/news-details/v2/news-details">News Details</a></td>
+    </tr>
+    <tr>
+      <td>Details / Page Details</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/details/page-details/v2/page-details">Page Details</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Article</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/article/v2/article">Article</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Aside</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/aside/v2/aside">Aside</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Breadcrumb</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/breadcrumb/v2/breadcrumb">Breadcrumb</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Columns</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/colctrl/v2/colctrl">Columns</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Content Block</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contentblock/v2/contentblock">Content Block</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Content Block Lock</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contentblocklock">Content Block Lock</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Content Block Menu</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contentblocklock/v2/contentblocklock">Content Block Menu</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Content Tabs</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/contenttabs/v2/contenttabs">Content Tabs</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Footer</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/footer/v2/footer">Footer</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Header</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/header/v2/header">Header</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Nav Bar</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/navbar/v2/navbar">Nav Bar</a></td>
+    </tr>
+    <tr>
+      <td>Layout / Container</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/layout/container">Container</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Asset List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/assetlist/v2/assetlist">Asset List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Contact List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/contactlist/v2/contactlist">Contact List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Event List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/eventlist/v2/eventlist">Event List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Lang Nav</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/langnav/v2/langnav">Lang Nav</a></td>
+    </tr>
+    <tr>
+      <td>Lists / List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/list/v2/list">List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / List Nav</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/listnav/v2/listnav">List Nav</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Location List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/locationlist/v2/locationlist">Location List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / News List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/newslist/v2/newslist">News List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Page List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/pagelist/v2/pagelist">Page List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Search Results List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/searchlist/v2/searchlist">Search Results List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Tag List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/taglist/v2/taglist">Tag List</a></td>
+    </tr>
+    <tr>
+      <td>Lists / Nav List</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/lists/navlist/v2/navlist">Nav List</a></td>
+    </tr>
+    <tr>
+      <td>Media / Audio</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/media/audio/v2/audio">Audio</a></td>
+    </tr>
+    <tr>
+      <td>Media / Image</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/media/image/v2/image">Image</a></td>
+    </tr>
+    <tr>
+      <td>Media / Video</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/media/video/v2/video">Video</a></td>
+    </tr>
+    <tr>
+      <td>Analytics / Analytics Data Layer</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/analytics/datalayer/v2/datalayer">Analytics Data Layer</a></td>
+    </tr>
+    <tr>
+      <td>Template / AEM.Design Base Page</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/base/v3/base">AEM.Design Base Page</a></td>
+    </tr>
+    <tr>
+      <td>Template / Cloud Config / AddThis</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/cloudconfig/addthisconnect/config">AddThis</a></td>
+    </tr>
+    <tr>
+      <td>Template / Cloud Config / Google Analytics</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/cloudconfig/googleanalytics/config">Google Analytics</a></td>
+    </tr>
+    <tr>
+      <td>Template / Cloud Config / Google Map</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/cloudconfig/googlemap/config">Google Map</a></td>
+    </tr>
+    <tr>
+      <td>Template / Column / AEM.Design One Column Page</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/column/one/v2/one">AEM.Design One Column Page</a></td>
+    </tr>
+    <tr>
+      <td>Template / Column / AEM.Design Three Column Page</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/column/three/v2/three">AEM.Design Three Column Page</a></td>
+    </tr>
+    <tr>
+      <td>Template / Column / AEM.Design Two Column Page</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/column/two/v2/two">AEM.Design Two Column Page</a></td>
+    </tr>
+    <tr>
+      <td>Template / Common / Design Importer</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/common/design-importer">Design Importer</a></td>
+    </tr>
+    <tr>
+      <td>Template / Experience Fragment / AEM.Design Experience Fragment</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/template/experience-fragments/base/v2/xfpage">AEM.Design Experience Fragment</a></td>
+    </tr>
+    <tr>
+      <td>Widgets / AddThis / Addthis Button</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/addthis/sharebutton/v2/sharebutton">Addthis Button</a></td>
+    </tr>
+    <tr>
+      <td>Widgets / Online Media</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/onlinemedia/v2/onlinemedia">Online Media</a></td>
+    </tr>
+    <tr>
+      <td>Widgets / Search Box</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/search/v2/search">Search Box</a></td>
+    </tr>
+    <tr>
+      <td>Workflow / Process Payload</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/processpayload">Process Payload</a></td>
+    </tr>
+    <tr>
+      <td>Workflow / Project Task Manager</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/projecttaskmanager">Project Task Manager</a></td>
+    </tr>
+    <tr>
+      <td>Workflow / Project Update</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/projectupdate">Project Update</a></td>
+    </tr>
+    <tr>
+      <td>Workflow / Rest</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/rest">Rest</a></td>
+    </tr>
+    <tr>
+      <td>Workflow / Salesforce API</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/salesforceapi">Salesforce API</a></td>
+    </tr>
+    <tr>
+      <td>Workflow / Send Email</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/sendemail">Send Email</a></td>
+    </tr>
+    <tr>
+      <td>Coral / Common/Form / Tag Field</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/common/form/tagfield">Tag Field</a></td>
+    </tr>
+    <tr>
+      <td>Coral / Datasources / Forms</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/datasources/forms">Forms</a></td>
+    </tr>
+    <tr>
+      <td>Coral / Datasources / Tags</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/datasources/tags">Tags</a></td>
+    </tr>
+    <tr>
+      <td>Coral / Foundation / Accordion</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/foundation/accordion">Accordion</a></td>
+    </tr>
+    <tr>
+      <td>Coral / Widgets/Form / Asset Options</td>
+      <td><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/widgets/form/assetoptions">Asset Options</a></td>
+    </tr>
+  </tbody>
+</table>
+
+                
+            </section>
+
+            
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+            <footer class="page__meta">
+                
+                
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#update" class="page__taxonomy-item" rel="tag">update</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">blog</a>
+    
+    </span>
+  </p>
+
+
+                
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-06-05T11:00:00+00:00">June 05, 2019</time></p>
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Open+source+is+for+feedback%20http%3A%2F%2Faem.design%2Fblog%2F2019%2F06%2F05%2Fopen-source-is-for-feedback" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fblog%2F2019%2F06%2F05%2Fopen-source-is-for-feedback" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fblog%2F2019%2F06%2F05%2Fopen-source-is-for-feedback" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/blog/2019/04/04/migration-from-jsp-to-sightly" class="pagination--pager" title="Migration from JSP to Sightly
+">Previous</a>
+    
+    
+      <a href="/blog/2019/07/01/docker-containers-everywhere" class="pagination--pager" title="Docker Containers Everywhere
+">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
