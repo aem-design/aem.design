@@ -12,7 +12,6 @@ ruby RUBY_VERSION
 gem "jekyll", ">= 3.6.3"
 gem "nokogiri", ">= 1.8.5"
 gem "ffi", ">= 1.9.24"
-gem 'html-proofer'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.0"
@@ -25,4 +24,10 @@ gem "minimal-mistakes-jekyll"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
+   gem 'html-proofer'
+   gem 'jekyll-redirect-from'
+   gem 'jemoji'
+   gem 'jekyll-gist'
+   gem 'jekyll-sitemap'
+   gem 'jekyll-paginate-v2'
 end
