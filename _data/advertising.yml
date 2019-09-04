@@ -12,6 +12,7 @@ top:
   style       : "display:inline-block!important;border-bottom:initial;"
   slot        : "3987795379"
   format      : "auto"
+  responsive  : "true"
 
 
 #show at the bottom of the page above footer
@@ -20,8 +21,9 @@ bottom:
   show        : *block_show
   url         : *script_url
   client      : "ca-pub-6707033742178132"
-  style       : "display:inline-block!important;border-bottom:initial;"
+  style       : "display:block"
   slot        : "7730324178"
   format      : "auto"
+  responsive  : "true"
 
 
