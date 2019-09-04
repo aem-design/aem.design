@@ -2,6 +2,14 @@
 
 {% include seo.html %}
 
+{% if page.author and site.data.authors[page.author] %}
+    {% assign author = site.data.authors[page.author] %}
+{% else %}
+    {% assign author = site.author %}
+{% endif %}
+
+<meta name="author" content="{{ author.name }}">
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
