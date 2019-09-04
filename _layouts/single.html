@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination:
+    enabled: true
 ---
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -37,6 +39,8 @@ layout: default
                 {{ content }}
                 {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
             </section>
+
+            {% include adds/adsense.html block=site.data.advertising.bottom %}
 
             <footer class="page__meta">
                 {% if site.data.ui-text[site.locale].meta_label %}
