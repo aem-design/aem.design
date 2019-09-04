@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Manual - AEM.Design</title>
+
+
+
+
+<meta name="description" content="AEM.Design Framework Manual">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Manual">
+
+
+  <link rel="canonical" href="http://aem.design/manual/projects/">
+  <meta property="og:url" content="http://aem.design/manual/projects/">
+
+
+
+  <meta property="og:description" content="AEM.Design Framework Manual">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://aem.design/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2019-09-04T01:54:55+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://aem.design",
+      "logo": "http://aem.design/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "http://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://aem.design/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">AEM.Design</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/manifesto/" >Manifesto</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/manual/" >Manual</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/blog/" >Blog</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/about/" >About</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/search/" >Search</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://aem.design/assets/images/profile/yawly.jpg" class="author__avatar" alt="Yaw Ly" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Yaw Ly</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:yaw@aem.design">
+            <meta itemprop="email" content="yaw@aem.design" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/yaw-ly-16805514" itemprop="sameAs">
+            <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/yawly" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/projects/" class="active">Projects</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/devtools/" class="">Development Tools</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/management/" class="">Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/osenv/" class="">Operating Environment</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/process/" class="">Process</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Manual">
+        <meta itemprop="description" content="AEM.Design Framework Manual">
+        
+        
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+                
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="3987795379"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+                <h1 class="page__title" itemprop="headline">Manual
+</h1>
+                
+                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#projects" id="markdown-toc-projects">Projects</a>    <ul>
+      <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+      <li><a href="#ansible-deploy-project" id="markdown-toc-ansible-deploy-project">Ansible Deploy Project</a>        <ul>
+          <li><a href="#ansible-project-overview" id="markdown-toc-ansible-project-overview">Ansible Project Overview</a></li>
+          <li><a href="#ansible-variables" id="markdown-toc-ansible-variables">Ansible Variables</a></li>
+          <li><a href="#group-variables" id="markdown-toc-group-variables">Group Variables</a></li>
+          <li><a href="#source-code-repositories" id="markdown-toc-source-code-repositories">Source Code Repositories</a></li>
+        </ul>
+      </li>
+      <li><a href="#adobe-experience-manager-project" id="markdown-toc-adobe-experience-manager-project">Adobe Experience Manager Project</a>        <ul>
+          <li><a href="#aem-project-sources" id="markdown-toc-aem-project-sources">AEM Project Sources</a></li>
+          <li><a href="#aem-service-bundle" id="markdown-toc-aem-service-bundle">AEM Service Bundle</a></li>
+          <li><a href="#aem-configuration" id="markdown-toc-aem-configuration">AEM Configuration</a>            <ul>
+              <li><a href="#osgi-run-modes" id="markdown-toc-osgi-run-modes">OSGi Run modes</a></li>
+              <li><a href="#environment-config-content" id="markdown-toc-environment-config-content">Environment Config Content</a></li>
+            </ul>
+          </li>
+          <li><a href="#aem-initial-content" id="markdown-toc-aem-initial-content">AEM Initial Content</a></li>
+        </ul>
+      </li>
+      <li><a href="#virtual-machine-project" id="markdown-toc-virtual-machine-project">Virtual Machine Project</a>        <ul>
+          <li><a href="#packer-project-overview" id="markdown-toc-packer-project-overview">Packer Project Overview</a>            <ul>
+              <li><a href="#packer-project-structure" id="markdown-toc-packer-project-structure">Packer Project Structure</a></li>
+            </ul>
+          </li>
+          <li><a href="#using-packer" id="markdown-toc-using-packer">Using Packer</a>            <ul>
+              <li><a href="#packer-installation" id="markdown-toc-packer-installation">Packer Installation</a></li>
+              <li><a href="#packer-command" id="markdown-toc-packer-command">Packer Command</a></li>
+            </ul>
+          </li>
+          <li><a href="#machine-image-builds" id="markdown-toc-machine-image-builds">Machine Image Builds</a>            <ul>
+              <li><a href="#local-image-build" id="markdown-toc-local-image-build">Local Image Build</a></li>
+              <li><a href="#sit-image-build" id="markdown-toc-sit-image-build">SIT Image Build</a></li>
+              <li><a href="#staging-image-build" id="markdown-toc-staging-image-build">Staging Image Build</a></li>
+              <li><a href="#production-image-build" id="markdown-toc-production-image-build">Production Image Build</a></li>
+            </ul>
+          </li>
+          <li><a href="#updating-a-machine-image" id="markdown-toc-updating-a-machine-image">Updating a Machine Image</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h1 id="projects">Projects</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>There are three project sources in the AEM implementation:</p>
+
+<ol>
+  <li>
+    <p><a href="#heading=h.8hiv7vcpipht">aemdesign-deploy</a></p>
+  </li>
+  <li>
+    <p><a href="#heading=h.ek5iwvlqeogw">aemdesign-vm</a></p>
+  </li>
+  <li>
+    <p><a href="#heading=h.3zb21qq2qruz">aemdesign-aem</a></p>
+  </li>
+</ol>
+
+<p>The following sections will highlight their key design decisions and their implementation details.</p>
+
+<h2 id="ansible-deploy-project">Ansible Deploy Project</h2>
+
+<p>The aemdesign-deploy project is a <strong>server automation</strong> project using Ansible to deploy and configure services. The project also contains scripted operational tasks for maintaining the operating system and services..</p>
+
+<p>Before proceeding, this section contains content with assumed Ansible knowledge. Recommended starting points are ‘<em><a href="http://docs.ansible.com/ansible/latest/playbooks_intro.html">Intro to Playbook*s</a>’ (NOTE:  http://docs.ansible.com/ansible/latest/playbooks_intro.html) and *‘**<a href="http://docs.ansible.com/ansible/latest/intro_inventory.html">Intro to Inventorie*s</a></em>’* (NOTE:  http://docs.ansible.com/ansible/latest/intro_inventory.html) in the Ansible online documentation.</p>
+
+<p>This project is implemented with the following features and their concepts are required to maintain the project:</p>
+
+<ol>
+  <li>
+    <p>Roles (<a href="http://docs.ansible.com/ansible/latest/playbooks_roles.html">http://docs.ansible.com/ansible/latest/playbooks_roles.html</a>)</p>
+  </li>
+  <li>
+    <p>Tags (<a href="http://docs.ansible.com/ansible/latest/playbooks_tags.html">http://docs.ansible.com/ansible/latest/playbooks_tags.html</a>)</p>
+  </li>
+  <li>
+    <p>Variables (<a href="http://docs.ansible.com/ansible/latest/playbooks_variables.html">http://docs.ansible.com/ansible/latest/playbooks_variables.html</a>)</p>
+  </li>
+</ol>
+
+<p>Additional topics on Ansible, can be found in the <a href="http://docs.ansible.com/ansible/latest/index.html">online documentation</a>.</p>
+
+<p>The aemdesign-deploy project is implemented using the standard Ansible layout. Anyone familiar with Ansible should also be familiar with this implementation layout.</p>
+
+<p>An implementation specific overview is provided in the following section.</p>
+
+<h3 id="ansible-project-overview">Ansible Project Overview</h3>
+
+<p>The recommended operating system for the aemdesign-deploy project is either MacOS or a distribution of Linux such as Red Hat and Ubuntu.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/</td>
+      <td>Playbooks for site, group and operations are located at the root of the project. This is discussed in detail in the Playbooks section.</td>
+    </tr>
+    <tr>
+      <td>/inventory</td>
+      <td>The inventory defines servers (defined as a SSH host). The servers provide the automation scripts with machine targets to deploy and configure services. In the aemdesign-deploy project, servers are typically Red Hat Enterprise Linux servers with a Docker service and Docker containers are specified in a group using an alias for the target machine. The inventories are organised into environments in a group var (group_vars/[environment_name]/vars.yml) which specifies environment specific configurations. See for Testing Environments for inventory details.</td>
+    </tr>
+    <tr>
+      <td>/roles</td>
+      <td>A role is a reusable unit of work that is composed of serial tasks. For example, a role can create a logical volume or start a web server in a Docker host.</td>
+    </tr>
+    <tr>
+      <td>/group_vars</td>
+      <td>There are two categories of group vars; application and environment. Typically, application group vars are used to override the default variables defined within roles. The environment group vars are used to define environment specific variables by overriding the group variables. This is represented as a hierarchy within the inventories as groups with the ‘:children’ suffix.</td>
+    </tr>
+    <tr>
+      <td>/host_vars</td>
+      <td>These are variables for servers that form the site and they are shared across all environments. This means that automation scripts apply the same host vars in each environment which ensures all environments are similar to each other.</td>
+    </tr>
+    <tr>
+      <td>/library</td>
+      <td>Custom modules developed for the project. Modules have been developed to orchestrate AEM and Docker.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ansible-variables">Ansible Variables</h3>
+
+<p>Table of variable descriptions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>docker_image_tag</td>
+      <td>Common variable name used  in roles for specifying which Docker image version to run.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="group-variables">Group Variables</h3>
+
+<p>For each role,  there is  group variable that overrides the default variable defined in the role. Within each file, there is the variable *docker_image_tag *that can be updated to change the version of the Docker image to run.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Group Variable</th>
+      <th>Role / Files / Dockerfile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>publisher</td>
+      <td>/aemdesign-deploy/group_vars/publisher/vars.yml</td>
+      <td>/aemdesign-deploy/roles/aem/files/docker/aem</td>
+    </tr>
+    <tr>
+      <td>author</td>
+      <td>/aemdesign-deploy/group_vars/author/vars.yml</td>
+      <td>/aemdesign-deploy/roles/aem/files/docker/aem</td>
+    </tr>
+    <tr>
+      <td>consul-client</td>
+      <td>/aemdesign-deploy/group_vars/consul-client/vars.yml</td>
+      <td>consul:latest</td>
+    </tr>
+    <tr>
+      <td>dispatcher</td>
+      <td>/aemdesign-deploy/group_vars/dispatcher/vars.yml</td>
+      <td>/aemdesign-deploy/roles/dispatcher/files/docker/dispatcher</td>
+    </tr>
+    <tr>
+      <td>esb</td>
+      <td>/aemdesign-deploy/group_vars/esb/vars.yml</td>
+      <td>/aemdesign-deploy/roles/mule-esb/files/docker/muleesb</td>
+    </tr>
+    <tr>
+      <td>solr</td>
+      <td>/aemdesign-deploy/group_vars/solr/vars.yml</td>
+      <td>/aemdesign-deploy/roles/solr-cloud/files/docker/aem-solr</td>
+    </tr>
+    <tr>
+      <td>processing</td>
+      <td>/aemdesign-deploy/group_vars/processing/vars.yml</td>
+      <td>/aemdesign-deploy/roles/aem/files/docker/aem</td>
+    </tr>
+    <tr>
+      <td>consul-server</td>
+      <td>/aemdesign-deploy/group_vars/consul-server/vars.yml</td>
+      <td>consul:latest</td>
+    </tr>
+    <tr>
+      <td>nexus</td>
+      <td>/aemdesign-deploy/group_vars/nexus/vars.yml</td>
+      <td>/aemdesign-deploy/roles/nexus/files/docker/nexus</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="source-code-repositories">Source Code Repositories</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Repo</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>aemdesign-parent/</td>
+      <td>root repo for devops script and automation</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem/</td>
+      <td>local aem instances</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-author/</td>
+      <td>changes to authoring experience</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-common/</td>
+      <td>common components</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-config/</td>
+      <td>configuration for author and publishers</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-content/</td>
+      <td>initial content</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-services/</td>
+      <td>services for author and publisher</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-showcase/</td>
+      <td>showcase content</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-training/</td>
+      <td>training site content</td>
+    </tr>
+    <tr>
+      <td>aemdesign-deploy/</td>
+      <td>deploy project, contains all docker files</td>
+    </tr>
+    <tr>
+      <td>aemdesign-devbot/</td>
+      <td>used to control devops script remotely</td>
+    </tr>
+    <tr>
+      <td>aemdesign-docker/</td>
+      <td>parent docker project, outdated</td>
+    </tr>
+    <tr>
+      <td>aemdesign-esb-mule/</td>
+      <td>esb implementation</td>
+    </tr>
+    <tr>
+      <td>aemdesign-jenkins/</td>
+      <td>jenkins backup</td>
+    </tr>
+    <tr>
+      <td>aemdesign-prototype/</td>
+      <td>font-end prototype project</td>
+    </tr>
+    <tr>
+      <td>aemdesign-security/</td>
+      <td>security for hardening not Atomic hosts</td>
+    </tr>
+    <tr>
+      <td>aemdesign-testing/</td>
+      <td>testing suite</td>
+    </tr>
+    <tr>
+      <td>aemdesign-vm/</td>
+      <td>vm templating</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="adobe-experience-manager-project">Adobe Experience Manager Project</h2>
+
+<p>Adobe Experience Manager (AEM) Project Source Code and Content Packages</p>
+
+<ul>
+  <li>
+    <p>AEM Project Sources</p>
+  </li>
+  <li>
+    <p>AEM Service Bundle</p>
+  </li>
+  <li>
+    <p>AEM Configuration</p>
+  </li>
+  <li>
+    <p>AEM Initial Content</p>
+  </li>
+</ul>
+
+<h3 id="aem-project-sources">AEM Project Sources</h3>
+
+<p>The AEM Project Sources contain AEM 6.1 components, client libraries (HTML, CSS and JavaScript) and AEM lib overlays (NOTE:  AEM overlays https://docs.adobe.com/docs/en/aem/6-3/develop/platform/overlays.html).</p>
+
+<h3 id="aem-service-bundle">AEM Service Bundle</h3>
+
+<p>The AEM Service Bundle contains Java sources for OSGi services and components that extend or add functionality to AEM.</p>
+
+<h3 id="aem-configuration">AEM Configuration</h3>
+
+<p>The AEM Configuration project contains <a href="https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configuring-osgi.html">configurations</a> (NOTE:  OSGi configuration https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configuring-osgi.html) for AEM OSGi services as well as the OSGi services developed in the <a href="#heading=h.u4k8f794h1fg">OSGi Service Bundle</a> project.</p>
+
+<p>For environment specific configurations, apply them with run modes to activate configurations. These environment run modes are configured:</p>
+
+<ol>
+  <li>
+    <p>localdev</p>
+  </li>
+  <li>
+    <p>develop</p>
+  </li>
+  <li>
+    <p>sit</p>
+  </li>
+  <li>
+    <p>uat</p>
+  </li>
+  <li>
+    <p>training</p>
+  </li>
+  <li>
+    <p>staging</p>
+  </li>
+  <li>
+    <p>Production</p>
+  </li>
+</ol>
+
+<p>These server run modes are configured:</p>
+
+<ol>
+  <li>
+    <p>author</p>
+  </li>
+  <li>
+    <p>publisher</p>
+  </li>
+  <li>
+    <p>processing</p>
+  </li>
+</ol>
+
+<h4 id="osgi-run-modes">OSGi Run modes</h4>
+
+<p>The path to the run mode configurations is located at:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>config/src/main/content/jcr_root/apps/aemdesign
+</code></pre></div></div>
+
+<p>These run modes are configured for the AEM servers and environments:</p>
+
+<ul>
+  <li>
+    <p>config.author</p>
+  </li>
+  <li>
+    <p>config.author.develop</p>
+  </li>
+  <li>
+    <p>config.author.localdev</p>
+  </li>
+  <li>
+    <p>config.author.processing</p>
+  </li>
+  <li>
+    <p>config.author.processing.develop</p>
+  </li>
+  <li>
+    <p>config.author.processing.localdev</p>
+  </li>
+  <li>
+    <p>config.author.processing.sit</p>
+  </li>
+  <li>
+    <p>config.author.production</p>
+  </li>
+  <li>
+    <p>config.author.sit</p>
+  </li>
+  <li>
+    <p>config.author.staging</p>
+  </li>
+  <li>
+    <p>config.author.training</p>
+  </li>
+  <li>
+    <p>config.author.uat</p>
+  </li>
+  <li>
+    <p>config.publish</p>
+  </li>
+</ul>
+
+<p>By default it will use the AEM server run mode, the OSGi service definition XMLs in <em>config.author<strong>, **config.publisher</strong> and **config.author.processing</em>. Each environment can override them by specifying a OSGi service definition XML in the corresponding environment run mode.</p>
+
+<p>More information can be found in the online documentation <a href="https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configure-runmodes.html">Deploying and Maintaining, Configuring, Run Modes</a> (NOTE:  https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configure-runmodes.html).</p>
+
+<h4 id="environment-config-content">Environment Config Content</h4>
+
+<p>The AEM Configuration project produces one configuration file per environment. This is to configure AEM components that are not OSGi based. For example, the following AEM configurations:</p>
+
+<ol>
+  <li>
+    <p>Cloud Configs</p>
+  </li>
+  <li>
+    <p>Replication Agents</p>
+  </li>
+</ol>
+
+<p>These configuration packages are created:</p>
+
+<ul>
+  <li>
+    <p>aemdesign-aem-config-[<em>release_version</em>]-develop.zip</p>
+  </li>
+  <li>
+    <p>aemdesign-aem-config-[<em>release_version</em>]-production.zip</p>
+  </li>
+  <li>
+    <p>aemdesign-aem-config-[<em>release_version</em>]-sit.zip</p>
+  </li>
+  <li>
+    <p>aemdesign-aem-config-[<em>release_version</em>]-staging.zip</p>
+  </li>
+  <li>
+    <p>aemdesign-aem-config-[<em>release_version</em>]-training.zip</p>
+  </li>
+  <li>
+    <p>aemdesign-aem-config-[<em>release_version</em>].zip</p>
+  </li>
+</ul>
+
+<h3 id="aem-initial-content">AEM Initial Content</h3>
+
+<p>The AEM Initial Content project contains content that is required for a functioning site. It also enables transportable content between testing environments.</p>
+
+<h2 id="virtual-machine-project">Virtual Machine Project</h2>
+
+<p>The aemdesign-vm project uses Packer by HashiCorp to automate machine image creation.</p>
+
+<p>To learn more about Packer, refer to the <a href="https://www.packer.io/docs/index.html">online documentation</a> (NOTE:  https://www.packer.io/docs/index.html).</p>
+
+<p>The project was built using VirtualBox Version 5.1.10. The binaries are available for download at: <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p>
+
+<h3 id="packer-project-overview">Packer Project Overview</h3>
+
+<p>The project is designed to build on Centos and has built and provisioned Centos versions 7+ for deployment on private datacenter infrastructure.</p>
+
+<p>While the datacenter servers are running on VMWare virtualisation, the local development image is built for VirtualBox.</p>
+
+<h4 id="packer-project-structure">Packer Project Structure</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Path</td>
+      <td>Content</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>Templates with build configuration for the machine image automation</td>
+    </tr>
+    <tr>
+      <td>http/</td>
+      <td>Path to the configuration files for the HTTP server during Machine Image creation. The Anaconda Kickstart scripts configures RHEL7 in an non-interactive environment (the template file’s builder variable boot_command is used to execute the script). <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-syntax.html">Kickstart Syntax Reference</a></td>
+    </tr>
+    <tr>
+      <td>http/iso</td>
+      <td>Path to Red Hat Enterprise Linux 7 Full ISO for building the machine image</td>
+    </tr>
+    <tr>
+      <td>scripts/</td>
+      <td>Shell scripts executed as provisioners during the build</td>
+    </tr>
+    <tr>
+      <td>scripts/common</td>
+      <td>Scripts common to all machine image builds</td>
+    </tr>
+    <tr>
+      <td>scripts/devops</td>
+      <td>Scripts to install and configure devops services such as Docker</td>
+    </tr>
+    <tr>
+      <td>scripts/rhel</td>
+      <td>Scripts to configure Red Hat Enterprise Linux</td>
+    </tr>
+    <tr>
+      <td>settings/</td>
+      <td>Setting variable files to customise machine images. Overrides variables defined in the build templates</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="using-packer">Using Packer</h3>
+
+<h4 id="packer-installation">Packer Installation</h4>
+
+<p>In the aemdesign-vm project,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="o">&amp;&amp;</span> ./packer.io/install
+</code></pre></div></div>
+
+<h4 id="packer-command">Packer Command</h4>
+
+<p>The Packer command requires two json configuration files to build a machine image,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bin/packer build <span class="nt">-var-file</span><span class="o">=</span>./settings/[variables].json <span class="o">[</span>template_file].json
+</code></pre></div></div>
+
+<p>Where</p>
+
+<ul>
+  <li>
+    <p><strong><em>template_file</em></strong>* *is the configuration for the build</p>
+  </li>
+  <li>
+    <p><strong><em>variables</em></strong> overrides the “variables” section in the <strong><em>template_file</em></strong></p>
+  </li>
+</ul>
+
+<p>The <strong><em>template_file</em></strong>* *build configuration files can be found in the project’s root path. The <strong><em>variables</em></strong> file overrides values defined in the <strong><em>template_file</em></strong>. This enables the customisation of images.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Template File</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>centos-vbox.json</td>
+      <td>Builds a VM Machine Image, configures a NAT network interface and installs VM tools</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="machine-image-builds">Machine Image Builds</h3>
+
+<p><strong>Note</strong>: For best results please pass params to packer instead of using settings files, this will keep repo clean</p>
+
+<h4 id="local-image-build">Local Image Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bin/packer build <span class="nt">-var-file</span><span class="o">=</span>./settings/variables-online.json template-rhel-build-virtualbox-localdev.json
+</code></pre></div></div>
+
+<h4 id="sit-image-build">SIT Image Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bin/packer build <span class="nt">-var-file</span><span class="o">=</span>./settings/variables-online-sit.json template-rhel-build-virtualbox-server.json
+</code></pre></div></div>
+
+<h4 id="staging-image-build">Staging Image Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bin/packer build <span class="nt">-var-file</span><span class="o">=</span>./settings/variables-online-stage.json ./templates/centos-vbox.json
+</code></pre></div></div>
+
+<h4 id="production-image-build">Production Image Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bin/packer build <span class="nt">-var-file</span><span class="o">=</span>./settings/variables-online-prod.json ./templates/centos-vbox.json
+</code></pre></div></div>
+
+<h3 id="updating-a-machine-image">Updating a Machine Image</h3>
+
+<p><strong>Note</strong>: Packer will download and cache ISO file first time, follow this if you want manual control over this process</p>
+
+<ol>
+  <li>
+    <p>Download a Centos ISO</p>
+  </li>
+  <li>
+    <p>Copy it to ./*http/iso/ *in the aemdesign-vm project.</p>
+  </li>
+  <li>
+    <p>Update the <strong><em>iso_url</em></strong>* variable *to path of the ISO:</p>
+
+    <p>3.1  from “iso_url”: “http://ftp.swin.edu.au/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso”,</p>
+
+    <p>3.2. to “iso_url”: “http/iso/your-iso-name.iso”</p>
+  </li>
+  <li>
+    <p>Update the <strong><em>iso_checksum</em></strong>* *variables to match the ISO:</p>
+
+    <p>4.1. from “iso_checksum”: “ec7500d4b006702af6af023b1f8f1b890b6c7ee54400bb98cef968b883cd6546”</p>
+
+    <p>4.2. to “iso_checksum”: “your-iso-sha256-checksum”</p>
+  </li>
+</ol>
+
+                
+            </section>
+
+            <footer class="page__meta">
+                
+                
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#info" class="page__taxonomy-item" rel="tag">info</a>
+    
+    </span>
+  </p>
+
+
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Manual%20http%3A%2F%2Faem.design%2Fmanual%2Fprojects%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fmanual%2Fprojects%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Faem.design%2Fmanual%2Fprojects%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fmanual%2Fprojects%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/manual/" class="pagination--pager" title="Manual
+">Previous</a>
+    
+    
+      <a href="/manual/devtools/" class="pagination--pager" title="Manual
+">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">By now you would have seen previous posts Docker Containers Everywhere and Docker AEM Bundle. You might have tried out those images, if you have not, I encou...</p>
+  </article>
+</div>
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+
+</p>
+  </article>
+</div>
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+
+</p>
+  </article>
+</div>
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+            
+        </div>
+    </div>
+    
+</div>
+
+    
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://aem.design/manual/projects/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/manual/010-projects"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

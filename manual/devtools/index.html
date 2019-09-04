@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Manual - AEM.Design</title>
+
+
+
+
+<meta name="description" content="AEM.Design Framework Manual">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Manual">
+
+
+  <link rel="canonical" href="http://aem.design/manual/devtools/">
+  <meta property="og:url" content="http://aem.design/manual/devtools/">
+
+
+
+  <meta property="og:description" content="AEM.Design Framework Manual">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://aem.design/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2019-09-04T01:54:55+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://aem.design",
+      "logo": "http://aem.design/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "http://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://aem.design/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">AEM.Design</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/manifesto/" >Manifesto</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/manual/" >Manual</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/blog/" >Blog</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/about/" >About</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://aem.design/search/" >Search</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://aem.design/assets/images/profile/yawly.jpg" class="author__avatar" alt="Yaw Ly" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Yaw Ly</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:yaw@aem.design">
+            <meta itemprop="email" content="yaw@aem.design" />
+            <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/yaw-ly-16805514" itemprop="sameAs">
+            <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/yawly" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/projects/" class="">Projects</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/devtools/" class="active">Development Tools</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/management/" class="">Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/osenv/" class="">Operating Environment</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/process/" class="">Process</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Manual">
+        <meta itemprop="description" content="AEM.Design Framework Manual">
+        
+        
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+                
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="3987795379"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+                <h1 class="page__title" itemprop="headline">Manual
+</h1>
+                
+                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#development-tools" id="markdown-toc-development-tools">Development Tools</a>    <ul>
+      <li><a href="#git" id="markdown-toc-git">Git</a></li>
+      <li><a href="#apache-maven" id="markdown-toc-apache-maven">Apache Maven</a>        <ul>
+          <li><a href="#package-build" id="markdown-toc-package-build">Package Build</a>            <ul>
+              <li><a href="#local-development-build" id="markdown-toc-local-development-build">Local Development Build</a></li>
+              <li><a href="#local-development-service-module-build" id="markdown-toc-local-development-service-module-build">Local Development Service Module Build</a></li>
+              <li><a href="#local-development-common-module-build" id="markdown-toc-local-development-common-module-build">Local Development Common Module Build</a></li>
+              <li><a href="#local-development-config-module-build" id="markdown-toc-local-development-config-module-build">Local Development Config Module Build</a></li>
+              <li><a href="#local-development-content-module-build" id="markdown-toc-local-development-content-module-build">Local Development Content Module Build</a></li>
+              <li><a href="#full-build-and-deploy-to-repository" id="markdown-toc-full-build-and-deploy-to-repository">Full Build and Deploy to Repository</a></li>
+            </ul>
+          </li>
+          <li><a href="#jgitflow-plugin" id="markdown-toc-jgitflow-plugin">JGitFlow Plugin</a>            <ul>
+              <li><a href="#plugin-usage" id="markdown-toc-plugin-usage">Plugin Usage</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#ansible-playbooks" id="markdown-toc-ansible-playbooks">Ansible Playbooks</a>        <ul>
+          <li><a href="#site-playbooks" id="markdown-toc-site-playbooks">Site Playbooks</a>            <ul>
+              <li><a href="#siteyml" id="markdown-toc-siteyml">site.yml</a></li>
+              <li><a href="#site-teardownyml" id="markdown-toc-site-teardownyml">site-teardown.yml</a></li>
+              <li><a href="#site-devopsyml" id="markdown-toc-site-devopsyml">site-devops.yml</a></li>
+            </ul>
+          </li>
+          <li><a href="#operations-playbooks" id="markdown-toc-operations-playbooks">Operations Playbooks</a>            <ul>
+              <li><a href="#operation-aem-deployyml" id="markdown-toc-operation-aem-deployyml">operation-aem-deploy.yml</a></li>
+              <li><a href="#operation-esb-deployyml" id="markdown-toc-operation-esb-deployyml">operation-esb-deploy.yml</a></li>
+              <li><a href="#operation-oak-compactionyml" id="markdown-toc-operation-oak-compactionyml">operation-oak-compaction.yml</a></li>
+              <li><a href="#operation-volume-fstrimyml" id="markdown-toc-operation-volume-fstrimyml">operation-volume-fstrim.yml</a></li>
+            </ul>
+          </li>
+          <li><a href="#group-playbooks" id="markdown-toc-group-playbooks">Group Playbooks</a>            <ul>
+              <li><a href="#server-playbooks" id="markdown-toc-server-playbooks">Server Playbooks</a></li>
+              <li><a href="#application-playbooks" id="markdown-toc-application-playbooks">Application Playbooks</a></li>
+            </ul>
+          </li>
+          <li><a href="#management-playbooks" id="markdown-toc-management-playbooks">Management Playbooks</a></li>
+          <li><a href="#libraries" id="markdown-toc-libraries">Libraries</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h1 id="development-tools">Development Tools</h1>
+
+<h2 id="git">Git</h2>
+
+<p>The projects sources are managed with Git.</p>
+
+<h2 id="apache-maven">Apache Maven</h2>
+
+<p>Maven manages the build lifecycle for the AEM content packages, service bundles and configurations, as well their dependencies. Maven 3.5.0 was used during the development of the project.</p>
+
+<p>The content package projects uses ‘content-package-maven-plugin’ to create a CRX content package.</p>
+
+<p>The project was originally created using the ‘CQ Project Maven Archetype’ (<a href="http://www.cqblueprints.com/setup/maven.html">http://www.cqblueprints.com/setup/maven.html</a>).</p>
+
+<p>The AEM project contains 4 child modules:</p>
+
+<ol>
+  <li>
+    <p>aemdesign-aem-common</p>
+
+    <ol>
+      <li>Embeds aemdesign-aem-services under /apps/aemdesign/install</li>
+    </ol>
+  </li>
+  <li>
+    <p>aemdesign-aem-services</p>
+  </li>
+  <li>
+    <p>aemdesign-aem-config</p>
+
+    <ol>
+      <li>Creates a configuration package per environment</li>
+    </ol>
+  </li>
+  <li>
+    <p>aemdesign-aem-content</p>
+  </li>
+</ol>
+
+<h3 id="package-build">Package Build</h3>
+
+<p>Maven commands when run in the aemdesign-aem project.</p>
+
+<h4 id="local-development-build">Local Development Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn <span class="nt">-PautoInstallPackage</span> clean package
+</code></pre></div></div>
+
+<h4 id="local-development-service-module-build">Local Development Service Module Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn <span class="nt">-pl</span> services clean package
+</code></pre></div></div>
+
+<h4 id="local-development-common-module-build">Local Development Common Module Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn <span class="nt">-pl</span> common clean package
+</code></pre></div></div>
+
+<p>Note: this embeds the last built service module. To ensure the latest build, use -pl services,common in the command parameters and the order of the modules is important.</p>
+
+<h4 id="local-development-config-module-build">Local Development Config Module Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn <span class="nt">-pl</span> config clean package
+</code></pre></div></div>
+
+<h4 id="local-development-content-module-build">Local Development Content Module Build</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn <span class="nt">-pl</span> content clean package
+</code></pre></div></div>
+
+<h4 id="full-build-and-deploy-to-repository">Full Build and Deploy to Repository</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn clean deploy
+</code></pre></div></div>
+
+<h3 id="jgitflow-plugin">JGitFlow Plugin</h3>
+
+<p>The JGitFlow Maven Goals manages the Git Flow branching strategy.  The table below lists common usages of the JGitFlow. All commands are run in the ‘aemdesign-aem-dam’ parent module.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Maven Goals</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>mvn jgitflow:feature-start</td>
+      <td>Creates and checks out the new feature branch from /develop</td>
+    </tr>
+    <tr>
+      <td>mvn jgitflow:feature-finish</td>
+      <td>Merges the current working feature branch into /develop and deletes the feature branch</td>
+    </tr>
+    <tr>
+      <td>mvn jgitflow:release-start</td>
+      <td>Creates a new /release/[build_version] branch from /develop</td>
+    </tr>
+    <tr>
+      <td>mvn jgitflow:release-finish</td>
+      <td>Creates a tag named version/[build_version] from /release/[build_version] and merges /release/[build_version] back into /develop and /master. Finally, JGitFlow deletes /release/[build_version]. This ensures that there is only one release in any point in time</td>
+    </tr>
+    <tr>
+      <td>mvn jgitflow:hotfix-start</td>
+      <td>Creates a new /hotfix/[build_version] branch from /master</td>
+    </tr>
+    <tr>
+      <td>mvn jgitflow:hotfix-finish</td>
+      <td>Creates a tag named version/[build_version] from /hotfix/[build_version] and merges /hotfix/[build_version] back into /develop and /master. Finally, JGitFlow deletes /hotfix/[build_version]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="plugin-usage">Plugin Usage</h4>
+
+<p>Branching is not be intended to be limited to the JGitFlow Maven Goals. Its underlying actions are standard Git commands and as such they can be repeated with the git command line tool. Also, there are cases where the git command line tool is required. One such case is when a new feature is required in the current release, in which case the feature is branched from <em>/release/[build_version]</em> and not <em>/develop</em>. Another case is resolving conflicts during branch merging.</p>
+
+<p>For details on Git Flow, see the Processes section on <a href="#heading=h.9cjexa5yq6qn">Git Flow</a></p>
+
+<p>For additional details on the plugin <a href="https://bitbucket.org/atlassian/jgit-flow/wiki/Home">https://bitbucket.org/atlassian/jgit-flow/wiki/Home</a>.</p>
+
+<h2 id="ansible-playbooks">Ansible Playbooks</h2>
+
+<p>There are three types of playbooks that perform automated tasks; operation playbooks, group playbooks and site playbooks. A group playbook provisions servers and applications while a site playbook provisions an entire platform. The site playbook will typically run a few group playbooks which will form the platform. Operation playbooks performs regular tasks on groups such as repository maintenance and package deployments.</p>
+
+<p>By convention, the group playbooks are named after the group vars and site playbooks are prefixed with ‘site-’.</p>
+
+<h3 id="site-playbooks">Site Playbooks</h3>
+
+<h4 id="siteyml">site.yml</h4>
+
+<p>The site playbook manages the AEM platform and its testing environments with the use of inventories.</p>
+
+<p>The following playbook command will provision a complete site using the local development inventory,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./devops accesslocal
+</code></pre></div></div>
+
+<p>or:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook <span class="nt">-i</span> inventory/localdev site.yml <span class="nt">--user</span> aemdesign <span class="nt">--private-key</span> ../aemdesign-vm/keys/current/aemdesign
+</code></pre></div></div>
+
+<p>A well designed playbook should perform all tasks required to provision a site in a single command. However, there are scenarios where only a part of the playbook is required. It is possible to activate a subset of tasks by running a playbook with tags. For example, by adding the –tags parameter to the ansible-playbook command.</p>
+
+<p>The following are tags that are in use:</p>
+
+<ul>
+  <li>
+    <p>docker-host-stop-containers</p>
+  </li>
+  <li>
+    <p>docker-host-stopped</p>
+  </li>
+  <li>
+    <p>docker-images-build</p>
+  </li>
+  <li>
+    <p>Install-packages</p>
+  </li>
+</ul>
+
+<p>To list all tags in the site playbook,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook site.yml <span class="nt">--list-tags</span>
+</code></pre></div></div>
+
+<p>Similarly, playbooks may skip parts of the play with the use of the –skip-tags parameter. For example, in cases where the Docker images are built separately, a playbook that is provisioning a site may decide not to rebuild the images and instead pull them from a Docker registry.</p>
+
+<p>The practice of tagging tasks is best done during the development of roles. This allows the developer to not only exercise the new roles but also test that tags work in isolation.</p>
+
+<p>A recommended approach in developing playbooks is to start with the localdev inventory and promote the changes through each of the environments. The project is designed with roles, groups and host variable precedence to facilitate this development process.</p>
+
+<p>The following environments have inventories configured (in order of promotion):</p>
+
+<ul>
+  <li>
+    <p>localdev</p>
+  </li>
+  <li>
+    <p>develop</p>
+  </li>
+  <li>
+    <p>sit</p>
+  </li>
+  <li>
+    <p>uat</p>
+  </li>
+  <li>
+    <p>training</p>
+  </li>
+  <li>
+    <p>staging</p>
+  </li>
+  <li>
+    <p>production</p>
+  </li>
+</ul>
+
+<p>The platform consists of servers and services. In order to provision the platform, the site playbook includes the following group playbooks that perform the actual provisioning:</p>
+
+<ul>
+  <li>
+    <p>convoy.yml</p>
+
+    <ul>
+      <li>See <a href="#heading=h.yk5do8kzow0p">Convoy Volume Plugin</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>server.yml</p>
+  </li>
+  <li>
+    <p>applications.yml</p>
+  </li>
+  <li>
+    <p>solr.yml</p>
+  </li>
+  <li>
+    <p>author.yml</p>
+  </li>
+  <li>
+    <p>publisher.yml</p>
+  </li>
+  <li>
+    <p>processing.yml</p>
+  </li>
+  <li>
+    <p>dispatcher.yml</p>
+  </li>
+  <li>
+    <p>esb.yml</p>
+  </li>
+</ul>
+
+<h4 id="site-teardownyml">site-teardown.yml</h4>
+
+<p>Teardown playbook is for removing all applications and their data in a Docker host. Its purpose is to prepare the servers such that a new site can be provisioned without any dependencies on a previous state.</p>
+
+<p>For example, it can be used to rebuild the develop environment on a daily basis and/or prepare the UAT environment before each test cycle.</p>
+
+<p>Sample usage,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook <span class="nt">-i</span> inventory/localdev site-teardown.yml <span class="nt">--user</span> aemdesign <span class="nt">--private-key</span> ../aemdesign-vm/keys/current/aemdesign
+</code></pre></div></div>
+
+<h4 id="site-devopsyml">site-devops.yml</h4>
+
+<p>Deploys and configures the Management services.</p>
+
+<h3 id="operations-playbooks">Operations Playbooks</h3>
+
+<h4 id="operation-aem-deployyml">operation-aem-deploy.yml</h4>
+
+<p>Installs versioned AEM content packages from a Maven repository to each of the authors, publishers and processing servers defined in the inventory.</p>
+
+<h4 id="operation-esb-deployyml">operation-esb-deploy.yml</h4>
+
+<p>Installs versioned ESB packages from a Maven repository to the Mulesoft ESB hot deploy folder <em>‘/opt/mule/apps’</em>.</p>
+
+<h4 id="operation-oak-compactionyml">operation-oak-compaction.yml</h4>
+
+<p>Operations playbook that implements the revision cleanup for the AEM Repository. Refer to the Adobe’s online documentation under ’*Maintaining the Repository *’for the significance of this operation:</p>
+
+<p><a href="https://docs.adobe.com/docs/en/aem/6-3/deploy/platform/storage-elements-in-aem-6.html">https://docs.adobe.com/docs/en/aem/6-3/deploy/platform/storage-elements-in-aem-6.html</a></p>
+
+<h4 id="operation-volume-fstrimyml">operation-volume-fstrim.yml</h4>
+
+<p>Operations playbook to releasing unused blocks used by Convoy thinly provisioned volume. (refer to: <a href="#heading=h.ww4rafenb0y4">Thin Volume Management</a>).</p>
+
+<h3 id="group-playbooks">Group Playbooks</h3>
+
+<p>There are two group playbooks. Tasks that maintain the server and tasks that manages an application.</p>
+
+<h4 id="server-playbooks">Server Playbooks</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Playbook</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>server.yml</td>
+      <td>Configures Red Hat Enterprise Linux servers. The following tasks are performed (role references in parenthesis),<br />Adding Network Interfaces before other roles requiring network connectivity ( server-network-interfaces).<br />Installation of RPMs using YUM<br />Installation of security updates<br />Installation of Python Packages required by Ansible (python-packages)<br />Configuration of the Docker service  (docker-host)<br />Configuration of Docker networks (docker-network)<br />Configuration of Server IPTables (server-iptables)</td>
+    </tr>
+    <tr>
+      <td>applications.yml</td>
+      <td>Configures common services for the Docker service and its containers.<br />Deploys Consul servers<br />Deploys Consul clients<br />Deploys a Registrator service for all Consul servers and clients</td>
+    </tr>
+    <tr>
+      <td>convoy.yml</td>
+      <td>Deploys and configures the Convoy Docker plugin.<br />Creates a data device in the rhel volume group<br />Creates a metadata device in the rhel volume group<br />Installs Convoy as a system service<br />Stats the Convoy system service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="application-playbooks">Application Playbooks</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Playbook</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>author.yml</td>
+      <td>Automates the deployment and configuration of AEM authors.<br />Deploys AEM<br />Installs AEM Content Packages such as,<br />Feature Packs<br />Hotfixes<br />ACS Commons<br />3rd Party Content Packages<br />Configures Replication Agents<br />Configures Workflows</td>
+    </tr>
+    <tr>
+      <td>publisher.yml</td>
+      <td>Automates the deployment and configuration of AEM publishers.<br />Deploys AEM<br />Installs AEM Content Packages such as,<br />Feature Packs<br />Hotfixes<br />ACS Commons<br />3rd Party Content Packages</td>
+    </tr>
+    <tr>
+      <td>dispatcher.yml</td>
+      <td>Deploys and configures an author and publisher dispatcher.<br />Builds and configures the author and publisher dispatcher services Starts the services</td>
+    </tr>
+    <tr>
+      <td>esb.yml</td>
+      <td>Deploys and configures the ESB service</td>
+    </tr>
+    <tr>
+      <td>processing.yml</td>
+      <td>Automates the deployment and configuration of AEM processing.<br />Deploys AEM<br />Installs AEM Content Packages such as,<br />Feature Packs<br />Hotfixes<br />ACS Commons<br />3rd Party Content Packages</td>
+    </tr>
+    <tr>
+      <td>solr.yml</td>
+      <td>Deploys and configures Solr Cloud service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="management-playbooks">Management Playbooks</h3>
+
+<p>Deploys and configures management services in the AEM DAM Platform.  These are devops services such as,</p>
+
+<ol>
+  <li>
+    <p>Jenkins</p>
+  </li>
+  <li>
+    <p>Nexus</p>
+  </li>
+</ol>
+
+<p>These are discussed in detail in the <a href="#heading=h.44alh5srvsoz">Development Tools</a> section.</p>
+
+<h3 id="libraries">Libraries</h3>
+
+<p>Ansible Modules adding AEM and Docker tasks to Playbooks.</p>
+
+<p>Python source code for the modules can be found under the project location; <em>‘aemdesign-deploy/library/ansible-modules’</em>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>aem_bundles_wait_activated.py</td>
+      <td>Polls AEM at ‘/system/console/bundles.json’ until ALL bundles are activated</td>
+    </tr>
+    <tr>
+      <td>docker_containers.py</td>
+      <td>Starts or stops ALL Docker containers on a server</td>
+    </tr>
+    <tr>
+      <td>docker_images.py</td>
+      <td>Removes ALL Docker images on a server</td>
+    </tr>
+    <tr>
+      <td>docker_volumes.py</td>
+      <td>Removes ALL Docker volumes on a server</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There are additional modules in the project. They are omitted as they are documented in <a href="https://github.com/Sensis/pyaem">https://github.com/wildone/pyaem</a>.</p>
+
+                
+            </section>
+
+            <footer class="page__meta">
+                
+                
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#info" class="page__taxonomy-item" rel="tag">info</a>
+    
+    </span>
+  </p>
+
+
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Manual%20http%3A%2F%2Faem.design%2Fmanual%2Fdevtools%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fmanual%2Fdevtools%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Faem.design%2Fmanual%2Fdevtools%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fmanual%2Fdevtools%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/manual/projects/" class="pagination--pager" title="Manual
+">Previous</a>
+    
+    
+      <a href="/manual/management/" class="pagination--pager" title="Manual
+">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">By now you would have seen previous posts Docker Containers Everywhere and Docker AEM Bundle. You might have tried out those images, if you have not, I encou...</p>
+  </article>
+</div>
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+
+</p>
+  </article>
+</div>
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+
+</p>
+  </article>
+</div>
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+            
+        </div>
+    </div>
+    
+</div>
+
+    
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block;border-bottom:initial;"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://aem.design/manual/devtools/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/manual/020-devtools"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>
