@@ -9,7 +9,7 @@ top:
   show        : *block_show
   url         : *script_url
   client      : "ca-pub-6707033742178132"
-  style       : "display:block;border-bottom:initial;"
+  style       : "display:inline-block!important;border-bottom:initial;"
   slot        : "3987795379"
   format      : "auto"
 
@@ -20,7 +20,7 @@ bottom:
   show        : *block_show
   url         : *script_url
   client      : "ca-pub-6707033742178132"
-  style       : "display:block;border-bottom:initial;"
+  style       : "display:inline-block!important;border-bottom:initial;"
   slot        : "7730324178"
   format      : "auto"
 
