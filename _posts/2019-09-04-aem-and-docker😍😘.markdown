@@ -2,6 +2,7 @@
 layout: single
 permalink: /blog/2019/09/04/aem-and-docker😍😘
 title:  "AEM and Docker 😍😘"
+excerpt: "I thought AEM does not work in Docker?"
 date:   2019-09-04 00:37:00:00 +1100
 author: max@aem.design
 categories:
@@ -12,6 +13,10 @@ tags:
   - docker
   - automation
   - tini
+redirect_from:
+  - /blog/2019/09/04/aem-and-docker
+header:
+    overlay_image: /assets/images/site-logo.png
 ---
 
 By now you would have seen previous posts [Docker Containers Everywhere](/blog/2019/07/01/docker-containers-everywhere) and [Docker AEM Bundle](/blog/2019/08/30/docker-aem-bundle). You might have tried out those images, if you have not, I encourage you to try them out, you will like it.
