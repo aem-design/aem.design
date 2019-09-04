@@ -27,3 +27,16 @@ bottom:
   responsive  : "true"
 
 
+
+#show at the bottom of the page above footer
+#_layouts/default.html
+inner:
+  show        : *block_show
+  url         : *script_url
+  client      : "ca-pub-6707033742178132"
+  style       : "display:block; text-align:center;"
+  slot        : "7730324178"
+  format      : "fluid"
+  layout      : "in-article"
+
+
