@@ -64,3 +64,8 @@ Please checkout the docker hub [aemdesign/aem](https://hub.docker.com/r/aemdesig
 
 If you would like to contribute or fork the code you can get it on github [https://github.com/aem-design/aem](https://github.com/aem-design/aem).
 
+Bundle version comes with following [AEM.Design](https://github.com/aem-design) projects:
+- [aemdesign-aem-core](https://github.com/aem-design/aemdesign-aem-core) that contains all of the components code 
+- [aemdesign-aem-support](https://github.com/aem-design/aemdesign-aem-support) that contains all of the supporting content, front-end code and component showcase.
+
+
