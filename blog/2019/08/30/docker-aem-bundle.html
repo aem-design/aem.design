@@ -338,7 +338,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 </p>
                 
             </header>
@@ -394,11 +394,17 @@
       <td>vanity url servlet</td>
     </tr>
     <tr>
-      <td>aemdesign-aem-core-deploy-2.0.424.zip</td>
+      <td>aemdesign-aem-core-deploy-{LATEST}.zip</td>
       <td>aem design core</td>
+    </tr>
+    <tr>
+      <td>aemdesign-aem-support-deploy-{LATEST}.zip</td>
+      <td>aem design showcase content</td>
     </tr>
   </tbody>
 </table>
+
+<p>Packages that have <code class="highlighter-rouge">{LATEST}</code> mean that when the container is built it will pull the latest version available in git repository.</p>
 
 <p>To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following</p>
 
@@ -408,6 +414,17 @@
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4502</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30303</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
+aemdesign/aem:6.5.0-bundle 
+</code></pre></div></div>
+
+<p>If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author65bundle <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
+<span class="nt">-p4565</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
+<span class="nt">-p30365</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
 aemdesign/aem:6.5.0-bundle 
 </code></pre></div></div>
 

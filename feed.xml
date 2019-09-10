@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-04T07:22:41+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-10T00:25:37+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
 
 &lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
 
@@ -124,11 +124,17 @@
       &lt;td&gt;vanity url servlet&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;aemdesign-aem-core-deploy-2.0.424.zip&lt;/td&gt;
+      &lt;td&gt;aemdesign-aem-core-deploy-{LATEST}.zip&lt;/td&gt;
       &lt;td&gt;aem design core&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;aemdesign-aem-support-deploy-{LATEST}.zip&lt;/td&gt;
+      &lt;td&gt;aem design showcase content&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;Packages that have &lt;code class=&quot;highlighter-rouge&quot;&gt;{LATEST}&lt;/code&gt; mean that when the container is built it will pull the latest version available in git repository.&lt;/p&gt;
 
 &lt;p&gt;To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
 
@@ -138,6 +144,17 @@
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/aem:6.5.0-bundle 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author65bundle &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p4565&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p30365&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 aemdesign/aem:6.5.0-bundle 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
