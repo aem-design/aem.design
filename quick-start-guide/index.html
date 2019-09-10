@@ -50,7 +50,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2019-09-10T00:25:37+00:00">
+  <meta property="article:published_time" content="2019-09-10T04:44:54+00:00">
 
 
 
@@ -367,62 +367,71 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#understanding-aem" id="markdown-toc-understanding-aem">Understanding AEM</a></li>
   <li><a href="#learning-aem" id="markdown-toc-learning-aem">Learning AEM</a></li>
-  <li><a href="#learning-aemdesign-framework-implementation-of-manifesto" id="markdown-toc-learning-aemdesign-framework-implementation-of-manifesto">Learning AEM.Design Framework (implementation of Manifesto)</a></li>
+  <li><a href="#understanding-aem" id="markdown-toc-understanding-aem">Understanding AEM</a></li>
   <li><a href="#developing-in-aem" id="markdown-toc-developing-in-aem">Developing in AEM</a></li>
 </ul>
 
   </nav>
 </aside>
 
+<h2 id="learning-aem">Learning AEM</h2>
+
+<p>Leaning AEM from scratch is a daunting task, as the platform is on one hand is mature and on the other hand is picking up pace of development of new features. This combined with rest of tech that needed around AEM to make thing work creates and ever ending and expanding domain for leaning.</p>
+
+<p>There is an infinite ways of doing things in and with AEM, AEM.Design aims at creating reusable patterns tech that help to learn AEM and other tech that helps with your journey.</p>
+
+<p>Here are some helpful resource for you to ge started.</p>
+
+<ul>
+  <li><a href="/manifesto/">Manifesto</a> - light weight preparation of concepts</li>
+  <li><a href="/manual/">Manual</a> - AEM.Design documentation</li>
+  <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html">Developing User Guide</a> - there is a lot of info and its good a s reference. This blog tries to create more targeted approach to getting started.</li>
+  <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/model-data.html">Data Modeling - David Nuescheler’s Model</a>. #1 Rule must be your guiding start at all times when developing for AEM. You will find that its very easy to sway from this and you will see a lot of opportunities to break this and other rules. Be vigilant and stay alert.</li>
+</ul>
+
 <h2 id="understanding-aem">Understanding AEM</h2>
 
-<p>You need to understand that you need to change the way you think and adapt to AEM.</p>
+<p>You need to understand that you need to change the way you think and adapt to AEM ways of doing thing both from approach and technology perspectives.</p>
 
 <p>We urge you and your team to learn about AEM together, this will allow to establish a common understanding and nomenclature for use with AEM.</p>
 
 <p>AEM has been developed over many years and has a history of concepts that have been developed to solve common problems that you already experiencing but most likely articulating and conceptualising from different perspective.</p>
 
-<h2 id="learning-aem">Learning AEM</h2>
+<p>What you need to know before you start with AEM.</p>
 
-<p>These are the resourcse that would enable you to get a glimpse of the platform, its capabilities and take you on a journey of discovery.</p>
-
-<p><a href="/manifesto/">Manifesto</a> - light weight preparation of concepts</p>
-
-<h2 id="learning-aemdesign-framework-implementation-of-manifesto">Learning AEM.Design Framework (implementation of Manifesto)</h2>
-
-<p><a href="/manual/">Manual</a> - AEM.Design documentation</p>
+<ul>
+  <li>From technology perspective its not like any other CMS platforms. Its best to start with an open mind.</li>
+  <li>You need to learn and understand these rules <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/model-data.html">Data Modeling - David Nuescheler’s Model</a>. #1 Rule must be your guiding start at all times when developing for AEM. You will find that its very easy to sway from this and you will see a lot of opportunities to break this and other rules. Be vigilant and stay alert.</li>
+  <li>Learn how content is manipulated in AEM <a href="https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html">Manipulating Content using Sling</a>. At the core of AEM is Sling and it the technology that makes AEM Content Centric. Its responsible for content location and presentation.
+    <ul>
+      <li><a href="https://sling.apache.org/documentation/bundles/sling-query/selectors.html">Selectors</a> - a way of passing information to URL without using query strings.</li>
+      <li><a href="https://helpx.adobe.com/au/experience-manager/6-4/sites/developing/using/components-basics.html">Components</a> - base building block of all pages and other content presentation.</li>
+    </ul>
+  </li>
+  <li>Working with repository
+    <ul>
+      <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/package-manager.html">Content Packages</a> - a way of adding/installing content into AEM using a Content Package ZIP file. You can also Uninstall Content Packages after you have installed.</li>
+      <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html">Run Modes</a> - a way of separating your configurations of AEM using content.</li>
+    </ul>
+  </li>
+  <li>Learn the syntax of new templating language used for presentatio of content in AEM using <a href="https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html">HTL Scripting Engine</a>. HTL Scripting Engine is new but very mature templating framework. Its build on top of JSTL and provides a number of helpful patterns for dealing with presentation of content.</li>
+  <li>Learn <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/author.html#main-pars_title">Concept of Authoring and Publishing</a></li>
+  <li>Learn how content is authored in AEM from example of existing projects <a href="https://www.sfu.ca/cms/howto.html">Working in AEM</a>. Content Authoring Experience is critical to working effectively in AEM, understanding impacts on Authoring though your work is critical to AEM development.</li>
+  <li>Learn about <a href="https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html">Dispatcher</a> this is the most critical element of AEM architecture and it gives the sites ability to be cashed. Think of dispatcher as a static site generator but without the build process. Dispatcher caches each request content on disk first time and from then on forward servers those request from disk. Dispatcher grabs new version of content urls only after Publisher triggers an API to notify Dispatcher that particular URL has been updates. Dispatcher only gets new URL when they are requested, this saves a lot of resources.</li>
+  <li>Learn about <a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configuring-osgi.html">OSGI</a> engine of AEM services</li>
+</ul>
 
 <h2 id="developing-in-aem">Developing in AEM</h2>
 
 <p>To get started with development on AEM you will need the following:</p>
 
 <ul>
-  <li>IntelliJ</li>
-  <li>Java 1.8</li>
-  <li>Maven</li>
-  <li>AEM Jar file and valid license #</li>
-</ul>
-
-<p>You can email SPP help desk to get a copy, if you are not registered follow these instruction (How to Join the Adobe Solution Partner Program)[https://spark.adobe.com/page/sE8JD/]</p>
-
-<p>On a Mac you can use the following configuration project to set everything up in one go</p>
-
-<ul>
-  <li><a href="https://github.com/wildone/dev-setup">dev-setup</a></li>
-</ul>
-
-<p>When you have the perquisites ready, follow this guide to build your first demo project.</p>
-
-<ul>
-  <li><a href="https://docs.adobe.com/docs/en/aem/6-2/develop/dev-tools/ht-projects-maven.html">How to Build AEM Projects using Apache Maven</a></li>
-</ul>
-
-<p>Additional resources:</p>
-
-<ul>
-  <li><a href="https://github.com/paulrohrbeck/aem-links">AEM Links</a></li>
+  <li><a href="https://www.jetbrains.com/idea/">IntelliJ</a> - ultimate preferably so that you can do debugging or CE if you must</li>
+  <li>Install <a href="https://hub.docker.com/?overlay=onboarding">Docker Desktop</a> or install <a href="https://kubernetes.io/docs/tasks/tools/install-minikube/">Minikube</a></li>
+  <li>Get an instance of AEM using a docker container <a href="/blog/2019/08/30/docker-aem-bundle">Docker Bundle</a></li>
+  <li>Clone and Deploy <a href="https://github.com/aem-design/aemdesign-aem-core">aemdesign-aem-core</a> that contains all of the components code. To deploy project run <code class="highlighter-rouge">./deploy-local</code> in the project directory once you have cloned it.</li>
+  <li>Clone and Deploy <a href="https://github.com/aem-design/aemdesign-aem-support">aemdesign-aem-support</a> that contains all of the supporting content, front-end code and component showcase. To deploy project run <code class="highlighter-rouge">./deploy-local</code> in the project directory once you have cloned it.</li>
 </ul>
 
 

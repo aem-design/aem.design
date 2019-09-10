@@ -1,6 +1,6 @@
 var store = [{
         "title": "Quick-Start Guide",
-        "excerpt":"Getting started with AEM is hard, from both business and technical perspective, here are some starting points. On This Page Understanding AEM Learning AEM Learning AEM.Design Framework (implementation of Manifesto) Developing in AEM Understanding AEM You need to understand that you need to change the way you think and adapt...","categories": [],
+        "excerpt":"Getting started with AEM is hard, from both business and technical perspective, here are some starting points. On This Page Learning AEM Understanding AEM Developing in AEM Learning AEM Leaning AEM from scratch is a daunting task, as the platform is on one hand is mature and on the other...","categories": [],
         "tags": [],
         "url": "http://aem.design/quick-start-guide/",
         "teaser":null},{
