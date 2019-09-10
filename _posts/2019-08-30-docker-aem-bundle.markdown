@@ -28,7 +28,10 @@ This image has the following packages that are installed on first start-up.
 | accesscontroltool-package-2.3.2.zip | netcentric acl tools |
 | accesscontroltool-oakindex-package-2.3.2.zip | netcentric acl tools |
 | vanityurls-components-1.0.2.zip | vanity url servlet |
-| aemdesign-aem-core-deploy-2.0.424.zip | aem design core |
+| aemdesign-aem-core-deploy-{LATEST}.zip | aem design core |
+| aemdesign-aem-support-deploy-{LATEST}.zip | aem design showcase content |
+
+Packages that have `{LATEST}` mean that when the container is built it will pull the latest version available in git repository. 
 
 To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following
 
@@ -41,6 +44,19 @@ docker run --name author \
 -p30303:58242 -d \
 aemdesign/aem:6.5.0-bundle 
 ```
+
+If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:
+
+```bash
+docker run --name author65bundle \
+-e "TZ=Australia/Sydney" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
+-p4565:8080 -d \
+-p30365:58242 -d \
+aemdesign/aem:6.5.0-bundle 
+```
+
 
 You will need a license to active the instance once it ready.
 
