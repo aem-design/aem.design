@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-10T04:44:54+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-16T03:41:24+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
 
 &lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
 
@@ -136,6 +136,8 @@
 
 &lt;p&gt;Packages that have &lt;code class=&quot;highlighter-rouge&quot;&gt;{LATEST}&lt;/code&gt; mean that when the container is built it will pull the latest version available in git repository.&lt;/p&gt;
 
+&lt;h3 id=&quot;running-aem-in-docker&quot;&gt;Running AEM in Docker&lt;/h3&gt;
+
 &lt;p&gt;To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -158,7 +160,23 @@ aemdesign/aem:6.5.0-bundle
 aemdesign/aem:6.5.0-bundle 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You will need a license to active the instance once it ready.&lt;/p&gt;
+&lt;h3 id=&quot;license&quot;&gt;License&lt;/h3&gt;
+
+&lt;p&gt;You will need a license to active the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/license/license-page.png&quot; alt=&quot;AEM License Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Confirmation screen will show you what version of AEM you are running.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/license/license-confirm.png&quot; alt=&quot;AEM License Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Additionally once you login you can visit the &lt;a href=&quot;http://localhost:4502/system/console/productinfo&quot;&gt;Product Info&lt;/a&gt; console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example if you choose AEM 6.5 with Service Pack 1 its version will be &lt;code class=&quot;highlighter-rouge&quot;&gt;6.5.1.0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;packages&quot;&gt;Packages&lt;/h3&gt;
+
+&lt;p&gt;You will notice that your bundle container will come with latest SP installed and other packages. Each bundle image tag has a corresponding branch in github you can check the &lt;a href=&quot;https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml&quot;&gt;.travis.yml&lt;/a&gt; file to see which packages are pre-installed.&lt;/p&gt;
+
+&lt;h3 id=&quot;thank-you&quot;&gt;Thank you&lt;/h3&gt;
 
 &lt;p&gt;Please checkout the docker hub &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; for further details.&lt;/p&gt;
 

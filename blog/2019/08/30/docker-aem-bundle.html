@@ -406,6 +406,8 @@
 
 <p>Packages that have <code class="highlighter-rouge">{LATEST}</code> mean that when the container is built it will pull the latest version available in git repository.</p>
 
+<h3 id="running-aem-in-docker">Running AEM in Docker</h3>
+
 <p>To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author <span class="se">\</span>
@@ -428,7 +430,23 @@ aemdesign/aem:6.5.0-bundle
 aemdesign/aem:6.5.0-bundle 
 </code></pre></div></div>
 
-<p>You will need a license to active the instance once it ready.</p>
+<h3 id="license">License</h3>
+
+<p>You will need a license to active the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:</p>
+
+<p><img src="/assets/images/license/license-page.png" alt="AEM License Page" /></p>
+
+<p>Confirmation screen will show you what version of AEM you are running.</p>
+
+<p><img src="/assets/images/license/license-confirm.png" alt="AEM License Page" /></p>
+
+<p>Additionally once you login you can visit the <a href="http://localhost:4502/system/console/productinfo">Product Info</a> console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example if you choose AEM 6.5 with Service Pack 1 its version will be <code class="highlighter-rouge">6.5.1.0</code>.</p>
+
+<h3 id="packages">Packages</h3>
+
+<p>You will notice that your bundle container will come with latest SP installed and other packages. Each bundle image tag has a corresponding branch in github you can check the <a href="https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml">.travis.yml</a> file to see which packages are pre-installed.</p>
+
+<h3 id="thank-you">Thank you</h3>
 
 <p>Please checkout the docker hub <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> for further details.</p>
 
