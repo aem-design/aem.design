@@ -33,6 +33,8 @@ This image has the following packages that are installed on first start-up.
 
 Packages that have `{LATEST}` mean that when the container is built it will pull the latest version available in git repository. 
 
+### Running AEM in Docker
+
 To start local demo AEM 6.5 instance on port 4502 with Bundled Packages run the following
 
 ```bash
@@ -57,8 +59,23 @@ docker run --name author65bundle \
 aemdesign/aem:6.5.0-bundle 
 ```
 
+### License
 
-You will need a license to active the instance once it ready.
+You will need a license to active the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:
+
+![AEM License Page](/assets/images/license/license-page.png)
+
+Confirmation screen will show you what version of AEM you are running. 
+
+![AEM License Page](/assets/images/license/license-confirm.png)
+
+Additionally once you login you can visit the [Product Info](http://localhost:4502/system/console/productinfo) console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example if you choose AEM 6.5 with Service Pack 1 its version will be `6.5.1.0`.
+
+### Packages 
+
+You will notice that your bundle container will come with latest SP installed and other packages. Each bundle image tag has a corresponding branch in github you can check the [.travis.yml](https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml) file to see which packages are pre-installed.
+
+### Thank you
 
 Please checkout the docker hub [aemdesign/aem](https://hub.docker.com/r/aemdesign/aem) for further details.
 
