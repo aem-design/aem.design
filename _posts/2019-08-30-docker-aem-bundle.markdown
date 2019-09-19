@@ -59,6 +59,19 @@ docker run --name author65bundle \
 aemdesign/aem:6.5.0-bundle 
 ```
 
+To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following
+
+```bash
+docker run --name author64 \
+-e "TZ=Australia/Sydney" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
+-p4502:8080 -d \
+-p30303:58242 -d \
+aemdesign/aem:6.4.0-bundle 
+```
+
+
 ### License
 
 You will need a license to active the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:
