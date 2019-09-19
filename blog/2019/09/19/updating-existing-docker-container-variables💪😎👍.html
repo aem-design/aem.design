@@ -13,27 +13,27 @@
 
 
 
-<title>Manifesto - AEM.Design</title>
+<title>Updating Existing Docker Container Variables 💪😎👍 - AEM.Design</title>
 
 
 
 
-<meta name="description" content="Platform Principles, Capabilities and Developer Guide">
+<meta name="description" content="If you have to update existing docker container properties you can do it here is how">
 
 
 
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Manifesto">
+<meta property="og:title" content="Updating Existing Docker Container Variables 💪😎👍">
 
 
-  <link rel="canonical" href="http://aem.design/manifesto/">
-  <meta property="og:url" content="http://aem.design/manifesto/">
+  <link rel="canonical" href="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables💪😎👍">
+  <meta property="og:url" content="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables💪😎👍">
 
 
 
-  <meta property="og:description" content="Platform Principles, Capabilities and Developer Guide">
+  <meta property="og:description" content="If you have to update existing docker container properties you can do it here is how">
 
 
 
@@ -50,7 +50,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2019-09-19T07:52:03+00:00">
+  <meta property="article:published_time" content="2019-09-19T00:37:00+00:00">
 
 
 
@@ -195,6 +195,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/site-logo.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Updating Existing Docker Container Variables 💪😎👍
+
+        
+      </h1>
+      
+        <p class="page__lead">If you have to update existing docker container properties you can do it here is how
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
 <div id="main" role="main">
     
   <div class="sidebar sticky">
@@ -315,187 +359,87 @@
 </div>
 
   
-
-<div itemscope itemtype="http://schema.org/Person">
-
-  
-    <div class="author__avatar">
-      
-        <img src="http://aem.design/assets/images/profile/bio-photo.jpg" class="author__avatar" alt="Katreen Cook" itemprop="image">
-      
-    </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name" itemprop="name">Katreen Cook</h3>
-    
-      <p class="author__bio" itemprop="description">
-        Chief Editor
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-
-      
-      <li>
-        <a href="mailto:katreen@aem.design">
-          <meta itemprop="email" content="katreen@aem.design" />
-          <i class="fa fa-fw fa-envelope-square" aria-hidden="true"></i> Email
-        </a>
-      </li>
-      
-
-      
-
-      
-      <li>
-        <a href="https://www.linkedin.com/in/katreencook" itemprop="sameAs">
-          <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
-        </a>
-      </li>
-      
-
-    </ul>
-  </div>
-
-</div>
-
-
-
-  
-    
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-    
   
   </div>
 
 
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="Manifesto">
-        <meta itemprop="description" content="Platform Principles, Capabilities and Developer Guide">
+        <meta itemprop="headline" content="Updating Existing Docker Container Variables 💪😎👍">
+        <meta itemprop="description" content="If you have to update existing docker container properties you can do it here is how">
         <meta itemprop="datePublished" content="September 19, 2019">
         
 
         <div class="page__inner-wrap">
             
-            <header>
-
-
-                <h1 class="page__title" itemprop="headline">Manifesto
-</h1>
-                
-                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-                
-            </header>
-            
 
             <section class="page__content" itemprop="text">
-                <p>This manifesto aims at capturing aspects important to understanding and learning of AEM.</p>
+                <p>Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.</p>
 
-<p>Like AEM this work is in still evolving so follow our twitter of check back when you can.</p>
+<p>As of current <code class="highlighter-rouge">19+</code> version of docker there isn’t a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.</p>
 
-<p>Please note this is <strong>WORK IN PROGRESS</strong> you are welcome to contribute with content or comments of what you would like to see in this work.</p>
+<p>Flow on effect is that when you change this docker config you will need to restart docker engine, which is fine when you have only one container running but if you have lots this is out of the question.</p>
 
-<h2>Table of Contents</h2>
+<p>But lets say you have just started AEM instance not using the <a href="/blog/2019/08/30/docker-aem-bundle">AEM Bundle</a> container, without mounting any volumes and you have spent last hour installing packages and doing thing to that container that you do not want to do again. And you got an urge to do some java code debugging on your new container and you just realised that you did not add the required debug JAVA_OPTS when you started the container:</p>
 
-<nav class="nav__list">
-  
-  <ul class="nav__items" style="max-height: 100% !important;">
-    
-      
-      <li>
-        
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">-Xdebug</span> <span class="nt">-Xrunjdwp</span>:transport<span class="o">=</span>dt_socket,server<span class="o">=</span>y,address<span class="o">=</span>58242,suspend<span class="o">=</span>n
+</code></pre></div></div>
 
-        
-        <ol>
-          
-            
-            
+<p>Starting from scratch will be good option by using the <a href="/blog/2019/08/30/docker-aem-bundle">AEM Bundle</a> by all those changes you made will be lost. At this point in despair you forget what paths you updated and you decide to persevere with updating docker engine config.</p>
 
-            
-            
+<p>You can follow these steps to update your existing container config with java options that will allow you to debug your AEM instance in a container:</p>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/introduction/" class="">Introduction</a></li>
-          
-            
-            
+<ol>
+  <li>Stop your container</li>
+</ol>
 
-            
-            
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop author
+</code></pre></div></div>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/principles/" class="">Principles</a></li>
-          
-            
-            
+<ol>
+  <li>Edit config of your container</li>
+</ol>
 
-            
-            
+<p>Running following command will load the docker config into VI and where you can proceed to update your container config:</p>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/capabilities/" class="">Capabilities</a></li>
-          
-            
-            
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">-v</span> /var/lib/docker:/var/lib/docker alpine vi <span class="si">$(</span>docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s1">'/var/lib/docker/containers//config.v2.json'</span> author65bundle<span class="si">)</span>
+</code></pre></div></div>
 
-            
-            
+<p>You will see config on one line, yes this is how it is and you need to thread carefully.</p>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/delivery/" class="">Delivery</a></li>
-          
-            
-            
+<p>In our case you will need to scroll until you find  <code class="highlighter-rouge">AEM_JVM_OPTS</code> attribute scroll to the end its value and insert (press <code class="highlighter-rouge">i</code> to enter ) AEM Java Debug parameters:</p>
 
-            
-            
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">-Xdebug</span> <span class="nt">-Xrunjdwp</span>:transport<span class="o">=</span>dt_socket,server<span class="o">=</span>y,address<span class="o">=</span>58242,suspend<span class="o">=</span>n
+</code></pre></div></div>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/project/" class="">Project</a></li>
-          
-            
-            
+<p>Then press <code class="highlighter-rouge">ESC</code> key followed by <code class="highlighter-rouge">:qw</code> and press enter.</p>
 
-            
-            
+<p>You now have your config tweak inserted and you can proceed.</p>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/content/" class="">Content</a></li>
-          
-            
-            
+<ol>
+  <li>Restart your docker</li>
+</ol>
 
-            
-            
+<p>In worst case you can just reboot, in best case you can restart the service or use restart option of your Docker Desktop Menu:</p>
 
-            <li style="list-style-type: decimal"><a href="http://aem.design/manifesto/technical/" class="">Technical</a></li>
-          
-        </ol>
-        
-      </li>
-      
-    
-  </ul>
-</nav>
+<p><img src="/assets/images/docker/docker-desktop-menu.png" alt="Docker Desktop Menu" /></p>
+
+<ol>
+  <li>Check your settings tweaks have worked</li>
+</ol>
+
+<p>After your docker engine is backup you can check if your tweaks have worked</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker inspect author
+</code></pre></div></div>
+
+<ol>
+  <li>Start your container</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start author
+</code></pre></div></div>
+
+<p>This process can be used to update other settings as you wish.</p>
 
                 
             </section>
@@ -540,7 +484,19 @@
     
       
       
-      <a href="/tags/#about" class="page__taxonomy-item" rel="tag">about</a>
+      <a href="/tags/#aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#automation" class="page__taxonomy-item" rel="tag">automation</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#docker" class="page__taxonomy-item" rel="tag">docker</a>
     
     </span>
   </p>
@@ -561,14 +517,14 @@
     
       
       
-      <a href="/categories/#info" class="page__taxonomy-item" rel="tag">info</a>
+      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">blog</a>
     
     </span>
   </p>
 
 
                 
-                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-19T07:52:03+00:00">September 19, 2019</time></p>
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-19T00:37:00+00:00">September 19, 2019</time></p>
                 
             </footer>
 
@@ -577,35 +533,26 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Manifesto%20http%3A%2F%2Faem.design%2Fmanifesto%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Updating+Existing+Docker+Container+Variables+%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D%20http%3A%2F%2Faem.design%2Fblog%2F2019%2F09%2F19%2Fupdating-existing-docker-container-variables%25F0%259F%2592%25AA%25F0%259F%2598%258E%25F0%259F%2591%258D" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fmanifesto%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fblog%2F2019%2F09%2F19%2Fupdating-existing-docker-container-variables%25F0%259F%2592%25AA%25F0%259F%2598%258E%25F0%259F%2591%258D" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fmanifesto%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fblog%2F2019%2F09%2F19%2Fupdating-existing-docker-container-variables%25F0%259F%2592%25AA%25F0%259F%2598%258E%25F0%259F%2591%258D" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
             
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" class="pagination--pager" title="AEM and Docker 😍😘
+">Previous</a>
     
     
-      <a href="/manifesto/introduction/" class="pagination--pager" title="Introduction
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
         </div>
-
-        
-        <div class="page__comments">
-  
-  
-      <h4 class="page__comments-title">Leave a Comment</h4>
-      <section id="disqus_thread"></section>
-    
-</div>
 
         
     </article>
@@ -617,34 +564,6 @@
         <h4 class="page__related-title">You May Also Enjoy</h4>
         
         <div class="grid__wrapper">
-            
-            
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
-</p>
-  </article>
-</div>
-
             
             
 
@@ -730,6 +649,34 @@
 </div>
 
             
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+            
         </div>
     </div>
     
@@ -765,25 +712,6 @@
 
 
 
-
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "http://aem.design/manifesto/";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/000-manifesto"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://aem-design.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

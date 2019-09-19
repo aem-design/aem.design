@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-16T03:41:24+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-09-19T07:52:03+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">Updating Existing Docker Container Variables 💪😎👍</title><link href="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Updating Existing Docker Container Variables 💪😎👍" /><published>2019-09-19T00:37:00+00:00</published><updated>2019-09-19T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/19/updating-docker-container-variables</id><content type="html" xml:base="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D">&lt;p&gt;Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.&lt;/p&gt;
+
+&lt;p&gt;As of current &lt;code class=&quot;highlighter-rouge&quot;&gt;19+&lt;/code&gt; version of docker there isn’t a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.&lt;/p&gt;
+
+&lt;p&gt;Flow on effect is that when you change this docker config you will need to restart docker engine, which is fine when you have only one container running but if you have lots this is out of the question.&lt;/p&gt;
+
+&lt;p&gt;But lets say you have just started AEM instance not using the &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;AEM Bundle&lt;/a&gt; container, without mounting any volumes and you have spent last hour installing packages and doing thing to that container that you do not want to do again. And you got an urge to do some java code debugging on your new container and you just realised that you did not add the required debug JAVA_OPTS when you started the container:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;-Xdebug&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xrunjdwp&lt;/span&gt;:transport&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dt_socket,server&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;y,address&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;58242,suspend&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;n
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Starting from scratch will be good option by using the &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;AEM Bundle&lt;/a&gt; by all those changes you made will be lost. At this point in despair you forget what paths you updated and you decide to persevere with updating docker engine config.&lt;/p&gt;
+
+&lt;p&gt;You can follow these steps to update your existing container config with java options that will allow you to debug your AEM instance in a container:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Stop your container&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker stop author
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Edit config of your container&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Running following command will load the docker config into VI and where you can proceed to update your container config:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /var/lib/docker:/var/lib/docker alpine vi &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;docker inspect &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/var/lib/docker/containers//config.v2.json'&lt;/span&gt; author65bundle&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You will see config on one line, yes this is how it is and you need to thread carefully.&lt;/p&gt;
+
+&lt;p&gt;In our case you will need to scroll until you find  &lt;code class=&quot;highlighter-rouge&quot;&gt;AEM_JVM_OPTS&lt;/code&gt; attribute scroll to the end its value and insert (press &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; to enter ) AEM Java Debug parameters:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;-Xdebug&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xrunjdwp&lt;/span&gt;:transport&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dt_socket,server&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;y,address&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;58242,suspend&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;n
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then press &lt;code class=&quot;highlighter-rouge&quot;&gt;ESC&lt;/code&gt; key followed by &lt;code class=&quot;highlighter-rouge&quot;&gt;:qw&lt;/code&gt; and press enter.&lt;/p&gt;
+
+&lt;p&gt;You now have your config tweak inserted and you can proceed.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Restart your docker&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In worst case you can just reboot, in best case you can restart the service or use restart option of your Docker Desktop Menu:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/docker/docker-desktop-menu.png&quot; alt=&quot;Docker Desktop Menu&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Check your settings tweaks have worked&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After your docker engine is backup you can check if your tweaks have worked&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker inspect author
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start your container&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker start author
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This process can be used to update other settings as you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">If you have to update existing docker container properties you can do it here is how</summary></entry><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
+
+&lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
+
+&lt;p&gt;You might even think/say “I thought AEM does not work in Docker”?!&lt;/p&gt;
+
+&lt;p&gt;And the answer to both of those questions is no. You should be using Docker in production, if you are not you are missing out.&lt;/p&gt;
+
+&lt;p&gt;Docker is awesome, period. It once and for all creates a method for establishing consistency with pure simplicity. One of Docker best practices is to have one process per container, many great reasons why but not going to go into them, which is what AEM and mainly java does not play along with easily and we will return to this in a moment.&lt;/p&gt;
+
+&lt;p&gt;As far as AEM is concerned the issues that you might experience running AEM in a container comes from underlying Java Forking. Googling this will give more technical details but at high level this means that Java main process creates new process that are not “children” on the main process.&lt;/p&gt;
+
+&lt;p&gt;So AEM runs on Java and it forks. In AEM most obvious things that trigger this are workflows that execute external processes, external services that AEM hosts like image service and repository services that handle all of the content wiring and reading, sounds important right. So if we can solve this forking thing then the issue will go away.&lt;/p&gt;
+
+&lt;p&gt;This manifest a problem of running AEM in a container creates following situation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you start a docker container&lt;/li&gt;
+  &lt;li&gt;docker container starts and binds to main java process
+    &lt;ul&gt;
+      &lt;li&gt;any of its subsequent children processes are not managed by container&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;you try to stop the container docker will send a shutdown signal to container
+    &lt;ul&gt;
+      &lt;li&gt;that will pass that to the java process
+        &lt;ul&gt;
+          &lt;li&gt;that java process will then respect that signal and gracefully close things it controls
+            &lt;ul&gt;
+              &lt;li&gt;but will leave a bunch of processes orphaned 😞&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;docker container becomes unresponsive/hangs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;you try to &lt;code class=&quot;highlighter-rouge&quot;&gt;docker kill&lt;/code&gt; the container and all its internal orphaned processes
+    &lt;ul&gt;
+      &lt;li&gt;one of which will be the repository so you will lose content 😱 no happy ending here&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok so yeah not so cool!&lt;/p&gt;
+
+&lt;p&gt;But what is cool is a project tini by Thomas Orozco that provides &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;A tiny but valid &lt;code class=&quot;highlighter-rouge&quot;&gt;init&lt;/code&gt; for containers&lt;/a&gt;. This solves the forking issue once and for all.&lt;/p&gt;
+
+&lt;p&gt;Adding &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; as the entry point into your docker containers allows consistency in handling processes in that container.&lt;/p&gt;
+
+&lt;p&gt;This is how the implementation in a base container &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; looks like.&lt;/p&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;       centos:latest&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;MAINTAINER&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; devops &amp;lt;devops@aem.design&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;   os=&quot;centos&quot; \&lt;/span&gt;
+        container.description=&quot;centos with tini&quot; \
+        version=&quot;0.18.0&quot; \
+        imagename=&quot;centos-tini&quot;
+
+
+&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_VERSION=&quot;v0.18.0&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_KEY=&quot;595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_URL=&quot;https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-amd64&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /bin/tini &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.asc &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /bin/tini.asc &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gpg &lt;span class=&quot;nt&quot;&gt;--keyserver&lt;/span&gt; hkp://p80.pool.sks-keyservers.net:80 &lt;span class=&quot;nt&quot;&gt;--recv-keys&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_KEY&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gpg &lt;span class=&quot;nt&quot;&gt;--verify&lt;/span&gt; /bin/tini.asc &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x /bin/tini
+
+&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;/bin/tini&quot;, &quot;--&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Very simple image with key line &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT [&quot;/bin/tini&quot;, &quot;--&quot;]&lt;/code&gt; that ensures that all container commands will be handled by &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt;. So this means that anytime a process is spawned in the container it will be a child of &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt;. So when it comes to closing the container &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; will close all processes and thus you will have a graceful container stoppage.&lt;/p&gt;
+
+&lt;p&gt;Further reviewing the image for &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;aem&lt;/a&gt; you will find similar &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT [&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/aem/run-tini.sh&quot;]&lt;/code&gt; that uses an adopted script to run command &lt;code class=&quot;highlighter-rouge&quot;&gt;exec java $AEM_JVM_OPTS $AEM_RUNMODE -jar $AEM_JARFILE $AEM_START_OPTS&lt;/code&gt; to stat the AEM java process. This ensure that the execute command is passed to &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; for handling.&lt;/p&gt;
+
+&lt;p&gt;You can also use the &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD [&quot;/dispatcher/start.sh&quot;]&lt;/code&gt; as used in &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; image to the same effect. Docker appends the &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD&lt;/code&gt; statement to &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; command and as &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; is based on &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; its final command that will be executed will be &lt;code class=&quot;highlighter-rouge&quot;&gt;[&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/dispatcher/start.sh&quot;]&lt;/code&gt;, once again letting tini manage processes.&lt;/p&gt;
+
+&lt;p&gt;Hopefully if you were scared of using java in docker containers after using &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; your fears will wash away with tears of happiness 😂&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="tini" /><summary type="html">I thought AEM does not work in Docker?</summary></entry><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
 
 &lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
 
@@ -158,6 +301,17 @@ aemdesign/aem:6.5.0-bundle
 &lt;span class=&quot;nt&quot;&gt;-p4565&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30365&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 aemdesign/aem:6.5.0-bundle 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+aemdesign/aem:6.4.0-bundle 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;license&quot;&gt;License&lt;/h3&gt;
@@ -747,46 +901,4 @@ Most importantly by doing this it enables you to test if your pattern works.&lt;
   &lt;li&gt;updated playbooks and deployment scripts&lt;/li&gt;
   &lt;li&gt;reconfigured version for pom files to be automated&lt;/li&gt;
   &lt;li&gt;refactored and and added new components and added more automation tests&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">2018 was just! It came and went!</summary></entry><entry><title type="html">Touch UI Test</title><link href="http://aem.design/blog/2017/12/29/touch-ui-test" rel="alternate" type="text/html" title="Touch UI Test" /><published>2017-12-29T07:22:00+00:00</published><updated>2017-12-29T07:22:00+00:00</updated><id>http://aem.design/blog/2017/12/29/touch-ui-tests</id><content type="html" xml:base="http://aem.design/blog/2017/12/29/touch-ui-test">&lt;p&gt;End of the Year is a few days away!&lt;/p&gt;
-
-&lt;p&gt;It’s was great feeling to bring the Touch UI Migration so close to the end of the year!&lt;/p&gt;
-
-&lt;p&gt;But it’s almost as exciting as completing the Touch UI Testing of exact same components that just have been migrated!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/testing/touch-ui-testing.png&quot; alt=&quot;TouchUI Testing&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Testing utils and all Specs have been migrated from Classic UI to TouchUI.&lt;/p&gt;
-
-&lt;p&gt;Additionally PhantomJS has been depreciated in favor of Headless Chrome!!&lt;/p&gt;
-
-&lt;p&gt;As you all know development of PhantomJS has been abandoned in favour of Chrome Headless. This comes as a welcome move as lots of latest JS and CSS features where hard to test using PhantomJS.&lt;/p&gt;
-
-&lt;p&gt;This is another awesome milestone to be carried as a great base for upcoming projects in 2018!&lt;/p&gt;
-
-&lt;p&gt;Happy New Year to all!!! See you all next year!!!&lt;/p&gt;
-
-&lt;p&gt;PS. Look forward to our &lt;a href=&quot;http://www.jecis.com/&quot;&gt;JECIS&lt;/a&gt; integration coming early next year!!! We are going to use &lt;a href=&quot;http://www.jecis.com/&quot;&gt;JECIS Framework&lt;/a&gt; to deliver eCommerce capability blueprint to your projects!!!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="testing" /><category term="update" /><summary type="html">End of the Year is a few days away!</summary></entry><entry><title type="html">Touch UI Migration</title><link href="http://aem.design/blog/2017/12/06/touch-ui-migration" rel="alternate" type="text/html" title="Touch UI Migration" /><published>2017-12-06T07:22:00+00:00</published><updated>2017-12-06T07:22:00+00:00</updated><id>http://aem.design/blog/2017/12/06/touch-ui-migration</id><content type="html" xml:base="http://aem.design/blog/2017/12/06/touch-ui-migration">&lt;p&gt;It’s always great to head into the end of the year with a good milestone.&lt;/p&gt;
-
-&lt;p&gt;Last week migration to Touch UI has been completed!&lt;/p&gt;
-
-&lt;p&gt;You can now manage all of the template and create new templates with ease using OOTB template authoring tool available in AEM 6.3+!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-templates.png&quot; alt=&quot;TouchUI Template&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As usual content containers have been upgraded lo allow switching from Responsive Grid to Parsys as you need.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-template-structure.png&quot; alt=&quot;TouchUI Structure&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;All Showcase pages has been updated to ensure that new components can be used and tested.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-showcase-updates.png&quot; alt=&quot;TouchUI Showcase Updates Styles&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Including all dialogs for all components that have Classic Dialogs now have TouchUI dialogs as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/touchui/aemdesign-showcase-updates-accessibility.png&quot; alt=&quot;TouchUI Showcasw Updates Accessibility&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As always all dialogs have the common configuration features that allow complete control of styling for all components.&lt;/p&gt;
-
-&lt;p&gt;This has been a great outcome which was long coming and its further complimented by awesome features in AEM TouchUI!&lt;/p&gt;
-
-&lt;p&gt;Looking forward to testing further in AEM 6.4 Beta!!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="update" /><summary type="html">It’s always great to head into the end of the year with a good milestone.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">2018 was just! It came and went!</summary></entry></feed>
