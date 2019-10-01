@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "GitHub"
+    url: https://github.com/aem-design
   - title: "Quick-Start Guide"
     url: /quick-start-guide/
   - title: "Manifesto"
