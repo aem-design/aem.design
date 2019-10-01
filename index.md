@@ -11,6 +11,24 @@ header:
   caption:
 excerpt: 'Create consistency in your AEM implementations by providing your team with AEM language they can use to describe things they want to achieve.'
 feature_row:
+  - image_path: /assets/images/cards/github-mark.png
+    alt: "github"
+    title: "GitHub"
+    excerpt: "See all of our code"
+    url: "https://github.com/aem-design"
+    btn_label: "View"
+  - image_path: /assets/images/cards/docker.png
+    alt: "docker"
+    title: "Docker Hub"
+    excerpt: "See all of our docker images for you to use"
+    url: "https://hub.docker.com/u/aemdesign/"
+    btn_label: "View"
+  - image_path: /assets/images/cards/maven.png
+    alt: "maven"
+    title: "Maven Central"
+    excerpt: "See all of our artifacts in Maven Central"
+    url: "https://search.maven.org/search?q=g:design.aem"
+    btn_label: "View"
   - image_path: /assets/images/cards/aem6.5-1280x768.jpg
     alt: "components"
     title: "Component List"
