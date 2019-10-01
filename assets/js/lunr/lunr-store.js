@@ -164,11 +164,6 @@ var store = [{
         "tags": ["devops","aem","docker","automation","tini"],
         "url": "http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98",
         "teaser":null},{
-        "title": "AEM and Docker 😍😘",
-        "excerpt":"By now you would have seen previous posts Docker Containers Everywhere and Docker AEM Bundle. You might have tried out those images, if you have not, I encourage you to try them out, you will like it. Now that you have tried those images out, one major question you may...","categories": ["blog"],
-        "tags": ["devops","aem","docker","automation","tini"],
-        "url": "http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98",
-        "teaser":null},{
         "title": "Updating Existing Docker Container Variables 💪😎👍",
         "excerpt":"Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles. As of current 19+ version of docker there isn’t a way to do it via...","categories": ["blog"],
         "tags": ["devops","aem","docker","automation"],
