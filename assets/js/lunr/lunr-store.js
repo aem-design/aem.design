@@ -168,4 +168,9 @@ var store = [{
         "excerpt":"Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles. As of current 19+ version of docker there isn’t a way to do it via...","categories": ["blog"],
         "tags": ["devops","aem","docker","automation"],
         "url": "http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D",
+        "teaser":null},{
+        "title": "Trigger Travis pipeline from another pipeline 👉📟🚀",
+        "excerpt":"Keeping with DevOps spirit mean that things on you project should be very modular, this then will mean that you will have a lot of pipelines. Eventually you will come to scenario that will require pipelines to start other pipelines. In our scenario whenever pipeline for aemdesign-aem-core succeeds its artifacts...","categories": ["blog"],
+        "tags": ["devops","aem","docker","automation","travis"],
+        "url": "http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80",
         "teaser":null}]

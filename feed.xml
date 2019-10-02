@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-10-01T03:58:10+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">Updating Existing Docker Container Variables 💪😎👍</title><link href="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Updating Existing Docker Container Variables 💪😎👍" /><published>2019-09-19T00:37:00+00:00</published><updated>2019-09-19T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/19/updating-docker-container-variables</id><content type="html" xml:base="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D">&lt;p&gt;Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-10-02T01:15:02+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">Updating Existing Docker Container Variables 💪😎👍</title><link href="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Updating Existing Docker Container Variables 💪😎👍" /><published>2019-09-19T00:37:00+00:00</published><updated>2019-09-19T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/19/updating-docker-container-variables</id><content type="html" xml:base="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D">&lt;p&gt;Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.&lt;/p&gt;
 
 &lt;p&gt;As of current &lt;code class=&quot;highlighter-rouge&quot;&gt;19+&lt;/code&gt; version of docker there isn’t a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.&lt;/p&gt;
 
@@ -64,7 +64,62 @@
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker start author
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This process can be used to update other settings as you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">If you have to update existing docker container properties you can do it here is how</summary></entry><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
+&lt;p&gt;This process can be used to update other settings as you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">If you have to update existing docker container properties you can do it here is how</summary></entry><entry><title type="html">Trigger Travis pipeline from another pipeline 👉📟🚀</title><link href="http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="alternate" type="text/html" title="Trigger Travis pipeline from another pipeline 👉📟🚀" /><published>2019-09-19T00:37:00+00:00</published><updated>2019-09-19T00:37:00+00:00</updated><id>http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline</id><content type="html" xml:base="http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80">&lt;p&gt;Keeping with DevOps spirit mean that things on you project should be very modular, this then will mean that you will have a &lt;a href=&quot;https://travis-ci.org/aem-design&quot;&gt;lot of pipelines&lt;/a&gt;. Eventually you will come to scenario that will require pipelines to start other pipelines.&lt;/p&gt;
+
+&lt;p&gt;In our scenario whenever pipeline for &lt;a href=&quot;https://travis-ci.org/aem-design/aemdesign-aem-core&quot;&gt;aemdesign-aem-core&lt;/a&gt; succeeds its artifacts should be used in creating a docker container pipeline &lt;a href=&quot;https://travis-ci.org/aem-design/aem&quot;&gt;aem-design/aem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Current Travis definition does not have OOTB option to do this. But fortunately travis comes with API that can be used to interrogate Travis config as well as &lt;a href=&quot;https://docs.travis-ci.com/user/triggering-builds/&quot;&gt;trigger builds with API V3&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The process to trigger API is simple enough&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get a Travis API token from &lt;a href=&quot;https://travis-ci.com/profile&quot;&gt;Travis Profile page&lt;/a&gt;, this is a manual step.&lt;/li&gt;
+  &lt;li&gt;Send a POST request with specific headers to the API endpoint for your repo.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And that’s it really, all you need to do now is do the POST somehow.&lt;/p&gt;
+
+&lt;p&gt;As you come to expect, to make this as simple as possible for reuse in pipelines or manual execution, abstracting the API into a handy docker &lt;a href=&quot;https://hub.docker.com/r/aemdesign/tavis-build-trigger&quot;&gt;tavis-build-trigger&lt;/a&gt; image is easier done that writing about it.&lt;/p&gt;
+
+&lt;p&gt;The approach for docker container is to leverage NodeJS to make the request to API, abstract any logic into a nice package that can be executed anywhere where docker is available.&lt;/p&gt;
+
+&lt;p&gt;NPM has a very handy &lt;a href=&quot;https://www.npmjs.com/package/request&quot;&gt;request&lt;/a&gt; module that makes accessing URI’s as easy as using &lt;a href=&quot;https://curl.haxx.se/&quot;&gt;curl&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Furthermore as the new &lt;a href=&quot;https://github.com/aem-design/travis-build-trigger&quot;&gt;tavis-build-trigger&lt;/a&gt; NodeJS app is a command line app, its mandatory to give optimal command line experience using &lt;a href=&quot;https://www.npmjs.com/package/yargs&quot;&gt;yargs&lt;/a&gt;, after all, it’s little details that count. &lt;a href=&quot;https://www.npmjs.com/package/yargs&quot;&gt;Yargs&lt;/a&gt; provides you with a very simple way of creating beautiful command line experiences without the arghh ( its a pirate-themed library).&lt;/p&gt;
+
+&lt;p&gt;When you execute the app though docker without any parameters&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; aemdesign/travis-trigger-build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You will be greeted with a nice command line helper menu in case you did not read the &lt;a href=&quot;https://github.com/aem-design/travis-build-trigger/blob/master/README.md&quot;&gt;README&lt;/a&gt; to get you going with command line options.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Usage: travis-trigger-build.js &amp;lt;&lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
+
+Commands:
+  travis-trigger-build.js start-branch-build                         Start repo build &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;a particular branch
+  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;github_repo,travis_token,github_user]                                                                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;aliases: sbb]
+
+Options:
+  &lt;span class=&quot;nt&quot;&gt;--help&lt;/span&gt;, &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;       show &lt;span class=&quot;nb&quot;&gt;help&lt;/span&gt;                                                                                             &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;boolean]
+  &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;, &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;    show version                                                                                          &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;boolean]
+  &lt;span class=&quot;nt&quot;&gt;--debug&lt;/span&gt;, &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;      debug mode                                                                                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;boolean]
+  &lt;span class=&quot;nt&quot;&gt;--github_repo&lt;/span&gt;    repo name                                                                                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;required]
+  &lt;span class=&quot;nt&quot;&gt;--github_user&lt;/span&gt;    github user name where repo is located                                                               &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;required]
+  &lt;span class=&quot;nt&quot;&gt;--travis_token&lt;/span&gt;   travis access token                                                                                  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;required]
+  &lt;span class=&quot;nt&quot;&gt;--github_branch&lt;/span&gt;  github branch to trigger build on                                                           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;default: &lt;span class=&quot;s2&quot;&gt;&quot;master&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--travis_url&lt;/span&gt;     travis url to use to trigger &lt;span class=&quot;nb&quot;&gt;jobs&lt;/span&gt;                                  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;default: &lt;span class=&quot;s2&quot;&gt;&quot;https://api.travis-ci.org/repo/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+Examples:
+  node generator.js sbb &lt;span class=&quot;nt&quot;&gt;--github_user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;aem-design &lt;span class=&quot;nt&quot;&gt;--github_repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;aem &lt;span class=&quot;nt&quot;&gt;--github_token&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;TOKEN&amp;gt;
+
+Not enough non-option arguments: got 0, need at least 1
+________________________________________________________________________________
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This provides a lot convenience and adds polish to your project. Having this library in docker container gets you away from having unnecessary scripts in your pipelines.&lt;/p&gt;
+
+&lt;p&gt;As always checkout the code, fork, extend and contribute if you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="travis" /><summary type="html">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue</summary></entry><entry><title type="html">AEM and Docker 😍😘</title><link href="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+00:00</published><updated>2019-09-04T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/04/aem-and-docker</id><content type="html" xml:base="http://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
 
 &lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
 
@@ -824,22 +879,4 @@ Most importantly by doing this it enables you to test if your pattern works.&lt;
   &lt;li&gt;updated playbooks and deployment scripts&lt;/li&gt;
   &lt;li&gt;reconfigured version for pom files to be automated&lt;/li&gt;
   &lt;li&gt;refactored and and added new components and added more automation tests&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">2018 was just! It came and went!</summary></entry><entry><title type="html">Touch UI Test</title><link href="http://aem.design/blog/2017/12/29/touch-ui-test" rel="alternate" type="text/html" title="Touch UI Test" /><published>2017-12-29T07:22:00+00:00</published><updated>2017-12-29T07:22:00+00:00</updated><id>http://aem.design/blog/2017/12/29/touch-ui-tests</id><content type="html" xml:base="http://aem.design/blog/2017/12/29/touch-ui-test">&lt;p&gt;End of the Year is a few days away!&lt;/p&gt;
-
-&lt;p&gt;It’s was great feeling to bring the Touch UI Migration so close to the end of the year!&lt;/p&gt;
-
-&lt;p&gt;But it’s almost as exciting as completing the Touch UI Testing of exact same components that just have been migrated!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/testing/touch-ui-testing.png&quot; alt=&quot;TouchUI Testing&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Testing utils and all Specs have been migrated from Classic UI to TouchUI.&lt;/p&gt;
-
-&lt;p&gt;Additionally PhantomJS has been depreciated in favor of Headless Chrome!!&lt;/p&gt;
-
-&lt;p&gt;As you all know development of PhantomJS has been abandoned in favour of Chrome Headless. This comes as a welcome move as lots of latest JS and CSS features where hard to test using PhantomJS.&lt;/p&gt;
-
-&lt;p&gt;This is another awesome milestone to be carried as a great base for upcoming projects in 2018!&lt;/p&gt;
-
-&lt;p&gt;Happy New Year to all!!! See you all next year!!!&lt;/p&gt;
-
-&lt;p&gt;PS. Look forward to our &lt;a href=&quot;http://www.jecis.com/&quot;&gt;JECIS&lt;/a&gt; integration coming early next year!!! We are going to use &lt;a href=&quot;http://www.jecis.com/&quot;&gt;JECIS Framework&lt;/a&gt; to deliver eCommerce capability blueprint to your projects!!!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="testing" /><category term="update" /><summary type="html">End of the Year is a few days away!</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">2018 was just! It came and went!</summary></entry></feed>

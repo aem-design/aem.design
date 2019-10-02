@@ -13,27 +13,27 @@
 
 
 
-<title>DevOps Automation - AEM.Design</title>
+<title>Trigger Travis pipeline from another pipeline 👉📟🚀 - AEM.Design</title>
 
 
 
 
-<meta name="description" content="Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.">
+<meta name="description" content="When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue">
 
 
 
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="DevOps Automation">
+<meta property="og:title" content="Trigger Travis pipeline from another pipeline 👉📟🚀">
 
 
-  <link rel="canonical" href="http://aem.design/blog/2017/07/04/devops-automation">
-  <meta property="og:url" content="http://aem.design/blog/2017/07/04/devops-automation">
+  <link rel="canonical" href="http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline👉📟🚀">
+  <meta property="og:url" content="http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline👉📟🚀">
 
 
 
-  <meta property="og:description" content="Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.">
+  <meta property="og:description" content="When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue">
 
 
 
@@ -45,12 +45,12 @@
 
 
 
-  <meta property="og:image" content="http://aem.design/assets/images/site-logo.png">
+  <meta property="og:image" content="http://aem.design/assets/images/travis/travis-and-github.png">
 
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-07-04T10:25:00+00:00">
+  <meta property="article:published_time" content="2019-09-19T00:37:00+00:00">
 
 
 
@@ -212,6 +212,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/travis/travis-and-github.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Trigger Travis pipeline from another pipeline 👉📟🚀
+
+        
+      </h1>
+      
+        <p class="page__lead">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
 <div id="main" role="main">
     
   <div class="sidebar sticky">
@@ -337,54 +381,71 @@
 
 
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="DevOps Automation">
-        <meta itemprop="description" content="Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.">
-        <meta itemprop="datePublished" content="July 04, 2017">
+        <meta itemprop="headline" content="Trigger Travis pipeline from another pipeline 👉📟🚀">
+        <meta itemprop="description" content="When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue">
+        <meta itemprop="datePublished" content="September 19, 2019">
         
 
         <div class="page__inner-wrap">
             
-            <header>
-
-
-                <h1 class="page__title" itemprop="headline">DevOps Automation
-</h1>
-                
-                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-                
-            </header>
-            
 
             <section class="page__content" itemprop="text">
-                <p>Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.</p>
+                <p>Keeping with DevOps spirit mean that things on you project should be very modular, this then will mean that you will have a <a href="https://travis-ci.org/aem-design">lot of pipelines</a>. Eventually you will come to scenario that will require pipelines to start other pipelines.</p>
 
-<p><img src="/assets/images/devops/bootstrap.png" alt="DevOps Bootstrap" /></p>
+<p>In our scenario whenever pipeline for <a href="https://travis-ci.org/aem-design/aemdesign-aem-core">aemdesign-aem-core</a> succeeds its artifacts should be used in creating a docker container pipeline <a href="https://travis-ci.org/aem-design/aem">aem-design/aem</a>.</p>
 
-<p>Out of all of the operating systems Windows was the hardest and easiest to get working! Yes, it can be like that!</p>
+<p>Current Travis definition does not have OOTB option to do this. But fortunately travis comes with API that can be used to interrogate Travis config as well as <a href="https://docs.travis-ci.com/user/triggering-builds/">trigger builds with API V3</a>.</p>
 
-<p>In the hindsight Windows it’s the easiest as you do not have a lot of choice for proper bash that can interact with Windows Processes directly, so and Cygwin handles this very well. In addition to this some corporates have Dual Account setup for all developers that requires developers to login as Local Admin account to install software. This is was challenging to play with and we would recommend to avoid as much as possible but in the end it work.</p>
+<p>The process to trigger API is simple enough</p>
 
-<p><img src="/assets/images/devops/success-win10-cygwin1.png" alt="DevOps Bootstrap Success Win10 Cygwin" /></p>
+<ol>
+  <li>Get a Travis API token from <a href="https://travis-ci.com/profile">Travis Profile page</a>, this is a manual step.</li>
+  <li>Send a POST request with specific headers to the API endpoint for your repo.</li>
+</ol>
 
-<p>Mac on the other hand poses sever other challenges it comes bundles with Python so a use of private virtual environments for isolating from system installation was implemented and used across all OS’s.</p>
+<p>And that’s it really, all you need to do now is do the POST somehow.</p>
 
-<p><img src="/assets/images/devops/success-mac.png" alt="DevOps Bootstrap Success Mac" /></p>
+<p>As you come to expect, to make this as simple as possible for reuse in pipelines or manual execution, abstracting the API into a handy docker <a href="https://hub.docker.com/r/aemdesign/tavis-build-trigger">tavis-build-trigger</a> image is easier done that writing about it.</p>
 
-<p>Linux Ubuntu on the other hand was the simplest to setup and use, even if you have Secure Boot enabled only VirtualBox installation had extra steps to install signed driver.</p>
+<p>The approach for docker container is to leverage NodeJS to make the request to API, abstract any logic into a nice package that can be executed anywhere where docker is available.</p>
 
-<p><img src="/assets/images/devops/success-ubuntu.png" alt="DevOps Bootstrap Success Mac" /></p>
+<p>NPM has a very handy <a href="https://www.npmjs.com/package/request">request</a> module that makes accessing URI’s as easy as using <a href="https://curl.haxx.se/">curl</a>.</p>
 
-<p>Also during this update autocomplete was added to DevOps bootstrap!</p>
+<p>Furthermore as the new <a href="https://github.com/aem-design/travis-build-trigger">tavis-build-trigger</a> NodeJS app is a command line app, its mandatory to give optimal command line experience using <a href="https://www.npmjs.com/package/yargs">yargs</a>, after all, it’s little details that count. <a href="https://www.npmjs.com/package/yargs">Yargs</a> provides you with a very simple way of creating beautiful command line experiences without the arghh ( its a pirate-themed library).</p>
 
-<p><a href="https://asciinema.org/a/3GrVPCGnClzzQQW9MWWqpZ9Vt"><img src="https://asciinema.org/a/3GrVPCGnClzzQQW9MWWqpZ9Vt.png" alt="asciicast" /></a></p>
+<p>When you execute the app though docker without any parameters</p>
 
-<p>As always let us know what you think.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--rm</span> aemdesign/travis-trigger-build
+</code></pre></div></div>
+
+<p>You will be greeted with a nice command line helper menu in case you did not read the <a href="https://github.com/aem-design/travis-build-trigger/blob/master/README.md">README</a> to get you going with command line options.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: travis-trigger-build.js &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="o">[</span>options]
+
+Commands:
+  travis-trigger-build.js start-branch-build                         Start repo build <span class="k">for </span>a particular branch
+  <span class="o">[</span>github_repo,travis_token,github_user]                                                                            <span class="o">[</span>aliases: sbb]
+
+Options:
+  <span class="nt">--help</span>, <span class="nt">-h</span>       show <span class="nb">help</span>                                                                                             <span class="o">[</span>boolean]
+  <span class="nt">--version</span>, <span class="nt">-v</span>    show version                                                                                          <span class="o">[</span>boolean]
+  <span class="nt">--debug</span>, <span class="nt">-d</span>      debug mode                                                                                            <span class="o">[</span>boolean]
+  <span class="nt">--github_repo</span>    repo name                                                                                            <span class="o">[</span>required]
+  <span class="nt">--github_user</span>    github user name where repo is located                                                               <span class="o">[</span>required]
+  <span class="nt">--travis_token</span>   travis access token                                                                                  <span class="o">[</span>required]
+  <span class="nt">--github_branch</span>  github branch to trigger build on                                                           <span class="o">[</span>default: <span class="s2">"master"</span><span class="o">]</span>
+  <span class="nt">--travis_url</span>     travis url to use to trigger <span class="nb">jobs</span>                                  <span class="o">[</span>default: <span class="s2">"https://api.travis-ci.org/repo/"</span><span class="o">]</span>
+
+Examples:
+  node generator.js sbb <span class="nt">--github_user</span><span class="o">=</span>aem-design <span class="nt">--github_repo</span><span class="o">=</span>aem <span class="nt">--github_token</span><span class="o">=</span>&lt;TOKEN&gt;
+
+Not enough non-option arguments: got 0, need at least 1
+________________________________________________________________________________
+</code></pre></div></div>
+
+<p>This provides a lot convenience and adds polish to your project. Having this library in docker container gets you away from having unnecessary scripts in your pipelines.</p>
+
+<p>As always checkout the code, fork, extend and contribute if you wish.</p>
 
                 
             </section>
@@ -429,11 +490,23 @@
     
       
       
+      <a href="/tags/#aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#automation" class="page__taxonomy-item" rel="tag">automation</a><span class="sep">, </span>
+    
+      
+      
       <a href="/tags/#devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/tags/#docker" class="page__taxonomy-item" rel="tag">docker</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#travis" class="page__taxonomy-item" rel="tag">travis</a>
     
     </span>
   </p>
@@ -461,7 +534,7 @@
 
 
                 
-                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-04T10:25:00+00:00">July 04, 2017</time></p>
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-19T00:37:00+00:00">September 19, 2019</time></p>
                 
             </footer>
 
@@ -470,23 +543,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=DevOps+Automation%20http%3A%2F%2Faem.design%2Fblog%2F2017%2F07%2F04%2Fdevops-automation" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Trigger+Travis+pipeline+from+another+pipeline+%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80%20http%3A%2F%2Faem.design%2Fblog%2F2019%2F10%2F01%2Ftrigger-travis-pipeline-from-another-pipeline%25F0%259F%2591%2589%25F0%259F%2593%259F%25F0%259F%259A%2580" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fblog%2F2017%2F07%2F04%2Fdevops-automation" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faem.design%2Fblog%2F2019%2F10%2F01%2Ftrigger-travis-pipeline-from-another-pipeline%25F0%259F%2591%2589%25F0%259F%2593%259F%25F0%259F%259A%2580" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fblog%2F2017%2F07%2F04%2Fdevops-automation" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faem.design%2Fblog%2F2019%2F10%2F01%2Ftrigger-travis-pipeline-from-another-pipeline%25F0%259F%2591%2589%25F0%259F%2593%259F%25F0%259F%259A%2580" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
             
   <nav class="pagination">
     
-      <a href="/blog/2017/06/28/automation-testing" class="pagination--pager" title="Automation Testing and Human Reporting
+      <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" class="pagination--pager" title="Updating Existing Docker Container Variables 💪😎👍
 ">Previous</a>
     
     
-      <a href="/blog/2017/12/06/touch-ui-migration" class="pagination--pager" title="Touch UI Migration
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -511,34 +583,6 @@
         <h4 class="page__related-title">You May Also Enjoy</h4>
         
         <div class="grid__wrapper">
-            
-            
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
-</p>
-  </article>
-</div>
-
             
             
 
@@ -624,6 +668,34 @@
 </div>
 
             
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+            
         </div>
     </div>
     
@@ -664,8 +736,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://aem.design/blog/2017/07/04/devops-automation";  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "/blog/2017/07/04/devops-automation"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = "http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
