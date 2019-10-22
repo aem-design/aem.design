@@ -1,7 +1,7 @@
 # aem.design
 AEM.Design blog
 
-[![build_status](https://travis-ci.org/aem-design/aem.design.svg?branch=master)](https://travis-ci.org/aem-design/aem.design) 
+[![build_status](https://github.com/aem-design/aem.design/workflows/ci/badge.svg)](https://github.com/aem-design/aem.design/actions?workflow=ci)
 [![github license](https://img.shields.io/github/license/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
 [![github issues](https://img.shields.io/github/issues/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
 [![github last commit](https://img.shields.io/github/last-commit/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
