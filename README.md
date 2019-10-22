@@ -6,9 +6,6 @@ AEM.Design blog
 [![github issues](https://img.shields.io/github/issues/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
 [![github last commit](https://img.shields.io/github/last-commit/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
 [![github repo size](https://img.shields.io/github/repo-size/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
-[![docker stars](https://img.shields.io/docker/stars/aemdesign/aem.design)](https://hub.docker.com/r/aemdesign/aem.design) 
-[![docker pulls](https://img.shields.io/docker/pulls/aemdesign/aem.design)](https://hub.docker.com/r/aemdesign/aem.design) 
-[![github release](https://img.shields.io/github/release/aem-design/aem.design)](https://github.com/aem-design/centos-tini)
 ![statuscake](https://app.statuscake.com/button/index.php?Track=sKW7chwd8h&Days=7&Design=3 "statuscake")
 
 
