@@ -45,7 +45,9 @@ docker stop author
 Running following command will load the docker config into VI and where you can proceed to update your container config:
 
 ```bash
+{% raw %}
 docker run -it -v /var/lib/docker:/var/lib/docker alpine vi $(docker inspect --format='/var/lib/docker/containers/{{.Id}}/config.v2.json' author65bundle)
+{% endraw %}
 ```
 
 You will see config on one line, yes this is how it is and you need to thread carefully.
