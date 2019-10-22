@@ -173,4 +173,9 @@ var store = [{
         "excerpt":"Keeping with DevOps spirit mean that things on you project should be very modular, this then will mean that you will have a lot of pipelines. Eventually you will come to scenario that will require pipelines to start other pipelines. In our scenario whenever pipeline for aemdesign-aem-core succeeds its artifacts...","categories": ["blog"],
         "tags": ["devops","aem","docker","automation","travis"],
         "url": "http://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80",
+        "teaser":null},{
+        "title": "Enter the Github Actions 😘🐙🚀",
+        "excerpt":"CI/CD space if going off like a bunch of emoji in a url! But one thing you can be sure is to kiss 😘 your all-enveloping 🐙 pipeline tools good bye and put on your seat belt, as the pipeline mother-ship is taking off 🚀! Travis, Gitlab, Jenkins, Azure DevOps,...","categories": ["blog"],
+        "tags": ["devops","aem","docker","automation","github","actions","github-actions"],
+        "url": "http://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80",
         "teaser":null}]

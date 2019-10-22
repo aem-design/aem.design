@@ -243,6 +243,7 @@
 
 
   2 minute read
+
 </p>
       
       
@@ -418,7 +419,9 @@
 
 <p>Running following command will load the docker config into VI and where you can proceed to update your container config:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">-v</span> /var/lib/docker:/var/lib/docker alpine vi <span class="si">$(</span>docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s1">'/var/lib/docker/containers//config.v2.json'</span> author65bundle<span class="si">)</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+docker run <span class="nt">-it</span> <span class="nt">-v</span> /var/lib/docker:/var/lib/docker alpine vi <span class="si">$(</span>docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s1">'/var/lib/docker/containers/{{.Id}}/config.v2.json'</span> author65bundle<span class="si">)</span>
+
 </code></pre></div></div>
 
 <p>You will see config on one line, yes this is how it is and you need to thread carefully.</p>
@@ -601,6 +604,35 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
 </a>
       
@@ -612,6 +644,7 @@
 
 
   2 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
@@ -640,6 +673,7 @@
 
 
   3 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
@@ -668,37 +702,10 @@
 
 
   2 minute read
+
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
-</p>
-  </article>
-</div>
-
-            
-            
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
 </p>
   </article>
 </div>

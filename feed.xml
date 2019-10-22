@@ -1,4 +1,267 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-10-02T01:15:02+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">Updating Existing Docker Container Variables 💪😎👍</title><link href="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Updating Existing Docker Container Variables 💪😎👍" /><published>2019-09-19T00:37:00+00:00</published><updated>2019-09-19T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/19/updating-docker-container-variables</id><content type="html" xml:base="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D">&lt;p&gt;Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="http://aem.design/" rel="alternate" type="text/html" /><updated>2019-10-22T06:50:58+00:00</updated><id>http://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">Enter the Github Actions 😘🐙🚀</title><link href="http://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="alternate" type="text/html" title="Enter the Github Actions 😘🐙🚀" /><published>2019-10-20T00:37:00+00:00</published><updated>2019-10-20T00:37:00+00:00</updated><id>http://aem.design/blog/2019/10/20/enter-the-github-actions</id><content type="html" xml:base="http://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80">&lt;style&gt;
+.page__hero--overlay p, .page__hero--overlay h1{
+    background-color: rgba(23,168,23, 0.6);
+    max-width: fit-content !important;
+    border-radius: 25px;
+    padding: 10px;
+}
+&lt;/style&gt;
+
+&lt;p&gt;CI/CD space if going off like a bunch of emoji in a url! But one thing you can be sure is to kiss 😘 your all-enveloping 🐙 pipeline tools good bye and put on your seat belt, as the pipeline mother-ship is taking off 🚀!&lt;/p&gt;
+
+&lt;p&gt;Travis, Gitlab, Jenkins, Azure DevOps, CircleCI, Codeship all of these and more are awesome pipeline tools! We use them daily, they do us proud of things that we can accomplish with effort alone in this virtual world of ours. They make us happy when we move our piplines from one provider to another by giving us latest YAML syntax. They make us happy when they give us badges that we wear with pride in our readme’s! They give us fancy plugins and cli tools that make us rewrite all of our pipelines over and over!&lt;/p&gt;
+
+&lt;p&gt;But late night wrestling with CI tools does leave feelings of doubt deep in your mind, maybe this is not the end game. Yes pulling data across the oceans so that you can just build the code does seem ok and mirroring your repos to another build system so that your Git LFS quota does not get smashed is worthy battle. But you wonder should you need to do all that and is there a better way.&lt;/p&gt;
+
+&lt;p&gt;We know that big things come from little things, so all the small battles with these awesome tools seem to be a built up to something big. All these battles helped us to figure out what we really need from these pipeline tools.&lt;/p&gt;
+
+&lt;p&gt;And it seems that the ask is much firmer now after all the experimenting and it goes something like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I want my code to be in a place where everyone can get at it.&lt;/li&gt;
+  &lt;li&gt;I want my code base to be respected by everyone&lt;/li&gt;
+  &lt;li&gt;I want my pipeline to be right there with the code so that I dont need to worry about any smudges, submodules and other solvable unknowns.&lt;/li&gt;
+  &lt;li&gt;I want this YAML config to be easy to understand and simple to follow, like Travis but with more YAML&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sure there is things to consider but for lets see where this takes us.&lt;/p&gt;
+
+&lt;p&gt;Now to be clear Travis is #1 until you need to run something longer than 50min then is Azure DevOps at #2. Travis is simple and it give you exactly what you want and for free. Azure DevOps is the all in one package that you dream of, but you need to move your code from Github. 🤔&lt;/p&gt;
+
+&lt;p&gt;Gitlab is awesome for a few years we have been running on it, running over quotas etc pain full but worth while experience right up to archiving all project and moving to github. Gitlab is a great one-stop-shop if you want to run on-prem, as there is Github and Azure in paid categories, that compete at different level.&lt;/p&gt;
+
+&lt;p&gt;Github has become the defacto standard for open source projects. Yes Azure has tried to capture the market and its done a bloody great job and Gihub is now owned by Mirosoft, and we will see who will win the internal pageant in the end but there will always be open source favorite.&lt;/p&gt;
+
+&lt;p&gt;But all of this really does not really matter for now, what matters is that Github announced and delivered on their promise to have pipelines built into their offering. This was a long throw of a spanner and it has been is slow motion for a year, but it landed and pressed the tak off button! And its looking good! Yes there are features missing, but it wont be long.&lt;/p&gt;
+
+&lt;p&gt;Amazingly it seems that they copied some of the Azure DevOps pipeline components and have improved on them! This makes Github an absolute steal for open source project as its now one stop shop for all of your needs. It’s astonishing how much &lt;a href=&quot;https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions&quot;&gt;value this offers&lt;/a&gt; it leaves you with the thought what is the catch?! There aint none atm and I do hope they wont do Larry Ellison on us in a few years. Obviously people will just move to where there is more common sense.&lt;/p&gt;
+
+&lt;p&gt;For now we have started to migrate all of our pipelines from Travis to Github Actions, so far it has been a very quick migration there are many guides how to migrate but if you know your pipelines its simpler to just get started!&lt;/p&gt;
+
+&lt;h3 id=&quot;from-travis-to-github-actions---the-non-definitive-guide&quot;&gt;From Travis to Github Actions - the non definitive guide&lt;/h3&gt;
+
+&lt;p&gt;To get started all you need to do is make &lt;code class=&quot;highlighter-rouge&quot;&gt;.github/workflows/main.yml&lt;/code&gt; file in your project with following content:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;CI&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;GLOBAL_VAR&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;i am global&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;SECRET_VAR&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# set this in Github Repo -&amp;gt; Setting -&amp;gt; Secrets&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v1&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;run a one-line script&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo Hello, world!&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Run a multi-line script&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo Add other actions to build,&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo test, and deploy your project.&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;run a one-line script with if&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;github.ref == 'refs/heads/master'&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo Hello, world!&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;set step output and set some vars&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;stepwithoutputs&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo ::set-env name=COOL_OUTPUT::HELLO THERE ENV&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo ::set-output name=COOL_OUTPUT::HELLO THERE OUTPUT&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dump some vars&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo STEP_OUTPUT_MAP=${STEP_OUTPUT_MAP}&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo STEP_OUTPUT=${STEP_OUTPUT}&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo STEP_SET_ENV_VAR=${STEP_SET_ENV_VAR}&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo JOB_VAR=${JOB_VAR}&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;STEP_OUTPUT_MAP&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;STEP_OUTPUT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;STEP_SET_ENV_VAR&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;JOB_VAR&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;meeDamian/github-release@1.0&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here you can see common items that you could use in your simple pipeline, its a good start for converting your pipelines.&lt;/p&gt;
+
+&lt;p&gt;Then you can go ahead and replace steps with the ones you have in your travis file. Here are some how to notes on things that you will need to know:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name:&lt;/code&gt; at the top is the ID of action so keep that short.&lt;/li&gt;
+  &lt;li&gt;unlike Travis there is &lt;code class=&quot;highlighter-rouge&quot;&gt;jobs/&amp;lt;job_id&amp;gt;&lt;/code&gt; layout where you can separate your flow if you need, initially having everything in one job is easiest, you can refactor once you have more requirements.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;uses&lt;/code&gt; mean using another pre made action from marketplace, you pass parameters to actions using &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;you can use bash variables in &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; steps but you need to use “Context Expression” when doing it on other YAML attributes such &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt; or passing variables to things.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; is added directly to step YAML and you use Context Expressions to evaluate your logic, ex check if current branch is master: &lt;code class=&quot;highlighter-rouge&quot;&gt;if: github.ref == 'refs/heads/master'&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;to &lt;code class=&quot;highlighter-rouge&quot;&gt;export&lt;/code&gt; a variable to environment you need to do following echo command format &lt;code class=&quot;highlighter-rouge&quot;&gt;echo ::set-env name={name}::{value}&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;you can also set step outputs &lt;code class=&quot;highlighter-rouge&quot;&gt;::set-output name={name}::{value}&lt;/code&gt; that allow you to reference this step it in Context Expression &lt;code class=&quot;highlighter-rouge&quot;&gt;steps.&amp;lt;step_id&amp;gt;.outputs.&amp;lt;variable&amp;gt;&lt;/code&gt; this separates global from step variables.&lt;/li&gt;
+  &lt;li&gt;to use &lt;code class=&quot;highlighter-rouge&quot;&gt;env&lt;/code&gt; variables in &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; steps you can just do &lt;code class=&quot;highlighter-rouge&quot;&gt;${DOCKER_REGISTRY}&lt;/code&gt; this will evaluate the variable as bash variable.&lt;/li&gt;
+  &lt;li&gt;to use &lt;code class=&quot;highlighter-rouge&quot;&gt;env&lt;/code&gt; in YAML parts such as &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; etc you need to use Content Expressions &lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt; this will evaluate the variable as bash variable.&lt;/li&gt;
+  &lt;li&gt;to pass secrets to steps or use them in &lt;code class=&quot;highlighter-rouge&quot;&gt;env&lt;/code&gt; variables use the Content Expression &lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;check Awesome List of Must Have Actions in your Pipeline](https://github.com/sdras/awesome-actions) for custom actions that will replace comparable Travis actions, example &lt;a href=&quot;https://github.com/marketplace/actions/github-release-create-update-and-upload-assets&quot;&gt;meeDamian/github-release@1.0&lt;/a&gt; replaces Travis &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt; step.&lt;/li&gt;
+  &lt;li&gt;caching is not there yet but will be available in November 2019.&lt;/li&gt;
+  &lt;li&gt;you can use Build Matrix see &lt;a href=&quot;https://help.github.com/en/articles/workflow-syntax-for-github-actions&quot;&gt;Github Actions YAML Syntax&lt;/a&gt; for more info&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Following is a list of resource you should use to learn about syntax before you stat googling.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions&quot;&gt;YAML Syntax&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/articles/workflow-syntax-for-github-actions&quot;&gt;Github Actions YAML Syntax&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/github/automating-your-workflow-with-github-actions/development-tools-for-github-actions&quot;&gt;Setting Variables&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/articles/virtual-environments-for-github-actions&quot;&gt;Global Variables and Secrets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions&quot;&gt;Context Expression and Global Context&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sdras/awesome-actions&quot;&gt;Awesome List of Must Have Actions in your Pipeline&lt;/a&gt; - check this before googling&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.community/t5/GitHub-Actions/bd-p/actions&quot;&gt;Github Actions Forum&lt;/a&gt; - search here before googling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For better comparison here is an actual &lt;a href=&quot;https://github.com/aem-design/docker-toughday/blob/master/.travis.yml&quot;&gt;Travis pipeline&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;java&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;tag is blank&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;docker'&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;PACKAGE_PATH=&quot;$(pwd)/packages&quot;&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;directories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$PACKAGE_PATH&lt;/span&gt;
+
+
+&lt;span class=&quot;na&quot;&gt;before_install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;(curl&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-sL&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://github.com/aem-design/aemdesign-docker/releases/latest/download/get_config.sh)&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo GET PACKAGES&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo $PACKAGE_PATH&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;if [[ ! -d $PACKAGE_PATH ]]; then mkdir $PACKAGE_PATH; fi&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo PACKAGES CONTENTS $PACKAGE_PATH&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ls -latr $PACKAGE_PATH&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo DOWNLOAD PACKAGES INTO ${PACKAGE_PATH}&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./scripts/download.sh &quot;$PACKAGE_PATH/&quot; &quot;-&quot; &quot;-&quot; &quot;https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/tough-day/_jcr_content/main-pars/download-section/download-1/file.res/toughday-6.1.jar&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./scripts/download.sh &quot;$PACKAGE_PATH/&quot; &quot;-&quot; &quot;-&quot; &quot;https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/0.9.2/toughday2-0.9.2.jar&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./scripts/download.sh &quot;$PACKAGE_PATH/&quot; &quot;-&quot; &quot;-&quot; &quot;https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.jar&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ls -latr $PACKAGE_PATH&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;(curl&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-sL&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://github.com/aem-design/aemdesign-docker/releases/latest/download/get_version.sh)&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;#build and test&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker build --pull -t $IMAGE:$IMAGE_VERSION .&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;export CONTAINER_COMMAND=&quot;docker run $IMAGE:$IMAGE_VERSION $TEST_COMMAND&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo CONTAINER_COMMAND=$CONTAINER_COMMAND&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;export CONTAINER_OUTPUT=$(eval $CONTAINER_COMMAND)&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo CONTAINER_OUTPUT=$CONTAINER_OUTPUT&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;if [[ ! ${CONTAINER_OUTPUT} =~ ${TEST_COMMAND_VERIFY} ]]; then travis_terminate 1; fi&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker images&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#test&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo &quot;LOGIN TO HUB.DOCKER&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo &quot;PUSH HUB.DOCKER&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker push $IMAGE:$IMAGE_VERSION&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;if [[ $TRAVIS_BRANCH == &quot;master&quot; ]]; then docker tag $IMAGE:$IMAGE_VERSION $IMAGE:latest &amp;amp;&amp;amp; docker push $IMAGE:latest; fi&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo &quot;UPDATE README IN HUB.DOCKER&quot;&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;if [[ $TRAVIS_BRANCH == &quot;master&quot; ]]; then docker run --rm -v $(pwd):/data/ aemdesign/dockerhub-description &quot;$DOCKER_USERNAME&quot; &quot;$DOCKER_PASSWORD&quot; &quot;$IMAGE&quot;; fi&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;## Get the project version&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;before_deploy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;if [[ $TRAVIS_BRANCH == &quot;master&quot; ]]; then git tag $TRAVIS_TAG; fi&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;## Create release in GitHub&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;provider&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;releases&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;tag_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$TRAVIS_TAG&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$TRAVIS_TAG&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;target_commitish&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$TRAVIS_COMMIT&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;api_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$GITHUB_TOKEN&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;skip_cleanup&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Its ported version looks very similar &lt;a href=&quot;https://github.com/aem-design/docker-toughday/blob/master/.github/workflows/build.yml&quot;&gt;Gitub Actions&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;build&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;DOCKER_REGISTRY&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker.io&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;ORGANISATION_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;aemdesign&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;DOCKER_USERNAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${{ secrets.DOCKER_USERNAME }}&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;DOCKER_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${{ secrets.DOCKER_PASSWORD }}&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v1&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;set envirnment variables&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;config&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo GET PACKAGES&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;export PACKAGE_PATH=$(pwd)/packages&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo ::set-env name=PACKAGE_PATH::${PACKAGE_PATH}&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;source &amp;lt;(curl -sL https://github.com/aem-design/aemdesign-docker/releases/latest/download/github_get_config.sh)&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo $PACKAGE_PATH&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;if [[ ! -d $PACKAGE_PATH ]]; then mkdir $PACKAGE_PATH; fi&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo PACKAGES CONTENTS $PACKAGE_PATH&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;ls -latr $PACKAGE_PATH&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;echo DOWNLOAD PACKAGES INTO ${PACKAGE_PATH}&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;./scripts/download.sh &quot;$PACKAGE_PATH/&quot; &quot;-&quot; &quot;-&quot; &quot;https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/tough-day/_jcr_content/main-pars/download-section/download-1/file.res/toughday-6.1.jar&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;./scripts/download.sh &quot;$PACKAGE_PATH/&quot; &quot;-&quot; &quot;-&quot; &quot;https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/0.9.2/toughday2-0.9.2.jar&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;./scripts/download.sh &quot;$PACKAGE_PATH/&quot; &quot;-&quot; &quot;-&quot; &quot;https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.jar&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;ls -latr $PACKAGE_PATH&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;source &amp;lt;(curl -sL https://github.com/aem-design/aemdesign-docker/releases/latest/download/github_get_version.sh)&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;build and test docker image&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;docker build --pull -t $IMAGE:$IMAGE_VERSION .&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;source &amp;lt;(curl -sL https://github.com/aem-design/aemdesign-docker/releases/latest/download/container_verify.sh)&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;(cd test &amp;amp;&amp;amp; ./run_tests.sh &quot;$IMAGE:$IMAGE_VERSION&quot;)&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;docker images&lt;/span&gt;
+          
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;login to docker registry&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;echo &quot;${{ secrets.DOCKER_PASSWORD }}&quot; | docker login ${DOCKER_REGISTRY} -u &quot;${{ secrets.DOCKER_USERNAME }}&quot; --password-stdin&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;push image version&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker push $IMAGE:$IMAGE_VERSION&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;push latest image on master&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;github.ref == 'refs/heads/master'&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;docker tag $IMAGE:$IMAGE_VERSION $IMAGE:latest&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;docker push $IMAGE:latest&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;update registry description with readme on master&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;github.ref == 'refs/heads/master'&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;docker run --rm -v $(pwd):/data/ aemdesign/dockerhub-description &quot;$DOCKER_USERNAME&quot; &quot;$DOCKER_PASSWORD&quot; &quot;$IMAGE&quot;&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;meeDamian/github-release@1.0&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${{ secrets.GITHUB_TOKEN }}&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${{ env.GITHUB_TAG }}&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${{ env.GITHUB_TAG }}&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${{ env.GIT_RELEASE_NOTES }}&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Differences are almost minor and migration follow copy-paste approach for majority of pipeline which is ideal. That’s all there is to this migration all you have to do now is commit and head to the Actions console in your repo to see your build take off 🚀 as the next stop is the moon!&lt;/p&gt;
+
+&lt;p&gt;As always checkout the code, fork, extend and contribute if you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="github" /><category term="actions" /><category term="github-actions" /><summary type="html">We are in the end game now</summary></entry><entry><title type="html">Updating Existing Docker Container Variables 💪😎👍</title><link href="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Updating Existing Docker Container Variables 💪😎👍" /><published>2019-09-19T00:37:00+00:00</published><updated>2019-09-19T00:37:00+00:00</updated><id>http://aem.design/blog/2019/09/19/updating-docker-container-variables</id><content type="html" xml:base="http://aem.design/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D">&lt;p&gt;Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.&lt;/p&gt;
 
 &lt;p&gt;As of current &lt;code class=&quot;highlighter-rouge&quot;&gt;19+&lt;/code&gt; version of docker there isn’t a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.&lt;/p&gt;
 
@@ -26,7 +289,9 @@
 
 &lt;p&gt;Running following command will load the docker config into VI and where you can proceed to update your container config:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /var/lib/docker:/var/lib/docker alpine vi &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;docker inspect &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/var/lib/docker/containers//config.v2.json'&lt;/span&gt; author65bundle&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /var/lib/docker:/var/lib/docker alpine vi &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;docker inspect &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/var/lib/docker/containers/{{.Id}}/config.v2.json'&lt;/span&gt; author65bundle&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You will see config on one line, yes this is how it is and you need to thread carefully.&lt;/p&gt;
@@ -862,21 +1127,4 @@ Doing this allow you to evaluate and test your pattens in a new environment, new
 This is a great method for improving your conventions and patterns.
 Most importantly by doing this it enables you to test if your pattern works.&lt;/p&gt;
 
-&lt;p&gt;Creating patterns should be about converting great ideas into simple pattern everyone can understand and easily follow without needing lessons in history.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">One of the biggest challenges when creating frameworks is to drive a convention that can be easily used by those who will use it. AEM is not exception, being Java based its open for interpretation and development in many ways that fit the bill, which is the beauty of software development. This does make creating frameworks a challenge as you are constantly need to evaluate and refactor any deviation to your conventions.</summary></entry><entry><title type="html">Touch UI Test</title><link href="http://aem.design/blog/2019/01/01/2018-came-and-went" rel="alternate" type="text/html" title="Touch UI Test" /><published>2019-01-01T08:23:00+00:00</published><updated>2019-01-01T08:23:00+00:00</updated><id>http://aem.design/blog/2019/01/01/2018-came-and-went</id><content type="html" xml:base="http://aem.design/blog/2019/01/01/2018-came-and-went">&lt;p&gt;2018 was just! It came and went!&lt;/p&gt;
-
-&lt;p&gt;So 1 Year on on since what has changed:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;upgrade to AEM 6.4 was transparent without any side-effects&lt;/li&gt;
-  &lt;li&gt;“so many repos” are now 4 and parent! This means quicker releases, everything has been compacted along functional need&lt;/li&gt;
-  &lt;li&gt;its all about automation testing, selenium hub grid is used for local and pipeline builds&lt;/li&gt;
-  &lt;li&gt;refactoring, refactoring, refactoring shredding all the old and adding cleaner ways of doing things&lt;/li&gt;
-  &lt;li&gt;create a simple way to allow authors to select renditions per media query (view port / breakpoint) on components&lt;/li&gt;
-  &lt;li&gt;integrated analytics DataLayer industry standard into templates&lt;/li&gt;
-  &lt;li&gt;create new way of creating tag content when translating CSS into authors language&lt;/li&gt;
-  &lt;li&gt;created a new prototype that uses (https://patternlab.io)[https://patternlab.io] as a base to demo your cool work&lt;/li&gt;
-  &lt;li&gt;released all of the docker containers to Docker Hub (https://hub.docker.com/u/aemdesign/)[https://hub.docker.com/u/aemdesign/] with pipelines straight from gitlab&lt;/li&gt;
-  &lt;li&gt;created tenant archetype that allow quickstart for tenants projects, that has tenant naming thought out including component groups and has all the tests ready to go&lt;/li&gt;
-  &lt;li&gt;updated playbooks and deployment scripts&lt;/li&gt;
-  &lt;li&gt;reconfigured version for pom files to be automated&lt;/li&gt;
-  &lt;li&gt;refactored and and added new components and added more automation tests&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">2018 was just! It came and went!</summary></entry></feed>
+&lt;p&gt;Creating patterns should be about converting great ideas into simple pattern everyone can understand and easily follow without needing lessons in history.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">One of the biggest challenges when creating frameworks is to drive a convention that can be easily used by those who will use it. AEM is not exception, being Java based its open for interpretation and development in many ways that fit the bill, which is the beauty of software development. This does make creating frameworks a challenge as you are constantly need to evaluate and refactor any deviation to your conventions.</summary></entry></feed>
