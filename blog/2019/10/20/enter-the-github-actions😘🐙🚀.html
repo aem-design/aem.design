@@ -242,7 +242,7 @@
 
 
 
-  8 minute read
+  9 minute read
 
 </p>
       
@@ -435,7 +435,8 @@
 
 <p>To get started all you need to do is make <code class="highlighter-rouge">.github/workflows/main.yml</code> file in your project with following content:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">CI</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="na">name</span><span class="pi">:</span> <span class="s">CI</span>
 
 <span class="na">on</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">push</span><span class="pi">]</span>
 
@@ -443,7 +444,7 @@
   <span class="na">build</span><span class="pi">:</span>
     <span class="na">env</span><span class="pi">:</span>
       <span class="na">GLOBAL_VAR</span><span class="pi">:</span> <span class="s">i am global</span>
-      <span class="na">SECRET_VAR</span><span class="pi">:</span> <span class="s">$</span>     <span class="c1"># set this in Github Repo -&gt; Setting -&gt; Secrets</span>
+      <span class="na">SECRET_VAR</span><span class="pi">:</span> <span class="s">${{ secrets.SECRET_VAR }}</span>     <span class="c1"># set this in Github Repo -&gt; Setting -&gt; Secrets</span>
     <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
     <span class="na">steps</span><span class="pi">:</span>
       <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v1</span>
@@ -468,16 +469,17 @@
           <span class="s">echo STEP_SET_ENV_VAR=${STEP_SET_ENV_VAR}</span>
           <span class="s">echo JOB_VAR=${JOB_VAR}</span>
         <span class="na">env</span><span class="pi">:</span>
-          <span class="na">STEP_OUTPUT_MAP</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">STEP_OUTPUT</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">STEP_SET_ENV_VAR</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">JOB_VAR</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">STEP_OUTPUT_MAP</span><span class="pi">:</span> <span class="s">${{ toJson(steps.stepwithoutputs.outputs) }}</span>
+          <span class="na">STEP_OUTPUT</span><span class="pi">:</span> <span class="s">${{ steps.stepwithoutputs.outputs.COOL_OUTPUT }}</span>
+          <span class="na">STEP_SET_ENV_VAR</span><span class="pi">:</span> <span class="s">${{ env.COOL_OUTPUT }}</span>
+          <span class="na">JOB_VAR</span><span class="pi">:</span> <span class="s">${{ env.SECRET_VAR }}</span>
       <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">meeDamian/github-release@1.0</span>
         <span class="na">with</span><span class="pi">:</span>
-          <span class="na">token</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">tag</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">name</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">body</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">token</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+          <span class="na">tag</span><span class="pi">:</span> <span class="s">${{ env.GITHUB_TAG }}</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">${{ env.GITHUB_TAG }}</span>
+          <span class="na">body</span><span class="pi">:</span> <span class="s">${{ env.GIT_RELEASE_NOTES }}</span>
+
 </code></pre></div></div>
 
 <p>Here you can see common items that you could use in your simple pipeline, its a good start for converting your pipelines.</p>
@@ -514,7 +516,8 @@
 
 <p>For better comparison here is an actual <a href="https://github.com/aem-design/docker-toughday/blob/master/.travis.yml">Travis pipeline</a>:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">language</span><span class="pi">:</span> <span class="s">java</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="na">language</span><span class="pi">:</span> <span class="s">java</span>
 
 <span class="na">if</span><span class="pi">:</span> <span class="s">tag is blank</span>
 
