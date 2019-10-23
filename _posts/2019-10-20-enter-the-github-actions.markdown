@@ -64,6 +64,7 @@ For now we have started to migrate all of our pipelines from Travis to Github Ac
 To get started all you need to do is make `.github/workflows/main.yml` file in your project with following content:
 
 ```yaml
+{% raw %}
 name: CI
 
 on: [push]
@@ -107,6 +108,7 @@ jobs:
           tag: ${{ env.GITHUB_TAG }}
           name: ${{ env.GITHUB_TAG }}
           body: ${{ env.GIT_RELEASE_NOTES }}
+{% endraw %}
 ```
 
 Here you can see common items that you could use in your simple pipeline, its a good start for converting your pipelines. 
@@ -140,6 +142,7 @@ Following is a list of resource you should use to learn about syntax before you 
 For better comparison here is an actual [Travis pipeline](https://github.com/aem-design/docker-toughday/blob/master/.travis.yml):
 
 ```yaml
+{% raw %}
 language: java
 
 if: tag is blank
@@ -205,7 +208,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-
+{% endraw %}
 ``` 
 
 Its ported version looks very similar [Gitub Actions](https://github.com/aem-design/docker-toughday/blob/master/.github/workflows/build.yml):
