@@ -1,1 +1,1 @@
-Sitemap: http://aem.design/sitemap.xml
+Sitemap: https://aem.design/sitemap.xml
