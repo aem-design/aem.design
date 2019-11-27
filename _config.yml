@@ -116,7 +116,6 @@ include:
   - _pages
   - CNAME
   - search.html
-  - .well-known
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
