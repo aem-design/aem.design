@@ -10,7 +10,7 @@ var store = [{
         "url": "https://aem.design/contributing/",
         "teaser":null},{
         "title": "License",
-        "excerpt":"AEM.Design knowledge is released under Apache 2.0 license.   Copyright (c) 2019 AEM.Design Team   You can read about Apache 2  ","categories": [],
+        "excerpt":"AEM.Design knowledge is released under Apache 2.0 license.   Copyright (c) 2020 AEM.Design Team   You can read about Apache 2  ","categories": [],
         "tags": [],
         "url": "https://aem.design/license/",
         "teaser":null},{
@@ -178,4 +178,9 @@ var store = [{
         "excerpt":"CI/CD space if going off like a bunch of emoji in a url! But one thing you can be sure is to kiss 😘 your all-enveloping 🐙 pipeline tools good bye and put on your seat belt, as the pipeline mother-ship is taking off 🚀! Travis, Gitlab, Jenkins, Azure DevOps,...","categories": ["blog"],
         "tags": ["devops","aem","docker","automation","github","actions","github-actions"],
         "url": "https://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80",
+        "teaser":null},{
+        "title": "AEM Framework for Multi-Tenant Environments.",
+        "excerpt":"Introduction AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open source framework that can accelerate projects and provide a pathway for sharing knowledge with...","categories": ["blog"],
+        "tags": ["devops","aem","docker","knowledge","sharing","multi-tenant","framework"],
+        "url": "https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments",
         "teaser":null}]

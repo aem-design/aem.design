@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2019-11-27T02:57:24+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">Enter the Github Actions 😘🐙🚀</title><link href="https://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="alternate" type="text/html" title="Enter the Github Actions 😘🐙🚀" /><published>2019-10-20T00:37:00+00:00</published><updated>2019-10-20T00:37:00+00:00</updated><id>https://aem.design/blog/2019/10/20/enter-the-github-actions</id><content type="html" xml:base="https://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-01-12T01:06:21+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+00:00</published><updated>2020-01-12T00:37:00+00:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open source framework that can accelerate projects and provide a pathway for sharing knowledge with community in a consumable production ready framework. A lot of articles detail individual knowledge fragments that at times useful on their own but do not provide a clear direction for end use. We have tried to create a consolidated reference end-to-end approach with AEM.design framework and tools.&lt;/p&gt;
+
+&lt;p&gt;This initiative aims at collating best practices and patterns that are proven to be useful on projects. It’s aim to leverage best practices not only from AEM knowledge base, but also leverage best of the best from Front End, Automation Testing, DevOps and other related enablement tech. The aim of this initiative to provide a framework that can fit into existing solution practices without mandating a particular process.&lt;/p&gt;
+
+&lt;p&gt;All of the code is located in github, Docker Hub, SonarCloud and published to Maven central.&lt;/p&gt;
+
+&lt;p&gt;Best place to start with this framework is to try out the Docker Bundle that has the framework and demo of all of the components. You can find how to get started here: https://aem.design/blog/2019/08/30/docker-aem-bundle&lt;/p&gt;
+
+&lt;p&gt;Our archetype project is aimed to generate a new tenant project that has all of the components required to run AEM implementation project. It including automation tests, site showcase, frontend code implementation and component overrides tailored to you tenant name and project.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions on particular issues you can raise issues in github for repos there are a few of them.&lt;/p&gt;
+
+&lt;p&gt;Creating and managing am environment for Multi-Tenants requires considerable upfront planning. Starting AEM project is easy and you can feel great sense of velocity early on. Although your initial velocity will make you feel comfortable, this might not last and avoiding future pitfalls is hard once you have released to production. To avoid pitfalls of the future means that you will need to be aware of some of the pitfalls you might encounter up front and this is very hard to convey and predict.&lt;/p&gt;
+
+&lt;p&gt;To protect projects from encountering technical pitfalls in the future it’s recommended to follow number of product best practices. Sheer number of best practices and patterns is overwhelming and it’s very hard for new entrants to appreciate all of the suggested practices. We found that establishing a set of goals and principles early on help to provide a project a pathway to success.&lt;/p&gt;
+
+&lt;p&gt;Technical patterns are easily avoided by leveraging frameworks that seek to embed knowledge into usable framework. Providing input into business processes is a more complicated endeavors due to the way project can be executed. From our experience teams need to aim to establish a common design language which is used to communicate requirements, and establish a efficient delivery processes that builds trust in the tools being used. This requires having open dialog at the start of the project to ensure everyone is on the same page and are willing to commit to trust automation process.&lt;/p&gt;
+
+&lt;p&gt;Following sections outline some of the elements of knowledge that should be kept in mind when establishing project for single site or multi tenant sites.&lt;/p&gt;
+
+&lt;h1 id=&quot;business-approach&quot;&gt;Business approach&lt;/h1&gt;
+
+&lt;p&gt;Be very transparent with whole team, every person needs to understand that they will all be required to login into AEM and use it, PMs and steak holders included, after all its their future digital platform. Everyone must to learn basic terminology of AEM and Design Language that will be used to describe requirements, this avoid confusion for everyone, and everyone should be encouraging peers to use correct language.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select primary Business Analyst to run project knowledge transfer, this will be you primary conduit&lt;/li&gt;
+  &lt;li&gt;Project team focus is primarily on Authoring Experience, as this what will enable authors to create the visual experiences they want&lt;/li&gt;
+  &lt;li&gt;Create a common Design Language to ensure designers and BA’s lead the conversation of explaining how designs are authored in AEM, not in some other external concepts&lt;/li&gt;
+  &lt;li&gt;Establish a religious training for all end users of AEM&lt;/li&gt;
+  &lt;li&gt;Create a showcase of you chosen components and walk everyone (including stake holders) thought it, showcase must be used for functional tests, so it’s not a throw away&lt;/li&gt;
+  &lt;li&gt;Establish a common knowledge repository for sharing knowledge while AEM project is running, use Confluence as it’s most accessible, do not treat this knowledge base as a dumping ground of notes, treat it like a knowledge book for the future. This space is for people to see what you have built not read endless meeting notes, all admin related content should not be primary focus for the space&lt;/li&gt;
+  &lt;li&gt;Establish a author training site that will be updated by Authors and BAs, this should be like any other tenant&lt;/li&gt;
+  &lt;li&gt;Delay all modification to core Authoring Experience, use YAGNI banner especially if everyone is new to AEM&lt;/li&gt;
+  &lt;li&gt;Component that appears in multiples experiences(pages) and show same data structure but different visual presentation are variant of same component.&lt;/li&gt;
+  &lt;li&gt;Focus on identifying Unique Experiences and Unique components Variants that make up those Unique Experiences.&lt;/li&gt;
+  &lt;li&gt;Ensure analytics is discussed as Definition of Ready for each component.&lt;/li&gt;
+  &lt;li&gt;Focus on content taxonomies to ensure content structure can scale from the start in DAM, Content Fragments, Experience Fragments, Tags, Forms and Site Pages. Each site should be in its own tenant folder with additional contextual segmentation that   should apply for each type of content.&lt;/li&gt;
+  &lt;li&gt;Site Content must always be in Region/Language structure with primary Country and Language as default, essentially your site must be multi languish compatible from the start.&lt;/li&gt;
+  &lt;li&gt;Do not let Information Architecture dictate site Content Architecture&lt;/li&gt;
+  &lt;li&gt;All legacy SEO ideas and practices (anything that does not talk about micro data in page and components) should be tested using Functional Tests using the Build in AEM Hobes framework, this allows authors to test their content when they create it. If it can’t be automatically tested it’s not a requirement, it’s 2020 excuses don’t apply drop that requirement if it does.&lt;/li&gt;
+  &lt;li&gt;Acceptance Criteria and Acceptance tests must be part of Definition of Ready for DEV&lt;/li&gt;
+  &lt;li&gt;Automation testing is not optional and it’s the only way to verify Definition of Ready.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;technology-approach&quot;&gt;Technology Approach&lt;/h1&gt;
+
+&lt;p&gt;For single and Multi Tenant Projects consider that each site is a “tenant” not a sling workspace tenant but more of a virtual tenant used to segregate content from each site. This additional provides a method for security policies to be applied as users create content, as well as provide clean separation of content and application code if required, especially as you are working of a single component codebase.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create a showcase with you chosen components which is maintained Developers throughout development and Testers when helping to test&lt;/li&gt;
+  &lt;li&gt;Focus on Functional Automation Testing for all components with Authoring (does dialog work), Publishing (does it interact in publish) and Screenshot (does it look right) perspectives. Automation test suit is for the team not for selected few it does not have to be pretty is need to be quick to adopt and allow testing other web services, Selenium still works.&lt;/li&gt;
+  &lt;li&gt;Leverage Docker containers to ensure you are running consistent versions of services across all environments and especially Developers desktops, see Operations/Docker project&lt;/li&gt;
+  &lt;li&gt;Run AEM with Segment and Datastore separates from the start&lt;/li&gt;
+  &lt;li&gt;Leverage external ESB tool for API dev, eg ApacheNifi, try not to write API’s in AEM, external API tools can template/translate requests into direct Sling API request.&lt;/li&gt;
+  &lt;li&gt;Offload processing to Kubernetes container farm to leverage containers.&lt;/li&gt;
+  &lt;li&gt;Use overlays for each component per each site, as you will be using multiple framework eventually, this will allow you so substitute/update components in the future.&lt;/li&gt;
+  &lt;li&gt;Segregate each individual site content into “tenant” like silos&lt;/li&gt;
+  &lt;li&gt;Ensure Pipelines for build and deploy are established as soon as git and repos are created.&lt;/li&gt;
+  &lt;li&gt;Ensure dispatchers and present for Author and Publish instances&lt;/li&gt;
+  &lt;li&gt;Ensure that Frontend code is package as a stand-alone package and Page Client Libs are used to include in Templates, see Support/Compose module.&lt;/li&gt;
+  &lt;li&gt;Leverage VLT tool to export and backup content from prod and import into Development environments as required, packages don’t work for large content farms&lt;/li&gt;
+  &lt;li&gt;Leverage Ansible to persists logic for environment configuration, see Operations/Deploy and Operations/Ansible-Roles project.&lt;/li&gt;
+  &lt;li&gt;Ensure dispatcher config is in code and in a Docker container, see Docker-Dispatcher repo&lt;/li&gt;
+  &lt;li&gt;Do not allow manual modification of services/servers via console etc follow Configuration as Code for all infrastructure and services, especially servers, preferably run Centos Atomic edition which will force Docker usage, see Operations/VM project for how to generate Centos Atomic VMs appliances.&lt;/li&gt;
+  &lt;li&gt;Leverage Content Fragments for structured content, use templated component to present that content.&lt;/li&gt;
+  &lt;li&gt;Leverage Experience Fragments for building reusable Page Sections.&lt;/li&gt;
+  &lt;li&gt;Do not build footer and header as massive components, instead create experience fragments and add them to Site Root page and inherit it thought the tree.&lt;/li&gt;
+  &lt;li&gt;Ensure Analytics content can be updated by authors&lt;/li&gt;
+  &lt;li&gt;Use Data Layer spec to output analytics content in page header&lt;/li&gt;
+  &lt;li&gt;Use Data Layer spec to manage all fields that will be output by components and use for analytics&lt;/li&gt;
+  &lt;li&gt;Do not implement any components that use any inline javascript for Analytics, not matter what.&lt;/li&gt;
+  &lt;li&gt;Ensure each component has a unique ID attribute&lt;/li&gt;
+  &lt;li&gt;Ensure each component you output is easily distinguishable from other stuff AEM adds, AEM.Design uses Boolean attribute “component”&lt;/li&gt;
+  &lt;li&gt;Use lists for re-using content for presentation, look at Generic Details and List components for reference, they provide dynamic field specific templating and expose of component content without dumping all of the content on the page. Hiding 48 out of 50 fields of a component content is poor design, output only content you need, see Component Variant and List Badge patterns.&lt;/li&gt;
+  &lt;li&gt;Separate config into separate package and use run-modes&lt;/li&gt;
+  &lt;li&gt;Separate authoring experience updates into separate package&lt;/li&gt;
+  &lt;li&gt;Use ACS commons tools and check them before you build new components.&lt;/li&gt;
+  &lt;li&gt;When using components from frameworks consider impact on authoring experience, different frameworks have different authoring possibilities, with some making authoring very Front End heavy without enabling Authors.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is a short list and can be use a starting point.&lt;/p&gt;
+
+&lt;p&gt;As always if you think of things to be added to the list let us know by leaving a comment or better yet raise an issue in the repo.&lt;/p&gt;
+
+&lt;p&gt;Share this on your favorite network if you find this useful.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="knowledge" /><category term="sharing" /><category term="multi-tenant" /><category term="framework" /><summary type="html">Notes to get you started creating a Multi-Tenant Environments on AEM</summary></entry><entry><title type="html">Enter the Github Actions 😘🐙🚀</title><link href="https://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="alternate" type="text/html" title="Enter the Github Actions 😘🐙🚀" /><published>2019-10-20T00:37:00+00:00</published><updated>2019-10-20T00:37:00+00:00</updated><id>https://aem.design/blog/2019/10/20/enter-the-github-actions</id><content type="html" xml:base="https://aem.design/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80">&lt;style&gt;
 .page__hero--overlay p, .page__hero--overlay h1{
     background-color: rgba(23,168,23, 0.6);
     max-width: fit-content !important;
@@ -1095,39 +1181,4 @@ apps
 &lt;p&gt;Considering the approach we took and the benefits that we have now attained make the migration successful!
 Further demonstrating to us that our determined efforts with AEM.Design principles can scale from “old” tech to new.
 And it is important to note that this was only possible due to the fact that we have had a strict component convention that allowed this process to occur.
-If design pattern were not maintained the rewrite of all component would have been the costly option.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). Secondary drive is that it provides absolute templating without opportunity to embed code with template code. Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance. So if you are not careful you could end up with code plaguing your template and that would break your conventions. This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.</summary></entry><entry><title type="html">Simple to Understand Easy to To Follow</title><link href="https://aem.design/blog/2019/02/02/simple-to-understand-easy-to-follow" rel="alternate" type="text/html" title="Simple to Understand Easy to To Follow" /><published>2019-02-02T08:29:00+00:00</published><updated>2019-02-02T08:29:00+00:00</updated><id>https://aem.design/blog/2019/02/02/simple-to-understand-easy-to-follow</id><content type="html" xml:base="https://aem.design/blog/2019/02/02/simple-to-understand-easy-to-follow">&lt;p&gt;One of the biggest challenges when creating frameworks is to drive a convention that can be easily used by those who will use it. 
-AEM is not exception, being Java based its open for interpretation and development in many ways that fit the bill, which is the beauty of software development.
-This does make creating frameworks a challenge as you are constantly need to evaluate and refactor any deviation to your conventions.&lt;/p&gt;
-
-&lt;p&gt;When it comes to it refactoring of codebase comes in flavours of accepting the change and rejecting the change.
-Interestingly any choice you make has impacts that are hard to understand at the time and usually manifest in the long term.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Rejecting changes means that you stand a good chance of no one using your conventions.&lt;/li&gt;
-  &lt;li&gt;Accepting any changes without consideration will result in a spaghetti monster.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is no one answer to make it all work like as its complicated to solve and predict.
-But it does mean that conventions should be created and followed and improved over time.
-Having people on your project that understand conventions and have experience doing this does help, but this is possible by every one who strives towards it.
-Less experience leads to con&lt;/p&gt;
-
-&lt;p&gt;Having generalised conventions that apply across technology changes should be your aim.
-In practice these should be derived over time by evaluating the implemented technologies and conventions that they bring.
-Throughout refactoring efforts the conventions and patters will eagerly present themselves.
-Once a pattern appears repeatable it should be generalised so that its better understood.&lt;/p&gt;
-
-&lt;p&gt;Having a pattern or a set of patterns that apply in general across your project bring number of benefits:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;it allow everyone on the team to achieve common understanding, having all team members speak the same language is essential&lt;/li&gt;
-  &lt;li&gt;its easier to identify deviation from conventions that prompt change, without conventions comparing patterns will be a challenge&lt;/li&gt;
-  &lt;li&gt;it enables a consistent experience for developers, ability to transition between projects without learning from scratch&lt;/li&gt;
-  &lt;li&gt;it provides a simplified on-boarding process for new team members, it usually takes a while to on-board to a new project and it becomes harder if the project is a spaghetti monster&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Over time reusable patterns on projects should be leveraged on new project to test their strength.
-Doing this allow you to evaluate and test your pattens in a new environment, new people and new set of requirements.
-This is a great method for improving your conventions and patterns.
-Most importantly by doing this it enables you to test if your pattern works.&lt;/p&gt;
-
-&lt;p&gt;Creating patterns should be about converting great ideas into simple pattern everyone can understand and easily follow without needing lessons in history.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">One of the biggest challenges when creating frameworks is to drive a convention that can be easily used by those who will use it. AEM is not exception, being Java based its open for interpretation and development in many ways that fit the bill, which is the beauty of software development. This does make creating frameworks a challenge as you are constantly need to evaluate and refactor any deviation to your conventions.</summary></entry></feed>
+If design pattern were not maintained the rewrite of all component would have been the costly option.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). Secondary drive is that it provides absolute templating without opportunity to embed code with template code. Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance. So if you are not careful you could end up with code plaguing your template and that would break your conventions. This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.</summary></entry></feed>
