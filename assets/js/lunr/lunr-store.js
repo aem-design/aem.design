@@ -183,4 +183,9 @@ var store = [{
         "excerpt":"Introduction AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open source framework that can accelerate projects and provide a pathway for sharing knowledge with...","categories": ["blog"],
         "tags": ["devops","aem","docker","knowledge","sharing","multi-tenant","framework"],
         "url": "https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments",
+        "teaser":null},{
+        "title": "AEM SaaS Hands On 😍🚀",
+        "excerpt":"Introduction If Github Actions was entry into End Game, latest Adobe AEM SaaS offering is the outcome of an End Game, where Adobe is the clear victor! This stealthy engineering magnificence a true example of how great experience can provide so much that words can’t describe the feeling. It’s a...","categories": ["blog"],
+        "tags": ["devops","aem","saas","knowledge","sharing","handson"],
+        "url": "https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80",
         "teaser":null}]
