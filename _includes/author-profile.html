@@ -37,7 +37,7 @@
       {% if author.uri %}
         <li>
           <a href="{{ author.uri }}" itemprop="url">
-            <i class="fa fa-fw fa-globe" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}
+            <i class="fas fa-globe" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}
           </a>
         </li>
       {% endif %}
@@ -46,7 +46,7 @@
         <li>
           <a href="mailto:{{ author.email }}">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fa fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
+            <i class="fas fa-envelope-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
           </a>
         </li>
       {% endif %}
@@ -62,7 +62,7 @@
       {% if author.twitter %}
         <li>
           <a href="https://twitter.com/{{ author.twitter }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter
+            <i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter
           </a>
         </li>
       {% endif %}
@@ -86,7 +86,7 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
           </a>
         </li>
       {% endif %}
@@ -126,7 +126,7 @@
       {% if author.github %}
         <li>
           <a href="https://github.com/{{ author.github }}" itemprop="sameAs">
-            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
           </a>
         </li>
       {% endif %}
