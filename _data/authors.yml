@@ -8,6 +8,7 @@ max@aem.design:
   avatar      : "/assets/images/profile/maxbarrass4.jpg"
   twitter     : "maxbarrass"
   linkedin    : "maxbarrass"
+  github      : "wildone"
 
 yaw@aem.design:
   name        : "Yaw Ly"
@@ -35,3 +36,11 @@ alex@aem.design:
   bio         : "Dev"
   email       : "alex@aem.design"
   avatar      : "/assets/images/profile/alex.jpg"
+
+saket.mishra.kr@gmail.com:
+  name        : "Saket Mishra"
+  bio         : "Dev"
+  linkedin    : "saket-mishra-89a14a88"
+  github      : "saketkrnph"
+  email       : "saket.mishra.kr@gmail.com"
+  avatar      : "/assets/images/profile/saket-mishra.png"
