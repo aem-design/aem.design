@@ -107,6 +107,30 @@
 <link rel="stylesheet" href="https://aem.design/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
+
+
+<script>
+    function wrap(el, wrapper) {
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll(".page__content img");
+        elements.forEach(element => {
+            var url = element.getAttribute('src');
+            var alt = element.getAttribute('alt');
+            if(url) {
+                var a = document.createElement('a');
+                a.setAttribute("href",url);
+                a.setAttribute("data-lightbox",'');
+                a.setAttribute("title",alt);
+                wrap(element, a);
+            }
+        });
+
+    });
+</script>
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
@@ -522,7 +546,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80" rel="permalink">AEM SaaS Hands On 😍🚀
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
 </a>
       
     </h2>
@@ -532,11 +556,11 @@
 
 
 
-  less than 1 minute read
+  13 minute read
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non definitive perspective!
 </p>
   </article>
 </div>
