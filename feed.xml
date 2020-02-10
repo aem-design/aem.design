@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-02-09T13:03:34+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;aside class=&quot;sidebar__right&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-02-10T01:24:47+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
     &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
@@ -16,7 +16,7 @@
       &lt;li&gt;&lt;a href=&quot;#deploy-to-dev&quot; id=&quot;markdown-toc-deploy-to-dev&quot;&gt;Deploy to Dev&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#aem-saas-pipelines-whats-missing&quot; id=&quot;markdown-toc-aem-saas-pipelines-whats-missing&quot;&gt;AEM SaaS Pipelines Whats missing&lt;/a&gt;    &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#aem-saas-pipelines-whats-missing&quot; id=&quot;markdown-toc-aem-saas-pipelines-whats-missing&quot;&gt;AEM SaaS Pipelines What’s missing&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#git-peer-review-workflow&quot; id=&quot;markdown-toc-git-peer-review-workflow&quot;&gt;Git Peer Review Workflow&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#automated-functional-testing&quot; id=&quot;markdown-toc-automated-functional-testing&quot;&gt;Automated Functional testing&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#no-git-lfs&quot; id=&quot;markdown-toc-no-git-lfs&quot;&gt;No Git LFS&lt;/a&gt;&lt;/li&gt;
@@ -33,7 +33,7 @@
 
 &lt;p&gt;If &lt;a href=&quot;/blog/2019/10/20/enter-the-github-actions&quot;&gt;Github Actions&lt;/a&gt; was entry into End Game, latest Adobe AEM SaaS offering is the outcome of an End Game in another dimension, where Adobe is the clear victor! This stealthy engineering masterpiece is a true example of how great experience can provide so much, that words can’t describe the feeling.&lt;/p&gt;
 
-&lt;p&gt;Adobes new offering it’s a true testament to engineering and a huge demonstration to all vendors in this space, on how to do things that make a difference. Not often you get a hands with a piece of SaaS software where you open the console and see something that takes your breath away. Your world is turned and you whisper to your self this can’t be true, it can’t be that easy.&lt;/p&gt;
+&lt;p&gt;Adobes new offering it’s a true testament to engineering and a huge demonstration to all vendors in this space, on how to do things that make a difference. Not often you get your hands on a piece of SaaS software where you open the console and see something that takes your breath away. Your world is turned, and you whisper to yourself this can’t be true, it can’t be that easy.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Well folk, it is!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -43,17 +43,17 @@
 
 &lt;p&gt;You can find plenty post and materials about tech behind the platform, but this post is about the Experience! We want to see show off the new Cloud Manager experience. This post should provide you with inspiration to jump onto the CI/CD experience that Adobe have gifted upon us!&lt;/p&gt;
 
-&lt;p&gt;So without any further ado lets jump straight to it.&lt;/p&gt;
+&lt;p&gt;So, without any further ado let’s jump straight to it.&lt;/p&gt;
 
 &lt;h1 id=&quot;aem-saas-author-hand-on&quot;&gt;AEM SaaS Author Hand On&lt;/h1&gt;
 
 &lt;p&gt;To start playing with your Cloud Manager experience you will need to access it thought your Adobe Experience portal, this will be provided for you by Adobe but for now you can follow our blog to get the insight and prepare you to roll-out your first project.&lt;/p&gt;
 
-&lt;p&gt;First off you need to login to Adobe Experience Platform, this will allows you not only to login into AEC but also provides SSO for all AEM instances! Which is amazing and so on SSO trend of 2020! Login screen is similar to the all of the login screens Adobe has been slowly introducing in last few years.&lt;/p&gt;
+&lt;p&gt;First off you need to login to Adobe Experience Platform, this will allow you not only to login into AEC using your Adobe account but also provides same access to all AEM instances in the Cloud Manager! Which is amazing and so on SSO trend of 2020! Login screen is similar to the all of the login screens Adobe has been slowly introducing in last few years.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/1-login.png&quot; alt=&quot;Adobe SSO Login Page&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;You can still use shared local admin accounts(you get one you share with Adobe) but its not something you should do in AEC and at all, for many painful reasons.&lt;/p&gt;
+&lt;p&gt;You can still use shared local admin accounts (you get one you share with Adobe) but it’s not something you should do in AEC and at all, for many painful reasons.&lt;/p&gt;
 
 &lt;p&gt;Once you have logged in you will be redirected to the AEC dashboard.&lt;/p&gt;
 
@@ -67,17 +67,17 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/4-aec-program-console.png&quot; alt=&quot;AEC - Cloud Manager - Program Overview &quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This console is your command center for your environments and associated pipelines. From here you can control your environments, download logs, create and action pipelines. From now on this is the engine of your project!&lt;/p&gt;
+&lt;p&gt;This console is your command centre for your environments and associated pipelines. From here you can control your environments, download logs, create and action pipelines. From now on this is the engine of your project!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/5-aec-program-console-manage.png&quot; alt=&quot;AEC - Cloud Manager - Environments&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;First thing you will notice is the large banner across the top, this is you production status panel, it will report to you how your Production pipeline is going.&lt;/p&gt;
+&lt;p&gt;First thing you will notice is the large banner across the top, this is your production status panel, it will report to you how your Production pipeline is going.&lt;/p&gt;
 
 &lt;p&gt;Just under that you will see two sections Environments and Pipelines.&lt;/p&gt;
 
 &lt;h2 id=&quot;environments&quot;&gt;Environments&lt;/h2&gt;
 
-&lt;p&gt;Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (&lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt;) revealing a simple menu with only but primary experiences you are looking for. Additionally when you click the Details button in this section you will be taken to a details screen that will show you&lt;/p&gt;
+&lt;p&gt;Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (&lt;code class=&quot;highlighter-rouge&quot;&gt;...&lt;/code&gt;) revealing a simple menu with only but primary experiences you are looking for. Additionally, when you click the Details button in this section you will be taken to a details screen that will show you&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/4-aec-program-console-environments-details.png&quot; alt=&quot;AEC - Cloud Manager - Environments Details&quot; /&gt;&lt;/p&gt;
 
@@ -89,20 +89,20 @@
 
 &lt;p&gt;Although environments will be your initial focus it will very quickly switch to the Pipelines which you will spend most of your time watching. 😍&lt;/p&gt;
 
-&lt;p&gt;So lets deep dive on the pipeline and what we can decipher from its logs.&lt;/p&gt;
+&lt;p&gt;So, let’s deep dive on the pipeline and what we can decipher from it’s logs.&lt;/p&gt;
 
 &lt;h1 id=&quot;aem-saas-pipelines-breakdown&quot;&gt;AEM SaaS Pipelines Breakdown&lt;/h1&gt;
 
 &lt;p&gt;Adobe pipeline offer is simple, it provides a dream pipeline process where you start with Adobe hosted Git Repo and fork into Quality or Deploy pipeline process.&lt;/p&gt;
 
-&lt;p&gt;This is a simple methodology and it seem to work as it save a bunch of time on a project. All the team need to do is just get their code into the repo and everything is done for them, that has not existed with this ease until now.&lt;/p&gt;
+&lt;p&gt;This is a simple methodology and it seem to work as it saves a bunch of time on a project. All the team need to do is just get their code into the repo and everything is done for them, that has not existed with this ease until now.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/7-aec-program-non-prod-pipeline-execution-complete.png&quot; alt=&quot;AEM Saas Program Console&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can tell from the image the pipeline is divided into following stages&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Validation - initial verify of you repo?&lt;/li&gt;
+  &lt;li&gt;Validation - initial verify of your repo?&lt;/li&gt;
   &lt;li&gt;Build &amp;amp; Unit Testing - maven build and test&lt;/li&gt;
   &lt;li&gt;Code Scanning - SonarQube evaluation&lt;/li&gt;
   &lt;li&gt;Build Images - Docker and Sling app build process&lt;/li&gt;
@@ -111,10 +111,10 @@
 
 &lt;p&gt;This is similar process for PROD but with extra testing and approval steps.&lt;/p&gt;
 
-&lt;p&gt;As you can see the Non-Prod Deploy pipeline breakdown is simple so now lets look what is happening under covers, lets talk about notable things that can be observed from the logs.&lt;/p&gt;
+&lt;p&gt;As you can see the Non-Prod Deploy pipeline breakdown is simple so now let’s look what is happening under covers, let’s talk about notable things that can be observed from the logs.&lt;/p&gt;
 
 &lt;h2 id=&quot;validation&quot;&gt;Validation&lt;/h2&gt;
-&lt;p&gt;No logs available for this but “Your Pipeline has been verified against a set of sanity checks.” could mean a lot of things, but it runs very fast so guessing its aim is just to check you have a git repo with valid pom.xml that could be compiled, that could be a good start.&lt;/p&gt;
+&lt;p&gt;No logs available for this but “Your Pipeline has been verified against a set of sanity checks.” could mean a lot of things, but it runs very fast so guessing it’s aim is just to check you have a Git repo with valid pom.xml that could be compiled, that could be a good start.&lt;/p&gt;
 
 &lt;p&gt;This step takes about 5min to run from our tests.&lt;/p&gt;
 
@@ -122,11 +122,11 @@
 
 &lt;p&gt;In “build_maven_build.log” you can see &lt;code class=&quot;highlighter-rouge&quot;&gt;[BUILD] Running maven build command(s)&lt;/code&gt; line and judging by what happens after that simple &lt;code class=&quot;highlighter-rouge&quot;&gt;mvn package&lt;/code&gt; command is used as it compiles, tests and packages all modules in you project.&lt;/p&gt;
 
-&lt;p&gt;This step runs for about 5min and it would depend on your package and test content. Its not clear from the logs if the artifacts are cached at this step or after code scan.&lt;/p&gt;
+&lt;p&gt;This step runs for about 5min and it would depend on your package and test content. It’s not clear from the logs if the artifacts are cached at this step or after code scan.&lt;/p&gt;
 
 &lt;h2 id=&quot;code-scanning&quot;&gt;Code Scanning&lt;/h2&gt;
 
-&lt;p&gt;This is where magic is starting to come into play. First of you get a nice review summary screen that shows you what the damage of your latest code cram, and its cool way of summarising underlying tools!&lt;/p&gt;
+&lt;p&gt;This is where magic is starting to come into play. First of you get a nice review summary screen that shows you what the damage of your latest code cram, and it’s cool way of summarising underlying tools!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/7-aec-program-non-prod-pipeline-execution-complete-codescan.png&quot; alt=&quot;AEM Saas Pipleine CodeScan Result&quot; /&gt;&lt;/p&gt;
 
@@ -231,65 +231,65 @@
 
 &lt;h2 id=&quot;build-images&quot;&gt;Build Images&lt;/h2&gt;
 
-&lt;p&gt;This phase is responsible for generating two brand new Docker images that has all of you new code embedded into it. First image will contain all of your project contents and second image will be a final merged version of your project with latest AEM base image.&lt;/p&gt;
+&lt;p&gt;This phase is responsible for generating two brand new Docker images that has all of your new code embedded into it. First image will contain all of your project contents and second image will be a final merged version of your project with latest AEM base image.&lt;/p&gt;
 
 &lt;p&gt;Essentially process builds a custom CRX-Quickstart with your features(converted packages) embedded into it from the start, this does mean that you will not be able to download or delete the packages using CRX/DE and with added benefit of separating these code package from actual content in your repository.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/11-aem-saas-crxde-packages.png&quot; alt=&quot;AEM Saas CRX/DE Packages&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The logs show standard Docker build process with bunch of parameters being passed to the Docker build process. Namely the build process relies on Packages that were build in previous steps these are passed as a URL list which are downloaded and converted to &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-feature&quot;&gt;Sling Features&lt;/a&gt; using tool similar to &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-feature-cpconverter&quot;&gt;sling-org-apache-sling-feature-cpconverter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The logs show standard Docker build process with bunch of parameters being passed to the Docker build process. Namely the build process relies on Packages that were built in previous steps these are passed as a URL list which are downloaded and converted to &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-feature&quot;&gt;Sling Features&lt;/a&gt; using tool similar to &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-feature-cpconverter&quot;&gt;sling-org-apache-sling-feature-cpconverter&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The process also creates a list of packages that are have content to be installed into repository, this list is used in deploy step.&lt;/p&gt;
 
-&lt;p&gt;All the packages once converted get store into &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/features/generated-author&lt;/code&gt; with relevant JSON files describing features in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/features/generated/001_sew-aem-common.json&lt;/code&gt;. After this a maven build process is executed to compile your features into latest version (at the time of writing 6.6.0-V17414) of AEM Quickstart. Adobe has indicated that they are moving towards daily releases so this means that this process will pickup latest version of AEM when its available.&lt;/p&gt;
+&lt;p&gt;All the packages once converted get store into &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/features/generated-author&lt;/code&gt; with relevant JSON files describing features in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/features/generated/001_sew-aem-common.json&lt;/code&gt;. After this a maven build process is executed to compile your features into latest version (at the time of writing 6.6.0-V17414) of AEM Quickstart. Adobe has indicated that they are moving towards daily releases so this means that this process will pick up latest version of AEM when it’s available.&lt;/p&gt;
 
-&lt;p&gt;After this conversion and merger of AEM sling features, AEM image is started as container to initialise its segment store. Once the instance is initialise its stopped and Apache Jackrabbit Oak maintenance is executed, first checkpoint then compact. Once this is done both docker images are uploaded to Adobes Docker Image Repository. And this same process repeats for Publish images changing runmode=publish in the process.  At the end of this process which takes around 10-15 min to run you end up with Author and Publish images sizing at 4GB each.&lt;/p&gt;
+&lt;p&gt;After this conversion and merger of AEM sling features, AEM image is started as container to initialise it’s segment store. Once the instance is initialising it’s stopped and Apache Jackrabbit Oak maintenance is executed, first checkpoint then compact. Once this is done both docker images are uploaded to Adobes Docker Image Repository. And this same process repeats for Publish images changing runmode=publish in the process.  At the end of this process which takes around 10-15 min to run you end up with Author and Publish images sizing at 4GB each.&lt;/p&gt;
 
 &lt;h2 id=&quot;deploy-to-dev&quot;&gt;Deploy to Dev&lt;/h2&gt;
 
-&lt;p&gt;Deploy phase starts with downloading content packages that were isolated in previous phase. Followed by starting and waiting for Author instance, at which is tries to install downloaded packages into the instance, and stop the instance on completion.&lt;/p&gt;
+&lt;p&gt;Deploy phase starts with downloading content packages that were isolated in previous phase. Followed by starting and waiting for Author instance, at which is tries to install downloaded packages into the instance and stop the instance on completion.&lt;/p&gt;
 
 &lt;p&gt;After this next process start the author and runs a bunch of bash scripts, that enable features, nodestore, blobstore, logging, set admin password validate and link license key. After this AEM is started once again and once ready is stopped and Oak Indexes are regenerated.&lt;/p&gt;
 
 &lt;p&gt;After this 10+ min step that instance is started again and marked as available for use, which is not recoded in logs and must be an extra step outside of the pipeline.&lt;/p&gt;
 
-&lt;p&gt;As you can see this is straight forward pipeline that just works. Lets discuss the obvious question that is at the top our mind right about now. Whats missing?&lt;/p&gt;
+&lt;p&gt;As you can see this is straight forward pipeline that just works. Lets discuss the obvious question that is at the top our mind right about now. What’s missing?&lt;/p&gt;
 
-&lt;h1 id=&quot;aem-saas-pipelines-whats-missing&quot;&gt;AEM SaaS Pipelines Whats missing&lt;/h1&gt;
+&lt;h1 id=&quot;aem-saas-pipelines-whats-missing&quot;&gt;AEM SaaS Pipelines What’s missing&lt;/h1&gt;
 
 &lt;p&gt;Well as this is hosted on AEM there will be a few CI/CD limitations. Limitations are good as they provide less distraction and an opportunity to improve. Here are the things that we find missing so far, they are not deal breakers but good to keep on the back of your mind.&lt;/p&gt;
 
 &lt;h2 id=&quot;git-peer-review-workflow&quot;&gt;Git Peer Review Workflow&lt;/h2&gt;
 
-&lt;p&gt;Adobe Git is only a url to which you push your code, these days all development should revolve around Pull Request Approval process. Covering benefits of this is not required as they are covered in great depth in many articles.&lt;/p&gt;
+&lt;p&gt;Adobe Git is only a URL to which you push your code, these days all development should revolve around Pull Request Approval process. Covering benefits of this is not required as they are covered in great depth in many articles.&lt;/p&gt;
 
 &lt;p&gt;To enable this process to happen on your projects you will need to use external Git repo and manage code reviews there before you publish this final code into Adobe Git.&lt;/p&gt;
 
-&lt;p&gt;This is a small inconvenience and its readily fixed seeing as all companies these days have a form of Git and in cases where that’s not the case, Github, Bitbucket and Gitlab all support this process for free. Additionally these tools have built in pipeline tools that will help you to push code to Adobe Git.&lt;/p&gt;
+&lt;p&gt;This is a small inconvenience and it’s readily fixed seeing as all companies these days have a form of Git and in cases where that’s not the case, GitHub, Bitbucket and Gitlab all support this process for free. Additionally, these tools have built in pipeline tools that will help you to push code to Adobe Git.&lt;/p&gt;
 
 &lt;h2 id=&quot;automated-functional-testing&quot;&gt;Automated Functional testing&lt;/h2&gt;
 
-&lt;p&gt;Screenshot testing using Selenium or other testing tools is not in and you would need to cater for that your selves. Most obvious reason for this as there is no one way of doing this and everyone does what they need for their situation.&lt;/p&gt;
+&lt;p&gt;Screenshot testing using Selenium or other testing tools is not in and you would need to cater for that yourselves. Most obvious reason for this as there is no one way of doing this and everyone does what they need for their situation.&lt;/p&gt;
 
-&lt;p&gt;Additionally current Deploy pipelines are fixed to a specific flow which you can not change. This means that in cases where you need to do automated functional testing you would need to do this using external pipeline.&lt;/p&gt;
+&lt;p&gt;Additionally, current Deploy pipelines are fixed to a specific flow which you cannot change. This means that in cases where you need to do automated functional testing you would need to do this using external pipeline.&lt;/p&gt;
 
-&lt;p&gt;Potentially you could just run your automation test tool of choice manually against a Dev instance in the Adobe environment. But in cases where you would like this to be automated you would have follow another approach.&lt;/p&gt;
+&lt;p&gt;Potentially you could just run your automation test tool of choice manually against a Dev instance in the Adobe environment. But in cases where you would like this to be automated you would have followed another approach.&lt;/p&gt;
 
-&lt;p&gt;One approach could be is to still have external Git repo and a pipeline that could build and test code and on success push it to Adobe Git for release to Dev cycle. This would be an ok mechanism as you could do this free on Github using containers see &lt;a href=&quot;https://aem-design.github.io/aemdesign-aem-support-output/&quot;&gt;Exhibit 1&lt;/a&gt; that runs in Github Actions pipeline. Plus you would get PR ability.&lt;/p&gt;
+&lt;p&gt;One approach could be is to still have external Git repo and a pipeline that could build and test code and on success push it to Adobe Git for release to Dev cycle. This would be an ok mechanism as you could do this free on GitHub using containers see &lt;a href=&quot;https://aem-design.github.io/aemdesign-aem-support-output/&quot;&gt;Exhibit 1&lt;/a&gt; that runs in GitHub Actions pipeline. Plus, you would get PR ability.&lt;/p&gt;
 
 &lt;h2 id=&quot;no-git-lfs&quot;&gt;No Git LFS&lt;/h2&gt;
 
-&lt;p&gt;If you are using git lfs you going to need to revert to plain git as there is not Git Lfs in Adobe’s Git and you will end up publishing pointers to your images into AEM.&lt;/p&gt;
+&lt;p&gt;If you are using Git Lfs you going to need to revert to plain git as there is not Git Lfs in Adobe’s Git and you will end up publishing pointers to your images into AEM.&lt;/p&gt;
 
 &lt;h2 id=&quot;no-felix-console&quot;&gt;No Felix Console&lt;/h2&gt;
 
-&lt;p&gt;There is not felix console, but there is a brand new custom Developers Console that provides very limited tools that you might use.&lt;/p&gt;
+&lt;p&gt;There is no Felix Console, but there is a brand-new custom Developers Console that provides very limited tools that you might use.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/adobe-aec/12-developer-console-status.png&quot; alt=&quot;AEM New Developer Console&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Standard Felix console does have a lot of features and some can cause a few issues so it’s not surprise its not available and have been replaced with a tool that allows you download that for review.&lt;/p&gt;
+&lt;p&gt;Standard Felix console does have a lot of features and some can cause a few issues so it’s no surprise it’s not available and have been replaced with a tool that allows you download that for review.&lt;/p&gt;
 
-&lt;p&gt;Here are some of the available screens, Status screen will be your main goto console to download content of some frequently used Felix console.&lt;/p&gt;
+&lt;p&gt;Here are some of the available screens, Status screen will be your main go-to console to download content of some frequently used Felix console.&lt;/p&gt;
 
 &lt;style&gt;
     .image-gallery {overflow: auto; margin-left: -1%!important;}
@@ -320,17 +320,17 @@
 
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 
-&lt;p&gt;As this is an Adobe’s work in progress and the masterpiece is not finished yet, its expected that new features will be added as adoption grows.&lt;/p&gt;
+&lt;p&gt;As this is an Adobe’s work in progress and the masterpiece is not finished yet, it’s expected that new features will be added as adoption grows.&lt;/p&gt;
 
-&lt;p&gt;It will not take you long to get used to all the options and you will soon longing for this simplicity in everything. Alternatives experiences to this are far more complicated and although they are fun to create they can divert your attention and that you need not to do any more!&lt;/p&gt;
+&lt;p&gt;It will not take you long to get used to all the options and you will soon be longing for this simplicity in everything. Alternatives experiences to this are far more complicated and although they are fun to create, they can divert your attention and that you need not to do anymore!&lt;/p&gt;
 
-&lt;p&gt;From development perspective there are a lot of features that you will not see migrated which is a good thing, as Adobe’s engineers have a good handle on what is used and its usefulness beyond just being there part of a legacy.&lt;/p&gt;
+&lt;p&gt;From development perspective there are a lot of features that you will not see migrated which is a good thing, as Adobe’s engineers have a good handle on what is used and it’s usefulness beyond just being there part of a legacy.&lt;/p&gt;
 
-&lt;p&gt;So we hope you have had just enough content to give you a quick overview and excite you to jump on board.&lt;/p&gt;
+&lt;p&gt;So, we hope you have had just enough content to give you a quick overview and excite you to jump on board.&lt;/p&gt;
 
-&lt;p&gt;There is a whole array of documentation available at your favorite site in the &lt;a href=&quot;https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html&quot;&gt;Experience Manager Cloud Manager Help&lt;/a&gt; section, explore the new capability that is at your disposal and review official docs if you get stuck.&lt;/p&gt;
+&lt;p&gt;There is a whole array of documentation available at your favourite site in the &lt;a href=&quot;https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html&quot;&gt;Experience Manager Cloud Manager Help&lt;/a&gt; section, explore the new capability that is at your disposal and review official docs if you get stuck.&lt;/p&gt;
 
-&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non definitive perspective!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+00:00</published><updated>2020-01-12T00:37:00+00:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+00:00</published><updated>2020-01-12T00:37:00+00:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open source framework that can accelerate projects and provide a pathway for sharing knowledge with community in a consumable production ready framework. A lot of articles detail individual knowledge fragments that at times useful on their own but do not provide a clear direction for end use. We have tried to create a consolidated reference end-to-end approach with AEM.design framework and tools.&lt;/p&gt;
 
