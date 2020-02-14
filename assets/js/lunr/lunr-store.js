@@ -65,7 +65,7 @@ var store = [{
         "url": "https://aem.design/manifesto/delivery/",
         "teaser":null},{
         "title": "Project Guide",
-        "excerpt":"On This Page Project Documentation Component Specification Project Artifacts Naming Convention Project Archetype Project Concept to Creation Knowledge Flow Map Evolution of Artifacts Development Flow Project Documentation Important principle on project is to understand why you are creating content, primary driver for creating must be for reuse by someone else...","categories": [],
+        "excerpt":"On This Page Project Documentation Component Specification Project Archetype Project Concept to Creation Knowledge Flow Map Evolution of Artifacts Development Flow Project Documentation Important principle on project is to understand why you are creating content, primary driver for creating must be for reuse by someone else on the project. It’s...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/project/",
         "teaser":null},{

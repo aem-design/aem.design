@@ -50,7 +50,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-02-14T05:44:14+00:00">
+  <meta property="article:published_time" content="2020-02-14T12:54:05+00:00">
 
 
 
@@ -505,12 +505,12 @@
                 <h1 class="page__title" itemprop="headline">Conventions
 </h1>
                 
-                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+                <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
 
 
 
 
-  10 minute read
+  12 minute read
 
 </p>
                 
@@ -538,6 +538,10 @@
   <li><a href="#dialog-conventions" id="markdown-toc-dialog-conventions">Dialog Conventions</a>    <ul>
       <li><a href="#dialog-layout" id="markdown-toc-dialog-layout">Dialog Layout</a></li>
       <li><a href="#component-artifacts-alignment" id="markdown-toc-component-artifacts-alignment">Component Artifacts Alignment</a></li>
+    </ul>
+  </li>
+  <li><a href="#using-tags-for-styles" id="markdown-toc-using-tags-for-styles">Using Tags for Styles</a>    <ul>
+      <li><a href="#style-tags-content-generator" id="markdown-toc-style-tags-content-generator">Style Tags Content Generator</a></li>
     </ul>
   </li>
 </ul>
@@ -1156,6 +1160,125 @@
 
 <p><img src="/assets/images/diagrams/folder-naming.png" alt="Component Artifacts Alignment" /></p>
 
+<h1 id="using-tags-for-styles">Using Tags for Styles</h1>
+
+<p>One of the main objectives of AEM.Design is to provide a consistent way of representing Design Languages as a taxonomy of Tags. This provide a mechanism to create Tags taxonomy by designers and then applied to components by authors.</p>
+
+<p>Following image demonstrates shared Style dialog that is applied to all components.</p>
+
+<p><img src="/assets/images/dialogs/shared-dialog-styles.png" alt="Shared Dialog - Styles" /></p>
+
+<p>Following table describes each available option. Each of the options is defined in a way to be able to easily apply to Design Systems and so that it can be easily understood by Authors.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ID</td>
+      <td>text</td>
+      <td>generates an Id attribute for a component</td>
+    </tr>
+    <tr>
+      <td>Theme</td>
+      <td>tags</td>
+      <td>used to apply style one or combination of nested components</td>
+    </tr>
+    <tr>
+      <td>Modifiers</td>
+      <td>tags</td>
+      <td>used to apply design system tweaks to components</td>
+    </tr>
+    <tr>
+      <td>Module</td>
+      <td>tags</td>
+      <td>used to apply behaviour to component</td>
+    </tr>
+    <tr>
+      <td>Chevron</td>
+      <td>tags</td>
+      <td>used to apply Chevron to a component</td>
+    </tr>
+    <tr>
+      <td>Icon</td>
+      <td>tags</td>
+      <td>used to apply Icon to the component</td>
+    </tr>
+    <tr>
+      <td>Boolean Attributes</td>
+      <td>tags</td>
+      <td>used to apply metadata attributes</td>
+    </tr>
+    <tr>
+      <td>Positions</td>
+      <td>text</td>
+      <td>used by Modules for placement of component in parent eg Tooltips</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>text</td>
+      <td>used to add width and height attributes to component</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All text fields provide direct input that is added to component wrapper. All Tag fields allow selecting multiple tags for each filed which enables flexibility when applying styles.</p>
+
+<p>Technically a component wrapper tag is trying to create following footprint and it automated by using shared dialogs. This is reference output of share libraries to provide a consistent wrapper for all components</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">component</span> <span class="na">id=</span><span class="s">"${componentProperties.id}"</span> 
+    <span class="na">class=</span><span class="s">"${componentProperties.name} ${componentProperties.theme} ${componentProperties.modifier} ${componentProperties.chevron} ${componentProperties.icon}"</span>
+    <span class="na">style=</span><span class="s">"width:${componentProperties.width};height:${componentProperties.height};"</span> 
+    <span class="na">x=</span><span class="s">"${componentProperties.x}"</span> <span class="na">y=</span><span class="s">"${componentProperties.y}"</span>
+    <span class="err">${</span><span class="na">componentProperties</span><span class="err">.</span><span class="na">booleanAttributes</span><span class="err">}</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Furthermore using Tags allows storing Style related content in a central place which can be update by authors, using tags also has a benefit of translations and ability to change the actual value of tag class by updating tag entry.</p>
+
+<p><img src="/assets/images/dialogs/tag-authoring-update.png" alt="Tags Authoring" /></p>
+
+<p>These updates to tag authoring UI enable updating and adding values that correspond to CSS names in authoring UI.</p>
+
+<h2 id="style-tags-content-generator">Style Tags Content Generator</h2>
+
+<p>Compose project contains all of the CSS, JS and Tag YAML files that describe design being developed. This subproject is compiled and installed into AEM as a standalone package. Tag YAML files is used to specify design language mapping to CSS classes and during compiling Tags content is generated.</p>
+
+<p>A custom Content Generator is used to generate Tags from YAML file similar to flowing</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">content/_cq_tags/aemdesign/component-style-icon</span><span class="pi">:</span> <span class="nl">&amp;component-style-icon</span>
+  <span class="s">feed/atom</span><span class="pi">:</span>
+    <span class="na">flat</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">prefix</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fa</span><span class="nv"> </span><span class="s">fa-rss'</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Atom'</span>
+
+  <span class="s">feed/rss</span><span class="pi">:</span>
+    <span class="na">flat</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">prefix</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fa</span><span class="nv"> </span><span class="s">fa-rss'</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">RSS'</span>
+
+  <span class="na">social</span><span class="pi">:</span>
+    <span class="na">prefixes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">facebook</span>
+      <span class="pi">-</span> <span class="s">facebook-f</span>
+      <span class="pi">-</span> <span class="s">instagram</span>
+      <span class="pi">-</span> <span class="s">linkedin</span>
+      <span class="pi">-</span> <span class="s">linkedin-in</span>
+      <span class="pi">-</span> <span class="s">pinterest-p</span>
+      <span class="pi">-</span> <span class="s">tumblr</span>
+      <span class="pi">-</span> <span class="s">tumblr-square</span>
+      <span class="pi">-</span> <span class="s">twitter</span>
+      <span class="pi">-</span> <span class="s">youtube</span>
+    <span class="na">valueFormat</span><span class="pi">:</span> <span class="s">fab fa-%%prefix%%</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">%%prefix_normalised%%'</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/aem-design/aemdesign-aem-support/blob/master/aemdesign-aem-compose/content-generator/config/core/">Reference Tag YAML files</a> can be found in your Componse project and will be located in the Compose <code class="highlighter-rouge">content-generator/config/core</code> folder if you have generated using the <a href="https://github.com/aem-design/aemdesign-archetype">AEM.Design Archetype</a>.</p>
+
                 
             </section>
 
@@ -1227,7 +1350,7 @@
 
 
                 
-                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-14T05:44:14+00:00">February 14, 2020</time></p>
+                <p class="page__date"><strong><i class="fab fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-14T12:54:05+00:00">February 14, 2020</time></p>
                 
             </footer>
 
