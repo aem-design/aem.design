@@ -10,8 +10,6 @@ redirect_from:
 
 {% include toc_sticky.html %}
 
-## Mobile First - Responsive
-
 ## Components
 
 Components are the basic building blocks in AEM. When designing components two aspects must be considered, experience and presentation. Experience will help to understand out how the component is used by authors, how it is linked to content within CMS and how it will be used by the end user. Presentation will help to understand the presentation of the component in different content contexts (on its own, in admin view, in a list), its integration into front end frameworks and its indirect interaction with other components (on same page, across pages, across sessions).
@@ -59,25 +57,15 @@ It's important that each component is understood from its CMS perspective, this 
 Here are initial list of CMS Functional Groups for components:
 
 * Content - primary components used to store authored content, content from these components is used by other components for display
-
 * Layout - provide layout ability, grouping and structuring of content, contain layout and style related content
-
 * List - find content and show data in listing, contain layout and style related content
-
 * Details - used to create and display custom metadata for different page types
-
 * Widgets - used to provide client-side functionality, integrating 3rd party services
-
 * Commerce - used for eComponents, shopping carts, checkouts, product listing etc
-
 * Common - used for shared components that are available to authors
-
 * Forms - used to contain all the components that are used in forms
-
 * Template - used to store all the available Template components that contain HTML page structures
-
 * Media - Assets related component, galleries, asset lists, videos etc
-
 * Workflow - steps that appear in workflow editor
 
 NOTE: Adding new items to this list should be communicated and designed thoroughly, as these groups reflect and relate to CMS functions
@@ -87,13 +75,9 @@ NOTE: Adding new items to this list should be communicated and designed thorough
 [Apache Sling](http://sling.apache.org/) is at the core of AEM, it enables all the authoring and content serving functions. Here is the high level overview of the framework:
 
 * REST based web framework
-
 * Content-driven, using a JCR content repository
-
 * Powered by OSGi
-
 * Scripting inside, multiple languages (JSP, server-side javascript, Scala, etc.)
-
 * Apache Open Source project
 
 Sling selectors should be used to pass parameters specific to rendering and not content filtering. ([reference](http://docs.adobe.com/docs/en/cq/current/developing/the_basics.html))
@@ -101,7 +85,6 @@ Sling selectors should be used to pass parameters specific to rendering and not 
 If selectors are used for content filtering, then you are allowing unlimited number of URLs for a particular piece of content. This opens up opportunity for DDOS attacks in two ways:
 
 * Attackers can flooding the Publishers with content requests using bogus selector values, making the publishers unable to serve legitimate requests.
-
 * Attackers can overload the Dispatchers’ filesystem with cached files generated from bogus selector requests.
 
 ## Content Modelling
@@ -110,109 +93,60 @@ At best content authored should be located either below current page being autho
 
 ### Content Segmentation
 
-<table>
-  <tr>
-    <td>Pattern</td>
-    <td>Description</td>
-    <td>Examples</td>
-  </tr>
-  <tr>
-    <td>By Site</td>
-    <td>Content should be segregated by sites first, this allows simple management and can be easily secured</td>
-    <td>/content/site/..
-/content/site-showcase/..
-/content/dam/site/..
-/content/projects/site/..</td>
-  </tr>
-  <tr>
-    <td>By Language</td>
-    <td>Content should be segregated into Language Locale subfolder so that it can be translated into appropriate language</td>
-    <td>/content/site/en/..
-/content/site/ru/..</td>
-  </tr>
-  <tr>
-    <td>By Date Range</td>
-    <td>Any content that is generated over time and has a long life should be segregated into date range Hierarchy YYYY/MM/DD. Day is optional and should be omitted if no more than 200 assets are added per day, if more than 200 items required then additional segmentation should be used, either HH or functional grouping, which segments content in an even manner</td>
-    <td>/content/site/en/news/{year}/{month}/title
-/content/site/en/news/{yyyy}/{mm}/{dd}/title</td>
-  </tr>
-  <tr>
-    <td>By Functional Group</td>
-    <td>Content at any level should be grouped into functional groups that make sense to the Authors when searching content manually. eg. Banners, Advertising, Posters, Portraits</td>
-    <td>/content/dam/site/assets/accounts/..
-/content/dam/site/assets/designers/..</td>
-  </tr>
-  <tr>
-    <td>By Content Collection</td>
-    <td>Where possible when Assets belong to a group/set/collection they should be segregated into Collections, for example uploading a set of images that will be used in a Photo Gallery they should be placed into a folder describing the Collection</td>
-    <td>/content/dam/site/galleries/collection/..
-/content/dam/site/videos/collection/..</td>
-  </tr>
-  <tr>
-    <td>Content Metadata</td>
-    <td>Content must have at least a legible Title, Description and Tags assigned when being added</td>
-    <td>/content/site/en/specials {title: Specials }
-/content/site/en/corporate {title: Corporate}</td>
-  </tr>
-  <tr>
-    <td>Content Tagging</td>
-    <td>Content must be tagged to describe its nature, this helps in ability for Authors to find this content. One must not rely on content structure to find content, free text search should be considered first</td>
-    <td>/content/site/en/specials {tag: Products}
-/content/site/en/corporate {tag: Corporate}</td>
-  </tr>
-</table>
+Following is a list of types of path segmentation's that should be applied when creating content architectures in a CMS. 
+
+| Pattern               | Description                                                                                                                                                                                                                                                                                                                                                        | Examples                                                                                   |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| By Site               | Content should be segregated by sites first, this allows simple management and can be easily secured                                                                                                                                                                                                                                                               | /content/site/.. <br>/content/site-showcase/.. <br>/content/dam/site/.. <br>/content/projects/site/..  |
+| By Language           | Content should be segregated into Language Locale subfolder so that it can be translated into appropriate language                                                                                                                                                                                                                                                 | /content/site/en/.. <br>/content/site/ru/..                                                    |
+| By Date Range         | Any content that is generated over time and has a long life should be segregated into date range Hierarchy YYYY/MM/DD. Day is optional and should be omitted if no more than 200 assets are added per day, if more than 200 items required then additional segmentation should be used, either HH or functional grouping, which segments content in an even manner | /content/site/en/news/{year}/{month}/title <br>/content/site/en/news/{yyyy}/{mm}/{dd}/title    |
+| By Functional Group   | Content at any level should be grouped into functional groups that make sense to the Authors when searching content manually. eg. Banners, Advertising, Posters, Portraits                                                                                                                                                                                         | /content/dam/site/assets/accounts/.. <br>/content/dam/site/assets/designers/..                 |
+| By Content Collection | Where possible when Assets belong to a group/set/collection they should be segregated into Collections, for example uploading a set of images that will be used in a Photo Gallery they should be placed into a folder describing the Collection                                                                                                                   | /content/dam/site/galleries/collection/.. <br>/content/dam/site/videos/collection/..           |
+| Content Metadata      | Content must have at least a legible Title, Description and Tags assigned when being added                                                                                                                                                                                                                                                                         | /content/site/en/specials {title: Specials } <br>/content/site/en/corporate {title: Corporate} |
+| Content Tagging       | Content must be tagged to describe its nature, this helps in ability for Authors to find this content. One must not rely on content structure to find content, free text search should be considered first                                                                                                                                                         | /content/site/en/specials {tag: Products} <br>/content/site/en/corporate {tag: Corporate}      |
 
 
 ### Segmentation Reference
 
 #### Pages
 
+Sample hierarchy for Page tree
+
 1. Content Root
-
     1. Site Root
-
         1. Language
-
             1. Section
-
                 1. Sub-Section
-
                     1. Content
-
                         1. Sub Content
-
                             1. ...n
 
 #### Assets
 
+Sample hierarchy for Assets tree
+
 1. Content Root
-
     1. Site Root
-
         1. Language
-
             1. Section
-
                 1. Category
-
                     1. Asset
 
 #### Tags
 
-1. Etc Root
+Sample hierarchy for Tags tree
 
+1. Content
     1. Tags Root
-
         1. Namespace
-
             1. Category
-
                 1. Group
-
                     1. Tag
 
 ## Component Templating
 
 These are several methods that can be employed to create templates for components. The most basic method is to use simple HTML fragments that can be kept in separate JSP files and included using logic that relies on content input into the component. This practice allows for simple authoring and maintenance mechanism whereby Frontend Designers can participate in updates of component HTML structure. This collaborative activities create agility and does not require continued developer effort.
 
-In AEM 6 a new templating engine called [Sightly](http://docs.adobe.com/docs/en/aem/6-0/develop/sightly.html) has been introduced that aligns better with the design practices and development efforts. It is based on JSTL and has been tailored specifically around component templating and content structures. It provides a familiar HTML syntax with Templating variable conventions similar to JSTL and other Javascript frameworks. To help with Templating development a [Evaluation Console](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) is available to allow testing of templates before they are added to components.
+### HTL Templates
+
+In AEM 6 a new templating engine called [Sightly/HTL](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md) has been introduced that aligns better with the design practices and development efforts. It is based on JSTL and has been tailored specifically around component templating and content structures. It provides a familiar HTML syntax with Templating variable conventions similar to JSTL and other Javascript frameworks.
