@@ -8,6 +8,8 @@ main:
     url: /manifesto/
   - title: "Manual"
     url: /manual/
+  - title: "Archive"
+    url: /archive/
   - title: "Blog"
     url: /blog/
   - title: "About"
@@ -76,4 +78,15 @@ manual:
         url: /manual/osenv/
       - title: "Process"
         url: /manual/process/
+      - title: "Conventions"
+        url: /manual/conventions/
 
+#archive links
+archive:
+  - title: Archive
+    url: /archive/
+    children:
+      - title: "David's Model"
+        url: /archive/davids-model
+      - title: "Data First vs. Structure First"
+        url: /archive/data-first-vs-structure-first

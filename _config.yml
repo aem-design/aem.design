@@ -304,6 +304,19 @@ defaults:
       related: true
       sidebar:
         nav: "manual"
+  # _archive
+  - scope:
+      path: ""
+      type: archive
+    values:
+      layout: single
+      read_time: true
+      author_profile: true
+      share: true
+      comments: true
+      related: true
+      sidebar:
+        nav: "archive"
 
 
 
@@ -316,5 +329,8 @@ collections:
     output: true
     permalink: /:collection/:path/
   manual:
+    output: true
+    permalink: /:collection/:path/
+  archive:
     output: true
     permalink: /:collection/:path/
