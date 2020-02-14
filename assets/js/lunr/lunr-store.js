@@ -55,12 +55,12 @@ var store = [{
         "url": "https://aem.design/manifesto/principles/",
         "teaser":null},{
         "title": "Capabilities",
-        "excerpt":"On This Page Tags Scaffolding Digital Asset Management Asset Metadata Asset Renditions Asset Share Campaigns Blueprints - MSM Language Copy - MSM Experience Manager Dashboard Projects Dashboard Projects - Experiences Authoring Experience - Page Editor Authoring Experience - Asset Editor Sample Scaffolding Experience AEM stands for Experience, its the primary...","categories": [],
+        "excerpt":"On This Page Tags Digital Asset Management Asset Metadata Asset Renditions Asset Share Experience Manager Dashboard Projects Dashboard Projects - Experiences Authoring Experience Page Editor AEM stands for Experience, its the primary differentiating factor that separate it from other products. Please note that images depicted in this section are from...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/capabilities/",
         "teaser":null},{
         "title": "Delivery Guide",
-        "excerpt":"On This Page Mobile First - Responsive Components Experience Presentation Concept: Component to Design/Style Relationship Concept: Details and List Component Categories Sling Selectors Content Modelling Content Segmentation Segmentation Reference Pages Assets Tags Component Templating Mobile First - Responsive Components Components are the basic building blocks in AEM. When designing components...","categories": [],
+        "excerpt":"On This Page Components Experience Presentation Concept: Component to Design/Style Relationship Concept: Details and List Component Categories Sling Selectors Content Modelling Content Segmentation Segmentation Reference Pages Assets Tags Component Templating HTL Templates Components Components are the basic building blocks in AEM. When designing components two aspects must be considered, experience...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/delivery/",
         "teaser":null},{
@@ -70,7 +70,7 @@ var store = [{
         "url": "https://aem.design/manifesto/project/",
         "teaser":null},{
         "title": "Content Modeling",
-        "excerpt":"On This Page Content Types Content Experiences Primary Content Pages Assets Tags Apps Screens Forms Commerce - PIM Secondary Content Dictionaries User Cloud Services Multi Site Manager Sites Languages Micro-Sites - Communities Micro-Sites - Blog (Depreciated) Blog Entry Blueprints Blueprints Language Requirement Scaffolds New UI - Scaffold New UI -...","categories": [],
+        "excerpt":"On This Page Content Types Content Experiences Primary Content Pages Assets Tags Screens Forms Secondary Content User Cloud Services Multi Site Manager Sites Languages Blueprints Blueprints Language Requirement Design Importer Metadata Experience Tags Page Asset Components Designs Components Dialogs Page Properties Design Dialogs Translations Language Copies Create Translation Translation Projects...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/content/",
         "teaser":null},{

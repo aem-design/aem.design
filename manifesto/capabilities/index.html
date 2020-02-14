@@ -50,7 +50,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-02-14T12:54:05+00:00">
+  <meta property="article:published_time" content="2020-02-14T14:57:06+00:00">
 
 
 
@@ -470,7 +470,7 @@
 
 
 
-  2 minute read
+  1 minute read
 
 </p>
                 
@@ -484,22 +484,19 @@
       <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
 <ul class="toc__menu" id="markdown-toc">
   <li><a href="#tags" id="markdown-toc-tags">Tags</a></li>
-  <li><a href="#scaffolding" id="markdown-toc-scaffolding">Scaffolding</a></li>
   <li><a href="#digital-asset-management" id="markdown-toc-digital-asset-management">Digital Asset Management</a>    <ul>
       <li><a href="#asset-metadata" id="markdown-toc-asset-metadata">Asset Metadata</a></li>
       <li><a href="#asset-renditions" id="markdown-toc-asset-renditions">Asset Renditions</a></li>
       <li><a href="#asset-share" id="markdown-toc-asset-share">Asset Share</a></li>
     </ul>
   </li>
-  <li><a href="#campaigns" id="markdown-toc-campaigns">Campaigns</a></li>
-  <li><a href="#blueprints---msm" id="markdown-toc-blueprints---msm">Blueprints - MSM</a></li>
-  <li><a href="#language-copy---msm" id="markdown-toc-language-copy---msm">Language Copy - MSM</a></li>
   <li><a href="#experience-manager-dashboard" id="markdown-toc-experience-manager-dashboard">Experience Manager Dashboard</a>    <ul>
       <li><a href="#projects-dashboard" id="markdown-toc-projects-dashboard">Projects Dashboard</a></li>
       <li><a href="#projects---experiences" id="markdown-toc-projects---experiences">Projects - Experiences</a></li>
-      <li><a href="#authoring-experience---page-editor" id="markdown-toc-authoring-experience---page-editor">Authoring Experience - Page Editor</a></li>
-      <li><a href="#authoring-experience---asset-editor" id="markdown-toc-authoring-experience---asset-editor">Authoring Experience - Asset Editor</a></li>
-      <li><a href="#sample-scaffolding-experience" id="markdown-toc-sample-scaffolding-experience">Sample Scaffolding Experience</a></li>
+    </ul>
+  </li>
+  <li><a href="#authoring-experience" id="markdown-toc-authoring-experience">Authoring Experience</a>    <ul>
+      <li><a href="#page-editor" id="markdown-toc-page-editor">Page Editor</a></li>
     </ul>
   </li>
 </ul>
@@ -518,12 +515,6 @@
 
 <p><img src="/assets/images/manifesto/capabilities-tags.png" alt="image alt text" /></p>
 
-<h2 id="scaffolding">Scaffolding</h2>
-
-<p><a href="http://dev.day.com/docs/en/cq/current/wcm/scaffolding.html">Scaffolding</a> should be used to streamline authoring experience of particular pages. It should be used to create authoring experiences for creating and updating content. A scaffold is a dialog, that is made up of limited fields that are tailored for that particular authoring experience requirements.</p>
-
-<p><img src="/assets/images/manifesto/capabilities-scaffolding.png" alt="image alt text" /></p>
-
 <h2 id="digital-asset-management">Digital Asset Management</h2>
 
 <p>The term <a href="https://dev.day.com/docs/en/aem/6-0/administer/content/assets.html">Assets</a> in AEM also know as DAM in short refers to the Digital Asset Management capability. Its primary use is to share and distribute assets within an organisation. As DAM is integrated into AEM platform the images from DAM can seamlessly used in the Authoring experience.</p>
@@ -538,29 +529,15 @@
 
 <h3 id="asset-renditions">Asset Renditions</h3>
 
+<p>Asset renditions allow you to generate using a workflow or manually upload renditions for an asset.</p>
+
 <p><img src="/assets/images/manifesto/capabilities-dam-renditions.png" alt="image alt text" /></p>
 
 <h3 id="asset-share">Asset Share</h3>
 
-<p><a href="http://docs.adobe.com/docs/en/aem/6-0/administer/content/assets/assets-finder-editor.html">Asset Share</a> is an alternative way of presenting DAM library to consumers. It is best used when delivering DAM access to 3rd Party and External customers.</p>
+<p><a href="https://adobe-marketing-cloud.github.io/asset-share-commons/">Asset Share Commons</a> is an alternative way of presenting DAM library to consumers. It is best used when delivering DAM access to 3rd Party and External customers.</p>
 
 <p><img src="/assets/images/manifesto/capabilities-dam-share.png" alt="image alt text" /></p>
-
-<h2 id="campaigns">Campaigns</h2>
-
-<h2 id="blueprints---msm">Blueprints - MSM</h2>
-
-<p>The term Blueprint in AEM means a special capability that allows creating a collection of content that can be rolled out to a new location and kept up to date when updates occur.</p>
-
-<p>Blueprint should be used to make automatic copies of content between different non-responsive sites.</p>
-
-<p><img src="/assets/images/manifesto/capabilities-blueprint.png" alt="image alt text" /></p>
-
-<h2 id="language-copy---msm">Language Copy - MSM</h2>
-
-<p>Language copy should be used to manage language translations for each Language Locale.</p>
-
-<p><img src="/assets/images/manifesto/capabilities-languagecopy.png" alt="image alt text" /></p>
 
 <h2 id="experience-manager-dashboard">Experience Manager Dashboard</h2>
 
@@ -576,86 +553,17 @@
 
 <h3 id="projects---experiences">Projects - Experiences</h3>
 
-<p>Links to relevant areas for Content Authors.</p>
+<p>Links to relevant areas for Content Authors while they are working on a campaign project. A calendar view allows author to see when projects are due.</p>
 
 <p><img src="/assets/images/manifesto/capabilities-projects-experience.png" alt="image alt text" /></p>
 
-<h3 id="authoring-experience---page-editor">Authoring Experience - Page Editor</h3>
+<h2 id="authoring-experience">Authoring Experience</h2>
+
+<h3 id="page-editor">Page Editor</h3>
 
 <p>Desktop and Mobile authoring interface for Pages.</p>
 
 <p><img src="/assets/images/manifesto/capabilities-sites-editor.png" alt="image alt text" /></p>
-
-<h3 id="authoring-experience---asset-editor">Authoring Experience - Asset Editor</h3>
-
-<p>Desktop and Mobile authoring interface for DAM Assets.</p>
-
-<p>Assets - Directory Card</p>
-
-<p><img src="/assets/images/manifesto/capabilities-assets-card.png" alt="image alt text" /></p>
-
-<p>Assets - Image List</p>
-
-<p><img src="/assets/images/manifesto/capabilities-assets-list.png" alt="image alt text" /></p>
-
-<p>Assets - Image Renditions</p>
-
-<p><img src="/assets/images/manifesto/capabilities-assets-renditions.png" alt="image alt text" /></p>
-
-<p>Assets - Image Editing</p>
-
-<p><img src="/assets/images/manifesto/capabilities-assets-editing.png" alt="image alt text" /></p>
-
-<p>Assets - Folder Security</p>
-
-<p><img src="/assets/images/manifesto/capabilities-assets-security.png" alt="image alt text" /></p>
-
-<h3 id="sample-scaffolding-experience">Sample Scaffolding Experience</h3>
-
-<ol>
-  <li>
-    <p>Create new Content</p>
-
-    <ol>
-      <li>
-        <p>Access scaffold from Project Dashboard</p>
-      </li>
-      <li>
-        <p>Fill required content</p>
-      </li>
-      <li>
-        <p>Click on the “link to” the newly created Page</p>
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<p><img src="/assets/images/manifesto/capabilities-scaffold-create.png" alt="image alt text" /></p>
-
-<ol>
-  <li>
-    <p>Review page created with scaffolds</p>
-
-    <ol>
-      <li>Click Scaffold edit button on the Sidekick</li>
-    </ol>
-  </li>
-</ol>
-
-<p><img src="/assets/images/manifesto/capabilities-scaffold-review.png" alt="image alt text" /></p>
-
-<ol>
-  <li>
-    <p>Update Page content</p>
-
-    <ol>
-      <li>Make changes to content and save</li>
-    </ol>
-  </li>
-</ol>
-
-<p><img src="/assets/images/manifesto/capabilities-scaffold-update.png" alt="image alt text" /></p>
-
 
                 
             </section>
