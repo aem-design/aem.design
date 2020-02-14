@@ -492,3 +492,79 @@ Consistent dialog patern allow ease of understanding and experience of developin
 All components must have matching artifact in related artifacts. This is to ensure consistency and completness of component delivery.
 
 ![Component Artifacts Alignment](/assets/images/diagrams/folder-naming.png)
+
+# Using Tags for Styles
+
+One of the main objectives of AEM.Design is to provide a consistent way of representing Design Languages as a taxonomy of Tags. This provide a mechanism to create Tags taxonomy by designers and then applied to components by authors.
+
+Following image demonstrates shared Style dialog that is applied to all components.  
+
+![Shared Dialog - Styles](/assets/images/dialogs/shared-dialog-styles.png)
+
+Following table describes each available option. Each of the options is defined in a way to be able to easily apply to Design Systems and so that it can be easily understood by Authors. 
+
+| Field              | Type | Description                                                      |
+|--------------------|------|------------------------------------------------------------------|
+| ID                 | text | generates an Id attribute for a component                        |
+| Theme              | tags | used to apply style one or combination of nested components      |
+| Modifiers          | tags | used to apply design system tweaks to components                 |
+| Module             | tags | used to apply behaviour to component                             |
+| Chevron            | tags | used to apply Chevron to a component                             |
+| Icon               | tags | used to apply Icon to the component                              |
+| Boolean Attributes | tags | used to apply metadata attributes                                |
+| Positions          | text | used by Modules for placement of component in parent eg Tooltips |
+| Size               | text | used to add width and height attributes to component             |
+
+All text fields provide direct input that is added to component wrapper. All Tag fields allow selecting multiple tags for each filed which enables flexibility when applying styles.
+
+Technically a component wrapper tag is trying to create following footprint and it automated by using shared dialogs. This is reference output of share libraries to provide a consistent wrapper for all components  
+
+```html
+<div component id="${componentProperties.id}" 
+    class="${componentProperties.name} ${componentProperties.theme} ${componentProperties.modifier} ${componentProperties.chevron} ${componentProperties.icon}"
+    style="width:${componentProperties.width};height:${componentProperties.height};" 
+    x="${componentProperties.x}" y="${componentProperties.y}"
+    ${componentProperties.booleanAttributes}></div>
+```
+
+Furthermore using Tags allows storing Style related content in a central place which can be update by authors, using tags also has a benefit of translations and ability to change the actual value of tag class by updating tag entry.
+
+![Tags Authoring](/assets/images/dialogs/tag-authoring-update.png)
+
+These updates to tag authoring UI enable updating and adding values that correspond to CSS names in authoring UI. 
+
+## Style Tags Content Generator
+
+Compose project contains all of the CSS, JS and Tag YAML files that describe design being developed. This subproject is compiled and installed into AEM as a standalone package. Tag YAML files is used to specify design language mapping to CSS classes and during compiling Tags content is generated. 
+
+A custom Content Generator is used to generate Tags from YAML file similar to flowing 
+
+```yaml
+content/_cq_tags/aemdesign/component-style-icon: &component-style-icon
+  feed/atom:
+    flat: true
+    prefix: 'fa fa-rss'
+    title: 'Atom'
+
+  feed/rss:
+    flat: true
+    prefix: 'fa fa-rss'
+    title: 'RSS'
+
+  social:
+    prefixes:
+      - facebook
+      - facebook-f
+      - instagram
+      - linkedin
+      - linkedin-in
+      - pinterest-p
+      - tumblr
+      - tumblr-square
+      - twitter
+      - youtube
+    valueFormat: fab fa-%%prefix%%
+    title: '%%prefix_normalised%%'
+```
+
+[Reference Tag YAML files](https://github.com/aem-design/aemdesign-aem-support/blob/master/aemdesign-aem-compose/content-generator/config/core/) can be found in your Componse project and will be located in the Compose ```content-generator/config/core``` folder if you have generated using the [AEM.Design Archetype](https://github.com/aem-design/aemdesign-archetype).
