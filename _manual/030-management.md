@@ -1,8 +1,8 @@
 ---
-title: "Manual"
+title: "Management"
 permalink: /manual/management/
-excerpt: "AEM.Design Framework Manual"
 author: yaw@aem.design
+editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/devtools/
@@ -12,9 +12,7 @@ tags:
   - docs
 ---
 
-{% include toc %}
-
-# Management
+{% include toc_sticky.html %}
 
 ## Jenkins
 

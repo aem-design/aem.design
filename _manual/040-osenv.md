@@ -1,8 +1,8 @@
 ---
-title: "Manual"
+title: "Operating Environment"
 permalink: /manual/osenv/
-excerpt: "AEM.Design Framework Manual"
 author: yaw@aem.design
+editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/management/
@@ -12,9 +12,7 @@ tags:
   - docs
 ---
 
-{% include toc %}
-
-# Operating Environment
+{% include toc_sticky.html %}
 
 ## Server
 

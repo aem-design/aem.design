@@ -1,8 +1,8 @@
 ---
-title: "Manual"
+title: "Process"
 permalink: /manual/process/
-excerpt: "AEM.Design Framework Manual"
 author: yaw@aem.design
+editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/osenv/
@@ -12,9 +12,7 @@ tags:
   - docs
 ---
 
-{% include toc %}
-
-# Processes
+{% include toc_sticky.html %}
 
 ## Git Flow
 

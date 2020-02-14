@@ -1,8 +1,8 @@
 ---
-title: "Manual"
+title: "Projects"
 permalink: /manual/projects/
-excerpt: "AEM.Design Framework Manual"
 author: yaw@aem.design
+editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/
@@ -12,7 +12,7 @@ tags:
   - docs
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 # Projects
 
