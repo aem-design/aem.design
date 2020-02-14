@@ -114,7 +114,7 @@ components
             <component structure>
 ```
 
-Where possible initial component structure should be located in the v1 subfolder, this will also ensure that evolution of component will require marginaly less effort.
+Where possible initial component structure should be located in the v1 subfolder, this will also ensure that evolution of component will require marginally less effort.
 
 ```
 components
