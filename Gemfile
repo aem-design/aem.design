@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", ">= 3.6.3"
+gem "jekyll", ">= 4.0.0"
 gem "nokogiri", ">= 1.8.5"
 gem "ffi", ">= 1.9.24"
 
@@ -23,7 +23,7 @@ gem "minimal-mistakes-jekyll"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
+   gem "jekyll-feed"
    gem 'html-proofer'
    gem 'jekyll-redirect-from'
    gem 'jemoji'
