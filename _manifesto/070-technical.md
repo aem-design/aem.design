@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/content/
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 These sections that follow are samples that should be built upon to adopt to your situation.
 

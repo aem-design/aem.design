@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/delivery/
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 ## Project Documentation
 

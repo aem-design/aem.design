@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/project/
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 Organisations that dedicate resources on planning and designing Content Management Practices within the core business at some point implement a Content Management System that support the Business Processes of managing content. So it is important to keep in mind that Business Process which is part of Business Architecture comes first and foremost, their implementation in a computer system such as a CMS comes second.
 

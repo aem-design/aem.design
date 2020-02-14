@@ -21,7 +21,7 @@ header:
     overlay_image: /assets/images/adobe-aec/AdobeExperienceCloud.jpg
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 Introduction
 ===

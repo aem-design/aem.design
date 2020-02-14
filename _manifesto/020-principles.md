@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/introduction/
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 ## Contentricity
 

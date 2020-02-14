@@ -14,7 +14,7 @@ header:
   overlay_image: /assets/images/site-logo.png
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 In various discussions I found that developers are somewhat at unease with the features and functionalities presented by JCR when it comes to content modeling. There is no guide and very little experience yet on how to model content in a repository and why one content model is better than the other.
 

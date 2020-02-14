@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/principles
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 AEM stands for Experience, its the primary differentiating factor that separate it from other products.
 

@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/capabilities/
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 ## Mobile First - Responsive
 

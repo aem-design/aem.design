@@ -8,7 +8,7 @@ redirect_from:
   - /manifesto/
 ---
 
-{% include toc %}
+{% include toc_sticky.html %}
 
 Chapters in this document cover concepts and patterns that are aimed as introductory topics for the AEM Platform. These chapters is complementary to the overall Digital Strategy maintained by the Digital Retail Business. This document is a living document is aimed at being used as a tool to socialise the practice of AEM at any company.
 
