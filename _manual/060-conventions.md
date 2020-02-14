@@ -15,22 +15,66 @@ tags:
 {% include toc_sticky.html %}
 
 ## Philosophy for Conventions
-but I was hoping for something that described the philosophy and conventions (E.G. The component naming structure, usage of tags and variants, how it designed to empower frontend developers rather than require specialised AEM developers)
 
-Emhasis on Content - ensure that as much structure that required is converted into content so that its changable post deployment. This is following [Davids #1 Rule](/archive/davids-model#rule-1-data-first-structure-later-maybe).
-Abstract AEM Knoweldge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immidiatly needing to understand underlying principles.  
-Component Grouping and Naming - components should be names in the relation to their content and AEM purpouse, and not in relation to their end usage
-Component Variants - ability to represent different structures of component content
+Philosophy of AEM.Design is to empower all developers (FED/BED) to be able to achive more without having to learn a lot more initialy. This means that focus changes to providing a simplified and spcific experience that allows gradual learning of AEM and framework features. As more knowledge is gained and existing strucutres are understood developers can start update strucutres as needed. 
 
-## Component Grouping
+Major principles that should be considred as you start learning
 
-All components used by authors without exception must be located in their designated component group folders, this is identified in the respective Component Spec.
+* Emphases on Content - ensure that as much structure that required is converted into content so that its changable post deployment, this is following [Davids #1 Rule](/archive/davids-model#rule-1-data-first-structure-later-maybe).
+* Abstract AEM Knoweldge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immidiatly needing to understand underlying principles.  
+* Component Grouping and Naming - components should be named in the relation to their content and AEM purpouse, and not in relation to their end usage, see more details in [Component Grouping and Naming](/manual/conventions/#component-grouping-and-naming).
+* Component Variants and Badges - ability to represent different structures of component content without having to resort to using CSS to hide available content, see more details in [Component Variants and Badges](/manual/conventions/#component-variants-and-badges). 
+* Tags Usage - tags in AEM are specificaly made to provide a mechanims to create taxonomy of keywords that allow linking of content together. This capability is very usefull to represent Design Language keywords that privide styling nomenclature.
+
+## Component Grouping and Naming
+
+All components used by authors without exception must be located in their designated component group folders.
 
 ```
 components
     layout (component group)
         article
 ```
+
+This structure will ensure that there components are orgnanised and easily found, additionlay grouping provides a segmentation structure that will allow component numbers scale without creating a mess in one folder.
+
+Following is the list of name that should be used for making component groups
+
+| Group          | Name          | Description                                                                                                              |
+|----------------|---------------|--------------------------------------------------------------------------------------------------------------------------|
+| Analytics      | analytics     | components for analytics use                                                                                             |
+| Media          | media         | assets related component, galleries, asset lists, videos etc                                                             |
+| Content        | content       | primary components used to store authored content, content from these components is used by other components for display |
+| Cloud Services | cloudservices | components for cloud services                                                                                            |
+| Layout         | layout        | provide layout ability, grouping and structuring of content, contain layout and style related content                    |
+| List           | list          | find pages and show their data in lists, that contain layout and style related content                                   |
+| Details        | details       | used to create and display custom metadata for different page types                                                      |
+| Widgets        | widgets       | used to provide client-side functionality, integrating 3rd party services                                                |
+| Commerce       | commerce      | used for eComponents, shopping carts, checkouts, product listing etc                                                     |
+| Common         | common        | used for shared components that are available to authors                                                                 |
+| Forms          | forms         | used to contain all the components that are used in forms                                                                |
+| Template       | template      | used to store all the available Template components that contain HTML page structures                                    |
+| Workflow       | workflow      | steps that appear in workflow editor                                                                                     |
+
+Groups are targeted to be meaning full to Authors, when creating new groups consider how to explain component groups to authors. 
+
+## Component Variants and Badges
+
+Component Variants are used as a pattern to output diffrent HTML templates for the same comonent content.
+
+![Component Variants](/assets/images/diagrams/component-variant-example.png)
+
+Every component will have unique fields that are used by authors for content input. Usually these fields will be tied to a specific visual representation of that content. There are scenarios where you need to be able to output diffrent HTML strucutre of a component data, to achieve Component Variant pattern is used.
+
+![Component Variants Entity Diagram](/assets/images/diagrams/component-variant-entity-diagram.png)  
+
+Each component should have at least one default Variant and component template should provide a content driven approach to loading new Variants see [HTL Comonent Template](/manual/conventions/#htl-component-template) for example. This allows authors to choose from a dropdown list which variant they require.
+
+Additionally Component Variants concepts is applied as a convention to allow a component to control display of its content in related components. This enables to abstract all of the ways that content of a component that can be presented in the component that has the content. This pattern removes dependecies of one component on structure of another component.
+
+![Component Badges](/assets/images/diagrams/component-badge-usage.png)  
+
+If a component needs to leverage content of another component it used Sling selectors to call component with a specific badge name. This further allows asbtracting all of the structure into content and create an Author controlled presentation pattern.
 
 ## Component Structure
 
@@ -258,8 +302,8 @@ When writing component specific API code in Java script pelase ensure you encaps
 
 JavaScript for all Component JavaScript code must be divided into:
 
-# functions.js - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.
-# behaviour.js - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.
+1. **functions.js** - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.
+2. **behaviour.js** - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.
 
 JS modules should be located as following
 
