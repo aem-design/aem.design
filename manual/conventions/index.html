@@ -1,0 +1,1349 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Conventions - AEM.Design</title>
+
+
+
+
+<meta name="description" content="           On This Page    ">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Conventions">
+
+
+  <link rel="canonical" href="https://aem.design/manual/conventions/">
+  <meta property="og:url" content="https://aem.design/manual/conventions/">
+
+
+
+  <meta property="og:description" content="           On This Page    ">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="https://aem.design/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2020-02-14T03:57:42+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://aem.design",
+      "logo": "https://aem.design/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "https://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+
+
+<meta name="author" content="Yaw Ly">
+
+<link href="https://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://aem.design/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+
+<script>
+    function wrap(el, wrapper) {
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll(".page__content p img");
+        elements.forEach(element => {
+            var url = element.getAttribute('src');
+            var alt = element.getAttribute('alt');
+            if(url) {
+                var a = document.createElement('a');
+                a.setAttribute("href",url);
+                a.setAttribute("data-lightbox",'');
+                a.setAttribute("title",alt);
+                wrap(element, a);
+            }
+        });
+
+    });
+</script>
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<style>
+    .archive__item-teaser {
+        min-height: 238px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(222,228,228);
+        background: radial-gradient(circle, rgba(222,228,228,1) 0%, rgba(255,179,107,1) 100%);
+    }
+
+    /*add tint to images*/
+    .page__hero--overlay {
+        background-color: rgba(255,179,107,.5);
+        background-blend-mode: multiply;
+    }
+</style>
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          AEM.Design
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://github.com/aem-design" >GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a href="/quick-start-guide/" >Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manifesto/" >Manifesto</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manual/" >Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/archive/" >Archive</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/" >Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="https://aem.design/assets/images/profile/yawly.jpg" class="author__avatar" alt="Yaw Ly" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Yaw Ly</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:yaw@aem.design">
+            <meta itemprop="email" content="yaw@aem.design" />
+            <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/yaw-ly-16805514" itemprop="sameAs">
+            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/yawly" itemprop="sameAs">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="https://aem.design/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+      <li>
+        <a href="mailto:max@aem.design">
+          <meta itemprop="email" content="max@aem.design" />
+          <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
+        </a>
+      </li>
+      
+
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+      </li>
+      
+
+        
+        <li>
+            <a href="https://github.com/wildone" itemprop="sameAs">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+        </li>
+        
+
+
+    </ul>
+  </div>
+
+</div>
+
+
+
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/projects/" class="">Projects</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/devtools/" class="">Development Tools</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/management/" class="">Management</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/osenv/" class="">Operating Environment</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/process/" class="">Process</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/manual/conventions/" class="active">Conventions</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Conventions">
+        <meta itemprop="description" content="           On This Page    ">
+        <meta itemprop="datePublished" content="February 14, 2020">
+        
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+
+                <h1 class="page__title" itemprop="headline">Conventions
+</h1>
+                
+                <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <div class="sticky">
+    <aside class="sidebar__right">
+<nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#philosophy-for-conventions" id="markdown-toc-philosophy-for-conventions">Philosophy for Conventions</a></li>
+  <li><a href="#component-grouping" id="markdown-toc-component-grouping">Component Grouping</a></li>
+  <li><a href="#component-structure" id="markdown-toc-component-structure">Component Structure</a></li>
+  <li><a href="#component-client-libs-namespace-convention" id="markdown-toc-component-client-libs-namespace-convention">Component Client Libs Namespace Convention</a></li>
+  <li><a href="#component-versioning" id="markdown-toc-component-versioning">Component Versioning</a></li>
+  <li><a href="#component-client-libs-modules" id="markdown-toc-component-client-libs-modules">Component Client Libs Modules</a></li>
+  <li><a href="#jsp-component-template" id="markdown-toc-jsp-component-template">JSP Component Template</a></li>
+  <li><a href="#htl-component-template" id="markdown-toc-htl-component-template">HTL Component Template</a></li>
+  <li><a href="#htl-component-wcmusepojo-class" id="markdown-toc-htl-component-wcmusepojo-class">HTL Component WCMUsePojo Class</a></li>
+  <li><a href="#clientlibs-convention---javascript" id="markdown-toc-clientlibs-convention---javascript">ClientLibs Convention - JavaScript</a></li>
+  <li><a href="#functionsjs---component-functions-api-has-all-of-the-required-static-utility-functions-that-will-be-used-by-component-behaviours-these-should-only-be-functions-and-should-not-be-binding-to-elements-of-the-page-on-load-events" id="markdown-toc-functionsjs---component-functions-api-has-all-of-the-required-static-utility-functions-that-will-be-used-by-component-behaviours-these-should-only-be-functions-and-should-not-be-binding-to-elements-of-the-page-on-load-events">functions.js - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.</a></li>
+  <li><a href="#behaviourjs---component-binding-api-has-all-of-the-load-events-and-binding-to-html-uses-functions-to-help-with-structure-and-reusable-config-as-required-this-should-be-the-main-file-that-demonstrates-how-component-is-being-boudn-to-the-code" id="markdown-toc-behaviourjs---component-binding-api-has-all-of-the-load-events-and-binding-to-html-uses-functions-to-help-with-structure-and-reusable-config-as-required-this-should-be-the-main-file-that-demonstrates-how-component-is-being-boudn-to-the-code">behaviour.js - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.</a>    <ul>
+      <li><a href="#clientlibs-convention---css" id="markdown-toc-clientlibs-convention---css">ClientLibs Convention - CSS</a></li>
+    </ul>
+  </li>
+  <li><a href="#dialog-conventions" id="markdown-toc-dialog-conventions">Dialog Conventions</a>    <ul>
+      <li><a href="#dialog-layout" id="markdown-toc-dialog-layout">Dialog Layout</a></li>
+      <li><a href="#component-artifacts-alignment" id="markdown-toc-component-artifacts-alignment">Component Artifacts Alignment</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </nav>
+</aside>
+</div>
+
+<h2 id="philosophy-for-conventions">Philosophy for Conventions</h2>
+<p>but I was hoping for something that described the philosophy and conventions (E.G. The component naming structure, usage of tags and variants, how it designed to empower frontend developers rather than require specialised AEM developers)</p>
+
+<p>Emhasis on Content - ensure that as much structure that required is converted into content so that its changable post deployment. This is following <a href="/archive/davids-model#rule-1-data-first-structure-later-maybe">Davids #1 Rule</a>.
+Abstract AEM Knoweldge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immidiatly needing to understand underlying principles.<br />
+Component Grouping and Naming - components should be names in the relation to their content and AEM purpouse, and not in relation to their end usage
+Component Variants - ability to represent different structures of component content</p>
+
+<h2 id="component-grouping">Component Grouping</h2>
+
+<p>All components used by authors without exception must be located in their designated component group folders, this is identified in the respective Component Spec.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
+    layout (component group)
+        article
+</code></pre></div></div>
+
+<h2 id="component-structure">Component Structure</h2>
+
+<p>All component must follow consistent patterns that help everyone to understand consistency across components. Following is the conventions that are used for components</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Node</th>
+      <th>Purpouse</th>
+      <th>Usercase</th>
+      <th>Extension</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>_cq_design_dalog</td>
+      <td>Authoring dialog that will be used to configure component</td>
+      <td>mandatory</td>
+      <td>xml</td>
+    </tr>
+    <tr>
+      <td>_cq_design</td>
+      <td>Primary Authoring fo interacting with component properties</td>
+      <td>mandatory</td>
+      <td>xml</td>
+    </tr>
+    <tr>
+      <td>.content.xml</td>
+      <td>component authoring metadata</td>
+      <td>mandatory</td>
+      <td>xml</td>
+    </tr>
+    <tr>
+      <td>_cq_editConfig.xml</td>
+      <td>component authoring configuration for Editor UI</td>
+      <td>mandatory</td>
+      <td>xml</td>
+    </tr>
+    <tr>
+      <td>README.md</td>
+      <td>readme describing the component which is viewed in the Components Experience in AEM</td>
+      <td>mandatory</td>
+      <td>md</td>
+    </tr>
+    <tr>
+      <td>variant.default.<EXT></EXT></td>
+      <td>default template for display</td>
+      <td>mandatory</td>
+      <td>jsp,html</td>
+    </tr>
+    <tr>
+      <td>component.<EXT></EXT></td>
+      <td>default boostrap of component</td>
+      <td>mandatory</td>
+      <td>jsp,html</td>
+    </tr>
+    <tr>
+      <td>badge.default.<EXT></EXT></td>
+      <td>default badge to be used by other components for representing current component content</td>
+      <td>optional</td>
+      <td>jsp,html</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="component-client-libs-namespace-convention">Component Client Libs Namespace Convention</h2>
+
+<p>Components that have specific clientlibs should have following client libs assigned if they will be loaded by clientlibs in template footer and headers.</p>
+
+<p>Paths of component namespace should be following the location of the component path eg <tenant>.components.<group>.<subfolder>.<component name=""> with <subfolder> repeating for each subfolder leading up to component folder.</subfolder></component></subfolder></group></tenant></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Namespace</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><tenant>.components.author</tenant></td>
+      <td>specifies that this component library should be loaded into global authoring clientlibs</td>
+    </tr>
+    <tr>
+      <td><tenant>.components.publish</tenant></td>
+      <td>specifies that this component library should be loaded into global publish clientlibs</td>
+    </tr>
+    <tr>
+      <td><tenant>.components.<component name=""></component></tenant></td>
+      <td>specific group for the component to be used for specific usage such as component loading its own client libs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="component-versioning">Component Versioning</h2>
+<p>Initialy when component is written its acceptable to have the component code to be located under its folder path.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
+    layout
+        article
+            &lt;component structure&gt;
+</code></pre></div></div>
+
+<p>Where possible initial component structure should be located in the v1 subfolder, this will also ensure that evolution of component will require marginaly less effort.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
+    layout
+        article ( sling:resourceSuperType → v1/article )
+            v1
+                &lt;component structure&gt;
+</code></pre></div></div>
+
+<p>As component is evolves into a versions a subfolders under the component path should be used to separate component code and component path should be pointed to the specific version all existing references of component should be using.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
+    layout
+        article ( sling:resourceSuperType → v2/article )
+            v1
+                article
+            v2
+                article
+</code></pre></div></div>
+
+<p>This will ensure that all existing pages will continue working as expected.</p>
+
+<h2 id="component-client-libs-modules">Component Client Libs Modules</h2>
+<p>Component generic client libs should to be located in the component folder</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
+    layout
+        article
+            clientlibs (version agnostic client libs)
+                css/
+                js/
+                css.txt
+                js.txt
+            v1
+                article 
+                clientlibs (version specific client libs) 
+                &lt;component structure&gt;
+            v2
+                article
+                clientlibs (version specific client libs) 
+                &lt;component structure&gt;
+</code></pre></div></div>
+
+<h2 id="jsp-component-template">JSP Component Template</h2>
+
+<p>For ease of understanding component code following sections should be used as reference</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>LABEL</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>** COMPONENT DEPENDECIES **</em></td>
+      <td>used for describing dependecies</td>
+    </tr>
+    <tr>
+      <td><em>** COMPONENT DECLARATIONS **</em></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><em>** COMPONENT LOGIC **</em></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><em>** COMPONENT TEMPLATING **</em></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Following is a sample for component bootrstap, please remove annotations when using as template.</p>
+
+<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** COMPONENT DEPENDECIES ***
+<span class="nt">&lt;%@ page </span><span class="na">import=</span><span class="s">"com.google.common.base.Throwables"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;%@ include </span><span class="na">file=</span><span class="s">"/apps/aemdesign/global/global.jsp"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;%@ include </span><span class="na">file=</span><span class="s">"/apps/aemdesign/global/images.jsp"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;%@ include </span><span class="na">file=</span><span class="s">"/apps/aemdesign/global/components.jsp"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;%</span>
+<span class="o">***</span> <span class="no">COMPONENT</span> <span class="no">DECLARATIONS</span> <span class="o">***</span>
+ 
+    <span class="kd">final</span> <span class="nc">String</span> <span class="no">DEFAULT_ARIA_ROLE</span> <span class="o">=</span> <span class="s">"article"</span><span class="o">;</span>
+ 
+    <span class="c1">// {</span>
+    <span class="c1">//   1 required - property name,</span>
+    <span class="c1">//   2 required - default value,</span>
+    <span class="c1">//   3 optional - name of component attribute to add value into</span>
+    <span class="c1">//   4 optional - canonical name of class for handling multivalues, String or Tag</span>
+    <span class="c1">// }</span>
+    <span class="nc">Object</span><span class="o">[][]</span> <span class="n">componentFields</span> <span class="o">=</span> <span class="o">{</span>
+        <span class="o">{</span><span class="no">FIELD_ARIA_ROLE</span><span class="o">,</span><span class="no">DEFAULT_ARIA_ROLE</span><span class="o">,</span> <span class="no">DEFAULT_ARIA_ROLE_ATTRIBUTE</span><span class="o">},</span>
+        <span class="o">{</span><span class="no">FIELD_VARIANT</span><span class="o">,</span> <span class="no">DEFAULT_VARIANT</span><span class="o">},</span>
+    <span class="o">};</span>
+ 
+    <span class="nc">ComponentProperties</span> <span class="n">componentProperties</span> <span class="o">=</span> <span class="n">getComponentProperties</span><span class="o">(</span>
+            <span class="n">pageContext</span><span class="o">,</span>
+            <span class="n">componentFields</span><span class="o">,</span>
+            <span class="no">DEFAULT_FIELDS_STYLE</span><span class="o">,</span>
+            <span class="no">DEFAULT_FIELDS_ACCESSIBILITY</span><span class="o">);</span>
+ 
+<span class="o">***</span> <span class="no">COMPONENT</span> <span class="no">LOGIC</span> <span class="o">***</span>
+    <span class="n">componentProperties</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="no">DEFAULT_BACKGROUND_IMAGE_NODE_NAME</span><span class="o">,</span><span class="n">getBackgroundImageRenditions</span><span class="o">(</span><span class="n">pageContext</span><span class="o">));</span>
+ 
+<span class="nt">%&gt;</span>
+*** COMPONENT TEMPLATING ***
+<span class="nt">&lt;c:set </span><span class="na">var=</span><span class="s">"componentProperties"</span><span class="na"> value=</span><span class="s">"&lt;%= componentProperties %&gt;"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;%@ include </span><span class="na">file=</span><span class="s">"/apps/aemdesign/global/component-background.jsp"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;c:choose&gt;</span>
+    <span class="nt">&lt;c:when </span><span class="na">test=</span><span class="s">"</span><span class="si">${</span><span class="n">componentProperties</span><span class="o">.</span><span class="na">variant</span> <span class="n">eq</span> <span class="no">DEFAULT_VARIANT</span><span class="si">}</span><span class="s">"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;%@ include </span><span class="na">file=</span><span class="s">"variant.default.jsp"</span> <span class="nt">%&gt;</span>
+    <span class="nt">&lt;/c:when&gt;</span>
+    <span class="nt">&lt;c:otherwise&gt;</span>
+        <span class="nt">&lt;%@ include </span><span class="na">file=</span><span class="s">"variant.default.jsp"</span> <span class="nt">%&gt;</span>
+    <span class="nt">&lt;/c:otherwise&gt;</span>
+<span class="nt">&lt;/c:choose&gt;</span>
+<span class="nt">&lt;%@include </span><span class="na">file=</span><span class="s">"/apps/aemdesign/global/component-badge.jsp"</span> <span class="nt">%&gt;</span>
+
+</code></pre></div></div>
+
+<h2 id="htl-component-template">HTL Component Template</h2>
+
+<p>Following is a sample for component bootrstap</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;sly</span> <span class="na">data-sly-use.component=</span><span class="s">"design.aem.models.v2.layout.Article"</span>
+     <span class="na">data-sly-use.variant=</span><span class="s">"${component.componentProperties.variantTemplate}"</span>
+     <span class="na">data-sly-use.background=</span><span class="s">"aemdesign/global/templates/component-background.html"</span>
+     <span class="na">data-sly-use.info=</span><span class="s">"aemdesign/global/templates/component-info.html"</span><span class="nt">&gt;</span>
+ 
+    <span class="c">&lt;!--/* print component background */--&gt;</span>
+    <span class="nt">&lt;sly</span> <span class="na">data-sly-call=</span><span class="s">"${background.variant @ componentId=component.componentProperties.componentId, assets=component.componentProperties.bgimage.componentBackgroundAssets}"</span><span class="nt">&gt;&lt;/sly&gt;</span>
+ 
+    <span class="c">&lt;!--/* print component variant */--&gt;</span>
+    <span class="nt">&lt;sly</span> <span class="na">data-sly-call=</span><span class="s">"${variant.variant @ componentProperties=component.componentProperties}"</span><span class="nt">&gt;&lt;/sly&gt;</span>
+ 
+    <span class="c">&lt;!--/* print component info in edit mode */--&gt;</span>
+    <span class="nt">&lt;sly</span> <span class="na">data-sly-call=</span><span class="s">"${info.variant @ componentProperties=component.componentProperties, component=component}"</span><span class="nt">&gt;&lt;/sly&gt;</span>
+ 
+<span class="nt">&lt;/sly&gt;</span>
+</code></pre></div></div>
+
+<h2 id="htl-component-wcmusepojo-class">HTL Component WCMUsePojo Class</h2>
+
+<p>Following is a reference for component Class that will be backing each HTL component</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">design.aem.models.v2.details</span><span class="o">;</span>
+ 
+<span class="kn">import</span> <span class="nn">com.adobe.cq.sightly.WCMUsePojo</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">design.aem.components.ComponentProperties</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">design.aem.utils.components.TagUtil</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.day.cq.i18n.I18n</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PageDetails</span> <span class="kd">extends</span> <span class="nc">WCMUsePojo</span> <span class="o">{</span>
+ 
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Logger</span> <span class="no">LOGGER</span> <span class="o">=</span> <span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">PageDetails</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+ 
+    <span class="kd">private</span> <span class="nc">ComponentProperties</span> <span class="n">componentProperties</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nc">ComponentProperties</span> <span class="nf">getComponentProperties</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">componentProperties</span><span class="o">;</span>
+    <span class="o">}</span>
+     
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">activate</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+         
+        <span class="n">com</span><span class="o">.</span><span class="na">day</span><span class="o">.</span><span class="na">cq</span><span class="o">.</span><span class="na">i18n</span><span class="o">.</span><span class="na">I18n</span> <span class="n">_i18n</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">I18n</span><span class="o">(</span><span class="n">getRequest</span><span class="o">());</span>
+ 
+        <span class="c1">//COMPONENT STYLES</span>
+        <span class="c1">// {</span>
+        <span class="c1">//   1 required - property name,</span>
+        <span class="c1">//   2 required - default value,</span>
+        <span class="c1">//   3 optional - name of component attribute to add value into</span>
+        <span class="c1">//   4 optional - canonical name of class for handling multivalues, String or Tag</span>
+        <span class="c1">// }</span>
+        <span class="nc">Object</span><span class="o">[][]</span> <span class="n">componentFields</span> <span class="o">=</span> <span class="o">{</span>
+            <span class="o">{</span><span class="no">FIELD_VARIANT</span><span class="o">,</span> <span class="no">DEFAULT_VARIANT</span><span class="o">},</span>
+        <span class="o">};</span>
+        <span class="n">componentProperties</span> <span class="o">=</span> <span class="nc">ComponentsUtil</span><span class="o">.</span><span class="na">getComponentProperties</span><span class="o">(</span>
+            <span class="k">this</span><span class="o">,</span>
+            <span class="n">componentFields</span><span class="o">,</span>
+            <span class="no">DEFAULT_FIELDS_STYLE</span><span class="o">,</span>
+            <span class="no">DEFAULT_FIELDS_ACCESSIBILITY</span><span class="o">,</span>
+            <span class="no">DEFAULT_FIELDS_ANALYTICS</span>
+        <span class="o">);</span>
+         
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h2 id="clientlibs-convention---javascript">ClientLibs Convention - JavaScript</h2>
+
+<p>When writing component specific API code in Java script pelase ensure you encapsulating namespacing that does not direclty depend on external dependecies.</p>
+
+<p>JavaScript for all Component JavaScript code must be divided into:</p>
+
+<h1 id="functionsjs---component-functions-api-has-all-of-the-required-static-utility-functions-that-will-be-used-by-component-behaviours-these-should-only-be-functions-and-should-not-be-binding-to-elements-of-the-page-on-load-events">functions.js - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.</h1>
+<h1 id="behaviourjs---component-binding-api-has-all-of-the-load-events-and-binding-to-html-uses-functions-to-help-with-structure-and-reusable-config-as-required-this-should-be-the-main-file-that-demonstrates-how-component-is-being-boudn-to-the-code">behaviour.js - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.</h1>
+
+<p>JS modules should be located as following</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
+    layout
+        article
+            clientlibs (version agnostic client libs)
+                css/
+                js/
+                    functions.js
+                    behaviour.js
+                css.txt
+                js.txt
+</code></pre></div></div>
+
+<p>Following is an example of a function used for component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//search - functions</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span> <span class="o">||</span> <span class="p">{</span><span class="dl">"</span><span class="s2">jQuery</span><span class="dl">"</span><span class="p">:{}};</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span> <span class="o">||</span> <span class="p">{};</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">search</span> <span class="o">||</span> <span class="p">{};</span>
+ 
+<span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">log</span><span class="p">,</span> <span class="nx">utils</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//NOSONAR convention for wrapping all modules</span>
+ 
+    <span class="dl">"</span><span class="s2">use strict</span><span class="dl">"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">_version</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">0.1</span><span class="dl">"</span><span class="p">;</span>
+ 
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_version</span><span class="p">;</span>
+    <span class="p">};</span>
+ 
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$el</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//INIT CODE</span>
+    <span class="p">};</span>
+ 
+<span class="p">})(</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">jQuery</span><span class="p">,</span><span class="nx">_</span><span class="p">,</span><span class="nx">ko</span><span class="p">,</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">utils</span><span class="p">,</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">search</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Following is an example of a behaviours used for component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//search - behaviour</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span> <span class="o">||</span> <span class="p">{</span><span class="dl">"</span><span class="s2">jQuery</span><span class="dl">"</span><span class="p">:{}};</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span> <span class="o">||</span> <span class="p">{};</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">search</span> <span class="o">||</span> <span class="p">{};</span>
+ 
+<span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">utils</span><span class="p">,</span> <span class="nx">log</span><span class="p">,</span> <span class="nx">search</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//NOSONAR convention for wrapping all modules</span>
+ 
+    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+ 
+        <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">[data-modules*='search']</span><span class="dl">"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+ 
+            <span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+ 
+            <span class="nx">search</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">base</span><span class="p">);</span>
+ 
+ 
+        <span class="p">});</span>
+ 
+ 
+    <span class="p">});</span>
+ 
+<span class="p">})(</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">jQuery</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">utils</span><span class="p">,</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">search</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span> <span class="c1">//pass in additional dependencies</span>
+</code></pre></div></div>
+
+<h2 id="clientlibs-convention---css">ClientLibs Convention - CSS</h2>
+
+<p>When writing CSS ensure that component Styles are added under component namespace. Here is an example</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nx">component</span><span class="p">]</span> <span class="p">.</span><span class="o">&lt;</span><span class="nx">component</span> <span class="nx">name</span><span class="o">&gt;</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="dialog-conventions">Dialog Conventions</h1>
+
+<p>Common Tabs for all component - use shared dialogs</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style</span><span class="na">Tab</span>
+    <span class="na">jcr:primaryType=</span><span class="s">"nt:unstructured"</span>
+    <span class="na">jcr:title=</span><span class="s">"Style"</span>
+    <span class="na">path=</span><span class="s">"/apps/aemdesign/global/dialog/touch/style/content/items/styleTab"</span>
+    <span class="na">resourceType=</span><span class="s">"granite/ui/components/foundation/section"</span>
+    <span class="na">sling:resourceType=</span><span class="s">"granite/ui/components/coral/foundation/include"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Use Tags as source for your Dropdowns - will ensure that content can be updated later</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;cancelinheritparent</span>
+    <span class="na">jcr:primaryType=</span><span class="s">"nt:unstructured"</span>
+    <span class="na">sling:resourceType=</span><span class="s">"granite/ui/components/coral/foundation/form/select"</span>
+    <span class="na">fieldLabel=</span><span class="s">"Cancel Inherit Parent"</span>
+    <span class="na">name=</span><span class="s">"./cancelInheritParent"</span>
+    <span class="na">emptyOption=</span><span class="s">"{Boolean}true"</span>
+    <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;datasource</span>
+        <span class="na">jcr:primaryType=</span><span class="s">"nt:unstructured"</span>
+        <span class="na">sling:resourceType=</span><span class="s">"aemdesign/components/coral/datasources/tags"</span>
+        <span class="na">variant=</span><span class="s">"valuelist"</span>
+        <span class="na">path=</span><span class="s">"/content/cq:tags/${(empty tenant.id and empty tenantId) ? 'aemdesign' : (empty tenant.id ? tenantId : tenant.id )}/component-dialog/common/true-false"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/cancelinheritparent&gt;</span>
+</code></pre></div></div>
+
+<p>Don’t use Checkbox fields in dialogs - use Dropdowns so that its clear what if use has made a selection and what defauls are</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;cancelinheritparent</span>
+    <span class="na">jcr:primaryType=</span><span class="s">"nt:unstructured"</span>
+    <span class="na">sling:resourceType=</span><span class="s">"granite/ui/components/coral/foundation/form/select"</span>
+    <span class="na">fieldLabel=</span><span class="s">"Cancel Inherit Parent"</span>
+    <span class="na">name=</span><span class="s">"./cancelInheritParent"</span>
+    <span class="na">emptyOption=</span><span class="s">"{Boolean}true"</span>
+    <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+...
+<span class="nt">&lt;/cancelinheritparent&gt;</span>
+</code></pre></div></div>
+
+<p>Common Component Field Spec - define component fields in an array to use with component helper function ComponentsUtil.getComponentProperties</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Object</span><span class="o">[][]</span> <span class="n">componentFields</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="o">{</span><span class="s">"author"</span><span class="o">,</span> <span class="n">pageAuthorFullName</span><span class="o">},</span>
+    <span class="o">{</span><span class="s">"authorUrl"</span><span class="o">,</span> <span class="n">pageAuthorEmail</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_VARIANT</span><span class="o">,</span> <span class="no">DEFAULT_VARIANT</span><span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<p>Common Component Field Load - this will collect and construct all fields with defaults and select Design/Policy config as defaults</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">componentProperties</span> <span class="o">=</span> <span class="nc">ComponentsUtil</span><span class="o">.</span><span class="na">getComponentProperties</span><span class="o">(</span>
+    <span class="k">this</span><span class="o">,</span>
+    <span class="n">componentFields</span><span class="o">,</span>
+    <span class="no">DEFAULT_FIELDS_STYLE</span><span class="o">,</span>
+    <span class="no">DEFAULT_FIELDS_ACCESSIBILITY</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Common Component Field Presets - use globaly defined fields spect to collect content from shared tabls in dialog</p>
+<blockquote>
+  <p>For Styles Tabs and Common Fields</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//COMPONENT STYLES</span>
+<span class="c1">// {</span>
+<span class="c1">//   1 required - property name,</span>
+<span class="c1">//   2 required - default value,</span>
+<span class="c1">//   3 optional - name of component attribute to add value into</span>
+<span class="c1">//   4 optional - canonical name of class for handling multivalues, String or Tag</span>
+<span class="c1">// }</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Object</span><span class="o">[][]</span> <span class="no">DEFAULT_FIELDS_STYLE</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ID</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="s">"id"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_THEME</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]{},</span> <span class="s">"class"</span><span class="o">,</span> <span class="nc">Tag</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">()},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_MODIFIERS</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]{},</span> <span class="s">"class"</span><span class="o">,</span> <span class="nc">Tag</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">()},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_MODULES</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]{},</span> <span class="s">"data-modules"</span><span class="o">,</span> <span class="nc">Tag</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">()},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_CHEVRON</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]{},</span> <span class="s">"class"</span><span class="o">,</span> <span class="nc">Tag</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">()},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ICON</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]{},</span> <span class="s">"class"</span><span class="o">,</span> <span class="nc">Tag</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">()},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_POSITIONX</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="s">"x"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_POSITIONY</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="s">"y"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_WIDTH</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="s">"width"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_HEIGHT</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="s">"height"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_SITETHEMECATEGORY</span><span class="o">,</span> <span class="s">""</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_SITETHEMECOLOR</span><span class="o">,</span> <span class="s">""</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_SITETITLECOLOR</span><span class="o">,</span> <span class="s">""</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_BOOLEANATTR</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]{},</span> <span class="s">" "</span><span class="o">,</span> <span class="nc">Tag</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getCanonicalName</span><span class="o">()},</span> <span class="c1">//#3" " =do not store content in data attributes</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ANIMATION_ENABLED</span><span class="o">,</span> <span class="kc">false</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ANIMATION_NAME</span><span class="o">,</span> <span class="nc">StringUtils</span><span class="o">.</span><span class="na">EMPTY</span><span class="o">,</span> <span class="s">"data-aos"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ANIMATION_ONCE</span><span class="o">,</span> <span class="nc">StringUtils</span><span class="o">.</span><span class="na">EMPTY</span><span class="o">,</span> <span class="s">"data-aos-once"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ANIMATION_EASING</span><span class="o">,</span> <span class="nc">StringUtils</span><span class="o">.</span><span class="na">EMPTY</span><span class="o">,</span> <span class="s">"data-aos-easing"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ANIMATION_DELAY</span><span class="o">,</span> <span class="nc">StringUtils</span><span class="o">.</span><span class="na">EMPTY</span><span class="o">,</span> <span class="s">"data-aos-delay"</span><span class="o">},</span>
+    <span class="o">{</span><span class="no">FIELD_STYLE_COMPONENT_ANIMATION_DURATION</span><span class="o">,</span> <span class="nc">StringUtils</span><span class="o">.</span><span class="na">EMPTY</span><span class="o">,</span> <span class="s">"data-aos-duration"</span><span class="o">},</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h2 id="dialog-layout">Dialog Layout</h2>
+
+<p>Consistent dialog patern allow ease of understanding and experience of developing, using and training components to Authors.</p>
+
+<p><img src="/assets/images/diagrams/dialog-convention.png" alt="Dialog Layout" /></p>
+
+<h2 id="component-artifacts-alignment">Component Artifacts Alignment</h2>
+
+<p>All components must have matching artifact in related artifacts. This is to ensure consistency and completness of component delivery.</p>
+
+<p><img src="/assets/images/diagrams/folder-naming.png" alt="Component Artifacts Alignment" /></p>
+
+                
+            </section>
+
+            <style>
+                .page__content_adspace_bottom {
+                    height: 200px;
+                    display: inline-block;
+                    width: 100%;
+                }
+            </style>
+            <section class="page__content_adspace_bottom">
+            
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+            </section>
+
+            <footer class="page__meta">
+                
+                
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#info" class="page__taxonomy-item" rel="tag">info</a>
+    
+    </span>
+  </p>
+
+
+                
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-14T03:57:42+00:00">February 14, 2020</time></p>
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Conventions%20https%3A%2F%2Faem.design%2Fmanual%2Fconventions%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanual%2Fconventions%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanual%2Fconventions%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/manual/process/" class="pagination--pager" title="Process
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  13 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+  </article>
+</div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://aem.design/manual/conventions/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/manual/060-conventions"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
