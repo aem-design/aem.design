@@ -47,6 +47,18 @@ docker run --name author \
 aemdesign/aem:6.5.0-bundle 
 ```
 
+Starting local publish instance is a matter of updating a run mode to `publish` and updating ports for accessing the service and you should get the following
+
+```bash
+docker run --name publish \
+-e "TZ=Australia/Sydney" \
+-e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,dev" \
+-e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
+-p4503:8080 -d \
+-p30304:58242 -d \
+aemdesign/aem:6.5.0-bundle 
+```
+
 If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:
 
 ```bash
