@@ -110,7 +110,7 @@ var store = [{
         "url": "https://aem.design/manual/process/",
         "teaser":null},{
         "title": "Conventions",
-        "excerpt":"On This Page Philosophy for Conventions Component Grouping Component Structure Component Client Libs Namespace Convention Component Versioning Component Client Libs Modules JSP Component Template HTL Component Template HTL Component WCMUsePojo Class ClientLibs Convention - JavaScript functions.js - component functions API, has all of the required static utility functions that will...","categories": ["info"],
+        "excerpt":"On This Page Philosophy for Conventions Component Grouping and Naming Component Variants and Badges Component Structure Component Client Libs Namespace Convention Component Versioning Component Client Libs Modules JSP Component Template HTL Component Template HTL Component WCMUsePojo Class ClientLibs Convention - JavaScript ClientLibs Convention - CSS Dialog Conventions Dialog Layout Component...","categories": ["info"],
         "tags": ["docs"],
         "url": "https://aem.design/manual/conventions/",
         "teaser":null},{

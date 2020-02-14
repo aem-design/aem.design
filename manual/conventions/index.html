@@ -50,7 +50,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-02-14T03:57:42+00:00">
+  <meta property="article:published_time" content="2020-02-14T05:27:13+00:00">
 
 
 
@@ -510,7 +510,7 @@
 
 
 
-  8 minute read
+  10 minute read
 
 </p>
                 
@@ -524,7 +524,8 @@
       <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
 <ul class="toc__menu" id="markdown-toc">
   <li><a href="#philosophy-for-conventions" id="markdown-toc-philosophy-for-conventions">Philosophy for Conventions</a></li>
-  <li><a href="#component-grouping" id="markdown-toc-component-grouping">Component Grouping</a></li>
+  <li><a href="#component-grouping-and-naming" id="markdown-toc-component-grouping-and-naming">Component Grouping and Naming</a></li>
+  <li><a href="#component-variants-and-badges" id="markdown-toc-component-variants-and-badges">Component Variants and Badges</a></li>
   <li><a href="#component-structure" id="markdown-toc-component-structure">Component Structure</a></li>
   <li><a href="#component-client-libs-namespace-convention" id="markdown-toc-component-client-libs-namespace-convention">Component Client Libs Namespace Convention</a></li>
   <li><a href="#component-versioning" id="markdown-toc-component-versioning">Component Versioning</a></li>
@@ -533,11 +534,7 @@
   <li><a href="#htl-component-template" id="markdown-toc-htl-component-template">HTL Component Template</a></li>
   <li><a href="#htl-component-wcmusepojo-class" id="markdown-toc-htl-component-wcmusepojo-class">HTL Component WCMUsePojo Class</a></li>
   <li><a href="#clientlibs-convention---javascript" id="markdown-toc-clientlibs-convention---javascript">ClientLibs Convention - JavaScript</a></li>
-  <li><a href="#functionsjs---component-functions-api-has-all-of-the-required-static-utility-functions-that-will-be-used-by-component-behaviours-these-should-only-be-functions-and-should-not-be-binding-to-elements-of-the-page-on-load-events" id="markdown-toc-functionsjs---component-functions-api-has-all-of-the-required-static-utility-functions-that-will-be-used-by-component-behaviours-these-should-only-be-functions-and-should-not-be-binding-to-elements-of-the-page-on-load-events">functions.js - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.</a></li>
-  <li><a href="#behaviourjs---component-binding-api-has-all-of-the-load-events-and-binding-to-html-uses-functions-to-help-with-structure-and-reusable-config-as-required-this-should-be-the-main-file-that-demonstrates-how-component-is-being-boudn-to-the-code" id="markdown-toc-behaviourjs---component-binding-api-has-all-of-the-load-events-and-binding-to-html-uses-functions-to-help-with-structure-and-reusable-config-as-required-this-should-be-the-main-file-that-demonstrates-how-component-is-being-boudn-to-the-code">behaviour.js - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.</a>    <ul>
-      <li><a href="#clientlibs-convention---css" id="markdown-toc-clientlibs-convention---css">ClientLibs Convention - CSS</a></li>
-    </ul>
-  </li>
+  <li><a href="#clientlibs-convention---css" id="markdown-toc-clientlibs-convention---css">ClientLibs Convention - CSS</a></li>
   <li><a href="#dialog-conventions" id="markdown-toc-dialog-conventions">Dialog Conventions</a>    <ul>
       <li><a href="#dialog-layout" id="markdown-toc-dialog-layout">Dialog Layout</a></li>
       <li><a href="#component-artifacts-alignment" id="markdown-toc-component-artifacts-alignment">Component Artifacts Alignment</a></li>
@@ -550,21 +547,128 @@
 </div>
 
 <h2 id="philosophy-for-conventions">Philosophy for Conventions</h2>
-<p>but I was hoping for something that described the philosophy and conventions (E.G. The component naming structure, usage of tags and variants, how it designed to empower frontend developers rather than require specialised AEM developers)</p>
 
-<p>Emhasis on Content - ensure that as much structure that required is converted into content so that its changable post deployment. This is following <a href="/archive/davids-model#rule-1-data-first-structure-later-maybe">Davids #1 Rule</a>.
-Abstract AEM Knoweldge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immidiatly needing to understand underlying principles.<br />
-Component Grouping and Naming - components should be names in the relation to their content and AEM purpouse, and not in relation to their end usage
-Component Variants - ability to represent different structures of component content</p>
+<p>Philosophy of AEM.Design is to empower all developers (FED/BED) to be able to achive more without having to learn a lot more initialy. This means that focus changes to providing a simplified and spcific experience that allows gradual learning of AEM and framework features. As more knowledge is gained and existing strucutres are understood developers can start update strucutres as needed.</p>
 
-<h2 id="component-grouping">Component Grouping</h2>
+<p>Major principles that should be considred as you start learning</p>
 
-<p>All components used by authors without exception must be located in their designated component group folders, this is identified in the respective Component Spec.</p>
+<ul>
+  <li>Emphases on Content - ensure that as much structure that required is converted into content so that its changable post deployment, this is following <a href="/archive/davids-model#rule-1-data-first-structure-later-maybe">Davids #1 Rule</a>.</li>
+  <li>Abstract AEM Knoweldge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immidiatly needing to understand underlying principles.</li>
+  <li>Component Grouping and Naming - components should be named in the relation to their content and AEM purpouse, and not in relation to their end usage, see more details in <a href="/manual/conventions/#component-grouping-and-naming">Component Grouping and Naming</a>.</li>
+  <li>Component Variants and Badges - ability to represent different structures of component content without having to resort to using CSS to hide available content, see more details in <a href="/manual/conventions/#component-variants-and-badges">Component Variants and Badges</a>.</li>
+  <li>Tags Usage - tags in AEM are specificaly made to provide a mechanims to create taxonomy of keywords that allow linking of content together. This capability is very usefull to represent Design Language keywords that privide styling nomenclature.</li>
+</ul>
+
+<h2 id="component-grouping-and-naming">Component Grouping and Naming</h2>
+
+<p>All components used by authors without exception must be located in their designated component group folders.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
     layout (component group)
         article
 </code></pre></div></div>
+
+<p>This structure will ensure that there components are orgnanised and easily found, additionlay grouping provides a segmentation structure that will allow component numbers scale without creating a mess in one folder.</p>
+
+<p>Following is the list of name that should be used for making component groups</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Analytics</td>
+      <td>analytics</td>
+      <td>components for analytics use</td>
+    </tr>
+    <tr>
+      <td>Media</td>
+      <td>media</td>
+      <td>assets related component, galleries, asset lists, videos etc</td>
+    </tr>
+    <tr>
+      <td>Content</td>
+      <td>content</td>
+      <td>primary components used to store authored content, content from these components is used by other components for display</td>
+    </tr>
+    <tr>
+      <td>Cloud Services</td>
+      <td>cloudservices</td>
+      <td>components for cloud services</td>
+    </tr>
+    <tr>
+      <td>Layout</td>
+      <td>layout</td>
+      <td>provide layout ability, grouping and structuring of content, contain layout and style related content</td>
+    </tr>
+    <tr>
+      <td>List</td>
+      <td>list</td>
+      <td>find pages and show their data in lists, that contain layout and style related content</td>
+    </tr>
+    <tr>
+      <td>Details</td>
+      <td>details</td>
+      <td>used to create and display custom metadata for different page types</td>
+    </tr>
+    <tr>
+      <td>Widgets</td>
+      <td>widgets</td>
+      <td>used to provide client-side functionality, integrating 3rd party services</td>
+    </tr>
+    <tr>
+      <td>Commerce</td>
+      <td>commerce</td>
+      <td>used for eComponents, shopping carts, checkouts, product listing etc</td>
+    </tr>
+    <tr>
+      <td>Common</td>
+      <td>common</td>
+      <td>used for shared components that are available to authors</td>
+    </tr>
+    <tr>
+      <td>Forms</td>
+      <td>forms</td>
+      <td>used to contain all the components that are used in forms</td>
+    </tr>
+    <tr>
+      <td>Template</td>
+      <td>template</td>
+      <td>used to store all the available Template components that contain HTML page structures</td>
+    </tr>
+    <tr>
+      <td>Workflow</td>
+      <td>workflow</td>
+      <td>steps that appear in workflow editor</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Groups are targeted to be meaning full to Authors, when creating new groups consider how to explain component groups to authors.</p>
+
+<h2 id="component-variants-and-badges">Component Variants and Badges</h2>
+
+<p>Component Variants are used as a pattern to output diffrent HTML templates for the same comonent content.</p>
+
+<p><img src="/assets/images/diagrams/component-variant-example.png" alt="Component Variants" /></p>
+
+<p>Every component will have unique fields that are used by authors for content input. Usually these fields will be tied to a specific visual representation of that content. There are scenarios where you need to be able to output diffrent HTML strucutre of a component data, to achieve Component Variant pattern is used.</p>
+
+<p><img src="/assets/images/diagrams/component-variant-entity-diagram.png" alt="Component Variants Entity Diagram" /></p>
+
+<p>Each component should have at least one default Variant and component template should provide a content driven approach to loading new Variants see <a href="/manual/conventions/#htl-component-template">HTL Comonent Template</a> for example. This allows authors to choose from a dropdown list which variant they require.</p>
+
+<p>Additionally Component Variants concepts is applied as a convention to allow a component to control display of its content in related components. This enables to abstract all of the ways that content of a component that can be presented in the component that has the content. This pattern removes dependecies of one component on structure of another component.</p>
+
+<p><img src="/assets/images/diagrams/component-badge-usage.png" alt="Component Badges" /></p>
+
+<p>If a component needs to leverage content of another component it used Sling selectors to call component with a specific badge name. This further allows asbtracting all of the structure into content and create an Author controlled presentation pattern.</p>
 
 <h2 id="component-structure">Component Structure</h2>
 
@@ -669,7 +773,7 @@ Component Variants - ability to represent different structures of component cont
             &lt;component structure&gt;
 </code></pre></div></div>
 
-<p>Where possible initial component structure should be located in the v1 subfolder, this will also ensure that evolution of component will require marginaly less effort.</p>
+<p>Where possible initial component structure should be located in the v1 subfolder, this will also ensure that evolution of component will require marginally less effort.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>components
     layout
@@ -868,8 +972,10 @@ Component Variants - ability to represent different structures of component cont
 
 <p>JavaScript for all Component JavaScript code must be divided into:</p>
 
-<h1 id="functionsjs---component-functions-api-has-all-of-the-required-static-utility-functions-that-will-be-used-by-component-behaviours-these-should-only-be-functions-and-should-not-be-binding-to-elements-of-the-page-on-load-events">functions.js - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.</h1>
-<h1 id="behaviourjs---component-binding-api-has-all-of-the-load-events-and-binding-to-html-uses-functions-to-help-with-structure-and-reusable-config-as-required-this-should-be-the-main-file-that-demonstrates-how-component-is-being-boudn-to-the-code">behaviour.js - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.</h1>
+<ol>
+  <li><strong>functions.js</strong> - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.</li>
+  <li><strong>behaviour.js</strong> - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.</li>
+</ol>
 
 <p>JS modules should be located as following</p>
 
@@ -1121,7 +1227,7 @@ Component Variants - ability to represent different structures of component cont
 
 
                 
-                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-14T03:57:42+00:00">February 14, 2020</time></p>
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-14T05:27:13+00:00">February 14, 2020</time></p>
                 
             </footer>
 
