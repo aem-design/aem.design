@@ -6,7 +6,7 @@ github:
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/background/mm-home-page-feature.jpg
-  cta_label: "<i class='fa fa-lightbulb-o'></i> Start Here"
+  cta_label: "<i class='fab fa-lightbulb-o'></i> Start Here"
   cta_url: "/quick-start-guide/"
   caption:
 excerpt: 'Create consistency in your AEM implementations by providing your team with AEM language they can use to describe things they want to achieve.'
@@ -60,7 +60,7 @@ feature_row:
 #    url: "/docs/license/"
 #    btn_label: "Learn More"
 intro:
-  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fa fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
+  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
 ---
 
 {% include feature_row.html id="intro" type="center" %}
