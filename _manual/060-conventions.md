@@ -524,6 +524,7 @@ Technically a component wrapper tag is trying to create following footprint and 
     class="${componentProperties.name} ${componentProperties.theme} ${componentProperties.modifier} ${componentProperties.chevron} ${componentProperties.icon}"
     style="width:${componentProperties.width};height:${componentProperties.height};" 
     x="${componentProperties.x}" y="${componentProperties.y}"
+    data-modules="${componentProperties.modules}"
     ${componentProperties.booleanAttributes}></div>
 ```
 
