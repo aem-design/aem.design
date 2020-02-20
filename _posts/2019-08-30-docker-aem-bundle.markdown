@@ -15,23 +15,25 @@ tags:
 
 Building on the previous work [Docker Containers Everywhere](/blog/2019/07/01/docker-containers-everywhere) we have added a new AEM 6.5 Bundle image.
 
-This image has the following packages that are installed on first start-up. 
+Following is the package map to docker tag relationship, Docker tags conventions is ```{verison}-{bundle type}```, `bundle-forms` includes all packages that are in `bundle`.
 
-| File | Notes  |
+| File | Bundle Type |
 | ---  | ---    |
-| AEM-6.5.1.0-6.5.1.zip | sp 1 |
-| AEM-Forms-6.5.1.0-LX-6.0.88.zip | aem forms |
-| aem-compat-cq65-to-cq64-0.18.zip | aem forms backwards compatibility |
-| com.adobe.acs.bundles.twitter4j-content-1.0.0.zip | acs twitter |
-| acs-aem-commons-content-4.3.0.zip | acs commons |
-| core.wcm.components.all-2.5.0.zip | adobe corecomponents |
-| accesscontroltool-package-2.3.2.zip | netcentric acl tools |
-| accesscontroltool-oakindex-package-2.3.2.zip | netcentric acl tools |
-| vanityurls-components-1.0.2.zip | vanity url servlet |
-| aemdesign-aem-core-deploy-{LATEST}.zip | aem design core |
-| aemdesign-aem-support-deploy-{LATEST}.zip | aem design showcase content |
+| AEM Service Pack | bundle |
+| AEM Forms | bundle-forms |
+| AEM Backward Compatibility package | bundle |
+| ACS Commons Twitter package | bundle |
+| ACS Commont Content | bundle |
+| ACS Commont All | bundle |
+| Netcentric ACL Tools | bundle |
+| Netcentric ACL Tools Oak Index | bundle |
+| Adobe Vanity URL Servlet | bundle |
+| AEM.Design Core | bundle |
+| AEM.Design Showcase | bundle |
+| Brightcove Integration | bundle |
+| Adobe XML Document Services | bundle |
 
-Packages that have `{LATEST}` mean that when the container is built it will pull the latest version available in git repository. 
+All packages are aimed at to be latest version. If you need to know exact versions of package please refer to the pipeline for version of container you are using, example for AEM 6.5.3.0 Bundle with Forms [https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml](https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml) 
 
 ### Running AEM in Docker
 
@@ -44,7 +46,7 @@ docker run --name author \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \
-aemdesign/aem:6.5.3.0-bundle 
+aemdesign/aem:6.5.3.0-bundle-forms 
 ```
 
 Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to `publish` and updating ports for accessing the service and you should get the following
@@ -56,7 +58,7 @@ docker run --name publish \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4503:8080 -d \
 -p30304:58242 -d \
-aemdesign/aem:6.5.3.0-bundle 
+aemdesign/aem:6.5.3.0-bundle-forms 
 ```
 
 If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:
@@ -68,7 +70,7 @@ docker run --name author65bundle \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4565:8080 -d \
 -p30365:58242 -d \
-aemdesign/aem:6.5.3.0-bundle 
+aemdesign/aem:6.5.3.0-bundle-forms 
 ```
 
 To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following
@@ -80,7 +82,7 @@ docker run --name author64 \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \
-aemdesign/aem:6.4.0-bundle 
+aemdesign/aem:6.4.0-bundle-forms 
 ```
 
 
