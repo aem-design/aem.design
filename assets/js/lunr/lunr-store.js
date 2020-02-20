@@ -175,7 +175,7 @@ var store = [{
         "url": "https://aem.design/blog/2019/07/05/docker-automation-testing",
         "teaser":null},{
         "title": "Docker AEM Bundle",
-        "excerpt":"Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image. This image has the following packages that are installed on first start-up. File Notes AEM-6.5.1.0-6.5.1.zip sp 1 AEM-Forms-6.5.1.0-LX-6.0.88.zip aem forms aem-compat-cq65-to-cq64-0.18.zip aem forms backwards compatibility com.adobe.acs.bundles.twitter4j-content-1.0.0.zip acs twitter acs-aem-commons-content-4.3.0.zip acs commons core.wcm.components.all-2.5.0.zip adobe...","categories": ["blog"],
+        "excerpt":"Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image. Following is the package map to docker tag relationship, Docker tags conventions is {verison}-{bundle type}, bundle-forms includes all packages that are in bundle. File Bundle Type AEM Service Pack bundle AEM Forms bundle-forms...","categories": ["blog"],
         "tags": ["devops","aem","docker","automation"],
         "url": "https://aem.design/blog/2019/08/30/docker-aem-bundle",
         "teaser":null},{

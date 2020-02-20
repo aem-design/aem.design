@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-02-18T00:10:04+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;div class=&quot;sticky&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-02-20T01:44:03+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;div class=&quot;sticky&quot;&gt;
     &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
       &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
@@ -886,64 +886,72 @@ ________________________________________________________________________________
 
 &lt;p&gt;Hopefully if you were scared of using java in docker containers after using &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; your fears will wash away with tears of happiness 😂&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="tini" /><summary type="html">I thought AEM does not work in Docker?</summary></entry><entry><title type="html">Docker AEM Bundle</title><link href="https://aem.design/blog/2019/08/30/docker-aem-bundle" rel="alternate" type="text/html" title="Docker AEM Bundle" /><published>2019-08-30T23:37:00+00:00</published><updated>2019-08-30T23:37:00+00:00</updated><id>https://aem.design/blog/2019/08/30/docker-aem-bundle</id><content type="html" xml:base="https://aem.design/blog/2019/08/30/docker-aem-bundle">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; we have added a new AEM 6.5 Bundle image.&lt;/p&gt;
 
-&lt;p&gt;This image has the following packages that are installed on first start-up.&lt;/p&gt;
+&lt;p&gt;Following is the package map to docker tag relationship, Docker tags conventions is &lt;code class=&quot;highlighter-rouge&quot;&gt;{verison}-{bundle type}&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle-forms&lt;/code&gt; includes all packages that are in &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;File&lt;/th&gt;
-      &lt;th&gt;Notes&lt;/th&gt;
+      &lt;th&gt;Bundle Type&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;AEM-6.5.1.0-6.5.1.zip&lt;/td&gt;
-      &lt;td&gt;sp 1&lt;/td&gt;
+      &lt;td&gt;AEM Service Pack&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;AEM-Forms-6.5.1.0-LX-6.0.88.zip&lt;/td&gt;
-      &lt;td&gt;aem forms&lt;/td&gt;
+      &lt;td&gt;AEM Forms&lt;/td&gt;
+      &lt;td&gt;bundle-forms&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;aem-compat-cq65-to-cq64-0.18.zip&lt;/td&gt;
-      &lt;td&gt;aem forms backwards compatibility&lt;/td&gt;
+      &lt;td&gt;AEM Backward Compatibility package&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;com.adobe.acs.bundles.twitter4j-content-1.0.0.zip&lt;/td&gt;
-      &lt;td&gt;acs twitter&lt;/td&gt;
+      &lt;td&gt;ACS Commons Twitter package&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;acs-aem-commons-content-4.3.0.zip&lt;/td&gt;
-      &lt;td&gt;acs commons&lt;/td&gt;
+      &lt;td&gt;ACS Commont Content&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;core.wcm.components.all-2.5.0.zip&lt;/td&gt;
-      &lt;td&gt;adobe corecomponents&lt;/td&gt;
+      &lt;td&gt;ACS Commont All&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;accesscontroltool-package-2.3.2.zip&lt;/td&gt;
-      &lt;td&gt;netcentric acl tools&lt;/td&gt;
+      &lt;td&gt;Netcentric ACL Tools&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;accesscontroltool-oakindex-package-2.3.2.zip&lt;/td&gt;
-      &lt;td&gt;netcentric acl tools&lt;/td&gt;
+      &lt;td&gt;Netcentric ACL Tools Oak Index&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;vanityurls-components-1.0.2.zip&lt;/td&gt;
-      &lt;td&gt;vanity url servlet&lt;/td&gt;
+      &lt;td&gt;Adobe Vanity URL Servlet&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;aemdesign-aem-core-deploy-{LATEST}.zip&lt;/td&gt;
-      &lt;td&gt;aem design core&lt;/td&gt;
+      &lt;td&gt;AEM.Design Core&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;aemdesign-aem-support-deploy-{LATEST}.zip&lt;/td&gt;
-      &lt;td&gt;aem design showcase content&lt;/td&gt;
+      &lt;td&gt;AEM.Design Showcase&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Brightcove Integration&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Adobe XML Document Services&lt;/td&gt;
+      &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Packages that have &lt;code class=&quot;highlighter-rouge&quot;&gt;{LATEST}&lt;/code&gt; mean that when the container is built it will pull the latest version available in git repository.&lt;/p&gt;
+&lt;p&gt;All packages are aimed at to be latest version. If you need to know exact versions of package please refer to the pipeline for version of container you are using, example for AEM 6.5.3.0 Bundle with Forms &lt;a href=&quot;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&quot;&gt;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;running-aem-in-docker&quot;&gt;Running AEM in Docker&lt;/h3&gt;
 
@@ -955,7 +963,7 @@ ________________________________________________________________________________
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle 
+aemdesign/aem:6.5.3.0-bundle-forms 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to &lt;code class=&quot;highlighter-rouge&quot;&gt;publish&lt;/code&gt; and updating ports for accessing the service and you should get the following&lt;/p&gt;
@@ -966,7 +974,7 @@ aemdesign/aem:6.5.3.0-bundle
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4503&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30304&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle 
+aemdesign/aem:6.5.3.0-bundle-forms 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:&lt;/p&gt;
@@ -977,7 +985,7 @@ aemdesign/aem:6.5.3.0-bundle
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4565&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30365&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle 
+aemdesign/aem:6.5.3.0-bundle-forms 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
@@ -988,7 +996,7 @@ aemdesign/aem:6.5.3.0-bundle
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.4.0-bundle 
+aemdesign/aem:6.4.0-bundle-forms 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;license&quot;&gt;License&lt;/h3&gt;
