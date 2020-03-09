@@ -208,9 +208,4 @@ var store = [{
         "excerpt":"On This Page Introduction AEM SaaS Author Hand On Environments Pipeline AEM SaaS Pipelines Breakdown Validation Build &amp; Unit Testing Code Scanning Build Images Deploy to Dev AEM SaaS Pipelines What’s missing Git Peer Review Workflow Automated Functional testing No Git LFS No Felix Console Conclusion Introduction If Github Actions...","categories": ["blog"],
         "tags": ["devops","aem","saas","knowledge","sharing","handson"],
         "url": "https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD",
-        "teaser":null},{
-        "title": "AEM SaaS Hands On 😍🚀🔭",
-        "excerpt":"On This Page Introduction AEM SaaS Author Hand On Environments Pipeline AEM SaaS Pipelines Breakdown Validation Build &amp; Unit Testing Code Scanning Build Images Deploy to Dev AEM SaaS Pipelines What’s missing Git Peer Review Workflow Automated Functional testing No Git LFS No Felix Console Conclusion Introduction If Github Actions...","categories": ["blog"],
-        "tags": ["devops","aem","saas","knowledge","sharing","handson"],
-        "url": "https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD",
         "teaser":null}]
