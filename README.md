@@ -45,3 +45,23 @@ Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
 # Google Ads
 
 Config is located in `_data/advertising.yml` html should not need to be changed and located in `_includes/adds/adsense.html`
+
+# Project Structure Description
+
+Following is the description of important sections in the project. 
+
+* `assets` - folder for all assets that appear on the site
+* `_archive` - pages that have been referenced and migrated from the internet to ensure they keep existing 
+* `_posts` - location for all Blog posts, add your markdown here and create a subfolder in `assests` for all your images etc
+* `_manual` - folder for the Manual section of the site 
+* `_manifesto` - folder for the Manifesto section of the site
+* `_layouts` - templates for pages
+* `_docs` - general info pages
+* `_pages` - admin pages for site
+* `_data` - data config for page modules
+* `_config.yml` - primary config for whole site
+
+Additional Notes
+
+* all items with `_` (underscore) are essentially hidden.
+* to add new sections and items to navigation `_config.yml` and `_data/navigation.yml` should be updated
