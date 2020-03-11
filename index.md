@@ -60,8 +60,10 @@ feature_row:
 #    url: "/docs/license/"
 #    btn_label: "Learn More"
 intro:
-  - excerpt: 'Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
+  - excerpt: '[<img src="/assets/images/brave/cropped-brave_appicon_release-270x270.png" style=" background-size: contain; width: 32px; height: 32px;"/> Download Brave and Send us a Tip!](https://brave.com/aem741) <br> Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
 ---
+
+
 
 {% include feature_row.html id="intro" type="center" %}
 
