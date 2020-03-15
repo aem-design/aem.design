@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-03-15T13:33:13+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;div class=&quot;sticky&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-03-15T13:42:36+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html"></title><link href="https://aem.design/2020-03-06-aem-magento-integration/" rel="alternate" type="text/html" title="" /><published>2020-03-15T13:42:36+00:00</published><updated>2020-03-15T13:42:36+00:00</updated><id>https://aem.design/2020-03-06-aem-magento-integration</id><content type="html" xml:base="https://aem.design/2020-03-06-aem-magento-integration/">&lt;h1 id=&quot;aem-with-magento-integration&quot;&gt;AEM with Magento Integration&lt;/h1&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.&lt;/p&gt;
+
+&lt;p&gt;eCommerce functionality is inherent in AEM which shows from demo sites like we retail.
+As AEM provides very perfect handling of content like authoring and publishing and managing assets, integrating it with eCommerce system provides a perfect way to build a robust eCommerce site.&lt;/p&gt;
+
+&lt;p&gt;AEM connects with eCommerce providers, Like SAP Commerce, Salesforce, Magento and more. AEM provides specific eCommerce frameworks to connect to eCommerce providers.
+In this blog we are going to see how AEM connects to Magento eCommerce. There are two ways to connect to an eCommerce provider Adobe IO or Commerce Integration Framework for a provider.
+Because AEM provides a Commerce Integration Framework connector to connect to Magento, we will be using that. CIF uses GraphQL queries to talk to Magento and bring data.&lt;/p&gt;
+
+&lt;p&gt;Note: To connect to eCommerce providers other than Magento we need to go through Adobe IO. For more info visit. : https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/faq.html&lt;/p&gt;
+
+&lt;p&gt;Let’s jump into the steps to implement CIF now.&lt;/p&gt;
+
+&lt;p&gt;The commerce integration framework can be found at below locations. Adobe provides production ready components also which can be used.
+	AEM CIF components
+	AEM- CIF connector and authoring tools&lt;/p&gt;
+
+&lt;p&gt;Build the CIF connector framework or add in your dependencies. Once installed in AEM we can get option to configure the integration properties.
+Two configurations have to be done. GraphQL client configuration and CIF catalog Magento configuration.&lt;/p&gt;
+
+&lt;p&gt;Below are the steps where we have configured these.&lt;/p&gt;
+
+&lt;p&gt;I.	CIF GraphQL Client Configuration Factory&lt;/p&gt;
+
+&lt;p&gt;Add GraphQL service – https://magento-hostname/graphql&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/aem-magento-integration/graphql-client-configuration.png&quot; alt=&quot;GraphQL client configuration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;II.	CIF Catalog Magento GraphQL Configuration Factory
+&lt;img src=&quot;/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png&quot; alt=&quot;CIF magento graphql configuration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.&lt;/p&gt;
+
+&lt;p&gt;{category(id:2){id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count}}}}}}&lt;/p&gt;
+
+&lt;p&gt;The response must return results with exact numbers. A sample result is below&lt;/p&gt;
+
+&lt;p&gt;{“data”:{“category”:{“id”:2,”name”:”Default Category”,”url_path”:null,”product_count”:7,”children_count”:”3”,”children”:[{“id”:5,”name”:”Mens”,”url_path”:”mens-shirts”,”product_count”:2,”children_count”:”1”,”children”:[{“id”:6,”name”:”Footwear”,”url_path”:”mens-shirts\/footwear”,”product_count”:1,”children_count”:”0”,”children”:[]}]},{“id”:4,”name”:”SubCategory01”,”url_path”:”subcategory01”,”product_count”:2,”children_count”:”0”,”children”:[]}]}}}&lt;/p&gt;
+
+&lt;p&gt;Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.&lt;/p&gt;
+
+&lt;p&gt;Below image describes the binding configuration.
+&lt;img src=&quot;/assets/images/aem-magento-integration/magento-binding.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
+&lt;img src=&quot;/assets/images/aem-magento-integration/Product-Shoe.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author></entry><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;div class=&quot;sticky&quot;&gt;
     &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
       &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
@@ -332,56 +381,7 @@
 
 &lt;p&gt;There is a whole array of documentation available at your favourite site in the &lt;a href=&quot;https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html&quot;&gt;Experience Manager Cloud Manager Help&lt;/a&gt; section, explore the new capability that is at your disposal and review official docs if you get stuck.&lt;/p&gt;
 
-&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Magento Integration 😍🚀🔭</title><link href="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM Magento Integration 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/03/06/aem-magento-integration</id><content type="html" xml:base="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;h1 id=&quot;aem-with-magento-integration&quot;&gt;AEM with Magento Integration&lt;/h1&gt;
-
-&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.&lt;/p&gt;
-
-&lt;p&gt;eCommerce functionality is inherent in AEM which shows from demo sites like we retail.
-As AEM provides very perfect handling of content like authoring and publishing and managing assets, integrating it with eCommerce system provides a perfect way to build a robust eCommerce site.&lt;/p&gt;
-
-&lt;p&gt;AEM connects with eCommerce providers, Like SAP Commerce, Salesforce, Magento and more. AEM provides specific eCommerce frameworks to connect to eCommerce providers.
-In this blog we are going to see how AEM connects to Magento eCommerce. There are two ways to connect to an eCommerce provider Adobe IO or Commerce Integration Framework for a provider.
-Because AEM provides a Commerce Integration Framework connector to connect to Magento, we will be using that. CIF uses GraphQL queries to talk to Magento and bring data.&lt;/p&gt;
-
-&lt;p&gt;Note: To connect to eCommerce providers other than Magento we need to go through Adobe IO. For more info visit. : https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/faq.html&lt;/p&gt;
-
-&lt;p&gt;Let’s jump into the steps to implement CIF now.&lt;/p&gt;
-
-&lt;p&gt;The commerce integration framework can be found at below locations. Adobe provides production ready components also which can be used.
-	AEM CIF components
-	AEM- CIF connector and authoring tools&lt;/p&gt;
-
-&lt;p&gt;Build the CIF connector framework or add in your dependencies. Once installed in AEM we can get option to configure the integration properties.
-Two configurations have to be done. GraphQL client configuration and CIF catalog Magento configuration.&lt;/p&gt;
-
-&lt;p&gt;Below are the steps where we have configured these.&lt;/p&gt;
-
-&lt;p&gt;I.	CIF GraphQL Client Configuration Factory&lt;/p&gt;
-
-&lt;p&gt;Add GraphQL service – https://magento-hostname/graphql&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/aem-magento-integration/graphql-client-configuration.png&quot; alt=&quot;GraphQL client configuration&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;II.	CIF Catalog Magento GraphQL Configuration Factory
-&lt;img src=&quot;/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png&quot; alt=&quot;CIF magento graphql configuration&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.&lt;/p&gt;
-
-&lt;p&gt;{category(id:2){id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count}}}}}}&lt;/p&gt;
-
-&lt;p&gt;The response must return results with exact numbers. A sample result is below&lt;/p&gt;
-
-&lt;p&gt;{“data”:{“category”:{“id”:2,”name”:”Default Category”,”url_path”:null,”product_count”:7,”children_count”:”3”,”children”:[{“id”:5,”name”:”Mens”,”url_path”:”mens-shirts”,”product_count”:2,”children_count”:”1”,”children”:[{“id”:6,”name”:”Footwear”,”url_path”:”mens-shirts\/footwear”,”product_count”:1,”children_count”:”0”,”children”:[]}]},{“id”:4,”name”:”SubCategory01”,”url_path”:”subcategory01”,”product_count”:2,”children_count”:”0”,”children”:[]}]}}}&lt;/p&gt;
-
-&lt;p&gt;Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.&lt;/p&gt;
-
-&lt;p&gt;Below image describes the binding configuration.
-&lt;img src=&quot;/assets/images/aem-magento-integration/magento-binding.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
-&lt;img src=&quot;/assets/images/aem-magento-integration/Product-Shoe.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;</content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><summary type="html">Integrate AEM with Magento to us eCommerce functionality!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+00:00</published><updated>2020-01-12T00:37:00+00:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+00:00</published><updated>2020-01-12T00:37:00+00:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open source framework that can accelerate projects and provide a pathway for sharing knowledge with community in a consumable production ready framework. A lot of articles detail individual knowledge fragments that at times useful on their own but do not provide a clear direction for end use. We have tried to create a consolidated reference end-to-end approach with AEM.design framework and tools.&lt;/p&gt;
 
