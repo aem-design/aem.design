@@ -37,7 +37,7 @@ The commerce integration framework can be found at below locations. Adobe provid
 * [AEM CIF components](https://github.com/adobe/aem-core-cif-components)
 * [AEM- CIF connector and authoring tools](https://github.com/adobe/commerce-cif-connector)
 
-
+*
 
 Build the CIF connector framework or add in your dependencies. Once installed in AEM we can get option to configure the integration properties.
 Two configurations have to be done. GraphQL client configuration and CIF catalog Magento configuration.
