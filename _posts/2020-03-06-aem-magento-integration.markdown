@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /blog/2020/03/06/aem-magento-integration😍🚀🔭
+permalink: /blog/2020/03/06/aem-magento-integration :smiley:
 title:  "AEM Magento Integration 😍🚀🔭"
 excerpt: "Integrate AEM with Magento to us eCommerce functionality!"
 date:   2020-02-01 00:37:00:00 +1100
