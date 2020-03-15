@@ -31,7 +31,7 @@ I.	CIF GraphQL Client Configuration Factory
 
 Add GraphQL service – https://magento-hostname/graphql
 
-
+![GraphQL client configuration](/assets/images/aem-magento-integration/graphql-client-configuration.png)
 
 
 
