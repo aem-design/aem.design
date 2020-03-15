@@ -1,7 +1,22 @@
-AEM with Magento Integration
+---
+layout: single
+permalink: /blog/2020/03/06/aem-magento-integration😍🚀🔭
+title:  "AEM Magento Integration 😍🚀🔭"
+excerpt: "Integrate AEM with Magento to us eCommerce functionality!"
+date:   2020-02-01 00:37:00:00 +1100
+author: saket.mishra.kr@gmail.com
+editor: saket.mishra.kr@gmail.com
+categories:
+  - blog
 
+---
+
+
+AEM with Magento Integration
+===
 
 Introduction
+===
 
 AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.
 
@@ -37,7 +52,7 @@ Add GraphQL service – https://magento-hostname/graphql
 
 
 II.	CIF Catalog Magento GraphQL Configuration Factory
-
+![CIF magento graphql configuration](/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png)
 
 
 
@@ -53,11 +68,11 @@ The response must return results with exact numbers. A sample result is below
 Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.
 
 Below image describes the binding configuration.
-
+![Binding](/assets/images/aem-magento-integration/magento-binding.png)
 
 
 
 Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
-
+![Binding](/assets/images/aem-magento-integration/Product-Shoe.png)
 
 
