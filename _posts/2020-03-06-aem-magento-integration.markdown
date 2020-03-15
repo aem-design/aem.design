@@ -33,6 +33,8 @@ Note: To connect to eCommerce providers other than Magento we need to go through
 Let’s jump into the steps to implement CIF now.
 
 The commerce integration framework can be found at below locations. Adobe provides production ready components also which can be used.
+[AEM CIF components](https://github.com/adobe/aem-core-cif-components)
+[AEM- CIF connector and authoring tools](https://github.com/adobe/commerce-cif-connector)
 	AEM CIF components
 	AEM- CIF connector and authoring tools
 
