@@ -15,6 +15,8 @@ categories:
 AEM with Magento Integration
 ===
 
+{% include toc_sticky.html %}
+
 Introduction
 ===
 
