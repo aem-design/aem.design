@@ -250,10 +250,4 @@ var store = [{
         "tags": ["devops","aem","saas","knowledge","sharing","handson"],
         "url": "https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD",
         "teaser": null
-      },{
-        "title": "AEM Magento Integration 😍🚀🔭",
-        "excerpt":"AEM with Magento Integration On This Page AEM with Magento Integration Introduction Introduction AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities. eCommerce functionality is inherent in AEM which shows from demo sites like we retail. As AEM provides very perfect handling of content...","categories": ["blog"],
-        "tags": [],
-        "url": "https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD",
-        "teaser": null
       }]
