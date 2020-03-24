@@ -381,7 +381,7 @@
 
 
 
-  2 minute read
+  3 minute read
 
 </p>
                 
@@ -458,13 +458,62 @@
 
 <p>All packages are aimed at to be latest version. If you need to know exact versions of package please refer to the pipeline for version of container you are using, example for AEM 6.5.3.0 Bundle with Forms <a href="https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml">https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml</a></p>
 
+<h3 id="existing-run-modes">Existing Run Modes</h3>
+
+<p>Its recommended to use <a href="https://docs.adobe.com/content/help/en/experience-manager-64/deploying/configuring/configure-runmodes.html">run-modes</a> to specify different configurations for different target. <a href="https://github.com/aem-design/aemdesign-aem-support">AEM.Design Support</a> project has a sub-module <a href="https://github.com/aem-design/aemdesign-aem-support/tree/master/aemdesign-aem-config">aemdesign-aem-config</a> that contains reference configs for particular run-modes. Following is the definition of all run-modes, this should be expanded in your tenant codebase when you <a href="/manifesto/project/#project-archetype">generate it for your project using archetype</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Run Mode</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>config</td>
+      <td>default config for all instances</td>
+    </tr>
+    <tr>
+      <td>config.author</td>
+      <td>author instance with specific author configs</td>
+    </tr>
+    <tr>
+      <td>config.author.forms</td>
+      <td>author instance with Adobe Forms configs</td>
+    </tr>
+    <tr>
+      <td>config.author.localdev</td>
+      <td>author instance for local development</td>
+    </tr>
+    <tr>
+      <td>config.ldap</td>
+      <td>ldap config for all instances</td>
+    </tr>
+    <tr>
+      <td>config.publish</td>
+      <td>publish instance with specific author configs</td>
+    </tr>
+    <tr>
+      <td>config.publish.forms</td>
+      <td>publish instance with Adobe Forms configs</td>
+    </tr>
+    <tr>
+      <td>config.publish.localdev</td>
+      <td>publish on local development</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you would like to provide environment specific configurations our recommendation would be to create individual repos for each configuration set, this will ensure that you do not mix prod and dev configs in one repo.</p>
+
 <h3 id="running-aem-in-docker">Running AEM in Docker</h3>
 
 <p>To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
-<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span> <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4502</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30303</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
@@ -475,7 +524,7 @@ aemdesign/aem:6.5.3.0-bundle-forms
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> publish <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
-<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,localdev"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,forms,localdev"</span> <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4503</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30304</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
@@ -486,7 +535,7 @@ aemdesign/aem:6.5.3.0-bundle-forms
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author65bundle <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
-<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span> <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4565</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30365</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
@@ -497,7 +546,7 @@ aemdesign/aem:6.5.3.0-bundle-forms
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author64 <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
-<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span> <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4502</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30303</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
