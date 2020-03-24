@@ -121,7 +121,7 @@ Running following command will generate a sample project
 mvn archetype:generate \
   -DarchetypeGroupId=design.aem \
   -DarchetypeArtifactId=aemdesign-archetype \
-  -DarchetypeVersion=1.0.51 \
+  -DarchetypeVersion=1.0.52 \
   -DgroupId=design.aem.projectx \
   -DgroupTitle="ProjectX" \
   -DartifactId=projectx \
