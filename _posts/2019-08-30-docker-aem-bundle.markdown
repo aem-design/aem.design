@@ -35,6 +35,23 @@ Following is the package map to docker tag relationship, Docker tags conventions
 
 All packages are aimed at to be latest version. If you need to know exact versions of package please refer to the pipeline for version of container you are using, example for AEM 6.5.3.0 Bundle with Forms [https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml](https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml) 
 
+### Existing Run Modes
+
+Its recommended to use [run-modes](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/configuring/configure-runmodes.html) to specify different configurations for different target. [AEM.Design Support](https://github.com/aem-design/aemdesign-aem-support) project has a sub-module [aemdesign-aem-config](https://github.com/aem-design/aemdesign-aem-support/tree/master/aemdesign-aem-config) that contains reference configs for particular run-modes. Following is the definition of all run-modes, this should be expanded in your tenant codebase when you [generate it for your project using archetype](/manifesto/project/#project-archetype).   
+
+| Run Mode | Description |
+|----------|--------------| 
+| config | default config for all instances |
+| config.author | author instance with specific author configs |
+| config.author.forms | author instance with Adobe Forms configs | 
+| config.author.localdev | author instance for local development |
+| config.ldap | ldap config for all instances |
+| config.publish | publish instance with specific author configs |
+| config.publish.forms | publish instance with Adobe Forms configs |
+| config.publish.localdev| publish on local development |
+
+If you would like to provide environment specific configurations our recommendation would be to create individual repos for each configuration set, this will ensure that you do not mix prod and dev configs in one repo.
+
 ### Running AEM in Docker
 
 To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following
@@ -42,7 +59,7 @@ To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundl
 ```bash
 docker run --name author \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \
@@ -54,7 +71,7 @@ Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of upd
 ```bash
 docker run --name publish \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,localdev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4503:8080 -d \
 -p30304:58242 -d \
@@ -66,7 +83,7 @@ If you would like to start AEM Bundle version on different port to say run it al
 ```bash
 docker run --name author65bundle \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4565:8080 -d \
 -p30365:58242 -d \
@@ -78,7 +95,7 @@ To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the 
 ```bash
 docker run --name author64 \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \
