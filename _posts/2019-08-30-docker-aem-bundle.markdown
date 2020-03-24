@@ -42,7 +42,7 @@ To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundl
 ```bash
 docker run --name author \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \
@@ -54,7 +54,7 @@ Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of upd
 ```bash
 docker run --name publish \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4503:8080 -d \
 -p30304:58242 -d \
@@ -66,7 +66,7 @@ If you would like to start AEM Bundle version on different port to say run it al
 ```bash
 docker run --name author65bundle \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4565:8080 -d \
 -p30365:58242 -d \
@@ -78,7 +78,7 @@ To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the 
 ```bash
 docker run --name author64 \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \

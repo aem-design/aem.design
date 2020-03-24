@@ -23,7 +23,7 @@ If you want to quickly start a local demo AEM 6.5 instance on port ``4502`` with
 ```bash
 docker run --name author \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4502:8080 -d \
 -p30303:58242 -d \
@@ -37,7 +37,7 @@ Then you decide that you want to compare latest AEM to AEM 6.4 with a tweak to p
 ```bash
 docker run --name author64 \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4512:8080 -d \
 -p30313:58242 -d \
@@ -49,7 +49,7 @@ Then if you decide to run AEM 6.5 publish instance, same command with minor upda
 ```bash
 docker run --name publish \
 -e "TZ=Australia/Sydney" \
--e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,dev" \
+-e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
 -p4503:8080 -d \
 -p40404:58242 -d \
