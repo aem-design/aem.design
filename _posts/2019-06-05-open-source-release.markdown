@@ -14,13 +14,13 @@ Open source is at the core of AEM.
 
 Supporting community is core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice.
 Our components are tested though practice and implemented so that you can use them the way you want.
-We aim at developing component that are free of noise and deliver exactly what you are looking for clean, lean HTML footprint that speaks content and does not get on the way.   
+We aim at developing component that are free of noise and deliver exactly what you are looking for clean, lean HTML footprint that speaks content and does not get on the way.
 
 We strongly believe that open source provides most transparent way of giving feedback about our work.
 We believe that having a common goal for creating and spreading good practices on making your AEM experience awesome.
 We do open source to encourage sharing of great things that can be done in AEM.
 
-Here is the list of all components that we currently have in the framework. [Component List](https://github.com/aem-design/aemdesign-aem-core/wiki/Component-List)
+Here is the list of all components that we currently have in the framework. List source is located here [Component List](https://drive.google.com/open?id=1BPWQQEVPhB9NaOyeOODcuygkM1DgHS5Plj9TJRKX-cM) all component have been tested up to AEM 6.6 running in AEM SaaS.
 
 | Component Category                                              	| Link                                                                                                                                   	|
 |-----------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------	|
@@ -87,6 +87,7 @@ Here is the list of all components that we currently have in the framework. [Com
 | Widgets / AddThis / Addthis Button                              	| [Addthis Button](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/addthis/sharebutton/v2/sharebutton)                    	|
 | Widgets / Online Media                                          	| [Online Media](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/onlinemedia/v2/onlinemedia)                              	|
 | Widgets / Search Box                                            	| [Search Box](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/widgets/search/v2/search)                                          	|
+| Workflow / Content Fragment Page Generator                        | [Content Fragment Page Generator](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/contentfragmentpagegen)                  |
 | Workflow / Process Payload                                      	| [Process Payload](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/processpayload)                                      	|
 | Workflow / Project Task Manager                                 	| [Project Task Manager](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/projecttaskmanager)                             	|
 | Workflow / Project Update                                       	| [Project Update](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/projectupdate)                                        	|
