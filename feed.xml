@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-04-26T10:46:07+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;div class=&quot;sticky&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2020-04-30T12:43:58+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+00:00</published><updated>2020-02-01T00:37:00+00:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;div class=&quot;sticky&quot;&gt;
     &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
       &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
@@ -913,11 +913,11 @@ ________________________________________________________________________________
       &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;ACS Commont Content&lt;/td&gt;
+      &lt;td&gt;ACS Commons Content&lt;/td&gt;
       &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;ACS Commont All&lt;/td&gt;
+      &lt;td&gt;ACS Commons All&lt;/td&gt;
       &lt;td&gt;bundle&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -951,7 +951,7 @@ ________________________________________________________________________________
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;All packages are aimed at to be latest version. If you need to know exact versions of package please refer to the pipeline for version of container you are using, example for AEM 6.5.3.0 Bundle with Forms &lt;a href=&quot;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&quot;&gt;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;All packages are aimed at to be the latest version. If you need to know exact versions of a package, please refer to the pipeline for the version of the container you are using, example for AEM 6.5.3.0 Bundle with Forms &lt;a href=&quot;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&quot;&gt;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;existing-run-modes&quot;&gt;Existing Run Modes&lt;/h3&gt;
 
@@ -1004,7 +1004,7 @@ ________________________________________________________________________________
 
 &lt;h3 id=&quot;running-aem-in-docker&quot;&gt;Running AEM in Docker&lt;/h3&gt;
 
-&lt;p&gt;To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
+&lt;p&gt;To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -1012,10 +1012,10 @@ ________________________________________________________________________________
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle-forms 
+aemdesign/aem:6.5.3.0-bundle-forms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to &lt;code class=&quot;highlighter-rouge&quot;&gt;publish&lt;/code&gt; and updating ports for accessing the service and you should get the following&lt;/p&gt;
+&lt;p&gt;Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to &lt;code class=&quot;highlighter-rouge&quot;&gt;publish&lt;/code&gt; and updating ports for accessing the service, and you should get the following.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; publish &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -1023,7 +1023,7 @@ aemdesign/aem:6.5.3.0-bundle-forms
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4503&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30304&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle-forms 
+aemdesign/aem:6.5.3.0-bundle-forms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:&lt;/p&gt;
@@ -1034,10 +1034,10 @@ aemdesign/aem:6.5.3.0-bundle-forms
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4565&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30365&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle-forms 
+aemdesign/aem:6.5.3.0-bundle-forms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following&lt;/p&gt;
+&lt;p&gt;To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -1045,30 +1045,30 @@ aemdesign/aem:6.5.3.0-bundle-forms
 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.4.0-bundle-forms 
+aemdesign/aem:6.4.0-bundle-forms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;license&quot;&gt;License&lt;/h3&gt;
 
-&lt;p&gt;You will need a license to active the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:&lt;/p&gt;
+&lt;p&gt;You will need a license to activate the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/license/license-page.png&quot; alt=&quot;AEM License Page&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Confirmation screen will show you what version of AEM you are running.&lt;/p&gt;
+&lt;p&gt;The confirmation screen will show you what version of AEM you are running.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/license/license-confirm.png&quot; alt=&quot;AEM License Page&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Additionally once you login you can visit the &lt;a href=&quot;http://localhost:4502/system/console/productinfo&quot;&gt;Product Info&lt;/a&gt; console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example if you choose AEM 6.5 with Service Pack 1 its version will be &lt;code class=&quot;highlighter-rouge&quot;&gt;6.5.1.0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, once you log in, you can visit the &lt;a href=&quot;http://localhost:4502/system/console/productinfo&quot;&gt;Product Info&lt;/a&gt; console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example, if you choose AEM 6.5 with Service Pack 1 its version will be &lt;code class=&quot;highlighter-rouge&quot;&gt;6.5.1.0&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;packages&quot;&gt;Packages&lt;/h3&gt;
 
-&lt;p&gt;You will notice that your bundle container will come with latest SP installed and other packages. Each bundle image tag has a corresponding branch in github you can check the &lt;a href=&quot;https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml&quot;&gt;.travis.yml&lt;/a&gt; file to see which packages are pre-installed.&lt;/p&gt;
+&lt;p&gt;You will notice that your bundle container will come with the latest SP installed and other packages. Each bundle image tag has a corresponding branch in GitHub you can check the &lt;a href=&quot;https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml&quot;&gt;.travis.yml&lt;/a&gt; file to see which packages are pre-installed.&lt;/p&gt;
 
 &lt;h3 id=&quot;thank-you&quot;&gt;Thank you&lt;/h3&gt;
 
 &lt;p&gt;Please checkout the docker hub &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; for further details.&lt;/p&gt;
 
-&lt;p&gt;If you would like to contribute or fork the code you can get it on github &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;https://github.com/aem-design/aem&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you would like to contribute or fork the code, you can get it on GitHub &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;https://github.com/aem-design/aem&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Bundle version comes with following &lt;a href=&quot;https://github.com/aem-design&quot;&gt;AEM.Design&lt;/a&gt; projects:&lt;/p&gt;
 &lt;ul&gt;
@@ -1185,15 +1185,15 @@ Change the parameter &lt;code class=&quot;highlighter-rouge&quot;&gt;since&lt;/c
 
 &lt;p&gt;Let us know what you think!&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="devops" /><category term="aem" /><category term="docker" /><category term="dispatcher" /><category term="automation" /><category term="testing" /><summary type="html">Quick update to showcase upcoming automated tests results using Github Pages.</summary></entry><entry><title type="html">Open source is for feedback</title><link href="https://aem.design/blog/2019/06/05/open-source-is-for-feedback" rel="alternate" type="text/html" title="Open source is for feedback" /><published>2019-06-05T11:00:00+00:00</published><updated>2019-06-05T11:00:00+00:00</updated><id>https://aem.design/blog/2019/06/05/open-source-release</id><content type="html" xml:base="https://aem.design/blog/2019/06/05/open-source-is-for-feedback">&lt;p&gt;Open source is at the core of AEM.&lt;/p&gt;
 
-&lt;p&gt;Supporting community is core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice.
-Our components are tested though practice and implemented so that you can use them the way you want.
-We aim at developing component that are free of noise and deliver exactly what you are looking for clean, lean HTML footprint that speaks content and does not get on the way.&lt;/p&gt;
+&lt;p&gt;Supporting the community is the core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice.
+Our components are tested through practice and implemented so that you can use them the way you want.
+We aim at developing a component that is free of noise and delivers exactly what you are looking for which is a clean, lean HTML footprint that speaks content and does not get on the way with opinions.&lt;/p&gt;
 
-&lt;p&gt;We strongly believe that open source provides most transparent way of giving feedback about our work.
+&lt;p&gt;We strongly believe that open source provides the most transparent way of giving feedback about our work.
 We believe that having a common goal for creating and spreading good practices on making your AEM experience awesome.
 We do open source to encourage sharing of great things that can be done in AEM.&lt;/p&gt;
 
-&lt;p&gt;Here is the list of all components that we currently have in the framework. List source is located here &lt;a href=&quot;https://drive.google.com/open?id=1BPWQQEVPhB9NaOyeOODcuygkM1DgHS5Plj9TJRKX-cM&quot;&gt;Component List&lt;/a&gt; all component have been tested up to AEM 6.6 running in AEM SaaS.&lt;/p&gt;
+&lt;p&gt;Here is the list of all components that we currently have in the framework. List source is located here &lt;a href=&quot;https://drive.google.com/open?id=1BPWQQEVPhB9NaOyeOODcuygkM1DgHS5Plj9TJRKX-cM&quot;&gt;Component List&lt;/a&gt; all components have been tested up to AEM 6.6 running in AEM SaaS.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -1504,4 +1504,6 @@ We do open source to encourage sharing of great things that can be done in AEM.&
       &lt;td&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/widgets/form/assetoptions&quot;&gt;Asset Options&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">Open source is at the core of AEM.</summary></entry></feed>
+&lt;/table&gt;
+
+&lt;p&gt;If you want to see these components in action, you can pull our latest docker container to get a quick preview of what comes out the box, view instructions here: https://lnkd.in/gtQ8hDB&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="update" /><summary type="html">Open source is at the core of AEM.</summary></entry></feed>

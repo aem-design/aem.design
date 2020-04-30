@@ -192,7 +192,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Open source is for feedback",
-        "excerpt":"Open source is at the core of AEM. Supporting community is core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice. Our components are tested though practice and implemented so that you can use them the way you want. We...","categories": ["blog"],
+        "excerpt":"Open source is at the core of AEM. Supporting the community is the core principle of AEM.Design. AEM Design has always been about providing principled design patterns for AEM, that work in practice. Our components are tested through practice and implemented so that you can use them the way you...","categories": ["blog"],
         "tags": ["update"],
         "url": "https://aem.design/blog/2019/06/05/open-source-is-for-feedback",
         "teaser": null

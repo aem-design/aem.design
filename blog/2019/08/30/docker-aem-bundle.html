@@ -418,11 +418,11 @@
       <td>bundle</td>
     </tr>
     <tr>
-      <td>ACS Commont Content</td>
+      <td>ACS Commons Content</td>
       <td>bundle</td>
     </tr>
     <tr>
-      <td>ACS Commont All</td>
+      <td>ACS Commons All</td>
       <td>bundle</td>
     </tr>
     <tr>
@@ -456,7 +456,7 @@
   </tbody>
 </table>
 
-<p>All packages are aimed at to be latest version. If you need to know exact versions of package please refer to the pipeline for version of container you are using, example for AEM 6.5.3.0 Bundle with Forms <a href="https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml">https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml</a></p>
+<p>All packages are aimed at to be the latest version. If you need to know exact versions of a package, please refer to the pipeline for the version of the container you are using, example for AEM 6.5.3.0 Bundle with Forms <a href="https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml">https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml</a></p>
 
 <h3 id="existing-run-modes">Existing Run Modes</h3>
 
@@ -509,7 +509,7 @@
 
 <h3 id="running-aem-in-docker">Running AEM in Docker</h3>
 
-<p>To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following</p>
+<p>To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -517,10 +517,10 @@
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4502</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30303</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
-aemdesign/aem:6.5.3.0-bundle-forms 
+aemdesign/aem:6.5.3.0-bundle-forms
 </code></pre></div></div>
 
-<p>Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to <code class="highlighter-rouge">publish</code> and updating ports for accessing the service and you should get the following</p>
+<p>Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to <code class="highlighter-rouge">publish</code> and updating ports for accessing the service, and you should get the following.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> publish <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -528,7 +528,7 @@ aemdesign/aem:6.5.3.0-bundle-forms
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4503</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30304</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
-aemdesign/aem:6.5.3.0-bundle-forms 
+aemdesign/aem:6.5.3.0-bundle-forms
 </code></pre></div></div>
 
 <p>If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:</p>
@@ -539,10 +539,10 @@ aemdesign/aem:6.5.3.0-bundle-forms
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4565</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30365</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
-aemdesign/aem:6.5.3.0-bundle-forms 
+aemdesign/aem:6.5.3.0-bundle-forms
 </code></pre></div></div>
 
-<p>To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following</p>
+<p>To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author64 <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -550,30 +550,30 @@ aemdesign/aem:6.5.3.0-bundle-forms
 <span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
 <span class="nt">-p4502</span>:8080 <span class="nt">-d</span> <span class="se">\</span>
 <span class="nt">-p30303</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
-aemdesign/aem:6.4.0-bundle-forms 
+aemdesign/aem:6.4.0-bundle-forms
 </code></pre></div></div>
 
 <h3 id="license">License</h3>
 
-<p>You will need a license to active the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:</p>
+<p>You will need a license to activate the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:</p>
 
 <p><img src="/assets/images/license/license-page.png" alt="AEM License Page" /></p>
 
-<p>Confirmation screen will show you what version of AEM you are running.</p>
+<p>The confirmation screen will show you what version of AEM you are running.</p>
 
 <p><img src="/assets/images/license/license-confirm.png" alt="AEM License Page" /></p>
 
-<p>Additionally once you login you can visit the <a href="http://localhost:4502/system/console/productinfo">Product Info</a> console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example if you choose AEM 6.5 with Service Pack 1 its version will be <code class="highlighter-rouge">6.5.1.0</code>.</p>
+<p>Additionally, once you log in, you can visit the <a href="http://localhost:4502/system/console/productinfo">Product Info</a> console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example, if you choose AEM 6.5 with Service Pack 1 its version will be <code class="highlighter-rouge">6.5.1.0</code>.</p>
 
 <h3 id="packages">Packages</h3>
 
-<p>You will notice that your bundle container will come with latest SP installed and other packages. Each bundle image tag has a corresponding branch in github you can check the <a href="https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml">.travis.yml</a> file to see which packages are pre-installed.</p>
+<p>You will notice that your bundle container will come with the latest SP installed and other packages. Each bundle image tag has a corresponding branch in GitHub you can check the <a href="https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml">.travis.yml</a> file to see which packages are pre-installed.</p>
 
 <h3 id="thank-you">Thank you</h3>
 
 <p>Please checkout the docker hub <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> for further details.</p>
 
-<p>If you would like to contribute or fork the code you can get it on github <a href="https://github.com/aem-design/aem">https://github.com/aem-design/aem</a>.</p>
+<p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design/aem">https://github.com/aem-design/aem</a>.</p>
 
 <p>Bundle version comes with following <a href="https://github.com/aem-design">AEM.Design</a> projects:</p>
 <ul>
