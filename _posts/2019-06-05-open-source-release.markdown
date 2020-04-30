@@ -100,4 +100,4 @@ Here is the list of all components that we currently have in the framework. List
 | Coral / Foundation / Accordion                                   | [Accordion](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/foundation/accordion)                                            |
 | Coral / Widgets/Form / Asset Options                             | [Asset Options](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/coral/widgets/form/assetoptions)                                   |
 
-If you want to see these components in action, you can pull our latest docker container to get a quick preview of what comes out the box, view instructions here: https://lnkd.in/gtQ8hDB
+If you want to see these components in action, you can pull our latest docker container to get a quick preview of what comes out the box, view instructions here: [Docker AEM Bundle](/blog/2019/08/30/docker-aem-bundle)
