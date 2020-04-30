@@ -240,7 +240,7 @@ var store = [{
         "teaser": null
       },{
         "title": "AEM Framework for Multi-Tenant Environments.",
-        "excerpt":"Introduction AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open source framework that can accelerate projects and provide a pathway for sharing knowledge with...","categories": ["blog"],
+        "excerpt":"Introduction AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open-source framework that can accelerate projects and provide a pathway for sharing knowledge with the...","categories": ["blog"],
         "tags": ["devops","aem","docker","knowledge","sharing","multi-tenant","framework"],
         "url": "https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments",
         "teaser": null
