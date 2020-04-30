@@ -16,15 +16,15 @@ tags:
 
 ## Philosophy for Conventions
 
-Philosophy of AEM.Design is to empower all developers (FED/BED) to be able to achive more without having to learn a lot more initialy. This means that focus changes to providing a simplified and spcific experience that allows gradual learning of AEM and framework features. As more knowledge is gained and existing strucutres are understood developers can start update strucutres as needed. 
+Philosophy of AEM.Design is to empower all developers (FED/BED) to be able to achieve more without having to learn a lot more initially. This means that focus changes to providing a simplified and specific experience that allows continuous learning of AEM and framework features. As more knowledge is gained and existing structures are understood, developers can start update structures as needed. 
 
-Major principles that should be considred as you start learning
+Major principles that should be considered as you start learning
 
-* Emphases on Content - ensure that as much structure that required is converted into content so that its changable post deployment, this is following [Davids #1 Rule](/archive/davids-model#rule-1-data-first-structure-later-maybe).
-* Abstract AEM Knoweldge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immidiatly needing to understand underlying principles.  
-* Component Grouping and Naming - components should be named in the relation to their content and AEM purpouse, and not in relation to their end usage, see more details in [Component Grouping and Naming](/manual/conventions/#component-grouping-and-naming).
-* Component Variants and Badges - ability to represent different structures of component content without having to resort to using CSS to hide available content, see more details in [Component Variants and Badges](/manual/conventions/#component-variants-and-badges). 
-* Tags Usage - tags in AEM are specificaly made to provide a mechanims to create taxonomy of keywords that allow linking of content together. This capability is very usefull to represent Design Language keywords that privide styling nomenclature.
+* Emphases on Content - ensure that as much structure that required is converted into the content so that its changeable post-deployment, this is following [Davids #1 Rule](/archive/davids-model#rule-1-data-first-structure-later-maybe).
+* Abstract AEM Knowledge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immediately needing to understand underlying principles.  
+* Component Grouping and Naming - components should be named concerning their content and AEM purpose, and not about their end-use, see more details in [Component Grouping and Naming](/manual/conventions/#component-grouping-and-naming).
+* Component Variants and Badges - ability to represent different structures of component content without having to resort to using CSS to hide available content; see more details in [Component Variants and Badges](/manual/conventions/#component-variants-and-badges). 
+* Tags Usage - tags in AEM are specifically made to provide a mechanism to create a taxonomy of keywords that allow linking of content together. This capability is beneficial to represent Design Language keywords that contain styling nomenclature.
 
 ## Component Grouping and Naming
 
@@ -36,49 +36,49 @@ components
         article
 ```
 
-This structure will ensure that there components are orgnanised and easily found, additionlay grouping provides a segmentation structure that will allow component numbers scale without creating a mess in one folder.
+This structure will ensure that their components are organised and quickly found, additionally grouping provides a segmentation structure that will allow component numbers scale without creating a mess in one folder.
 
 Following is the list of name that should be used for making component groups
 
 | Group          | Name          | Description                                                                                                              |
 |----------------|---------------|--------------------------------------------------------------------------------------------------------------------------|
 | Analytics      | analytics     | components for analytics use                                                                                             |
-| Media          | media         | assets related component, galleries, asset lists, videos etc                                                             |
+| Media          | media         | assets related components, galleries, asset lists, videos etc                                                             |
 | Content        | content       | primary components used to store authored content, content from these components is used by other components for display |
 | Cloud Services | cloudservices | components for cloud services                                                                                            |
-| Layout         | layout        | provide layout ability, grouping and structuring of content, contain layout and style related content                    |
-| List           | list          | find pages and show their data in lists, that contain layout and style related content                                   |
+| Layout         | layout        | provide layout ability, grouping and structuring of content, contains layout related components                    |
+| List           | list          | find pages and show their data in lists                                  |
 | Details        | details       | used to create and display custom metadata for different page types                                                      |
 | Widgets        | widgets       | used to provide client-side functionality, integrating 3rd party services                                                |
-| Commerce       | commerce      | used for eComponents, shopping carts, checkouts, product listing etc                                                     |
+| Commerce       | commerce      | used for Commerce, shopping carts, checkouts, product listing etc. |
 | Common         | common        | used for shared components that are available to authors                                                                 |
 | Forms          | forms         | used to contain all the components that are used in forms                                                                |
-| Template       | template      | used to store all the available Template components that contain HTML page structures                                    |
+| Template       | template      | used to store all the available Template components that include HTML page structures that are used as a base for authorable templates                                    |
 | Workflow       | workflow      | steps that appear in workflow editor                                                                                     |
 
-Groups are targeted to be meaning full to Authors, when creating new groups consider how to explain component groups to authors. 
+Groups are targeted to be meaningful to Authors when creating new groups consider how to explain component groups to authors. 
 
 ## Component Variants and Badges
 
-Component Variants are used as a pattern to output diffrent HTML templates for the same comonent content.
+Component Variants are used as a pattern to output different HTML templates for the same component content.
 
 ![Component Variants](/assets/images/diagrams/component-variant-example.png)
 
-Every component will have unique fields that are used by authors for content input. Usually these fields will be tied to a specific visual representation of that content. There are scenarios where you need to be able to output diffrent HTML strucutre of a component data, to achieve Component Variant pattern is used.
+Every component will have unique fields that are used by authors for content input. Usually, these fields will be tied to a specific visual representation of that content. There are scenarios where you need to be able to output different HTML structure of a component data, to achieve Component Variant pattern is used.
 
 ![Component Variants Entity Diagram](/assets/images/diagrams/component-variant-entity-diagram.png)  
 
-Each component should have at least one default Variant and component template should provide a content driven approach to loading new Variants see [HTL Comonent Template](/manual/conventions/#htl-component-template) for example. This allows authors to choose from a dropdown list which variant they require.
+Each component should have at least one default Variant, and component template should provide a content-driven approach to loading new Variants see [HTL Component Template](/manual/conventions/#htl-component-template) for example. This allows authors to choose from a dropdown list which variant they require.
 
-Additionally Component Variants concepts is applied as a convention to allow a component to control display of its content in related components. This enables to abstract all of the ways that content of a component that can be presented in the component that has the content. This pattern removes dependecies of one component on structure of another component.
+Additionally Component Variants concepts are applied as a convention to allow a component to control the display of its content in related components. This Variants concept provides a method of describing target output structures that are structured from component fields. This pattern offers a way to remove dependencies of one component on the structure of another component.
 
 ![Component Badges](/assets/images/diagrams/component-badge-usage.png)  
 
-If a component needs to leverage content of another component it used Sling selectors to call component with a specific badge name. This further allows asbtracting all of the structure into content and create an Author controlled presentation pattern.
+If a component needs to leverage the content of another component it used Sling selectors to call component with a specific badge name. This also allows abstracting all of the structure into content and create an Author controlled presentation pattern.
 
 ## Component Structure
 
-All component must follow consistent patterns that help everyone to understand consistency across components. Following is the conventions that are used for components
+All component must follow consistent patterns that help everyone to understand consistency across components. Following are the conventions that are used for components.
 
 | Node                  | Purpouse                                                                                | Usercase  | Extension |
 |-----------------------|-----------------------------------------------------------------------------------------|-----------|-----------|
@@ -105,7 +105,7 @@ Paths of component namespace should be following the location of the component p
 
 
 ## Component Versioning
-Initialy when component is written its acceptable to have the component code to be located under its folder path.
+Initially, when a component is created, it's acceptable to have the component code to be located under its folder path.
 
 ```
 components
@@ -114,7 +114,7 @@ components
             <component structure>
 ```
 
-Where possible initial component structure should be located in the v1 subfolder, this will also ensure that evolution of component will require marginally less effort.
+Where possible initial component structure should be located in the v1 subfolder, this will also ensure that the evolution of component will require marginally less effort.
 
 ```
 components
@@ -124,7 +124,7 @@ components
                 <component structure>
 ```
 
-As component is evolves into a versions a subfolders under the component path should be used to separate component code and component path should be pointed to the specific version all existing references of component should be using. 
+As component version grow, root component should be pointed to the specific version all existing references of component should be using. Not doing this will mean that your content pages will have hard references to component version without any Authoring way of changing that apart from reauthoring the content.
 
 ```
 components
@@ -136,11 +136,11 @@ components
                 article
 ```
 
-This will ensure that all existing pages will continue working as expected.
+This will ensure that all existing pages will continue working as expected and will provide a natural upgrade for all component locations. This pattern will also minimise presenting component versions to Authors as there is no simple way to describe difference to authors when they are editing.
 
 
 ## Component Client Libs Modules
-Component generic client libs should to be located in the component folder
+Component generic client libs should be located in the component folder.
 
 ```
 components
@@ -163,7 +163,7 @@ components
 
 ## JSP Component Template
 
-For ease of understanding component code following sections should be used as reference
+For ease of understanding component code following sections should be used as reference.
 
 | LABEL                          | Description                     |
 |--------------------------------|---------------------------------|
@@ -172,7 +172,7 @@ For ease of understanding component code following sections should be used as re
 | *** COMPONENT LOGIC ***        |                                 |
 | *** COMPONENT TEMPLATING ***   |                                 |
 
-Following is a sample for component bootrstap, please remove annotations when using as template.
+Following is a sample for component bootrstap, please remove annotations when using as a template.
 
 ```jsp
 *** COMPONENT DEPENDECIES ***
@@ -245,7 +245,7 @@ Following is a sample for component bootrstap
 
 ## HTL Component WCMUsePojo Class
 
-Following is a reference for component Class that will be backing each HTL component
+Following is a reference for component Class that will be backing each HTL component.
 
 
 ```java
@@ -298,14 +298,14 @@ public class PageDetails extends WCMUsePojo {
 
 ## ClientLibs Convention - JavaScript 
 
-When writing component specific API code in Java script pelase ensure you encapsulating namespacing that does not direclty depend on external dependecies.
+When writing component-specific API code in Javascript please ensure you encapsulating namespacing, that does not directly depend on external dependencies.
 
 JavaScript for all Component JavaScript code must be divided into:
 
 1. **functions.js** - component functions API, has all of the required static utility functions that will be used by component behaviours. These should only be functions and should not be binding to elements of the page on load events.
-2. **behaviour.js** - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This should be the main file that demonstrates how component is being boudn to the code.
+2. **behaviour.js** - component binding API, has all of the load events and binding to HTML, uses functions to help with structure and reusable config as required. This is the file that demonstrates how the component is attached to HTML markup.
 
-JS modules should be located as following
+JS modules should be located as following.
 
 ```
 components
@@ -344,7 +344,7 @@ window.AEMDESIGN.components.search = AEMDESIGN.components.search || {};
 })(AEMDESIGN.jQuery,_,ko, AEMDESIGN.log, AEMDESIGN.utils, AEMDESIGN.components.search, this);
 ```
 
-Following is an example of a behaviours used for component.
+Following is an example of behaviours used for component.
 
 ```javascript
 //search - behaviour
@@ -373,7 +373,7 @@ window.AEMDESIGN.components.search = AEMDESIGN.components.search || {};
 
 ## ClientLibs Convention - CSS
 
-When writing CSS ensure that component Styles are added under component namespace. Here is an example
+When writing CSS ensure that component Styles are added under a component namespace. Here is an example
 
 ```javascript
 [component] .<component name> {
@@ -382,7 +382,7 @@ When writing CSS ensure that component Styles are added under component namespac
 
 # Dialog Conventions
 
-Common Tabs for all component - use shared dialogs
+Common Tabs for all component - use shared dialogs.
 
 ```html
 <styleTab
@@ -393,7 +393,7 @@ Common Tabs for all component - use shared dialogs
     sling:resourceType="granite/ui/components/coral/foundation/include"/>
 ```
 
-Use Tags as source for your Dropdowns - will ensure that content can be updated later
+Use Tags as a source for your Dropdowns - will ensure that content can be updated later.
 
 ```html
 <cancelinheritparent
@@ -411,7 +411,7 @@ Use Tags as source for your Dropdowns - will ensure that content can be updated 
 </cancelinheritparent>
 ```
 
-Don’t use Checkbox fields in dialogs - use Dropdowns so that its clear what if use has made a selection and what defauls are
+Don't use Checkbox fields in dialogs - use Dropdowns so that it's clear what if the user has made a selection and what defaults are
 
 ```html
 <cancelinheritparent
@@ -435,7 +435,7 @@ Object[][] componentFields = {
 };
 ```
 
-Common Component Field Load - this will collect and construct all fields with defaults and select Design/Policy config as defaults
+Common Component Field Load - this will collect and construct all fields with defaults and select Design/Policy config as defaults.
 
 ```java
 componentProperties = ComponentsUtil.getComponentProperties(
@@ -445,7 +445,7 @@ componentProperties = ComponentsUtil.getComponentProperties(
     DEFAULT_FIELDS_ACCESSIBILITY);
 ```
 
-Common Component Field Presets - use globaly defined fields spect to collect content from shared tabls in dialog
+Common Component Field Presets - use globally defined fields spect to collect content from shared tabs in dialog
 > For Styles Tabs and Common Fields
 
 ```java
@@ -483,21 +483,21 @@ public static final Object[][] DEFAULT_FIELDS_STYLE = {
 
 ## Dialog Layout
 
-Consistent dialog patern allow ease of understanding and experience of developing, using and training components to Authors.
+Consistent dialog pattern allow ease of understanding and experience of developing, using and training components to Authors.
 
 ![Dialog Layout](/assets/images/diagrams/dialog-convention.png)
 
 ## Component Artifacts Alignment
 
-All components must have matching artifact in related artifacts. This is to ensure consistency and completness of component delivery.
+All components must have a matching artifact in related artifacts. This is to ensure consistency and completeness of component delivery.
 
 ![Component Artifacts Alignment](/assets/images/diagrams/folder-naming.png)
 
 # Using Tags for Styles
 
-One of the main objectives of AEM.Design is to provide a consistent way of representing Design Languages as a taxonomy of Tags. This provide a mechanism to create Tags taxonomy by designers and then applied to components by authors.
+One of the main objectives of AEM.Design is to provide a consistent way of representing Design Languages as a taxonomy of Tags. This provides a mechanism to create Tags taxonomy by designers and then applied to components by authors.
 
-Following image demonstrates shared Style dialog that is applied to all components.  
+The following image demonstrates the shared Style dialog that is applied to all components.  
 
 ![Shared Dialog - Styles](/assets/images/dialogs/shared-dialog-styles.png)
 
@@ -506,18 +506,18 @@ Following table describes each available option. Each of the options is defined 
 | Field              | Type | Description                                                      |
 |--------------------|------|------------------------------------------------------------------|
 | ID                 | text | generates an Id attribute for a component                        |
-| Theme              | tags | used to apply style one or combination of nested components      |
+| Theme              | tags | used to apply style one or a combination of nested components      |
 | Modifiers          | tags | used to apply design system tweaks to components                 |
 | Module             | tags | used to apply behaviour to component                             |
 | Chevron            | tags | used to apply Chevron to a component                             |
 | Icon               | tags | used to apply Icon to the component                              |
 | Boolean Attributes | tags | used to apply metadata attributes                                |
-| Positions          | text | used by Modules for placement of component in parent eg Tooltips |
+| Positions          | text | used by Modules for placement of component in parent e.g. Tooltips |
 | Size               | text | used to add width and height attributes to component             |
 
-All text fields provide direct input that is added to component wrapper. All Tag fields allow selecting multiple tags for each filed which enables flexibility when applying styles.
+All text fields provide direct input that is added to the component wrapper. All Tag fields allow selecting multiple tags for each filed, which enables flexibility when applying styles.
 
-Technically a component wrapper tag is trying to create following footprint and it automated by using shared dialogs. This is reference output of share libraries to provide a consistent wrapper for all components  
+Technically a component wrapper tag is trying to create the following footprint and it automated by using shared dialogs. This is reference output of share libraries to provide a consistent wrapper for all components.  
 
 ```html
 <div component id="${componentProperties.id}" 
@@ -528,7 +528,7 @@ Technically a component wrapper tag is trying to create following footprint and 
     ${componentProperties.booleanAttributes}></div>
 ```
 
-Furthermore using Tags allows storing Style related content in a central place which can be update by authors, using tags also has a benefit of translations and ability to change the actual value of tag class by updating tag entry.
+Furthermore using Tags allows storing style related content in a central place which can be updated by authors, using tags also has a benefit of translations and ability to change the actual value of tag class by updating tag entry.
 
 ![Tags Authoring](/assets/images/dialogs/tag-authoring-update.png)
 
@@ -536,9 +536,9 @@ These updates to tag authoring UI enable updating and adding values that corresp
 
 ## Style Tags Content Generator
 
-Compose project contains all of the CSS, JS and Tag YAML files that describe design being developed. This subproject is compiled and installed into AEM as a standalone package. Tag YAML files is used to specify design language mapping to CSS classes and during compiling Tags content is generated. 
+Compose project contains all of the CSS, JS and Tag YAML files that describe design being developed. This subproject is compiled and installed into AEM as a standalone package. Tag YAML files is used to specify design language mapping to CSS classes, and during compiling Tags content is generated. 
 
-A custom Content Generator is used to generate Tags from YAML file similar to flowing 
+A custom Content Generator is used to generate Tags from YAML file similar to flowing. 
 
 ```yaml
 content/_cq_tags/aemdesign/component-style-icon: &component-style-icon
