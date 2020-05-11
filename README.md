@@ -50,11 +50,8 @@ On windows, for best results use docker for everything.
 #POWERSHELL
 docker run -it --rm -p 4000:4000 -p 35729:35729 -v ${pwd}:/build/source:rw aemdesign/centos-java-buildpack bash --login
 
-sed -i 's/\.nvm/\/build\/\.nvm/' .bashrc
-source .bashrc
-
-rvm use 2.6.3
 cd source/
+rvm install "ruby-2.6.3"
 gem install jekyll bundler jemoji nokogiri -n /usr/local/bin
 bundle install
 jekyll serve --host 0.0.0.0 --livereload
