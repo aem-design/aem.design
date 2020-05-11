@@ -57,7 +57,7 @@ source .bashrc
 rvm use 2.6.3
 cd source/
 ./install.sh
-jekyll serve --host 0.0.0.0
+jekyll serve --host 0.0.0.0 --livereload
 ```
 
 # Google Ads
