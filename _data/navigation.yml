@@ -80,6 +80,8 @@ manual:
         url: /manual/process/
       - title: "Conventions"
         url: /manual/conventions/
+      - title: "Image Conventions"
+        url: /manual/image-conventions/
 
 #archive links
 archive:
