@@ -48,16 +48,17 @@ On windows, for best results use docker for everything.
 
 ```powershell
 #POWERSHELL
-Set-Variable -name PROJECT_PATH -value $pwd
-docker run -it --rm -p 4000:4000 -p 35729:35729 -v ${PROJECT_PATH}:/build/source:rw aemdesign/centos-java-buildpack bash --login
+docker run -it --rm -p 4000:4000 -p 35729:35729 -v ${pwd}:/build/source:rw aemdesign/centos-java-buildpack bash --login
 
 sed -i 's/\.nvm/\/build\/\.nvm/' .bashrc
 source .bashrc
 
 rvm use 2.6.3
 cd source/
-./install.sh
+gem install jekyll bundler jemoji nokogiri -n /usr/local/bin
+bundle install
 jekyll serve --host 0.0.0.0 --livereload
+
 ```
 
 # Google Ads
