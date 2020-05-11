@@ -42,6 +42,24 @@ Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
 ./serve.sh
 ```
 
+### On Windows
+
+On windows, for best results use docker for everything.
+
+```powershell
+#POWERSHELL
+Set-Variable -name PROJECT_PATH -value $pwd
+docker run -it --rm -p 4000:4000 -p 35729:35729 -v ${PROJECT_PATH}:/build/source aemdesign/centos-java-buildpack bash --login
+
+sed -i 's/\.nvm/\/build\/\.nvm/' .bashrc
+source .bashrc
+
+rvm use 2.6.3
+cd source/
+./install.sh
+jekyll serve --host 0.0.0.0
+```
+
 # Google Ads
 
 Config is located in `_data/advertising.yml` html should not need to be changed and located in `_includes/adds/adsense.html`
