@@ -97,13 +97,13 @@ Tall background applies to tall page headers.
 
 | Breakpoint            | Dimensions | Rendition       | Focal Point Overlay                                          | Notes                                                                                                                                                                                                                    |
 |-----------------------|------------|-----------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Desktop (UHD)         | 3840 x 600 | 4K (UHD)        | ![image](/assets/images/manual/image-conventions/image1.jpg) |                                                                                                                                                                                                                          |
-| Desktop (QHD)         | 2560 x 600 | 2K (QHD)        | ![image](/assets/images/manual/image-conventions/image2.jpg) |                                                                                                                                                                                                                          |
-| Desktop (Extra Large) | 1920 x 600 | Widescreen (HD) | ![image](/assets/images/manual/image-conventions/image3.jpg) |                                                                                                                                                                                                                          |
-| Desktop (Large)       | 1366 x 600 | Extra Large     | ![image](/assets/images/manual/image-conventions/image4.jpg) |                                                                                                                                                                                                                          |
-| Desktop               | 1024 x 600 | Large           | ![image](/assets/images/manual/image-conventions/image5.jpg) |                                                                                                                                                                                                                          |
-| Tablet                | 640 x 580  | Large           | ![image](/assets/images/manual/image-conventions/image6.jpg) | The Large rendition is needed here because the height is a tad bit taller than other landscape components. If this wasn't the case and it was 480px-500px then it would scale properly without over-scaling or cropping. |
-| Mobile                | 320 x 200  | Small           | ![image](/assets/images/manual/image-conventions/image7.jpg) |                                                                                                                                                                                                                          |
+| Desktop (UHD)         | 3840 x 600 | 4K (UHD)        | ![Tall - Desktop (UHD)](/assets/images/manual/image-conventions/image1.jpg) |                                                                                                                                                                                                                          |
+| Desktop (QHD)         | 2560 x 600 | 2K (QHD)        | ![Tall - Desktop (QHD)](/assets/images/manual/image-conventions/image2.jpg) |                                                                                                                                                                                                                          |
+| Desktop (Extra Large) | 1920 x 600 | Widescreen (HD) | ![Tall - Desktop (Extra Large)](/assets/images/manual/image-conventions/image3.jpg) |                                                                                                                                                                                                                          |
+| Desktop (Large)       | 1366 x 600 | Extra Large     | ![Tall - Desktop (Large)](/assets/images/manual/image-conventions/image4.jpg) |                                                                                                                                                                                                                          |
+| Desktop               | 1024 x 600 | Large           | ![Tall - Desktop](/assets/images/manual/image-conventions/image5.jpg) |                                                                                                                                                                                                                          |
+| Tablet                | 640 x 580  | Large           | ![Tall - Tablet](/assets/images/manual/image-conventions/image6.jpg) | The Large rendition is needed here because the height is a tad bit taller than other landscape components. If this wasn't the case and it was 480px-500px then it would scale properly without over-scaling or cropping. |
+| Mobile                | 320 x 200  | Small           | ![Tall - Mobile](/assets/images/manual/image-conventions/image7.jpg) |                                                                                                                                                                                                                          |
 
 Background - Narrow
 -------------------
@@ -112,13 +112,13 @@ Narrow background applies to the background in a column.
 
 | Breakpoint            | Dimensions | Rendition       | Focal Point Overlay                                           | Notes                                                                                                                                                                                                                    |
 |-----------------------|------------|-----------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Desktop (UHD)         | 3840 x 600 | 4K (UHD)        | ![image](/assets/images/manual/image-conventions/image8.jpg)  |                                                                                                                                                                                                                          |
-| Desktop (QHD)         | 2560 x 600 | 2K (QHD)        | ![image](/assets/images/manual/image-conventions/image9.jpg)  |                                                                                                                                                                                                                          |
-| Desktop (Extra Large) | 1920 x 600 | Widescreen (HD) | ![image](/assets/images/manual/image-conventions/image10.jpg) |                                                                                                                                                                                                                          |
-| Desktop (Large)       | 1366 x 600 | Extra Large     | ![image](/assets/images/manual/image-conventions/image11.jpg) |                                                                                                                                                                                                                          |
-| Desktop               | 1024 x 600 | Large           | ![image](/assets/images/manual/image-conventions/image12.jpg) |                                                                                                                                                                                                                          |
-| Tablet                | 640 x 580  | Large           | ![image](/assets/images/manual/image-conventions/image13.jpg) | The Large rendition is needed here because the height is a tad bit taller than other landscape components. If this wasn't the case and it was 480px-500px then it would scale properly without over-scaling or cropping. |
-| Mobile                | 320 x 200  | Small           | ![image](/assets/images/manual/image-conventions/image14.jpg) |                                                                                                                                                                                                                          |
+| Desktop (UHD)         | 3840 x 600 | 4K (UHD)        | ![Narrow - Desktop (UHD)](/assets/images/manual/image-conventions/image8.jpg)  |                                                                                                                                                                                                                          |
+| Desktop (QHD)         | 2560 x 600 | 2K (QHD)        | ![Narrow - Desktop (QHD)](/assets/images/manual/image-conventions/image9.jpg)  |                                                                                                                                                                                                                          |
+| Desktop (Extra Large) | 1920 x 600 | Widescreen (HD) | ![Narrow - Desktop (Extra Large)](/assets/images/manual/image-conventions/image10.jpg) |                                                                                                                                                                                                                          |
+| Desktop (Large)       | 1366 x 600 | Extra Large     | ![Narrow - Desktop (Large)](/assets/images/manual/image-conventions/image11.jpg) |                                                                                                                                                                                                                          |
+| Desktop               | 1024 x 600 | Large           | ![Narrow - Desktop](/assets/images/manual/image-conventions/image12.jpg) |                                                                                                                                                                                                                          |
+| Tablet                | 640 x 580  | Large           | ![Narrow - Tablet](/assets/images/manual/image-conventions/image13.jpg) | The Large rendition is needed here because the height is a tad bit taller than other landscape components. If this wasn't the case and it was 480px-500px then it would scale properly without over-scaling or cropping. |
+| Mobile                | 320 x 200  | Small           | ![Narrow - Mobile](/assets/images/manual/image-conventions/image14.jpg) |                                                                                                                                                                                                                          |
 
 List - Card x3 (wide)
 ---------------------
@@ -127,9 +127,9 @@ This applies to a set of 3 cards in a row.
 
 | Breakpoint       | Dimensions | Rendition | Focal Point Overlay                                         | Notes |
 |------------------|------------|-----------|-------------------------------------------------------------|-------|
-| Desktop (Large)  | 352 x 210  | Small     | ![image](/assets/images/manual/image-conventions/image15.jpg) |       |
-| Desktop / Tablet | 260 x 160  | Small     | ![image](/assets/images/manual/image-conventions/image16.jpg) |       |
-| Mobile           | 270 x 145  | Small     | ![image](/assets/images/manual/image-conventions/image17.jpg) |       |
+| Desktop (Large)  | 352 x 210  | Small     | ![Card x3 - Desktop (Large)](/assets/images/manual/image-conventions/image15.jpg) |       |
+| Desktop / Tablet | 260 x 160  | Small     | ![Card x3 - Desktop / Tablet](/assets/images/manual/image-conventions/image16.jpg) |       |
+| Mobile           | 270 x 145  | Small     | ![Card x3 - Mobile](/assets/images/manual/image-conventions/image17.jpg) |       |
 
 List - Card x2 (wide)
 ---------------------
@@ -138,10 +138,10 @@ This applies to a set of 2 cards in a row.
 
 | Breakpoint      | Dimensions | Rendition       | Focal Point Overlay                                         | Notes |
 |-----------------|------------|-----------------|-------------------------------------------------------------|-------|
-| Desktop (Large) | 542 x 220  | Standard (wide) | ![image](/assets/images/manual/image-conventions/image18.jpg) |       |
-| Desktop         | 400 x 160  | Standard        | ![image](/assets/images/manual/image-conventions/image19.jpg) |       |
-| Tablet          | 542 x 178  | Standard (wide) | ![image](/assets/images/manual/image-conventions/image20.jpg) |       |
-| Mobile          | 288 x 154  | Small           | ![image](/assets/images/manual/image-conventions/image21.jpg) |       |
+| Desktop (Large) | 542 x 220  | Standard (wide) | ![Card x2 - Desktop (Large)](/assets/images/manual/image-conventions/image18.jpg) |       |
+| Desktop         | 400 x 160  | Standard        | ![Card x2 - Desktop](/assets/images/manual/image-conventions/image19.jpg) |       |
+| Tablet          | 542 x 178  | Standard (wide) | ![Card x2 - Tablet](/assets/images/manual/image-conventions/image20.jpg) |       |
+| Mobile          | 288 x 154  | Small           | ![Card x2 - Mobile](/assets/images/manual/image-conventions/image21.jpg) |       |
 
 List - Card with Media
 ----------------------
@@ -150,10 +150,10 @@ This applies to a set of cards that have media content.
 
 | Breakpoint      | Dimensions | Rendition       | Focal Point Overlay                                         | Notes |
 |-----------------|------------|-----------------|-------------------------------------------------------------|-------|
-| Desktop (Large) | 552 x 500  | Medium          | ![image](/assets/images/manual/image-conventions/image22.jpg) |       |
-| Desktop         | 414 x 435  | Medium          | ![image](/assets/images/manual/image-conventions/image23.jpg) |       |
-| Tablet          | 540 x 300  | Standard (wide) | ![image](/assets/images/manual/image-conventions/image24.jpg) |       |
-| Mobile          | 288 x 150  | Small           | ![image](/assets/images/manual/image-conventions/image25.jpg) |       |
+| Desktop (Large) | 552 x 500  | Medium          | ![Card with Media - Desktop (Large)](/assets/images/manual/image-conventions/image22.jpg) |       |
+| Desktop         | 414 x 435  | Medium          | ![Card with Media - Desktop](/assets/images/manual/image-conventions/image23.jpg) |       |
+| Tablet          | 540 x 300  | Standard (wide) | ![Card with Media - Tablet](/assets/images/manual/image-conventions/image24.jpg) |       |
+| Mobile          | 288 x 150  | Small           | ![Card with Media - Mobile](/assets/images/manual/image-conventions/image25.jpg) |       |
 
 List - Card with Media (full width)
 -----------------------------------
@@ -162,10 +162,10 @@ This applies to a set of cards that have media overlay.
 
 | Breakpoint      | Dimensions | Rendition       | Focal Point Overlay                                         | Notes |
 |-----------------|------------|-----------------|-------------------------------------------------------------|-------|
-| Desktop (Large) | 880 x 495  | Medium          | ![image](/assets/images/manual/image-conventions/image26.jpg) |       |
-| Desktop         | 660 x 370  | Medium          | ![image](/assets/images/manual/image-conventions/image27.jpg) |       |
-| Tablet          | 542 x 335  | Standard (wide) | ![image](/assets/images/manual/image-conventions/image28.jpg) |       |
-| Mobile          | 270 x 170  | Small           | ![image](/assets/images/manual/image-conventions/image29.jpg) |       |
+| Desktop (Large) | 880 x 495  | Medium          | ![Card with Media Full Width - Desktop (Large)](/assets/images/manual/image-conventions/image26.jpg) |       |
+| Desktop         | 660 x 370  | Medium          | ![Card with Media Full Width - Desktop](/assets/images/manual/image-conventions/image27.jpg) |       |
+| Tablet          | 542 x 335  | Standard (wide) | ![Card with Media Full Width - Tablet](/assets/images/manual/image-conventions/image28.jpg) |       |
+| Mobile          | 270 x 170  | Small           | ![Card with Media Full Width - Mobile](/assets/images/manual/image-conventions/image29.jpg) |       |
 
 List - Card with Metadata
 -------------------------
@@ -174,10 +174,10 @@ This applies to a set of cards that have metadata showing as overlay.
 
 | Breakpoint      | Dimensions | Rendition       | Focal Point Overlay                                         | Notes |
 |-----------------|------------|-----------------|-------------------------------------------------------------|-------|
-| Desktop (Large) | 700 x 495  | Medium          | ![image](/assets/images/manual/image-conventions/image30.jpg) |       |
-| Desktop         | 550 x 370  | Medium          | ![image](/assets/images/manual/image-conventions/image31.jpg) |       |
-| Tablet          | 500 x 280  | Standard (wide) | ![image](/assets/images/manual/image-conventions/image32.jpg) |       |
-| Mobile          | 260 x 162  | Small           | ![image](/assets/images/manual/image-conventions/image33.jpg) |       |
+| Desktop (Large) | 700 x 495  | Medium          | ![Card with Metadata - Desktop (Large)](/assets/images/manual/image-conventions/image30.jpg) |       |
+| Desktop         | 550 x 370  | Medium          | ![Card with Metadata - Desktop](/assets/images/manual/image-conventions/image31.jpg) |       |
+| Tablet          | 500 x 280  | Standard (wide) | ![Card with Metadata - Tablet](/assets/images/manual/image-conventions/image32.jpg) |       |
+| Mobile          | 260 x 162  | Small           | ![Card with Metadata - Mobile](/assets/images/manual/image-conventions/image33.jpg) |       |
 
 Implementation
 ==============
