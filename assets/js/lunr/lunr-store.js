@@ -1,6 +1,6 @@
 var store = [{
         "title": "Information Archive",
-        "excerpt":"This section provides an archive of pages that are relevant for learning as foundational knowledge that has lead to current understanding.   Table of Contents                                                                                                                                      David's Model                                                                              Data First vs. Structure First                                                     ","categories": ["archive"],
+        "excerpt":"This section provides an archive of pages that are relevant for learning as foundational knowledge that has lead to current understanding.   Table of Contents                                                                                                                                      David's Model                                                                              Data First vs. Structure First                                                      ","categories": ["archive"],
         "tags": ["docs"],
         "url": "https://aem.design/archive/",
         "teaser": null
@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Manual",
-        "excerpt":"Document Purpose   The purpose of this document is to introduce you to the AEM Platform and of its related projects, tools and processes. This knowledge is required to maintain and extend the AEM Platform.   Table of Contents                                                                                                                                      Projects                                                                              Development Tools                                                                              Management                                                                              Operating Environment                                                                              Process                                                                              Conventions                                                      ","categories": ["info"],
+        "excerpt":"Document Purpose   The purpose of this document is to introduce you to the AEM Platform and of its related projects, tools and processes. This knowledge is required to maintain and extend the AEM Platform.   Table of Contents                                                                                                                                      Projects                                                                              Development Tools                                                                              Management                                                                              Operating Environment                                                                              Process                                                                              Conventions                                                                              Image Conventions                                                      ","categories": ["info"],
         "tags": ["docs"],
         "url": "https://aem.design/manual/",
         "teaser": null
@@ -135,6 +135,12 @@ var store = [{
         "excerpt":"On This Page Philosophy for Conventions Component Grouping and Naming Component Variants and Badges Component Structure Component Client Libs Namespace Convention Component Versioning Component Client Libs Modules JSP Component Template HTL Component Template HTL Component WCMUsePojo Class ClientLibs Convention - JavaScript ClientLibs Convention - CSS Dialog Conventions Dialog Layout Component...","categories": ["info"],
         "tags": ["docs"],
         "url": "https://aem.design/manual/conventions/",
+        "teaser": null
+      },{
+        "title": "Image Conventions",
+        "excerpt":"On This Page Summary Introduction Image Restrictions SVGs Rendition Sizes AEM Rendition Considerations File Size Considerations Component Image Map Background - Tall Background - Narrow List - Card x3 (wide) List - Card x2 (wide) List - Card with Media List - Card with Media (full width) List - Card...","categories": ["info"],
+        "tags": ["docs"],
+        "url": "https://aem.design/manual/image-conventions/",
         "teaser": null
       },{
         "title": "The Journey begins...",

@@ -45,7 +45,7 @@
 
 
 
-  <meta property="og:image" content="https://aem.design/assets/images/site-logo.png">
+  <meta property="og:image" content="/assets/images/site-logo.png">
 
 
 
@@ -62,7 +62,7 @@
       "@context": "http://schema.org",
       "@type": "Organization",
       "url": "https://aem.design",
-      "logo": "https://aem.design/assets/images/site-logo.png"
+      "logo": "/assets/images/site-logo.png"
     }
   </script>
 
@@ -92,7 +92,9 @@
 
 <meta name="author" content="">
 
-<link href="https://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+<link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon" />
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -104,7 +106,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="https://aem.design/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
@@ -116,7 +118,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        var elements = document.querySelectorAll(".page__content p img");
+        var elements = document.querySelectorAll(".page__content p img, .page__content table img");
         elements.forEach(element => {
             var url = element.getAttribute('src');
             var alt = element.getAttribute('alt');
@@ -131,6 +133,8 @@
 
     });
 </script>
+
+
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
@@ -395,6 +399,7 @@
     
   
   </div>
+
 
 
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">

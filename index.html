@@ -13,7 +13,7 @@
 
 
 
-<title>Posts by Collection - AEM.Design</title>
+<title>AEM.Design</title>
 
 
 
@@ -45,7 +45,7 @@
 
 
 
-  <meta property="og:image" content="https://aem.design/assets/images/background/mm-home-page-feature.jpg">
+  <meta property="og:image" content="/assets/images/background/mm-home-page-feature.jpg">
 
 
 
@@ -59,7 +59,7 @@
       "@context": "http://schema.org",
       "@type": "Organization",
       "url": "https://aem.design",
-      "logo": "https://aem.design/assets/images/site-logo.png"
+      "logo": "/assets/images/site-logo.png"
     }
   </script>
 
@@ -89,7 +89,9 @@
 
 <meta name="author" content="">
 
-<link href="https://aem.design/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+<link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon" />
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -101,7 +103,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="https://aem.design/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
 
@@ -113,7 +115,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        var elements = document.querySelectorAll(".page__content p img");
+        var elements = document.querySelectorAll(".page__content p img, .page__content table img");
         elements.forEach(element => {
             var url = element.getAttribute('src');
             var alt = element.getAttribute('alt');
@@ -128,6 +130,8 @@
 
     });
 </script>
+
+
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
@@ -314,7 +318,7 @@
       <div class="archive__item">
         
           <a href="https://github.com/aem-design"><div class="archive__item-teaser">
-            <img src="https://aem.design/assets/images/cards/github-mark.png" alt="github" />
+            <img src="/assets/images/cards/github-mark.png" alt="github" />
           </div></a>
         
 
@@ -344,7 +348,7 @@
       <div class="archive__item">
         
           <a href="https://hub.docker.com/u/aemdesign/"><div class="archive__item-teaser">
-            <img src="https://aem.design/assets/images/cards/docker.png" alt="docker" />
+            <img src="/assets/images/cards/docker.png" alt="docker" />
           </div></a>
         
 
@@ -374,7 +378,7 @@
       <div class="archive__item">
         
           <a href="https://search.maven.org/search?q=g:design.aem"><div class="archive__item-teaser">
-            <img src="https://aem.design/assets/images/cards/maven.png" alt="maven" />
+            <img src="/assets/images/cards/maven.png" alt="maven" />
           </div></a>
         
 
@@ -403,14 +407,14 @@
     <div class="feature__item">
       <div class="archive__item">
         
-          <a href="https://aem.design/blog/2019/06/05/open-source-is-for-feedback"><div class="archive__item-teaser">
-            <img src="https://aem.design/assets/images/cards/aem6.5-1280x768.jpg" alt="components" />
+          <a href="/blog/2019/06/05/open-source-is-for-feedback"><div class="archive__item-teaser">
+            <img src="/assets/images/cards/aem6.5-1280x768.jpg" alt="components" />
           </div></a>
         
 
         <div class="archive__item-body">
           
-            <a href="https://aem.design/blog/2019/06/05/open-source-is-for-feedback"><h2 class="archive__item-title">Component List</h2></a>
+            <a href="/blog/2019/06/05/open-source-is-for-feedback"><h2 class="archive__item-title">Component List</h2></a>
           
 
           
@@ -421,7 +425,7 @@
           
 
           
-            <p><a href="https://aem.design/blog/2019/06/05/open-source-is-for-feedback" class="btn ">View</a></p>
+            <p><a href="/blog/2019/06/05/open-source-is-for-feedback" class="btn ">View</a></p>
           
         </div>
       </div>
@@ -433,14 +437,14 @@
     <div class="feature__item">
       <div class="archive__item">
         
-          <a href="https://aem.design/manifesto/"><div class="archive__item-teaser">
-            <img src="https://aem.design/assets/images/cards/mm-free-feature.png" alt="manifesto" />
+          <a href="/manifesto/"><div class="archive__item-teaser">
+            <img src="/assets/images/cards/mm-free-feature.png" alt="manifesto" />
           </div></a>
         
 
         <div class="archive__item-body">
           
-            <a href="https://aem.design/manifesto/"><h2 class="archive__item-title">Read the Manifesto</h2></a>
+            <a href="/manifesto/"><h2 class="archive__item-title">Read the Manifesto</h2></a>
           
 
           
@@ -451,7 +455,7 @@
           
 
           
-            <p><a href="https://aem.design/manifesto/" class="btn ">Learn More</a></p>
+            <p><a href="/manifesto/" class="btn ">Learn More</a></p>
           
         </div>
       </div>
@@ -463,14 +467,14 @@
     <div class="feature__item">
       <div class="archive__item">
         
-          <a href="https://aem.design/blog/"><div class="archive__item-teaser">
-            <img src="https://aem.design/assets/images/cards/blog-hero.jpg" alt="blog" />
+          <a href="/blog/"><div class="archive__item-teaser">
+            <img src="/assets/images/cards/blog-hero.jpg" alt="blog" />
           </div></a>
         
 
         <div class="archive__item-body">
           
-            <a href="https://aem.design/blog/"><h2 class="archive__item-title">Read the Blog</h2></a>
+            <a href="/blog/"><h2 class="archive__item-title">Read the Blog</h2></a>
           
 
           
@@ -481,7 +485,7 @@
           
 
           
-            <p><a href="https://aem.design/blog/" class="btn ">Blog</a></p>
+            <p><a href="/blog/" class="btn ">Blog</a></p>
           
         </div>
       </div>
@@ -489,6 +493,7 @@
   
 
 </div>
+
 
     </section>
   </article>

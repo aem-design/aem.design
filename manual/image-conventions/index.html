@@ -1,0 +1,1497 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Image Conventions - AEM.Design</title>
+
+
+
+
+<meta name="description" content="           On This Page    ">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="Image Conventions">
+
+
+  <link rel="canonical" href="https://aem.design/manual/image-conventions/">
+  <meta property="og:url" content="https://aem.design/manual/image-conventions/">
+
+
+
+  <meta property="og:description" content="           On This Page    ">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="/assets/images/site-logo.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2020-05-11T17:04:56+00:00">
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://aem.design",
+      "logo": "/assets/images/site-logo.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "AEM.Design",
+      "url" : "https://aem.design",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+<!-- end SEO -->
+
+
+
+
+<meta name="author" content="Chris Shaw">
+
+<link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon" />
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+
+<script>
+    function wrap(el, wrapper) {
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll(".page__content p img, .page__content table img");
+        elements.forEach(element => {
+            var url = element.getAttribute('src');
+            var alt = element.getAttribute('alt');
+            if(url) {
+                var a = document.createElement('a');
+                a.setAttribute("href",url);
+                a.setAttribute("data-lightbox",'');
+                a.setAttribute("title",alt);
+                wrap(element, a);
+            }
+        });
+
+    });
+</script>
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<style>
+    .archive__item-teaser {
+        min-height: 238px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(222,228,228);
+        background: radial-gradient(circle, rgba(222,228,228,1) 0%, rgba(255,179,107,1) 100%);
+    }
+
+    /*add tint to images*/
+    .page__hero--overlay {
+        background-color: rgba(255,179,107,.5);
+        background-blend-mode: multiply;
+    }
+</style>
+
+<!-- end custom head snippets -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
+<!-- End Google Tag Manager -->
+  </head>
+
+  <body class="layout--single">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          AEM.Design
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://github.com/aem-design">GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a href="/quick-start-guide/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manifesto/">Manifesto</a>
+            </li><li class="masthead__menu-item">
+              <a href="/manual/">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a href="/archive/">Archive</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+<div id="main" role="main">
+    
+  <div class="sidebar sticky">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/cshaw.jpg" class="author__avatar" alt="Chris Shaw" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Chris Shaw</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Dev
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:me@cshaw.xyz">
+            <meta itemprop="email" content="me@cshaw.xyz" />
+            <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/chrisshawaus" itemprop="sameAs">
+            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/cshawaus" itemprop="sameAs">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+      <li>
+        <a href="mailto:max@aem.design">
+          <meta itemprop="email" content="max@aem.design" />
+          <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
+        </a>
+      </li>
+      
+
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+      </li>
+      
+
+        
+        <li>
+            <a href="https://github.com/wildone" itemprop="sameAs">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+        </li>
+        
+
+
+    </ul>
+  </div>
+
+</div>
+
+
+
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/manual/projects/">Projects</a></li>
+          
+            <li><a href="/manual/devtools/">Development Tools</a></li>
+          
+            <li><a href="/manual/management/">Management</a></li>
+          
+            <li><a href="/manual/osenv/">Operating Environment</a></li>
+          
+            <li><a href="/manual/process/">Process</a></li>
+          
+            <li><a href="/manual/conventions/">Conventions</a></li>
+          
+            <li><a href="/manual/image-conventions/" class="active">Image Conventions</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Image Conventions">
+        <meta itemprop="description" content="           On This Page    ">
+        <meta itemprop="datePublished" content="May 11, 2020">
+        
+
+        <div class="page__inner-wrap">
+            
+            <header>
+
+
+                <h1 class="page__title" itemprop="headline">Image Conventions
+</h1>
+                
+                <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+
+</p>
+                
+            </header>
+            
+
+            <section class="page__content" itemprop="text">
+                <div class="sticky">
+    <aside class="sidebar__right">
+<nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#summary" id="markdown-toc-summary">Summary</a></li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#image-restrictions" id="markdown-toc-image-restrictions">Image Restrictions</a></li>
+  <li><a href="#svgs" id="markdown-toc-svgs">SVGs</a></li>
+  <li><a href="#rendition-sizes" id="markdown-toc-rendition-sizes">Rendition Sizes</a></li>
+  <li><a href="#aem-rendition-considerations" id="markdown-toc-aem-rendition-considerations">AEM Rendition Considerations</a></li>
+  <li><a href="#file-size-considerations" id="markdown-toc-file-size-considerations">File Size Considerations</a></li>
+  <li><a href="#component-image-map" id="markdown-toc-component-image-map">Component Image Map</a>    <ul>
+      <li><a href="#background---tall" id="markdown-toc-background---tall">Background - Tall</a></li>
+      <li><a href="#background---narrow" id="markdown-toc-background---narrow">Background - Narrow</a></li>
+      <li><a href="#list---card-x3-wide" id="markdown-toc-list---card-x3-wide">List - Card x3 (wide)</a></li>
+      <li><a href="#list---card-x2-wide" id="markdown-toc-list---card-x2-wide">List - Card x2 (wide)</a></li>
+      <li><a href="#list---card-with-media" id="markdown-toc-list---card-with-media">List - Card with Media</a></li>
+      <li><a href="#list---card-with-media-full-width" id="markdown-toc-list---card-with-media-full-width">List - Card with Media (full width)</a></li>
+      <li><a href="#list---card-with-metadata" id="markdown-toc-list---card-with-metadata">List - Card with Metadata</a></li>
+    </ul>
+  </li>
+  <li><a href="#implementation" id="markdown-toc-implementation">Implementation</a>    <ul>
+      <li><a href="#responsive-use-existing-renditions" id="markdown-toc-responsive-use-existing-renditions">Responsive: use existing renditions</a></li>
+      <li><a href="#manual-responsive-background-with-custom-renditions-per-media-query" id="markdown-toc-manual-responsive-background-with-custom-renditions-per-media-query">Manual: responsive background with custom renditions per media query</a></li>
+      <li><a href="#generate-generate-new-image-with-current-image-edits" id="markdown-toc-generate-generate-new-image-with-current-image-edits">Generate: generate new image with current image edits</a></li>
+      <li><a href="#adaptive-generate-new-renditions-with-quality-settings-for-each-breakpoint" id="markdown-toc-adaptive-generate-new-renditions-with-quality-settings-for-each-breakpoint">Adaptive: generate new renditions with quality settings for each breakpoint</a></li>
+      <li><a href="#rendition-pick-suitable-image-rendition" id="markdown-toc-rendition-pick-suitable-image-rendition">Rendition: pick suitable image rendition</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </nav>
+</aside>
+</div>
+
+<h1 id="summary">Summary</h1>
+
+<p>Understanding of Asset placement on pages and asset HTML presentation is crucial to saving effort for Authors and limiting the amount of manual image manipulation that would otherwise be required.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Images are vital to great content; the ability to add images to content as well as for presentation is essential as it provides the ability to differentiate your content. Authoring ability to leverage the same Asset in a different location without additional work is crucial to authoring activities. Authors need to spend more time creating content and rely on DLS and CMS to provide the heavy lifting of Asset presentation.</p>
+
+<p>Asset renditions are versions of an asset in a specific aspect ratio. Generating and caching Asset renditions provides substantial performance improvements as well as predictable capacity planning. This process starts at the Design Language System (DLS) that must set these guidelines and follow them throughout all components. These conventions must be understood by all designers, developers and all content authors, as these conventions will save a lot of effort for all involved.</p>
+
+<p>Authors must be encouraged to upload the highest resolution images into DAM. This allows DAM workflows to use the original image for generating smaller renditions. As assets are uploaded to DAM a workflow is executed, and relevant renditions are generated and stored alongside the original image in DAM. The original image is restricted in its usage, due to obvious size implications, and is only displayed when renditions are missing.</p>
+
+<h1 id="image-restrictions">Image Restrictions</h1>
+
+<p>The full list of supported asset types can be found at <a href="https://helpx.adobe.com/experience-manager/6-4/assets/using/assets-formats.html">https://helpx.adobe.com/experience-manager/6-4/assets/using/assets-formats.html</a>.</p>
+
+<p>Generally, most image formats are supported by AEM and will work with the rendition workflows to create the various rendition sizes listed below. Any caveats are listed here.</p>
+
+<h1 id="svgs">SVGs</h1>
+
+<p>SVGs should be treated as special cases as they are best suited to logos and icons, rather than photos. Because they are vector-based, rather than rasterised, SVG’s can be scaled up or down without loss of quality. Further details can be found at <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">https://en.wikipedia.org/wiki/Scalable_Vector_Graphics</a>.</p>
+
+<p>SVG’s can be uploaded to the AEM DAM, and it will generate renditions, but this should be considered an edge case. The use of SVG’s should be limited to special cases such as logos and icons that are integrated into the site via code, rather than being added as a background image through the component authoring tools.</p>
+
+<p>To further complicate matters, due to SVG’s being XML files, they can contain optional XML elements which are not supported by AEM and will cause the image rendition workflow to fail, rendering the image unusable in AEM.</p>
+
+<p>So far the following elements have been identified:</p>
+
+<ul>
+  <li>&lt;linearGradient&gt;</li>
+</ul>
+
+<h1 id="rendition-sizes">Rendition Sizes</h1>
+
+<p>Following is reference image rendition sizes</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rendition Name</th>
+      <th>Dimensions (width x height)</th>
+      <th>Dimensions - Retina</th>
+      <th>Responsive Media Query</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4K (UHD)</td>
+      <td>3840 x 2160</td>
+      <td>No image available</td>
+      <td>3840=(min-width: 3840px)</td>
+      <td>Retina image requires the original source image to be 8K</td>
+    </tr>
+    <tr>
+      <td>2K (QHD)</td>
+      <td>2560 x 1440</td>
+      <td>No image available</td>
+      <td>2560=(min-width: 2560px) and (max-width: 3839px)</td>
+      <td>Retina image requires the original source image to be 5K</td>
+    </tr>
+    <tr>
+      <td>Widescreen (HD)</td>
+      <td>1920 x 1080</td>
+      <td>Use 4K (UHD) non retina rendition</td>
+      <td>1920=(min-width: 1920px) and (max-width: 2559px)</td>
+      <td>Retina image requires the original source image to be 4K</td>
+    </tr>
+    <tr>
+      <td>Extra Large</td>
+      <td>1792 x 1008</td>
+      <td>3584 x 2016</td>
+      <td>1792=(min-width: 1792px) and (max-width: 1919px)</td>
+      <td>Retina image requires the original source image to be 4K</td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td>1280 x 720</td>
+      <td>Use 2K (QHD) non retina rendition</td>
+      <td>1280=(min-width: 1280px) and (max-width: 1791px)</td>
+      <td>Retina image requires the original source image to be at least 2K</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td>896 x 504</td>
+      <td>Use Extra Large non retina rendition</td>
+      <td>896=(min-width: 896px) and (max-width: 1279px)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Standard (wide)</td>
+      <td>640 x 360</td>
+      <td>Use Large non retina rendition</td>
+      <td>640=(min-width: 640px) and (max-width: 895px)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Standard</td>
+      <td>512 x 288</td>
+      <td>1024 x 576</td>
+      <td>512=(min-width: 512px) and (max-width: 639px)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>384 x 216</td>
+      <td>768 x 432</td>
+      <td>384=(max-width: 511px)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Small (low res)</td>
+      <td>256 x 144</td>
+      <td>Use the same non-retina version</td>
+      <td> </td>
+      <td>Set 30% jpeg compression quality. To be used for lazy loading.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="aem-rendition-considerations">AEM Rendition Considerations</h1>
+
+<p>There are a few limitations to AEMs image rendition creation that is
+worth being aware of:</p>
+
+<ul>
+  <li>It is not possible to generate a rendition which is larger than the original image. For example, if you upload an image which is 1280x720 (Large rendition), it will not generate any of the renditions which are bigger than this (e.g. Extra Large rendition)</li>
+  <li>For images which are not of a 16:9 aspect ratio, the image height is the dimension which maps to that set by the rendition. For example, the Standard rendition (which is set to 512x288) could become 431x288, where 288 is the same height as that specified by the rendition height, but the width changes to 431 rather than 512 so the image is not stretched/squashed.</li>
+  <li>If the maximum rendition size is increased, this size will need to be reflected in the OSGI config Day CQ DAM Buffered Image Cache. This can be set by an admin directly on the environments via /system/config/configMgr and should also be updated in the code repo.</li>
+</ul>
+
+<h1 id="file-size-considerations">File Size Considerations</h1>
+
+<p>As a reference for helping plan storage disk capacity:</p>
+
+<ul>
+  <li>1 sample 4K (3840 x 2160) 16:9 image which was originally 1.1MB in size takes up 4.8MB of disk space and consists of 18 image files (1 original and 17 rendition images).</li>
+</ul>
+
+<h1 id="component-image-map">Component Image Map</h1>
+
+<p>Images, when added to components as the background will need to scale to match container for the image. Larger images are selected based on the type of device which is specified using a media query.</p>
+
+<p>Images, when placed into a card as an action image representing content, have a specific size that is defined in DLS, image container is smaller in size and dimension than the image. In this situation, a smaller image is selected based on the type of device which is specified using a media query.</p>
+
+<h2 id="background---tall">Background - Tall</h2>
+
+<p>Tall background applies to tall page headers.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (UHD)</td>
+      <td>3840 x 600</td>
+      <td>4K (UHD)</td>
+      <td><img src="/assets/images/manual/image-conventions/image1.jpg" alt="Tall - Desktop (UHD)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop (QHD)</td>
+      <td>2560 x 600</td>
+      <td>2K (QHD)</td>
+      <td><img src="/assets/images/manual/image-conventions/image2.jpg" alt="Tall - Desktop (QHD)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop (Extra Large)</td>
+      <td>1920 x 600</td>
+      <td>Widescreen (HD)</td>
+      <td><img src="/assets/images/manual/image-conventions/image3.jpg" alt="Tall - Desktop (Extra Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>1366 x 600</td>
+      <td>Extra Large</td>
+      <td><img src="/assets/images/manual/image-conventions/image4.jpg" alt="Tall - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>1024 x 600</td>
+      <td>Large</td>
+      <td><img src="/assets/images/manual/image-conventions/image5.jpg" alt="Tall - Desktop" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>640 x 580</td>
+      <td>Large</td>
+      <td><img src="/assets/images/manual/image-conventions/image6.jpg" alt="Tall - Tablet" /></td>
+      <td>The Large rendition is needed here because the height is a tad bit taller than other landscape components. If this wasn’t the case and it was 480px-500px then it would scale properly without over-scaling or cropping.</td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>320 x 200</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image7.jpg" alt="Tall - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="background---narrow">Background - Narrow</h2>
+
+<p>Narrow background applies to the background in a column.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (UHD)</td>
+      <td>3840 x 600</td>
+      <td>4K (UHD)</td>
+      <td><img src="/assets/images/manual/image-conventions/image8.jpg" alt="Narrow - Desktop (UHD)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop (QHD)</td>
+      <td>2560 x 600</td>
+      <td>2K (QHD)</td>
+      <td><img src="/assets/images/manual/image-conventions/image9.jpg" alt="Narrow - Desktop (QHD)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop (Extra Large)</td>
+      <td>1920 x 600</td>
+      <td>Widescreen (HD)</td>
+      <td><img src="/assets/images/manual/image-conventions/image10.jpg" alt="Narrow - Desktop (Extra Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>1366 x 600</td>
+      <td>Extra Large</td>
+      <td><img src="/assets/images/manual/image-conventions/image11.jpg" alt="Narrow - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>1024 x 600</td>
+      <td>Large</td>
+      <td><img src="/assets/images/manual/image-conventions/image12.jpg" alt="Narrow - Desktop" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>640 x 580</td>
+      <td>Large</td>
+      <td><img src="/assets/images/manual/image-conventions/image13.jpg" alt="Narrow - Tablet" /></td>
+      <td>The Large rendition is needed here because the height is a tad bit taller than other landscape components. If this wasn’t the case and it was 480px-500px then it would scale properly without over-scaling or cropping.</td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>320 x 200</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image14.jpg" alt="Narrow - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="list---card-x3-wide">List - Card x3 (wide)</h2>
+
+<p>This applies to a set of 3 cards in a row.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>352 x 210</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image15.jpg" alt="Card x3 - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop / Tablet</td>
+      <td>260 x 160</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image16.jpg" alt="Card x3 - Desktop / Tablet" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>270 x 145</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image17.jpg" alt="Card x3 - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="list---card-x2-wide">List - Card x2 (wide)</h2>
+
+<p>This applies to a set of 2 cards in a row.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>542 x 220</td>
+      <td>Standard (wide)</td>
+      <td><img src="/assets/images/manual/image-conventions/image18.jpg" alt="Card x2 - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>400 x 160</td>
+      <td>Standard</td>
+      <td><img src="/assets/images/manual/image-conventions/image19.jpg" alt="Card x2 - Desktop" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>542 x 178</td>
+      <td>Standard (wide)</td>
+      <td><img src="/assets/images/manual/image-conventions/image20.jpg" alt="Card x2 - Tablet" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>288 x 154</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image21.jpg" alt="Card x2 - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="list---card-with-media">List - Card with Media</h2>
+
+<p>This applies to a set of cards that have media content.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>552 x 500</td>
+      <td>Medium</td>
+      <td><img src="/assets/images/manual/image-conventions/image22.jpg" alt="Card with Media - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>414 x 435</td>
+      <td>Medium</td>
+      <td><img src="/assets/images/manual/image-conventions/image23.jpg" alt="Card with Media - Desktop" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>540 x 300</td>
+      <td>Standard (wide)</td>
+      <td><img src="/assets/images/manual/image-conventions/image24.jpg" alt="Card with Media - Tablet" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>288 x 150</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image25.jpg" alt="Card with Media - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="list---card-with-media-full-width">List - Card with Media (full width)</h2>
+
+<p>This applies to a set of cards that have media overlay.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>880 x 495</td>
+      <td>Medium</td>
+      <td><img src="/assets/images/manual/image-conventions/image26.jpg" alt="Card with Media Full Width - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>660 x 370</td>
+      <td>Medium</td>
+      <td><img src="/assets/images/manual/image-conventions/image27.jpg" alt="Card with Media Full Width - Desktop" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>542 x 335</td>
+      <td>Standard (wide)</td>
+      <td><img src="/assets/images/manual/image-conventions/image28.jpg" alt="Card with Media Full Width - Tablet" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>270 x 170</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image29.jpg" alt="Card with Media Full Width - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="list---card-with-metadata">List - Card with Metadata</h2>
+
+<p>This applies to a set of cards that have metadata showing as overlay.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Dimensions</th>
+      <th>Rendition</th>
+      <th>Focal Point Overlay</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Desktop (Large)</td>
+      <td>700 x 495</td>
+      <td>Medium</td>
+      <td><img src="/assets/images/manual/image-conventions/image30.jpg" alt="Card with Metadata - Desktop (Large)" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>550 x 370</td>
+      <td>Medium</td>
+      <td><img src="/assets/images/manual/image-conventions/image31.jpg" alt="Card with Metadata - Desktop" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>500 x 280</td>
+      <td>Standard (wide)</td>
+      <td><img src="/assets/images/manual/image-conventions/image32.jpg" alt="Card with Metadata - Tablet" /></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td>260 x 162</td>
+      <td>Small</td>
+      <td><img src="/assets/images/manual/image-conventions/image33.jpg" alt="Card with Metadata - Mobile" /></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>All image renditions will be stored in DAM as physical renditions. This saves time in generating these renditions on the fly and allows authoring control when required e.g. Authors can update renditions when needed.</p>
+
+<p>Additionally, when selecting images for placement where available Authors will be able to choose a type of approach for rendering available renditions. Following is the outline of rendering options for images.</p>
+
+<h2 id="responsive-use-existing-renditions">Responsive: use existing renditions</h2>
+
+<p>A default strategy for selecting an asset is a responsive image; this gives the best experience for end-users and has least authoring overhead as no selection needed to be made. By default, the template for this rendering option has a list of all configured renditions that cover all supported devices outlined in <a href="#rendition-sizes">Rendition Sizes</a>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span> <span class="na">component=</span><span class="s">"true"</span> <span class="na">data-layer-componentpath=</span><span class="s">"article/par/contentblock4/par/image"</span> <span class="na">class=</span><span class="s">"image imageTitleDescription"</span> <span class="na">role=</span><span class="s">"banner"</span> <span class="na">id=</span><span class="s">"image4"</span> <span class="na">data-layer-track=</span><span class="s">"false"</span> <span class="na">data-asset-id=</span><span class="s">"5b1dc46d-858c-4b3a-b23b-5f8b6e0e6770"</span> <span class="na">data-asset-trackable=</span><span class="s">"true"</span> <span class="na">data-asset-licensed=</span><span class="s">"false"</span> <span class="na">data-analytics-event-label=</span><span class="s">"city3.jpg"</span> <span class="na">data-analytics-metatype=</span><span class="s">"image/jpeg"</span> <span class="na">data-analytics-filename=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;figure&gt;</span>
+      <span class="nt">&lt;picture&gt;</span>
+         <span class="c">&lt;!--[if IE 9]&gt;&lt;video style="display: none;"&gt;&lt;![endif]--&gt;</span>
+         <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg/jcr:content/renditions/cq5dam.thumbnail.48.48.png"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1px) and (max-width: 72px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg/jcr:content/renditions/cq5dam.thumbnail.140.100.png"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 73px) and (max-width: 210px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg/jcr:content/renditions/cq5dam.thumbnail.319.319.png"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 211px) and (max-width: 478px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 478px)"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> 
+                <span class="na">src=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"</span> 
+                <span class="na">title=</span><span class="s">"city3.jpg"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/picture&gt;</span>
+      <span class="nt">&lt;figcaption&gt;</span>
+         <span class="nt">&lt;h4&gt;</span>city3.jpg<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/figcaption&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description"</span> <span class="na">itemprop=</span><span class="s">"description"</span><span class="nt">&gt;</span>Image that has no title<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/figure&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="manual-responsive-background-with-custom-renditions-per-media-query">Manual: responsive background with custom renditions per media query</h2>
+
+<p>Some scenarios need for manual selection of renditions.</p>
+
+<p>Following author selections allow selection of existing renditions for a
+specific media query, providing exceptional control to authors.</p>
+
+<p><img src="/assets/images/manual/image-conventions/image34.jpg" alt="image" /></p>
+
+<p>Result in generations of this picture template.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span> 
+    <span class="na">component=</span><span class="s">"true"</span> <span class="na">data-layer-componentpath=</span><span class="s">"article/par/contentblock24/par/image"</span> 
+    <span class="na">class=</span><span class="s">"image"</span> <span class="na">role=</span><span class="s">"banner"</span> <span class="na">id=</span><span class="s">"image24"</span> <span class="na">data-layer-track=</span><span class="s">"false"</span> 
+    <span class="na">data-asset-id=</span><span class="s">"ecd9f9af-458e-4b28-afc2-3c14bacbedb8"</span> 
+    <span class="na">data-asset-trackable=</span><span class="s">"true"</span> <span class="na">data-asset-licensed=</span><span class="s">"false"</span> 
+    <span class="na">data-analytics-event-label=</span><span class="s">"aem-design.png"</span> 
+    <span class="na">data-analytics-metatype=</span><span class="s">"image/png"</span> 
+    <span class="na">data-analytics-filename=</span><span class="s">"/content/dam/aemdesign-showcase/en/common/aem-design.png"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;picture&gt;</span>
+      <span class="c">&lt;!--[if IE 9]&gt;&lt;video style="display: none;"&gt;&lt;![endif]--&gt;</span>
+      <span class="nt">&lt;source</span> 
+         <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/common/aem-design.png/jcr:content/renditions/aem-design-logo.png"</span> 
+         <span class="na">media=</span><span class="s">"(min-width: 768px)"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;source</span> 
+         <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/common/aem-design.png/jcr:content/renditions/cq5dam.web.1280.1280.png"</span> 
+         <span class="na">media=</span><span class="s">"(min-width: 768px) and (orientation: landscape), screen and (min-width: 992px)"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> 
+         <span class="na">src=</span><span class="s">"/content/dam/aemdesign-showcase/en/common/aem-design.png/_jcr_content/renditions/cq5dam.web.1280.1280.png"</span> 
+         <span class="na">title=</span><span class="s">"aem-design.png"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/picture&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div>
+
+<h2 id="generate-generate-new-image-with-current-image-edits">Generate: generate new image with current image edits</h2>
+
+<p>Existing image functionality allows some modification of the original
+image using the Generated Image options allows leveraging this
+functionality.</p>
+
+<p><img src="/assets/images/manual/image-conventions/image35.jpg" alt="image" /></p>
+
+<p>The resulting template contains a link to the current image path with a timestamp.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span> 
+    <span class="na">component=</span><span class="s">"true"</span> <span class="na">data-layer-componentpath=</span><span class="s">"article/par/contentblock20/par/image"</span> 
+    <span class="na">class=</span><span class="s">"image"</span> <span class="na">role=</span><span class="s">"banner"</span> <span class="na">id=</span><span class="s">"image20"</span> <span class="na">data-layer-track=</span><span class="s">"false"</span> 
+    <span class="na">data-asset-id=</span><span class="s">"5b1dc46d-858c-4b3a-b23b-5f8b6e0e6770"</span> 
+    <span class="na">data-asset-trackable=</span><span class="s">"true"</span> <span class="na">data-asset-licensed=</span><span class="s">"false"</span> 
+    <span class="na">data-analytics-event-label=</span><span class="s">"city3.jpg"</span> 
+    <span class="na">data-analytics-metatype=</span><span class="s">"image/jpeg"</span> 
+    <span class="na">data-analytics-filename=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid "</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> 
+      <span class="na">src=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg.img.jpeg/1586316135756.jpeg"</span> 
+      <span class="na">title=</span><span class="s">"city3.jpg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div>
+
+<h2 id="adaptive-generate-new-renditions-with-quality-settings-for-each-breakpoint">Adaptive: generate new renditions with quality settings for each breakpoint</h2>
+
+<p>Adaptive image is a service that is configured with a system set fixed-list of rendition widths that can be used for image sizing. Authors either can
+accept the default list of mapping or specify a custom list based on
+system configurations.</p>
+
+<p><img src="/assets/images/manual/image-conventions/image36.jpg" alt="image" /></p>
+
+<p>The template contains a list of all media queries and link to the asset
+with predefined selectors that trigger a service.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span> <span class="na">component=</span><span class="s">"true"</span> <span class="na">data-layer-componentpath=</span><span class="s">"article/par/contentblock19/par/image"</span> <span class="na">class=</span><span class="s">"image imageTitleDescription"</span> <span class="na">role=</span><span class="s">"banner"</span> <span class="na">id=</span><span class="s">"image19"</span> <span class="na">data-layer-track=</span><span class="s">"false"</span> <span class="na">data-asset-id=</span><span class="s">"4a0c05b8-10af-439a-8e04-c56386d9618d"</span> <span class="na">data-asset-trackable=</span><span class="s">"true"</span> <span class="na">data-asset-licensed=</span><span class="s">"false"</span> <span class="na">data-analytics-event-label=</span><span class="s">"Asset Title"</span> <span class="na">data-analytics-metatype=</span><span class="s">"image/jpeg"</span> <span class="na">data-analytics-filename=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;figure&gt;</span>
+      <span class="nt">&lt;picture&gt;</span>
+         <span class="c">&lt;!--[if IE 9]&gt;&lt;video style="display: none;"&gt;&lt;![endif]--&gt;</span>
+         <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.480.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1px) and (max-width: 533px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.640.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 534px) and (max-width: 691px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.720.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 692px) and (max-width: 770px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.800.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 771px) and (max-width: 848px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.960.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 849px) and (max-width: 1008px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.1024.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1009px) and (max-width: 1075px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.1280.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1076px) and (max-width: 1331px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.1440.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1332px) and (max-width: 1572px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.1920.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1573px) and (max-width: 1971px)"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.2048.jpg"</span> 
+                <span class="na">media=</span><span class="s">"(min-width: 1971px)"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> 
+                <span class="na">src=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city2.jpg.img.2048.jpg"</span> 
+                <span class="na">alt=</span><span class="s">"Asset Headline"</span> <span class="na">title=</span><span class="s">"Asset Title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/picture&gt;</span>
+      <span class="nt">&lt;figcaption&gt;</span>
+         <span class="nt">&lt;h4&gt;</span>Asset Title<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/figcaption&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description"</span> <span class="na">itemprop=</span><span class="s">"description"</span><span class="nt">&gt;</span>Asset Description<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/figure&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div>
+
+<h2 id="rendition-pick-suitable-image-rendition">Rendition: pick suitable image rendition</h2>
+
+<p>Some scenarios require the selection of a specific rendition based on a
+set width of and asset.</p>
+
+<p><img src="/assets/images/manual/image-conventions/image37.jpg" alt="image" /></p>
+
+<p>This template only contains the image that was matched based on the
+specified width.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">itemscope=</span><span class="s">""</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span> 
+    <span class="na">component=</span><span class="s">"true"</span> <span class="na">data-layer-componentpath=</span><span class="s">"article/par/contentblock17/par/image"</span> 
+    <span class="na">class=</span><span class="s">"image"</span> <span class="na">role=</span><span class="s">"banner"</span> <span class="na">id=</span><span class="s">"image17"</span> <span class="na">data-layer-track=</span><span class="s">"false"</span> 
+    <span class="na">data-asset-id=</span><span class="s">"5b1dc46d-858c-4b3a-b23b-5f8b6e0e6770"</span> 
+    <span class="na">data-asset-trackable=</span><span class="s">"true"</span> <span class="na">data-asset-licensed=</span><span class="s">"false"</span> 
+    <span class="na">data-analytics-event-label=</span><span class="s">"city3.jpg"</span> 
+    <span class="na">data-analytics-metatype=</span><span class="s">"image/jpeg"</span> 
+    <span class="na">data-analytics-filename=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid "</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> <span class="na">src=</span><span class="s">"/content/dam/aemdesign-showcase/en/components/media/image/city3.jpg/_jcr_content/renditions/cq5dam.thumbnail.319.319.png"</span> <span class="na">title=</span><span class="s">"city3.jpg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>We hope these image conventions will help you design a much more robust Design Language System that will ensure the author will fully leverage the power of AEM.</p>
+
+<p>If you want to check out these image conventions in actions start by running AEM container, you can find how to get started here: <a href="/blog/2019/08/30/docker-aem-bundle">docker-aem-bundle</a>, once you have a docker container running head over to showcase to checkout <a href="http://localhost:4502/editor.html/content/aemdesign-showcase/au/en/component/media/image.html">Image Component</a>.</p>
+
+<p>Once again if you need help reach out to us, we will be happy to help.</p>
+
+                
+            </section>
+
+            <style>
+                .page__content_adspace_bottom {
+                    height: 200px;
+                    display: inline-block;
+                    width: 100%;
+                }
+            </style>
+            <section class="page__content_adspace_bottom">
+            
+<div align="center" style="margin: 1em 0;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6707033742178132"
+         data-ad-slot="7730324178"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+            </section>
+
+            <footer class="page__meta">
+                
+                
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#info" class="page__taxonomy-item" rel="tag">info</a>
+    
+    </span>
+  </p>
+
+
+                
+                <p class="page__date"><strong><i class="fas fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-05-11T17:04:56+00:00">May 11, 2020</time></p>
+                
+            </footer>
+
+            <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Image+Conventions%20https%3A%2F%2Faem.design%2Fmanual%2Fimage-conventions%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanual%2Fimage-conventions%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanual%2Fimage-conventions%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+            
+  <nav class="pagination">
+    
+      <a href="/manual/conventions/" class="pagination--pager" title="Conventions
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+        </div>
+
+        
+        <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+        
+    </article>
+
+    
+    
+    <div class="page__related">
+        
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+        
+        <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  13 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+  </article>
+</div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://aem.design/manual/image-conventions/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/manual/070-image-conventions"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+  </body>
+</html>
