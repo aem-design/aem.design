@@ -6,7 +6,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        var elements = document.querySelectorAll(".page__content p img");
+        var elements = document.querySelectorAll(".page__content p img, .page__content table img");
         elements.forEach(element => {
             var url = element.getAttribute('src');
             var alt = element.getAttribute('alt');
