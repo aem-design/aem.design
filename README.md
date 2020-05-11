@@ -49,7 +49,7 @@ On windows, for best results use docker for everything.
 ```powershell
 #POWERSHELL
 Set-Variable -name PROJECT_PATH -value $pwd
-docker run -it --rm -p 4000:4000 -p 35729:35729 -v ${PROJECT_PATH}:/build/source aemdesign/centos-java-buildpack bash --login
+docker run -it --rm -p 4000:4000 -p 35729:35729 -v ${PROJECT_PATH}:/build/source:rw aemdesign/centos-java-buildpack bash --login
 
 sed -i 's/\.nvm/\/build\/\.nvm/' .bashrc
 source .bashrc
