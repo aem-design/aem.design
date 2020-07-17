@@ -7,7 +7,7 @@
     <input id="ac-toc" name="accordion-toc" type="checkbox" />
     <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   {% endif %}
-  <ul class="nav__items" style="max-height: 100% !important;">
+  <ul class="nav__items" style="max-height: 100% !important; opacity: 1 !important;">
     {% for nav in navigation %}
       {% if include.childrenFor == nav.url %}
       <li>
