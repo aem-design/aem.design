@@ -460,7 +460,7 @@
 
 <h3 id="from-travis-to-github-actions---the-non-definitive-guide">From Travis to Github Actions - the non definitive guide</h3>
 
-<p>To get started all you need to do is make <code class="highlighter-rouge">.github/workflows/main.yml</code> file in your project with following content:</p>
+<p>To get started all you need to do is make <code class="language-plaintext highlighter-rouge">.github/workflows/main.yml</code> file in your project with following content:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="na">name</span><span class="pi">:</span> <span class="s">CI</span>
@@ -514,17 +514,17 @@
 <p>Then you can go ahead and replace steps with the ones you have in your travis file. Here are some how to notes on things that you will need to know:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">name:</code> at the top is the ID of action so keep that short.</li>
-  <li>unlike Travis there is <code class="highlighter-rouge">jobs/&lt;job_id&gt;</code> layout where you can separate your flow if you need, initially having everything in one job is easiest, you can refactor once you have more requirements.</li>
-  <li><code class="highlighter-rouge">uses</code> mean using another pre made action from marketplace, you pass parameters to actions using <code class="highlighter-rouge">with</code>.</li>
-  <li>you can use bash variables in <code class="highlighter-rouge">run</code> steps but you need to use “Context Expression” when doing it on other YAML attributes such <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">when</code> or passing variables to things.</li>
-  <li><code class="highlighter-rouge">if</code> is added directly to step YAML and you use Context Expressions to evaluate your logic, ex check if current branch is master: <code class="highlighter-rouge">if: github.ref == 'refs/heads/master'</code>.</li>
-  <li>to <code class="highlighter-rouge">export</code> a variable to environment you need to do following echo command format <code class="highlighter-rouge">echo ::set-env name={name}::{value}</code>.</li>
-  <li>you can also set step outputs <code class="highlighter-rouge">::set-output name={name}::{value}</code> that allow you to reference this step it in Context Expression <code class="highlighter-rouge">steps.&lt;step_id&gt;.outputs.&lt;variable&gt;</code> this separates global from step variables.</li>
-  <li>to use <code class="highlighter-rouge">env</code> variables in <code class="highlighter-rouge">run</code> steps you can just do <code class="highlighter-rouge">${DOCKER_REGISTRY}</code> this will evaluate the variable as bash variable.</li>
-  <li>to use <code class="highlighter-rouge">env</code> in YAML parts such as <code class="highlighter-rouge">with</code> etc you need to use Content Expressions <code class="highlighter-rouge">$</code> this will evaluate the variable as bash variable.</li>
-  <li>to pass secrets to steps or use them in <code class="highlighter-rouge">env</code> variables use the Content Expression <code class="highlighter-rouge">$</code>.</li>
-  <li>check Awesome List of Must Have Actions in your Pipeline](https://github.com/sdras/awesome-actions) for custom actions that will replace comparable Travis actions, example <a href="https://github.com/marketplace/actions/github-release-create-update-and-upload-assets">meeDamian/github-release@1.0</a> replaces Travis <code class="highlighter-rouge">deploy</code> step.</li>
+  <li><code class="language-plaintext highlighter-rouge">name:</code> at the top is the ID of action so keep that short.</li>
+  <li>unlike Travis there is <code class="language-plaintext highlighter-rouge">jobs/&lt;job_id&gt;</code> layout where you can separate your flow if you need, initially having everything in one job is easiest, you can refactor once you have more requirements.</li>
+  <li><code class="language-plaintext highlighter-rouge">uses</code> mean using another pre made action from marketplace, you pass parameters to actions using <code class="language-plaintext highlighter-rouge">with</code>.</li>
+  <li>you can use bash variables in <code class="language-plaintext highlighter-rouge">run</code> steps but you need to use “Context Expression” when doing it on other YAML attributes such <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">when</code> or passing variables to things.</li>
+  <li><code class="language-plaintext highlighter-rouge">if</code> is added directly to step YAML and you use Context Expressions to evaluate your logic, ex check if current branch is master: <code class="language-plaintext highlighter-rouge">if: github.ref == 'refs/heads/master'</code>.</li>
+  <li>to <code class="language-plaintext highlighter-rouge">export</code> a variable to environment you need to do following echo command format <code class="language-plaintext highlighter-rouge">echo ::set-env name={name}::{value}</code>.</li>
+  <li>you can also set step outputs <code class="language-plaintext highlighter-rouge">::set-output name={name}::{value}</code> that allow you to reference this step it in Context Expression <code class="language-plaintext highlighter-rouge">steps.&lt;step_id&gt;.outputs.&lt;variable&gt;</code> this separates global from step variables.</li>
+  <li>to use <code class="language-plaintext highlighter-rouge">env</code> variables in <code class="language-plaintext highlighter-rouge">run</code> steps you can just do <code class="language-plaintext highlighter-rouge">${DOCKER_REGISTRY}</code> this will evaluate the variable as bash variable.</li>
+  <li>to use <code class="language-plaintext highlighter-rouge">env</code> in YAML parts such as <code class="language-plaintext highlighter-rouge">with</code> etc you need to use Content Expressions <code class="language-plaintext highlighter-rouge">$</code> this will evaluate the variable as bash variable.</li>
+  <li>to pass secrets to steps or use them in <code class="language-plaintext highlighter-rouge">env</code> variables use the Content Expression <code class="language-plaintext highlighter-rouge">$</code>.</li>
+  <li>check Awesome List of Must Have Actions in your Pipeline](https://github.com/sdras/awesome-actions) for custom actions that will replace comparable Travis actions, example <a href="https://github.com/marketplace/actions/github-release-create-update-and-upload-assets">meeDamian/github-release@1.0</a> replaces Travis <code class="language-plaintext highlighter-rouge">deploy</code> step.</li>
   <li>caching is not there yet but will be available in November 2019.</li>
   <li>you can use Build Matrix see <a href="https://help.github.com/en/articles/workflow-syntax-for-github-actions">Github Actions YAML Syntax</a> for more info</li>
 </ul>

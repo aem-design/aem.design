@@ -559,7 +559,7 @@
 
 <h2 id="environments">Environments</h2>
 
-<p>Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (<code class="highlighter-rouge">...</code>) revealing a simple menu with only but primary experiences you are looking for. Additionally, when you click the Details button in this section you will be taken to a details screen that will show you</p>
+<p>Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (<code class="language-plaintext highlighter-rouge">...</code>) revealing a simple menu with only but primary experiences you are looking for. Additionally, when you click the Details button in this section you will be taken to a details screen that will show you</p>
 
 <p><img src="/assets/images/adobe-aec/4-aec-program-console-environments-details.png" alt="AEC - Cloud Manager - Environments Details" /></p>
 
@@ -602,7 +602,7 @@
 
 <h2 id="build--unit-testing">Build &amp; Unit Testing</h2>
 
-<p>In “build_maven_build.log” you can see <code class="highlighter-rouge">[BUILD] Running maven build command(s)</code> line and judging by what happens after that simple <code class="highlighter-rouge">mvn package</code> command is used as it compiles, tests and packages all modules in you project.</p>
+<p>In “build_maven_build.log” you can see <code class="language-plaintext highlighter-rouge">[BUILD] Running maven build command(s)</code> line and judging by what happens after that simple <code class="language-plaintext highlighter-rouge">mvn package</code> command is used as it compiles, tests and packages all modules in you project.</p>
 
 <p>This step runs for about 5min and it would depend on your package and test content. It’s not clear from the logs if the artifacts are cached at this step or after code scan.</p>
 
@@ -703,9 +703,9 @@
 
 <p><em>PS. this is the complete list of issues that we got for first deploy of AEM.Design to Adobe SaaS offering.</em></p>
 
-<p>Just looking at this the reported Severity seems to be very opinionated and super conservative. Having a readme file in your <code class="highlighter-rouge">/apps/aemdesign/install</code> folder does not make it a Major defect, but this it probably just splitting hairs at this point and removing that file is trivial.</p>
+<p>Just looking at this the reported Severity seems to be very opinionated and super conservative. Having a readme file in your <code class="language-plaintext highlighter-rouge">/apps/aemdesign/install</code> folder does not make it a Major defect, but this it probably just splitting hairs at this point and removing that file is trivial.</p>
 
-<p>Errors such as <code class="highlighter-rouge">/apps/aemdesign/components/template/cloudconfig/addthisconnect/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</code> seem to fail the blank <code class="highlighter-rouge">config</code> node name rule and yes this is Major once again.</p>
+<p>Errors such as <code class="language-plaintext highlighter-rouge">/apps/aemdesign/components/template/cloudconfig/addthisconnect/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</code> seem to fail the blank <code class="language-plaintext highlighter-rouge">config</code> node name rule and yes this is Major once again.</p>
 
 <p>These trivial issues will get some great solution in time as this is a great process to put in place for all AEM project from the start. Many AEM project will benefit from establishing initial baseline and would provide a clear for quality path.</p>
 
@@ -723,7 +723,7 @@
 
 <p>The process also creates a list of packages that are have content to be installed into repository, this list is used in deploy step.</p>
 
-<p>All the packages once converted get store into <code class="highlighter-rouge">src/main/features/generated-author</code> with relevant JSON files describing features in <code class="highlighter-rouge">src/main/features/generated/001_sew-aem-common.json</code>. After this a maven build process is executed to compile your features into latest version (at the time of writing 6.6.0-V17414) of AEM Quickstart. Adobe has indicated that they are moving towards daily releases so this means that this process will pick up latest version of AEM when it’s available.</p>
+<p>All the packages once converted get store into <code class="language-plaintext highlighter-rouge">src/main/features/generated-author</code> with relevant JSON files describing features in <code class="language-plaintext highlighter-rouge">src/main/features/generated/001_sew-aem-common.json</code>. After this a maven build process is executed to compile your features into latest version (at the time of writing 6.6.0-V17414) of AEM Quickstart. Adobe has indicated that they are moving towards daily releases so this means that this process will pick up latest version of AEM when it’s available.</p>
 
 <p>After this conversion and merger of AEM sling features, AEM image is started as container to initialise it’s segment store. Once the instance is initialising it’s stopped and Apache Jackrabbit Oak maintenance is executed, first checkpoint then compact. Once this is done both docker images are uploaded to Adobes Docker Image Repository. And this same process repeats for Publish images changing runmode=publish in the process.  At the end of this process which takes around 10-15 min to run you end up with Author and Publish images sizing at 4GB each.</p>
 

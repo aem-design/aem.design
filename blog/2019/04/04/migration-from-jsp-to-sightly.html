@@ -414,7 +414,7 @@ This is the approach we followed, this allow you to substitute all existing comp
 
 <p>Consider your existing component structure, when this component would be used in pages the reference to the component will be stored with each instance on component.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
     aemdesign
         component
             text
@@ -422,7 +422,7 @@ This is the approach we followed, this allow you to substitute all existing comp
                 .content.xml
 </code></pre></div></div>
 
-<p>Using this structure will effectively hardcode <code class="highlighter-rouge">aemdesign/component/content/text</code> into your pages and experience fragments.
+<p>Using this structure will effectively hardcode <code class="language-plaintext highlighter-rouge">aemdesign/component/content/text</code> into your pages and experience fragments.
 This creates a long term situation that when you want to update the component you need to update in place and in turn this updates all of the instances of your component everywhere it appears.
 This is the best approach as it ensure that you continue to update your component code and update content with latest version without adding unnecessary path version numbering into content.
 It best that versioning of component is kept to the component code and not hardcoded into content.</p>
@@ -434,7 +434,7 @@ This would seem trivial but over time it will be affecting authoring experience 
 <p>Another approach elegant approach provides a simplified pattern to have versioning of component without exposing version to author and without hardcoding version into content.
 This pattern allow you to have one component path with localised versions that are not exposed to authors.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
     aemdesign
         component
             text [ sling:resourceSuperType==aemdesign/component/content/text/v1/text ]
@@ -456,7 +456,7 @@ This pattern allow you to leverage version toggling without exposing versioned c
 <p>Furthermore AEM.Design framework uses this pattern to expose component into tenant applications.
 When you deploy AEM.Design core component you will have aemdesign application folder available to be used in a tenant component space.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
     aemdesign
         component
             text [ sling:resourceSuperType==aemdesign/component/content/text/v1/text ]

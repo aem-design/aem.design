@@ -399,7 +399,7 @@ But AEM will always be better with Docker.
 AEM in docker allows you to run multiple instances of AEM at a drop of a hat. 
 No need to copy files around or look for Jar’s.</p>
 
-<p>If you want to quickly start a local demo AEM 6.5 instance on port <code class="highlighter-rouge">4502</code> with debug port <code class="highlighter-rouge">30303</code> all you have to do is run this command using <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> image</p>
+<p>If you want to quickly start a local demo AEM 6.5 instance on port <code class="language-plaintext highlighter-rouge">4502</code> with debug port <code class="language-plaintext highlighter-rouge">30303</code> all you have to do is run this command using <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> image</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -414,7 +414,7 @@ aemdesign/aem
   <li><em>Don’t forget the debug port you can use it in your IntelliJ Ultimate, you can read more about this here <a href="https://www.jetbrains.com/help/idea/run-debug-configuration-jsr45-compatible-server.html">Run/Debug Configuration: JSR45 Compatible Server</a></em></li>
 </ul>
 
-<p>Then you decide that you want to compare latest AEM to AEM 6.4 with a tweak to port <code class="highlighter-rouge">4512</code> and image tag <code class="highlighter-rouge">aemdesign/aem:6.4.0</code> you are instantly in business</p>
+<p>Then you decide that you want to compare latest AEM to AEM 6.4 with a tweak to port <code class="language-plaintext highlighter-rouge">4512</code> and image tag <code class="language-plaintext highlighter-rouge">aemdesign/aem:6.4.0</code> you are instantly in business</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author64 <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -425,7 +425,7 @@ aemdesign/aem
 aemdesign/aem:6.4.0
 </code></pre></div></div>
 
-<p>Then if you decide to run AEM 6.5 publish instance, same command with minor update to <code class="highlighter-rouge">AEM_RUNMODE</code> to <code class="highlighter-rouge">publish</code> using same <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> image and you have a clean publish starting up</p>
+<p>Then if you decide to run AEM 6.5 publish instance, same command with minor update to <code class="language-plaintext highlighter-rouge">AEM_RUNMODE</code> to <code class="language-plaintext highlighter-rouge">publish</code> using same <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> image and you have a clean publish starting up</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> publish <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -483,7 +483,7 @@ You can monitor logs with docker logs command</p>
 </code></pre></div></div>
 
 <p>This command will tail the error log from the container for you to see. 
-Change the parameter <code class="highlighter-rouge">since</code> to the date from wich you want to view the log from, log will get long, but that what log shipping is for 😎😻</p>
+Change the parameter <code class="language-plaintext highlighter-rouge">since</code> to the date from wich you want to view the log from, log will get long, but that what log shipping is for 😎😻</p>
 
 <p>Hope this will help you with your AEM Docker journey!</p>
 

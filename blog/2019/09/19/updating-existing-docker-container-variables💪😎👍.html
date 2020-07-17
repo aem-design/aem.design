@@ -420,7 +420,7 @@
             <section class="page__content" itemprop="text">
                 <p>Updating docker config of an existing container can be a daunting task. Usually its just easier to kill the container and start from scratch and this approach is preferred when it comes to docker principles.</p>
 
-<p>As of current <code class="highlighter-rouge">19+</code> version of docker there isn’t a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.</p>
+<p>As of current <code class="language-plaintext highlighter-rouge">19+</code> version of docker there isn’t a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.</p>
 
 <p>Flow on effect is that when you change this docker config you will need to restart docker engine, which is fine when you have only one container running but if you have lots this is out of the question.</p>
 
@@ -453,12 +453,12 @@ docker run <span class="nt">-it</span> <span class="nt">-v</span> /var/lib/docke
 
 <p>You will see config on one line, yes this is how it is and you need to thread carefully.</p>
 
-<p>In our case you will need to scroll until you find  <code class="highlighter-rouge">AEM_JVM_OPTS</code> attribute scroll to the end its value and insert (press <code class="highlighter-rouge">i</code> to enter ) AEM Java Debug parameters:</p>
+<p>In our case you will need to scroll until you find  <code class="language-plaintext highlighter-rouge">AEM_JVM_OPTS</code> attribute scroll to the end its value and insert (press <code class="language-plaintext highlighter-rouge">i</code> to enter ) AEM Java Debug parameters:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">-Xdebug</span> <span class="nt">-Xrunjdwp</span>:transport<span class="o">=</span>dt_socket,server<span class="o">=</span>y,address<span class="o">=</span>58242,suspend<span class="o">=</span>n
 </code></pre></div></div>
 
-<p>Then press <code class="highlighter-rouge">ESC</code> key followed by <code class="highlighter-rouge">:qw</code> and press enter.</p>
+<p>Then press <code class="language-plaintext highlighter-rouge">ESC</code> key followed by <code class="language-plaintext highlighter-rouge">:qw</code> and press enter.</p>
 
 <p>You now have your config tweak inserted and you can proceed.</p>
 

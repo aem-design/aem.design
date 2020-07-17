@@ -396,7 +396,7 @@
             <section class="page__content" itemprop="text">
                 <p>Building on the previous work <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> we have added a new AEM 6.5 Bundle image.</p>
 
-<p>Following is the package map to docker tag relationship, Docker tags conventions is <code class="highlighter-rouge">{verison}-{bundle type}</code>, <code class="highlighter-rouge">bundle-forms</code> includes all packages that are in <code class="highlighter-rouge">bundle</code>.</p>
+<p>Following is the package map to docker tag relationship, Docker tags conventions is <code class="language-plaintext highlighter-rouge">{verison}-{bundle type}</code>, <code class="language-plaintext highlighter-rouge">bundle-forms</code> includes all packages that are in <code class="language-plaintext highlighter-rouge">bundle</code>.</p>
 
 <table>
   <thead>
@@ -525,7 +525,7 @@
 aemdesign/aem:6.5.3.0-bundle-forms
 </code></pre></div></div>
 
-<p>Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to <code class="highlighter-rouge">publish</code> and updating ports for accessing the service, and you should get the following.</p>
+<p>Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to <code class="language-plaintext highlighter-rouge">publish</code> and updating ports for accessing the service, and you should get the following.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> publish <span class="se">\</span>
 <span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
@@ -568,7 +568,7 @@ aemdesign/aem:6.4.0-bundle-forms
 
 <p><img src="/assets/images/license/license-confirm.png" alt="AEM License Page" /></p>
 
-<p>Additionally, once you log in, you can visit the <a href="http://localhost:4502/system/console/productinfo">Product Info</a> console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example, if you choose AEM 6.5 with Service Pack 1 its version will be <code class="highlighter-rouge">6.5.1.0</code>.</p>
+<p>Additionally, once you log in, you can visit the <a href="http://localhost:4502/system/console/productinfo">Product Info</a> console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example, if you choose AEM 6.5 with Service Pack 1 its version will be <code class="language-plaintext highlighter-rouge">6.5.1.0</code>.</p>
 
 <h3 id="packages">Packages</h3>
 
