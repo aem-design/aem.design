@@ -7,9 +7,10 @@ comments: true
 redirect_from:
   - /manual/conventions/
 categories:
-  - info
+  - manual
 tags:
-  - docs
+  - image
+  - conventions
 ---
 
 {% include toc_sticky.html %}

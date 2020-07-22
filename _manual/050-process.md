@@ -7,9 +7,10 @@ comments: true
 redirect_from:
   - /manual/osenv/
 categories:
-  - info
+  - manual
 tags:
-  - docs
+  - process
+  - conventions
 ---
 
 {% include toc_sticky.html %}

@@ -7,9 +7,10 @@ comments: true
 redirect_from:
   - /manual/management/
 categories:
-  - info
+  - manual
 tags:
-  - docs
+  - environment
+  - conventions
 ---
 
 {% include toc_sticky.html %}

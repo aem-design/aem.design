@@ -1,5 +1,5 @@
 ---
-title: "Conventions"
+title: "Code Conventions"
 permalink: /manual/conventions/
 author: yaw@aem.design
 editor: max@aem.design
@@ -7,9 +7,10 @@ comments: true
 redirect_from:
   - /manual/process/
 categories:
-  - info
+  - manual
 tags:
-  - docs
+  - code
+  - conventions
 ---
 
 {% include toc_sticky.html %}

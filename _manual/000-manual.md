@@ -8,7 +8,7 @@ comments: true
 redirect_from:
   - /manifesto/
 categories:
-  - info
+  - manual
 tags:
   - docs
 sidebar:
