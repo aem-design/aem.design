@@ -13,27 +13,27 @@
 
 
 
-<title>Platform Principles - AEM.Design</title>
+<title>Design Language System - AEM.Design</title>
 
 
 
 
-<meta name="description" content="Consider that when creating content structures you are creating them once and forever.">
+<meta name="description" content="           On This Page    ">
 
 
 
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Platform Principles">
+<meta property="og:title" content="Design Language System">
 
 
-  <link rel="canonical" href="https://aem.design/manifesto/principles/">
-  <meta property="og:url" content="https://aem.design/manifesto/principles/">
+  <link rel="canonical" href="https://aem.design/manual/dls/">
+  <meta property="og:url" content="https://aem.design/manual/dls/">
 
 
 
-  <meta property="og:description" content="Consider that when creating content structures you are creating them once and forever.">
+  <meta property="og:description" content="           On This Page    ">
 
 
 
@@ -379,25 +379,27 @@
     
       <li>
         
-          <a href="/manifesto/"><span class="nav__sub-title">Manifesto</span></a>
+          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
         
 
         
         <ul>
           
-            <li><a href="/manifesto/introduction/">Introduction</a></li>
+            <li><a href="/manual/projects/">Projects</a></li>
           
-            <li><a href="/manifesto/principles/" class="active">Principles</a></li>
+            <li><a href="/manual/devtools/">Development Tools</a></li>
           
-            <li><a href="/manifesto/capabilities/">Capabilities</a></li>
+            <li><a href="/manual/management/">Management</a></li>
           
-            <li><a href="/manifesto/delivery/">Delivery</a></li>
+            <li><a href="/manual/osenv/">Operating Environment</a></li>
           
-            <li><a href="/manifesto/project/">Project</a></li>
+            <li><a href="/manual/process/">Process</a></li>
           
-            <li><a href="/manifesto/content/">Content</a></li>
+            <li><a href="/manual/conventions/">Conventions</a></li>
           
-            <li><a href="/manifesto/technical/">Technical</a></li>
+            <li><a href="/manual/image-conventions/">Image Conventions</a></li>
+          
+            <li><a href="/manual/dls/" class="active">Design Language System</a></li>
           
         </ul>
         
@@ -413,17 +415,17 @@
 
 
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="Platform Principles">
-        <meta itemprop="description" content="Consider that when creating content structures you are creating them once and forever.">
+        <meta itemprop="headline" content="Design Language System">
+        <meta itemprop="description" content="           On This Page    ">
         <meta itemprop="datePublished" content="July 22, 2020">
-        <meta itemprop="dateModified" content="November 03, 2016">
+        
 
         <div class="page__inner-wrap">
             
             <header>
 
 
-                <h1 class="page__title" itemprop="headline">Platform Principles
+                <h1 class="page__title" itemprop="headline">Design Language System
 </h1>
                 
                 <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
@@ -431,7 +433,7 @@
 
 
 
-  3 minute read
+  2 minute read
 
 </p>
                 
@@ -444,79 +446,255 @@
 <nav class="toc">
       <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#contentricity" id="markdown-toc-contentricity">Contentricity</a></li>
-  <li><a href="#authorability" id="markdown-toc-authorability">Authorability</a></li>
-  <li><a href="#experiences" id="markdown-toc-experiences">Experiences</a></li>
-  <li><a href="#digital-channel-agility" id="markdown-toc-digital-channel-agility">Digital Channel Agility</a>    <ul>
-      <li><a href="#continuous-delivery-and-continuous-integration" id="markdown-toc-continuous-delivery-and-continuous-integration">Continuous Delivery and Continuous Integration</a></li>
-      <li><a href="#test-driven-development" id="markdown-toc-test-driven-development">Test Driven Development</a></li>
-      <li><a href="#behaviour-driven-developmenttesting" id="markdown-toc-behaviour-driven-developmenttesting">Behaviour Driven Development/Testing</a></li>
-    </ul>
-  </li>
-  <li><a href="#collaborative-development" id="markdown-toc-collaborative-development">Collaborative Development</a></li>
-  <li><a href="#content-is-forever" id="markdown-toc-content-is-forever">Content is Forever</a></li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#reference-for-terms" id="markdown-toc-reference-for-terms">Reference for Terms</a></li>
+  <li><a href="#design-language-system-table-of-contents" id="markdown-toc-design-language-system-table-of-contents">Design Language System Table of Contents</a></li>
 </ul>
 
     </nav>
 </aside>
 </div>
 
-<h2 id="contentricity">Contentricity</h2>
+<h2 id="introduction">Introduction</h2>
 
-<p><a href="/archive/davids-model">Davids Model - 7 Rules</a> is reference to fundamental approach behind AEM(CQ) architecture. All of the technical frameworks that make up the platform are all targeted to support Content Centric approach of the CMS. This is different to other CMS platforms and something that must be learned and iterated to all involved.</p>
+<p>A design language system is a collection of design principles and components that unite product teams around a common visual language.</p>
 
-<p>Major benefit of Content Centric approach is that Governance of the CMS and its development is managed by Business. This is done by managing the experiences of the platform. The platform is a facilitator and development effort is used to enrich content presentation and not extending the platform capabilities.</p>
+<ul>
+  <li>
+    <p><strong>Design</strong> is the description of visual aesthetics that are inferred from Brand Guidelines.</p>
+  </li>
+  <li>
+    <p><strong>Language</strong> is the common dictionary of terms that describe the design elements and design options that apply to components components</p>
 
-<h2 id="authorability">Authorability</h2>
+    <ul>
+      <li>
+        <p><strong>Design Elements</strong> refers to general design conventions that can be applied across all components and govern general component behaviour</p>
+      </li>
+      <li>
+        <p><strong>Design Options</strong> refers to a subset of design conventions that apply to specific components</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>System</strong> is the definition of components and their behaviour and their relations with Design and Language.</p>
+  </li>
+</ul>
 
-<p>All content in CMS should be authorable. Fundamental guide to business analysts working on new business features that when it comes to CMS it’s important to build content perspective of the feature being developed. This enables an insight and a clear direction for the developers to ensure that components they develop can be configured by Authors. At the same time developers are ensuring that all the development work that they create enable feature customisations without their immediate involvement. This enables developers to building tools for the business authors to build the site. In other words develops build small puzzle pieces in a form of loosely coupled pluggable components so that an authors can mix and match components to create unlimited combinations of content presentations.</p>
+<p>The DLS can be considered the source of truth for how elements look and behave.</p>
 
-<h2 id="experiences">Experiences</h2>
+<ul>
+  <li>
+    <p>Designers, developers and content authors can use the DLS to check if an element of design already exists.</p>
+  </li>
+  <li>
+    <p>Content authors can use the DLS for instructions on how to use certain design components.</p>
+  </li>
+</ul>
 
-<p>While projects concentrate on developing new feature components it’s important to evaluate and plan other authoring experiences that are available in AEM platform.</p>
+<p>Like a natural language, the DLS is supposed to grow over time as components are progressively added to it</p>
 
-<p>Primary experiences that must be considered at all times (1) authoring experience, (2) channel experience and (3) delivery experience.</p>
+<p>Design Language systems are aimed to be a shared Language for understanding design, that transparently leads to understanding implementation. Following definitions are made to ensure discrete understanding terms that are used</p>
+
+<p>Design Language is a vocabulary that is used to describe the design.</p>
+
+<p>Design Language System is a reference implementation of a Design Language.</p>
+
+<h2 id="reference-for-terms">Reference for Terms</h2>
+
+<ul>
+  <li><a href="https://spectrum.adobe.com/">https://spectrum.adobe.com/</a></li>
+</ul>
+
+<h2 id="design-language-system-table-of-contents">Design Language System Table of Contents</h2>
+
+<p>Here is a list of things that you would cover as you define your Design Language System.</p>
 
 <ol>
-  <li>
-    <p>Author Experience - Business Authoring, Outports, Vendors etc</p>
+  <li>Principles - The principles provide the overall direction and connect the brand and goals to the design system. The principles are the <strong>why</strong> of the design system exist.
+    <ol>
+      <li>Brand</li>
+      <li>Experience Vision</li>
+      <li>Design Principles</li>
+    </ol>
   </li>
-  <li>
-    <p>Channel Experience - Mobile, Digital Publishing, Web, Apps, API, other</p>
+  <li>Guidelines - These guidelines describe how to bring to life aspects of the experience and design system through the use of the foundations and components. The guidelines are the **how **of the design system.
+    <ol>
+      <li>Experience Contexts</li>
+      <li>Accessibility
+        <ol>
+          <li>Visual</li>
+          <li>Inclusive</li>
+          <li>International</li>
+          <li>Bi-directional</li>
+        </ol>
+      </li>
+      <li>Movement
+        <ol>
+          <li>Interactions</li>
+          <li>Motion</li>
+          <li>Choreography</li>
+          <li>Animation</li>
+        </ol>
+      </li>
+      <li>Naming
+        <ol>
+          <li>Tokens</li>
+        </ol>
+      </li>
+      <li>Getting Started
+        <ol>
+          <li>For designers</li>
+          <li>For developers</li>
+        </ol>
+      </li>
+    </ol>
   </li>
-  <li>
-    <p>Delivery Experience - Dev Cycle, DevOps</p>
+  <li>Foundations - The foundations are the global constructs that inform and are used to construct all the components. The foundations are <strong>what</strong> of the design system.
+    <ol>
+      <li>Branding</li>
+      <li>Colours</li>
+      <li>Typography</li>
+      <li>Fonts</li>
+      <li>Illustrations</li>
+      <li>Sounds</li>
+      <li>Iconography</li>
+      <li>Spacing</li>
+      <li>Visualisation
+        <ol>
+          <li>Data</li>
+          <li>Charts</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Content
+    <ol>
+      <li>Voice and Tone</li>
+      <li>Vocabulary - Author related</li>
+      <li>Language</li>
+      <li>Grammar</li>
+      <li>Alternative Text</li>
+      <li>Photography</li>
+      <li>Icons
+        <ol>
+          <li>Logos</li>
+          <li>Chevrons</li>
+        </ol>
+      </li>
+      <li>Internationalization</li>
+    </ol>
+  </li>
+  <li>Patterns - Experiences
+    <ol>
+      <li>Layouts
+        <ol>
+          <li>Grid</li>
+          <li>Dialogs</li>
+          <li>Popups/Popovers</li>
+          <li>Trays</li>
+          <li>Toast</li>
+        </ol>
+      </li>
+      <li>Messaging
+        <ol>
+          <li>Error</li>
+          <li>Info</li>
+          <li>Warning</li>
+        </ol>
+      </li>
+      <li>Tour</li>
+    </ol>
+  </li>
+  <li>Unique Experiences
+    <ol>
+      <li>Homepage</li>
+      <li>Article List
+        <ol>
+          <li>Article</li>
+        </ol>
+      </li>
+      <li>About Page</li>
+      <li>Terms and Conditions</li>
+    </ol>
+  </li>
+  <li>Components - Reference from AEM.Design - A component is a discrete part of the design system that can be used in multiple contexts throughout the ecosystem. Components can have nested components and can be grouped.
+    <ol>
+      <li>Content
+        <ol>
+          <li>Content Fragment</li>
+          <li>Content Template</li>
+          <li>File Download Link</li>
+          <li>Embed Source</li>
+          <li>External</li>
+          <li>Link</li>
+          <li>Content Reference</li>
+          <li>Table</li>
+          <li>Rich Text</li>
+          <li>Tool Tip</li>
+          <li>Page Author</li>
+          <li>Page Date</li>
+          <li>Page Description</li>
+          <li>Page Tags</li>
+          <li>Page Title</li>
+        </ol>
+      </li>
+      <li>Details
+        <ol>
+          <li>Contact Details</li>
+          <li>Event Details</li>
+          <li>Location Details</li>
+          <li>News Details</li>
+          <li>Page Details</li>
+          <li>Generic Details</li>
+        </ol>
+      </li>
+      <li>Layout
+        <ol>
+          <li>Article</li>
+          <li>Aside</li>
+          <li>Breadcrumb</li>
+          <li>Columns</li>
+          <li>Content Block</li>
+          <li>Content Block Menu</li>
+          <li>Content Tabs</li>
+          <li>Footer</li>
+          <li>Header</li>
+          <li>Nav Bar</li>
+        </ol>
+      </li>
+      <li>Lists
+        <ol>
+          <li>Asset List</li>
+          <li>Contact List</li>
+          <li>Event List</li>
+          <li>Lang Nav</li>
+          <li>List</li>
+          <li>List Nav</li>
+          <li>Location List</li>
+          <li>News List</li>
+          <li>Page List</li>
+          <li>Search Results List</li>
+          <li>Tag List</li>
+          <li>Nav List</li>
+        </ol>
+      </li>
+      <li>Media
+        <ol>
+          <li>Audio</li>
+          <li>Image</li>
+          <li>Video</li>
+        </ol>
+      </li>
+      <li>Template
+        <ol>
+          <li>One Column Page</li>
+          <li>Three Column Page</li>
+          <li>Two Column Page</li>
+        </ol>
+      </li>
+    </ol>
   </li>
 </ol>
-
-<h2 id="digital-channel-agility">Digital Channel Agility</h2>
-
-<p>Digital Agility is a measure of duration for delivering of change to channels. There are many ways of achieving this and every one does what is necessary to meet their needs. When implementing partners to encourage agility, measuring the cost efficiency of process can help to eliminate bottleneck and streamline the process. Concentrating on implementing patterns that provide transparency in delivery of outcomes and measurement/testing of outcomes in relation to initial agenda will be of most benefit.</p>
-
-<h3 id="continuous-delivery-and-continuous-integration">Continuous Delivery and Continuous Integration</h3>
-
-<p>This is not a new concept and means “assembly line” like process utilising autonomous build, test and deployment cycles which deliver software directly to production with minimum input from users.</p>
-
-<h3 id="test-driven-development">Test Driven Development</h3>
-
-<p>This is not a new concept and in relation to CMS means component level functional testing written by developer that enable measurement/testing of outputs by the development team. This also contributes to larger Testing Framework for the platform which is further used for Regression testing.</p>
-
-<p>Practical Functional Testing that is reusable and can be managed by Business and can be used for more than one purpose.</p>
-
-<h3 id="behaviour-driven-developmenttesting">Behaviour Driven Development/Testing</h3>
-
-<p>This is not a new concept and in relation to CMS means component level definition of acceptance criteria and testing cases in a uniform manner, as it becomes the base for automated testing.</p>
-
-<h2 id="collaborative-development">Collaborative Development</h2>
-
-<p>Agile is a principal that applies to Software Development, it does not mean its a free for all. Free for all being, no documentation and no proper ceremony, if anything it means more of it and more often. Agile is collaborative, its a dialog within the business that involves everyone who is helping on the project. Its a mechanism of short bursts of efforts with quick feedback loop that enables assessment and in turn enables agility. Agile does not mean that there should be no planning and no documentation, it just means that planning and documentation should be done incrementally and without wasting effort. This means that if documentation is done as a prelude to moving to the next stage</p>
-
-<h2 id="content-is-forever">Content is Forever</h2>
-
-<p><em>Consider that when creating content structures you are creating them once and forever</em></p>
-
-<p><em>For example if you create a bookmark to an article, you expect that article to remain there for a long time. Changing content URL content creates a challenge, leaving content in the same place is easier and more sustainable.</em></p>
-
 
                 
             </section>
@@ -548,10 +726,56 @@
             <footer class="page__meta">
                 
                 
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#design-language-system" class="page__taxonomy-item" rel="tag">design-language-system</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#dls" class="page__taxonomy-item" rel="tag">dls</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#manual" class="page__taxonomy-item" rel="tag">manual</a>
+    
+    </span>
+  </p>
 
 
                 
-                <p class="page__date"><strong><i class="fas fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-03">November 03, 2016</time></p>
+                <p class="page__date"><strong><i class="fas fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-22T00:43:19+00:00">July 22, 2020</time></p>
                 
             </footer>
 
@@ -560,23 +784,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Platform+Principles%20https%3A%2F%2Faem.design%2Fmanifesto%2Fprinciples%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Design+Language+System%20https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanifesto%2Fprinciples%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanifesto%2Fprinciples%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
             
   <nav class="pagination">
     
-      <a href="/manifesto/introduction/" class="pagination--pager" title="Introduction
+      <a href="/manual/image-conventions/" class="pagination--pager" title="Image Conventions
 ">Previous</a>
     
     
-      <a href="/manifesto/capabilities/" class="pagination--pager" title="Capabilities
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -758,8 +981,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/manifesto/principles/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/manifesto/020-principles"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/manual/dls/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/manual/080-design-language-system"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

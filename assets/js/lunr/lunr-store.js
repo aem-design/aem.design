@@ -96,51 +96,57 @@ var store = [{
         "teaser": null
       },{
         "title": "Manual",
-        "excerpt":"Document Purpose   The purpose of this document is to introduce you to the AEM Platform and of its related projects, tools and processes. This knowledge is required to maintain and extend the AEM Platform.   Table of Contents                                                                                                                                      Projects                                                                              Development Tools                                                                              Management                                                                              Operating Environment                                                                              Process                                                                              Conventions                                                                              Image Conventions                                                      ","categories": ["info"],
+        "excerpt":"Document Purpose The purpose of this document is to introduce you to the AEM Platform and of its related projects, tools and processes. This knowledge is required to maintain and extend the AEM Platform. Table of Contents Projects Development Tools Management Operating Environment Process Conventions Image Conventions Design Language System...","categories": ["manual"],
         "tags": ["docs"],
         "url": "https://aem.design/manual/",
         "teaser": null
       },{
         "title": "Projects",
-        "excerpt":"On This Page Projects Overview Ansible Deploy Project Ansible Project Overview Ansible Variables Group Variables Source Code Repositories Adobe Experience Manager Project AEM Project Sources AEM Service Bundle AEM Configuration OSGi Run modes Environment Config Content AEM Initial Content Virtual Machine Project Packer Project Overview Packer Project Structure Using Packer...","categories": ["info"],
-        "tags": ["docs"],
+        "excerpt":"On This Page Projects Overview Ansible Deploy Project Ansible Project Overview Ansible Variables Group Variables Source Code Repositories Adobe Experience Manager Project AEM Project Sources AEM Service Bundle AEM Configuration OSGi Run modes Environment Config Content AEM Initial Content Virtual Machine Project Packer Project Overview Packer Project Structure Using Packer...","categories": ["manual"],
+        "tags": ["project","convnetions"],
         "url": "https://aem.design/manual/projects/",
         "teaser": null
       },{
         "title": "Development Tools",
-        "excerpt":"On This Page Development Tools Git Apache Maven Package Build Local Development Build Local Development Service Module Build Local Development Common Module Build Local Development Config Module Build Local Development Content Module Build Full Build and Deploy to Repository JGitFlow Plugin Plugin Usage Ansible Playbooks Site Playbooks site.yml site-teardown.yml site-devops.yml...","categories": ["info"],
-        "tags": ["docs"],
+        "excerpt":"On This Page Development Tools Git Apache Maven Package Build Local Development Build Local Development Service Module Build Local Development Common Module Build Local Development Config Module Build Local Development Content Module Build Full Build and Deploy to Repository JGitFlow Plugin Plugin Usage Ansible Playbooks Site Playbooks site.yml site-teardown.yml site-devops.yml...","categories": ["manual"],
+        "tags": ["dev","conventions"],
         "url": "https://aem.design/manual/devtools/",
         "teaser": null
       },{
         "title": "Management",
-        "excerpt":"On This Page Jenkins Operations fstrim (environment) Oak Compaction (environment) Shutdown (environment) Startup (environment) Teardown (environment) Packages aemdesign-aem build (develop) aemdesign-aem build (release) aemdesign-aem build (final) aemdesign-aem deploy (environment) Playbooks Site Playbook (develop|sit|staging|training|uat) Playbooks Production Startup (Production) Shutdown (Production) Site Playbook (Production) Nexus Configuring Nexus Maven Repositories Docker Registries Jenkins...","categories": ["info"],
-        "tags": ["docs"],
+        "excerpt":"On This Page Jenkins Operations fstrim (environment) Oak Compaction (environment) Shutdown (environment) Startup (environment) Teardown (environment) Packages aemdesign-aem build (develop) aemdesign-aem build (release) aemdesign-aem build (final) aemdesign-aem deploy (environment) Playbooks Site Playbook (develop|sit|staging|training|uat) Playbooks Production Startup (Production) Shutdown (Production) Site Playbook (Production) Nexus Configuring Nexus Maven Repositories Docker Registries Jenkins...","categories": ["manual"],
+        "tags": ["managment","convnetions"],
         "url": "https://aem.design/manual/management/",
         "teaser": null
       },{
         "title": "Operating Environment",
-        "excerpt":"On This Page Server Red Hat Enterprise Linux IPTables Thin Pool Thin Volume Management Docker Convoy Volume Plugin List Managed Volumes Create Volume Delete Volume Docker Images Updating Docker Images Consul Registrator Server Red Hat Enterprise Linux The following sections details the configuration of Red Hat Enterprise Linux in accordance...","categories": ["info"],
-        "tags": ["docs"],
+        "excerpt":"On This Page Server Red Hat Enterprise Linux IPTables Thin Pool Thin Volume Management Docker Convoy Volume Plugin List Managed Volumes Create Volume Delete Volume Docker Images Updating Docker Images Consul Registrator Server Red Hat Enterprise Linux The following sections details the configuration of Red Hat Enterprise Linux in accordance...","categories": ["manual"],
+        "tags": ["environment","conventions"],
         "url": "https://aem.design/manual/osenv/",
         "teaser": null
       },{
         "title": "Process",
-        "excerpt":"On This Page Git Flow Versioning Testing Environments Git Flow The project source code is managed with Git Flow as the release management strategy. In Git Flow, there are three main branches: /develop /master /release/[build_number] The develop branch contains features that will be deployed in the next release and the...","categories": ["info"],
-        "tags": ["docs"],
+        "excerpt":"On This Page Git Flow Versioning Testing Environments Git Flow The project source code is managed with Git Flow as the release management strategy. In Git Flow, there are three main branches: /develop /master /release/[build_number] The develop branch contains features that will be deployed in the next release and the...","categories": ["manual"],
+        "tags": ["process","conventions"],
         "url": "https://aem.design/manual/process/",
         "teaser": null
       },{
-        "title": "Conventions",
-        "excerpt":"On This Page Philosophy for Conventions Component Grouping and Naming Component Variants and Badges Component Structure Component Client Libs Namespace Convention Component Versioning Component Client Libs Modules JSP Component Template HTL Component Template HTL Component WCMUsePojo Class ClientLibs Convention - JavaScript ClientLibs Convention - CSS Dialog Conventions Dialog Layout Component...","categories": ["info"],
-        "tags": ["docs"],
+        "title": "Code Conventions",
+        "excerpt":"On This Page Philosophy for Conventions Component Grouping and Naming Component Variants and Badges Component Structure Component Client Libs Namespace Convention Component Versioning Component Client Libs Modules JSP Component Template HTL Component Template HTL Component WCMUsePojo Class ClientLibs Convention - JavaScript ClientLibs Convention - CSS Dialog Conventions Dialog Layout Component...","categories": ["manual"],
+        "tags": ["code","conventions"],
         "url": "https://aem.design/manual/conventions/",
         "teaser": null
       },{
         "title": "Image Conventions",
-        "excerpt":"On This Page Summary Introduction Image Restrictions SVGs Rendition Sizes AEM Rendition Considerations File Size Considerations Component Image Map Background - Tall Background - Narrow List - Card x3 (wide) List - Card x2 (wide) List - Card with Media List - Card with Media (full width) List - Card...","categories": ["info"],
-        "tags": ["docs"],
+        "excerpt":"On This Page Summary Introduction Image Restrictions SVGs Rendition Sizes AEM Rendition Considerations File Size Considerations Component Image Map Background - Tall Background - Narrow List - Card x3 (wide) List - Card x2 (wide) List - Card with Media List - Card with Media (full width) List - Card...","categories": ["manual"],
+        "tags": ["image","conventions"],
         "url": "https://aem.design/manual/image-conventions/",
+        "teaser": null
+      },{
+        "title": "Design Language System",
+        "excerpt":"On This Page Introduction Reference for Terms Design Language System Table of Contents Introduction A design language system is a collection of design principles and components that unite product teams around a common visual language. Design is the description of visual aesthetics that are inferred from Brand Guidelines. Language is...","categories": ["manual"],
+        "tags": ["docs","design-language-system","dls"],
+        "url": "https://aem.design/manual/dls/",
         "teaser": null
       },{
         "title": "The Journey begins...",
