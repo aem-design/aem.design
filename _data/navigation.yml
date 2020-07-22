@@ -82,6 +82,8 @@ manual:
         url: /manual/conventions/
       - title: "Image Conventions"
         url: /manual/image-conventions/
+      - title: "Design Language System"
+        url: /manual/dls/
 
 #archive links
 archive:
