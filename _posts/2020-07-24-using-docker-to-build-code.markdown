@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /blog/2020/07/27/using-docker-to-build-code
+permalink: /blog/2020/07/24/using-docker-to-build-code
 title:  "Using Docker to Build Code"
 date:   2020-07-24 23:37:00:00 +1100
 author: max@aem.design
