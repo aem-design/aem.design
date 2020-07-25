@@ -262,4 +262,10 @@ var store = [{
         "tags": ["devops","aem","saas","knowledge","sharing","handson"],
         "url": "https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD",
         "teaser": null
+      },{
+        "title": "Using Docker to Build Code",
+        "excerpt":"When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short...","categories": ["blog"],
+        "tags": ["devops","aem","docker"],
+        "url": "https://aem.design/blog/2020/07/24/using-docker-to-build-code",
+        "teaser": null
       }]

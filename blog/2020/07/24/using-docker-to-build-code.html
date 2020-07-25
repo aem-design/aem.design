@@ -13,27 +13,27 @@
 
 
 
-<title>Migration from JSP to Sightly - AEM.Design</title>
+<title>Using Docker to Build Code - AEM.Design</title>
 
 
 
 
-<meta name="description" content="The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). Secondary drive is that it provides absolute templating without opportunity to embed code with template code. Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance.So if you are not careful you could end up with code plaguing your template and that would break your conventions.This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.">
+<meta name="description" content="When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.">
 
 
 
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Migration from JSP to Sightly">
+<meta property="og:title" content="Using Docker to Build Code">
 
 
-  <link rel="canonical" href="https://aem.design/blog/2019/04/04/migration-from-jsp-to-sightly">
-  <meta property="og:url" content="https://aem.design/blog/2019/04/04/migration-from-jsp-to-sightly">
+  <link rel="canonical" href="https://aem.design/blog/2020/07/24/using-docker-to-build-code">
+  <meta property="og:url" content="https://aem.design/blog/2020/07/24/using-docker-to-build-code">
 
 
 
-  <meta property="og:description" content="The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). Secondary drive is that it provides absolute templating without opportunity to embed code with template code. Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance.So if you are not careful you could end up with code plaguing your template and that would break your conventions.This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.">
+  <meta property="og:description" content="When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.">
 
 
 
@@ -50,7 +50,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2019-05-02T09:00:00+00:00">
+  <meta property="article:published_time" content="2020-07-24T23:37:00+00:00">
 
 
 
@@ -368,9 +368,9 @@
 
 
     <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="Migration from JSP to Sightly">
-        <meta itemprop="description" content="The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). Secondary drive is that it provides absolute templating without opportunity to embed code with template code. Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance.So if you are not careful you could end up with code plaguing your template and that would break your conventions.This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.">
-        <meta itemprop="datePublished" content="May 02, 2019">
+        <meta itemprop="headline" content="Using Docker to Build Code">
+        <meta itemprop="description" content="When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.">
+        <meta itemprop="datePublished" content="July 24, 2020">
         
 
         <div class="page__inner-wrap">
@@ -378,7 +378,7 @@
             <header>
 
 
-                <h1 class="page__title" itemprop="headline">Migration from JSP to Sightly
+                <h1 class="page__title" itemprop="headline">Using Docker to Build Code
 </h1>
                 
                 <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
@@ -386,7 +386,7 @@
 
 
 
-  3 minute read
+  1 minute read
 
 </p>
                 
@@ -394,91 +394,42 @@
             
 
             <section class="page__content" itemprop="text">
-                <p>The time has come to migrate to Sightly. Primary drive is that Sling Models are great and Sightly now works (long story…). 
-Secondary drive is that it provides absolute templating without opportunity to embed code with template code. 
-Using JSP and JSTL work great, but it does not provide strict no “Code in Templates” governance.
-So if you are not careful you could end up with code plaguing your template and that would break your conventions.
-This has worked great over the years but as framework usage grows simpler oversight is required to ensure stability.</p>
+                <p>When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.</p>
 
-<p>On the Sightly side the conventions is simple, Model has your code and your template has just the presentation.
-Sightly syntax docs are very easy to consume and anyone on this side of the keyboard can follow.
-Having pure JSTL implementation for your templates provides less opportunities to pollute your templates.</p>
+<p>Using Docker to build your code is so easy even your friend will think you are cool when you tell them about it.  The most amazing thing that you don’t even need to write any Docker images, there are so many ready-to-go buildpack containers out there you can easily pick up something that you need.</p>
 
-<p>How to migrate your existing component to Sightly is not apparently clear. 
-Writing new component using Sightly in parallel with your existing component is not migration.
-Moving existing JSP component logic into Models is not a copy paste exercise, unless you have a solid convention across all component like AEM.Design.
-So the only sustainable option is to start a new project from scratch and use Sightly from the start.</p>
+<p>Here is an example of a container we use to do pipeline build and its very suitable for compiling your project on your local desktop. This container is a Centos 7 Jave Build Pack which means that it comes preconfigured with a majority of tools that are needed to compile our projects.</p>
 
-<p>Another way is to version your existing JSP components into V1 and create V2 for the Sighlty implementation.
-This is the approach we followed, this allow you to substitute all existing components with new Sightly verisons without having to migrate content.</p>
+<p>This container comes with Jave, NPM and RVM, and you can take a look at the contents of the <a href="https://github.com/aem-design/docker-centos-java-buildpack/blob/master/Dockerfile">dockerfile</a>.</p>
 
-<p>Consider your existing component structure, when this component would be used in pages the reference to the component will be stored with each instance on component.</p>
+<p>In power Shell:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
-    aemdesign
-        component
-            text
-                text.jsp
-                .content.xml
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">-it</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nv">${PWD}</span><span class="p">:</span><span class="nx">/build/source</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nv">${HOME}</span><span class="nx">/.m2:/build/.m2</span><span class="w"> </span><span class="nt">--net</span><span class="o">=</span><span class="nf">host</span><span class="w"> </span><span class="nx">aemdesign/centos-java-buildpack</span><span class="w"> </span><span class="nx">/bin/bash</span><span class="w"> </span><span class="nt">--login</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In Bash:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">-v</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/build/source <span class="nt">-v</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/.m2:/build/.m2 <span class="nt">--net</span><span class="o">=</span>host aemdesign/centos-java-buildpack /bin/bash <span class="nt">--login</span>
 </code></pre></div></div>
 
-<p>Using this structure will effectively hardcode <code class="language-plaintext highlighter-rouge">aemdesign/component/content/text</code> into your pages and experience fragments.
-This creates a long term situation that when you want to update the component you need to update in place and in turn this updates all of the instances of your component everywhere it appears.
-This is the best approach as it ensure that you continue to update your component code and update content with latest version without adding unnecessary path version numbering into content.
-It best that versioning of component is kept to the component code and not hardcoded into content.</p>
+<p>Let’s break this command down.</p>
 
-<p>There could be rare scenarios when you may need to have a versioned path for a component but it would be hard to track of these paths over time.
-Additional authors will be exposed to versioned components where they will need to decide which version they need to use for a particular design they are creating.
-This would seem trivial but over time it will be affecting authoring experience due to number of component they need to understand to create designs.</p>
-
-<p>Another approach elegant approach provides a simplified pattern to have versioning of component without exposing version to author and without hardcoding version into content.
-This pattern allow you to have one component path with localised versions that are not exposed to authors.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
-    aemdesign
-        component
-            text [ sling:resourceSuperType==aemdesign/component/content/text/v1/text ]
-                .content.xml
-                v1
-                    text
-                        .content.xml [ componentGroup="hidden" ]
-                        text.jsp
-                v2
-                    text
-                        .content.xml [ componentGroup="hidden" ]
-                        text.html
-</code></pre></div></div>
-
-<p>To implement this pattern you create a sub folder for each version of your component as child of component.
-And point parent component path to the version you are currently want the authors to use.
-This pattern allow you to leverage version toggling without exposing versioned component to authors.</p>
-
-<p>Furthermore AEM.Design framework uses this pattern to expose component into tenant applications.
-When you deploy AEM.Design core component you will have aemdesign application folder available to be used in a tenant component space.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apps
-    aemdesign
-        component
-            text [ sling:resourceSuperType==aemdesign/component/content/text/v1/text ]
-apps
-    tenant
-        component
-            text [ sling:resourceSuperType==aemdesign/component/content/text ]
-</code></pre></div></div>
-
-<p>This pattern combined with <a href="/manifesto/project/">Variants and Badges</a> provide number of benefits that</p>
 <ul>
-  <li>provide a way of component reuse across tenants without referencing core framework</li>
-  <li>ensures that tenant specific component paths are used in tenant code</li>
-  <li>allow customised metadata like title, description, category and readme’s for components where required</li>
-  <li>with use of badges and variants provides a way of extending component presentation without changing component core functionality</li>
+  <li><code class="language-plaintext highlighter-rouge">-it</code> means run interactive terminal</li>
+  <li><code class="language-plaintext highlighter-rouge">-v ${PWD}:/build/source</code> map current path into container at path <code class="language-plaintext highlighter-rouge">/build/source</code>
+    <ul>
+      <li>in Powershell ${PWD} is same as <code class="language-plaintext highlighter-rouge">pwd</code> in bash</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">-v ${HOME}/.m2:/build/.m2</code> map your Maven cache folder into the container to reuse your already downloaded jars</li>
+  <li><code class="language-plaintext highlighter-rouge">--net=host</code> allow container to access your desktop localhost</li>
+  <li><code class="language-plaintext highlighter-rouge">amdesign/centos-java-buildpack</code> image to use</li>
+  <li><code class="language-plaintext highlighter-rouge">/bin/bash --login</code> run bash and perform login to ensure all of the start-up profile scripts are executed</li>
 </ul>
 
-<p>Considering the approach we took and the benefits that we have now attained make the migration successful!
-Further demonstrating to us that our determined efforts with AEM.Design principles can scale from “old” tech to new.
-And it is important to note that this was only possible due to the fact that we have had a strict component convention that allowed this process to occur.
-If design pattern were not maintained the rewrite of all component would have been the costly option.</p>
+<p>All you need to do now is to run this command in the directory where you have your code and start compiling like a boss.</p>
 
+<p>Don’t forget to tell your fiends.</p>
 
                 
             </section>
@@ -523,7 +474,15 @@ If design pattern were not maintained the rewrite of all component would have be
     
       
       
-      <a href="/tags/#update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/tags/#aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#docker" class="page__taxonomy-item" rel="tag">docker</a>
     
     </span>
   </p>
@@ -551,7 +510,7 @@ If design pattern were not maintained the rewrite of all component would have be
 
 
                 
-                <p class="page__date"><strong><i class="fas fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-05-02T09:00:00+00:00">May 02, 2019</time></p>
+                <p class="page__date"><strong><i class="fas fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-24T23:37:00+00:00">July 24, 2020</time></p>
                 
             </footer>
 
@@ -560,23 +519,22 @@ If design pattern were not maintained the rewrite of all component would have be
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Migration+from+JSP+to+Sightly%20https%3A%2F%2Faem.design%2Fblog%2F2019%2F04%2F04%2Fmigration-from-jsp-to-sightly" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Using+Docker+to+Build+Code%20https%3A%2F%2Faem.design%2Fblog%2F2020%2F07%2F24%2Fusing-docker-to-build-code" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2019%2F04%2F04%2Fmigration-from-jsp-to-sightly" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2020%2F07%2F24%2Fusing-docker-to-build-code" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2019%2F04%2F04%2Fmigration-from-jsp-to-sightly" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2020%2F07%2F24%2Fusing-docker-to-build-code" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
             
   <nav class="pagination">
     
-      <a href="/blog/2019/02/02/simple-to-understand-easy-to-follow" class="pagination--pager" title="Simple to Understand Easy to To Follow
+      <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" class="pagination--pager" title="AEM SaaS Hands On 😍🚀🔭
 ">Previous</a>
     
     
-      <a href="/blog/2019/06/05/open-source-is-for-feedback" class="pagination--pager" title="Open source is for feedback
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -601,34 +559,6 @@ If design pattern were not maintained the rewrite of all component would have be
         <h4 class="page__related-title">You May Also Enjoy</h4>
         
         <div class="grid__wrapper">
-            
-            
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/blog/2020/07/24/using-docker-to-build-code" rel="permalink">Using Docker to Build Code
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means t...</p>
-  </article>
-</div>
-
             
             
 
@@ -717,6 +647,35 @@ If design pattern were not maintained the rewrite of all component would have be
 </div>
 
             
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+  </article>
+</div>
+
+            
         </div>
     </div>
     
@@ -757,8 +716,8 @@ If design pattern were not maintained the rewrite of all component would have be
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/blog/2019/04/04/migration-from-jsp-to-sightly";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/2019/04/04/migration-from-jsp-to-sightly"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2020/07/24/using-docker-to-build-code";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2020/07/24/using-docker-to-build-code"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
