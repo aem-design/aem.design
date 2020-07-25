@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    
+
     runs-on: ubuntu-latest
     env:
       NOKOGIRI_USE_SYSTEM_LIBRARIES: true
@@ -24,8 +24,7 @@ jobs:
           bundle exec jekyll build
           bundle exec htmlproofer --check-html --internal-domains localhost:4000 --assume-extension --disable-external --url-ignore "/#.*/" _site
       - name: deploy
-        uses: peaceiris/actions-gh-pages@v2.5.0
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./_site
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
