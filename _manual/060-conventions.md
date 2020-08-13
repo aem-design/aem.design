@@ -1,8 +1,7 @@
 ---
 title: "Code Conventions"
 permalink: /manual/conventions/
-author: yaw@aem.design
-editor: max@aem.design
+author: max@aem.design
 comments: true
 redirect_from:
   - /manual/process/

@@ -1,8 +1,7 @@
 ---
 title: "Process"
 permalink: /manual/process/
-author: yaw@aem.design
-editor: max@aem.design
+author: max@aem.design
 comments: true
 redirect_from:
   - /manual/osenv/
