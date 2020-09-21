@@ -77,6 +77,12 @@ AEM Sites provides all the necessary tools to content authors to create "Pages" 
 
 ![image alt text](/assets/images/manifesto/content-sites-editor.png)
 
+#### How to start authoring content early?
+
+Content authoring for AEM can start early, and you can start doing this in a document even outside of AEM, then once templates are ready, you can move this content into pages. Better approach is to leverage Content Fragments, which would allow creating content in AEM and then add them into pages for presentation. This process is great for articles, news and general pages that do not have a high degree of metadata that you might not have explored yet.
+
+To save rework, you want to start content authoring after you have discussed Unique Experiences and have understood their content requirements.
+
 ### Assets
 
 Digital Asset Management refers largely at a practice of managing Assets. As a whole it's a combination of management practices and metadata content that is associated with an Asset. In AEM Images and Videos are the primary Assets in addition to other

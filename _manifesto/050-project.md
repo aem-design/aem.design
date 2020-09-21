@@ -167,6 +167,46 @@ The diagram below illustrates how a business concept flows through the necessary
 
 ![image alt text](/assets/images/manifesto/project-knowledge-flow.png)
 
+The idea for Knowledge Management is to leverage co-learning patterns within the organisation. Doing this allows all participants to learn gradually and at the same time reflecting their learning outcomes into artifacts used as inputs to though the process.
+
+Artifacts are sources of information that represent knowledge, and keeping these artifacts current is foundational for organisations. Within organisations, artifacts are used for training, education and inspiration, not having the latest information at hand creates lead to misinformed actions. Adopting a systemic process approach ensures that artifacts contain most relevant up to date information.
+
+Following is a typical best case scenario flow from idea to implementation. This flow is formed around Co-Learn loops that enable learning feedback and shared artifact updates. This process of learning and persisting knowledge as information in shared artifacts enables systemic knowledge sharing, artifact update and feedback loops.
+
+#### Co-Learning loop 1
+
+A business owner establishes a new idea and consults a Training Suite to establish if that idea can be delivered using existing functionality.
+When a business owner is unable to determine if they have the capability for a specific function, they engage a Business Analyst.
+
+#### Co-Learning loop 2
+
+Business Analyst evaluates Training Suite and bases on existing knowledge establishes if the material needs to be updated to provide insight on how business owners idea can be achieved using existing functionality.
+Updating the Training Suite with relevant information allows this knowledge to be captured and enables a business owner to use that as a reference for their idea.
+
+#### Co-Learning loop 3
+
+When business analyst determines that based on their best experience and information available that additional feature may be required they engage a designer.
+The designer uses existing Concept Suite to determine if existing Design Language System already caters for a particular capability. Updates the Design Language System with relevant  Unique Experiences that match requirements and provide Business Analyst with additional information to update Training Suite.
+When a Concept Suite does not have the required features that deliver requirements, the designer updates the Concept Suite with appropriate changes and then composes them into Compose Suite. This process ensures that design concept and its Language is persisted for Author (Business Owner) usage. Updating compose suite allows the author to leverage updated design elements for their new idea.
+
+#### Co-Learning loop 4
+
+When a Compose suite does not have structural components that needed to support design, a developer is engaged in providing insight on possibilities. A developer uses their knowledge and provides insight if existing functionality could meet the capability needed.
+When existing functionality does not exist a developer creates a needed component, creates component showcase pages and develops initial functional tests that prove that component works as per specified requirements. After these artifacts are created, the feature is deployed to production and the upstream artifacts are updated to match.
+
+As you can see in all these co-learning cycles a process of finding knowledge, actioning it and providing feedback is facilitated by shared artifacts.
+
+Following is a list of artifacts and their purpose:
+
+* Training Suite - this artifact is primary goto by the authoring community for learning on capabilities available. This artifact follows a typical training system capability, but its implemented in AEM, and only this allows it to be maintained by the community of authors as they learn the system capabilities. Ensuring that authors can maintain their own help manual is a crucial approach to education and ownership, as it ensures that the site is built from the same components that authors use on other sites. See the following link for a good example of how to do it well [https://www.sfu.ca/cms.html](https://www.sfu.ca/cms.html).
+* Concept Suite - is an artifact used by designers to articulate an early version of the design system and present potential possibilities. Typically it starts off with having a design focus and then transitions into an actual Design Language System that is used to align overall experience for end-users and authors.
+* Compose Suite -  is an artifact that helps to translate the design vision into a style and behaviour pattern based on AEM component models and represent design language into content that authors will use to author and create experiences in AEM. Its is the artifacts that compose the design and component structure with design language.
+* Component Suite - is the main component code artifact, it is used to represent component structure and models that are used by designers to create visual experiences, as well as an additional component that support author experiences.
+* Showcase Suite - is a demonstration of component functionality and design language. It's used to demonstrate atomic functionality of components as well as their usage in Unique Experience, and it used to represent a Design Language System to authors. Most importantly, this artifact is responsible for providing the structure for automation testing, which is the primary mechanism for ensuring that components are operating as required.
+* Testing Suite - is the automation suite that contains all of the automation tests that prove component operation as well as provides a mechanism for regression testing.
+
+These artifacts form kickstart of the AEM.Design framework that comes with over 90 components and matching design system blueprint, as well as a set of showcase content and tests and provides a demonstration of components. This ensures that the delivery team does not start from scratch and have a solid end-to-end delivery starting point ready for use.
+
 ### Evolution of Artifacts
 
 All artifacts on a project evolve over time and give input in other artifacts.
