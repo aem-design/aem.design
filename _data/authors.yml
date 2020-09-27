@@ -9,7 +9,9 @@ max@aem.design:
   twitter     : "maxbarrass"
   linkedin    : "maxbarrass"
   github      : "wildone"
-
+  sponsor:
+    github    : "wildone"
+    
 yaw@aem.design:
   name        : "Yaw Ly"
   bio         : "Founder"
