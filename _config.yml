@@ -85,7 +85,7 @@ alexa_site_verification  :
 yandex_site_verification :
 naver_site_verification  :
 
-logo: "/assets/images/site-logo.png"
+logo: "/assets/images/logo/aem-design2.png"
 head_scripts:
   - /assets/scripts/lightbox.js
 
