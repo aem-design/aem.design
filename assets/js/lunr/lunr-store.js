@@ -78,13 +78,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Project Guide",
-        "excerpt":"On This Page Project Documentation Component Specification Project Archetype Project Concept to Creation Knowledge Flow Map Evolution of Artifacts Development Flow Project Documentation Important principle on project is to understand why you are creating content, primary driver for creating must be for reuse by someone else on the project. It’s...","categories": [],
+        "excerpt":"On This Page Project Documentation Component Specification Project Archetype Project Concept to Creation Knowledge Flow Map Co-Learning loop 1 Co-Learning loop 2 Co-Learning loop 3 Co-Learning loop 4 Evolution of Artifacts Development Flow Project Documentation Important principle on project is to understand why you are creating content, primary driver for...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/project/",
         "teaser": null
       },{
         "title": "Content Modeling",
-        "excerpt":"On This Page Content Types Content Experiences Primary Content Pages Assets Tags Screens Forms Secondary Content User Cloud Services Multi Site Manager Sites Languages Blueprints Blueprints Language Requirement Design Importer Metadata Experience Tags Page Asset Components Designs Components Dialogs Page Properties Design Dialogs Translations Language Copies Create Translation Translation Projects...","categories": [],
+        "excerpt":"On This Page Content Types Content Experiences Primary Content Pages How to start authoring content early? Assets Tags Screens Forms Secondary Content User Cloud Services Multi Site Manager Sites Languages Blueprints Blueprints Language Requirement Design Importer Metadata Experience Tags Page Asset Components Designs Components Dialogs Page Properties Design Dialogs Translations...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/content/",
         "teaser": null

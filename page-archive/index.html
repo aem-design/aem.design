@@ -3,33 +3,25 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>Page Archive - AEM.Design</title>
-
-
-
-
+<!-- begin _includes/seo.html --><title>Page Archive - AEM.Design</title>
 <meta name="description" content="An amazing website.">
 
 
 
-
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
 <meta property="og:title" content="Page Archive">
+<meta property="og:url" content="https://aem.design/page-archive/">
 
 
-  <link rel="canonical" href="https://aem.design/page-archive/">
-  <meta property="og:url" content="https://aem.design/page-archive/">
+  <meta property="og:description" content="An amazing website.">
+
+
+
+  <meta property="og:image" content="https://aem.design/assets/images/site-logo.png">
+
+
 
 
 
@@ -42,37 +34,21 @@
   
 
 
-
-  <meta property="og:image" content="/assets/images/site-logo.png">
-
+<link rel="canonical" href="https://aem.design/page-archive/">
 
 
 
 
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": "https://aem.design",
-      "logo": "/assets/images/site-logo.png"
-    }
-  </script>
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "AEM.Design",
-      "url" : "https://aem.design",
-      "sameAs" : null
-    }
-  </script>
-
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEM.Design",
+      "url": "https://aem.design/"
+    
+  }
+</script>
 
 
   <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
@@ -80,20 +56,13 @@
 
 
 
-<!-- end SEO -->
 
+<!-- end _includes/seo.html -->
 
-
-
-<meta name="author" content="">
-
-<link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon" />
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -102,57 +71,42 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<meta http-equiv="cleartype" content="on">
-
-
-<script>
-    function wrap(el, wrapper) {
-        el.parentNode.insertBefore(wrapper, el);
-        wrapper.appendChild(el);
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
     }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
-    document.addEventListener("DOMContentLoaded", function() {
-        var elements = document.querySelectorAll(".page__content p img, .page__content table img");
-        elements.forEach(element => {
-            var url = element.getAttribute('src');
-            var alt = element.getAttribute('alt');
-            if(url) {
-                var a = document.createElement('a');
-                a.setAttribute("href",url);
-                a.setAttribute("data-lightbox",'');
-                a.setAttribute("title",alt);
-                wrap(element, a);
-            }
-        });
 
-    });
-</script>
+  
+    <script src="/assets/scripts/lightbox.js"></script>
+  
 
 
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
 
-<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/assets/images/icons/manifest.json">
-<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-
 
 
 <style>
@@ -173,13 +127,15 @@
 </style>
 
 <!-- end custom head snippets -->
+
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
 <!-- End Google Tag Manager -->
+
   </head>
 
   <body class="layout--archive">
@@ -188,10 +144,18 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
-
 
     
 
@@ -200,26 +164,27 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/">
-          AEM.Design
+        <a class="site-logo" href="/"><img src="/assets/images/logo/aem-design2.png" alt="site logo"></a>
+        
+        <a class="site-title" href="/"><span class="title">AEM.Design</span>
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://github.com/aem-design">GitHub</a>
+              <a target="" href="https://github.com/aem-design">GitHub</a>
             </li><li class="masthead__menu-item">
-              <a href="/quick-start-guide/">Quick-Start Guide</a>
+              <a target="" href="/quick-start-guide/">Quick-Start Guide</a>
             </li><li class="masthead__menu-item">
-              <a href="/manifesto/">Manifesto</a>
+              <a target="" href="/manifesto/">Manifesto</a>
             </li><li class="masthead__menu-item">
-              <a href="/manual/">Manual</a>
+              <a target="" href="/manual/">Manual</a>
             </li><li class="masthead__menu-item">
-              <a href="/archive/">Archive</a>
+              <a target="" href="/archive/">Archive</a>
             </li><li class="masthead__menu-item">
-              <a href="/blog/">Blog</a>
+              <a target="" href="/blog/">Blog</a>
             </li><li class="masthead__menu-item">
-              <a href="/about/">About</a>
+              <a target="" href="/about/">About</a>
             </li><li class="masthead__menu-item">
-              <a href="/search/">Search</a>
+              <a target="" href="/search/">Search</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -232,8 +197,25 @@
   </div>
 </div>
 
+<style>
+#site-nav .site-title {
+  width: 150px;
+  line-height: 1em;
+  border-left: 4px #f78c6c solid;
+  padding-left: .5em;
+  font-style: italic;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+#site-nav .site-title .site-subtitle {
+  display: none;
+}
+</style>
+  
 
-    
+
+    <div class="initial-content">
+      
 
 
 
@@ -253,12 +235,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/404.html" rel="permalink">Page Not Found</a>
       
     </h2>
     
+
+
     <p class="archive__item-excerpt" itemprop="description">Page not found. Your pixels are in another canvas.
 </p>
   </article>
@@ -272,12 +256,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/about/" rel="permalink">About</a>
       
     </h2>
     
+
+
     <p class="archive__item-excerpt" itemprop="description">About AEM Design
 </p>
   </article>
@@ -291,12 +277,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/" rel="permalink">Blog</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -309,12 +297,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/categories/" rel="permalink">Posts by Category</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -327,12 +317,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/collection-archive/" rel="permalink">Posts by Collection</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -345,12 +337,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -363,12 +357,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/" rel="permalink"></a>
       
     </h2>
     
+
+
     <p class="archive__item-excerpt" itemprop="description">Create consistency in your AEM implementations by providing your team with AEM language they can use to describe things they want to achieve.
 </p>
   </article>
@@ -382,12 +378,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/.well-known/acme-challenge/itRp_hjGd8CCg71WLG3yq3OvOzlSKPoWj1omz7RXmCQ" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -400,12 +398,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/page-archive/" rel="permalink">Page Archive</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -418,12 +418,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/portfolio/" rel="permalink">Portfolio</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -436,12 +438,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/search/" rel="permalink">Search</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -454,12 +458,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/search/" rel="permalink">Search</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -472,12 +478,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/tags/" rel="permalink">Posts by Tags</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -490,12 +498,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/year-archive/" rel="permalink">Posts by Year</a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -508,12 +518,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/assets/css/main.css" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -526,12 +538,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/assets/js/lunr/lunr-en.js" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -544,12 +558,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/assets/js/lunr/lunr-gr.js" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -562,12 +578,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/assets/js/lunr/lunr-store.js" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -580,12 +598,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2019/09/04/aem-and-docker" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -598,12 +618,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2019/09/19/updating-existing-docker-container-variables" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -616,12 +638,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -634,12 +658,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2019/10/20/enter-the-github-actions" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -652,12 +678,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2020/02/01/aem-saas-hands-on" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -670,12 +698,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/quick-start-guide/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -688,12 +718,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/contributing/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -706,12 +738,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/license/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -724,12 +758,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/quick-start-guide/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -742,12 +778,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -760,12 +798,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/introduction/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -778,12 +818,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/principles" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -796,12 +838,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/capabilities/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -814,12 +858,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/delivery/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -832,12 +878,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/project/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -850,12 +898,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/content/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -868,12 +918,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manifesto/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -886,12 +938,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -904,12 +958,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/projects/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -922,12 +978,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/devtools/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -940,12 +998,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/management/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -958,12 +1018,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/osenv/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -976,12 +1038,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/process/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -994,12 +1058,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/conventions/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1012,12 +1078,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/image-conventions/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1030,12 +1098,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/manual/" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1048,12 +1118,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/redirects.json" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1066,12 +1138,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/feed.xml" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1084,12 +1158,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/sitemap.xml" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1102,12 +1178,14 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/robots.txt" rel="permalink"></a>
       
     </h2>
     
+
+
     
   </article>
 </div>
@@ -1115,8 +1193,11 @@
 
   </div>
 </div>
+    </div>
 
-    <div class="page__footer">
+    
+
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -1127,6 +1208,20 @@
       <li><strong>Follow:</strong></li>
     
 
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
 
     <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
@@ -1140,7 +1235,6 @@
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
 
 
 
@@ -1165,6 +1259,7 @@
 
 
   
+
 
 
 

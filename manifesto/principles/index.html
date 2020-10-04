@@ -3,40 +3,37 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>Platform Principles - AEM.Design</title>
-
-
-
-
+<!-- begin _includes/seo.html --><title>Platform Principles - AEM.Design</title>
 <meta name="description" content="Consider that when creating content structures you are creating them once and forever.">
 
 
+  <meta name="author" content="Max Barrass">
+  
+  <meta property="article:author" content="Max Barrass">
+  
 
 
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
 <meta property="og:title" content="Platform Principles">
-
-
-  <link rel="canonical" href="https://aem.design/manifesto/principles/">
-  <meta property="og:url" content="https://aem.design/manifesto/principles/">
-
+<meta property="og:url" content="https://aem.design/manifesto/principles/">
 
 
   <meta property="og:description" content="Consider that when creating content structures you are creating them once and forever.">
 
 
 
+  <meta property="og:image" content="https://aem.design/assets/images/site-logo.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-04T14:14:13+00:00">
+
+
+
 
 
   
@@ -44,40 +41,21 @@
   
 
 
-
-  <meta property="og:image" content="/assets/images/site-logo.png">
-
-
-
-  <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2020-07-25T09:23:10+00:00">
+<link rel="canonical" href="https://aem.design/manifesto/principles/">
 
 
 
 
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": "https://aem.design",
-      "logo": "/assets/images/site-logo.png"
-    }
-  </script>
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "AEM.Design",
-      "url" : "https://aem.design",
-      "sameAs" : null
-    }
-  </script>
-
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AEM.Design",
+      "url": "https://aem.design/"
+    
+  }
+</script>
 
 
   <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
@@ -85,20 +63,13 @@
 
 
 
-<!-- end SEO -->
 
+<!-- end _includes/seo.html -->
 
-
-
-<meta name="author" content="Max Barrass">
-
-<link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon" />
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -107,57 +78,42 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
-<meta http-equiv="cleartype" content="on">
-
-
-<script>
-    function wrap(el, wrapper) {
-        el.parentNode.insertBefore(wrapper, el);
-        wrapper.appendChild(el);
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
     }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
-    document.addEventListener("DOMContentLoaded", function() {
-        var elements = document.querySelectorAll(".page__content p img, .page__content table img");
-        elements.forEach(element => {
-            var url = element.getAttribute('src');
-            var alt = element.getAttribute('alt');
-            if(url) {
-                var a = document.createElement('a');
-                a.setAttribute("href",url);
-                a.setAttribute("data-lightbox",'');
-                a.setAttribute("title",alt);
-                wrap(element, a);
-            }
-        });
 
-    });
-</script>
+  
+    <script src="/assets/scripts/lightbox.js"></script>
+  
 
 
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
 
-<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/assets/images/icons/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/assets/images/icons/manifest.json">
-<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="/assets/images/icons/mstile-144x144.png">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-
 
 
 <style>
@@ -178,13 +134,15 @@
 </style>
 
 <!-- end custom head snippets -->
+
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
 <!-- End Google Tag Manager -->
+
   </head>
 
   <body class="layout--single">
@@ -193,10 +151,18 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
-
 
     
 
@@ -205,26 +171,27 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/">
-          AEM.Design
+        <a class="site-logo" href="/"><img src="/assets/images/logo/aem-design2.png" alt="site logo"></a>
+        
+        <a class="site-title" href="/"><span class="title">AEM.Design</span>
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://github.com/aem-design">GitHub</a>
+              <a target="" href="https://github.com/aem-design">GitHub</a>
             </li><li class="masthead__menu-item">
-              <a href="/quick-start-guide/">Quick-Start Guide</a>
+              <a target="" href="/quick-start-guide/">Quick-Start Guide</a>
             </li><li class="masthead__menu-item">
-              <a href="/manifesto/">Manifesto</a>
+              <a target="" href="/manifesto/">Manifesto</a>
             </li><li class="masthead__menu-item">
-              <a href="/manual/">Manual</a>
+              <a target="" href="/manual/">Manual</a>
             </li><li class="masthead__menu-item">
-              <a href="/archive/">Archive</a>
+              <a target="" href="/archive/">Archive</a>
             </li><li class="masthead__menu-item">
-              <a href="/blog/">Blog</a>
+              <a target="" href="/blog/">Blog</a>
             </li><li class="masthead__menu-item">
-              <a href="/about/">About</a>
+              <a target="" href="/about/">About</a>
             </li><li class="masthead__menu-item">
-              <a href="/search/">Search</a>
+              <a target="" href="/search/">Search</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -237,32 +204,53 @@
   </div>
 </div>
 
+<style>
+#site-nav .site-title {
+  width: 150px;
+  line-height: 1em;
+  border-left: 4px #f78c6c solid;
+  padding-left: .5em;
+  font-style: italic;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+#site-nav .site-title .site-subtitle {
+  display: none;
+}
+</style>
+  
 
-    
+
+    <div class="initial-content">
+      
 
 
 
 <div id="main" role="main">
-    
+  
   <div class="sidebar sticky">
-    
+  
 
-<div itemscope itemtype="http://schema.org/Person">
+
+<div itemscope itemtype="https://schema.org/Person">
 
   
     <div class="author__avatar">
       
-        <img src="/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+        <img src="/assets/images/profile/maxbarrass4.jpg" alt="Max Barrass" itemprop="image">
       
     </div>
   
 
   <div class="author__content">
-    <h3 class="author__name" itemprop="name">Max Barrass</h3>
     
-      <p class="author__bio" itemprop="description">
-        Founder
-      </p>
+      <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Founder</p>
+
+      </div>
     
   </div>
 
@@ -272,9 +260,11 @@
       
 
       
+
+      
         <li>
           <a href="http://maxbarrass.com" itemprop="url">
-            <i class="fas fa-globe" aria-hidden="true"></i> Website
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span>
           </a>
         </li>
       
@@ -283,7 +273,7 @@
         <li>
           <a href="mailto:max@aem.design">
             <meta itemprop="email" content="max@aem.design" />
-            <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -292,8 +282,8 @@
 
       
         <li>
-          <a href="https://twitter.com/maxbarrass" itemprop="sameAs">
-            <i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter
+          <a href="https://twitter.com/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
           </a>
         </li>
       
@@ -301,11 +291,9 @@
       
 
       
-
-      
         <li>
-          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
-            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
           </a>
         </li>
       
@@ -320,8 +308,8 @@
 
       
         <li>
-          <a href="https://github.com/wildone" itemprop="sameAs">
-            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          <a href="https://github.com/wildone" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
           </a>
         </li>
       
@@ -350,13 +338,27 @@
 
       
 
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
+      
+
+      
+
+<li>
+  Sponsor
+</li>
+
+
+<li>
+  <a href="https://github.com/sponsors/wildone" itemprop="sameAs">
+    <i class="fa fa-heart" aria-hidden="true"></i> Github
+  </a>
+</li>
+
+
+
+
+
+
+
     </ul>
   </div>
 </div>
@@ -364,6 +366,7 @@
   
   
     
+      
       
       
       
@@ -412,34 +415,44 @@
 
 
 
-    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="Platform Principles">
-        <meta itemprop="description" content="Consider that when creating content structures you are creating them once and forever.">
-        <meta itemprop="datePublished" content="July 25, 2020">
-        <meta itemprop="dateModified" content="November 03, 2016">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Platform Principles">
+    <meta itemprop="description" content="Consider that when creating content structures you are creating them once and forever.">
+    <meta itemprop="datePublished" content="2020-10-04T14:14:13+00:00">
+    
 
-        <div class="page__inner-wrap">
-            
-            <header>
-
-
-                <h1 class="page__title" itemprop="headline">Platform Principles
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Platform Principles
 </h1>
-                
-                <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
 
 
+        </header>
+      
 
-
-  3 minute read
-
-</p>
-                
-            </header>
-            
-
-            <section class="page__content" itemprop="text">
-                <div class="sticky">
+      <section class="page__content" itemprop="text">
+        
+        <div class="sticky">
     <aside class="sidebar__right">
 <nav class="toc">
       <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
@@ -518,18 +531,17 @@
 <p><em>For example if you create a bookmark to an article, you expect that article to remain there for a long time. Changing content URL content creates a challenge, leaving content in the same place is easier and more sustainable.</em></p>
 
 
-                
-            </section>
-
-            <style>
-                .page__content_adspace_bottom {
-                    height: 200px;
-                    display: inline-block;
-                    width: 100%;
-                }
-            </style>
-            <section class="page__content_adspace_bottom">
-            
+        
+      </section>
+      <style>
+        .page__content_adspace_bottom {
+          height: 200px;
+          display: inline-block;
+          width: 100%;
+        }
+      </style>
+      <section class="page__content_adspace_bottom">
+        
 <div align="center" style="margin: 1em 0;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
@@ -543,19 +555,19 @@
     </script>
 </div>
 
-            </section>
+      </section>
+      <footer class="page__meta">
+        
+        
 
-            <footer class="page__meta">
-                
-                
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-04T14:14:13+00:00">October 4, 2020</time></p>
 
 
-                
-                <p class="page__date"><strong><i class="fas fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-03">November 03, 2016</time></p>
-                
-            </footer>
+      </footer>
 
-            <section class="page__share">
+      <section class="page__share">
   
     <h4 class="page__share-title">Share on</h4>
   
@@ -568,7 +580,7 @@
 </section>
 
 
-            
+      
   <nav class="pagination">
     
       <a href="/manifesto/introduction/" class="pagination--pager" title="Introduction
@@ -580,149 +592,187 @@
     
   </nav>
 
-        </div>
+    </div>
 
-        
-        <div class="page__comments">
+    
+  </article>
+
   
   
-      <h4 class="page__comments-title">Leave a Comment</h4>
-      <section id="disqus_thread"></section>
-    
-</div>
-
-        
-    </article>
-
-    
-    
     <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
         
-        <h4 class="page__related-title">You May Also Enjoy</h4>
-        
-        <div class="grid__wrapper">
-            
-            
+          
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2020/07/24/using-docker-to-build-code" rel="permalink">Using Docker to Build Code
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
-
-
-
-  1 minute read
-
-</p>
+  <p class="page__meta">
     
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means t...</p>
   </article>
 </div>
 
-            
-            
+        
+          
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
-
-
-
-  13 minute read
-
-</p>
+  <p class="page__meta">
     
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
 </p>
   </article>
 </div>
 
-            
-            
+        
+          
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
-
-
-
-  8 minute read
-
-</p>
+  <p class="page__meta">
     
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
 </p>
   </article>
 </div>
 
-            
-            
+        
+          
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
-
-
-
-  9 minute read
-
-</p>
+  <p class="page__meta">
     
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">We are in the end game now
 </p>
   </article>
 </div>
 
-            
-        </div>
+        
+      </div>
     </div>
-    
+  
+  
 </div>
 
-    <div class="page__footer">
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
 
@@ -733,6 +783,20 @@
       <li><strong>Follow:</strong></li>
     
 
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
 
     <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
@@ -746,7 +810,6 @@
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.min.js"></script>
 
 
 
@@ -771,6 +834,7 @@
 
 
   
+
 
 
 
