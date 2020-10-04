@@ -1,0 +1,7 @@
+{% assign img = include.img %}
+{% assign imgpath = img | split: "." | reverse | shift | reverse | join "." %}
+<picture class="{{ include.class }}">
+    <source type="image/webp" srcset="{{ imgpath }}.webp" >
+    <img src="{{ img }}" alt="{{ include.alt }}" />
+</picture>
+

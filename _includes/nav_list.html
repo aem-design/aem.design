@@ -20,7 +20,7 @@
               {% assign domain = site.url | append: site.baseurl %}
             {% endif %}
 
-            <a href="{{ nav.url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+            <a target="{{ nav.target }}" href="{{ nav.url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
           {% else %}
             <span class="nav__sub-title">{{ nav.title }}</span>
           {% endif %}
@@ -43,7 +43,7 @@
               {% assign active = "" %}
             {% endif %}
 
-            <li {% if include.navstyle %} style="{{ include.navstyle }}" {% endif %}><a href="{{ child.url }}" class="{{ active }}">{{ child.title }}</a></li>
+            <li {% if include.navstyle %} style="{{ include.navstyle }}" {% endif %}><i><a target="{{ child.target }}" href="{{ child.url }}" class="{{ active }}">{{ child.title }}</a></i>{% if child.description != null %} - {{ child.description }}{% endif %}</li>
           {% endfor %}
         </{{ navtype }}>
         {% endif %}

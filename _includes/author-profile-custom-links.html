@@ -1,7 +1,40 @@
-<!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
+
+{% if author.sponsor %}
+<li>
+  Sponsor
+</li>
+{% endif %}
+{% if author.sponsor.github %}
+<li>
+  <a href="https://github.com/sponsors/{{ author.sponsor.github }}" itemprop="sameAs">
+    <i class="fa fa-heart" aria-hidden="true"></i> Github
+  </a>
+</li>
+{% endif %}
+
+{% if author.crypto %}
+<li>
+  Donate
+</li>
+{% endif %}
+{% if author.crypto.bitcoin %}
+<li>
+  <a href="https://sochain.com/address/BTC/{{ author.crypto.bitcoin }}" itemprop="sameAs">
+    <i class="fab fa-btc" aria-hidden="true"></i> BTC
+  </a>
+</li>
+{% endif %}
+{% if author.crypto.doge %}
+<li>
+  <a href="https://sochain.com/address/DOGE/{{ author.crypto.doge }}" itemprop="sameAs">
+    <b>Ð</b> Doge
+  </a>
+</li>
+{% endif %}
+{% if author.crypto.ltc %}
+<li>
+  <a href="https://sochain.com/address/LTC/{{ author.crypto.ltc }}" itemprop="sameAs">
+    <b>Ł</b> LTC
+  </a>
+</li>
+{% endif %}
