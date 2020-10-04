@@ -5,7 +5,7 @@ github:
   - excerpt: &githubexc '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=aem-design&repo=aem.design&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=aem-design&repo=aem.design&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/background/mm-home-page-feature.jpg
+  overlay_image: /assets/images/site-logo.png
   cta_label: "<i class='fab fa-lightbulb-o'></i> Start Here"
   cta_url: "/quick-start-guide/"
   caption:
