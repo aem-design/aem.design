@@ -90,7 +90,7 @@ docker run --name author65bundle \
 aemdesign/aem:6.5.3.0-bundle-forms
 ```
 
-To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following.
+To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following:
 
 ```bash
 docker run --name author64 \
@@ -101,6 +101,20 @@ docker run --name author64 \
 -p30303:58242 -d \
 aemdesign/aem:6.4.0-bundle-forms
 ```
+
+If you want to run a base AEM 6.4instance with Service Pack 8 on port 4502 run the following:
+
+```bash
+docker run --name author648 \
+-e "TZ=Australia/Sydney" \
+-e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
+-e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
+-p4502:8080 \
+-p30303:58242 -d \
+aemdesign/aem:6.4.8.0
+```
+
+You can checkout all of the available versions of AEM containers in [Docker AEM](https://github.com/aem-design/docker-aem/branches/all) Github repo.
 
 ### License
 
