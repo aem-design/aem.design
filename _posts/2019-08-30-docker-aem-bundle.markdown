@@ -61,7 +61,7 @@ docker run --name author \
 -e "TZ=Australia/Sydney" \
 -e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
--p4502:8080 -d \
+-p4502:8080 \
 -p30303:58242 -d \
 aemdesign/aem:6.5.3.0-bundle-forms
 ```
@@ -73,7 +73,7 @@ docker run --name publish \
 -e "TZ=Australia/Sydney" \
 -e "AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
--p4503:8080 -d \
+-p4503:8080 \
 -p30304:58242 -d \
 aemdesign/aem:6.5.3.0-bundle-forms
 ```
@@ -85,7 +85,7 @@ docker run --name author65bundle \
 -e "TZ=Australia/Sydney" \
 -e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
--p4565:8080 -d \
+-p4565:8080 \
 -p30365:58242 -d \
 aemdesign/aem:6.5.3.0-bundle-forms
 ```
@@ -97,11 +97,10 @@ docker run --name author64 \
 -e "TZ=Australia/Sydney" \
 -e "AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev" \
 -e "AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n" \
--p4502:8080 -d \
+-p4502:8080 \
 -p30303:58242 -d \
 aemdesign/aem:6.4.0-bundle-forms
 ```
-
 
 ### License
 
@@ -126,7 +125,6 @@ Please checkout the docker hub [aemdesign/aem](https://hub.docker.com/r/aemdesig
 If you would like to contribute or fork the code, you can get it on GitHub [https://github.com/aem-design/aem](https://github.com/aem-design/aem).
 
 Bundle version comes with following [AEM.Design](https://github.com/aem-design) projects:
+
 - [aemdesign-aem-core](https://github.com/aem-design/aemdesign-aem-core) that contains all of the components code
 - [aemdesign-aem-support](https://github.com/aem-design/aemdesign-aem-support) that contains all of the supporting content, front-end code and component showcase.
-
-
