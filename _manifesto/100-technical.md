@@ -10,7 +10,7 @@ redirect_from:
 
 {% include toc_sticky.html %}
 
-These sections that follow are samples that should be built upon to adopt to your situation.
+These sections that follow are samples that should be built upon to adopt to your situation. Please refer to (Conventions)[/manual/conventions/] and (Image Conventions)[/manual/image-conventions/] for more detailed descriptions of conventions that need to be considered when developing AEM components.
 
 ## Reference Material
 
