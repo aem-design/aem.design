@@ -18,7 +18,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Quick-Start Guide",
-        "excerpt":"Getting started with AEM is hard, from both business and technical perspective, here are some starting points. On This Page Learning AEM Understanding AEM Developing in AEM Learning AEM Leaning AEM from scratch is a daunting task, as the platform is on one hand is mature and on the other...","categories": [],
+        "excerpt":"Getting started with AEM is hard, from both business and technical perspective, here are some starting points. On This Page Learning AEM Understanding AEM Developing in AEM Trying out AEM.Design Learning AEM Leaning AEM from scratch is a daunting task, as the platform is on one hand is mature and...","categories": [],
         "tags": [],
         "url": "https://aem.design/quick-start-guide/",
         "teaser": null
@@ -84,12 +84,30 @@ var store = [{
         "teaser": null
       },{
         "title": "Content Modeling",
-        "excerpt":"On This Page Content Types Content Experiences Primary Content Pages How to start authoring content early? Assets Tags Screens Forms Secondary Content User Cloud Services Multi Site Manager Sites Languages Blueprints Blueprints Language Requirement Design Importer Metadata Experience Tags Page Asset Components Designs Components Dialogs Page Properties Design Dialogs Translations...","categories": [],
+        "excerpt":"On This Page Content Types Content Experiences Primary Content Pages How to start authoring content early? Assets Tags Screens Forms Secondary Content User Cloud Services Metadata Experience Tags Page Asset Components Designs Organisations that dedicate resources on planning and designing Content Management Practices within the core business at some point...","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/content/",
         "teaser": null
       },{
-        "title": "Technical Standards",
+        "title": "Component Modeling",
+        "excerpt":"On This Page Dialogs Page Properties Design Dialogs Supporting Experiences Translations Language Copies Create Translation Translation Projects Custom or Legacy Human and Machine Human Translation Side-By-Side Content Best Practices Planning and designing your functionality around Authoring component will ensure that you are not stuck in the tech debt remediation spiral...","categories": [],
+        "tags": [],
+        "url": "https://aem.design/manifesto/components/",
+        "teaser": null
+      },{
+        "title": "Tenant Content",
+        "excerpt":"On This Page Sites Languages Blueprints Blueprints Language Requirement Design Importer It’s important when designing AEM implementation to plan and design all content and development to be tenant focused. Tenant focus in AEM allow understanding all of the needs to segregate and isolate content and experiences for a specific tenant....","categories": [],
+        "tags": [],
+        "url": "https://aem.design/manifesto/tenants/",
+        "teaser": null
+      },{
+        "title": "Deployment Practices",
+        "excerpt":"On This Page Package Deployment and Replication Deployment Cycle Build Stage Deploy Stage To be able to support CI/CD practice automation should used to minimise deployment overheads and avoid conflicts. When segregating infrastructure and security, production artifacts and environments should be replicated to other environments so that its configurations can...","categories": [],
+        "tags": [],
+        "url": "https://aem.design/manifesto/deployment/",
+        "teaser": null
+      },{
+        "title": "Technical Conventions",
         "excerpt":"On This Page Reference Material Sample JS Project Namespace Sample JS Console Log Utility Class Sample JS Component Namespace Sample Health Check Sample Adaptive Image Sample Sling Content Manipulation Import UTF Characters using Sling These sections that follow are samples that should be built upon to adopt to your situation....","categories": [],
         "tags": [],
         "url": "https://aem.design/manifesto/technical/",

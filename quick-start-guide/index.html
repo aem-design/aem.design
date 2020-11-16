@@ -25,7 +25,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-11-11T23:02:27+00:00">
+  <meta property="article:published_time" content="2020-11-16T00:48:32+00:00">
 
 
 
@@ -369,7 +369,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Quick-Start Guide">
     <meta itemprop="description" content="How to quickly install and setup Minimal Mistakes for use with GitHub Pages.">
-    <meta itemprop="datePublished" content="2020-11-11T23:02:27+00:00">
+    <meta itemprop="datePublished" content="2020-11-16T00:48:32+00:00">
     
 
     <div class="page__inner-wrap">
@@ -394,6 +394,7 @@
   <li><a href="#learning-aem" id="markdown-toc-learning-aem">Learning AEM</a></li>
   <li><a href="#understanding-aem" id="markdown-toc-understanding-aem">Understanding AEM</a></li>
   <li><a href="#developing-in-aem" id="markdown-toc-developing-in-aem">Developing in AEM</a></li>
+  <li><a href="#trying-out-aemdesign" id="markdown-toc-trying-out-aemdesign">Trying out AEM.Design</a></li>
 </ul>
 
   </nav>
@@ -427,18 +428,14 @@
 <ul>
   <li>From technology perspective its not like any other CMS platforms. Its best to start with an open mind.</li>
   <li>You need to learn and understand these rules <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/model-data.html">Data Modeling - David Nuescheler’s Model</a>. #1 Rule must be your guiding start at all times when developing for AEM. You will find that its very easy to sway from this and you will see a lot of opportunities to break this and other rules. Be vigilant and stay alert.</li>
-  <li>Learn how content is manipulated in AEM <a href="https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html">Manipulating Content using Sling</a>. At the core of AEM is Sling and it the technology that makes AEM Content Centric. Its responsible for content location and presentation.
-    <ul>
-      <li><a href="https://sling.apache.org/documentation/bundles/sling-query/selectors.html">Selectors</a> - a way of passing information to URL without using query strings.</li>
-      <li><a href="https://helpx.adobe.com/au/experience-manager/6-4/sites/developing/using/components-basics.html">Components</a> - base building block of all pages and other content presentation.</li>
-    </ul>
+  <li>
+    <p>Learn how content is manipulated in AEM <a href="https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html">Manipulating Content using Sling</a>. At the core of AEM is Sling and it the technology that makes AEM Content Centric. Its responsible for content location and presentation.</p>
   </li>
-  <li>Working with repository
-    <ul>
-      <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/package-manager.html">Content Packages</a> - a way of adding/installing content into AEM using a Content Package ZIP file. You can also Uninstall Content Packages after you have installed.</li>
-      <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html">Run Modes</a> - a way of separating your configurations of AEM using content.</li>
-    </ul>
-  </li>
+  <li><a href="https://sling.apache.org/documentation/bundles/sling-query/selectors.html">Selectors</a> - a way of passing information to URL without using query strings.</li>
+  <li><a href="https://helpx.adobe.com/au/experience-manager/6-4/sites/developing/using/components-basics.html">Components</a> - base building block of all pages and other content presentation.</li>
+  <li>Working with repository</li>
+  <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/package-manager.html">Content Packages</a> - a way of adding/installing content into AEM using a Content Package ZIP file. You can also Uninstall Content Packages after you have installed.</li>
+  <li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html">Run Modes</a> - a way of separating your configurations of AEM using content.</li>
   <li>Learn the syntax of new templating language used for presentatio of content in AEM using <a href="https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html">HTL Scripting Engine</a>. HTL Scripting Engine is new but very mature templating framework. Its build on top of JSTL and provides a number of helpful patterns for dealing with presentation of content.</li>
   <li>Learn <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/author.html#main-pars_title">Concept of Authoring and Publishing</a></li>
   <li>Learn how content is authored in AEM from example of existing projects <a href="https://www.sfu.ca/cms/howto.html">Working in AEM</a>. Content Authoring Experience is critical to working effectively in AEM, understanding impacts on Authoring though your work is critical to AEM development.</li>
@@ -458,6 +455,53 @@
   <li>Clone and Deploy <a href="https://github.com/aem-design/aemdesign-aem-support">aemdesign-aem-support</a> that contains all of the supporting content, front-end code and component showcase. To deploy project run <code class="language-plaintext highlighter-rouge">./deploy-local</code> in the project directory once you have cloned it.</li>
 </ul>
 
+<h2 id="trying-out-aemdesign">Trying out AEM.Design</h2>
+
+<p>The quickest way to test out AEM.Design components is to run an AEM docker container using this command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--name</span> author <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"TZ=Australia/Sydney"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span> <span class="se">\</span>
+<span class="nt">-e</span> <span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n"</span> <span class="se">\</span>
+<span class="nt">-p4502</span>:8080 <span class="se">\</span>
+<span class="nt">-p30303</span>:58242 <span class="nt">-d</span> <span class="se">\</span>
+aemdesign/aem:6.5.3.0-bundle-forms
+</code></pre></div></div>
+
+<p>This will start an Author instance that will be available on port 4502. You can read more about this at <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>.</p>
+
+<p>If you want to progress to checking out the code you can clone the <a href="https://github.com/aem-design/aemdesign-parent">aemdesign-parent </a> repo using following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="nt">--recursive</span> git@gitlab.com:aem.design/aemdesign-parent.git
+</code></pre></div></div>
+
+<p>This will clone all of the code and related projects and will allow you to contribute to AEM.Design.</p>
+
+<p>If you want to leverage AEM.Design to speedup your project delivery, you can start by creating a tenant project base on <a href="https://github.com/aem-design/aemdesign-archetype">aemdesign-archetype</a> using following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn archetype:generate <span class="se">\</span>
+<span class="nt">-DarchetypeGroupId</span><span class="o">=</span>design.aem <span class="se">\</span>
+<span class="nt">-DarchetypeArtifactId</span><span class="o">=</span>aemdesign-archetype <span class="se">\</span>
+<span class="nt">-DarchetypeVersion</span><span class="o">=</span>1.0.71 <span class="se">\</span>
+<span class="nt">-DgroupId</span><span class="o">=</span>au.com.projectx.aem <span class="se">\</span>
+<span class="nt">-DgroupTitle</span><span class="o">=</span><span class="s2">"ProjectX AEM"</span> <span class="se">\</span>
+<span class="nt">-DartifactId</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-DartifactTitle</span><span class="o">=</span><span class="s2">"ProjectX AEM"</span> <span class="se">\</span>
+<span class="nt">-DparentArtifactId</span><span class="o">=</span>projectx-parent <span class="se">\</span>
+<span class="nt">-DparentArtifactName</span><span class="o">=</span><span class="s2">"ProjectX :: AEM :: parent"</span> <span class="se">\</span>
+<span class="nt">-Dpackage</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-DpackageGroup</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-Dversion</span><span class="o">=</span>0.1 <span class="se">\</span>
+<span class="nt">-DcomponentGroupTitle</span><span class="o">=</span>ProjectX <span class="se">\</span>
+<span class="nt">-DappsFolderName</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-DcontentFolderName</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-DconfFolderName</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-DclientLibsFolderName</span><span class="o">=</span>projectx <span class="se">\</span>
+<span class="nt">-DclassNamespace</span><span class="o">=</span>au.com.projectx.aem <span class="se">\</span>
+<span class="nt">-DappsParent</span><span class="o">=</span>aemdesign
+</code></pre></div></div>
+
+<p>You can read more about the <a href="https://github.com/aem-design/aemdesign-archetype#available-properties">available properties</a> to tailor them to your project. Using this archetype will ensure that you have a ready to go project with Component Placeholders, Automation Tests and Showcase Site. You can read more on the importance of these artifacts in <a href="/manifesto/project/#knowledge-flow-map">Knowledge Flow Map</a> overview.</p>
 
         
       </section>
@@ -490,7 +534,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-11T23:02:27+00:00">November 11, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-16T00:48:32+00:00">November 16, 2020</time></p>
 
 
       </footer>

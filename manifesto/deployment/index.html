@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Design Language System - AEM.Design</title>
-<meta name="description" content="On This Page">
+<!-- begin _includes/seo.html --><title>Deployment Practices - AEM.Design</title>
+<meta name="description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
 
 
   <meta name="author" content="Max Barrass">
@@ -16,11 +16,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Design Language System">
-<meta property="og:url" content="https://aem.design/manual/dls/">
+<meta property="og:title" content="Deployment Practices">
+<meta property="og:url" content="https://aem.design/manifesto/deployment/">
 
 
-  <meta property="og:description" content="On This Page">
+  <meta property="og:description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
 
 
 
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/manual/dls/">
+<link rel="canonical" href="https://aem.design/manifesto/deployment/">
 
 
 
@@ -382,27 +382,31 @@
     
       <li>
         
-          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
+          <a href="/manifesto/"><span class="nav__sub-title">Manifesto</span></a>
         
 
         
         <ul>
           
-            <li><a href="/manual/projects/">Projects</a></li>
+            <li><a href="/manifesto/introduction/">Introduction</a></li>
           
-            <li><a href="/manual/devtools/">Development Tools</a></li>
+            <li><a href="/manifesto/principles/">Principles</a></li>
           
-            <li><a href="/manual/management/">Management</a></li>
+            <li><a href="/manifesto/capabilities/">Capabilities</a></li>
           
-            <li><a href="/manual/osenv/">Operating Environment</a></li>
+            <li><a href="/manifesto/delivery/">Delivery</a></li>
           
-            <li><a href="/manual/process/">Process</a></li>
+            <li><a href="/manifesto/project/">Project</a></li>
           
-            <li><a href="/manual/conventions/">Conventions</a></li>
+            <li><a href="/manifesto/content/">Content</a></li>
           
-            <li><a href="/manual/image-conventions/">Image Conventions</a></li>
+            <li><a href="/manifesto/components/">Components</a></li>
           
-            <li><a href="/manual/dls/" class="active">Design Language System</a></li>
+            <li><a href="/manifesto/tenants/">Tenants</a></li>
+          
+            <li><a href="/manifesto/deployment/" class="active">Deployment</a></li>
+          
+            <li><a href="/manifesto/technical/">Technical</a></li>
           
         </ul>
         
@@ -418,15 +422,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Design Language System">
-    <meta itemprop="description" content="           On This Page    ">
+    <meta itemprop="headline" content="Deployment Practices">
+    <meta itemprop="description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
     <meta itemprop="datePublished" content="2020-11-16T00:48:32+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Design Language System
+          <h1 id="page-title" class="page__title" itemprop="headline">Deployment Practices
 </h1>
           
 
@@ -459,255 +463,74 @@
 <nav class="toc">
       <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#reference-for-terms" id="markdown-toc-reference-for-terms">Reference for Terms</a></li>
-  <li><a href="#design-language-system-table-of-contents" id="markdown-toc-design-language-system-table-of-contents">Design Language System Table of Contents</a></li>
+  <li><a href="#package-deployment-and-replication" id="markdown-toc-package-deployment-and-replication">Package Deployment and Replication</a></li>
+  <li><a href="#deployment-cycle" id="markdown-toc-deployment-cycle">Deployment Cycle</a>    <ul>
+      <li><a href="#build-stage" id="markdown-toc-build-stage">Build Stage</a></li>
+      <li><a href="#deploy-stage" id="markdown-toc-deploy-stage">Deploy Stage</a></li>
+    </ul>
+  </li>
 </ul>
 
     </nav>
 </aside>
 </div>
 
-<h2 id="introduction">Introduction</h2>
+<p>To be able to support CI/CD practice automation should used to minimise deployment overheads and avoid conflicts. When segregating infrastructure and security, production artifacts and environments should be replicated to other environments so that its configurations can be tested throughout normal development cycles. Practices must be continually refactored to be simple and transparent so that they can be used without manual intervention. It’s important to utilise same practices across all environments without exceptions, this ensures continuous improvement on practices as they are used by wider group of users.</p>
 
-<p>A design language system is a collection of design principles and components that unite product teams around a common visual language.</p>
+<p><img src="/assets/images/manifesto/content-deployment-practice.png" alt="image alt text" /></p>
 
-<ul>
-  <li>
-    <p><strong>Design</strong> is the description of visual aesthetics that are inferred from Brand Guidelines.</p>
-  </li>
-  <li>
-    <p><strong>Language</strong> is the common dictionary of terms that describe the design elements and design options that apply to components components</p>
+<p>The whole environment should be able to be replicated in different configurations in a local environment. Using Docker and Ansible for streamlining the deployment architecture and inventory enable consistency of environment and enables persistence of operations functions.</p>
 
-    <ul>
-      <li>
-        <p><strong>Design Elements</strong> refers to general design conventions that can be applied across all components and govern general component behaviour</p>
-      </li>
-      <li>
-        <p><strong>Design Options</strong> refers to a subset of design conventions that apply to specific components</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>System</strong> is the definition of components and their behaviour and their relations with Design and Language.</p>
-  </li>
-</ul>
+<p>General practice is to only allow System Console and Package Installation in Local Dev environment. This practice ensures that all efforts to update a node persisted into Code and do not create conflict of the Node configuration state.</p>
 
-<p>The DLS can be considered the source of truth for how elements look and behave.</p>
+<h2 id="package-deployment-and-replication">Package Deployment and Replication</h2>
 
-<ul>
-  <li>
-    <p>Designers, developers and content authors can use the DLS to check if an element of design already exists.</p>
-  </li>
-  <li>
-    <p>Content authors can use the DLS for instructions on how to use certain design components.</p>
-  </li>
-</ul>
+<p>Packages should be used to deploy system content and for bulk content operations (backup, archive, migration etc). Replication should be used to replicate content by authors during normal operations.</p>
 
-<p>Like a natural language, the DLS is supposed to grow over time as components are progressively added to it</p>
+<p>It’s important that package can be installed and uninstalled from a node. This is to ensure that update by the package can be rolled back in cases where testing has failed. Replicating packages from one node to another removes ability to Uninstall the package from the target node. Additionally replication of a package does not allow for additional processes to be carried out on the node during a deployment process.</p>
 
-<p>Design Language systems are aimed to be a shared Language for understanding design, that transparently leads to understanding implementation. Following definitions are made to ensure discrete understanding terms that are used</p>
+<h2 id="deployment-cycle">Deployment Cycle</h2>
 
-<p>Design Language is a vocabulary that is used to describe the design.</p>
+<p>Deployment cycle is deployment steps that run automatically triggered by Code updates by developers or triggered manually or automatically by other jobs. The cycle is divided into Build and Deploy Stages. Build stage is used to respond to Code updates and carry out subsequent build processes and artifact storage. Deploy Stage is used for Deploying a particular versioned artifact to an environment.</p>
 
-<p>Design Language System is a reference implementation of a Design Language.</p>
-
-<h2 id="reference-for-terms">Reference for Terms</h2>
-
-<ul>
-  <li><a href="https://spectrum.adobe.com/">https://spectrum.adobe.com/</a></li>
-</ul>
-
-<h2 id="design-language-system-table-of-contents">Design Language System Table of Contents</h2>
-
-<p>Here is a list of things that you would cover as you define your Design Language System.</p>
+<h3 id="build-stage">Build Stage</h3>
 
 <ol>
-  <li>Principles - The principles provide the overall direction and connect the brand and goals to the design system. The principles are the <strong>why</strong> of the design system exist.
-    <ol>
-      <li>Brand</li>
-      <li>Experience Vision</li>
-      <li>Design Principles</li>
-    </ol>
+  <li>
+    <p>Commit - Developer commits code to Repository</p>
   </li>
-  <li>Guidelines - These guidelines describe how to bring to life aspects of the experience and design system through the use of the foundations and components. The guidelines are the **how **of the design system.
-    <ol>
-      <li>Experience Contexts</li>
-      <li>Accessibility
-        <ol>
-          <li>Visual</li>
-          <li>Inclusive</li>
-          <li>International</li>
-          <li>Bi-directional</li>
-        </ol>
-      </li>
-      <li>Movement
-        <ol>
-          <li>Interactions</li>
-          <li>Motion</li>
-          <li>Choreography</li>
-          <li>Animation</li>
-        </ol>
-      </li>
-      <li>Naming
-        <ol>
-          <li>Tokens</li>
-        </ol>
-      </li>
-      <li>Getting Started
-        <ol>
-          <li>For designers</li>
-          <li>For developers</li>
-        </ol>
-      </li>
-    </ol>
+  <li>
+    <p>Pull - Jenkins monitors updates and pulls code into workspace</p>
   </li>
-  <li>Foundations - The foundations are the global constructs that inform and are used to construct all the components. The foundations are <strong>what</strong> of the design system.
-    <ol>
-      <li>Branding</li>
-      <li>Colours</li>
-      <li>Typography</li>
-      <li>Fonts</li>
-      <li>Illustrations</li>
-      <li>Sounds</li>
-      <li>Iconography</li>
-      <li>Spacing</li>
-      <li>Visualisation
-        <ol>
-          <li>Data</li>
-          <li>Charts</li>
-        </ol>
-      </li>
-    </ol>
+  <li>
+    <p>Build - Jenkins build the code using a Docker Container</p>
   </li>
-  <li>Content
-    <ol>
-      <li>Voice and Tone</li>
-      <li>Vocabulary - Author related</li>
-      <li>Language</li>
-      <li>Grammar</li>
-      <li>Alternative Text</li>
-      <li>Photography</li>
-      <li>Icons
-        <ol>
-          <li>Logos</li>
-          <li>Chevrons</li>
-        </ol>
-      </li>
-      <li>Internationalization</li>
-    </ol>
-  </li>
-  <li>Patterns - Experiences
-    <ol>
-      <li>Layouts
-        <ol>
-          <li>Grid</li>
-          <li>Dialogs</li>
-          <li>Popups/Popovers</li>
-          <li>Trays</li>
-          <li>Toast</li>
-        </ol>
-      </li>
-      <li>Messaging
-        <ol>
-          <li>Error</li>
-          <li>Info</li>
-          <li>Warning</li>
-        </ol>
-      </li>
-      <li>Tour</li>
-    </ol>
-  </li>
-  <li>Unique Experiences
-    <ol>
-      <li>Homepage</li>
-      <li>Article List
-        <ol>
-          <li>Article</li>
-        </ol>
-      </li>
-      <li>About Page</li>
-      <li>Terms and Conditions</li>
-    </ol>
-  </li>
-  <li>Components - Reference from AEM.Design - A component is a discrete part of the design system that can be used in multiple contexts throughout the ecosystem. Components can have nested components and can be grouped.
-    <ol>
-      <li>Content
-        <ol>
-          <li>Content Fragment</li>
-          <li>Content Template</li>
-          <li>File Download Link</li>
-          <li>Embed Source</li>
-          <li>External</li>
-          <li>Link</li>
-          <li>Content Reference</li>
-          <li>Table</li>
-          <li>Rich Text</li>
-          <li>Tool Tip</li>
-          <li>Page Author</li>
-          <li>Page Date</li>
-          <li>Page Description</li>
-          <li>Page Tags</li>
-          <li>Page Title</li>
-        </ol>
-      </li>
-      <li>Details
-        <ol>
-          <li>Contact Details</li>
-          <li>Event Details</li>
-          <li>Location Details</li>
-          <li>News Details</li>
-          <li>Page Details</li>
-          <li>Generic Details</li>
-        </ol>
-      </li>
-      <li>Layout
-        <ol>
-          <li>Article</li>
-          <li>Aside</li>
-          <li>Breadcrumb</li>
-          <li>Columns</li>
-          <li>Content Block</li>
-          <li>Content Block Menu</li>
-          <li>Content Tabs</li>
-          <li>Footer</li>
-          <li>Header</li>
-          <li>Nav Bar</li>
-        </ol>
-      </li>
-      <li>Lists
-        <ol>
-          <li>Asset List</li>
-          <li>Contact List</li>
-          <li>Event List</li>
-          <li>Lang Nav</li>
-          <li>List</li>
-          <li>List Nav</li>
-          <li>Location List</li>
-          <li>News List</li>
-          <li>Page List</li>
-          <li>Search Results List</li>
-          <li>Tag List</li>
-          <li>Nav List</li>
-        </ol>
-      </li>
-      <li>Media
-        <ol>
-          <li>Audio</li>
-          <li>Image</li>
-          <li>Video</li>
-        </ol>
-      </li>
-      <li>Template
-        <ol>
-          <li>One Column Page</li>
-          <li>Three Column Page</li>
-          <li>Two Column Page</li>
-        </ol>
-      </li>
-    </ol>
+  <li>
+    <p>Store - on successful build artifact is stored in Nexus</p>
   </li>
 </ol>
+
+<h3 id="deploy-stage">Deploy Stage</h3>
+
+<ol>
+  <li>
+    <p>Retrieve - Jenkins deploy job retrieves a package from Nexus into workspace</p>
+  </li>
+  <li>
+    <p>Deploy - Jenkins deploys package to target Node</p>
+  </li>
+  <li>
+    <p>Test - Jenkins runs Testing job for the target Node</p>
+  </li>
+  <li>
+    <p>Push - Push project version update to repo</p>
+  </li>
+  <li>
+    <p>Cache - Optional, if docker containers are updated then containers is cached in shared docker registry</p>
+  </li>
+</ol>
+
+<p><img src="/assets/images/manifesto/content-deployment-cycle.png" alt="image alt text" /></p>
 
         
       </section>
@@ -737,52 +560,6 @@
       <footer class="page__meta">
         
         
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/tags/#design-language-system" class="page__taxonomy-item" rel="tag">design-language-system</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#dls" class="page__taxonomy-item" rel="tag">dls</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/categories/#manual" class="page__taxonomy-item" rel="tag">manual</a>
-    
-    </span>
-  </p>
 
 
         
@@ -796,22 +573,23 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Design+Language+System%20https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Deployment+Practices%20https%3A%2F%2Faem.design%2Fmanifesto%2Fdeployment%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanifesto%2Fdeployment%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanifesto%2Fdeployment%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/manual/image-conventions/" class="pagination--pager" title="Image Conventions
+      <a href="/manifesto/tenants/" class="pagination--pager" title="Tenant Content
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/manifesto/technical/" class="pagination--pager" title="Technical Conventions
+">Next</a>
     
   </nav>
 
@@ -1043,8 +821,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/manual/dls/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/manual/080-design-language-system"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/manifesto/deployment/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/manifesto/090-deployment"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

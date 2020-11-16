@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Design Language System - AEM.Design</title>
-<meta name="description" content="On This Page">
+<!-- begin _includes/seo.html --><title>Component Modeling - AEM.Design</title>
+<meta name="description" content="Author focused component modeling will crucial process of establishing comprehensive language that will accelerate your delivery">
 
 
   <meta name="author" content="Max Barrass">
@@ -16,11 +16,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Design Language System">
-<meta property="og:url" content="https://aem.design/manual/dls/">
+<meta property="og:title" content="Component Modeling">
+<meta property="og:url" content="https://aem.design/manifesto/components/">
 
 
-  <meta property="og:description" content="On This Page">
+  <meta property="og:description" content="Author focused component modeling will crucial process of establishing comprehensive language that will accelerate your delivery">
 
 
 
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/manual/dls/">
+<link rel="canonical" href="https://aem.design/manifesto/components/">
 
 
 
@@ -382,27 +382,31 @@
     
       <li>
         
-          <a href="/manual/"><span class="nav__sub-title">Manual</span></a>
+          <a href="/manifesto/"><span class="nav__sub-title">Manifesto</span></a>
         
 
         
         <ul>
           
-            <li><a href="/manual/projects/">Projects</a></li>
+            <li><a href="/manifesto/introduction/">Introduction</a></li>
           
-            <li><a href="/manual/devtools/">Development Tools</a></li>
+            <li><a href="/manifesto/principles/">Principles</a></li>
           
-            <li><a href="/manual/management/">Management</a></li>
+            <li><a href="/manifesto/capabilities/">Capabilities</a></li>
           
-            <li><a href="/manual/osenv/">Operating Environment</a></li>
+            <li><a href="/manifesto/delivery/">Delivery</a></li>
           
-            <li><a href="/manual/process/">Process</a></li>
+            <li><a href="/manifesto/project/">Project</a></li>
           
-            <li><a href="/manual/conventions/">Conventions</a></li>
+            <li><a href="/manifesto/content/">Content</a></li>
           
-            <li><a href="/manual/image-conventions/">Image Conventions</a></li>
+            <li><a href="/manifesto/components/" class="active">Components</a></li>
           
-            <li><a href="/manual/dls/" class="active">Design Language System</a></li>
+            <li><a href="/manifesto/tenants/">Tenants</a></li>
+          
+            <li><a href="/manifesto/deployment/">Deployment</a></li>
+          
+            <li><a href="/manifesto/technical/">Technical</a></li>
           
         </ul>
         
@@ -418,15 +422,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Design Language System">
-    <meta itemprop="description" content="           On This Page    ">
+    <meta itemprop="headline" content="Component Modeling">
+    <meta itemprop="description" content="Author focused component modeling will crucial process of establishing comprehensive language that will accelerate your delivery">
     <meta itemprop="datePublished" content="2020-11-16T00:48:32+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Design Language System
+          <h1 id="page-title" class="page__title" itemprop="headline">Component Modeling
 </h1>
           
 
@@ -459,255 +463,120 @@
 <nav class="toc">
       <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#reference-for-terms" id="markdown-toc-reference-for-terms">Reference for Terms</a></li>
-  <li><a href="#design-language-system-table-of-contents" id="markdown-toc-design-language-system-table-of-contents">Design Language System Table of Contents</a></li>
+  <li><a href="#dialogs" id="markdown-toc-dialogs">Dialogs</a>    <ul>
+      <li><a href="#page-properties" id="markdown-toc-page-properties">Page Properties</a></li>
+      <li><a href="#design-dialogs" id="markdown-toc-design-dialogs">Design Dialogs</a></li>
+    </ul>
+  </li>
+  <li><a href="#supporting-experiences" id="markdown-toc-supporting-experiences">Supporting Experiences</a>    <ul>
+      <li><a href="#translations" id="markdown-toc-translations">Translations</a>        <ul>
+          <li><a href="#language-copies" id="markdown-toc-language-copies">Language Copies</a></li>
+          <li><a href="#create-translation" id="markdown-toc-create-translation">Create Translation</a></li>
+          <li><a href="#translation-projects" id="markdown-toc-translation-projects">Translation Projects</a></li>
+          <li><a href="#custom-or-legacy" id="markdown-toc-custom-or-legacy">Custom or Legacy</a>            <ul>
+              <li><a href="#human-and-machine" id="markdown-toc-human-and-machine">Human and Machine</a></li>
+              <li><a href="#human-translation" id="markdown-toc-human-translation">Human Translation</a>                <ul>
+                  <li><a href="#side-by-side" id="markdown-toc-side-by-side">Side-By-Side</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#content-best-practices" id="markdown-toc-content-best-practices">Content Best Practices</a></li>
+    </ul>
+  </li>
 </ul>
 
     </nav>
 </aside>
 </div>
 
-<h2 id="introduction">Introduction</h2>
+<p>Planning and designing your functionality around Authoring component will ensure that you are not stuck in the tech debt remediation spiral that would lead to replatforming. Chances are you are replatfrom from another technical platform and change of perspective need to happen to ensure you can leverage AEM capabilities.</p>
 
-<p>A design language system is a collection of design principles and components that unite product teams around a common visual language.</p>
+<p>In AEM components should be understood from followgin perspectives:</p>
+
+<ul>
+  <li>Authored Content - content that is input into component using component Dialog, default content added for a component in a template to enable default state as component is placed on a page, and component static values that ensure component operation without Authors input.</li>
+  <li>Component Experience - how components content is used to create desired experience on pages and how component content is used in other components</li>
+  <li>Component Data - how component data is contributing to overal data footprint of CMS, this follows <a href="/archive/davids-model#rule-1-data-first-structure-later-maybe">Rule #1: Data First, Structure Later. Maybe.</a></li>
+  <li>Supporting Experiences</li>
+</ul>
+
+<h2 id="dialogs">Dialogs</h2>
+
+<p>Primary method of input of content into components is by interacting with component dialogs. Component dialogs are designed to prompt user for content.</p>
+
+<h4 id="page-properties">Page Properties</h4>
+
+<p><img src="/assets/images/manifesto/content-sites-page-dialog-metadata.png" alt="image alt text" /></p>
+
+<h3 id="design-dialogs">Design Dialogs</h3>
+
+<p>For component to show in the Side Kick on a particular template they are first required to be added to the design of the template. This is done through design mode and required components are selected to be available to authors. Special Authoring privileges can be assigned to prevent unauthorised modification of Designs.</p>
+
+<p>Design dialogs allow you to specify default values for components when they are dropped on a page. This helps to provide default options that help authors.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-page-dialog-design.png" alt="image alt text" /></p>
+
+<h2 id="supporting-experiences">Supporting Experiences</h2>
+
+<p>Number of component supporting experiences provide patterns that are key to leveraging AEM capabilities and makeing authoring experience content driven.</p>
+
+<h3 id="translations">Translations</h3>
+
+<p>AEM supports both Manual and Automated translation of content. For checking and initiating translation a Language Copy function is used with a workflow if automation is required.</p>
+
+<h4 id="language-copies">Language Copies</h4>
+
+<p>Language copies allow copying a particular version of a page from one Language into Another and provide assistance of starting a workflow for translation. As well as provide visual list of existing copies of selected page in different languages.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-languagecopy.png" alt="image alt text" /></p>
+
+<h4 id="create-translation">Create Translation</h4>
+
+<p>When creating a translation of a page a workflow can be triggered to either notify another person to conduct a Manual translation or have an external Automated script to perform initial translation.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-translations-create.png" alt="image alt text" /></p>
+
+<h4 id="translation-projects">Translation Projects</h4>
+
+<p>New functionality in AEM enables better status reporting on translation progress for all pages. A translation project is created to which page all required translations are assigned, progress of all workflows per pages is reflected on dashboard.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-translations-project.png" alt="image alt text" /></p>
+
+<h4 id="custom-or-legacy">Custom or Legacy</h4>
+
+<h5 id="human-and-machine">Human and Machine</h5>
+
+<p>AEM supports human and machine translation workflows. To automate translation workflows, you integrate translation service providers with AEM and create projects for translating content into multiple languages. These project provide you with a dashboard that allow you to keep track of the progress of translation.</p>
 
 <ul>
   <li>
-    <p><strong>Design</strong> is the description of visual aesthetics that are inferred from Brand Guidelines.</p>
+    <p>Human translation: Content is sent to your translation provider and translated by professional translators. When complete, the translated content is returned and imported into AEM. When your translation provider is integrated with AEM, content is automatically sent between AEM and the translation provider.</p>
   </li>
   <li>
-    <p><strong>Language</strong> is the common dictionary of terms that describe the design elements and design options that apply to components components</p>
-
-    <ul>
-      <li>
-        <p><strong>Design Elements</strong> refers to general design conventions that can be applied across all components and govern general component behaviour</p>
-      </li>
-      <li>
-        <p><strong>Design Options</strong> refers to a subset of design conventions that apply to specific components</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>System</strong> is the definition of components and their behaviour and their relations with Design and Language.</p>
+    <p>Machine translation: The machine translation service immediately translates your content.</p>
   </li>
 </ul>
 
-<p>The DLS can be considered the source of truth for how elements look and behave.</p>
+<h5 id="human-translation">Human Translation</h5>
+
+<h6 id="side-by-side">Side-By-Side</h6>
+
+<p>When AEM is exposed to Translation providers for Human Translation it Side-By-Side view of pages enables much better context sensitive translation, which increases quality of translation.</p>
+
+<p><img src="/assets/images/manifesto/content-sites-page-side-by-side.png" alt="image alt text" /></p>
+
+<h3 id="content-best-practices">Content Best Practices</h3>
+
+<p>References</p>
 
 <ul>
-  <li>
-    <p>Designers, developers and content authors can use the DLS to check if an element of design already exists.</p>
-  </li>
-  <li>
-    <p>Content authors can use the DLS for instructions on how to use certain design components.</p>
-  </li>
+  <li><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/msm-best-practices.html">MSM Best Practices</a></li>
+  <li><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/tc-bp.html">Translation Best Practices</a></li>
 </ul>
 
-<p>Like a natural language, the DLS is supposed to grow over time as components are progressively added to it</p>
-
-<p>Design Language systems are aimed to be a shared Language for understanding design, that transparently leads to understanding implementation. Following definitions are made to ensure discrete understanding terms that are used</p>
-
-<p>Design Language is a vocabulary that is used to describe the design.</p>
-
-<p>Design Language System is a reference implementation of a Design Language.</p>
-
-<h2 id="reference-for-terms">Reference for Terms</h2>
-
-<ul>
-  <li><a href="https://spectrum.adobe.com/">https://spectrum.adobe.com/</a></li>
-</ul>
-
-<h2 id="design-language-system-table-of-contents">Design Language System Table of Contents</h2>
-
-<p>Here is a list of things that you would cover as you define your Design Language System.</p>
-
-<ol>
-  <li>Principles - The principles provide the overall direction and connect the brand and goals to the design system. The principles are the <strong>why</strong> of the design system exist.
-    <ol>
-      <li>Brand</li>
-      <li>Experience Vision</li>
-      <li>Design Principles</li>
-    </ol>
-  </li>
-  <li>Guidelines - These guidelines describe how to bring to life aspects of the experience and design system through the use of the foundations and components. The guidelines are the **how **of the design system.
-    <ol>
-      <li>Experience Contexts</li>
-      <li>Accessibility
-        <ol>
-          <li>Visual</li>
-          <li>Inclusive</li>
-          <li>International</li>
-          <li>Bi-directional</li>
-        </ol>
-      </li>
-      <li>Movement
-        <ol>
-          <li>Interactions</li>
-          <li>Motion</li>
-          <li>Choreography</li>
-          <li>Animation</li>
-        </ol>
-      </li>
-      <li>Naming
-        <ol>
-          <li>Tokens</li>
-        </ol>
-      </li>
-      <li>Getting Started
-        <ol>
-          <li>For designers</li>
-          <li>For developers</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Foundations - The foundations are the global constructs that inform and are used to construct all the components. The foundations are <strong>what</strong> of the design system.
-    <ol>
-      <li>Branding</li>
-      <li>Colours</li>
-      <li>Typography</li>
-      <li>Fonts</li>
-      <li>Illustrations</li>
-      <li>Sounds</li>
-      <li>Iconography</li>
-      <li>Spacing</li>
-      <li>Visualisation
-        <ol>
-          <li>Data</li>
-          <li>Charts</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Content
-    <ol>
-      <li>Voice and Tone</li>
-      <li>Vocabulary - Author related</li>
-      <li>Language</li>
-      <li>Grammar</li>
-      <li>Alternative Text</li>
-      <li>Photography</li>
-      <li>Icons
-        <ol>
-          <li>Logos</li>
-          <li>Chevrons</li>
-        </ol>
-      </li>
-      <li>Internationalization</li>
-    </ol>
-  </li>
-  <li>Patterns - Experiences
-    <ol>
-      <li>Layouts
-        <ol>
-          <li>Grid</li>
-          <li>Dialogs</li>
-          <li>Popups/Popovers</li>
-          <li>Trays</li>
-          <li>Toast</li>
-        </ol>
-      </li>
-      <li>Messaging
-        <ol>
-          <li>Error</li>
-          <li>Info</li>
-          <li>Warning</li>
-        </ol>
-      </li>
-      <li>Tour</li>
-    </ol>
-  </li>
-  <li>Unique Experiences
-    <ol>
-      <li>Homepage</li>
-      <li>Article List
-        <ol>
-          <li>Article</li>
-        </ol>
-      </li>
-      <li>About Page</li>
-      <li>Terms and Conditions</li>
-    </ol>
-  </li>
-  <li>Components - Reference from AEM.Design - A component is a discrete part of the design system that can be used in multiple contexts throughout the ecosystem. Components can have nested components and can be grouped.
-    <ol>
-      <li>Content
-        <ol>
-          <li>Content Fragment</li>
-          <li>Content Template</li>
-          <li>File Download Link</li>
-          <li>Embed Source</li>
-          <li>External</li>
-          <li>Link</li>
-          <li>Content Reference</li>
-          <li>Table</li>
-          <li>Rich Text</li>
-          <li>Tool Tip</li>
-          <li>Page Author</li>
-          <li>Page Date</li>
-          <li>Page Description</li>
-          <li>Page Tags</li>
-          <li>Page Title</li>
-        </ol>
-      </li>
-      <li>Details
-        <ol>
-          <li>Contact Details</li>
-          <li>Event Details</li>
-          <li>Location Details</li>
-          <li>News Details</li>
-          <li>Page Details</li>
-          <li>Generic Details</li>
-        </ol>
-      </li>
-      <li>Layout
-        <ol>
-          <li>Article</li>
-          <li>Aside</li>
-          <li>Breadcrumb</li>
-          <li>Columns</li>
-          <li>Content Block</li>
-          <li>Content Block Menu</li>
-          <li>Content Tabs</li>
-          <li>Footer</li>
-          <li>Header</li>
-          <li>Nav Bar</li>
-        </ol>
-      </li>
-      <li>Lists
-        <ol>
-          <li>Asset List</li>
-          <li>Contact List</li>
-          <li>Event List</li>
-          <li>Lang Nav</li>
-          <li>List</li>
-          <li>List Nav</li>
-          <li>Location List</li>
-          <li>News List</li>
-          <li>Page List</li>
-          <li>Search Results List</li>
-          <li>Tag List</li>
-          <li>Nav List</li>
-        </ol>
-      </li>
-      <li>Media
-        <ol>
-          <li>Audio</li>
-          <li>Image</li>
-          <li>Video</li>
-        </ol>
-      </li>
-      <li>Template
-        <ol>
-          <li>One Column Page</li>
-          <li>Three Column Page</li>
-          <li>Two Column Page</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
 
         
       </section>
@@ -737,52 +606,6 @@
       <footer class="page__meta">
         
         
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/tags/#design-language-system" class="page__taxonomy-item" rel="tag">design-language-system</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#dls" class="page__taxonomy-item" rel="tag">dls</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#docs" class="page__taxonomy-item" rel="tag">docs</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/categories/#manual" class="page__taxonomy-item" rel="tag">manual</a>
-    
-    </span>
-  </p>
 
 
         
@@ -796,22 +619,23 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Design+Language+System%20https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Component+Modeling%20https%3A%2F%2Faem.design%2Fmanifesto%2Fcomponents%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanifesto%2Fcomponents%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanual%2Fdls%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanifesto%2Fcomponents%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/manual/image-conventions/" class="pagination--pager" title="Image Conventions
+      <a href="/manifesto/content/" class="pagination--pager" title="Content Modeling
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/manifesto/tenants/" class="pagination--pager" title="Tenant Content
+">Next</a>
     
   </nav>
 
@@ -1043,8 +867,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/manual/dls/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/manual/080-design-language-system"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/manifesto/components/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/manifesto/070-components"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

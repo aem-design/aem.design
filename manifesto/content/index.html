@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-11-11T23:02:27+00:00">
+  <meta property="article:published_time" content="2020-11-16T00:48:32+00:00">
 
 
 
@@ -400,6 +400,12 @@
           
             <li><a href="/manifesto/content/" class="active">Content</a></li>
           
+            <li><a href="/manifesto/components/">Components</a></li>
+          
+            <li><a href="/manifesto/tenants/">Tenants</a></li>
+          
+            <li><a href="/manifesto/deployment/">Deployment</a></li>
+          
             <li><a href="/manifesto/technical/">Technical</a></li>
           
         </ul>
@@ -418,7 +424,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Content Modeling">
     <meta itemprop="description" content="Content Modeling has to be a first and foremost activity of any Feature/Capability planning">
-    <meta itemprop="datePublished" content="2020-11-11T23:02:27+00:00">
+    <meta itemprop="datePublished" content="2020-11-16T00:48:32+00:00">
     
 
     <div class="page__inner-wrap">
@@ -440,7 +446,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          17 minute read
+          8 minute read
         
       </span>
     
@@ -477,57 +483,12 @@
       <li><a href="#cloud-services" id="markdown-toc-cloud-services">Cloud Services</a></li>
     </ul>
   </li>
-  <li><a href="#multi-site-manager" id="markdown-toc-multi-site-manager">Multi Site Manager</a>    <ul>
-      <li><a href="#sites" id="markdown-toc-sites">Sites</a></li>
-      <li><a href="#languages" id="markdown-toc-languages"><strong>Languages</strong></a></li>
-      <li><a href="#blueprints" id="markdown-toc-blueprints">Blueprints</a>        <ul>
-          <li><a href="#blueprints-language-requirement" id="markdown-toc-blueprints-language-requirement">Blueprints Language Requirement</a></li>
-        </ul>
-      </li>
-      <li><a href="#design-importer" id="markdown-toc-design-importer">Design Importer</a></li>
-    </ul>
-  </li>
   <li><a href="#metadata-experience" id="markdown-toc-metadata-experience">Metadata Experience</a>    <ul>
       <li><a href="#tags-1" id="markdown-toc-tags-1">Tags</a></li>
       <li><a href="#page" id="markdown-toc-page">Page</a></li>
       <li><a href="#asset" id="markdown-toc-asset">Asset</a></li>
       <li><a href="#components" id="markdown-toc-components">Components</a></li>
       <li><a href="#designs" id="markdown-toc-designs">Designs</a></li>
-    </ul>
-  </li>
-  <li><a href="#components-1" id="markdown-toc-components-1">Components</a>    <ul>
-      <li><a href="#dialogs" id="markdown-toc-dialogs">Dialogs</a>        <ul>
-          <li><a href="#page-properties" id="markdown-toc-page-properties">Page Properties</a></li>
-        </ul>
-      </li>
-      <li><a href="#design-dialogs" id="markdown-toc-design-dialogs">Design Dialogs</a></li>
-      <li><a href="#translations" id="markdown-toc-translations">Translations</a>        <ul>
-          <li><a href="#language-copies" id="markdown-toc-language-copies">Language Copies</a></li>
-          <li><a href="#create-translation" id="markdown-toc-create-translation">Create Translation</a></li>
-          <li><a href="#translation-projects" id="markdown-toc-translation-projects">Translation Projects</a></li>
-          <li><a href="#custom-or-legacy" id="markdown-toc-custom-or-legacy">Custom or Legacy</a>            <ul>
-              <li><a href="#human-and-machine" id="markdown-toc-human-and-machine">Human and Machine</a></li>
-              <li><a href="#human-translation" id="markdown-toc-human-translation">Human Translation</a>                <ul>
-                  <li><a href="#side-by-side" id="markdown-toc-side-by-side">Side-By-Side</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#content-best-practices" id="markdown-toc-content-best-practices">Content Best Practices</a></li>
-    </ul>
-  </li>
-  <li><a href="#content-migration" id="markdown-toc-content-migration">Content Migration</a></li>
-  <li><a href="#content-import" id="markdown-toc-content-import">Content Import</a></li>
-  <li><a href="#content-and-seo" id="markdown-toc-content-and-seo">Content and SEO</a></li>
-  <li><a href="#deployment-practices" id="markdown-toc-deployment-practices">Deployment Practices</a>    <ul>
-      <li><a href="#package-deployment-and-replication" id="markdown-toc-package-deployment-and-replication">Package Deployment and Replication</a></li>
-      <li><a href="#deployment-cycle" id="markdown-toc-deployment-cycle">Deployment Cycle</a>        <ul>
-          <li><a href="#build-stage" id="markdown-toc-build-stage">Build Stage</a></li>
-          <li><a href="#deploy-stage" id="markdown-toc-deploy-stage">Deploy Stage</a></li>
-        </ul>
-      </li>
     </ul>
   </li>
 </ul>
@@ -566,7 +527,7 @@
   <li><strong>Workflows</strong> - workflow designer</li>
 </ul>
 
-<p>These content types are aimed at managed by Specific group of Authors that have a deeper knowledge into the content and the integration nature of these types.</p>
+<p>These content types are aimed at managed by specific group of Authors that have a deeper knowledge into the content and the integration nature of these types.</p>
 
 <h3 id="content-experiences">Content Experiences</h3>
 
@@ -675,47 +636,6 @@
 
 <p><img src="/assets/images/manifesto/content-cloudconfig-list.png" alt="image alt text" /></p>
 
-<h2 id="multi-site-manager">Multi Site Manager</h2>
-
-<h3 id="sites">Sites</h3>
-
-<p>Sites is the primary containers of content, they allow creation of content structures so that they can be present to End-users and reused in other pages. All content created under sites is targeted to be consumed by end-user. Sites enable ability to create replicate content as reusable structure and facilitate Multi-lingual content structures that are managed through translation services or through manual language translations.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-list.png" alt="image alt text" /></p>
-
-<h3 id="languages"><strong>Languages</strong></h3>
-
-<p>AEM is a Multi-Language aware CMS and has numerous tools that support Localisation of Language content for Sites. OOTB these tools are dependent on Site content to have particular structure for proper operation and as a best practice principles. Primary tools that are dependant on Locale are Blueprints and Language-Copy functions. Guiding principle of creating sites is that Root Level of the site has siblings of all the available Languages for the content of that site. Content is authored in one of the languages and Language-Copy tool is used to copy and initiate translation of that page into target Languages.</p>
-
-<p><img src="/assets/images/manifesto/content-localization-list.png" alt="image alt text" /></p>
-
-<h3 id="blueprints">Blueprints</h3>
-
-<p>Ability to create sites from existing Site Structure Templates and provide an ability to link and keep in sync the target site content. In addition to this they provide an ability to chose Languages and Starting content that should be copied from the Template reference.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-blueprint.png" alt="image alt text" /></p>
-
-<h4 id="blueprints-language-requirement">Blueprints Language Requirement</h4>
-
-<p>Unlike Language-Copy tools, Blueprints require to have a site structure to have a language subfolder to be one level under the site root. The Name on of the Language folder needs to be in the format of <code class="language-plaintext highlighter-rouge">&lt;language-code&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;language-code&gt;_&lt;country-code&gt;</code>, for example <code class="language-plaintext highlighter-rouge">en, en_US, en_us, en_GB, en_gb</code></p>
-
-<ul>
-  <li>The supported language code is lower-case, two-letter code as defined by ISO-639-1</li>
-  <li>The supported country code is lower-case or upper-case, two-letter code as defined by ISO 3166</li>
-</ul>
-
-<p><img src="/assets/images/manifesto/content-sites-blueprint-languages.png" alt="image alt text" /></p>
-
-<p>Not having this pattern configuration on your site will not allow Blueprints to detect languages of your site.</p>
-
-<h3 id="design-importer">Design Importer</h3>
-
-<p>When using Landing pages in AEM a Design Importer mechanism can be used to import a design into the current page. Design Importer mechanism provides a structured way external designers can create Designs for landing pages that then can be imported into AEM.</p>
-
-<p><img src="/assets/images/manifesto/content-design-importer.png" alt="image alt text" /></p>
-
-<p>More Info :<a href="https://docs.adobe.com/docs/en/aem/6-3/author/personalization/campaigns/landingpages.html"> AEM Landing Pages</a> and<a href="http://docs.adobe.com/docs/en/aem/6-3/administer/personalization/campaigns/extending-the-design-importer-for-landingpages.html"> Extending and Configuring the Design Importer for Landing Pages</a></p>
-
 <h2 id="metadata-experience">Metadata Experience</h2>
 
 <p>Structured metadata management with tags enables usage of Tags in all parts of Authoring experience. When tags are created they can be used to tag all Assets and can be used to search for those Assets and Pages when required.</p>
@@ -748,160 +668,6 @@
 
 <p>Designs provide an ability to segregate Designs from Content. Component Design content is persisted into Design content structure for each site. Site Design folder is created initially and contains all of the Static Content that is used to present a site to End-User. In addition to this Site Design contains configuration of the Authoring interface. Such as availability of Component on Templates and Component default values.</p>
 
-<h2 id="components-1">Components</h2>
-
-<h3 id="dialogs">Dialogs</h3>
-
-<p>Primary method of input of content into components is by interacting with component dialogs. Component dialogs are designed to prompt user for content.</p>
-
-<h4 id="page-properties">Page Properties</h4>
-
-<p><img src="/assets/images/manifesto/content-sites-page-dialog-metadata.png" alt="image alt text" /></p>
-
-<h3 id="design-dialogs">Design Dialogs</h3>
-
-<p>For component to show in the Side Kick on a particular template they are first required to be added to the design of the template. This is done through design mode and required components are selected to be available to authors. Special Authoring privileges can be assigned to prevent unauthorised modification of Designs.</p>
-
-<p>Design dialogs allow you to specify default values for components when they are dropped on a page. This helps to provide default options that help authors.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-page-dialog-design.png" alt="image alt text" /></p>
-
-<h3 id="translations">Translations</h3>
-
-<p>AEM supports both Manual and Automated translation of content. For checking and initiating translation a Language Copy function is used with a workflow if automation is required.</p>
-
-<h4 id="language-copies">Language Copies</h4>
-
-<p>Language copies allow copying a particular version of a page from one Language into Another and provide assistance of starting a workflow for translation. As well as provide visual list of existing copies of selected page in different languages.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-languagecopy.png" alt="image alt text" /></p>
-
-<h4 id="create-translation">Create Translation</h4>
-
-<p>When creating a translation of a page a workflow can be triggered to either notify another person to conduct a Manual translation or have an external Automated script to perform initial translation.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-translations-create.png" alt="image alt text" /></p>
-
-<h4 id="translation-projects">Translation Projects</h4>
-
-<p>New functionality in AEM enables better status reporting on translation progress for all pages. A translation project is created to which page all required translations are assigned, progress of all workflows per pages is reflected on dashboard.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-translations-project.png" alt="image alt text" /></p>
-
-<h4 id="custom-or-legacy">Custom or Legacy</h4>
-
-<h5 id="human-and-machine">Human and Machine</h5>
-
-<p>AEM supports human and machine translation workflows. To automate translation workflows, you integrate translation service providers with AEM and create projects for translating content into multiple languages. These project provide you with a dashboard that allow you to keep track of the progress of translation.</p>
-
-<ul>
-  <li>
-    <p>Human translation: Content is sent to your translation provider and translated by professional translators. When complete, the translated content is returned and imported into AEM. When your translation provider is integrated with AEM, content is automatically sent between AEM and the translation provider.</p>
-  </li>
-  <li>
-    <p>Machine translation: The machine translation service immediately translates your content.</p>
-  </li>
-</ul>
-
-<h5 id="human-translation">Human Translation</h5>
-
-<h6 id="side-by-side">Side-By-Side</h6>
-
-<p>When AEM is exposed to Translation providers for Human Translation it Side-By-Side view of pages enables much better context sensitive translation, which increases quality of translation.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-page-side-by-side.png" alt="image alt text" /></p>
-
-<h3 id="content-best-practices">Content Best Practices</h3>
-
-<p>References</p>
-
-<ul>
-  <li><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/msm-best-practices.html">MSM Best Practices</a></li>
-  <li><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/tc-bp.html">Translation Best Practices</a></li>
-</ul>
-
-<h2 id="content-migration">Content Migration</h2>
-
-<p><em>Content Migration all of the processes that take place outside of AEM to create a Content Package that is subsequently imported into AEM.</em></p>
-
-<p>Migration of content into AEM can be done in many ways. Some methods require more effort than other. The best effort is spent creating your site and not put too much development overhead on developing repeatable code for migration purpose as its a one off exercise. Simplest of all methods is a Content Transformation flow of Source Data to JCR Content hierarchy. Process of creating a transformation of Source Data to JCR Content hierarchy is straightforward, auditable and can be rolled back easily, as you are effectively installing content using normal content package. This process allows repeatability of whole process without very low overhead. Once the pattern for one content type is developed then all content can be migrated same way with little effort.</p>
-
-<p>The overall data migration process is as follows:</p>
-
-<p><img src="/assets/images/manifesto/content-migration.png" alt="image alt text" /></p>
-
-<p>This process can be adjusted to suit your needs. The fundamental is to keep this simple and iterate through the process as quick as possible.</p>
-
-<h2 id="content-import">Content Import</h2>
-
-<p><em>Content Import all of the processes that take place to create a Content Package that is subsequently imported into AEM.</em></p>
-
-<p>It’s important that all content that is imported into AEM can be rolled-back easily or can be overridden by authors if needed. Exceptions to this can fall into Commerce implementation and Cloud Asset services which become source of truth for content that is being imported. Fundamentally if content is imported from Origin System there should be a way to update and rollback by author and the importing process. When building AEM Hosted Service approach session blocking for content updates on large scale would create content consistence complications. Using same approach on dedicated services would create a redundant licensing. If these are not of concern then the Dedicated Server that imports and replicates content can be used ensuring that component that is imported does not replace any overridden content, this can be effectively done by writing components that update attributes as if it’s a language translations. This means that attribute value that has not been translated to EN does not have an override specified by the user. For example if data imported it written to a field “text” for a particular component then the if a user has decided to override new attribute would be created “text.en” this will enable the processes that update the content to update from source system without worrying about overriding content in AEM.</p>
-
-<h2 id="content-and-seo">Content and SEO</h2>
-
-<p>How does content created during Authoring is Structured and Surfaced to ensure its SEO friendly? These day and age Google does a reasonable job of ensuring and filtering content from a page. But as always there are lots of ways this can be viewed. Measuring SEO has always been an interesting concept and concentrating on providing proper structured content will always work better now and in long term.</p>
-
-<p>Primary guideline is to ensure that the meaning a URL conveys is represented in its content. This means that URL should as a whole be a summary of page content, for example one should expect that URL file name and title of the page should be similar. And for segmented content the date of article and its categorisation should also be derived from metadata visible on the page.</p>
-
-<h2 id="deployment-practices">Deployment Practices</h2>
-
-<p>To be able to support CI/CD practice automation should used to minimise deployment overheads and avoid conflicts. When segregating infrastructure and security, production artifacts and environments should be replicated to other environments so that its configurations can be tested throughout normal development cycles. Practices must be continually refactored to be simple and transparent so that they can be used without manual intervention. It’s important to utilise same practices across all environments without exceptions, this ensures continuous improvement on practices as they are used by wider group of users.</p>
-
-<p><img src="/assets/images/manifesto/content-deployment-practice.png" alt="image alt text" /></p>
-
-<p>The whole environment should be able to be replicated in different configurations in a local environment. Using Docker and Ansible for streamlining the deployment architecture and inventory enable consistency of environment and enables persistence of operations functions.</p>
-
-<p>General practice is to only allow System Console and Package Installation in Local Dev environment. This practice ensures that all efforts to update a node a persisted into Code and do not create conflict of the Node configuration state.</p>
-
-<h3 id="package-deployment-and-replication">Package Deployment and Replication</h3>
-
-<p>Packages should be used to deploy system content and for bulk content operations (backup, archive, migration etc). Replication should be used to replicate content by authors during normal operations.</p>
-
-<p>It’s important that package can be installed and uninstalled from a node. This is to ensure that update by the package can be rolled back in cases where testing has failed. Replicating packages from one node to another removes ability to Uninstall the package from the target node. Additionally replication of a package does not allow for additional processes to be carried out on the node during a deployment process.</p>
-
-<h3 id="deployment-cycle">Deployment Cycle</h3>
-
-<p>Deployment cycle is deployment steps that run automatically triggered by Code updates by developers or triggered manually or automatically by other jobs. The cycle is divided into Build and Deploy Stages. Build stage is used to respond to Code updates and carry out subsequent build processes and artifact storage. Deploy Stage is used for Deploying a particular versioned artifact to an environment.</p>
-
-<h4 id="build-stage">Build Stage</h4>
-
-<ol>
-  <li>
-    <p>Commit - Developer commits code to Repository</p>
-  </li>
-  <li>
-    <p>Pull - Jenkins monitors updates and pulls code into workspace</p>
-  </li>
-  <li>
-    <p>Build - Jenkins build the code using a Docker Container</p>
-  </li>
-  <li>
-    <p>Store - on successful build artifact is stored in Nexus</p>
-  </li>
-</ol>
-
-<h4 id="deploy-stage">Deploy Stage</h4>
-
-<ol>
-  <li>
-    <p>Retrieve - Jenkins deploy job retrieves a package from Nexus into workspace</p>
-  </li>
-  <li>
-    <p>Deploy - Jenkins deploys package to target Node</p>
-  </li>
-  <li>
-    <p>Test - Jenkins runs Testing job for the target Node</p>
-  </li>
-  <li>
-    <p>Push - Push project version update to repo</p>
-  </li>
-  <li>
-    <p>Cache - Optional, if docker containers are updated then containers is cached in shared docker registry</p>
-  </li>
-</ol>
-
-<p><img src="/assets/images/manifesto/content-deployment-cycle.png" alt="image alt text" /></p>
 
         
       </section>
@@ -934,7 +700,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-11T23:02:27+00:00">November 11, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-16T00:48:32+00:00">November 16, 2020</time></p>
 
 
       </footer>
@@ -959,7 +725,7 @@
 ">Previous</a>
     
     
-      <a href="/manifesto/technical/" class="pagination--pager" title="Technical Standards
+      <a href="/manifesto/components/" class="pagination--pager" title="Component Modeling
 ">Next</a>
     
   </nav>
