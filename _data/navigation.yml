@@ -60,6 +60,12 @@ manifesto:
         url: /manifesto/project/
       - title: "Content"
         url: /manifesto/content/
+      - title: "Components"
+        url: /manifesto/components/
+      - title: "Tenants"
+        url: /manifesto/tenants/
+      - title: "Deployment"
+        url: /manifesto/deployment/
       - title: "Technical"
         url: /manifesto/technical/
 
