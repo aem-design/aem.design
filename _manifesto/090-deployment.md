@@ -17,7 +17,7 @@ To be able to support CI/CD practice automation should used to minimise deployme
 
 The whole environment should be able to be replicated in different configurations in a local environment. Using Docker and Ansible for streamlining the deployment architecture and inventory enable consistency of environment and enables persistence of operations functions.
 
-General practice is to only allow System Console and Package Installation in Local Dev environment. This practice ensures that all efforts to update a node a persisted into Code and do not create conflict of the Node configuration state.
+General practice is to only allow System Console and Package Installation in Local Dev environment. This practice ensures that all efforts to update a node persisted into Code and do not create conflict of the Node configuration state.
 
 ## Package Deployment and Replication
 
