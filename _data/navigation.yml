@@ -2,6 +2,9 @@
 main:
   - title: "GitHub"
     url: https://github.com/aem-design
+  - title: "Chat"
+    target: _blank
+    url: https://gitter.im/aem-design/Lobby
   - title: "Quick-Start Guide"
     url: /quick-start-guide/
   - title: "Manifesto"
