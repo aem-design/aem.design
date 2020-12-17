@@ -7,6 +7,8 @@ AEM.Design blog
 [![github last commit](https://img.shields.io/github/last-commit/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
 [![github repo size](https://img.shields.io/github/repo-size/aem-design/aem.design)](https://github.com/aem-design/aem.design) 
 ![statuscake](https://app.statuscake.com/button/index.php?Track=sKW7chwd8h&Days=7&Design=3 "statuscake")
+[![Visit AEM.Design](https://img.shields.io/badge/visit-aem.design-brightgreen)](https://aem.design/)
+[![Gitter](https://img.shields.io/gitter/room/aem-design/Lobby)](https://gitter.im/aem-design/Lobby)
 
 
 ## Updating this Repo
