@@ -11,6 +11,12 @@ header:
   caption:
 excerpt: 'Create consistency in your AEM implementations by providing your team with AEM language they can use to describe things they want to achieve.'
 feature_row:
+  - image_path: /assets/images/cards/gitter.png
+    alt: "Gitter"
+    title: "Gitter"
+    excerpt: "Chat with the team"
+    url: "https://gitter.im/aem-design/Lobby"
+    btn_label: "Chat"
   - image_path: /assets/images/cards/github-mark.png
     alt: "github"
     title: "GitHub"
