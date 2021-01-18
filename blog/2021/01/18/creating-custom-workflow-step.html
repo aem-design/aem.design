@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Component Modeling - AEM.Design</title>
-<meta name="description" content="Author focused component modeling will crucial process of establishing comprehensive language that will accelerate your delivery">
+<!-- begin _includes/seo.html --><title>Creating Custom Workflow Step - AEM.Design</title>
+<meta name="description" content="When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.">
 
 
   <meta name="author" content="Max Barrass">
@@ -16,11 +16,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Component Modeling">
-<meta property="og:url" content="https://aem.design/manifesto/components/">
+<meta property="og:title" content="Creating Custom Workflow Step">
+<meta property="og:url" content="https://aem.design/blog/2021/01/18/creating-custom-workflow-step">
 
 
-  <meta property="og:description" content="Author focused component modeling will crucial process of establishing comprehensive language that will accelerate your delivery">
+  <meta property="og:description" content="When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.">
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-  <meta property="article:published_time" content="2021-01-18T16:52:29+00:00">
+  <meta property="article:published_time" content="2021-01-18T00:37:00+00:00">
 
 
 
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/manifesto/components/">
+<link rel="canonical" href="https://aem.design/blog/2021/01/18/creating-custom-workflow-step">
 
 
 
@@ -367,72 +367,20 @@
 
   
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle Menu</label>
-  <ul class="nav__items">
-    
-      <li>
-        
-          <a href="/manifesto/"><span class="nav__sub-title">Manifesto</span></a>
-        
-
-        
-        <ul>
-          
-            <li><a href="/manifesto/introduction/">Introduction</a></li>
-          
-            <li><a href="/manifesto/principles/">Principles</a></li>
-          
-            <li><a href="/manifesto/capabilities/">Capabilities</a></li>
-          
-            <li><a href="/manifesto/delivery/">Delivery</a></li>
-          
-            <li><a href="/manifesto/project/">Project</a></li>
-          
-            <li><a href="/manifesto/content/">Content</a></li>
-          
-            <li><a href="/manifesto/components/" class="active">Components</a></li>
-          
-            <li><a href="/manifesto/tenants/">Tenants</a></li>
-          
-            <li><a href="/manifesto/deployment/">Deployment</a></li>
-          
-            <li><a href="/manifesto/technical/">Technical</a></li>
-          
-        </ul>
-        
-      </li>
-    
-  </ul>
-</nav>
-
-    
-  
   </div>
 
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Component Modeling">
-    <meta itemprop="description" content="Author focused component modeling will crucial process of establishing comprehensive language that will accelerate your delivery">
-    <meta itemprop="datePublished" content="2021-01-18T16:52:29+00:00">
+    <meta itemprop="headline" content="Creating Custom Workflow Step">
+    <meta itemprop="description" content="When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.You will first encounter this when you don’t see your service appear in the process list on the dialog.And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why.You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.">
+    <meta itemprop="datePublished" content="2021-01-18T00:37:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Component Modeling
+          <h1 id="page-title" class="page__title" itemprop="headline">Creating Custom Workflow Step
 </h1>
           
 
@@ -448,7 +396,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
@@ -460,125 +408,39 @@
 
       <section class="page__content" itemprop="text">
         
-        <div class="sticky">
-    <aside class="sidebar__right">
-<nav class="toc">
-      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-<ul class="toc__menu" id="markdown-toc">
-  <li><a href="#dialogs" id="markdown-toc-dialogs">Dialogs</a>    <ul>
-      <li><a href="#page-properties" id="markdown-toc-page-properties">Page Properties</a></li>
-      <li><a href="#design-dialogs" id="markdown-toc-design-dialogs">Design Dialogs</a></li>
-    </ul>
-  </li>
-  <li><a href="#supporting-experiences" id="markdown-toc-supporting-experiences">Supporting Experiences</a>    <ul>
-      <li><a href="#translations" id="markdown-toc-translations">Translations</a>        <ul>
-          <li><a href="#language-copies" id="markdown-toc-language-copies">Language Copies</a></li>
-          <li><a href="#create-translation" id="markdown-toc-create-translation">Create Translation</a></li>
-          <li><a href="#translation-projects" id="markdown-toc-translation-projects">Translation Projects</a></li>
-          <li><a href="#custom-or-legacy" id="markdown-toc-custom-or-legacy">Custom or Legacy</a>            <ul>
-              <li><a href="#human-and-machine" id="markdown-toc-human-and-machine">Human and Machine</a></li>
-              <li><a href="#human-translation" id="markdown-toc-human-translation">Human Translation</a>                <ul>
-                  <li><a href="#side-by-side" id="markdown-toc-side-by-side">Side-By-Side</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#content-best-practices" id="markdown-toc-content-best-practices">Content Best Practices</a></li>
-    </ul>
-  </li>
-</ul>
+        <p>When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
+You will first encounter this when you don’t see your service appear in the process list on the dialog.
+And once you verify the data source that feeds that dropdown at <a href="http://localhost:4502/libs/cq/workflow/content/console/process.json">http://localhost:4502/libs/cq/workflow/content/console/process.json</a> you will wonder why.
+You may also see errors like this <code class="language-plaintext highlighter-rouge">Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label}</code> that could just tell you your class is missing property <code class="language-plaintext highlighter-rouge">process.label</code>.</p>
 
-    </nav>
-</aside>
-</div>
+<p>Now that you know, you add this property to your class and your class appear in the list, here is an example of how to add it:</p>
 
-<p>Planning and designing your functionality around Authoring component will ensure that you are not stuck in the tech debt remediation spiral that would lead to replatforming. Chances are you are replatfrom from another technical platform and change of perspective need to happen to ensure you can leverage AEM capabilities.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span><span class="o">(</span>
+    <span class="n">immediate</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="n">service</span> <span class="o">=</span> <span class="nc">WorkflowProcess</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+    <span class="n">property</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"process.label=Content Fragment Page Generator"</span> <span class="o">}</span>
+    <span class="o">)</span>
+</code></pre></div></div>
 
-<p>In AEM components should be understood from followgin perspectives:</p>
+<p>Also while debugging this, you may find some other errors polluting your docker logs.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The activate method has thrown an exception (java.lang.IllegalStateException: org.apache.sling.api.resource.LoginException: Cannot derive user name for bundle com.adobe.acs.acs-aem-commons-bundle [553] and sub service workflowpackagemanager-service
+</code></pre></div></div>
+
+<p>To fix this, all you need to do is add missing service mapping mentioned in the message.
+You should be able to replicate this by restarting your missing component at eg <a href="http://localhost:4502/system/console/components/design.aem.workflow.process.ContentFragmentPageGenerator">http://localhost:4502/system/console/components/design.aem.workflow.process.ContentFragmentPageGenerator</a>.
+In example above missing use name is <code class="language-plaintext highlighter-rouge">workflowpackagemanager-service</code> and bundle is <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle</code>.
+To add this missing entry do this:</p>
 
 <ul>
-  <li>Authored Content - content that is input into component using component Dialog, default content added for a component in a template to enable default state as component is placed on a page, and component static values that ensure component operation without Authors input.</li>
-  <li>Component Experience - how components content is used to create desired experience on pages and how component content is used in other components</li>
-  <li>Component Data - how component data is contributing to overal data footprint of CMS, this follows <a href="/archive/davids-model#rule-1-data-first-structure-later-maybe">Rule #1: Data First, Structure Later. Maybe.</a></li>
-  <li>Supporting Experiences</li>
+  <li>open <a href="http://localhost:4502/system/console/configMgr/">http://localhost:4502/system/console/configMgr/</a></li>
+  <li>search for <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle</code> look for mapping in <code class="language-plaintext highlighter-rouge">Apache Sling Service User Mapper Service Amendment</code></li>
+  <li>add or update blank entry with <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle:workflowpackagemanager-service=workflow-process-service</code></li>
 </ul>
 
-<h2 id="dialogs">Dialogs</h2>
+<p>Hopefully, after this, your custom workflow step will work, if you are stuck, look at some examples in <a href="https://github.com/aem-design/aemdesign-aem-core/tree/develop/aemdesign-aem-services/src/main/java/design/aem/workflow/process">aemdesign-aem-services/../workflow/process</a>.</p>
 
-<p>Primary method of input of content into components is by interacting with component dialogs. Component dialogs are designed to prompt user for content.</p>
-
-<h4 id="page-properties">Page Properties</h4>
-
-<p><img src="/assets/images/manifesto/content-sites-page-dialog-metadata.png" alt="image alt text" /></p>
-
-<h3 id="design-dialogs">Design Dialogs</h3>
-
-<p>For component to show in the Side Kick on a particular template they are first required to be added to the design of the template. This is done through design mode and required components are selected to be available to authors. Special Authoring privileges can be assigned to prevent unauthorised modification of Designs.</p>
-
-<p>Design dialogs allow you to specify default values for components when they are dropped on a page. This helps to provide default options that help authors.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-page-dialog-design.png" alt="image alt text" /></p>
-
-<h2 id="supporting-experiences">Supporting Experiences</h2>
-
-<p>Number of component supporting experiences provide patterns that are key to leveraging AEM capabilities and makeing authoring experience content driven.</p>
-
-<h3 id="translations">Translations</h3>
-
-<p>AEM supports both Manual and Automated translation of content. For checking and initiating translation a Language Copy function is used with a workflow if automation is required.</p>
-
-<h4 id="language-copies">Language Copies</h4>
-
-<p>Language copies allow copying a particular version of a page from one Language into Another and provide assistance of starting a workflow for translation. As well as provide visual list of existing copies of selected page in different languages.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-languagecopy.png" alt="image alt text" /></p>
-
-<h4 id="create-translation">Create Translation</h4>
-
-<p>When creating a translation of a page a workflow can be triggered to either notify another person to conduct a Manual translation or have an external Automated script to perform initial translation.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-translations-create.png" alt="image alt text" /></p>
-
-<h4 id="translation-projects">Translation Projects</h4>
-
-<p>New functionality in AEM enables better status reporting on translation progress for all pages. A translation project is created to which page all required translations are assigned, progress of all workflows per pages is reflected on dashboard.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-translations-project.png" alt="image alt text" /></p>
-
-<h4 id="custom-or-legacy">Custom or Legacy</h4>
-
-<h5 id="human-and-machine">Human and Machine</h5>
-
-<p>AEM supports human and machine translation workflows. To automate translation workflows, you integrate translation service providers with AEM and create projects for translating content into multiple languages. These project provide you with a dashboard that allow you to keep track of the progress of translation.</p>
-
-<ul>
-  <li>
-    <p>Human translation: Content is sent to your translation provider and translated by professional translators. When complete, the translated content is returned and imported into AEM. When your translation provider is integrated with AEM, content is automatically sent between AEM and the translation provider.</p>
-  </li>
-  <li>
-    <p>Machine translation: The machine translation service immediately translates your content.</p>
-  </li>
-</ul>
-
-<h5 id="human-translation">Human Translation</h5>
-
-<h6 id="side-by-side">Side-By-Side</h6>
-
-<p>When AEM is exposed to Translation providers for Human Translation it Side-By-Side view of pages enables much better context sensitive translation, which increases quality of translation.</p>
-
-<p><img src="/assets/images/manifesto/content-sites-page-side-by-side.png" alt="image alt text" /></p>
-
-<h3 id="content-best-practices">Content Best Practices</h3>
-
-<p>References</p>
-
-<ul>
-  <li><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/msm-best-practices.html">MSM Best Practices</a></li>
-  <li><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/introduction/tc-bp.html">Translation Best Practices</a></li>
-</ul>
-
+<p>Don’t forget to tell your friends.</p>
 
         
       </section>
@@ -608,10 +470,60 @@
       <footer class="page__meta">
         
         
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bugs-maybe" class="page__taxonomy-item" rel="tag">bugs-maybe</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#structure" class="page__taxonomy-item" rel="tag">structure</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">blog</a>
+    
+    </span>
+  </p>
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-18T16:52:29+00:00">January 18, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-18T00:37:00+00:00">January 18, 2021</time></p>
 
 
       </footer>
@@ -621,23 +533,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Component+Modeling%20https%3A%2F%2Faem.design%2Fmanifesto%2Fcomponents%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Creating+Custom+Workflow+Step%20https%3A%2F%2Faem.design%2Fblog%2F2021%2F01%2F18%2Fcreating-custom-workflow-step" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fmanifesto%2Fcomponents%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2021%2F01%2F18%2Fcreating-custom-workflow-step" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fmanifesto%2Fcomponents%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2021%2F01%2F18%2Fcreating-custom-workflow-step" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/manifesto/content/" class="pagination--pager" title="Content Modeling
+      <a href="/blog/2020/07/24/using-docker-to-build-code" class="pagination--pager" title="Using Docker to Build Code
 ">Previous</a>
     
     
-      <a href="/manifesto/tenants/" class="pagination--pager" title="Tenant Content
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -651,46 +562,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2021/01/18/creating-custom-workflow-step" rel="permalink">Creating Custom Workflow Step
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
-You will first encounter this when...</p>
-  </article>
-</div>
-
         
           
 
@@ -811,6 +682,46 @@ You will first encounter this when...</p>
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -869,8 +780,8 @@ You will first encounter this when...</p>
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/manifesto/components/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/manifesto/070-components"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2021/01/18/creating-custom-workflow-step";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2021/01/18/creating-custom-workflow-step"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

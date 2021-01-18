@@ -286,4 +286,10 @@ var store = [{
         "tags": ["devops","aem","docker"],
         "url": "https://aem.design/blog/2020/07/24/using-docker-to-build-code",
         "teaser": null
+      },{
+        "title": "Creating Custom Workflow Step",
+        "excerpt":"When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at...","categories": ["blog"],
+        "tags": ["devops","aem","structure","bugs-maybe"],
+        "url": "https://aem.design/blog/2021/01/18/creating-custom-workflow-step",
+        "teaser": null
       }]
