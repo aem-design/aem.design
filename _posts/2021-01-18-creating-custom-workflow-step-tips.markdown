@@ -1,8 +1,8 @@
 ---
 layout: single
-permalink: /blog/2021/01/18/data-first-structure-later-maybe
-title:  "Data First, Structure Later, Maybe"
-date:   2021-01-18 23:37:00:00 +1100
+permalink: /blog/2021/01/18/creating-custom-workflow-step-tips
+title:  "Creating Custom Workflow Step Tips"
+date:   2021-01-18 00:37:00:00 +1100
 author: max@aem.design
 categories:
   - blog
@@ -13,21 +13,14 @@ tags:
   - bugs-maybe
 ---
 
-[Davids Model - 7 Rules](/archive/davids-model) is fundamental approach behind AEM.
-One of those fundamental rules is [Data First Structure Later, Maybe](/archive/davids-model#rule-1-data-first-structure-later-maybe).
-In short, this rule implies to take care when creating structures that are not obvious from outside.
-
-And as all rules go, sometimes structures are unavoidable and in some cases documenting these structures is not straight forward.
-To this accord, this will be a series of posts that will document some not so apparent structures that have slipped documentation.
-
 When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
-You will first encounter this when you don't see your service appear in the process list.
+You will first encounter this when you don't see your service appear in the process list on the dialog.
 And once you verify the data source that feeds that dropdown at [http://localhost:4502/libs/cq/workflow/content/console/process.json](http://localhost:4502/libs/cq/workflow/content/console/process.json) you will wonder why.
 You may also see errors like this `Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label}` that could just tell you your class is missing property `process.label`.
 
 Now that you know, you add this property to your class and your class appear in the list, here is an example of how to add it:
 
-```
+```java
 @Component(
     immediate = true,
     service = WorkflowProcess.class,
