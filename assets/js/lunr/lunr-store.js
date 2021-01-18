@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "License",
-        "excerpt":"AEM.Design knowledge is released under Apache 2.0 license.   Copyright (c) 2020 AEM.Design Team   You can read about Apache 2  ","categories": [],
+        "excerpt":"AEM.Design knowledge is released under Apache 2.0 license.   Copyright (c) 2021 AEM.Design Team   You can read about Apache 2  ","categories": [],
         "tags": [],
         "url": "https://aem.design/license/",
         "teaser": null
