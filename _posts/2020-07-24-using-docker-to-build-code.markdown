@@ -44,4 +44,4 @@ Let's break this command down.
 
 All you need to do now is to run this command in the directory where you have your code and start compiling like a boss.
 
-Don't forget to tell your fiends.
+Don't forget to tell your friends.
