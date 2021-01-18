@@ -1,7 +1,7 @@
 ---
 layout: single
-permalink: /blog/2021/01/18/creating-custom-workflow-step-tips
-title:  "Creating Custom Workflow Step Tips"
+permalink: /blog/2021/01/18/creating-custom-workflow-step
+title:  "Creating Custom Workflow Step"
 date:   2021-01-18 00:37:00:00 +1100
 author: max@aem.design
 categories:
