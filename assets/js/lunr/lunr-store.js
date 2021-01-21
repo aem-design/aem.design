@@ -292,4 +292,10 @@ var store = [{
         "tags": ["devops","aem","structure","bugs-maybe"],
         "url": "https://aem.design/blog/2021/01/18/creating-custom-workflow-step",
         "teaser": null
+      },{
+        "title": "Automation Testing For AEM Dialogs",
+        "excerpt":"Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda. Over the last few years, AEM Automation Testing for AEM Dialog has been getting more...","categories": ["blog"],
+        "tags": ["devops","aem","testing","automation-testing"],
+        "url": "https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs",
+        "teaser": null
       }]

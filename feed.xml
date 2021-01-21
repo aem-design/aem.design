@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-01-18T16:52:29+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Creating Custom Workflow Step</title><link href="https://aem.design/blog/2021/01/18/creating-custom-workflow-step" rel="alternate" type="text/html" title="Creating Custom Workflow Step" /><published>2021-01-18T00:37:00+00:00</published><updated>2021-01-18T00:37:00+00:00</updated><id>https://aem.design/blog/2021/01/18/creating-custom-workflow-step</id><content type="html" xml:base="https://aem.design/blog/2021/01/18/creating-custom-workflow-step">&lt;p&gt;When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-01-21T05:31:56+00:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Automation Testing For AEM Dialogs</title><link href="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="alternate" type="text/html" title="Automation Testing For AEM Dialogs" /><published>2021-01-21T00:37:00+00:00</published><updated>2021-01-21T00:37:00+00:00</updated><id>https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs</id><content type="html" xml:base="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs">&lt;p&gt;Automation testing is an absolute mandatory and covered in &lt;a href=&quot;/blog/2017/06/28/automation-testing&quot;&gt;Automation Testing and Human Reporting&lt;/a&gt; and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.&lt;/p&gt;
+
+&lt;p&gt;Over the last few years, AEM Automation Testing for AEM Dialog has been getting more focus, and I have been asked by many how to do this easily. The current approach leverages existing AEM Editor experience to view and load dialogs so that they can be tested. One of the improvements that have been asked can that be made faster so that actual pages do not require loading, so that spec execution speed improves.&lt;/p&gt;
+
+&lt;p&gt;AEM being a gem of capabilities has this covered, and with little effort, we can leverage this to really create powerful specs that test component dialogues as a user would use them. The key to this is understanding how AEM loads component dialogs and the data they represent. Fortunately this pattern very simple using sling.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First you need a path to a dialog (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/apps/aemdesign/components/details/generic-details/v1/generic-details/_cq_dialog.html&lt;/code&gt;) this path is a component that takes as a parameter as a path to the component dialog should show and update.&lt;/li&gt;
+  &lt;li&gt;Second you need a content path (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/content/aemdesign-showcase/au/en/component/details/generic-details/jcr:content/article/par/contentblock7/par/genericdetails&lt;/code&gt;) which dialog should update. This is simply any path that dialog will use for reading and wirting.&lt;/li&gt;
+  &lt;li&gt;Third you combine these into a url you can use for automation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:4512/mnt/override/apps/aemdesign/components/details/generic-details/v1/generic-details/_cq_dialog.html/content/aemdesign-showcase/au/en/component/details/generic-details/jcr:content/article/par/contentblock7/par/genericdetails&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And that’s it! Now you can write any tests around this URL. Taking this knowledge a spec can be updated to allow testing AEM Dialog with ease and without loading whole pages!&lt;/p&gt;
+
+&lt;p&gt;Here is a reference AEM component dialog spec that tests of the tabs that appear on the component have the right content appearing. This is done simply by taking a screenshot of the dialog’s page.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;specs.component.details.genericdetails&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;spock.lang.Stepwise&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;support.AuthorDialogSpec&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Stepwise&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GenericDetailsAuthorDialogSpec&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AuthorDialogSpec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;components/details&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathSite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mnt/override/apps/aemdesign&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;componentPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;generic-details/v1/generic-details/_cq_dialog&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pageExtensionSuffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/content/aemdesign-showcase/au/en/component/details/generic-details/jcr:content/article/par/contentblock7/par/genericdetails&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setupSpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;loginAsAdmin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cleanupSpec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;analyzeLog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Dialog of Component with Content&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;given:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Component dialog exist&quot;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;selector&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;coral-dialog&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;when:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I open dialog with content&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;go&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/${pathSite}/${pathPage}/${componentPath}${pageExtension}${pageExtensionSuffix}&quot;&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;then:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The component dialog should render&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;waitFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;and:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Dialog should be able to open&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;showDialogDirect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Dialog should be able to open&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;when:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;When I select Layout tab&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;selectDialogTab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Layout&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;waitFor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tabSelected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Layout&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Layout tab selected&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;then:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Then it should have the Custom Layout options selected and matching configuration options&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;designRefFull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;tab-layout&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;nl&quot;&gt;where:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;viewport&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getDialogViewPort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you run this spec you will get an excellent report that will help you determine if the dialog works as you expected it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/automation-testing/dialog-test/GenericDetailsAuthorDialog.png&quot; alt=&quot;Automation Testing Report - Generic Details&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see this pattern will allow you to test AEM Dialogs especially if you are into making customised controls, if you are stuck, look at some examples in &lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-support/blob/clean-up-compose-project/aemdesign-testing/src/test/groovy/specs/component/details/genericdetails/GenericDetailsAuthorDialogSpec.groovy&quot;&gt;GenericDetailsAuthorDialogSpec.groovy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Don’t forget to tell your friends.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="testing" /><category term="automation-testing" /><summary type="html">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.</summary></entry><entry><title type="html">Creating Custom Workflow Step</title><link href="https://aem.design/blog/2021/01/18/creating-custom-workflow-step" rel="alternate" type="text/html" title="Creating Custom Workflow Step" /><published>2021-01-18T00:37:00+00:00</published><updated>2021-01-18T00:37:00+00:00</updated><id>https://aem.design/blog/2021/01/18/creating-custom-workflow-step</id><content type="html" xml:base="https://aem.design/blog/2021/01/18/creating-custom-workflow-step">&lt;p&gt;When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
 You will first encounter this when you don’t see your service appear in the process list on the dialog.
 And once you verify the data source that feeds that dropdown at &lt;a href=&quot;http://localhost:4502/libs/cq/workflow/content/console/process.json&quot;&gt;http://localhost:4502/libs/cq/workflow/content/console/process.json&lt;/a&gt; you will wonder why.
 You may also see errors like this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label}&lt;/code&gt; that could just tell you your class is missing property &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;process.label&lt;/code&gt;.&lt;/p&gt;
@@ -1155,97 +1229,4 @@ aemdesign/aem:6.4.8.0
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core&quot;&gt;aemdesign-aem-core&lt;/a&gt; that contains all of the components code&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-support&quot;&gt;aemdesign-aem-support&lt;/a&gt; that contains all of the supporting content, front-end code and component showcase.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.</summary></entry><entry><title type="html">Docker Containers Everywhere</title><link href="https://aem.design/blog/2019/07/01/docker-containers-everywhere" rel="alternate" type="text/html" title="Docker Containers Everywhere" /><published>2019-07-01T23:37:00+00:00</published><updated>2019-07-01T23:37:00+00:00</updated><id>https://aem.design/blog/2019/07/01/docker-containers-everywhere</id><content type="html" xml:base="https://aem.design/blog/2019/07/01/docker-containers-everywhere">&lt;p&gt;Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
-But AEM will always be better with Docker. 
-AEM in docker allows you to run multiple instances of AEM at a drop of a hat. 
-No need to copy files around or look for Jar’s.&lt;/p&gt;
-
-&lt;p&gt;If you want to quickly start a local demo AEM 6.5 instance on port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4502&lt;/code&gt; with debug port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;30303&lt;/code&gt; all you have to do is run this command using &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; image&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Don’t forget to have your AEM License key handy you gona need it for the AEM license page, and&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Don’t forget the debug port you can use it in your IntelliJ Ultimate, you can read more about this here &lt;a href=&quot;https://www.jetbrains.com/help/idea/run-debug-configuration-jsr45-compatible-server.html&quot;&gt;Run/Debug Configuration: JSR45 Compatible Server&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then you decide that you want to compare latest AEM to AEM 6.4 with a tweak to port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4512&lt;/code&gt; and image tag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aemdesign/aem:6.4.0&lt;/code&gt; you are instantly in business&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4512&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30313&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.4.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then if you decide to run AEM 6.5 publish instance, same command with minor update to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AEM_RUNMODE&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publish&lt;/code&gt; using same &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; image and you have a clean publish starting up&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; publish &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4503&lt;/span&gt;:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p40404&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Wait there is more, if you like the sound and simplicity of AEM containers you gona love the &lt;a href=&quot;https://hub.docker.com/r/aemdesign/dispatcher&quot;&gt;aemdesign/dispatcher&lt;/a&gt; container!&lt;/p&gt;
-
-&lt;p&gt;Setting up Dispatcher is hard! 
-For one you have to know apache which is about 20 years old. 
-Then you need to know Dispatcher… which is also a tricky as it docs.. oh the docs.. you gona love trolling though them all to create your ultimate dispatcher config!&lt;/p&gt;
-
-&lt;p&gt;OR you run this to start your publish dispatcher pointing to your publish docker&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; publish-dispatcher &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_MODULES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/dispatcher/httpd/modules&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_SSL_SUBJ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/C=AU/ST=VIC/L=Melbourne/O=AEM.Design/CN=dispatcher&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apache&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_GROUP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apache&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_USERID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1100 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_RUN_GROUPID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1100 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_LOGLEVEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;debug&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;APACHE_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2.4&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;4.3.2&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_LOGLEVEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_CONFIG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dispatcher&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_PROPOGATESYNDPOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_SERVESTALEONERROR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_STATLEVEL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_CACHEAUTHORIZED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;DISPATCHER_SESSIONMANAGEMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;route &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; get 0.0.0.0 2&amp;gt;/dev/null | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/interface: / {print $2}'&lt;/span&gt; | xargs ifconfig  | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'inet '&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'127.0.0.1'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_PORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4503 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_TIMEOUT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;10000 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;RENDERER_RESOLVE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8433:8433 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/dispatcher
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Yes RENDERER_HOST does run an intimidating bash command to establish your local IP address&lt;/em&gt; 😎😻&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You don’t need to access dispatcher container files to check the logs as they are all being redirected to container log, like all good container should! 
-In JSON format native to all your log monitoring tool! 😎😻
-You can monitor logs with docker logs command&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs &lt;span class=&quot;nt&quot;&gt;-tf&lt;/span&gt; publish-dispatcher &lt;span class=&quot;nt&quot;&gt;--since&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2019-07-16
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This command will tail the error log from the container for you to see. 
-Change the parameter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;since&lt;/code&gt; to the date from wich you want to view the log from, log will get long, but that what log shipping is for 😎😻&lt;/p&gt;
-
-&lt;p&gt;Hope this will help you with your AEM Docker journey!&lt;/p&gt;
-
-&lt;p&gt;Have a look at our other handy docker containers at &lt;a href=&quot;https://hub.docker.com/u/aemdesign&quot;&gt;https://hub.docker.com/u/aemdesign&lt;/a&gt;&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="dispatcher" /><summary type="html">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances. But AEM will always be better with Docker. AEM in docker allows you to run multiple instances of AEM at a drop of a hat. No need to copy files around or look for Jar’s.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.</summary></entry></feed>
