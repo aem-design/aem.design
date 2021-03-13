@@ -378,8 +378,18 @@ defaults:
       sidebar:
         nav: "archive"
 
-
-
-# Collections
+# Collections all other sections to output
 collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+  manifesto:
+    output: true
+    permalink: /:collection/:path/
+  manual:
+    output: true
+    permalink: /:collection/:path/
+  archive:
+    output: true
+    permalink: /:collection/:path/
 
