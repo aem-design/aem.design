@@ -39,6 +39,8 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+    nonce                : #
+    href                 : #
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -48,46 +50,37 @@ comments:
 reCaptcha:
   siteKey                :
   secret                 :
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "master"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "docs/_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+  hide                   : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : google # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
+  search_engine_id       : 004447691990096211192:ourol5vhlpw # YOUR_SEARCH_ENGINE_ID
+  instant_search         : true # false (default), true
 
 # SEO Related
 google_site_verification : "nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA"
 bing_site_verification   :
-alexa_site_verification  :
 yandex_site_verification :
 naver_site_verification  :
 
 logo: "/assets/images/logo/aem-design2.png"
+
 head_scripts:
   - /assets/scripts/lightbox.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js
+
+head_styles:
+  - https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css
+  - /assets/styles/head.css
+  - /assets/styles/tiny-slider.css
 
 # Social Sharing
 twitter:
@@ -96,7 +89,9 @@ facebook:
   username               :
   app_id                 :
   publisher              :
+
 og_image                 : "/assets/images/logo/aem-design2.png" # Open Graph/Twitter default site image
+og_image_override        : true # add og_image to all poges
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -106,11 +101,11 @@ social:
 
 # Analytics
 analytics:
-  provider               : google-universal # false (default), "google", "google-universal", "custom"
+  provider               : google # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : UA-90746663-1
-    gtm_id               : GTM-MV4BGNX
     anonymize_ip         : # true, false (default)
+    gtm_id               : GTM-MV4BGNX
     gcse_id              : 004447691990096211192:ourol5vhlpw
 
 advertising:
@@ -257,6 +252,8 @@ plugins:
   - jemoji
   - jekyll-redirect-from
   - jekyll-include-cache
+  - jekyll-last-modified-at
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -267,6 +264,7 @@ whitelist:
   - jemoji
   - jekyll-redirect-from
   - jekyll-include-cache
+  - jekyll-last-modified-at
 
 
 # Archives
@@ -280,22 +278,22 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
