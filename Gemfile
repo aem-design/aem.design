@@ -15,7 +15,7 @@ gem "ffi", ">= 1.9.24"
 gem "i18n", ">= 1.8.2"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minimal-mistakes-jekyll", ">= 4.20.1"
+gem "minimal-mistakes-jekyll", ">= 4.22.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -31,4 +31,7 @@ group :jekyll_plugins do
    gem 'jekyll-sitemap'
    gem 'jekyll-paginate-v2'
    gem 'jekyll-include-cache'
+   gem 'jekyll-last-modified-at'
+   gem 'jekyll-algolia'
+   gem 'jekyll-archives'
 end
