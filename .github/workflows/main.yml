@@ -24,9 +24,9 @@ jobs:
           ruby-version: '2.x' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
       - name: build
         run: |
+          export LANG=en_US.UTF-8
           bundle install
           bundle exec jekyll build --future
-          bundle exec htmlproofer --check-html --internal-domains localhost:4000 --assume-extension --disable-external --url-ignore "/#.*/" _site
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
