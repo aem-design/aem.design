@@ -33,7 +33,7 @@ The following sections will highlight their key design decisions and their imple
 
 The aemdesign-deploy project is a **server automation** project using Ansible to deploy and configure services. The project also contains scripted operational tasks for maintaining the operating system and services..
 
-Before proceeding, this section contains content with assumed Ansible knowledge. Recommended starting points are ‘*[Intro to Playbook*s](http://docs.ansible.com/ansible/latest/playbooks_intro.html)’ (NOTE:  http://docs.ansible.com/ansible/latest/playbooks_intro.html) and *‘**[Intro to Inventorie*s](http://docs.ansible.com/ansible/latest/intro_inventory.html)*’* (NOTE:  http://docs.ansible.com/ansible/latest/intro_inventory.html) in the Ansible online documentation.
+Before proceeding, this section contains content with assumed Ansible knowledge. Recommended starting points are '*[Intro to Playbook*s](http://docs.ansible.com/ansible/latest/playbooks_intro.html)' (NOTE:  http://docs.ansible.com/ansible/latest/playbooks_intro.html) and *'**[Intro to Inventorie*s](http://docs.ansible.com/ansible/latest/intro_inventory.html)*'* (NOTE:  http://docs.ansible.com/ansible/latest/intro_inventory.html) in the Ansible online documentation.
 
 This project is implemented with the following features and their concepts are required to maintain the project:
 
@@ -58,7 +58,7 @@ The recommended operating system for the aemdesign-deploy project is either MacO
 | /                               | Playbooks for site, group and operations are located at the root of the project. This is discussed in detail in the Playbooks section. |
 | /inventory                      | The inventory defines servers (defined as a SSH host). The servers provide the automation scripts with machine targets to deploy and configure services. In the aemdesign-deploy project, servers are typically Red Hat Enterprise Linux servers with a Docker service and Docker containers are specified in a group using an alias for the target machine. The inventories are organised into environments in a group var (group_vars/[environment_name]/vars.yml) which specifies environment specific configurations. See for Testing Environments for inventory details. |
 | /roles                          | A role is a reusable unit of work that is composed of serial tasks. For example, a role can create a logical volume or start a web server in a Docker host. |
-| /group_vars                     | There are two categories of group vars; application and environment. Typically, application group vars are used to override the default variables defined within roles. The environment group vars are used to define environment specific variables by overriding the group variables. This is represented as a hierarchy within the inventories as groups with the ‘:children’ suffix. |
+| /group_vars                     | There are two categories of group vars; application and environment. Typically, application group vars are used to override the default variables defined within roles. The environment group vars are used to define environment specific variables by overriding the group variables. This is represented as a hierarchy within the inventories as groups with the ':children' suffix. |
 | /host_vars                      | These are variables for servers that form the site and they are shared across all environments. This means that automation scripts apply the same host vars in each environment which ensures all environments are similar to each other. |
 | /library                        | Custom modules developed for the project. Modules have been developed to orchestrate AEM and Docker. |
 
@@ -251,7 +251,7 @@ While the datacenter servers are running on VMWare virtualisation, the local dev
 |---------------------------------|---------------------------------------------|
 | Path                            | Content
 | /                               | Templates with build configuration for the machine image automation |
-| http/                           | Path to the configuration files for the HTTP server during Machine Image creation. The Anaconda Kickstart scripts configures RHEL7 in an non-interactive environment (the template file’s builder variable boot_command is used to execute the script). [Kickstart Syntax Reference](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-syntax.html) |
+| http/                           | Path to the configuration files for the HTTP server during Machine Image creation. The Anaconda Kickstart scripts configures RHEL7 in an non-interactive environment (the template file's builder variable boot_command is used to execute the script). [Kickstart Syntax Reference](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-kickstart-syntax.html) |
 | http/iso                        | Path to Red Hat Enterprise Linux 7 Full ISO for building the machine image |
 | scripts/                        | Shell scripts executed as provisioners during the build |
 | scripts/common                  | Scripts common to all machine image builds |
@@ -286,7 +286,7 @@ Where
 
 * **_variables_** overrides the "variables" section in the **_template_file_**
 
-The **_template_file_*** *build configuration files can be found in the project’s root path. The **_variables_** file overrides values defined in the **_template_file_**. This enables the customisation of images.
+The **_template_file_*** *build configuration files can be found in the project's root path. The **_variables_** file overrides values defined in the **_template_file_**. This enables the customisation of images.
 
 | Template File                   | Actions                                     |
 |---------------------------------|---------------------------------------------|
@@ -333,7 +333,7 @@ The **_template_file_*** *build configuration files can be found in the project�
 
     3.1  from "iso_url": "http://ftp.swin.edu.au/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso",
 
-    3.2. to "iso_url": “http/iso/your-iso-name.iso”
+    3.2. to "iso_url": "http/iso/your-iso-name.iso"
 
 4. Update the **_iso_checksum_*** *variables to match the ISO:
 

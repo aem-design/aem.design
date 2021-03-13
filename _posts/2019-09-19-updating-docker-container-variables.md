@@ -22,15 +22,15 @@ Updating docker config of an existing container can be a daunting task. Usually 
 
 As of current `19+` version of docker there isn't a way to do it via API, this mean that you need to manually change config of container in the docker engine running your container.
 
-Flow on effect is that when you change this docker config you will need to restart docker engine, which is fine when you have only one container running but if you have lots this is out of the question.   
+Flow on effect is that when you change this docker config you will need to restart docker engine, which is fine when you have only one container running but if you have lots this is out of the question.
 
-But lets say you have just started AEM instance not using the [AEM Bundle](/blog/2019/08/30/docker-aem-bundle) container, without mounting any volumes and you have spent last hour installing packages and doing thing to that container that you do not want to do again. And you got an urge to do some java code debugging on your new container and you just realised that you did not add the required debug JAVA_OPTS when you started the container:  
+But lets say you have just started AEM instance not using the [AEM Bundle](/blog/2019/08/30/docker-aem-bundle) container, without mounting any volumes and you have spent last hour installing packages and doing thing to that container that you do not want to do again. And you got an urge to do some java code debugging on your new container and you just realised that you did not add the required debug JAVA_OPTS when you started the container:
 
 ```bash
  -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n
 ```
 
-Starting from scratch will be good option by using the [AEM Bundle](/blog/2019/08/30/docker-aem-bundle) by all those changes you made will be lost. At this point in despair you forget what paths you updated and you decide to persevere with updating docker engine config. 
+Starting from scratch will be good option by using the [AEM Bundle](/blog/2019/08/30/docker-aem-bundle) by all those changes you made will be lost. At this point in despair you forget what paths you updated and you decide to persevere with updating docker engine config.
 
 You can follow these steps to update your existing container config with java options that will allow you to debug your AEM instance in a container:
 
@@ -58,13 +58,13 @@ In our case you will need to scroll until you find  `AEM_JVM_OPTS` attribute scr
  -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n
 ```
 
-Then press `ESC` key followed by `:qw` and press enter. 
+Then press `ESC` key followed by `:qw` and press enter.
 
-You now have your config tweak inserted and you can proceed. 
+You now have your config tweak inserted and you can proceed.
 
 3. Restart your docker
 
-In worst case you can just reboot, in best case you can restart the service or use restart option of your Docker Desktop Menu:   
+In worst case you can just reboot, in best case you can restart the service or use restart option of your Docker Desktop Menu:
 
 ![Docker Desktop Menu](/assets/images/docker/docker-desktop-menu.png)
 
@@ -82,4 +82,4 @@ docker inspect author
 docker start author
 ```
 
-This process can be used to update other settings as you wish. 
+This process can be used to update other settings as you wish.

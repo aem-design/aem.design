@@ -13,7 +13,7 @@ tags:
 
 The team has been busy do what they do best, creating something awesome!
 
-It's ready for release but it’s time to start a conversation around the project.
+It's ready for release but it's time to start a conversation around the project.
 
 We have compiled a presentation for our sanity so that we can keep track of what we want to achieve and what is interesting to you.
 

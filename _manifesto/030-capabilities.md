@@ -4,6 +4,10 @@ permalink: /manifesto/capabilities/
 excerpt: "AEM stands for Experience"
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
+categories:
+  - manifesto
+tags:
+  - guide
 redirect_from:
   - /manifesto/principles
 ---

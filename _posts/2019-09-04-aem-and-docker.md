@@ -21,29 +21,29 @@ header:
 
 By now you would have seen previous posts [Docker Containers Everywhere](/blog/2019/07/01/docker-containers-everywhere) and [Docker AEM Bundle](/blog/2019/08/30/docker-aem-bundle). You might have tried out those images, if you have not, I encourage you to try them out, you will like it.
 
-Now that you have tried those images out, one major question you may ask "is that for development only?". 
+Now that you have tried those images out, one major question you may ask "is that for development only?".
 
 You might even think/say "I thought AEM does not work in Docker"?!
 
 And the answer to both of those questions is no. You should be using Docker in production, if you are not you are missing out.
- 
-Docker is awesome, period. It once and for all creates a method for establishing consistency with pure simplicity. One of Docker best practices is to have one process per container, many great reasons why but not going to go into them, which is what AEM and mainly java does not play along with easily and we will return to this in a moment. 
+
+Docker is awesome, period. It once and for all creates a method for establishing consistency with pure simplicity. One of Docker best practices is to have one process per container, many great reasons why but not going to go into them, which is what AEM and mainly java does not play along with easily and we will return to this in a moment.
 
 As far as AEM is concerned the issues that you might experience running AEM in a container comes from underlying Java Forking. Googling this will give more technical details but at high level this means that Java main process creates new process that are not "children" on the main process.
 
-So AEM runs on Java and it forks. In AEM most obvious things that trigger this are workflows that execute external processes, external services that AEM hosts like image service and repository services that handle all of the content wiring and reading, sounds important right. So if we can solve this forking thing then the issue will go away.   
+So AEM runs on Java and it forks. In AEM most obvious things that trigger this are workflows that execute external processes, external services that AEM hosts like image service and repository services that handle all of the content wiring and reading, sounds important right. So if we can solve this forking thing then the issue will go away.
 
 This manifest a problem of running AEM in a container creates following situation:
 
-- you start a docker container    
-- docker container starts and binds to main java process 
+- you start a docker container
+- docker container starts and binds to main java process
     - any of its subsequent children processes are not managed by container
 - you try to stop the container docker will send a shutdown signal to container
     - that will pass that to the java process
         - that java process will then respect that signal and gracefully close things it controls
             - but will leave a bunch of processes orphaned 😞
-    - docker container becomes unresponsive/hangs  
-- you try to `docker kill` the container and all its internal orphaned processes 
+    - docker container becomes unresponsive/hangs
+- you try to `docker kill` the container and all its internal orphaned processes
     - one of which will be the repository so you will lose content 😱 no happy ending here
 
 Ok so yeah not so cool!
@@ -82,4 +82,3 @@ You can also use the `CMD ["/dispatcher/start.sh"]` as used in [dispatcher](http
 
 Hopefully if you were scared of using java in docker containers after using [tini](https://github.com/krallin/tini) your fears will wash away with tears of happiness 😂
 
- 

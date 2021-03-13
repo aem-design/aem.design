@@ -32,26 +32,26 @@ Adobes new offering it's a true testament to engineering and a huge demonstratio
 
 ***Well folk, it is!***
 
-Latest offering from Adobe demonstrates their commitment on Experiences and not only for End Users but also for Developers. 
+Latest offering from Adobe demonstrates their commitment on Experiences and not only for End Users but also for Developers.
 
 This new offering is the Kubernetes powered, container infused, sling application building behemoth, breathing CI/CD life into your projects with ease!
 
-You can find plenty post and materials about tech behind the platform, but this post is about the Experience! We want to see show off the new Cloud Manager experience. This post should provide you with inspiration to jump onto the CI/CD experience that Adobe have gifted upon us! 
+You can find plenty post and materials about tech behind the platform, but this post is about the Experience! We want to see show off the new Cloud Manager experience. This post should provide you with inspiration to jump onto the CI/CD experience that Adobe have gifted upon us!
 
 So, without any further ado let's jump straight to it.
 
 AEM SaaS Author Hand On
 ===
 
-To start playing with your Cloud Manager experience you will need to access it thought your Adobe Experience portal, this will be provided for you by Adobe but for now you can follow our blog to get the insight and prepare you to roll-out your first project. 
+To start playing with your Cloud Manager experience you will need to access it thought your Adobe Experience portal, this will be provided for you by Adobe but for now you can follow our blog to get the insight and prepare you to roll-out your first project.
 
-First off you need to login to Adobe Experience Platform, this will allow you not only to login into AEC using your Adobe account but also provides same access to all AEM instances in the Cloud Manager! Which is amazing and so on SSO trend of 2020! Login screen is similar to the all of the login screens Adobe has been slowly introducing in last few years. 
+First off you need to login to Adobe Experience Platform, this will allow you not only to login into AEC using your Adobe account but also provides same access to all AEM instances in the Cloud Manager! Which is amazing and so on SSO trend of 2020! Login screen is similar to the all of the login screens Adobe has been slowly introducing in last few years.
 
 ![Adobe SSO Login Page](/assets/images/adobe-aec/1-login.png)
 
-You can still use shared local admin accounts (you get one you share with Adobe) but it's not something you should do in AEC and at all, for many painful reasons. 
+You can still use shared local admin accounts (you get one you share with Adobe) but it's not something you should do in AEC and at all, for many painful reasons.
 
-Once you have logged in you will be redirected to the AEC dashboard.  
+Once you have logged in you will be redirected to the AEC dashboard.
 
 ![AEM Adobe Experience Cloud Dashboard](/assets/images/adobe-aec/2-adobe-experience-cloud-overview.png)
 
@@ -69,12 +69,12 @@ This console is your command centre for your environments and associated pipelin
 
 First thing you will notice is the large banner across the top, this is your production status panel, it will report to you how your Production pipeline is going.
 
-Just under that you will see two sections Environments and Pipelines. 
+Just under that you will see two sections Environments and Pipelines.
 
 Environments
 ---
 
-Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (```...```) revealing a simple menu with only but primary experiences you are looking for. Additionally, when you click the Details button in this section you will be taken to a details screen that will show you 
+Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (```...```) revealing a simple menu with only but primary experiences you are looking for. Additionally, when you click the Details button in this section you will be taken to a details screen that will show you
 
 ![AEC - Cloud Manager - Environments Details](/assets/images/adobe-aec/4-aec-program-console-environments-details.png)
 
@@ -84,7 +84,7 @@ Available Configuration is tied to your account and point allocated for environm
 Pipeline
 ---
 
-Pipeline section allow you to create, update and run pipelines and this is broken down into Production and Non-Production. Manage Git button shows you a dialog that points you to the Adobe Git repo you will need to use when committing code.  
+Pipeline section allow you to create, update and run pipelines and this is broken down into Production and Non-Production. Manage Git button shows you a dialog that points you to the Adobe Git repo you will need to use when committing code.
 
 Although environments will be your initial focus it will very quickly switch to the Pipelines which you will spend most of your time watching. 😍
 
@@ -143,12 +143,12 @@ In addition to this you get to see a CSV that shows you things that you need to 
 | design.aem:aemdesign-aem-common:2.0.618 | 0           | Node /apps/aemdesign/components/media/image/v2/image/cq:editConfig/cq:inplaceEditing/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.                                | Bug  | Major    |        | ConfigAndInstallShouldOnlyContainOsgiNodes | aem  |
 | design.aem:aemdesign-aem-common:2.0.618 | 0           | Node /apps/aemdesign/components/template/cloudconfig/googlemap/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.                                                      | Bug  | Major    |        | ConfigAndInstallShouldOnlyContainOsgiNodes | aem  |
 
-*PS. this is the complete list of issues that we got for first deploy of AEM.Design to Adobe SaaS offering.* 
+*PS. this is the complete list of issues that we got for first deploy of AEM.Design to Adobe SaaS offering.*
 
 Just looking at this the reported Severity seems to be very opinionated and super conservative. Having a readme file in your ```/apps/aemdesign/install``` folder does not make it a Major defect, but this it probably just splitting hairs at this point and removing that file is trivial.
 
 Errors such as ```/apps/aemdesign/components/template/cloudconfig/addthisconnect/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.``` seem to fail the blank ```config``` node name rule and yes this is Major once again.
- 
+
 These trivial issues will get some great solution in time as this is a great process to put in place for all AEM project from the start. Many AEM project will benefit from establishing initial baseline and would provide a clear for quality path.
 
 This step takes about 5min to run, this would depend on amount of code you throw at it.
@@ -156,8 +156,8 @@ This step takes about 5min to run, this would depend on amount of code you throw
 Build Images
 ---
 
-This phase is responsible for generating two brand new Docker images that has all of your new code embedded into it. First image will contain all of your project contents and second image will be a final merged version of your project with latest AEM base image. 
- 
+This phase is responsible for generating two brand new Docker images that has all of your new code embedded into it. First image will contain all of your project contents and second image will be a final merged version of your project with latest AEM base image.
+
 Essentially process builds a custom CRX-Quickstart with your features(converted packages) embedded into it from the start, this does mean that you will not be able to download or delete the packages using CRX/DE and with added benefit of separating these code package from actual content in your repository.
 
 ![AEM Saas CRX/DE Packages](/assets/images/adobe-aec/11-aem-saas-crxde-packages.png)
@@ -173,7 +173,7 @@ After this conversion and merger of AEM sling features, AEM image is started as 
 Deploy to Dev
 ---
 
-Deploy phase starts with downloading content packages that were isolated in previous phase. Followed by starting and waiting for Author instance, at which is tries to install downloaded packages into the instance and stop the instance on completion. 
+Deploy phase starts with downloading content packages that were isolated in previous phase. Followed by starting and waiting for Author instance, at which is tries to install downloaded packages into the instance and stop the instance on completion.
 
 After this next process start the author and runs a bunch of bash scripts, that enable features, nodestore, blobstore, logging, set admin password validate and link license key. After this AEM is started once again and once ready is stopped and Oak Indexes are regenerated.
 
@@ -184,21 +184,21 @@ As you can see this is straight forward pipeline that just works. Lets discuss t
 AEM SaaS Pipelines What's missing
 ===
 
-Well as this is hosted on AEM there will be a few CI/CD limitations. Limitations are good as they provide less distraction and an opportunity to improve. Here are the things that we find missing so far, they are not deal breakers but good to keep on the back of your mind. 
+Well as this is hosted on AEM there will be a few CI/CD limitations. Limitations are good as they provide less distraction and an opportunity to improve. Here are the things that we find missing so far, they are not deal breakers but good to keep on the back of your mind.
 
 Git Peer Review Workflow
 ---
 
-Adobe Git is only a URL to which you push your code, these days all development should revolve around Pull Request Approval process. Covering benefits of this is not required as they are covered in great depth in many articles. 
+Adobe Git is only a URL to which you push your code, these days all development should revolve around Pull Request Approval process. Covering benefits of this is not required as they are covered in great depth in many articles.
 
 To enable this process to happen on your projects you will need to use external Git repo and manage code reviews there before you publish this final code into Adobe Git.
 
-This is a small inconvenience and it's readily fixed seeing as all companies these days have a form of Git and in cases where that's not the case, GitHub, Bitbucket and Gitlab all support this process for free. Additionally, these tools have built in pipeline tools that will help you to push code to Adobe Git.   
+This is a small inconvenience and it's readily fixed seeing as all companies these days have a form of Git and in cases where that's not the case, GitHub, Bitbucket and Gitlab all support this process for free. Additionally, these tools have built in pipeline tools that will help you to push code to Adobe Git.
 
 Automated Functional testing
 ---
 
-Screenshot testing using Selenium or other testing tools is not in and you would need to cater for that yourselves. Most obvious reason for this as there is no one way of doing this and everyone does what they need for their situation.   
+Screenshot testing using Selenium or other testing tools is not in and you would need to cater for that yourselves. Most obvious reason for this as there is no one way of doing this and everyone does what they need for their situation.
 
 Additionally, current Deploy pipelines are fixed to a specific flow which you cannot change. This means that in cases where you need to do automated functional testing you would need to do this using external pipeline.
 
@@ -214,13 +214,13 @@ If you are using Git Lfs you going to need to revert to plain git as there is no
 No Felix Console
 ---
 
-There is no Felix Console, but there is a brand-new custom Developers Console that provides very limited tools that you might use.  
+There is no Felix Console, but there is a brand-new custom Developers Console that provides very limited tools that you might use.
 
-![AEM New Developer Console](/assets/images/adobe-aec/12-developer-console-status.png) 
+![AEM New Developer Console](/assets/images/adobe-aec/12-developer-console-status.png)
 
 Standard Felix console does have a lot of features and some can cause a few issues so it's no surprise it's not available and have been replaced with a tool that allows you download that for review.
 
-Here are some of the available screens, Status screen will be your main go-to console to download content of some frequently used Felix console. 
+Here are some of the available screens, Status screen will be your main go-to console to download content of some frequently used Felix console.
 
 {% include image-gallery.html folder="/assets/images/adobe-aec/developerconsole" %}
 

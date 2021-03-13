@@ -13,7 +13,7 @@ tags:
 
 Automation Testing is the validation of your DevOps operations.
 
-Without Automated Testing DevOps efforts can’t be verified. When writing automated pipelines some form of verification always takes place to verify service, api and general availability of targets before tasks are executed.
+Without Automated Testing DevOps efforts can't be verified. When writing automated pipelines some form of verification always takes place to verify service, api and general availability of targets before tasks are executed.
 
 However a more systemic and pragmatic approach is required for verifying if your System works as you expect post Deployment pipeline.
 

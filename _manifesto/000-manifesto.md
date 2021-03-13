@@ -8,9 +8,9 @@ comments: true
 redirect_from:
   - /quick-start-guide/
 categories:
-  - info
+  - manifesto
 tags:
-  - about
+  - guide
 sidebar:
   nav: ""
 ---

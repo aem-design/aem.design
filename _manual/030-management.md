@@ -10,7 +10,7 @@ categories:
   - manual
 tags:
   - managment
-  - convnetions
+  - conventions
 ---
 
 {% include toc_sticky.html %}
@@ -83,7 +83,7 @@ The final build triggers a Maven build from */tag/[BUILD_TAG] *where BUILD_TAG i
 
 #### aemdesign-aem deploy (*environment*)
 
-Jobs suffixed with ‘deploy’ updates the AEM application and configuration by pulling the latest AEM snapshot content packages from Nexus and installs them on AEM on a per *environment *basis. The following projects are installed (in order of installation):
+Jobs suffixed with 'deploy' updates the AEM application and configuration by pulling the latest AEM snapshot content packages from Nexus and installs them on AEM on a per *environment *basis. The following projects are installed (in order of installation):
 
 1. aemdesign-aem-common
 

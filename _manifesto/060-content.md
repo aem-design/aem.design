@@ -4,6 +4,10 @@ permalink: /manifesto/content/
 excerpt: "Content Modeling has to be a first and foremost activity of any Feature/Capability planning"
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
+categories:
+  - manifesto
+tags:
+  - guide
 redirect_from:
   - /manifesto/project/
 ---

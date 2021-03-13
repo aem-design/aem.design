@@ -119,7 +119,7 @@ Where possible initial component structure should be located in the v1 subfolder
 ```
 components
     layout
-        article ( sling:resourceSuperType → v1/article )
+        article ( sling:resourceSuperType -> v1/article )
             v1
                 <component structure>
 ```
@@ -129,7 +129,7 @@ As component version grow, root component should be pointed to the specific vers
 ```
 components
     layout
-        article ( sling:resourceSuperType → v2/article )
+        article ( sling:resourceSuperType -> v2/article )
             v1
                 article
             v2

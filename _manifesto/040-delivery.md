@@ -4,6 +4,10 @@ permalink: /manifesto/delivery/
 excerpt: "Components are the basic building blocks in AEM"
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
+categories:
+  - manifesto
+tags:
+  - guide
 redirect_from:
   - /manifesto/capabilities/
 ---
@@ -14,9 +18,9 @@ redirect_from:
 
 Components are the basic building blocks in AEM. When designing components two aspects must be considered, experience and presentation. Experience will help to understand out how the component is used by authors, how it is linked to content within CMS and how it will be used by the end user. Presentation will help to understand the presentation of the component in different content contexts (on its own, in admin view, in a list), its integration into front end frameworks and its indirect interaction with other components (on same page, across pages, across sessions).
 
-It is important to keep the component’s (authoring) experience simple and separate from the presentation:
+It is important to keep the component's (authoring) experience simple and separate from the presentation:
 
-* Mixing presentation behaviour with authoring experience will complicate the component’s design. For example, the frameworks used for presentation may introduce incompatibilities with the authoring environment.
+* Mixing presentation behaviour with authoring experience will complicate the component's design. For example, the frameworks used for presentation may introduce incompatibilities with the authoring environment.
 
 * Mixing presentation behaviour with authoring experience would introduce additional ways of authoring for the content authors.
 
@@ -85,7 +89,7 @@ Sling selectors should be used to pass parameters specific to rendering and not 
 If selectors are used for content filtering, then you are allowing unlimited number of URLs for a particular piece of content. This opens up opportunity for DDOS attacks in two ways:
 
 * Attackers can flooding the Publishers with content requests using bogus selector values, making the publishers unable to serve legitimate requests.
-* Attackers can overload the Dispatchers’ filesystem with cached files generated from bogus selector requests.
+* Attackers can overload the Dispatchers' filesystem with cached files generated from bogus selector requests.
 
 ## Content Modelling
 

@@ -30,11 +30,11 @@ header:
 }
 </style>
 
-CI/CD space if going off like a bunch of emoji in a url! But one thing you can be sure is to kiss 😘 your all-enveloping 🐙 pipeline tools good bye and put on your seat belt, as the pipeline mother-ship is taking off 🚀!   
+CI/CD space if going off like a bunch of emoji in a url! But one thing you can be sure is to kiss 😘 your all-enveloping 🐙 pipeline tools good bye and put on your seat belt, as the pipeline mother-ship is taking off 🚀!
 
 Travis, Gitlab, Jenkins, Azure DevOps, CircleCI, Codeship all of these and more are awesome pipeline tools! We use them daily, they do us proud of things that we can accomplish with effort alone in this virtual world of ours. They make us happy when we move our piplines from one provider to another by giving us latest YAML syntax. They make us happy when they give us badges that we wear with pride in our readme's! They give us fancy plugins and cli tools that make us rewrite all of our pipelines over and over!
 
-But late night wrestling with CI tools does leave feelings of doubt deep in your mind, maybe this is not the end game. Yes pulling data across the oceans so that you can just build the code does seem ok and mirroring your repos to another build system so that your Git LFS quota does not get smashed is worthy battle. But you wonder should you need to do all that and is there a better way.  
+But late night wrestling with CI tools does leave feelings of doubt deep in your mind, maybe this is not the end game. Yes pulling data across the oceans so that you can just build the code does seem ok and mirroring your repos to another build system so that your Git LFS quota does not get smashed is worthy battle. But you wonder should you need to do all that and is there a better way.
 
 We know that big things come from little things, so all the small battles with these awesome tools seem to be a built up to something big. All these battles helped us to figure out what we really need from these pipeline tools.
 
@@ -47,15 +47,15 @@ And it seems that the ask is much firmer now after all the experimenting and it 
 
 Sure there is things to consider but for lets see where this takes us.
 
-Now to be clear Travis is #1 until you need to run something longer than 50min then is Azure DevOps at #2. Travis is simple and it give you exactly what you want and for free. Azure DevOps is the all in one package that you dream of, but you need to move your code from Github. 🤔 
+Now to be clear Travis is #1 until you need to run something longer than 50min then is Azure DevOps at #2. Travis is simple and it give you exactly what you want and for free. Azure DevOps is the all in one package that you dream of, but you need to move your code from Github. 🤔
 
-Gitlab is awesome for a few years we have been running on it, running over quotas etc pain full but worth while experience right up to archiving all project and moving to github. Gitlab is a great one-stop-shop if you want to run on-prem, as there is Github and Azure in paid categories, that compete at different level.   
+Gitlab is awesome for a few years we have been running on it, running over quotas etc pain full but worth while experience right up to archiving all project and moving to github. Gitlab is a great one-stop-shop if you want to run on-prem, as there is Github and Azure in paid categories, that compete at different level.
 
-Github has become the defacto standard for open source projects. Yes Azure has tried to capture the market and its done a bloody great job and Gihub is now owned by Mirosoft, and we will see who will win the internal pageant in the end but there will always be open source favorite. 
+Github has become the defacto standard for open source projects. Yes Azure has tried to capture the market and its done a bloody great job and Gihub is now owned by Mirosoft, and we will see who will win the internal pageant in the end but there will always be open source favorite.
 
 But all of this really does not really matter for now, what matters is that Github announced and delivered on their promise to have pipelines built into their offering. This was a long throw of a spanner and it has been is slow motion for a year, but it landed and pressed the tak off button! And its looking good! Yes there are features missing, but it wont be long.
 
-Amazingly it seems that they copied some of the Azure DevOps pipeline components and have improved on them! This makes Github an absolute steal for open source project as its now one stop shop for all of your needs. It's astonishing how much [value this offers](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions) it leaves you with the thought what is the catch?! There aint none atm and I do hope they wont do Larry Ellison on us in a few years. Obviously people will just move to where there is more common sense.       
+Amazingly it seems that they copied some of the Azure DevOps pipeline components and have improved on them! This makes Github an absolute steal for open source project as its now one stop shop for all of your needs. It's astonishing how much [value this offers](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions) it leaves you with the thought what is the catch?! There aint none atm and I do hope they wont do Larry Ellison on us in a few years. Obviously people will just move to where there is more common sense.
 
 For now we have started to migrate all of our pipelines from Travis to Github Actions, so far it has been a very quick migration there are many guides how to migrate but if you know your pipelines its simpler to just get started!
 
@@ -111,7 +111,7 @@ jobs:
 {% endraw %}
 ```
 
-Here you can see common items that you could use in your simple pipeline, its a good start for converting your pipelines. 
+Here you can see common items that you could use in your simple pipeline, its a good start for converting your pipelines.
 
 Then you can go ahead and replace steps with the ones you have in your travis file. Here are some how to notes on things that you will need to know:
 
@@ -135,7 +135,7 @@ Following is a list of resource you should use to learn about syntax before you 
 - [Github Actions YAML Syntax](https://help.github.com/en/articles/workflow-syntax-for-github-actions)
 - [Setting Variables](https://help.github.com/en/github/automating-your-workflow-with-github-actions/development-tools-for-github-actions)
 - [Global Variables and Secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions)
-- [Context Expression and Global Context](https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions) 
+- [Context Expression and Global Context](https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions)
 - [Awesome List of Must Have Actions in your Pipeline](https://github.com/sdras/awesome-actions) - check this before googling
 - [Github Actions Forum](https://github.community/t5/GitHub-Actions/bd-p/actions) - search here before googling
 
@@ -209,7 +209,7 @@ deploy:
   on:
     branch: master
 {% endraw %}
-``` 
+```
 
 Its ported version looks very similar [Gitub Actions](https://github.com/aem-design/docker-toughday/blob/master/.github/workflows/build.yml):
 
@@ -254,7 +254,7 @@ jobs:
           source <(curl -sL https://github.com/aem-design/aemdesign-docker/releases/latest/download/container_verify.sh)
           (cd test && ./run_tests.sh "$IMAGE:$IMAGE_VERSION")
           docker images
-          
+
       - name: login to docker registry
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ${DOCKER_REGISTRY} -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
@@ -282,6 +282,6 @@ jobs:
 
 ```
 
-Differences are almost minor and migration follow copy-paste approach for majority of pipeline which is ideal. That's all there is to this migration all you have to do now is commit and head to the Actions console in your repo to see your build take off 🚀 as the next stop is the moon!  
+Differences are almost minor and migration follow copy-paste approach for majority of pipeline which is ideal. That's all there is to this migration all you have to do now is commit and head to the Actions console in your repo to see your build take off 🚀 as the next stop is the moon!
 
 As always checkout the code, fork, extend and contribute if you wish.

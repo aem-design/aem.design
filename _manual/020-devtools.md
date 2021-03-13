@@ -25,9 +25,9 @@ The projects sources are managed with Git.
 
 Maven manages the build lifecycle for the AEM content packages, service bundles and configurations, as well their dependencies. Maven 3.5.0 was used during the development of the project.
 
-The content package projects uses ‘content-package-maven-plugin’ to create a CRX content package.
+The content package projects uses 'content-package-maven-plugin' to create a CRX content package.
 
- The project was originally created using the ‘CQ Project Maven Archetype’ ([http://www.cqblueprints.com/setup/maven.html](http://www.cqblueprints.com/setup/maven.html)).
+ The project was originally created using the 'CQ Project Maven Archetype' ([http://www.cqblueprints.com/setup/maven.html](http://www.cqblueprints.com/setup/maven.html)).
 
 The AEM project contains 4 child modules:
 
@@ -93,7 +93,7 @@ mvn clean deploy
 
 ### JGitFlow Plugin
 
-The JGitFlow Maven Goals manages the Git Flow branching strategy.  The table below lists common usages of the JGitFlow. All commands are run in the ‘aemdesign-aem-dam’ parent module.
+The JGitFlow Maven Goals manages the Git Flow branching strategy.  The table below lists common usages of the JGitFlow. All commands are run in the 'aemdesign-aem-dam' parent module.
 
 | Maven Goals                     | Actions                                     |
 |---------------------------------|---------------------------------------------|
@@ -117,7 +117,7 @@ For additional details on the plugin [https://bitbucket.org/atlassian/jgit-flow/
 
 There are three types of playbooks that perform automated tasks; operation playbooks, group playbooks and site playbooks. A group playbook provisions servers and applications while a site playbook provisions an entire platform. The site playbook will typically run a few group playbooks which will form the platform. Operation playbooks performs regular tasks on groups such as repository maintenance and package deployments.
 
-By convention, the group playbooks are named after the group vars and site playbooks are prefixed with ‘site-’.
+By convention, the group playbooks are named after the group vars and site playbooks are prefixed with 'site-'.
 
 ### Site Playbooks
 
@@ -226,11 +226,11 @@ Installs versioned AEM content packages from a Maven repository to each of the a
 
 #### operation-esb-deploy.yml
 
-Installs versioned ESB packages from a Maven repository to the Mulesoft ESB hot deploy folder *‘/opt/mule/apps’*.
+Installs versioned ESB packages from a Maven repository to the Mulesoft ESB hot deploy folder *'/opt/mule/apps'*.
 
 #### operation-oak-compaction.yml
 
-Operations playbook that implements the revision cleanup for the AEM Repository. Refer to the Adobe’s online documentation under ’*Maintaining the Repository *’for the significance of this operation:
+Operations playbook that implements the revision cleanup for the AEM Repository. Refer to the Adobe's online documentation under '*Maintaining the Repository *'for the significance of this operation:
 
 [https://docs.adobe.com/docs/en/aem/6-3/deploy/platform/storage-elements-in-aem-6.html](https://docs.adobe.com/docs/en/aem/6-3/deploy/platform/storage-elements-in-aem-6.html)
 
@@ -279,11 +279,11 @@ These are discussed in detail in the [Development Tools](#heading=h.44alh5srvsoz
 
 Ansible Modules adding AEM and Docker tasks to Playbooks.
 
-Python source code for the modules can be found under the project location; *‘aemdesign-deploy/library/ansible-modules’*.
+Python source code for the modules can be found under the project location; *'aemdesign-deploy/library/ansible-modules'*.
 
 | Module                          | Action                                     |
 |---------------------------------|---------------------------------------------|
-| aem_bundles_wait_activated.py   | Polls AEM at ‘/system/console/bundles.json’ until ALL bundles are activated |
+| aem_bundles_wait_activated.py   | Polls AEM at '/system/console/bundles.json' until ALL bundles are activated |
 | docker_containers.py            | Starts or stops ALL Docker containers on a server |
 | docker_images.py                | Removes ALL Docker images on a server |
 | docker_volumes.py               | Removes ALL Docker volumes on a server |
