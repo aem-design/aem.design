@@ -1,0 +1,22 @@
+.archive__item-teaser {
+  min-height: 238px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(222,228,228);
+  background: radial-gradient(circle, rgba(222,228,228,1) 0%, rgba(4, 9, 21,1) 100%);
+}
+
+/*add tint to images*/
+.page__hero--overlay {
+  background-color: rgba(4, 9, 21,.5);
+  background-blend-mode: multiply;
+  margin-bottom: 0 !important;
+}
+
+/*.page__hero--overlay .page__lead, .page__hero--overlay .page__title {*/
+/*  background-color: rgba(0, 90, 136, 0.5);*/
+/*  max-width: fit-content !important;*/
+/*  border-radius: 25px;*/
+/*  padding: 10px;*/
+/*}*/
