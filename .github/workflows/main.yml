@@ -26,7 +26,7 @@ jobs:
         run: |
           export LANG=en_US.UTF-8
           bundle install
-          bundle exec jekyll build --future
+          bundle exec jekyll build --future --profile --trace  --verbose
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
