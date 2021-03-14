@@ -5,11 +5,6 @@ author: max@aem.design
 comments: true
 redirect_from:
   - /manual/image-conventions/
-categories:
-  - manual
-tags:
-  - docs
-  - dls
 ---
 
 {% include toc_sticky.html %}

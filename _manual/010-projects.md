@@ -6,11 +6,6 @@ editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/
-categories:
-  - manual
-tags:
-  - project
-  - convnetions
 ---
 
 {% include toc_sticky.html %}

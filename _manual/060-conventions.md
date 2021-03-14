@@ -5,11 +5,6 @@ author: max@aem.design
 comments: true
 redirect_from:
   - /manual/process/
-categories:
-  - manual
-tags:
-  - code
-  - conventions
 ---
 
 {% include toc_sticky.html %}

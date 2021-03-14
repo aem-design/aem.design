@@ -6,11 +6,6 @@ editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/management/
-categories:
-  - manual
-tags:
-  - environment
-  - conventions
 ---
 
 {% include toc_sticky.html %}

@@ -7,10 +7,6 @@ editor: max@aem.design
 comments: true
 redirect_from:
   - /manifesto/
-categories:
-  - manual
-tags:
-  - docs
 sidebar:
   nav: ""
 ---

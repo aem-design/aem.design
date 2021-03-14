@@ -5,11 +5,6 @@ permalink: /archive/data-first-vs-structure-first
 excerpt: "by Stefano Mazzocchi"
 date:   2005-07-28 16:41:45 -0700
 comments: true
-categories:
-  - archives
-tags:
-  - reference
-  - backup
 header:
   overlay_image: /assets/images/site-logo.png
 ---

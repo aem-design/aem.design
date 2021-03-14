@@ -5,11 +5,6 @@ author: max@aem.design
 comments: true
 redirect_from:
   - /manual/osenv/
-categories:
-  - manual
-tags:
-  - process
-  - conventions
 ---
 
 {% include toc_sticky.html %}

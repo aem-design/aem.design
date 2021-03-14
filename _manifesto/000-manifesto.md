@@ -7,10 +7,6 @@ editor: katreen@aem.design
 comments: true
 redirect_from:
   - /quick-start-guide/
-categories:
-  - manifesto
-tags:
-  - guide
 sidebar:
   nav: ""
 ---

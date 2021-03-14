@@ -1,11 +1,6 @@
 ---
 layout: single
 title: "Information Archive"
-categories: 
-  - archives
-tags: 
-  - reference
-  - backup
 permalink: /archive/
 excerpt: "Relevant articles archived to ensure they can be accessed easily."
 author: max@aem.design

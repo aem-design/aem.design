@@ -6,11 +6,6 @@ editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/devtools/
-categories:
-  - manual
-tags:
-  - conventions
-  - management
 ---
 
 {% include toc_sticky.html %}
@@ -35,7 +30,7 @@ Scheduled operational job to execute fstrim on mounted file systems managed by t
 
 Runs the playbook [operation-volume-fstrim.yml](/manual/devtools/#operation-volume-fstrimyml).
 
-See the section [Thin Volume Management](manual/osenv/#thin-volume-management) for background information.
+See the section [Thin Volume Management](/manual/osenv/#thin-volume-management) for background information.
 
 #### Oak Compaction (*environment*)
 

@@ -4,10 +4,6 @@ permalink: /manifesto/tenants/
 excerpt: "Tenant approach must be used to ensure author can take advantage of AEM capabilities."
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
-categories:
-  - manifesto
-tags:
-  - guide
 redirect_from:
   - /manifesto/project/
 ---

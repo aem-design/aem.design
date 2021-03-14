@@ -6,11 +6,6 @@ editor: max@aem.design
 comments: true
 redirect_from:
   - /manual/conventions/
-categories:
-  - manual
-tags:
-  - conventions
-  - image
 ---
 
 {% include toc_sticky.html %}

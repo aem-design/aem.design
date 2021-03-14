@@ -4,11 +4,6 @@ permalink: /manifesto/technical/
 excerpt: "Simple to understand, easy to follow."
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
-categories:
-  - manifesto
-tags:
-  - guide
-  - conventions
 redirect_from:
   - /manifesto/content/
 ---

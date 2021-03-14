@@ -4,10 +4,6 @@ permalink: /manifesto/principles/
 excerpt: "Consider that when creating content structures you are creating them once and forever."
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
-categories:
-  - manifesto
-tags:
-  - guide
 redirect_from:
   - /manifesto/introduction/
 ---

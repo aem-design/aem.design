@@ -4,10 +4,6 @@ permalink: /manifesto/introduction/
 excerpt: "How to quickly install and setup Minimal Mistakes for use with GitHub Pages."
 modified: 2016-11-03T10:01:43-04:00
 author: max@aem.design
-categories:
-  - manifesto
-tags:
-  - guide
 redirect_from:
   - /manifesto/
 ---
