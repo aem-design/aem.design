@@ -9,8 +9,8 @@ redirect_from:
 categories:
   - manual
 tags:
-  - image
   - conventions
+  - image
 ---
 
 {% include toc_sticky.html %}

@@ -9,7 +9,6 @@ categories:
   - manual
 tags:
   - docs
-  - design-language-system
   - dls
 ---
 

@@ -109,7 +109,7 @@ The JGitFlow Maven Goals manages the Git Flow branching strategy.  The table bel
 
 Branching is not be intended to be limited to the JGitFlow Maven Goals. Its underlying actions are standard Git commands and as such they can be repeated with the git command line tool. Also, there are cases where the git command line tool is required. One such case is when a new feature is required in the current release, in which case the feature is branched from */release/[build_version]* and not */develop*. Another case is resolving conflicts during branch merging.
 
-For details on Git Flow, see the Processes section on [Git Flow](#heading=h.9cjexa5yq6qn)
+For details on Git Flow, see the Processes section on [Git Flow](/manual/process#git-flow)
 
 For additional details on the plugin [https://bitbucket.org/atlassian/jgit-flow/wiki/Home](https://bitbucket.org/atlassian/jgit-flow/wiki/Home).
 
@@ -183,7 +183,7 @@ The platform consists of servers and services. In order to provision the platfor
 
 * convoy.yml
 
-    * See [Convoy Volume Plugin](#heading=h.yk5do8kzow0p)
+    * See [Convoy Volume Plugin](/manual/osenv/#convoy-volume-plugin)
 
 * server.yml
 
@@ -236,7 +236,7 @@ Operations playbook that implements the revision cleanup for the AEM Repository.
 
 #### operation-volume-fstrim.yml
 
-Operations playbook to releasing unused blocks used by Convoy thinly provisioned volume. (refer to: [Thin Volume Management](#heading=h.ww4rafenb0y4)).
+Operations playbook to releasing unused blocks used by Convoy thinly provisioned volume. (refer to: [Thin Volume Management](/manual/osenv/#thin-volume-management)).
 
 ### Group Playbooks
 
@@ -273,7 +273,7 @@ Deploys and configures management services in the AEM DAM Platform.  These are d
 
 2. Nexus
 
-These are discussed in detail in the [Development Tools](#heading=h.44alh5srvsoz) section.
+These are discussed in detail in the [Development Tools](/manual/devtools/#development-tools) section.
 
 ### Libraries
 

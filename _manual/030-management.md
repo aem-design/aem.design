@@ -9,8 +9,8 @@ redirect_from:
 categories:
   - manual
 tags:
-  - managment
   - conventions
+  - management
 ---
 
 {% include toc_sticky.html %}
@@ -33,15 +33,15 @@ The Operations view is a collection of operational jobs. These are intended to r
 
 Scheduled operational job to execute fstrim on mounted file systems managed by thin volumes provisioned by Convoy.
 
-Runs the playbook [operation-volume-fstrim.yml](#heading=h.4v3bfwjhvfhq).
+Runs the playbook [operation-volume-fstrim.yml](/manual/devtools/#operation-volume-fstrimyml).
 
-See the section [Thin Volume Management](#heading=h.5n7hg9acpsim) for background information.
+See the section [Thin Volume Management](manual/osenv/#thin-volume-management) for background information.
 
 #### Oak Compaction (*environment*)
 
 An operational job to schedule revision cleanup on the repository.
 
-Runs the playbook [operation-oak-compaction.yml](#heading=h.gkkdg7rqo2lx)
+Runs the playbook [operation-oak-compaction.yml](/manual/devtools/#operation-oak-compactionyml)
 
 #### Shutdown (*environment*)
 
@@ -49,25 +49,25 @@ Operational job to gracefully stop running Docker containers and then stop the D
 
 This job can be used in a backup process pipeline where the application state needs to be in a non-transactional state.
 
-Runs the playbook [site.yml](#heading=h.4zutr2iwh80o) and limits tasks to the application group and tasks with tags docker-host-stop-containers and docker-host-stopped.
+Runs the playbook [site.yml](/manual/devtools/#siteyml) and limits tasks to the application group and tasks with tags docker-host-stop-containers and docker-host-stopped.
 
 #### Startup (*environment*)
 
 Operational job to start the Docker service and start the Docker containers.
 
-Runs the playbook [site.yml](#heading=h.4zutr2iwh80o) and limits the tasks to the application group, and tasks with tags docker-host-start-containers and docker-host-started.
+Runs the playbook [site.yml](/manual/devtools/#siteyml) and limits the tasks to the application group, and tasks with tags docker-host-start-containers and docker-host-started.
 
 #### Teardown (*environment*)
 
 An operational job to stop and remove all running Docker containers and their volumes. Additionally, will also remove all pulled Docker images from the local registry
 
-Runs the playbook [site-aemdesign-teardown.yml](#heading=h.awaaqbaco9ov).
+Runs the playbook [site-teardown.yml](/manual/devtools/#site-teardownyml).
 
 ### Packages
 
 The Packages view contains jobs that build from the Git Flow branches (*/develop*, */release/[build_version]*, */hotfix/[build_version]*) and tags, and installs content packages to the AEM servers.
 
-All build artifacts are deployed and pushed to the [Nexus](#heading=h.dog4b9teckm3) repository,
+All build artifacts are deployed and pushed to the [Nexus](/manual/management/#nexus) repository,
 
 #### aemdesign-aem build (*develop*)
 

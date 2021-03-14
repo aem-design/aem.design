@@ -27,7 +27,7 @@ The following sections details the configuration of Red Hat Enterprise Linux in 
 
 #### IPTables
 
-The servers are configured with the IPTables service. The initial configuration is applied in the [Virtual Machine Project](#heading=h.rocwy889w6ac) in the script ```aemdesign-vm/scripts/devops/firewall.sh```.
+The servers are configured with the IPTables service. The initial configuration is applied in the [Virtual Machine Project](/manual/projects/#virtual-machine-project) in the script ```aemdesign-vm/scripts/devops/firewall.sh```.
 
 The IPTables rules are specified within the applications *group var* in the aemdesign-deploy project using the '*iptable' *variable,
 
@@ -53,13 +53,13 @@ As the Docker containers write and delete data in the logical volumes, blocks al
 
 A recommended way to ensure unused blocks are eventually released, is to schedule a regular job to execute the command *'fstrim'** *on the mounted file systems. This command returns unused blocks to the thin pool.
 
-See [operation-volume-fstrim.yml](#heading=h.4v3bfwjhvfhq).
+See [operation-volume-fstrim.yml](/manual/devtools/#operation-volume-fstrimyml).
 
 ### Docker
 
 Docker is configured to manage applications using thin pool volume data management via Convoy.
 
-The service is installed via the [aemdesign-vm](#heading=h.rocwy889w6ac) project in the script *'aemdesign-vm/scripts/devops/docker-install.sh'*.
+The service is installed via the [Virtual Machine Project](/manual/projects/#virtual-machine-project) project in the script *'aemdesign-vm/scripts/devops/docker-install.sh'*.
 
 #### Convoy Volume Plugin
 

@@ -19,13 +19,13 @@ tags:
 
 ## Overview
 
-There are three project sources in the AEM implementation:
+There are three primary project sources in the AEM implementation:
 
-1. [aemdesign-deploy](#heading=h.8hiv7vcpipht)
+1. [Ansible Deploy Project](#ansible-deploy-project) - used to contain all of the ansible playbooks for managing AEM docker services
 
-2. [aemdesign-vm](#heading=h.ek5iwvlqeogw)
+2. [Virtual Machine Project](#virtual-machine-project) - used to create VM hosts using packer.io.
 
-3. [aemdesign-aem](#heading=h.3zb21qq2qruz)
+3. [docker-aem](https://github.com/aem-design/docker-aem) - docker container used to run local AEM instances.
 
 The following sections will highlight their key design decisions and their implementation details.
 
@@ -95,7 +95,6 @@ For each role,  there is  group variable that overrides the default variable def
 | Repo                            | Notes                                       |
 |---------------------------------|---------------------------------------------|
 | aemdesign-parent/               | root repo for devops script and automation |
-| aemdesign-aem/                  | local aem instances |
 | aemdesign-aem-author/           | changes to authoring experience |
 | aemdesign-aem-common/           | common components |
 | aemdesign-aem-config/           | configuration for author and publishers |
@@ -138,7 +137,7 @@ The AEM Service Bundle contains Java sources for OSGi services and components th
 
 ### AEM Configuration
 
-The AEM Configuration project contains [configurations](https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configuring-osgi.html) (NOTE:  OSGi configuration https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configuring-osgi.html) for AEM OSGi services as well as the OSGi services developed in the [OSGi Service Bundle](#heading=h.u4k8f794h1fg) project.
+The AEM Configuration project contains [configurations](https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configuring-osgi.html) (NOTE:  OSGi configuration https://docs.adobe.com/docs/en/aem/6-3/deploy/configuring/configuring-osgi.html) for AEM OSGi services as well as the OSGi services developed in the `aemdesign-aem-services` module.
 
 For environment specific configurations, apply them with run modes to activate configurations. These environment run modes are configured:
 
