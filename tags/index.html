@@ -1,17 +1,23 @@
 <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Posts by Tags - AEM.Design</title>
+<!-- begin _includes/seo.html --><title>Posts by Tag - AEM.Design</title>
 <meta name="description" content="An amazing website.">
 
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Posts by Tags">
+<meta property="og:title" content="Posts by Tag">
 <meta property="og:url" content="https://aem.design/tags/">
 
 
@@ -43,9 +49,9 @@
   {
     "@context": "https://schema.org",
     
-      "@type": "Person",
-      "name": "AEM.Design",
-      "url": "https://aem.design/"
+      "@type": "Organization",
+      "url": "https://aem.design/",
+      "logo": "https://aem.design/assets/images/logo/aem-design2.png"
     
   }
 </script>
@@ -60,7 +66,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,7 +100,8 @@
   
     <script src="/assets/scripts/lightbox.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  
 
     <!-- start custom head snippets -->
 
@@ -109,41 +118,25 @@
 <meta name="theme-color" content="#ffffff">
 
 
-<style>
-    .archive__item-teaser {
-        min-height: 238px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgb(222,228,228);
-        background: radial-gradient(circle, rgba(222,228,228,1) 0%, rgba(255,179,107,1) 100%);
-    }
 
-    /*add tint to images*/
-    .page__hero--overlay {
-        background-color: rgba(255,179,107,.5);
-        background-blend-mode: multiply;
-    }
-</style>
+<meta property="og:image" content="https://aem.design/assets/images/logo/aem-design2.png">
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  
+    <link rel="stylesheet" href="/assets/styles/head.css">
+  
+    <link rel="stylesheet" href="/assets/styles/tiny-slider.css">
+  
+
 
 <!-- end custom head snippets -->
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
-<!-- End Google Tag Manager -->
-
   </head>
 
-  <body class="layout--archive">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+  <body class="layout--tags">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -185,9 +178,14 @@
               <a target="" href="/blog/">Blog</a>
             </li><li class="masthead__menu-item">
               <a target="" href="/about/">About</a>
-            </li><li class="masthead__menu-item">
-              <a target="" href="/search/">Search</a>
             </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle Menu</span>
@@ -328,821 +326,881 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Posts by Tags</h1>
+      <h1 id="page-title" class="page__title">Posts by Tag</h1>
     
-    <!--
-# Jekyll Group-By-Array 0.1.0
-# https://github.com/mushishi78/jekyll-group-by-array
-# © 2015 Max White <mushishi78@gmail.com>
-# MIT License
--->
+    
 
-<!-- Initialize -->
 
 
 
 
-<!-- Map -->
-
-
-<!-- Flatten -->
-
-
-<!-- Uniq -->
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-
-<!-- group_items -->
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-
+<ul class="taxonomy__index">
   
-  <h2 id="actions" class="archive__subtitle">actions</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
     
       
+    
       
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 minute read
-        
-      </span>
     
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="aem" class="archive__subtitle">aem</h2>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#devops">
+            <strong>devops</strong> <span class="taxonomy__count">14</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#aem">
+            <strong>aem</strong> <span class="taxonomy__count">12</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#update">
+            <strong>update</strong> <span class="taxonomy__count">9</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#docker">
+            <strong>docker</strong> <span class="taxonomy__count">9</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#automation">
+            <strong>automation</strong> <span class="taxonomy__count">6</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#testing">
+            <strong>testing</strong> <span class="taxonomy__count">4</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#dispatcher">
+            <strong>dispatcher</strong> <span class="taxonomy__count">2</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#knowledge">
+            <strong>knowledge</strong> <span class="taxonomy__count">2</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#sharing">
+            <strong>sharing</strong> <span class="taxonomy__count">2</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+      
+        <li>
+          <a href="#journey">
+            <strong>journey</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#start">
+            <strong>start</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#project">
+            <strong>project</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#tini">
+            <strong>tini</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#travis">
+            <strong>travis</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#github">
+            <strong>github</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#actions">
+            <strong>actions</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#github-actions">
+            <strong>github-actions</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="#multi-tenant">
+            <strong>multi-tenant</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#framework">
+            <strong>framework</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#saas">
+            <strong>saas</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#handson">
+            <strong>handson</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#structure">
+            <strong>structure</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#bugs-maybe">
+            <strong>bugs-maybe</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="#automation-testing">
+            <strong>automation-testing</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
+  
+</ul>
+
+
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="devops" class="taxonomy__section">
+        <h2 class="archive__subtitle">devops</h2>
+        <div class="entries-list">
+          
+            
 
 
 
@@ -1180,8 +1238,8 @@
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1220,8 +1278,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1259,8 +1317,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1299,8 +1357,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1339,8 +1397,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1379,8 +1437,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1419,8 +1477,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1459,8 +1517,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1499,8 +1557,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1539,8 +1597,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1579,8 +1637,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -1620,822 +1678,8 @@ A...</p>
   </article>
 </div>
 
-  
-
-  
-  <h2 id="automation" class="archive__subtitle">automation</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="automation-testing" class="archive__subtitle">automation-testing</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="permalink">Automation Testing For AEM Dialogs
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing app...</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="bugs-maybe" class="archive__subtitle">bugs-maybe</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2021/01/18/creating-custom-workflow-step" rel="permalink">Creating Custom Workflow Step
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
-You will first encounter this when...</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="devops" class="archive__subtitle">devops</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="permalink">Automation Testing For AEM Dialogs
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing app...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2021/01/18/creating-custom-workflow-step" rel="permalink">Creating Custom Workflow Step
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
-You will first encounter this when...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/07/24/using-docker-to-build-code" rel="permalink">Using Docker to Build Code
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means t...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          13 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
-But AEM will always be better with Docker. 
-A...</p>
-  </article>
-</div>
-
-  
-    
+          
+            
 
 
 
@@ -2474,8 +1718,8 @@ A...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -2514,12 +1758,118 @@ A...</p>
   </article>
 </div>
 
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
   
 
   
-  <h2 id="dispatcher" class="archive__subtitle">dispatcher</h2>
+    
   
     
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="aem" class="taxonomy__section">
+        <h2 class="archive__subtitle">aem</h2>
+        <div class="entries-list">
+          
+            
 
 
 
@@ -2528,211 +1878,7 @@ A...</p>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
-But AEM will always be better with Docker. 
-A...</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="docker" class="archive__subtitle">docker</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/07/24/using-docker-to-build-code" rel="permalink">Using Docker to Build Code
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means t...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+        <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="permalink">Automation Testing For AEM Dialogs
 </a>
       
     </h2>
@@ -2757,780 +1903,12 @@ A...</p>
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
-</p>
+    <p class="archive__item-excerpt" itemprop="description">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing app...</p>
   </article>
 </div>
 
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
-But AEM will always be better with Docker. 
-A...</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="framework" class="archive__subtitle">framework</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="github" class="archive__subtitle">github</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="github-actions" class="archive__subtitle">github-actions</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="handson" class="archive__subtitle">handson</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          13 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="journey" class="archive__subtitle">journey</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2016/11/04/it-begins" rel="permalink">The Journey begins…
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Over last few years we have done lots of great work. We have worked hard and learned even harder. We meet along the way and have stuck together working tirel...</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="knowledge" class="archive__subtitle">knowledge</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          13 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="multi-tenant" class="archive__subtitle">multi-tenant</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="project" class="archive__subtitle">project</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2017/04/06/project-introduction" rel="permalink">Project Introduction
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">The team has been busy do what they do best, creating something awesome!
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="saas" class="archive__subtitle">saas</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          13 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="sharing" class="archive__subtitle">sharing</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          13 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="start" class="archive__subtitle">start</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2016/11/04/it-begins" rel="permalink">The Journey begins…
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Over last few years we have done lots of great work. We have worked hard and learned even harder. We meet along the way and have stuck together working tirel...</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="structure" class="archive__subtitle">structure</h2>
-  
-    
+          
+            
 
 
 
@@ -3569,12 +1947,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-
-  
-  <h2 id="testing" class="archive__subtitle">testing</h2>
-  
-    
+          
+            
 
 
 
@@ -3583,7 +1957,7 @@ You will first encounter this when...</p>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="permalink">Automation Testing For AEM Dialogs
+        <a href="/blog/2020/07/24/using-docker-to-build-code" rel="permalink">Using Docker to Build Code
 </a>
       
     </h2>
@@ -3601,19 +1975,19 @@ You will first encounter this when...</p>
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing app...</p>
+    <p class="archive__item-excerpt" itemprop="description">When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means t...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -3622,7 +1996,7 @@ You will first encounter this when...</p>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
 </a>
       
     </h2>
@@ -3640,20 +2014,20 @@ You will first encounter this when...</p>
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          13 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
 </p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -3662,7 +2036,7 @@ You will first encounter this when...</p>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/2017/12/29/touch-ui-test" rel="permalink">Touch UI Test
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
 </a>
       
     </h2>
@@ -3680,20 +2054,20 @@ You will first encounter this when...</p>
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          8 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">End of the Year is a few days away!
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
 </p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -3702,7 +2076,7 @@ You will first encounter this when...</p>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/2017/06/28/automation-testing" rel="permalink">Automation Testing and Human Reporting
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
 </a>
       
     </h2>
@@ -3720,68 +2094,20 @@ You will first encounter this when...</p>
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          9 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Automation Testing is the validation of your DevOps operations.
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
 </p>
   </article>
 </div>
 
-  
-
-  
-  <h2 id="tini" class="archive__subtitle">tini</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
-</p>
-  </article>
-</div>
-
-  
-
-  
-  <h2 id="travis" class="archive__subtitle">travis</h2>
-  
-    
+          
+            
 
 
 
@@ -3820,12 +2146,361 @@ You will first encounter this when...</p>
   </article>
 </div>
 
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
   
 
   
-  <h2 id="update" class="archive__subtitle">update</h2>
+    
   
     
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="update" class="taxonomy__section">
+        <h2 class="archive__subtitle">update</h2>
+        <div class="entries-list">
+          
+            
 
 
 
@@ -3864,8 +2539,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -3904,8 +2579,8 @@ Secondary drive is that it provid...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -3944,8 +2619,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -3984,8 +2659,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -4024,8 +2699,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -4064,8 +2739,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -4104,8 +2779,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -4144,8 +2819,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-  
-    
+          
+            
 
 
 
@@ -4184,12 +2859,2236 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
   
+    
+  
+    
+  
+    
+  
+    
+      <section id="docker" class="taxonomy__section">
+        <h2 class="archive__subtitle">docker</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/07/24/using-docker-to-build-code" rel="permalink">Using Docker to Build Code
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means t...</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="automation" class="taxonomy__section">
+        <h2 class="archive__subtitle">automation</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/19/updating-existing-docker-container-variables%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Updating Existing Docker Container Variables 💪😎👍
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">If you have to update existing docker container properties you can do it here is how
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/08/30/docker-aem-bundle" rel="permalink">Docker AEM Bundle
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="testing" class="taxonomy__section">
+        <h2 class="archive__subtitle">testing</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="permalink">Automation Testing For AEM Dialogs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing app...</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2017/12/29/touch-ui-test" rel="permalink">Touch UI Test
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">End of the Year is a few days away!
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2017/06/28/automation-testing" rel="permalink">Automation Testing and Human Reporting
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Automation Testing is the validation of your DevOps operations.
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="dispatcher" class="taxonomy__section">
+        <h2 class="archive__subtitle">dispatcher</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/05/docker-automation-testing" rel="permalink">Docker Automation Testing
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Quick update to showcase upcoming automated tests results using Github Pages.
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/07/01/docker-containers-everywhere" rel="permalink">Docker Containers Everywhere
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Docker is your best friend when it comes to AEM! Yes there are so many countless ways of running AEM instances.
+But AEM will always be better with Docker. 
+A...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="knowledge" class="taxonomy__section">
+        <h2 class="archive__subtitle">knowledge</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="sharing" class="taxonomy__section">
+        <h2 class="archive__subtitle">sharing</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      <section id="journey" class="taxonomy__section">
+        <h2 class="archive__subtitle">journey</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2016/11/04/it-begins" rel="permalink">The Journey begins…
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Over last few years we have done lots of great work. We have worked hard and learned even harder. We meet along the way and have stuck together working tirel...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="start" class="taxonomy__section">
+        <h2 class="archive__subtitle">start</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2016/11/04/it-begins" rel="permalink">The Journey begins…
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Over last few years we have done lots of great work. We have worked hard and learned even harder. We meet along the way and have stuck together working tirel...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="project" class="taxonomy__section">
+        <h2 class="archive__subtitle">project</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2017/04/06/project-introduction" rel="permalink">Project Introduction
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The team has been busy do what they do best, creating something awesome!
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <section id="tini" class="taxonomy__section">
+        <h2 class="archive__subtitle">tini</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="permalink">AEM and Docker 😍😘
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I thought AEM does not work in Docker?
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="travis" class="taxonomy__section">
+        <h2 class="archive__subtitle">travis</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="permalink">Trigger Travis pipeline from another pipeline 👉📟🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="github" class="taxonomy__section">
+        <h2 class="archive__subtitle">github</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="actions" class="taxonomy__section">
+        <h2 class="archive__subtitle">actions</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="github-actions" class="taxonomy__section">
+        <h2 class="archive__subtitle">github-actions</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2019/10/20/enter-the-github-actions%F0%9F%98%98%F0%9F%90%99%F0%9F%9A%80" rel="permalink">Enter the Github Actions 😘🐙🚀
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are in the end game now
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+  
+    
+  
+    
+      <section id="multi-tenant" class="taxonomy__section">
+        <h2 class="archive__subtitle">multi-tenant</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="framework" class="taxonomy__section">
+        <h2 class="archive__subtitle">framework</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="permalink">AEM Framework for Multi-Tenant Environments.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Notes to get you started creating a Multi-Tenant Environments on AEM
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="saas" class="taxonomy__section">
+        <h2 class="archive__subtitle">saas</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="handson" class="taxonomy__section">
+        <h2 class="archive__subtitle">handson</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="structure" class="taxonomy__section">
+        <h2 class="archive__subtitle">structure</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/01/18/creating-custom-workflow-step" rel="permalink">Creating Custom Workflow Step
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
+You will first encounter this when...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="bugs-maybe" class="taxonomy__section">
+        <h2 class="archive__subtitle">bugs-maybe</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/01/18/creating-custom-workflow-step" rel="permalink">Creating Custom Workflow Step
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
+You will first encounter this when...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="automation-testing" class="taxonomy__section">
+        <h2 class="archive__subtitle">automation-testing</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="permalink">Automation Testing For AEM Dialogs
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing app...</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
+    
+  
+
 
   </div>
 </div>
     </div>
 
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <label class="sr-only" for="cse-search-input-box-id">
+      Enter your search term...
+    </label>
+    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results">
+    <gcse:searchresults-only></gcse:searchresults-only>
+  </div></div>
+
+      </div>
     
 
     <div id="footer" class="page__footer">
@@ -4219,7 +5118,9 @@ AEM is not exception, bein...</p>
       
     
 
-    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
@@ -4232,7 +5133,36 @@ AEM is not exception, bein...</p>
   <script src="/assets/js/main.min.js"></script>
 
 
+<script>
+  (function () {
+    var cx = '004447691990096211192:ourol5vhlpw';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+    $(document).ready(function () {
+      $('input#cse-search-input-box-id').on('keyup', function () {
+        googleCustomSearchExecute();
+      });
+    });
+  
+</script>
 
 
 

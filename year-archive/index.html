@@ -1,4 +1,10 @@
 <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -9,7 +15,7 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
 <meta property="og:title" content="Posts by Year">
 <meta property="og:url" content="https://aem.design/year-archive/">
@@ -43,9 +49,9 @@
   {
     "@context": "https://schema.org",
     
-      "@type": "Person",
-      "name": "AEM.Design",
-      "url": "https://aem.design/"
+      "@type": "Organization",
+      "url": "https://aem.design/",
+      "logo": "https://aem.design/assets/images/logo/aem-design2.png"
     
   }
 </script>
@@ -60,7 +66,9 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,7 +100,8 @@
   
     <script src="/assets/scripts/lightbox.js"></script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  
 
     <!-- start custom head snippets -->
 
@@ -109,41 +118,25 @@
 <meta name="theme-color" content="#ffffff">
 
 
-<style>
-    .archive__item-teaser {
-        min-height: 238px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgb(222,228,228);
-        background: radial-gradient(circle, rgba(222,228,228,1) 0%, rgba(255,179,107,1) 100%);
-    }
 
-    /*add tint to images*/
-    .page__hero--overlay {
-        background-color: rgba(255,179,107,.5);
-        background-blend-mode: multiply;
-    }
-</style>
+<meta property="og:image" content="https://aem.design/assets/images/logo/aem-design2.png">
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  
+    <link rel="stylesheet" href="/assets/styles/head.css">
+  
+    <link rel="stylesheet" href="/assets/styles/tiny-slider.css">
+  
+
 
 <!-- end custom head snippets -->
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MV4BGNX');</script>
-<!-- End Google Tag Manager -->
-
   </head>
 
-  <body class="layout--archive">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV4BGNX"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+  <body class="layout--posts">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -185,9 +178,14 @@
               <a target="" href="/blog/">Blog</a>
             </li><li class="masthead__menu-item">
               <a target="" href="/about/">About</a>
-            </li><li class="masthead__menu-item">
-              <a target="" href="/search/">Search</a>
             </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle Menu</span>
@@ -332,12 +330,50 @@
     
     
 
+
+<ul class="taxonomy__index">
   
   
-    <h2 id="2021" class="archive__subtitle">2021</h2>
-    
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">2</span>
+      </a>
+    </li>
   
+    <li>
+      <a href="#2020">
+        <strong>2020</strong> <span class="taxonomy__count">3</span>
+      </a>
+    </li>
   
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">11</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2017">
+        <strong>2017</strong> <span class="taxonomy__count">5</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2016">
+        <strong>2016</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
 
 
 
@@ -375,10 +411,8 @@
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -417,13 +451,16 @@ You will first encounter this when...</p>
   </article>
 </div>
 
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
 
-  
-  
-    <h2 id="2020" class="archive__subtitle">2020</h2>
-    
-  
-  
+  <section id="2020" class="taxonomy__section">
+    <h2 class="archive__subtitle">2020</h2>
+    <div class="entries-list">
+      
+        
 
 
 
@@ -461,10 +498,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -503,10 +538,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -545,13 +578,16 @@ You will first encounter this when...</p>
   </article>
 </div>
 
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
 
-  
-  
-    <h2 id="2019" class="archive__subtitle">2019</h2>
-    
-  
-  
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
 
 
 
@@ -590,10 +626,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -632,10 +666,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -674,10 +706,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -716,10 +746,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -758,10 +786,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -800,10 +826,8 @@ You will first encounter this when...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -843,10 +867,8 @@ A...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -885,10 +907,8 @@ A...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -927,10 +947,8 @@ Secondary drive is that it provid...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -969,10 +987,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -1011,13 +1027,16 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
 
-  
-  
-    <h2 id="2017" class="archive__subtitle">2017</h2>
-    
-  
-  
+  <section id="2017" class="taxonomy__section">
+    <h2 class="archive__subtitle">2017</h2>
+    <div class="entries-list">
+      
+        
 
 
 
@@ -1056,10 +1075,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -1098,10 +1115,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -1140,10 +1155,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -1182,10 +1195,8 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
-
-  
-  
-  
+      
+        
 
 
 
@@ -1224,13 +1235,16 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
 
-  
-  
-    <h2 id="2016" class="archive__subtitle">2016</h2>
-    
-  
-  
+  <section id="2016" class="taxonomy__section">
+    <h2 class="archive__subtitle">2016</h2>
+    <div class="entries-list">
+      
+        
 
 
 
@@ -1268,11 +1282,29 @@ AEM is not exception, bein...</p>
   </article>
 </div>
 
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
 
   </div>
 </div>
     </div>
 
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <label class="sr-only" for="cse-search-input-box-id">
+      Enter your search term...
+    </label>
+    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results">
+    <gcse:searchresults-only></gcse:searchresults-only>
+  </div></div>
+
+      </div>
     
 
     <div id="footer" class="page__footer">
@@ -1302,7 +1334,9 @@ AEM is not exception, bein...</p>
       
     
 
-    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
   </ul>
 </div>
 
@@ -1315,7 +1349,36 @@ AEM is not exception, bein...</p>
   <script src="/assets/js/main.min.js"></script>
 
 
+<script>
+  (function () {
+    var cx = '004447691990096211192:ourol5vhlpw';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+    $(document).ready(function () {
+      $('input#cse-search-input-box-id').on('keyup', function () {
+        googleCustomSearchExecute();
+      });
+    });
+  
+</script>
 
 
 
