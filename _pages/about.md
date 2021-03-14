@@ -5,10 +5,6 @@ title: "About"
 author: max@aem.design
 excerpt: "About AEM Design"
 modified: 2017-01-24T16:44:22-10:00
-categories:
-  - info
-tags:
-  - about
 ---
 
 AEM.Design is about giving you a starting point of your project but by your future self.
