@@ -1,16 +1,17 @@
 ---
 layout: single
 title: "Information Archive"
+categories: 
+  - archives
+tags: 
+  - reference
+  - backup
 permalink: /archive/
 excerpt: "Relevant articles archived to ensure they can be accessed easily."
 author: max@aem.design
 comments: true
 redirect_from:
   - /manual/
-categories:
-  - archive
-tags:
-  - docs
 header:
   overlay_image: /assets/images/site-logo.png
 ---

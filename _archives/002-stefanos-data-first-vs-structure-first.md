@@ -6,10 +6,10 @@ excerpt: "by Stefano Mazzocchi"
 date:   2005-07-28 16:41:45 -0700
 comments: true
 categories:
-  - archive
-  - stefanos data first
+  - archives
 tags:
-  - docs
+  - reference
+  - backup
 header:
   overlay_image: /assets/images/site-logo.png
 ---

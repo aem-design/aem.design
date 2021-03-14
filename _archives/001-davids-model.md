@@ -6,10 +6,10 @@ excerpt: "A guide for content modeling by David Nuescheler"
 date:   2007-08-22 11:30:43 -0000
 comments: true
 categories:
-  - archive
-  - davids model
+  - archives
 tags:
-  - docs
+  - reference
+  - backup
 header:
   overlay_image: /assets/images/site-logo.png
 ---
