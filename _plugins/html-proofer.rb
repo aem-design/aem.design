@@ -7,8 +7,14 @@ Jekyll::Hooks.register :site, :post_write do |site|
     :disable_external => true,
     :report_invalid_tags => true,
     :assume_extension => true,
-    :url_ignore => ["/#.*/"],
+    :allow_hash_href => true,
+    :verbose => true,
     :internal_domains => ["localhost:8100"],
     :root_dir => "_site",
+    :url_ignore => [
+      /.*#data=.*/,
+    ],
+    :extension => ".html",
+    :log_level => :debug,
   }).run
 end
