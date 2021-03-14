@@ -96,10 +96,10 @@ manual:
 
 #archive links
 archive:
-  - title: Archive
-    url: /archive/
+  - title: Archives
+    url: /archives/
     children:
       - title: "David's Model"
-        url: /archive/davids-model
+        url: /archives/davids-model
       - title: "Data First vs. Structure First"
-        url: /archive/data-first-vs-structure-first
+        url: /archives/data-first-vs-structure-first
