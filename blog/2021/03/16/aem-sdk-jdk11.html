@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-03-16T23:29:08+11:00">
+  <meta property="article:modified_time" content="2021-03-17T01:12:49+11:00">
 
 
 
@@ -379,7 +379,7 @@
     <meta itemprop="headline" content="AEM SDK and JDK11">
     <meta itemprop="description" content="Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!">
     <meta itemprop="datePublished" content="2021-03-16T23:37:00+11:00">
-    <meta itemprop="dateModified" content="2021-03-16T23:29:08+11:00">
+    <meta itemprop="dateModified" content="2021-03-17T01:12:49+11:00">
 
     <div class="page__inner-wrap">
       
@@ -422,10 +422,18 @@
 
 <p>To start author AEM 6.5.5.0 with JDK11 run the following:</p>
 
+<div class="code-copy-header">
+  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author655</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.5.0-jdk11</span><span class="w">
 </span></code></pre></div></div>
 
 <p>To start author AEM SDK version 2021.3.4997 run the following:</p>
+
+<div class="code-copy-header">
+  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author202134997</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:sdk-2021.3.4997</span><span class="w">
 </span></code></pre></div></div>
@@ -511,7 +519,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-16">March 16, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-17">March 17, 2021</time></p>
 
 
       </footer>
