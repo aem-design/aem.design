@@ -1,5 +1,5 @@
-const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
-const copyCodeButtons = document.querySelectorAll('.copy-code-button');
+var codeBlocks = document.querySelectorAll('.code-copy-header + .highlighter-rouge');
+var copyCodeButtons = document.querySelectorAll('.copy-code-button');
 
 copyCodeButtons.forEach((copyCodeButton, index) => {
   const code = codeBlocks[index].innerText;
