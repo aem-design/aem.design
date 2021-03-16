@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Project Introduction - AEM.Design</title>
-<meta name="description" content="The team has been busy do what they do best, creating something awesome!">
+<!-- begin _includes/seo.html --><title>AEM SDK and JDK11 - AEM.Design</title>
+<meta name="description" content="Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!">
 
 
   <meta name="author" content="Max Barrass">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Project Introduction">
-<meta property="og:url" content="https://aem.design/blog/2017/04/06/project-introduction">
+<meta property="og:title" content="AEM SDK and JDK11">
+<meta property="og:url" content="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">
 
 
-  <meta property="og:description" content="The team has been busy do what they do best, creating something awesome!">
+  <meta property="og:description" content="Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!">
 
 
 
@@ -36,11 +36,11 @@
 
 
 
-  <meta property="article:published_time" content="2017-04-06T20:25:00+10:00">
+  <meta property="article:published_time" content="2021-03-16T23:37:00+11:00">
 
 
 
-  <meta property="article:modified_time" content="2021-03-14T01:50:42+11:00">
+  <meta property="article:modified_time" content="2021-03-16T23:29:08+11:00">
 
 
 
@@ -49,7 +49,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/blog/2017/04/06/project-introduction">
+<link rel="canonical" href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">
 
 
 
@@ -372,15 +372,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Project Introduction">
-    <meta itemprop="description" content="The team has been busy do what they do best, creating something awesome!">
-    <meta itemprop="datePublished" content="2017-04-06T20:25:00+10:00">
-    <meta itemprop="dateModified" content="2021-03-14T01:50:42+11:00">
+    <meta itemprop="headline" content="AEM SDK and JDK11">
+    <meta itemprop="description" content="Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!">
+    <meta itemprop="datePublished" content="2021-03-16T23:37:00+11:00">
+    <meta itemprop="dateModified" content="2021-03-16T23:29:08+11:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Project Introduction
+          <h1 id="page-title" class="page__title" itemprop="headline">AEM SDK and JDK11
 </h1>
           
 
@@ -396,7 +396,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -408,16 +408,61 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>The team has been busy do what they do best, creating something awesome!</p>
+        <p>Building on the previous work <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a>, <a href="/blog/2019/09/04/aem-and-docker😍😘">AEM and Docker 😍😘</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a> its time to bring AEM SDK and JDK11 into life!</p>
 
-<p>It’s ready for release but it’s time to start a conversation around the project.</p>
+<p>If you take a look <a href="https://hub.docker.com/r/aemdesign/aem">docker hub</a> and <a href="https://github.com/aem-design/docker-aem">docker-aem</a> branches you will find a couple of new additions that you will find helpful.</p>
 
-<p>We have compiled a presentation for our sanity so that we can keep track of what we want to achieve and what is interesting to you.</p>
+<p>JDK11 version of AEM 6.5 and AEM SDK version is now ready for use!</p>
 
-<p>Let me know what you think.</p>
+<h3 id="running-aem-jdk-11-in-docker">Running AEM JDK 11 in Docker</h3>
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/Lda4uW999pJ2dC" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
-<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MaxBarrass/aemdesign-project-introduction" title="AEM.Design - Project Introduction" target="_blank">AEM.Design - Project Introduction</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/MaxBarrass">Max Barrass</a></strong> </div>
+<p>To start author AEM 6.5.5.0 with JDK11 run the following:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author655</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.5.0-jdk11</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To start author AEM SDK version 2021.3.4997 run the following:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author202134997</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:sdk-2021.3.4997</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To make all this possible following Docker image chain has been updated:</p>
+
+<ul>
+  <li><a href="https://github.com/aem-design/docker-aem/tree/jdk11">aemdesign/aem:jdk11</a> - AEM Quickstart content
+    <ul>
+      <li><a href="https://github.com/aem-design/docker-aem-base/tree/jdk11">aemdesign/aem-base:jdk11</a> - AEM linux dependencies
+        <ul>
+          <li><a href="https://github.com/aem-design/docker-java-ffmpeg/tree/jdk11">aemdesign/java-ffmpeg:jdk11</a> - provides ImageMagic and FFMpeg libraries
+            <ul>
+              <li><a href="https://github.com/aem-design/docker-oracle-jdk/tree/jdk11">aemdesign/oracle-jdk:jdk11</a> - provides a an oracle jdk
+                <ul>
+                  <li><a href="https://github.com/aem-design/docker-centos-tini/tree/centos8">aemdesign/centos-tini:centos8</a> - provides a base for all java apps</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>In addition to these pipelines have been updated to allow Docker Image squash experimental option to ensure all images have the smallest amount of layers.</p>
+
+<p>Additionally, centos build pack has been updated to JDK 11 and Centos 8 with all the swiss army knife tools one expects.</p>
+
+<ul>
+  <li><a href="https://github.com/aem-design/docker-centos-java-buildpack/tree/jdk11">aemdesign/centos-java-buildpack:jdk11</a></li>
+</ul>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>Please checkout the docker hub <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> for further details.</p>
+
+<p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design">https://github.com/aem-design</a>.</p>
+
+<p>Don’t forget to tell your friends.</p>
 
         
       </section>
@@ -434,9 +479,11 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/project" class="page__taxonomy-item" rel="tag">project</a><span class="sep">, </span>
+      <a href="/tags/aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
     
-      <a href="/tags/update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/tags/devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      <a href="/tags/docker" class="page__taxonomy-item" rel="tag">docker</a>
     
     </span>
   </p>
@@ -460,7 +507,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-14">March 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-16">March 16, 2021</time></p>
 
 
       </footer>
@@ -470,23 +517,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Project+Introduction%20https%3A%2F%2Faem.design%2Fblog%2F2017%2F04%2F06%2Fproject-introduction" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=AEM+SDK+and+JDK11%20https%3A%2F%2Faem.design%2Fblog%2F2021%2F03%2F16%2Faem-sdk-jdk11" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2017%2F04%2F06%2Fproject-introduction" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2021%2F03%2F16%2Faem-sdk-jdk11" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2017%2F04%2F06%2Fproject-introduction" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2021%2F03%2F16%2Faem-sdk-jdk11" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/2016/11/04/it-begins" class="pagination--pager" title="The Journey begins…
+      <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" class="pagination--pager" title="Automation Testing For AEM Dialogs
 ">Previous</a>
     
     
-      <a href="/blog/2017/06/28/automation-testing" class="pagination--pager" title="Automation Testing and Human Reporting
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -500,46 +546,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2021/03/16/aem-sdk-jdk11" rel="permalink">AEM SDK and JDK11
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!
-</p>
-  </article>
-</div>
-
         
           
 
@@ -659,6 +665,46 @@ You will first encounter this when...</p>
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="permalink">AEM SaaS Hands On 😍🚀🔭
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the End Game and Adobe has it, a non-definitive perspective!
+</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -761,8 +807,8 @@ You will first encounter this when...</p>
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/blog/2017/04/06/project-introduction";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/2017/04/06/project-intro"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2021/03/16/aem-sdk-jdk11";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2021/03/16/aem-sdk-jdk11"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

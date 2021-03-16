@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-03-14T14:02:13+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Automation Testing For AEM Dialogs</title><link href="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="alternate" type="text/html" title="Automation Testing For AEM Dialogs" /><published>2021-01-21T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs</id><content type="html" xml:base="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs">&lt;p&gt;Automation testing is an absolute mandatory and covered in &lt;a href=&quot;/blog/2017/06/28/automation-testing&quot;&gt;Automation Testing and Human Reporting&lt;/a&gt; and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-03-16T23:34:57+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-16T23:29:08+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
+
+&lt;p&gt;If you take a look &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;docker hub&lt;/a&gt; and &lt;a href=&quot;https://github.com/aem-design/docker-aem&quot;&gt;docker-aem&lt;/a&gt; branches you will find a couple of new additions that you will find helpful.&lt;/p&gt;
+
+&lt;p&gt;JDK11 version of AEM 6.5 and AEM SDK version is now ready for use!&lt;/p&gt;
+
+&lt;h3 id=&quot;running-aem-jdk-11-in-docker&quot;&gt;Running AEM JDK 11 in Docker&lt;/h3&gt;
+
+&lt;p&gt;To start author AEM 6.5.5.0 with JDK11 run the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;author655&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;58242&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;aemdesign/aem:6.5.5.0-jdk11&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To start author AEM SDK version 2021.3.4997 run the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;author202134997&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;58242&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;aemdesign/aem:sdk-2021.3.4997&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To make all this possible following Docker image chain has been updated:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/docker-aem/tree/jdk11&quot;&gt;aemdesign/aem:jdk11&lt;/a&gt; - AEM Quickstart content
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/docker-aem-base/tree/jdk11&quot;&gt;aemdesign/aem-base:jdk11&lt;/a&gt; - AEM linux dependencies
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/docker-java-ffmpeg/tree/jdk11&quot;&gt;aemdesign/java-ffmpeg:jdk11&lt;/a&gt; - provides ImageMagic and FFMpeg libraries
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/docker-oracle-jdk/tree/jdk11&quot;&gt;aemdesign/oracle-jdk:jdk11&lt;/a&gt; - provides a an oracle jdk
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/docker-centos-tini/tree/centos8&quot;&gt;aemdesign/centos-tini:centos8&lt;/a&gt; - provides a base for all java apps&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition to these pipelines have been updated to allow Docker Image squash experimental option to ensure all images have the smallest amount of layers.&lt;/p&gt;
+
+&lt;p&gt;Additionally, centos build pack has been updated to JDK 11 and Centos 8 with all the swiss army knife tools one expects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/docker-centos-java-buildpack/tree/jdk11&quot;&gt;aemdesign/centos-java-buildpack:jdk11&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;thank-you&quot;&gt;Thank you&lt;/h3&gt;
+
+&lt;p&gt;Please checkout the docker hub &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; for further details.&lt;/p&gt;
+
+&lt;p&gt;If you would like to contribute or fork the code, you can get it on GitHub &lt;a href=&quot;https://github.com/aem-design&quot;&gt;https://github.com/aem-design&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Don’t forget to tell your friends.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html">Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!</summary></entry><entry><title type="html">Automation Testing For AEM Dialogs</title><link href="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="alternate" type="text/html" title="Automation Testing For AEM Dialogs" /><published>2021-01-21T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs</id><content type="html" xml:base="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs">&lt;p&gt;Automation testing is an absolute mandatory and covered in &lt;a href=&quot;/blog/2017/06/28/automation-testing&quot;&gt;Automation Testing and Human Reporting&lt;/a&gt; and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.&lt;/p&gt;
 
 &lt;p&gt;Over the last few years, AEM Automation Testing for AEM Dialog has been getting more focus, and I have been asked by many how to do this easily. The current approach leverages existing AEM Editor experience to view and load dialogs so that they can be tested. One of the improvements that have been asked can that be made faster so that actual pages do not require loading, so that spec execution speed improves.&lt;/p&gt;
 
@@ -1025,208 +1079,4 @@ ________________________________________________________________________________
 
 &lt;p&gt;You can also use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD [&quot;/dispatcher/start.sh&quot;]&lt;/code&gt; as used in &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; image to the same effect. Docker appends the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt; statement to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; command and as &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; is based on &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; its final command that will be executed will be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/dispatcher/start.sh&quot;]&lt;/code&gt;, once again letting tini manage processes.&lt;/p&gt;
 
-&lt;p&gt;Hopefully if you were scared of using java in docker containers after using &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; your fears will wash away with tears of happiness 😂&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="tini" /><summary type="html">I thought AEM does not work in Docker?</summary></entry><entry><title type="html">Docker AEM Bundle</title><link href="https://aem.design/blog/2019/08/30/docker-aem-bundle" rel="alternate" type="text/html" title="Docker AEM Bundle" /><published>2019-08-30T23:37:00+10:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2019/08/30/docker-aem-bundle</id><content type="html" xml:base="https://aem.design/blog/2019/08/30/docker-aem-bundle">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; we have added a new AEM 6.5 Bundle image.&lt;/p&gt;
-
-&lt;p&gt;Following is the package map to docker tag relationship, Docker tags conventions is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{verison}-{bundle type}&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle-forms&lt;/code&gt; includes all packages that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle&lt;/code&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;File&lt;/th&gt;
-      &lt;th&gt;Bundle Type&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;AEM Service Pack&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;AEM Forms&lt;/td&gt;
-      &lt;td&gt;bundle-forms&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;AEM Backward Compatibility package&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ACS Commons Twitter package&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ACS Commons Content&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ACS Commons All&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Netcentric ACL Tools&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Netcentric ACL Tools Oak Index&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Adobe Vanity URL Servlet&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;AEM.Design Core&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;AEM.Design Showcase&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Brightcove Integration&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Adobe XML Document Services&lt;/td&gt;
-      &lt;td&gt;bundle&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;All packages are aimed at to be the latest version. If you need to know exact versions of a package, please refer to the pipeline for the version of the container you are using, example for AEM 6.5.3.0 Bundle with Forms &lt;a href=&quot;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&quot;&gt;https://github.com/aem-design/docker-aem/blob/6.5.3.0-bundle-forms/.github/workflows/build.yml&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;existing-run-modes&quot;&gt;Existing Run Modes&lt;/h3&gt;
-
-&lt;p&gt;Its recommended to use &lt;a href=&quot;https://docs.adobe.com/content/help/en/experience-manager-64/deploying/configuring/configure-runmodes.html&quot;&gt;run-modes&lt;/a&gt; to specify different configurations for different target. &lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-support&quot;&gt;AEM.Design Support&lt;/a&gt; project has a sub-module &lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-support/tree/master/aemdesign-aem-config&quot;&gt;aemdesign-aem-config&lt;/a&gt; that contains reference configs for particular run-modes. Following is the definition of all run-modes, this should be expanded in your tenant codebase when you &lt;a href=&quot;/manifesto/project/#project-archetype&quot;&gt;generate it for your project using archetype&lt;/a&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Run Mode&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config&lt;/td&gt;
-      &lt;td&gt;default config for all instances&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.author&lt;/td&gt;
-      &lt;td&gt;author instance with specific author configs&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.author.forms&lt;/td&gt;
-      &lt;td&gt;author instance with Adobe Forms configs&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.author.localdev&lt;/td&gt;
-      &lt;td&gt;author instance for local development&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.ldap&lt;/td&gt;
-      &lt;td&gt;ldap config for all instances&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.publish&lt;/td&gt;
-      &lt;td&gt;publish instance with specific author configs&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.publish.forms&lt;/td&gt;
-      &lt;td&gt;publish instance with Adobe Forms configs&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;config.publish.localdev&lt;/td&gt;
-      &lt;td&gt;publish on local development&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;If you would like to provide environment specific configurations our recommendation would be to create individual repos for each configuration set, this will ensure that you do not mix prod and dev configs in one repo.&lt;/p&gt;
-
-&lt;h3 id=&quot;running-aem-in-docker&quot;&gt;Running AEM in Docker&lt;/h3&gt;
-
-&lt;p&gt;To start local author AEM 6.5 instance with SP3 instance on port 4502 with Bundled Packages run the following.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle-forms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Starting local publish AEM 6.5 instance with SP3 on port 4503 is a matter of updating a run mode to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publish&lt;/code&gt; and updating ports for accessing the service, and you should get the following.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; publish &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4503&lt;/span&gt;:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30304&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle-forms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you would like to start AEM Bundle version on different port to say run it along existing aem instance all you need to do is change name of your container and its ports like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author65bundle &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4565&lt;/span&gt;:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30365&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.5.3.0-bundle-forms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To start local demo AEM 6.4 instance on port 4502 with Bundled Packages run the following:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.4.0-bundle-forms
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you want to run a base AEM 6.4instance with Service Pack 8 on port 4502 run the following:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; author648 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TZ=Australia/Sydney&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p4502&lt;/span&gt;:8080 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-p30303&lt;/span&gt;:58242 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-aemdesign/aem:6.4.8.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You can checkout all of the available versions of AEM containers in &lt;a href=&quot;https://github.com/aem-design/docker-aem/branches/all&quot;&gt;Docker AEM&lt;/a&gt; Github repo.&lt;/p&gt;
-
-&lt;h3 id=&quot;license&quot;&gt;License&lt;/h3&gt;
-
-&lt;p&gt;You will need a license to activate the instance once it ready as it will prompt you to input your details on License splash screen before you can continue:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/license/license-page.png&quot; alt=&quot;AEM License Page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The confirmation screen will show you what version of AEM you are running.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/license/license-confirm.png&quot; alt=&quot;AEM License Page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Additionally, once you log in, you can visit the &lt;a href=&quot;http://localhost:4502/system/console/productinfo&quot;&gt;Product Info&lt;/a&gt; console to see AEM version. Your version number will be made up of major AEM version and Service Pack Version. For example, if you choose AEM 6.5 with Service Pack 1 its version will be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.5.1.0&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;packages&quot;&gt;Packages&lt;/h3&gt;
-
-&lt;p&gt;You will notice that your bundle container will come with the latest SP installed and other packages. Each bundle image tag has a corresponding branch in GitHub you can check the &lt;a href=&quot;https://github.com/aem-design/aem/blob/6.5.0-bundle/.travis.yml&quot;&gt;.travis.yml&lt;/a&gt; file to see which packages are pre-installed.&lt;/p&gt;
-
-&lt;h3 id=&quot;thank-you&quot;&gt;Thank you&lt;/h3&gt;
-
-&lt;p&gt;Please checkout the docker hub &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;aemdesign/aem&lt;/a&gt; for further details.&lt;/p&gt;
-
-&lt;p&gt;If you would like to contribute or fork the code, you can get it on GitHub &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;https://github.com/aem-design/aem&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bundle version comes with following &lt;a href=&quot;https://github.com/aem-design&quot;&gt;AEM.Design&lt;/a&gt; projects:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core&quot;&gt;aemdesign-aem-core&lt;/a&gt; that contains all of the components code&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-support&quot;&gt;aemdesign-aem-support&lt;/a&gt; that contains all of the supporting content, front-end code and component showcase.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">Building on the previous work Docker Containers Everywhere we have added a new AEM 6.5 Bundle image.</summary></entry></feed>
+&lt;p&gt;Hopefully if you were scared of using java in docker containers after using &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; your fears will wash away with tears of happiness 😂&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="tini" /><summary type="html">I thought AEM does not work in Docker?</summary></entry></feed>
