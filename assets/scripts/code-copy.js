@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var codeBlocks = document.querySelectorAll('.code-copy-header + .highlighter-rouge');
   var copyCodeButtons = document.querySelectorAll('.copy-code-button');
 
+  console.log("loading code-copy", codeBlocks, copyCodeButtons);
+
   copyCodeButtons.forEach((copyCodeButton, index) => {
     const code = codeBlocks[index].innerText;
 
