@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://aem.design/archive/</loc>
-<lastmod>2021-03-14T13:49:18+11:00</lastmod>
+<loc>https://aem.design/archives/</loc>
+<lastmod>2021-03-17T01:07:44+11:00</lastmod>
 </url>
 <url>
-<loc>https://aem.design/archive/data-first-vs-structure-first</loc>
-<lastmod>2021-03-14T13:49:18+11:00</lastmod>
+<loc>https://aem.design/archives/data-first-vs-structure-first</loc>
+<lastmod>2021-03-17T00:53:46+11:00</lastmod>
 </url>
 <url>
-<loc>https://aem.design/archive/davids-model</loc>
-<lastmod>2021-03-14T14:02:20+11:00</lastmod>
+<loc>https://aem.design/archives/davids-model</loc>
+<lastmod>2021-03-17T01:07:44+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/quick-start-guide/</loc>
@@ -42,7 +42,7 @@
 </url>
 <url>
 <loc>https://aem.design/manifesto/principles/</loc>
-<lastmod>2021-03-14T13:49:18+11:00</lastmod>
+<lastmod>2021-03-17T01:07:44+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/manifesto/capabilities/</loc>
@@ -62,7 +62,7 @@
 </url>
 <url>
 <loc>https://aem.design/manifesto/components/</loc>
-<lastmod>2021-03-14T13:49:18+11:00</lastmod>
+<lastmod>2021-03-17T01:07:44+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/manifesto/tenants/</loc>
@@ -102,7 +102,7 @@
 </url>
 <url>
 <loc>https://aem.design/manual/conventions/</loc>
-<lastmod>2021-03-14T13:49:18+11:00</lastmod>
+<lastmod>2021-03-17T01:07:44+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/manual/image-conventions/</loc>
@@ -210,7 +210,7 @@
 </url>
 <url>
 <loc>https://aem.design/blog/</loc>
-<lastmod>2021-03-14T13:37:45+11:00</lastmod>
+<lastmod>2021-03-17T00:29:56+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/categories/</loc>
@@ -222,7 +222,7 @@
 </url>
 <url>
 <loc>https://aem.design/</loc>
-<lastmod>2020-12-17T23:12:58+11:00</lastmod>
+<lastmod>2021-03-16T23:57:43+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/.well-known/acme-challenge/itRp_hjGd8CCg71WLG3yq3OvOzlSKPoWj1omz7RXmCQ</loc>
