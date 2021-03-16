@@ -75,12 +75,14 @@ logo: "/assets/images/logo/aem-design2.png"
 
 head_scripts:
   - /assets/scripts/lightbox.js
+  - /assets/scripts/code-copy.js
   - https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js
 
 head_styles:
   - https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css
   - /assets/styles/head.css
   - /assets/styles/tiny-slider.css
+  - /assets/styles/code-copy.css
 
 # Social Sharing
 twitter:
