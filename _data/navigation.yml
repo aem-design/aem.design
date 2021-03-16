@@ -11,8 +11,8 @@ main:
     url: /manifesto/
   - title: "Manual"
     url: /manual/
-  - title: "Archive"
-    url: /archive/
+  - title: "Archives"
+    url: /archives/
   - title: "Blog"
     url: /blog/
   - title: "About"
