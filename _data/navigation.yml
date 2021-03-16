@@ -5,6 +5,8 @@ main:
   - title: "Chat"
     target: _blank
     url: https://gitter.im/aem-design/Lobby
+  - title: "Blog"
+    url: /blog/
   - title: "Quick-Start Guide"
     url: /quick-start-guide/
   - title: "Manifesto"
@@ -13,8 +15,6 @@ main:
     url: /manual/
   - title: "Archives"
     url: /archives/
-  - title: "Blog"
-    url: /blog/
   - title: "About"
     url: /about/
 #  - title: "Search"
