@@ -35,7 +35,7 @@ I recommend not to worry about a declared data structure in an ERD sense. Initia
 Learn to love nt:unstructured (& friends) in development.
 
 
-I think [Stefano pretty much sums this one up](/archive/data-first-vs-structure-first).
+I think [Stefano pretty much sums this one up](/archives/data-first-vs-structure-first).
 
 My bottom-line: Structure is expensive and in many cases it is entirely unnecessary to explicitly declare structure to the underlying storage.
 

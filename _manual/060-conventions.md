@@ -15,7 +15,7 @@ Philosophy of AEM.Design is to empower all developers (FED/BED) to be able to ac
 
 Major principles that should be considered as you start learning
 
-* Emphases on Content - ensure that as much structure that required is converted into the content so that its changeable post-deployment, this is following [Davids #1 Rule](/archive/davids-model#rule-1-data-first-structure-later-maybe).
+* Emphases on Content - ensure that as much structure that required is converted into the content so that its changeable post-deployment, this is following [Davids #1 Rule](/archives/davids-model#rule-1-data-first-structure-later-maybe).
 * Abstract AEM Knowledge - generalise and abstract AEM specific knowledge into patterns that other developers can use without immediately needing to understand underlying principles.  
 * Component Grouping and Naming - components should be named concerning their content and AEM purpose, and not about their end-use, see more details in [Component Grouping and Naming](/manual/conventions/#component-grouping-and-naming).
 * Component Variants and Badges - ability to represent different structures of component content without having to resort to using CSS to hide available content; see more details in [Component Variants and Badges](/manual/conventions/#component-variants-and-badges). 

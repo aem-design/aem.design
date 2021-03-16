@@ -16,7 +16,7 @@ In AEM components should be understood from followgin perspectives:
 
 * Authored Content - content that is input into component using component Dialog, default content added for a component in a template to enable default state as component is placed on a page, and component static values that ensure component operation without Authors input.
 * Component Experience - how components content is used to create desired experience on pages and how component content is used in other components
-* Component Data - how component data is contributing to overal data footprint of CMS, this follows [Rule #1: Data First, Structure Later. Maybe.](/archive/davids-model#rule-1-data-first-structure-later-maybe)
+* Component Data - how component data is contributing to overal data footprint of CMS, this follows [Rule #1: Data First, Structure Later. Maybe.](/archives/davids-model#rule-1-data-first-structure-later-maybe)
 * Supporting Experiences
 
 ## Dialogs

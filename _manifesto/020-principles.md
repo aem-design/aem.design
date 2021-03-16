@@ -12,7 +12,7 @@ redirect_from:
 
 ## Contentricity
 
-[Davids Model - 7 Rules](/archive/davids-model) is reference to fundamental approach behind AEM(CQ) architecture. All of the technical frameworks that make up the platform are all targeted to support Content Centric approach of the CMS. This is different to other CMS platforms and something that must be learned and iterated to all involved.
+[Davids Model - 7 Rules](/archives/davids-model) is reference to fundamental approach behind AEM(CQ) architecture. All of the technical frameworks that make up the platform are all targeted to support Content Centric approach of the CMS. This is different to other CMS platforms and something that must be learned and iterated to all involved.
 
 Major benefit of Content Centric approach is that Governance of the CMS and its development is managed by Business. This is done by managing the experiences of the platform. The platform is a facilitator and development effort is used to enrich content presentation and not extending the platform capabilities.
 

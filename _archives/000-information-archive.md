@@ -15,4 +15,4 @@ This section provides an archive of pages that are relevant for learning as foun
 
 ## Table of Contents
 
-{% include nav_list.html nav="archives" navtype="ol" navstyle="list-style-type: decimal" childrenFor="/archive/" showtitle=false %}
+{% include nav_list.html nav="archives" navtype="ol" navstyle="list-style-type: decimal" childrenFor="/archives/" showtitle=false %}
