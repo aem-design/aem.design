@@ -53,18 +53,6 @@ feature_row:
     excerpt: "More posts from us"
     url: "/blog/"
     btn_label: "Blog"
-#  - image_path: /assets/images/mm-responsive-feature.png
-#    alt: "fully responsive"
-#    title: "Responsive Layouts"
-#    excerpt: "Built on HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
-#    url: "/docs/layouts/"
-#    btn_label: "Learn More"
-#  - image_path: /assets/images/mm-free-feature.png
-#    alt: "100% free"
-#    title: "100% Free"
-#    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!"
-#    url: "/docs/license/"
-#    btn_label: "Learn More"
 intro:
   - excerpt: '[<img src="/assets/images/brave/cropped-brave_appicon_release-270x270.png" alt="Download Brave and Send us a Tip" style="background-size: contain; width: 32px; height: 32px;"/> Download Brave and Send us a Tip!](https://brave.com/aem741) <br> Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
 ---
