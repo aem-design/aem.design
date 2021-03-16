@@ -25,6 +25,7 @@ jobs:
       - name: build
         run: |
           export LANG=en_US.UTF-8
+          export JEKYLL_ENV=production
           bundle install
           bundle exec jekyll build --future --profile --trace  --verbose
       - name: deploy
