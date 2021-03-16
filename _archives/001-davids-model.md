@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "David's Model"
-permalink: /archive/davids-model
+permalink: /archives/davids-model
 excerpt: "A guide for content modeling by David Nuescheler"
 date:   2007-08-22 11:30:43 -0000
 comments: true

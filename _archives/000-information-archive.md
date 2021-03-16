@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Information Archive"
-permalink: /archive/
+permalink: /archives/
 excerpt: "Relevant articles archived to ensure they can be accessed easily."
 author: max@aem.design
 comments: true
@@ -15,4 +15,4 @@ This section provides an archive of pages that are relevant for learning as foun
 
 ## Table of Contents
 
-{% include nav_list.html nav="archive" navtype="ol" navstyle="list-style-type: decimal" childrenFor="/archive/" showtitle=false %}
+{% include nav_list.html nav="archives" navtype="ol" navstyle="list-style-type: decimal" childrenFor="/archive/" showtitle=false %}

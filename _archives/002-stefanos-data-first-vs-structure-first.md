@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Data First vs. Structure First"
-permalink: /archive/data-first-vs-structure-first
+permalink: /archives/data-first-vs-structure-first
 excerpt: "by Stefano Mazzocchi"
 date:   2005-07-28 16:41:45 -0700
 comments: true

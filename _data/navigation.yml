@@ -95,7 +95,7 @@ manual:
         url: /manual/dls/
 
 #archive links
-archive:
+archives:
   - title: Archives
     url: /archives/
     children:
