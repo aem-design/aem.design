@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T09:48:44+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T09:59:08+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-04-25T13:30:25+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.&lt;/p&gt;
+
+&lt;p&gt;Subsequent request to the same page will be served from the cached content in Akamai rather than hitting dispatcher / publisher.&lt;/p&gt;
+
+&lt;p&gt;Anytime did you struggled to get the latest HTML from publisher instead of Akamai cache?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Well we did!!!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-we-have-done&quot;&gt;What we have done&lt;/h1&gt;
+
+&lt;p&gt;We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.&lt;/p&gt;
+
+&lt;p&gt;So, after author change a page content and publish it our Akamai cache flush agent will pick that page and request to akamai for clearing cache. 
+So that user of that page will get the latest content instead of cached old content from Akamai.&lt;/p&gt;
+
+&lt;p&gt;It is all automated, we don’t need to clear the Akamai cache when new product goes live to prod.&lt;/p&gt;
+
+&lt;p&gt;We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-are-all-details-do-you-need-to-setup-flush-agent&quot;&gt;What are all details do you need to setup flush agent&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        1.  akamaiDomain
+        2.  akamaiBaseUrl 
+        3.  akamaiPurgeUrlPath
+        4.  clientToken
+        5.  clientAccessToken
+        6.  clientSecret
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)&lt;/p&gt;
+
+&lt;h1 id=&quot;how-we-are-managing-the-secrets&quot;&gt;How we are managing the secrets&lt;/h1&gt;
+
+&lt;p&gt;After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-configure-akamai-flush-agent-on-your-aem-author-instance&quot;&gt;How to configure Akamai flush agent on your AEM Author instance&lt;/h1&gt;
+
+&lt;p&gt;By Assuming you have installed aem design code into your local AEM.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/miscadmin.png&quot; alt=&quot;miscadmin&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click new from tool bar and you will see the Create Page dialog.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/create_agent.png&quot; alt=&quot;create new agent&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Select “Akamai Publishing Replication” and give your replication agent a name &amp;amp; title.&lt;/li&gt;
+  &lt;li&gt;Click on create and open the newly created agent on the list. (it will be the last entry on the list)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on Edit and provide the information required and click on Ok.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/settings_tab.png&quot; alt=&quot;settings tab&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/config_tab.png&quot; alt=&quot;config_tab&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/enabled_agent.png&quot; alt=&quot;success&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Click on Test Connection link and make sure you have all the correct configurations.&lt;/li&gt;
+  &lt;li&gt;You should see “Replication test succeeded”&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;This component will save our time whenever we need to update the content in AEM pages.&lt;/p&gt;
+
+&lt;p&gt;Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.&lt;/p&gt;
+
+&lt;p&gt;Feel free to reach out to us if you have any questions.&lt;/p&gt;</content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html">Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent</summary></entry><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
 
 &lt;p&gt;If you take a look &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;docker hub&lt;/a&gt; and &lt;a href=&quot;https://github.com/aem-design/docker-aem&quot;&gt;docker-aem&lt;/a&gt; branches you will find a couple of new additions that you will find helpful.&lt;/p&gt;
 
@@ -1010,81 +1086,4 @@ ________________________________________________________________________________
 
 &lt;p&gt;This provides a lot convenience and adds polish to your project. Having this library in docker container gets you away from having unnecessary scripts in your pipelines.&lt;/p&gt;
 
-&lt;p&gt;As always checkout the code, fork, extend and contribute if you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="travis" /><summary type="html">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue</summary></entry><entry><title type="html">AEM and Docker 😍😘</title><link href="https://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98" rel="alternate" type="text/html" title="AEM and Docker 😍😘" /><published>2019-09-04T00:37:00+10:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2019/09/04/aem-and-docker</id><content type="html" xml:base="https://aem.design/blog/2019/09/04/aem-and-docker%F0%9F%98%8D%F0%9F%98%98">&lt;p&gt;By now you would have seen previous posts &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt;. You might have tried out those images, if you have not, I encourage you to try them out, you will like it.&lt;/p&gt;
-
-&lt;p&gt;Now that you have tried those images out, one major question you may ask “is that for development only?”.&lt;/p&gt;
-
-&lt;p&gt;You might even think/say “I thought AEM does not work in Docker”?!&lt;/p&gt;
-
-&lt;p&gt;And the answer to both of those questions is no. You should be using Docker in production, if you are not you are missing out.&lt;/p&gt;
-
-&lt;p&gt;Docker is awesome, period. It once and for all creates a method for establishing consistency with pure simplicity. One of Docker best practices is to have one process per container, many great reasons why but not going to go into them, which is what AEM and mainly java does not play along with easily and we will return to this in a moment.&lt;/p&gt;
-
-&lt;p&gt;As far as AEM is concerned the issues that you might experience running AEM in a container comes from underlying Java Forking. Googling this will give more technical details but at high level this means that Java main process creates new process that are not “children” on the main process.&lt;/p&gt;
-
-&lt;p&gt;So AEM runs on Java and it forks. In AEM most obvious things that trigger this are workflows that execute external processes, external services that AEM hosts like image service and repository services that handle all of the content wiring and reading, sounds important right. So if we can solve this forking thing then the issue will go away.&lt;/p&gt;
-
-&lt;p&gt;This manifest a problem of running AEM in a container creates following situation:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;you start a docker container&lt;/li&gt;
-  &lt;li&gt;docker container starts and binds to main java process
-    &lt;ul&gt;
-      &lt;li&gt;any of its subsequent children processes are not managed by container&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;you try to stop the container docker will send a shutdown signal to container
-    &lt;ul&gt;
-      &lt;li&gt;that will pass that to the java process
-        &lt;ul&gt;
-          &lt;li&gt;that java process will then respect that signal and gracefully close things it controls
-            &lt;ul&gt;
-              &lt;li&gt;but will leave a bunch of processes orphaned 😞&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;docker container becomes unresponsive/hangs&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;you try to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker kill&lt;/code&gt; the container and all its internal orphaned processes
-    &lt;ul&gt;
-      &lt;li&gt;one of which will be the repository so you will lose content 😱 no happy ending here&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ok so yeah not so cool!&lt;/p&gt;
-
-&lt;p&gt;But what is cool is a project tini by Thomas Orozco that provides &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;A tiny but valid &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;init&lt;/code&gt; for containers&lt;/a&gt;. This solves the forking issue once and for all.&lt;/p&gt;
-
-&lt;p&gt;Adding &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; as the entry point into your docker containers allows consistency in handling processes in that container.&lt;/p&gt;
-
-&lt;p&gt;This is how the implementation in a base container &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; looks like.&lt;/p&gt;
-
-&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;       centos:latest&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;MAINTAINER&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; devops &amp;lt;devops@aem.design&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;LABEL&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;   os=&quot;centos&quot; \&lt;/span&gt;
-        container.description=&quot;centos with tini&quot; \
-        version=&quot;0.18.0&quot; \
-        imagename=&quot;centos-tini&quot;
-
-
-&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_VERSION=&quot;v0.18.0&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_KEY=&quot;595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ARG&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; TINI_URL=&quot;https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-amd64&quot;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /bin/tini &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_URL&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;.asc &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /bin/tini.asc &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gpg &lt;span class=&quot;nt&quot;&gt;--keyserver&lt;/span&gt; hkp://p80.pool.sks-keyservers.net:80 &lt;span class=&quot;nt&quot;&gt;--recv-keys&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TINI_KEY&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; gpg &lt;span class=&quot;nt&quot;&gt;--verify&lt;/span&gt; /bin/tini.asc &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x /bin/tini
-
-&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;/bin/tini&quot;, &quot;--&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Very simple image with key line &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENTRYPOINT [&quot;/bin/tini&quot;, &quot;--&quot;]&lt;/code&gt; that ensures that all container commands will be handled by &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt;. So this means that anytime a process is spawned in the container it will be a child of &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt;. So when it comes to closing the container &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; will close all processes and thus you will have a graceful container stoppage.&lt;/p&gt;
-
-&lt;p&gt;Further reviewing the image for &lt;a href=&quot;https://github.com/aem-design/aem&quot;&gt;aem&lt;/a&gt; you will find similar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENTRYPOINT [&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/aem/run-tini.sh&quot;]&lt;/code&gt; that uses an adopted script to run command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exec java $AEM_JVM_OPTS $AEM_RUNMODE -jar $AEM_JARFILE $AEM_START_OPTS&lt;/code&gt; to stat the AEM java process. This ensure that the execute command is passed to &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; for handling.&lt;/p&gt;
-
-&lt;p&gt;You can also use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD [&quot;/dispatcher/start.sh&quot;]&lt;/code&gt; as used in &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; image to the same effect. Docker appends the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt; statement to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; command and as &lt;a href=&quot;https://github.com/aem-design/dispatcher&quot;&gt;dispatcher&lt;/a&gt; is based on &lt;a href=&quot;https://github.com/aem-design/centos-tini&quot;&gt;centos-tini&lt;/a&gt; its final command that will be executed will be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[&quot;/bin/tini&quot;, &quot;--&quot;, &quot;/dispatcher/start.sh&quot;]&lt;/code&gt;, once again letting tini manage processes.&lt;/p&gt;
-
-&lt;p&gt;Hopefully if you were scared of using java in docker containers after using &lt;a href=&quot;https://github.com/krallin/tini&quot;&gt;tini&lt;/a&gt; your fears will wash away with tears of happiness 😂&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="tini" /><summary type="html">I thought AEM does not work in Docker?</summary></entry></feed>
+&lt;p&gt;As always checkout the code, fork, extend and contribute if you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="travis" /><summary type="html">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue</summary></entry></feed>
