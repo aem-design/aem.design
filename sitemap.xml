@@ -189,10 +189,6 @@
 <lastmod>2021-03-14T01:50:42+11:00</lastmod>
 </url>
 <url>
-<loc>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</loc>
-<lastmod>2021-04-23T17:56:17+10:00</lastmod>
-</url>
-<url>
 <loc>https://aem.design/blog/2020/07/24/using-docker-to-build-code</loc>
 <lastmod>2021-03-14T01:50:42+11:00</lastmod>
 </url>
@@ -207,6 +203,10 @@
 <url>
 <loc>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</loc>
 <lastmod>2021-03-17T01:12:49+11:00</lastmod>
+</url>
+<url>
+<loc>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</loc>
+<lastmod>2021-04-25T12:41:04+10:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/about/</loc>
@@ -312,9 +312,6 @@
 <loc>https://aem.design/tags/handson/</loc>
 </url>
 <url>
-<loc>https://aem.design/tags/akamai/</loc>
-</url>
-<url>
 <loc>https://aem.design/tags/structure/</loc>
 </url>
 <url>
@@ -322,6 +319,9 @@
 </url>
 <url>
 <loc>https://aem.design/tags/automation-testing/</loc>
+</url>
+<url>
+<loc>https://aem.design/tags/akamai/</loc>
 </url>
 <url>
 <loc>https://aem.design/categories/blog/</loc>

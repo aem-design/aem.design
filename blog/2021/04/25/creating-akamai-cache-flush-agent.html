@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>AEM Akamai Cache flush Agent 😍 - AEM.Design</title>
-<meta name="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself">
+<meta name="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent">
 
 
   <meta name="author" content="Seenivasa Ragavan Soundar Rajan">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent">
 
 
-  <meta property="og:description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself">
+  <meta property="og:description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent">
 
 
 
@@ -36,11 +36,11 @@
 
 
 
-  <meta property="article:published_time" content="2020-04-25T00:00:00+10:00">
+  <meta property="article:published_time" content="2021-04-25T00:00:00+10:00">
 
 
 
-  <meta property="article:modified_time" content="2021-04-23T17:56:17+10:00">
+  <meta property="article:modified_time" content="2021-04-25T12:41:04+10:00">
 
 
 
@@ -355,9 +355,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="AEM Akamai Cache flush Agent 😍">
-    <meta itemprop="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself">
-    <meta itemprop="datePublished" content="2020-04-25T00:00:00+10:00">
-    <meta itemprop="dateModified" content="2021-04-23T17:56:17+10:00">
+    <meta itemprop="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent">
+    <meta itemprop="datePublished" content="2021-04-25T00:00:00+10:00">
+    <meta itemprop="dateModified" content="2021-04-25T12:41:04+10:00">
 
     <div class="page__inner-wrap">
       
@@ -378,7 +378,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -392,11 +392,63 @@
         
         <h1 id="introduction">Introduction</h1>
 
-<p>Intro goes here</p>
+<p>After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.</p>
+
+<p>Subsequent request to the same page will be served from the cached content in Akamai rather than hitting dispatcher / publisher.</p>
+
+<p>Anytime did you struggled to get the latest HTML from publisher instead of Akamai cache?</p>
+
+<p><strong><em>Well we did!!!</em></strong></p>
+
+<h1 id="what-we-have-done">What we have done</h1>
+
+<p>We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.</p>
+
+<p>So, after author change a page content and publish it our Akamai cache flush agent will pick that page and request to akamai for clearing cache. 
+So that user of that page will get the latest content instead of cached old content from Akamai.</p>
+
+<p>It is all automated, we don’t need to clear the Akamai cache when new product goes live to prod.</p>
+
+<p>We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.</p>
+
+<h1 id="what-are-all-details-do-you-need-to-setup-flush-agent">What are all details do you need to setup flush agent</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        1.  akamaiDomain
+        2.  akamaiBaseUrl 
+        3.  akamaiPurgeUrlPath
+        4.  clientToken
+        5.  clientAccessToken
+        6.  clientSecret
+</code></pre></div></div>
+
+<p>If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)</p>
+
+<h1 id="how-we-are-managing-the-secrets">How we are managing the secrets</h1>
+
+<p>After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.</p>
+
+<h1 id="how-to-configure-akamai-flush-agent-on-your-aem-author-instance">How to configure Akamai flush agent on your AEM Author instance</h1>
+
+<p>By Assuming you have installed aem design code into your local AEM.</p>
+
+<ol>
+  <li>Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author</li>
+  <li>Click new from tool bar and you will see the Create Page dialog.</li>
+  <li>Select “Akamai Publishing Replication” and give your replication agent a name &amp; title.</li>
+  <li>Click on create and open the newly created agent on the list. (it will be the last entry on the list</li>
+  <li>Click on Edit and provide the information required and click on Ok.</li>
+  <li>You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.</li>
+  <li>Click on Test Connection link and make sure you have all the correct configurations.</li>
+  <li>You should see “Test Succeeded”</li>
+</ol>
 
 <h1 id="conclusion">Conclusion</h1>
 
-<p>Conclusion goes here</p>
+<p>This component will save our time whenever we need to update the content in AEM pages.</p>
+
+<p>Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.</p>
+
+<p>Feel free to reach out to us if you have any questions.</p>
 
         
       </section>
@@ -445,7 +497,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-23">April 23, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-25">April 25, 2021</time></p>
 
 
       </footer>
@@ -466,12 +518,11 @@
       
   <nav class="pagination">
     
-      <a href="/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" class="pagination--pager" title="AEM SaaS Hands On 😍🚀🔭
+      <a href="/blog/2021/03/16/aem-sdk-jdk11" class="pagination--pager" title="AEM SDK and JDK11
 ">Previous</a>
     
     
-      <a href="/blog/2020/07/24/using-docker-to-build-code" class="pagination--pager" title="Using Docker to Build Code
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
