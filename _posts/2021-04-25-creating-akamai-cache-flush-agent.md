@@ -65,7 +65,7 @@ By Assuming you have installed aem design code into your local AEM.
 
 1. Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author
 
-   ![MISCADMIN](/assets/images/replication/akamai/miscadmin.png)
+   ![miscadmin](/assets/images/replication/akamai/miscadmin.png)
 
 2. Click new from tool bar and you will see the Create Page dialog.
    
