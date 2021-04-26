@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T10:28:32+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T10:31:22+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-04-26T10:27:12+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.&lt;/p&gt;
+
+&lt;p&gt;Subsequent request to the same page will be served from the cached content in Akamai rather than hitting dispatcher / publisher.&lt;/p&gt;
+
+&lt;p&gt;Anytime did you struggled to get the latest HTML from publisher instead of Akamai cache?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Well we did!!!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-we-have-done&quot;&gt;What we have done&lt;/h1&gt;
+
+&lt;p&gt;We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.&lt;/p&gt;
+
+&lt;p&gt;So, after author change a page content and publish it our Akamai cache flush agent will pick that page and request to akamai for clearing cache. 
+So that user of that page will get the latest content instead of cached old content from Akamai.&lt;/p&gt;
+
+&lt;p&gt;It is all automated, we don’t need to clear the Akamai cache when new product goes live to prod.&lt;/p&gt;
+
+&lt;p&gt;We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-are-all-details-do-you-need-to-setup-flush-agent&quot;&gt;What are all details do you need to setup flush agent&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        1.  akamaiDomain
+        2.  akamaiBaseUrl 
+        3.  akamaiPurgeUrlPath
+        4.  clientToken
+        5.  clientAccessToken
+        6.  clientSecret
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)&lt;/p&gt;
+
+&lt;h1 id=&quot;how-we-are-managing-the-secrets&quot;&gt;How we are managing the secrets&lt;/h1&gt;
+
+&lt;p&gt;After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-configure-akamai-flush-agent-on-your-aem-author-instance&quot;&gt;How to configure Akamai flush agent on your AEM Author instance&lt;/h1&gt;
+
+&lt;p&gt;By Assuming you have installed aem design code into your local AEM.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/miscadmin.png&quot; alt=&quot;miscadmin&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click new from tool bar and you will see the Create Page dialog.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/create_agent.png&quot; alt=&quot;create new agent&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Select “Akamai Publishing Replication” and give your replication agent a name &amp;amp; title.&lt;/li&gt;
+  &lt;li&gt;Click on create and open the newly created agent on the list. (it will be the last entry on the list)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on Edit and provide the information required and click on Ok.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/settings_tab.png&quot; alt=&quot;settings tab&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/config_tab.png&quot; alt=&quot;config_tab&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/enabled_agent.png&quot; alt=&quot;success&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Click on Test Connection link and make sure you have all the correct configurations.&lt;/li&gt;
+  &lt;li&gt;You should see “Replication test succeeded”&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;This component will save our time whenever we need to update the content in AEM pages.&lt;/p&gt;
+
+&lt;p&gt;Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.&lt;/p&gt;
+
+&lt;p&gt;Feel free to reach out to us if you have any questions.&lt;/p&gt;</content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html">Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent</summary></entry><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
 
 &lt;p&gt;If you take a look &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;docker hub&lt;/a&gt; and &lt;a href=&quot;https://github.com/aem-design/docker-aem&quot;&gt;docker-aem&lt;/a&gt; branches you will find a couple of new additions that you will find helpful.&lt;/p&gt;
 
@@ -1020,59 +1096,4 @@ docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quo
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker start author
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This process can be used to update other settings as you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">If you have to update existing docker container properties you can do it here is how</summary></entry><entry><title type="html">Trigger Travis pipeline from another pipeline 👉📟🚀</title><link href="https://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80" rel="alternate" type="text/html" title="Trigger Travis pipeline from another pipeline 👉📟🚀" /><published>2019-09-19T00:37:00+10:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline</id><content type="html" xml:base="https://aem.design/blog/2019/10/01/trigger-travis-pipeline-from-another-pipeline%F0%9F%91%89%F0%9F%93%9F%F0%9F%9A%80">&lt;p&gt;Keeping with DevOps spirit mean that things on you project should be very modular, this then will mean that you will have a &lt;a href=&quot;https://travis-ci.org/aem-design&quot;&gt;lot of pipelines&lt;/a&gt;. Eventually you will come to scenario that will require pipelines to start other pipelines.&lt;/p&gt;
-
-&lt;p&gt;In our scenario whenever pipeline for &lt;a href=&quot;https://travis-ci.org/aem-design/aemdesign-aem-core&quot;&gt;aemdesign-aem-core&lt;/a&gt; succeeds its artifacts should be used in creating a docker container pipeline &lt;a href=&quot;https://travis-ci.org/aem-design/aem&quot;&gt;aem-design/aem&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Current Travis definition does not have OOTB option to do this. But fortunately travis comes with API that can be used to interrogate Travis config as well as &lt;a href=&quot;https://docs.travis-ci.com/user/triggering-builds/&quot;&gt;trigger builds with API V3&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The process to trigger API is simple enough&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Get a Travis API token from &lt;a href=&quot;https://travis-ci.com/profile&quot;&gt;Travis Profile page&lt;/a&gt;, this is a manual step.&lt;/li&gt;
-  &lt;li&gt;Send a POST request with specific headers to the API endpoint for your repo.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;And that’s it really, all you need to do now is do the POST somehow.&lt;/p&gt;
-
-&lt;p&gt;As you come to expect, to make this as simple as possible for reuse in pipelines or manual execution, abstracting the API into a handy docker &lt;a href=&quot;https://hub.docker.com/r/aemdesign/tavis-build-trigger&quot;&gt;tavis-build-trigger&lt;/a&gt; image is easier done that writing about it.&lt;/p&gt;
-
-&lt;p&gt;The approach for docker container is to leverage NodeJS to make the request to API, abstract any logic into a nice package that can be executed anywhere where docker is available.&lt;/p&gt;
-
-&lt;p&gt;NPM has a very handy &lt;a href=&quot;https://www.npmjs.com/package/request&quot;&gt;request&lt;/a&gt; module that makes accessing URI’s as easy as using &lt;a href=&quot;https://curl.haxx.se/&quot;&gt;curl&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Furthermore as the new &lt;a href=&quot;https://github.com/aem-design/travis-build-trigger&quot;&gt;tavis-build-trigger&lt;/a&gt; NodeJS app is a command line app, its mandatory to give optimal command line experience using &lt;a href=&quot;https://www.npmjs.com/package/yargs&quot;&gt;yargs&lt;/a&gt;, after all, it’s little details that count. &lt;a href=&quot;https://www.npmjs.com/package/yargs&quot;&gt;Yargs&lt;/a&gt; provides you with a very simple way of creating beautiful command line experiences without the arghh ( its a pirate-themed library).&lt;/p&gt;
-
-&lt;p&gt;When you execute the app though docker without any parameters&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; aemdesign/travis-trigger-build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You will be greeted with a nice command line helper menu in case you did not read the &lt;a href=&quot;https://github.com/aem-design/travis-build-trigger/blob/master/README.md&quot;&gt;README&lt;/a&gt; to get you going with command line options.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Usage: travis-trigger-build.js &amp;lt;&lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;options]
-
-Commands:
-  travis-trigger-build.js start-branch-build                         Start repo build &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;a particular branch
-  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;github_repo,travis_token,github_user]                                                                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;aliases: sbb]
-
-Options:
-  &lt;span class=&quot;nt&quot;&gt;--help&lt;/span&gt;, &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;       show &lt;span class=&quot;nb&quot;&gt;help&lt;/span&gt;                                                                                             &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;boolean]
-  &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;, &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;    show version                                                                                          &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;boolean]
-  &lt;span class=&quot;nt&quot;&gt;--debug&lt;/span&gt;, &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;      debug mode                                                                                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;boolean]
-  &lt;span class=&quot;nt&quot;&gt;--github_repo&lt;/span&gt;    repo name                                                                                            &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;required]
-  &lt;span class=&quot;nt&quot;&gt;--github_user&lt;/span&gt;    github user name where repo is located                                                               &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;required]
-  &lt;span class=&quot;nt&quot;&gt;--travis_token&lt;/span&gt;   travis access token                                                                                  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;required]
-  &lt;span class=&quot;nt&quot;&gt;--github_branch&lt;/span&gt;  github branch to trigger build on                                                           &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;default: &lt;span class=&quot;s2&quot;&gt;&quot;master&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;--travis_url&lt;/span&gt;     travis url to use to trigger &lt;span class=&quot;nb&quot;&gt;jobs&lt;/span&gt;                                  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;default: &lt;span class=&quot;s2&quot;&gt;&quot;https://api.travis-ci.org/repo/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-
-Examples:
-  node generator.js sbb &lt;span class=&quot;nt&quot;&gt;--github_user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;aem-design &lt;span class=&quot;nt&quot;&gt;--github_repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;aem &lt;span class=&quot;nt&quot;&gt;--github_token&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;TOKEN&amp;gt;
-
-Not enough non-option arguments: got 0, need at least 1
-________________________________________________________________________________
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This provides a lot convenience and adds polish to your project. Having this library in docker container gets you away from having unnecessary scripts in your pipelines.&lt;/p&gt;
-
-&lt;p&gt;As always checkout the code, fork, extend and contribute if you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="travis" /><summary type="html">When you want to trigger travis pipeline from any other pipeline a docker app will come to the rescue</summary></entry></feed>
+&lt;p&gt;This process can be used to update other settings as you wish.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><summary type="html">If you have to update existing docker container properties you can do it here is how</summary></entry></feed>
