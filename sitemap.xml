@@ -189,6 +189,10 @@
 <lastmod>2021-03-14T01:50:42+11:00</lastmod>
 </url>
 <url>
+<loc>https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD</loc>
+<lastmod>2020-03-18T17:26:47+11:00</lastmod>
+</url>
+<url>
 <loc>https://aem.design/blog/2020/07/24/using-docker-to-build-code</loc>
 <lastmod>2021-03-14T01:50:42+11:00</lastmod>
 </url>
@@ -203,10 +207,6 @@
 <url>
 <loc>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</loc>
 <lastmod>2021-03-17T01:12:49+11:00</lastmod>
-</url>
-<url>
-<loc>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</loc>
-<lastmod>2021-04-25T13:30:25+10:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/about/</loc>
@@ -319,9 +319,6 @@
 </url>
 <url>
 <loc>https://aem.design/tags/automation-testing/</loc>
-</url>
-<url>
-<loc>https://aem.design/tags/akamai/</loc>
 </url>
 <url>
 <loc>https://aem.design/categories/blog/</loc>

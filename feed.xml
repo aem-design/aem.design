@@ -1,80 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T10:21:55+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-04-25T13:30:25+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.&lt;/p&gt;
-
-&lt;p&gt;Subsequent request to the same page will be served from the cached content in Akamai rather than hitting dispatcher / publisher.&lt;/p&gt;
-
-&lt;p&gt;Anytime did you struggled to get the latest HTML from publisher instead of Akamai cache?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Well we did!!!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;what-we-have-done&quot;&gt;What we have done&lt;/h1&gt;
-
-&lt;p&gt;We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.&lt;/p&gt;
-
-&lt;p&gt;So, after author change a page content and publish it our Akamai cache flush agent will pick that page and request to akamai for clearing cache. 
-So that user of that page will get the latest content instead of cached old content from Akamai.&lt;/p&gt;
-
-&lt;p&gt;It is all automated, we don’t need to clear the Akamai cache when new product goes live to prod.&lt;/p&gt;
-
-&lt;p&gt;We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-are-all-details-do-you-need-to-setup-flush-agent&quot;&gt;What are all details do you need to setup flush agent&lt;/h1&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        1.  akamaiDomain
-        2.  akamaiBaseUrl 
-        3.  akamaiPurgeUrlPath
-        4.  clientToken
-        5.  clientAccessToken
-        6.  clientSecret
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)&lt;/p&gt;
-
-&lt;h1 id=&quot;how-we-are-managing-the-secrets&quot;&gt;How we are managing the secrets&lt;/h1&gt;
-
-&lt;p&gt;After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.&lt;/p&gt;
-
-&lt;h1 id=&quot;how-to-configure-akamai-flush-agent-on-your-aem-author-instance&quot;&gt;How to configure Akamai flush agent on your AEM Author instance&lt;/h1&gt;
-
-&lt;p&gt;By Assuming you have installed aem design code into your local AEM.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/miscadmin.png&quot; alt=&quot;miscadmin&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click new from tool bar and you will see the Create Page dialog.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/create_agent.png&quot; alt=&quot;create new agent&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Select “Akamai Publishing Replication” and give your replication agent a name &amp;amp; title.&lt;/li&gt;
-  &lt;li&gt;Click on create and open the newly created agent on the list. (it will be the last entry on the list)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click on Edit and provide the information required and click on Ok.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/settings_tab.png&quot; alt=&quot;settings tab&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/config_tab.png&quot; alt=&quot;config_tab&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/images/replication/akamai/enabled_agent.png&quot; alt=&quot;success&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Click on Test Connection link and make sure you have all the correct configurations.&lt;/li&gt;
-  &lt;li&gt;You should see “Replication test succeeded”&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
-
-&lt;p&gt;This component will save our time whenever we need to update the content in AEM pages.&lt;/p&gt;
-
-&lt;p&gt;Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.&lt;/p&gt;
-
-&lt;p&gt;Feel free to reach out to us if you have any questions.&lt;/p&gt;</content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html">Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent</summary></entry><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T10:28:32+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
 
 &lt;p&gt;If you take a look &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;docker hub&lt;/a&gt; and &lt;a href=&quot;https://github.com/aem-design/docker-aem&quot;&gt;docker-aem&lt;/a&gt; branches you will find a couple of new additions that you will find helpful.&lt;/p&gt;
 
@@ -611,7 +535,72 @@ To add this missing entry do this:&lt;/p&gt;
 
 &lt;p&gt;There is a whole array of documentation available at your favourite site in the &lt;a href=&quot;https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html&quot;&gt;Experience Manager Cloud Manager Help&lt;/a&gt; section, explore the new capability that is at your disposal and review official docs if you get stuck.&lt;/p&gt;
 
-&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Magento Integration 😍🚀🔭</title><link href="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM Magento Integration 😍🚀🔭" /><published>2020-02-01T00:37:00+11:00</published><updated>2020-03-18T17:26:47+11:00</updated><id>https://aem.design/blog/2020/03/06/aem-magento-integration</id><content type="html" xml:base="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;h1 id=&quot;aem-with-magento-integration&quot;&gt;AEM with Magento Integration&lt;/h1&gt;
+
+&lt;div class=&quot;sticky&quot;&gt;
+    &lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+      &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#aem-with-magento-integration&quot; id=&quot;markdown-toc-aem-with-magento-integration&quot;&gt;AEM with Magento Integration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/nav&gt;
+&lt;/aside&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.&lt;/p&gt;
+
+&lt;p&gt;eCommerce functionality is inherent in AEM which shows from demo sites like we retail.
+As AEM provides very perfect handling of content like authoring and publishing and managing assets, integrating it with eCommerce system provides a perfect way to build a robust eCommerce site.&lt;/p&gt;
+
+&lt;p&gt;AEM connects with eCommerce providers, Like SAP Commerce, Salesforce, Magento and more. AEM provides specific eCommerce frameworks to connect to eCommerce providers.
+In this blog we are going to see how AEM connects to Magento eCommerce. There are two ways to connect to an eCommerce provider Adobe IO or Commerce Integration Framework for a provider.
+Because AEM provides a Commerce Integration Framework connector to connect to Magento, we will be using that. CIF uses GraphQL queries to talk to Magento and bring data.&lt;/p&gt;
+
+&lt;p&gt;Note: To connect to eCommerce providers other than Magento we need to go through Adobe IO. For more info visit. : https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/faq.html&lt;/p&gt;
+
+&lt;p&gt;Let’s jump into the steps to implement CIF now.&lt;/p&gt;
+
+&lt;p&gt;The commerce integration framework can be found at below locations. Adobe provides production ready components also which can be used.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/adobe/aem-core-cif-components&quot;&gt;AEM CIF components&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/adobe/commerce-cif-connector&quot;&gt;AEM- CIF connector and authoring tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Build the CIF connector framework or add in your dependencies. Once installed in AEM we can get option to configure the integration properties.
+Two configurations have to be done. GraphQL client configuration and CIF catalog Magento configuration.&lt;/p&gt;
+
+&lt;p&gt;Below are the steps where we have configured these.&lt;/p&gt;
+
+&lt;p&gt;I.	CIF GraphQL Client Configuration Factory&lt;/p&gt;
+
+&lt;p&gt;Add GraphQL service – https://magento-hostname/graphql&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/aem-magento-integration/graphql-client-configuration.png&quot; alt=&quot;GraphQL client configuration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;II.	CIF Catalog Magento GraphQL Configuration Factory
+&lt;img src=&quot;/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png&quot; alt=&quot;CIF magento graphql configuration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.&lt;/p&gt;
+
+&lt;p&gt;{category(id:2){id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count}}}}}}&lt;/p&gt;
+
+&lt;p&gt;The response must return results with exact numbers. A sample result is below&lt;/p&gt;
+
+&lt;p&gt;{“data”:{“category”:{“id”:2,”name”:”Default Category”,”url_path”:null,”product_count”:7,”children_count”:”3”,”children”:[{“id”:5,”name”:”Mens”,”url_path”:”mens-shirts”,”product_count”:2,”children_count”:”1”,”children”:[{“id”:6,”name”:”Footwear”,”url_path”:”mens-shirts\/footwear”,”product_count”:1,”children_count”:”0”,”children”:[]}]},{“id”:4,”name”:”SubCategory01”,”url_path”:”subcategory01”,”product_count”:2,”children_count”:”0”,”children”:[]}]}}}&lt;/p&gt;
+
+&lt;p&gt;Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.&lt;/p&gt;
+
+&lt;p&gt;Below image describes the binding configuration.
+&lt;img src=&quot;/assets/images/aem-magento-integration/magento-binding.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
+&lt;img src=&quot;/assets/images/aem-magento-integration/Product-Shoe.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;</content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><category term="blog" /><summary type="html">Integrate AEM with Magento to us eCommerce functionality!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open-source framework that can accelerate projects and provide a pathway for sharing knowledge with the community in a consumable production-ready framework. A lot of articles detail individual knowledge fragments that at times useful on their own but do not provide a clear direction for end-use. We have tried to create a consolidated reference end-to-end approach with AEM.design framework and tools.&lt;/p&gt;
 
