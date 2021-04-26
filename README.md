@@ -30,13 +30,7 @@ Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
 
 ## Getting Started
 
-* setup ```ruby```
-
-* install dependecies run
-
-```bash
-./install.sh
-```
+* ensure you have Git LFS installed
 
 * run server while editing
 
