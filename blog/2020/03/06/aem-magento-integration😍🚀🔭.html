@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-03-18T17:26:47+11:00">
+  <meta property="article:modified_time" content="2021-04-26T11:04:40+10:00">
 
 
 
@@ -354,16 +354,16 @@
   
     <div class="author__avatar">
       
-        <img src="/assets/images/profile/saket-mishra.png" class="author__avatar" alt="Saket Mishra" itemprop="image">
+        <img src="/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
       
     </div>
   
 
   <div class="author__content">
-    <h3 class="author__name" itemprop="name">Saket Mishra</h3>
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
     
       <p class="author__bio" itemprop="description">
-        Dev
+        Founder
       </p>
     
   </div>
@@ -375,8 +375,8 @@
 
       
       <li>
-        <a href="mailto:saket.mishra.kr@gmail.com">
-          <meta itemprop="email" content="saket.mishra.kr@gmail.com" />
+        <a href="mailto:max@aem.design">
+          <meta itemprop="email" content="max@aem.design" />
           <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
         </a>
       </li>
@@ -386,7 +386,7 @@
 
       
       <li>
-        <a href="https://www.linkedin.com/in/saket-mishra-89a14a88" itemprop="sameAs">
+        <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
           <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
         </a>
       </li>
@@ -394,7 +394,7 @@
 
         
         <li>
-            <a href="https://github.com/saketkrnph" itemprop="sameAs">
+            <a href="https://github.com/wildone" itemprop="sameAs">
                 <i class="fab fa-github" aria-hidden="true"></i> GitHub
             </a>
         </li>
@@ -417,7 +417,7 @@
     <meta itemprop="headline" content="AEM Magento Integration 😍🚀🔭">
     <meta itemprop="description" content="Integrate AEM with Magento to us eCommerce functionality!">
     <meta itemprop="datePublished" content="2020-02-01T00:37:00+11:00">
-    <meta itemprop="dateModified" content="2020-03-18T17:26:47+11:00">
+    <meta itemprop="dateModified" content="2021-04-26T11:04:40+10:00">
 
     <div class="page__inner-wrap">
       
@@ -438,7 +438,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -450,22 +450,7 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="aem-with-magento-integration">AEM with Magento Integration</h1>
-
-<div class="sticky">
-    <aside class="sidebar__right">
-<nav class="toc">
-      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-<ul class="toc__menu" id="markdown-toc">
-  <li><a href="#aem-with-magento-integration" id="markdown-toc-aem-with-magento-integration">AEM with Magento Integration</a></li>
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-</ul>
-
-    </nav>
-</aside>
-</div>
-
-<h1 id="introduction">Introduction</h1>
+        <h2 id="introduction">Introduction</h2>
 
 <p>AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.</p>
 
@@ -492,22 +477,68 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 
 <p>Below are the steps where we have configured these.</p>
 
-<p>I.	CIF GraphQL Client Configuration Factory</p>
+<h3 id="cif-graphql-client-configuration-factory">CIF GraphQL Client Configuration Factory</h3>
 
 <p>Add GraphQL service – https://magento-hostname/graphql</p>
 
 <p><img src="/assets/images/aem-magento-integration/graphql-client-configuration.png" alt="GraphQL client configuration" /></p>
 
-<p>II.	CIF Catalog Magento GraphQL Configuration Factory
-<img src="/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png" alt="CIF magento graphql configuration" /></p>
+<h3 id="cif-catalog-magento-graphql-configuration-factory">CIF Catalog Magento GraphQL Configuration Factory</h3>
+<p><img src="/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png" alt="CIF magento graphql configuration" /></p>
 
 <p>Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.</p>
 
-<p>{category(id:2){id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count}}}}}}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	category(id: 2) {
+		id, name, url_path, product_count, children_count, children {
+			id, name, url_path, product_count, children_count, children {
+				id, name, url_path, product_count, children_count, children {
+					id, name, url_path, product_count, children_count, children {
+						id, name, url_path, product_count, children_count
+					}
+				}
+			}
+		}
+	}
+}
+</code></pre></div></div>
 
 <p>The response must return results with exact numbers. A sample result is below</p>
 
-<p>{“data”:{“category”:{“id”:2,”name”:”Default Category”,”url_path”:null,”product_count”:7,”children_count”:”3”,”children”:[{“id”:5,”name”:”Mens”,”url_path”:”mens-shirts”,”product_count”:2,”children_count”:”1”,”children”:[{“id”:6,”name”:”Footwear”,”url_path”:”mens-shirts\/footwear”,”product_count”:1,”children_count”:”0”,”children”:[]}]},{“id”:4,”name”:”SubCategory01”,”url_path”:”subcategory01”,”product_count”:2,”children_count”:”0”,”children”:[]}]}}}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"data": {
+		"category": {
+			"id": 2,
+			"name": "Default Category",
+			"url_path": null,
+			"product_count": 7,
+			"children_count": "3",
+			"children": [{
+				"id": 5,
+				"name": "Mens",
+				"url_path": "mens-shirts",
+				"product_count": 2,
+				"children_count": "1",
+				"children": [{
+					"id": 6,
+					"name": "Footwear",
+					"url_path": "mens-shirts\/footwear",
+					"product_count": 1,
+					"children_count": "0",
+					"children": []
+				}]
+			}, {
+				"id": 4,
+				"name": "SubCategory01",
+				"url_path": "subcategory01",
+				"product_count": 2,
+				"children_count": "0",
+				"children": []
+			}]
+		}
+	}
+}
+</code></pre></div></div>
 
 <p>Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.</p>
 
@@ -517,6 +548,7 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 <p>Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
 <img src="/assets/images/aem-magento-integration/Product-Shoe.png" alt="Binding" /></p>
 
+<p>Thank you.</p>
 
         
       </section>
@@ -542,7 +574,7 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-03-18">March 18, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-26">April 26, 2021</time></p>
 
 
       </footer>

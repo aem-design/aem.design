@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T10:31:22+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-04-26T10:27:12+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-26T11:08:16+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-04-26T10:27:12+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-cache-flush-agent">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.&lt;/p&gt;
 
@@ -611,22 +611,7 @@ To add this missing entry do this:&lt;/p&gt;
 
 &lt;p&gt;There is a whole array of documentation available at your favourite site in the &lt;a href=&quot;https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html&quot;&gt;Experience Manager Cloud Manager Help&lt;/a&gt; section, explore the new capability that is at your disposal and review official docs if you get stuck.&lt;/p&gt;
 
-&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Magento Integration 😍🚀🔭</title><link href="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM Magento Integration 😍🚀🔭" /><published>2020-02-01T00:37:00+11:00</published><updated>2020-03-18T17:26:47+11:00</updated><id>https://aem.design/blog/2020/03/06/aem-magento-integration</id><content type="html" xml:base="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;h1 id=&quot;aem-with-magento-integration&quot;&gt;AEM with Magento Integration&lt;/h1&gt;
-
-&lt;div class=&quot;sticky&quot;&gt;
-    &lt;aside class=&quot;sidebar__right&quot;&gt;
-&lt;nav class=&quot;toc&quot;&gt;
-      &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
-&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#aem-with-magento-integration&quot; id=&quot;markdown-toc-aem-with-magento-integration&quot;&gt;AEM with Magento Integration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/nav&gt;
-&lt;/aside&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;As always if you want more drop us a line, checkout the code and submit some issues if you find any.&lt;/p&gt;</content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html">This is the End Game and Adobe has it, a non-definitive perspective!</summary></entry><entry><title type="html">AEM Magento Integration 😍🚀🔭</title><link href="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM Magento Integration 😍🚀🔭" /><published>2020-02-01T00:37:00+11:00</published><updated>2021-04-26T11:04:40+10:00</updated><id>https://aem.design/blog/2020/03/06/aem-magento-integration</id><content type="html" xml:base="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.&lt;/p&gt;
 
@@ -653,22 +638,68 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 
 &lt;p&gt;Below are the steps where we have configured these.&lt;/p&gt;
 
-&lt;p&gt;I.	CIF GraphQL Client Configuration Factory&lt;/p&gt;
+&lt;h3 id=&quot;cif-graphql-client-configuration-factory&quot;&gt;CIF GraphQL Client Configuration Factory&lt;/h3&gt;
 
 &lt;p&gt;Add GraphQL service – https://magento-hostname/graphql&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/aem-magento-integration/graphql-client-configuration.png&quot; alt=&quot;GraphQL client configuration&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;II.	CIF Catalog Magento GraphQL Configuration Factory
-&lt;img src=&quot;/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png&quot; alt=&quot;CIF magento graphql configuration&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;cif-catalog-magento-graphql-configuration-factory&quot;&gt;CIF Catalog Magento GraphQL Configuration Factory&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png&quot; alt=&quot;CIF magento graphql configuration&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.&lt;/p&gt;
 
-&lt;p&gt;{category(id:2){id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count}}}}}}&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+	category(id: 2) {
+		id, name, url_path, product_count, children_count, children {
+			id, name, url_path, product_count, children_count, children {
+				id, name, url_path, product_count, children_count, children {
+					id, name, url_path, product_count, children_count, children {
+						id, name, url_path, product_count, children_count
+					}
+				}
+			}
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The response must return results with exact numbers. A sample result is below&lt;/p&gt;
 
-&lt;p&gt;{“data”:{“category”:{“id”:2,”name”:”Default Category”,”url_path”:null,”product_count”:7,”children_count”:”3”,”children”:[{“id”:5,”name”:”Mens”,”url_path”:”mens-shirts”,”product_count”:2,”children_count”:”1”,”children”:[{“id”:6,”name”:”Footwear”,”url_path”:”mens-shirts\/footwear”,”product_count”:1,”children_count”:”0”,”children”:[]}]},{“id”:4,”name”:”SubCategory01”,”url_path”:”subcategory01”,”product_count”:2,”children_count”:”0”,”children”:[]}]}}}&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+	&quot;data&quot;: {
+		&quot;category&quot;: {
+			&quot;id&quot;: 2,
+			&quot;name&quot;: &quot;Default Category&quot;,
+			&quot;url_path&quot;: null,
+			&quot;product_count&quot;: 7,
+			&quot;children_count&quot;: &quot;3&quot;,
+			&quot;children&quot;: [{
+				&quot;id&quot;: 5,
+				&quot;name&quot;: &quot;Mens&quot;,
+				&quot;url_path&quot;: &quot;mens-shirts&quot;,
+				&quot;product_count&quot;: 2,
+				&quot;children_count&quot;: &quot;1&quot;,
+				&quot;children&quot;: [{
+					&quot;id&quot;: 6,
+					&quot;name&quot;: &quot;Footwear&quot;,
+					&quot;url_path&quot;: &quot;mens-shirts\/footwear&quot;,
+					&quot;product_count&quot;: 1,
+					&quot;children_count&quot;: &quot;0&quot;,
+					&quot;children&quot;: []
+				}]
+			}, {
+				&quot;id&quot;: 4,
+				&quot;name&quot;: &quot;SubCategory01&quot;,
+				&quot;url_path&quot;: &quot;subcategory01&quot;,
+				&quot;product_count&quot;: 2,
+				&quot;children_count&quot;: &quot;0&quot;,
+				&quot;children&quot;: []
+			}]
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.&lt;/p&gt;
 
@@ -676,7 +707,9 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 &lt;img src=&quot;/assets/images/aem-magento-integration/magento-binding.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
-&lt;img src=&quot;/assets/images/aem-magento-integration/Product-Shoe.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;</content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><category term="blog" /><summary type="html">Integrate AEM with Magento to us eCommerce functionality!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;img src=&quot;/assets/images/aem-magento-integration/Product-Shoe.png&quot; alt=&quot;Binding&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you.&lt;/p&gt;</content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><category term="blog" /><summary type="html">Integrate AEM with Magento to us eCommerce functionality!</summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open-source framework that can accelerate projects and provide a pathway for sharing knowledge with the community in a consumable production-ready framework. A lot of articles detail individual knowledge fragments that at times useful on their own but do not provide a clear direction for end-use. We have tried to create a consolidated reference end-to-end approach with AEM.design framework and tools.&lt;/p&gt;
 
