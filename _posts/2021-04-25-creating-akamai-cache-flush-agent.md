@@ -5,6 +5,7 @@ title:  "AEM Akamai Cache flush Agent 😍"
 excerpt: "Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent"
 date:   2021-04-25 00:00:00:00 +1000
 author: mailtoragavan.be@gmail.com
+editor: max@aem.design
 categories:
 - blog
 tags:
@@ -15,8 +16,7 @@ tags:
 - sharing
 ---
 
-Introduction
-===
+## Introduction
 
 After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.
 
@@ -26,8 +26,7 @@ Anytime did you struggled to get the latest HTML from publisher instead of Akama
 
 ***Well we did!!!***
 
-What we have done
-===
+## What we have done
 
 We have worked on AEM replication agent for flushing Akamai cache whenever page gets published. 
 
@@ -38,30 +37,24 @@ It is all automated, we don't need to clear the Akamai cache when new product go
 
 We don't ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.
 
+## What are all details do you need to setup flush agent 
 
-What are all details do you need to setup flush agent 
-===
-
-            1.  akamaiDomain
-            2.  akamaiBaseUrl 
-            3.  akamaiPurgeUrlPath
-            4.  clientToken
-            5.  clientAccessToken
-            6.  clientSecret
+1.  akamaiDomain
+2.  akamaiBaseUrl 
+3.  akamaiPurgeUrlPath
+4.  clientToken
+5.  clientAccessToken
+6.  clientSecret
 
 If you think you don't know these info's or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)
 
-
-How we are managing the secrets
-===
+## How we are managing the secrets
 
 After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.
 
-How to configure Akamai flush agent on your AEM Author instance
-===
+## How to configure Akamai flush agent on your AEM Author instance
 
 By Assuming you have installed aem design code into your local AEM.
-
 
 1. Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author
 
@@ -87,11 +80,10 @@ By Assuming you have installed aem design code into your local AEM.
 8. You should see "Replication test succeeded"
 
 
-Conclusion
-===
+## Conclusion
 
 This component will save our time whenever we need to update the content in AEM pages. 
 
 Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.
 
-Feel free to reach out to us if you have any questions.
+Feel free to reach out to us if you have any questions and don't forget to tell your friends.
