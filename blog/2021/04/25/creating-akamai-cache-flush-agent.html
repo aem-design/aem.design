@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-04-26T10:27:12+10:00">
+  <meta property="article:modified_time" content="2021-04-26T11:07:34+10:00">
 
 
 
@@ -348,6 +348,66 @@
 </div>
 
   
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/maxbarrass4.jpg" class="author__avatar" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+      <p class="author__bio" itemprop="description">
+        Founder
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+      <li>
+        <a href="mailto:max@aem.design">
+          <meta itemprop="email" content="max@aem.design" />
+          <i class="fas fa-envelope-square" aria-hidden="true"></i> Email
+        </a>
+      </li>
+      
+
+      
+
+      
+      <li>
+        <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+      </li>
+      
+
+        
+        <li>
+            <a href="https://github.com/wildone" itemprop="sameAs">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+        </li>
+        
+
+
+    </ul>
+  </div>
+
+</div>
+
+
+
   
   </div>
 
@@ -357,7 +417,7 @@
     <meta itemprop="headline" content="AEM Akamai Cache flush Agent 😍">
     <meta itemprop="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent">
     <meta itemprop="datePublished" content="2021-04-25T00:00:00+10:00">
-    <meta itemprop="dateModified" content="2021-04-26T10:27:12+10:00">
+    <meta itemprop="dateModified" content="2021-04-26T11:07:34+10:00">
 
     <div class="page__inner-wrap">
       
@@ -390,7 +450,7 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="introduction">Introduction</h1>
+        <h2 id="introduction">Introduction</h2>
 
 <p>After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.</p>
 
@@ -400,7 +460,7 @@
 
 <p><strong><em>Well we did!!!</em></strong></p>
 
-<h1 id="what-we-have-done">What we have done</h1>
+<h2 id="what-we-have-done">What we have done</h2>
 
 <p>We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.</p>
 
@@ -411,23 +471,24 @@ So that user of that page will get the latest content instead of cached old cont
 
 <p>We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.</p>
 
-<h1 id="what-are-all-details-do-you-need-to-setup-flush-agent">What are all details do you need to setup flush agent</h1>
+<h2 id="what-are-all-details-do-you-need-to-setup-flush-agent">What are all details do you need to setup flush agent</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        1.  akamaiDomain
-        2.  akamaiBaseUrl 
-        3.  akamaiPurgeUrlPath
-        4.  clientToken
-        5.  clientAccessToken
-        6.  clientSecret
-</code></pre></div></div>
+<ol>
+  <li>akamaiDomain</li>
+  <li>akamaiBaseUrl</li>
+  <li>akamaiPurgeUrlPath</li>
+  <li>clientToken</li>
+  <li>clientAccessToken</li>
+  <li>clientSecret</li>
+</ol>
 
 <p>If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)</p>
 
-<h1 id="how-we-are-managing-the-secrets">How we are managing the secrets</h1>
+<h2 id="how-we-are-managing-the-secrets">How we are managing the secrets</h2>
 
 <p>After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.</p>
 
-<h1 id="how-to-configure-akamai-flush-agent-on-your-aem-author-instance">How to configure Akamai flush agent on your AEM Author instance</h1>
+<h2 id="how-to-configure-akamai-flush-agent-on-your-aem-author-instance">How to configure Akamai flush agent on your AEM Author instance</h2>
 
 <p>By Assuming you have installed aem design code into your local AEM.</p>
 
@@ -460,13 +521,13 @@ So that user of that page will get the latest content instead of cached old cont
   <li>You should see “Replication test succeeded”</li>
 </ol>
 
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>This component will save our time whenever we need to update the content in AEM pages.</p>
 
 <p>Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.</p>
 
-<p>Feel free to reach out to us if you have any questions.</p>
+<p>Feel free to reach out to us if you have any questions and don’t forget to tell your friends.</p>
 
         
       </section>
