@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /blog/2021/04/25/creating-akamai-cache-flush-agent
+permalink: /blog/2021/04/25/creating-akamai-flush-agent
 title:  "AEM Akamai Cache flush Agent 😍"
 excerpt: "Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent"
 date:   2021-04-25 00:00:00:00 +1000
