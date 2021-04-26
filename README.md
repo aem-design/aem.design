@@ -38,6 +38,14 @@ Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
 ./serve.sh
 ```
 
+## Convert images to WebP
+
+If you want to convert your images to webp follow this and commit outputs:
+
+* run container using `start.ps1`
+* change to `source` dir
+* run `./webp.py <asset path>`
+
 ### On Windows
 
 On windows, for best results use docker for everything.
