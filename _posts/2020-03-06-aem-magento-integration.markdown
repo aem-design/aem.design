@@ -5,20 +5,13 @@ title:  "AEM Magento Integration 😍🚀🔭"
 excerpt: "Integrate AEM with Magento to us eCommerce functionality!"
 date:   2020-02-01 00:37:00:00 +1100
 author: saket.mishra.kr@gmail.com
-editor: saket.mishra.kr@gmail.com
+editor: max@aem.design
 categories:
   - blog
 
 ---
 
-
-AEM with Magento Integration
-===
-
-{% include toc_sticky.html %}
-
-Introduction
-===
+## Introduction
 
 AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.
 
@@ -44,28 +37,72 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 
 Below are the steps where we have configured these.
 
-I.	CIF GraphQL Client Configuration Factory
+### CIF GraphQL Client Configuration Factory
 
 Add GraphQL service – https://magento-hostname/graphql
 
 ![GraphQL client configuration](/assets/images/aem-magento-integration/graphql-client-configuration.png)
 
 
-
-
-II.	CIF Catalog Magento GraphQL Configuration Factory
+### CIF Catalog Magento GraphQL Configuration Factory
 ![CIF magento graphql configuration](/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png)
-
 
 
 Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.
 
-{category(id:2){id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count,children{id,name,url_path,product_count,children_count}}}}}}
+```
+{
+	category(id: 2) {
+		id, name, url_path, product_count, children_count, children {
+			id, name, url_path, product_count, children_count, children {
+				id, name, url_path, product_count, children_count, children {
+					id, name, url_path, product_count, children_count, children {
+						id, name, url_path, product_count, children_count
+					}
+				}
+			}
+		}
+	}
+}
+```
 
 The response must return results with exact numbers. A sample result is below
 
-{"data":{"category":{"id":2,"name":"Default Category","url_path":null,"product_count":7,"children_count":"3","children":[{"id":5,"name":"Mens","url_path":"mens-shirts","product_count":2,"children_count":"1","children":[{"id":6,"name":"Footwear","url_path":"mens-shirts\/footwear","product_count":1,"children_count":"0","children":[]}]},{"id":4,"name":"SubCategory01","url_path":"subcategory01","product_count":2,"children_count":"0","children":[]}]}}}
-
+```
+{
+	"data": {
+		"category": {
+			"id": 2,
+			"name": "Default Category",
+			"url_path": null,
+			"product_count": 7,
+			"children_count": "3",
+			"children": [{
+				"id": 5,
+				"name": "Mens",
+				"url_path": "mens-shirts",
+				"product_count": 2,
+				"children_count": "1",
+				"children": [{
+					"id": 6,
+					"name": "Footwear",
+					"url_path": "mens-shirts\/footwear",
+					"product_count": 1,
+					"children_count": "0",
+					"children": []
+				}]
+			}, {
+				"id": 4,
+				"name": "SubCategory01",
+				"url_path": "subcategory01",
+				"product_count": 2,
+				"children_count": "0",
+				"children": []
+			}]
+		}
+	}
+}
+```
 
 Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.
 
@@ -73,8 +110,7 @@ Below image describes the binding configuration.
 ![Binding](/assets/images/aem-magento-integration/magento-binding.png)
 
 
-
 Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
 ![Binding](/assets/images/aem-magento-integration/Product-Shoe.png)
 
-
+Thank you.
