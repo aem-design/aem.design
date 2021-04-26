@@ -58,23 +58,23 @@ By Assuming you have installed aem design code into your local AEM.
 
 1. Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author
 
-![miscadmin](/assets/images/akamai-flush-agent/replication-miscadmin.png)
+![miscadmin](/assets/images/akamai-flush-agent/akamai-replication-miscadmin.png)
 
 2. Click new from tool bar and you will see the Create Page dialog.
    
-![create new agent](/assets/images/akamai-flush-agent/create-agent.png)
+![create new agent](/assets/images/akamai-flush-agent/akamai-create-agent.png)
 
 3. Select "Akamai Publishing Replication" and give your replication agent a name & title.
 4. Click on create and open the newly created agent on the list. (it will be the last entry on the list)
 5. Click on Edit and provide the information required and click on Ok.
 
-![settings tab](/assets/images/akamai-flush-agent/settings-tab.png)
+![settings tab](/assets/images/akamai-flush-agent/akamai-settings-tab.png)
 
-![config_tab](/assets/images/akamai-flush-agent/config-tab.png)
+![config_tab](/assets/images/akamai-flush-agent/akamai-config-tab.png)
 
 6. You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.
    
-![success](/assets/images/akamai-flush-agent/enabled-agent.png)
+![success](/assets/images/akamai-flush-agent/akamai-enabled-agent.png)
 
 7. Click on Test Connection link and make sure you have all the correct configurations.
 8. You should see "Replication test succeeded"
