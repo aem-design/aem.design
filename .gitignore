@@ -8,3 +8,4 @@ Gemfile.lock
 *.iml
 
 logs/
+*.DS_Store
