@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-04-27T01:45:24+10:00">
+  <meta property="article:modified_time" content="2021-04-27T11:18:48+10:00">
 
 
 
@@ -417,7 +417,7 @@
     <meta itemprop="headline" content="AEM Akamai Cache flush Agent 😍">
     <meta itemprop="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent">
     <meta itemprop="datePublished" content="2021-04-25T00:00:00+10:00">
-    <meta itemprop="dateModified" content="2021-04-27T01:45:24+10:00">
+    <meta itemprop="dateModified" content="2021-04-27T11:18:48+10:00">
 
     <div class="page__inner-wrap">
       
@@ -492,38 +492,28 @@ So that user of that page will get the latest content instead of cached old cont
 
 <p>By Assuming you have installed aem design code into your local AEM.</p>
 
-<ol>
-  <li>Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author</li>
-</ol>
+<p>Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author</p>
 
 <p><img src="/assets/images/akamai-flush-agent/akamai-replication-miscadmin.png" alt="miscadmin" /></p>
 
-<ol>
-  <li>Click new from tool bar and you will see the Create Page dialog.</li>
-</ol>
+<p>Click new from tool bar and you will see the Create Page dialog.</p>
 
 <p><img src="/assets/images/akamai-flush-agent/akamai-create-agent.png" alt="create new agent" /></p>
 
-<ol>
-  <li>Select “Akamai Publishing Replication” and give your replication agent a name &amp; title.</li>
-  <li>Click on create and open the newly created agent on the list. (it will be the last entry on the list)</li>
-  <li>Click on Edit and provide the information required and click on Ok.</li>
-</ol>
+<p>Select “Akamai Publishing Replication” and give your replication agent a name &amp; title.
+Click on create and open the newly created agent on the list. (it will be the last entry on the list)
+Click on Edit and provide the information required and click on Ok.</p>
 
 <p><img src="/assets/images/akamai-flush-agent/akamai-settings-tab.png" alt="settings tab" /></p>
 
 <p><img src="/assets/images/akamai-flush-agent/akamai-config-tab.png" alt="config_tab" /></p>
 
-<ol>
-  <li>You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.</li>
-</ol>
+<p>You should be able to see the Akamai Flush Agent is On (green) and it will look for any replication events.</p>
 
 <p><img src="/assets/images/akamai-flush-agent/akamai-enabled-agent.png" alt="success" /></p>
 
-<ol>
-  <li>Click on Test Connection link and make sure you have all the correct configurations.</li>
-  <li>You should see “Replication test succeeded”</li>
-</ol>
+<p>Click on Test Connection link and make sure you have all the correct configurations.
+You should see “Replication test succeeded”</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
