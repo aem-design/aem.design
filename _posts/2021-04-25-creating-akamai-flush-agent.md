@@ -37,6 +37,10 @@ It is all automated, we don't need to clear the Akamai cache when new product go
 
 We don't ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.
 
+## Where you can find the code
+
+you can get it on GitHub [https://github.com/aem-design](https://github.com/aem-design).
+
 ## What are all details do you need to setup flush agent 
 
 1.  akamaiDomain
@@ -52,11 +56,13 @@ If you think you don't know these info's or not sure from where you can get it? 
 
 After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.
 
-## How to configure Akamai flush agent on your AEM Author instance
+## How to configure Akamai flush agent on your AEM author / publish instance
 
 By Assuming you have installed aem design code into your local AEM.
 
-Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author
+Go to [miscadmin](http://localhost:4502/miscadmin)  and open replication/agents.author
+
+here I'm showing example of setting flush agent in author level same time you can set it in publisher as well.
 
 ![miscadmin](/assets/images/akamai-flush-agent/akamai-replication-miscadmin.png)
 
@@ -87,3 +93,5 @@ This component will save our time whenever we need to update the content in AEM 
 Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.
 
 Feel free to reach out to us if you have any questions and don't forget to tell your friends.
+
+### Thank you
