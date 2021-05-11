@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-04-27T11:32:38+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-04-27T11:18:48+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2021-05-11T10:35:42+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-05-05T10:52:27+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.&lt;/p&gt;
 
@@ -12,12 +12,18 @@
 
 &lt;p&gt;We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.&lt;/p&gt;
 
-&lt;p&gt;So, after author change a page content and publish it our Akamai cache flush agent will pick that page and request to akamai for clearing cache. 
+&lt;p&gt;So, after author change a page content and publish it our Akamai cache flush agent configured on publisher environment will pick that page and request to akamai for clearing cache. 
 So that user of that page will get the latest content instead of cached old content from Akamai.&lt;/p&gt;
 
 &lt;p&gt;It is all automated, we don’t need to clear the Akamai cache when new product goes live to prod.&lt;/p&gt;
 
-&lt;p&gt;We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.&lt;/p&gt;
+&lt;p&gt;We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 min(s) time whenever new product launch.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-you-can-find-the-code&quot;&gt;Where you can find the code&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/replication/akamai&quot;&gt;Akamai Cache Flush Agent&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/aem-design/aemdesign-aem-core/blob/master/aemdesign-aem-services/src/main/java/design/aem/transport/AkamaiTransportHandler.java&quot;&gt;Akamai Transport Handler&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;what-are-all-details-do-you-need-to-setup-flush-agent&quot;&gt;What are all details do you need to setup flush agent&lt;/h2&gt;
 
@@ -30,17 +36,32 @@ So that user of that page will get the latest content instead of cached old cont
   &lt;li&gt;clientSecret&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)&lt;/p&gt;
+&lt;p&gt;If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info 😍&lt;/p&gt;
 
 &lt;h2 id=&quot;how-we-are-managing-the-secrets&quot;&gt;How we are managing the secrets&lt;/h2&gt;
 
-&lt;p&gt;After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.&lt;/p&gt;
+&lt;p&gt;After getting the above information from you, we are encrypting keys using AEM’s crypto support and storing it on AEM so you are safe with your secrets.
+While we use it for making the POST call from Transport Handler we will decrypt the keys and use it.&lt;/p&gt;
 
-&lt;h2 id=&quot;how-to-configure-akamai-flush-agent-on-your-aem-author-instance&quot;&gt;How to configure Akamai flush agent on your AEM Author instance&lt;/h2&gt;
+&lt;p&gt;Also while making a POST call to Akamai servers we are using HMAC_SHA_256 to protect the data.&lt;/p&gt;
+
+&lt;p&gt;Make sure you are configuring the Akamai cache flush agent on each environment separately&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-configure-akamai-flush-agent-on-your-aem-author--publish-instance&quot;&gt;How to configure Akamai flush agent on your AEM author / publish instance&lt;/h2&gt;
 
 &lt;p&gt;By Assuming you have installed aem design code into your local AEM.&lt;/p&gt;
 
-&lt;p&gt;Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author&lt;/p&gt;
+&lt;h2 id=&quot;when-to-setup-on-author-and-when-to-setup-on-publish&quot;&gt;When to setup on author and when to setup on publish&lt;/h2&gt;
+
+&lt;p&gt;Setup Akamai flush agent on AEM author instance only if you have akamai setup on author level as well. Mostly we will have Akamai setup for publish env.&lt;/p&gt;
+
+&lt;p&gt;Always setup Akamai flush agent on publish level so as soon as the page reaches publish instance our Akamai flush agent will go ahead and clear Akamai Cache.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-setup-akamai-flush-agent&quot;&gt;How to setup Akamai flush agent&lt;/h2&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;http://localhost:4502/miscadmin&quot;&gt;miscadmin&lt;/a&gt; and open replication/agents.author for author instance &amp;amp; replication/agents.publish for publish instance&lt;/p&gt;
+
+&lt;p&gt;here I’m showing example of setting flush agent in author level same time you can set it in publisher as well.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/akamai-flush-agent/akamai-replication-miscadmin.png&quot; alt=&quot;miscadmin&quot; /&gt;&lt;/p&gt;
 
@@ -69,7 +90,9 @@ You should see “Replication test succeeded”&lt;/p&gt;
 
 &lt;p&gt;Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.&lt;/p&gt;
 
-&lt;p&gt;Feel free to reach out to us if you have any questions and don’t forget to tell your friends.&lt;/p&gt;</content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html">Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent</summary></entry><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
+&lt;p&gt;Feel free to reach out to us if you have any questions and don’t forget to tell your friends.&lt;/p&gt;
+
+&lt;h3 id=&quot;thank-you&quot;&gt;Thank you&lt;/h3&gt;</content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html">Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent</summary></entry><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-03-17T01:12:49+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11">&lt;p&gt;Building on the previous work &lt;a href=&quot;/blog/2019/07/01/docker-containers-everywhere&quot;&gt;Docker Containers Everywhere&lt;/a&gt;, &lt;a href=&quot;/blog/2019/09/04/aem-and-docker😍😘&quot;&gt;AEM and Docker 😍😘&lt;/a&gt; and &lt;a href=&quot;/blog/2019/08/30/docker-aem-bundle&quot;&gt;Docker AEM Bundle&lt;/a&gt; its time to bring AEM SDK and JDK11 into life!&lt;/p&gt;
 
 &lt;p&gt;If you take a look &lt;a href=&quot;https://hub.docker.com/r/aemdesign/aem&quot;&gt;docker hub&lt;/a&gt; and &lt;a href=&quot;https://github.com/aem-design/docker-aem&quot;&gt;docker-aem&lt;/a&gt; branches you will find a couple of new additions that you will find helpful.&lt;/p&gt;
 

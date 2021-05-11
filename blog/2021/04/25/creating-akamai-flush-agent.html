@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2021-04-27T11:18:48+10:00">
+  <meta property="article:modified_time" content="2021-05-05T10:52:27+10:00">
 
 
 
@@ -417,7 +417,7 @@
     <meta itemprop="headline" content="AEM Akamai Cache flush Agent 😍">
     <meta itemprop="description" content="Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent">
     <meta itemprop="datePublished" content="2021-04-25T00:00:00+10:00">
-    <meta itemprop="dateModified" content="2021-04-27T11:18:48+10:00">
+    <meta itemprop="dateModified" content="2021-05-05T10:52:27+10:00">
 
     <div class="page__inner-wrap">
       
@@ -438,7 +438,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
@@ -464,12 +464,18 @@
 
 <p>We have worked on AEM replication agent for flushing Akamai cache whenever page gets published.</p>
 
-<p>So, after author change a page content and publish it our Akamai cache flush agent will pick that page and request to akamai for clearing cache. 
+<p>So, after author change a page content and publish it our Akamai cache flush agent configured on publisher environment will pick that page and request to akamai for clearing cache. 
 So that user of that page will get the latest content instead of cached old content from Akamai.</p>
 
 <p>It is all automated, we don’t need to clear the Akamai cache when new product goes live to prod.</p>
 
-<p>We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 mins time whenever new product launch.</p>
+<p>We don’t ask DevOps to clear Akamai cache so customers will see latest page. Lets save their 1-2 min(s) time whenever new product launch.</p>
+
+<h2 id="where-you-can-find-the-code">Where you can find the code</h2>
+
+<p><a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/replication/akamai">Akamai Cache Flush Agent</a></p>
+
+<p><a href="https://github.com/aem-design/aemdesign-aem-core/blob/master/aemdesign-aem-services/src/main/java/design/aem/transport/AkamaiTransportHandler.java">Akamai Transport Handler</a></p>
 
 <h2 id="what-are-all-details-do-you-need-to-setup-flush-agent">What are all details do you need to setup flush agent</h2>
 
@@ -482,17 +488,32 @@ So that user of that page will get the latest content instead of cached old cont
   <li>clientSecret</li>
 </ol>
 
-<p>If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info :)</p>
+<p>If you think you don’t know these info’s or not sure from where you can get it? Ask devOps these information and say I got your back if you provide me these info 😍</p>
 
 <h2 id="how-we-are-managing-the-secrets">How we are managing the secrets</h2>
 
-<p>After getting the information from you, we are encrypting data and storing it on AEM so you are safe with your secrets.</p>
+<p>After getting the above information from you, we are encrypting keys using AEM’s crypto support and storing it on AEM so you are safe with your secrets.
+While we use it for making the POST call from Transport Handler we will decrypt the keys and use it.</p>
 
-<h2 id="how-to-configure-akamai-flush-agent-on-your-aem-author-instance">How to configure Akamai flush agent on your AEM Author instance</h2>
+<p>Also while making a POST call to Akamai servers we are using HMAC_SHA_256 to protect the data.</p>
+
+<p>Make sure you are configuring the Akamai cache flush agent on each environment separately</p>
+
+<h2 id="how-to-configure-akamai-flush-agent-on-your-aem-author--publish-instance">How to configure Akamai flush agent on your AEM author / publish instance</h2>
 
 <p>By Assuming you have installed aem design code into your local AEM.</p>
 
-<p>Go to misc admin (http://localhost:4502/miscadmin) and open replication/agents.author</p>
+<h2 id="when-to-setup-on-author-and-when-to-setup-on-publish">When to setup on author and when to setup on publish</h2>
+
+<p>Setup Akamai flush agent on AEM author instance only if you have akamai setup on author level as well. Mostly we will have Akamai setup for publish env.</p>
+
+<p>Always setup Akamai flush agent on publish level so as soon as the page reaches publish instance our Akamai flush agent will go ahead and clear Akamai Cache.</p>
+
+<h2 id="how-to-setup-akamai-flush-agent">How to setup Akamai flush agent</h2>
+
+<p>Go to <a href="http://localhost:4502/miscadmin">miscadmin</a> and open replication/agents.author for author instance &amp; replication/agents.publish for publish instance</p>
+
+<p>here I’m showing example of setting flush agent in author level same time you can set it in publisher as well.</p>
 
 <p><img src="/assets/images/akamai-flush-agent/akamai-replication-miscadmin.png" alt="miscadmin" /></p>
 
@@ -522,6 +543,8 @@ You should see “Replication test succeeded”</p>
 <p>Make sure you have set up the dispatcher flush agent as well so we can avoid content served from Dispatcher cache.</p>
 
 <p>Feel free to reach out to us if you have any questions and don’t forget to tell your friends.</p>
+
+<h3 id="thank-you">Thank you</h3>
 
         
       </section>
@@ -570,7 +593,7 @@ You should see “Replication test succeeded”</p>
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-27">April 27, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-05-05">May 5, 2021</time></p>
 
 
       </footer>
