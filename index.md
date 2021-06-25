@@ -4,6 +4,7 @@ permalink: /
 github:
   - excerpt: &githubexc '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=aem-design&repo=aem.design&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=aem-design&repo=aem.design&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 header:
+  og_image: /assets/images/screenshots/homepage-small.png
   overlay_color: "#5e616c"
   overlay_image: /assets/images/site-logo.png
   cta_label: "<i class='fab fa-lightbulb-o'></i> Start Here"
@@ -55,8 +56,6 @@ feature_row:
     btn_label: "Blog"
 intro:
   - excerpt: '[<img src="/assets/images/brave/cropped-brave_appicon_release-270x270.png" alt="Download Brave and Send us a Tip" style="background-size: contain; width: 32px; height: 32px;"/> Download Brave and Send us a Tip!](https://brave.com/aem741) <br> Get notified when I add new stuff &nbsp; [<i class="fab fa-twitter"></i> @maxbarrass](https://twitter.com/maxbarrass){: .btn .btn--twitter}'
-header:
-    og_image: /assets/images/screenshots/homepage-small.png
 ---
 
 
