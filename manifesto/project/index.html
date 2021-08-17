@@ -36,11 +36,11 @@
 
 
 
-  <meta property="article:published_time" content="2021-08-16T13:51:04+10:00">
+  <meta property="article:published_time" content="2021-08-17T12:46:49+10:00">
 
 
 
-  <meta property="article:modified_time" content="2021-03-14T13:49:18+11:00">
+  <meta property="article:modified_time" content="2021-08-17T12:43:03+10:00">
 
 
 
@@ -417,8 +417,8 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Project Guide">
     <meta itemprop="description" content="It’s important that documentation is seen as a journey not a deliverable">
-    <meta itemprop="datePublished" content="2021-08-16T13:51:04+10:00">
-    <meta itemprop="dateModified" content="2021-03-14T13:49:18+11:00">
+    <meta itemprop="datePublished" content="2021-08-17T12:46:49+10:00">
+    <meta itemprop="dateModified" content="2021-08-17T12:43:03+10:00">
 
     <div class="page__inner-wrap">
       
@@ -471,6 +471,7 @@
     </ul>
   </li>
   <li><a href="#development-flow" id="markdown-toc-development-flow">Development Flow</a></li>
+  <li><a href="#content-migration" id="markdown-toc-content-migration">Content Migration</a></li>
 </ul>
 
     </nav>
@@ -753,7 +754,7 @@
 
 <p>The diagram below illustrates how a business concept flows through the necessary parties to get to the desired end state, which is a functional component that can be tested (and passed) on a showcase site, so that the business owner can utilize it in the organization’s production environment.</p>
 
-<p><img src="/assets/images/manifesto/project-knowledge-flow.png" alt="image alt text" /></p>
+<p><img src="/assets/images/manifesto/project-knowledge-flow.png" alt="Project Knowledge Flow" /></p>
 
 <p>The idea for Knowledge Management is to leverage co-learning patterns within the organisation. Doing this allows all participants to learn gradually and at the same time reflecting their learning outcomes into artifacts used as inputs to though the process.</p>
 
@@ -774,7 +775,7 @@ Updating the Training Suite with relevant information allows this knowledge to b
 <h4 id="co-learning-loop-3">Co-Learning loop 3</h4>
 
 <p>When business analyst determines that based on their best experience and information available that additional feature may be required they engage a designer.
-The designer uses existing Concept Suite to determine if existing Design Language System already caters for a particular capability. Updates the Design Language System with relevant  Unique Experiences that match requirements and provide Business Analyst with additional information to update Training Suite.
+The designer uses existing Concept Suite to determine if existing <a href="/manual/dls/">Design Language System</a> already caters for a particular capability. Updates the Design Language System with relevant  Unique Experiences that match requirements and provide Business Analyst with additional information to update Training Suite.
 When a Concept Suite does not have the required features that deliver requirements, the designer updates the Concept Suite with appropriate changes and then composes them into Compose Suite. This process ensures that design concept and its Language is persisted for Author (Business Owner) usage. Updating compose suite allows the author to leverage updated design elements for their new idea.</p>
 
 <h4 id="co-learning-loop-4">Co-Learning loop 4</h4>
@@ -801,7 +802,7 @@ When existing functionality does not exist a developer creates a needed componen
 
 <p>All artifacts on a project evolve over time and give input in other artifacts.</p>
 
-<p><img src="/assets/images/manifesto/project-artifact-flow.png" alt="image alt text" /></p>
+<p><img src="/assets/images/manifesto/project-artifact-flow.png" alt="Project Artifact Flow" /></p>
 
 <p>Idea behind each artifact is to provide input into other artifacts and be useful for more than one purpose.</p>
 
@@ -809,7 +810,7 @@ When existing functionality does not exist a developer creates a needed componen
 
 <p>This is a high level flow for development cycles</p>
 
-<p><img src="/assets/images/manifesto/project-development-flow.png" alt="image alt text" /></p>
+<p><img src="/assets/images/manifesto/project-development-flow.png" alt="Project Development Flow" /></p>
 
 <ul>
   <li>
@@ -844,6 +845,16 @@ When existing functionality does not exist a developer creates a needed componen
   </li>
 </ul>
 
+<h2 id="content-migration">Content Migration</h2>
+
+<p>When migrating from legacy CMS plaforms you will be challanged to migrate content into AEM. To migrate content into AEM you can follow either manual or automated process.</p>
+
+<p>Following diagram demonstartes how an automated process should be developed. This methiod should be executed in parallel with the project that is developing component catalog.</p>
+
+<p><img src="/assets/images/manifesto/content-migration.png" alt="Content Migration" /></p>
+
+<p>Typicaly content migration start right at the start of the project to allow enough time to understand source data and transform it into AEM content. Where possible migrate content data into Content Fragments and use workflows to create pages using a <a href="https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/contentfragmentpagegen">Content Fragment Page Generation workflow</a> this will allow you to separate your content from pages. This will also enable you to change your page layout later once you have developed all of your components, as you can re-create all of your pages.</p>
+
         
       </section>
 
@@ -854,7 +865,7 @@ When existing functionality does not exist a developer creates a needed componen
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-14">March 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-08-17">August 17, 2021</time></p>
 
 
       </footer>
