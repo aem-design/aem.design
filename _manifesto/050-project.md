@@ -165,7 +165,7 @@ At the high level an AEM project consist of Bundle and Content packages.  Bundle
 
 The diagram below illustrates how a business concept flows through the necessary parties to get to the desired end state, which is a functional component that can be tested (and passed) on a showcase site, so that the business owner can utilize it in the organization's production environment.
 
-![image alt text](/assets/images/manifesto/project-knowledge-flow.png)
+![Project Knowledge Flow](/assets/images/manifesto/project-knowledge-flow.png)
 
 The idea for Knowledge Management is to leverage co-learning patterns within the organisation. Doing this allows all participants to learn gradually and at the same time reflecting their learning outcomes into artifacts used as inputs to though the process.
 
@@ -186,7 +186,7 @@ Updating the Training Suite with relevant information allows this knowledge to b
 #### Co-Learning loop 3
 
 When business analyst determines that based on their best experience and information available that additional feature may be required they engage a designer.
-The designer uses existing Concept Suite to determine if existing Design Language System already caters for a particular capability. Updates the Design Language System with relevant  Unique Experiences that match requirements and provide Business Analyst with additional information to update Training Suite.
+The designer uses existing Concept Suite to determine if existing [Design Language System](/manual/dls/) already caters for a particular capability. Updates the Design Language System with relevant  Unique Experiences that match requirements and provide Business Analyst with additional information to update Training Suite.
 When a Concept Suite does not have the required features that deliver requirements, the designer updates the Concept Suite with appropriate changes and then composes them into Compose Suite. This process ensures that design concept and its Language is persisted for Author (Business Owner) usage. Updating compose suite allows the author to leverage updated design elements for their new idea.
 
 #### Co-Learning loop 4
@@ -211,7 +211,7 @@ These artifacts form kickstart of the AEM.Design framework that comes with over 
 
 All artifacts on a project evolve over time and give input in other artifacts.
 
-![image alt text](/assets/images/manifesto/project-artifact-flow.png)
+![Project Artifact Flow](/assets/images/manifesto/project-artifact-flow.png)
 
 Idea behind each artifact is to provide input into other artifacts and be useful for more than one purpose.
 
@@ -219,7 +219,7 @@ Idea behind each artifact is to provide input into other artifacts and be useful
 
 This is a high level flow for development cycles
 
-![image alt text](/assets/images/manifesto/project-development-flow.png)
+![Project Development Flow](/assets/images/manifesto/project-development-flow.png)
 
 * **Build Deploy Test**: Developers work on local environment which is a replicate of target production, using same codebase as build server and performs all Build, Deploy and Test functions on local instances of AEM using docker containers.
 
@@ -240,3 +240,13 @@ This is a high level flow for development cycles
 * **Build Analysts**: Automated Code Quality review is performed after Build an before Deploy cycle
 
 * **Deploy**: Deploy cycle is triggered automatically and manually to a defined environment
+
+## Content Migration
+
+When migrating from legacy CMS plaforms you will be challanged to migrate content into AEM. To migrate content into AEM you can follow either manual or automated process.
+
+Following diagram demonstartes how an automated process should be developed. This methiod should be executed in parallel with the project that is developing component catalog.
+
+![Content Migration](/assets/images/manifesto/content-migration.png)
+
+Typicaly content migration start right at the start of the project to allow enough time to understand source data and transform it into AEM content. Where possible migrate content data into Content Fragments and use workflows to create pages using a [Content Fragment Page Generation workflow](https://github.com/aem-design/aemdesign-aem-core/tree/master/aemdesign-aem-common/src/main/content/jcr_root/apps/aemdesign/components/workflow/contentfragmentpagegen) this will allow you to separate your content from pages. This will also enable you to change your page layout later once you have developed all of your components, as you can re-create all of your pages.
