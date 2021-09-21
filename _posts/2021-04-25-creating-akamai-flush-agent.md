@@ -14,6 +14,8 @@ tags:
 - akamai
 - knowledge
 - sharing
+redirect_from:
+  - /blog/2021/04/25/creating-akamai-cache-flush-agent
 ---
 
 ## Introduction
