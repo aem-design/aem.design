@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-01-19T13:53:27+11:00">
+  <meta property="article:modified_time" content="2022-01-19T14:03:53+11:00">
 
 
 
@@ -371,7 +371,7 @@
     <meta itemprop="headline" content="How to add property and author a component programmatically?">
     <meta itemprop="description" content="ACS On-Deploy is the answer!">
     <meta itemprop="datePublished" content="2022-01-19T00:00:00+11:00">
-    <meta itemprop="dateModified" content="2022-01-19T13:53:27+11:00">
+    <meta itemprop="dateModified" content="2022-01-19T14:03:53+11:00">
 
     <div class="page__inner-wrap">
       
@@ -408,15 +408,17 @@
 
 <p>By far the easiest method of updating your AEM content programmatically is to use <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/on-deploy-scripts/index.html">ACS On-Deploy Script</a></p>
 
-<p>To do this you will need 2 java files</p>
+<p>To do this you will need these java files</p>
 <ul>
-  <li><a href="#1-designaemondeployondeployscriptproviderimpljava-">design\aem\ondeploy\OnDeployScriptProviderImpl.java</a> - which will load your Script <code class="language-plaintext highlighter-rouge">UpdateNodeAttibutes</code>, read more about this in the docs.</li>
-  <li><a href="#2-designaemondeployscriptsupdatenodeattibutesjava-">design\aem\ondeploy\scripts\UpdateNodeAttibutes.java</a> - which will update your data..</li>
+  <li><a href="#1-ondeployscriptproviderimpljava">OnDeployScriptProviderImpl.java</a> - which will load your Script <code class="language-plaintext highlighter-rouge">UpdateNodeAttibutes</code>, read more about this in the docs.</li>
+  <li><a href="#2-updatenodeattibutesjava">UpdateNodeAttibutes.java</a> - which will update your data..</li>
 </ul>
 
 <p>Here is starting content for your files…</p>
 
-<h3 id="1-designaemondeployondeployscriptproviderimpljava-">1. design\aem\ondeploy\OnDeployScriptProviderImpl.java :</h3>
+<h3 id="1-ondeployscriptproviderimpljava">1. OnDeployScriptProviderImpl.java</h3>
+
+<p>Location: <code class="language-plaintext highlighter-rouge">design\aem\ondeploy\OnDeployScriptProviderImpl.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">design.aem.ondeploy</span><span class="o">;</span>
 
@@ -446,7 +448,9 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h3 id="2-designaemondeployscriptsupdatenodeattibutesjava-">2. design\aem\ondeploy\scripts\UpdateNodeAttibutes.java :</h3>
+<h3 id="2-updatenodeattibutesjava">2. UpdateNodeAttibutes.java</h3>
+
+<p>Location: <code class="language-plaintext highlighter-rouge">design\aem\ondeploy\scripts\UpdateNodeAttibutes.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">design.aem.ondeploy.scripts</span><span class="o">;</span>
 

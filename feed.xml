@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-01-19T13:58:19+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">How to add property and author a component programmatically?</title><link href="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="alternate" type="text/html" title="How to add property and author a component programmatically?" /><published>2022-01-19T00:00:00+11:00</published><updated>2022-01-19T13:53:27+11:00</updated><id>https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically</id><content type="html" xml:base="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically"><![CDATA[<h2 id="updatating-aem-content-programmatically">Updatating AEM Content programmatically?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-01-19T14:08:16+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">How to add property and author a component programmatically?</title><link href="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="alternate" type="text/html" title="How to add property and author a component programmatically?" /><published>2022-01-19T00:00:00+11:00</published><updated>2022-01-19T14:03:53+11:00</updated><id>https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically</id><content type="html" xml:base="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically"><![CDATA[<h2 id="updatating-aem-content-programmatically">Updatating AEM Content programmatically?</h2>
 
 <p>By far the easiest method of updating your AEM content programmatically is to use <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/on-deploy-scripts/index.html">ACS On-Deploy Script</a></p>
 
-<p>To do this you will need 2 java files</p>
+<p>To do this you will need these java files</p>
 <ul>
-  <li><a href="#1-designaemondeployondeployscriptproviderimpljava-">design\aem\ondeploy\OnDeployScriptProviderImpl.java</a> - which will load your Script <code class="language-plaintext highlighter-rouge">UpdateNodeAttibutes</code>, read more about this in the docs.</li>
-  <li><a href="#2-designaemondeployscriptsupdatenodeattibutesjava-">design\aem\ondeploy\scripts\UpdateNodeAttibutes.java</a> - which will update your data..</li>
+  <li><a href="#1-ondeployscriptproviderimpljava">OnDeployScriptProviderImpl.java</a> - which will load your Script <code class="language-plaintext highlighter-rouge">UpdateNodeAttibutes</code>, read more about this in the docs.</li>
+  <li><a href="#2-updatenodeattibutesjava">UpdateNodeAttibutes.java</a> - which will update your data..</li>
 </ul>
 
 <p>Here is starting content for your files…</p>
 
-<h3 id="1-designaemondeployondeployscriptproviderimpljava-">1. design\aem\ondeploy\OnDeployScriptProviderImpl.java :</h3>
+<h3 id="1-ondeployscriptproviderimpljava">1. OnDeployScriptProviderImpl.java</h3>
+
+<p>Location: <code class="language-plaintext highlighter-rouge">design\aem\ondeploy\OnDeployScriptProviderImpl.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">design.aem.ondeploy</span><span class="o">;</span>
 
@@ -40,7 +42,9 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h3 id="2-designaemondeployscriptsupdatenodeattibutesjava-">2. design\aem\ondeploy\scripts\UpdateNodeAttibutes.java :</h3>
+<h3 id="2-updatenodeattibutesjava">2. UpdateNodeAttibutes.java</h3>
+
+<p>Location: <code class="language-plaintext highlighter-rouge">design\aem\ondeploy\scripts\UpdateNodeAttibutes.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">design.aem.ondeploy.scripts</span><span class="o">;</span>
 
