@@ -19,13 +19,15 @@ tags:
 
 By far the easiest method of updating your AEM content programmatically is to use [ACS On-Deploy Script](https://adobe-consulting-services.github.io/acs-aem-commons/features/on-deploy-scripts/index.html)
 
-To do this you will need 2 java files
-* [design\aem\ondeploy\OnDeployScriptProviderImpl.java](#1-designaemondeployondeployscriptproviderimpljava-) - which will load your Script `UpdateNodeAttibutes`, read more about this in the docs.
-* [design\aem\ondeploy\scripts\UpdateNodeAttibutes.java](#2-designaemondeployscriptsupdatenodeattibutesjava-) - which will update your data..
+To do this you will need these java files
+* [OnDeployScriptProviderImpl.java](#1-ondeployscriptproviderimpljava) - which will load your Script `UpdateNodeAttibutes`, read more about this in the docs.
+* [UpdateNodeAttibutes.java](#2-updatenodeattibutesjava) - which will update your data..
 
 Here is starting content for your files...
 
-### 1. design\aem\ondeploy\OnDeployScriptProviderImpl.java :
+### 1. OnDeployScriptProviderImpl.java
+
+Location: `design\aem\ondeploy\OnDeployScriptProviderImpl.java`
 
 ```java
 package design.aem.ondeploy;
@@ -56,7 +58,9 @@ public class OnDeployScriptProviderImpl implements OnDeployScriptProvider {
 }
 ```
   
-### 2. design\aem\ondeploy\scripts\UpdateNodeAttibutes.java :
+### 2. UpdateNodeAttibutes.java
+
+Location: `design\aem\ondeploy\scripts\UpdateNodeAttibutes.java`
 
 ```java
 package design.aem.ondeploy.scripts;
