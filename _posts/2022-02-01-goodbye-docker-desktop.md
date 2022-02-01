@@ -11,23 +11,23 @@ tags:
 - docker-desktop
 ---
 
-First of all, if it wasn't for docker, the technology ladscape would be very diffrent today. Thank you docker and the team behind it! I do feel that som etechnologies that come out opensource and force other vendors to show their cards. Docker single handledly changed the way a lot of things are done, that probbaly is an understatment as it amazing! I feel that the docker team is doing a great job and that they are doing a great job at it. And I hope this will continue.
+First of all, if it wasn't for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.
 
-But as you all know docker desktop WAS a great tool for managing your docker images, up untill it became a thing of the past. It drove it self of the cliff with paid subsription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can't use it at work why would you used it at home? You are what you practice and you are what you use.
+But as you all know, docker desktop WAS a great tool for running docker on your desktop, up until it became a thing of the past. It drove itself off the cliff with paid subscription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can't use it at work, why would you use it at home? After all, you are what you practice, and you are what you use. Consistency of tools is critical to developers.
 
-There are many alternatives to docker stack, but lets not throw docker simplicity out the window yet. Obivously Kube and Helm is the destinaton but lets take small steps. For devops using git with docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it and maybe there is a usecase for them, but in a pipeline driven world, you can't really use them. You don't use docker desktop in production so keeping rest of the stack the same would be a good idea.
+There are many alternatives to the docker desktop stack, but let's not throw docker simplicity out the window yet. Obviously, Kube and Helm is the destination, but let's take small steps. For DevOps, using git with docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it, and maybe there is a use case for them, but in a pipeline driven world, you can't use them. You don't use docker desktop in production so keeping rest of the stack the same would be a good idea.
 
-So this brings this journey to a cross road do you build a VM and run docker engine and docker-compose in there or do you run this nativley. If you are on linux/unix you probbaly alright. On windows however best experience would be attained though Powershell Core7, WSL2 and Windows Terminal. Go ahead and install these on you will never look back. Alos while you at it stop using CYGWIN to do this you are making your life hard.
+So this brings this journey to a crossroads. Do you build a VM and run the docker engine and docker-compose in there, or do you run this semi-natively? If you are on Linux/Unix you are alright; you can google your way out. On windows, however best experience would be attained through Powershell Core7, WSL2 and Windows Terminal. Go ahead try these on; you will never look back! Also, while you are at it, stop using CYGWIN to do this; you are making your life harder than you have to. :P
 
-Now that you have tools from the future installed lets proceed to the next steps
+Now that you have tools from the future installed, lets proceed to the next steps
 
 ## WSL Install Ubuntu
 
-This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead so using Ubuntu is best option. (long story post to follow).
+This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead, so using Ubuntu is the best option we have. (long story post to follow).
 
 ### Wsl download and Import ubuntu
 
-Open up Powershell core and run followig commands.
+Open up Powershell core and run the followig commands.
 
 ```powershell
 mkdir c:/wsl
@@ -36,11 +36,11 @@ curl.exe -L -o impish-server-cloudimg-amd64-root.tar.xz https://cloud-images.ubu
 wsl --import ubuntu c:/wsl/ubuntu2110 c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz
 ```
 
-Now you have a ubuntu image in your WSL, you can restart Windows Terminal and it will appear as a new option.
+Now you have a ubuntu image in your WSL, you can restart Windows Terminal, and it will appear as a new option.
 
 ### Config Ubuntu
 
-Because we did not use MS apx the new ubuntu has only root user, best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal and in it run the following commands. Change user name and password as you like when prompted.
+Because we did not use MS apx, the new Ubuntu has only a root user; best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal, and in it run the following commands. (Change user name and password as you like when prompted.)
 
 ```bash
 adduser -d /home/maxbarrass -m maxbarrass
@@ -51,7 +51,7 @@ usermod -aG sudo maxbarrass
 
 ### Update Windows Terminal Profile
 
-Now that you have a new user in your ubuntu you can update your Windows Terminal profile to use the new user.
+Now that you have a new user in your Ubuntu, you can update your Windows Terminal profile to use the new user.
 
 This should be in the Command line for your ubuntu profile:
 
@@ -61,7 +61,7 @@ wsl.exe -d ubuntu -u maxbarrass
 
 ### Install docker in Ubuntu
 
-Create a new script `nano instal-docker.sh` with following content and run it. This will install docker and docker-compose, as well as add docker service start to you profile. This way when you open your ubuntu it will ensure that docker is running.
+Create a new script `nano instal-docker.sh` with the following content and run it. This will install docker and docker-compose, as well as add docker service start to your `.profile`. This way, when you open your Ubuntu, it will ensure that docker is running.
 
 ```bash
 # update the package manager and install some prerequisites (all of these aren't technically required)
@@ -112,6 +112,6 @@ echo "sudo service docker start" >> ~/.profile
 
 ### Thank you
 
-Hope you enjoyed this guide. If you have any questions or comments feel free to contact me. I will be happy to help.
+I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.
 
 Let me know what you think and don't forget to tell your friends.
