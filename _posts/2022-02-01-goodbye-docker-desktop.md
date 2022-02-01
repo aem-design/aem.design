@@ -11,7 +11,11 @@ tags:
 - docker-desktop
 ---
 
-As you all know docker desktop WAS a great tool for managing your docker images, up untill it became a thing of the past. It drove it self of the cliff with paid subsription. Using git wuth docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it and maybe there is a usecase for them, but in a pipeline driven world, you can't really use them.
+First of all, if it wasn't for docker, the technology ladscape would be very diffrent today. Thank you docker and the team behind it! I do feel that som etechnologies that come out opensource and force other vendors to show their cards. Docker single handledly changed the way a lot of things are done, that probbaly is an understatment as it amazing! I feel that the docker team is doing a great job and that they are doing a great job at it. And I hope this will continue.
+
+But as you all know docker desktop WAS a great tool for managing your docker images, up untill it became a thing of the past. It drove it self of the cliff with paid subsription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can't use it at work why would you used it at home? You are what you practice and you are what you use.
+
+There are many alternatives to docker stack, but lets not throw docker simplicity out the window yet. Obivously Kube and Helm is the destinaton but lets take small steps. For devops using git with docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it and maybe there is a usecase for them, but in a pipeline driven world, you can't really use them. You don't use docker desktop in production so keeping rest of the stack the same would be a good idea.
 
 So this brings this journey to a cross road do you build a VM and run docker engine and docker-compose in there or do you run this nativley. If you are on linux/unix you probbaly alright. On windows however best experience would be attained though Powershell Core7, WSL2 and Windows Terminal. Go ahead and install these on you will never look back. Alos while you at it stop using CYGWIN to do this you are making your life hard.
 
