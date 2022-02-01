@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-02-01T14:09:48+11:00">
+  <meta property="article:modified_time" content="2022-02-01T15:15:13+11:00">
 
 
 
@@ -371,7 +371,7 @@
     <meta itemprop="headline" content="Good Bye Docker Desktop">
     <meta itemprop="description" content="You were great while you lasted1">
     <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
-    <meta itemprop="dateModified" content="2022-02-01T14:09:48+11:00">
+    <meta itemprop="dateModified" content="2022-02-01T15:15:13+11:00">
 
     <div class="page__inner-wrap">
       
@@ -404,23 +404,23 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>First of all, if it wasn’t for docker, the technology ladscape would be very diffrent today. Thank you docker and the team behind it! I do feel that som etechnologies that come out opensource and force other vendors to show their cards. Docker single handledly changed the way a lot of things are done, that probbaly is an understatment as it amazing! I feel that the docker team is doing a great job and that they are doing a great job at it. And I hope this will continue.</p>
+        <p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
 
-<p>But as you all know docker desktop WAS a great tool for managing your docker images, up untill it became a thing of the past. It drove it self of the cliff with paid subsription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can’t use it at work why would you used it at home? You are what you practice and you are what you use.</p>
+<p>But as you all know, docker desktop WAS a great tool for running docker on your desktop, up until it became a thing of the past. It drove itself off the cliff with paid subscription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can’t use it at work, why would you use it at home? After all, you are what you practice, and you are what you use. Consistency of tools is critical to developers.</p>
 
-<p>There are many alternatives to docker stack, but lets not throw docker simplicity out the window yet. Obivously Kube and Helm is the destinaton but lets take small steps. For devops using git with docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it and maybe there is a usecase for them, but in a pipeline driven world, you can’t really use them. You don’t use docker desktop in production so keeping rest of the stack the same would be a good idea.</p>
+<p>There are many alternatives to the docker desktop stack, but let’s not throw docker simplicity out the window yet. Obviously, Kube and Helm is the destination, but let’s take small steps. For DevOps, using git with docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it, and maybe there is a use case for them, but in a pipeline driven world, you can’t use them. You don’t use docker desktop in production so keeping rest of the stack the same would be a good idea.</p>
 
-<p>So this brings this journey to a cross road do you build a VM and run docker engine and docker-compose in there or do you run this nativley. If you are on linux/unix you probbaly alright. On windows however best experience would be attained though Powershell Core7, WSL2 and Windows Terminal. Go ahead and install these on you will never look back. Alos while you at it stop using CYGWIN to do this you are making your life hard.</p>
+<p>So this brings this journey to a crossroads. Do you build a VM and run the docker engine and docker-compose in there, or do you run this semi-natively? If you are on Linux/Unix you are alright; you can google your way out. On windows, however best experience would be attained through Powershell Core7, WSL2 and Windows Terminal. Go ahead try these on; you will never look back! Also, while you are at it, stop using CYGWIN to do this; you are making your life harder than you have to. :P</p>
 
-<p>Now that you have tools from the future installed lets proceed to the next steps</p>
+<p>Now that you have tools from the future installed, lets proceed to the next steps</p>
 
 <h2 id="wsl-install-ubuntu">WSL Install Ubuntu</h2>
 
-<p>This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead so using Ubuntu is best option. (long story post to follow).</p>
+<p>This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead, so using Ubuntu is the best option we have. (long story post to follow).</p>
 
 <h3 id="wsl-download-and-import-ubuntu">Wsl download and Import ubuntu</h3>
 
-<p>Open up Powershell core and run followig commands.</p>
+<p>Open up Powershell core and run the followig commands.</p>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mkdir</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
 </span><span class="n">cd</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
@@ -428,11 +428,11 @@
 </span><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="nx">ubuntu</span><span class="w"> </span><span class="nx">c:/wsl/ubuntu2110</span><span class="w"> </span><span class="nx">c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now you have a ubuntu image in your WSL, you can restart Windows Terminal and it will appear as a new option.</p>
+<p>Now you have a ubuntu image in your WSL, you can restart Windows Terminal, and it will appear as a new option.</p>
 
 <h3 id="config-ubuntu">Config Ubuntu</h3>
 
-<p>Because we did not use MS apx the new ubuntu has only root user, best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal and in it run the following commands. Change user name and password as you like when prompted.</p>
+<p>Because we did not use MS apx, the new Ubuntu has only a root user; best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal, and in it run the following commands. (Change user name and password as you like when prompted.)</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adduser <span class="nt">-d</span> /home/maxbarrass <span class="nt">-m</span> maxbarrass
 passwd maxbarrass
@@ -442,7 +442,7 @@ addgroup maxbarrass <span class="nb">sudo
 
 <h3 id="update-windows-terminal-profile">Update Windows Terminal Profile</h3>
 
-<p>Now that you have a new user in your ubuntu you can update your Windows Terminal profile to use the new user.</p>
+<p>Now that you have a new user in your Ubuntu, you can update your Windows Terminal profile to use the new user.</p>
 
 <p>This should be in the Command line for your ubuntu profile:</p>
 
@@ -451,7 +451,7 @@ addgroup maxbarrass <span class="nb">sudo
 
 <h3 id="install-docker-in-ubuntu">Install docker in Ubuntu</h3>
 
-<p>Create a new script <code class="language-plaintext highlighter-rouge">nano instal-docker.sh</code> with following content and run it. This will install docker and docker-compose, as well as add docker service start to you profile. This way when you open your ubuntu it will ensure that docker is running.</p>
+<p>Create a new script <code class="language-plaintext highlighter-rouge">nano instal-docker.sh</code> with the following content and run it. This will install docker and docker-compose, as well as add docker service start to your <code class="language-plaintext highlighter-rouge">.profile</code>. This way, when you open your Ubuntu, it will ensure that docker is running.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># update the package manager and install some prerequisites (all of these aren't technically required)</span>
 <span class="nb">sudo </span>apt-get update <span class="nt">-y</span>
@@ -501,7 +501,7 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 
 <h3 id="thank-you">Thank you</h3>
 
-<p>Hope you enjoyed this guide. If you have any questions or comments feel free to contact me. I will be happy to help.</p>
+<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
 <p>Let me know what you think and don’t forget to tell your friends.</p>
 
