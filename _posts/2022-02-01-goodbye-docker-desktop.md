@@ -2,7 +2,7 @@
 layout: single
 permalink: /blog/2022/02/01/goodbye-docker-desktop
 title:  "Good Bye Docker Desktop"
-excerpt: "You were great while you lasted1"
+excerpt: "You were great while you lasted!"
 date:   2022-02-01 00:00:00:00 +1000
 author: max@aem.design
 categories:
