@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>DevOps Automation - AEM.Design</title>
-<meta name="description" content="Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.">
+<!-- begin _includes/seo.html --><title>Good Bye Docker Desktop - AEM.Design</title>
+<meta name="description" content="You were great while you lasted1">
 
 
   <meta name="author" content="Max Barrass">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="DevOps Automation">
-<meta property="og:url" content="https://aem.design/blog/2017/07/04/devops-automation">
+<meta property="og:title" content="Good Bye Docker Desktop">
+<meta property="og:url" content="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">
 
 
-  <meta property="og:description" content="Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.">
+  <meta property="og:description" content="You were great while you lasted1">
 
 
 
@@ -36,11 +36,11 @@
 
 
 
-  <meta property="article:published_time" content="2017-07-04T20:25:00+10:00">
+  <meta property="article:published_time" content="2022-02-01T00:00:00+11:00">
 
 
 
-  <meta property="article:modified_time" content="2021-03-14T01:50:42+11:00">
+  <meta property="article:modified_time" content="2022-02-01T13:54:11+11:00">
 
 
 
@@ -49,7 +49,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/blog/2017/07/04/devops-automation">
+<link rel="canonical" href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">
 
 
 
@@ -368,15 +368,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="DevOps Automation">
-    <meta itemprop="description" content="Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.">
-    <meta itemprop="datePublished" content="2017-07-04T20:25:00+10:00">
-    <meta itemprop="dateModified" content="2021-03-14T01:50:42+11:00">
+    <meta itemprop="headline" content="Good Bye Docker Desktop">
+    <meta itemprop="description" content="You were great while you lasted1">
+    <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
+    <meta itemprop="dateModified" content="2022-02-01T13:54:11+11:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">DevOps Automation
+          <h1 id="page-title" class="page__title" itemprop="headline">Good Bye Docker Desktop
 </h1>
           
 
@@ -392,7 +392,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          3 minute read
         
       </span>
     
@@ -404,29 +404,102 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Over last few weeks we have spent considerable time to get the DevOps bootstrap working more consistently across Mac, Linux and Windows.</p>
+        <p>As you all know docker desktop WAS a great tool for managing your docker images, up untill it became a thing of the past. It drove it self of the cliff with paid subsription. Using git wuth docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it and maybe there is a usecase for them, but in a pipeline driven world, you can’t really use them.</p>
 
-<p><img src="/assets/images/devops/bootstrap.png" alt="DevOps Bootstrap" /></p>
+<p>So this brings this journey to a cross road do you build a VM and run docker engine and docker-compose in there or do you run this nativley. If you are on linux/unix you probbaly alright. On windows however best experience would be attained though Powershell Core7, WSL2 and Windows Terminal. Go ahead and install these on you will never look back. Alos while you at it stop using CYGWIN to do this you are making your life hard.</p>
 
-<p>Out of all of the operating systems Windows was the hardest and easiest to get working! Yes, it can be like that!</p>
+<p>Now that you have tools from the future installed lets proceed to the next steps</p>
 
-<p>In the hindsight Windows it’s the easiest as you do not have a lot of choice for proper bash that can interact with Windows Processes directly, so and Cygwin handles this very well. In addition to this some corporates have Dual Account setup for all developers that requires developers to login as Local Admin account to install software. This is was challenging to play with and we would recommend to avoid as much as possible but in the end it work.</p>
+<h2 id="wsl-install-ubuntu">WSL Install Ubuntu</h2>
 
-<p><img src="/assets/images/devops/success-win10-cygwin1.png" alt="DevOps Bootstrap Success Win10 Cygwin" /></p>
+<p>This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead so using Ubuntu is best option. (long story post to follow).</p>
 
-<p>Mac on the other hand poses sever other challenges it comes bundles with Python so a use of private virtual environments for isolating from system installation was implemented and used across all OS’s.</p>
+<h3 id="wsl-download-and-import-ubuntu">Wsl download and Import ubuntu</h3>
 
-<p><img src="/assets/images/devops/success-mac.png" alt="DevOps Bootstrap Success Mac" /></p>
+<p>Open up Powershell core and run followig commands.</p>
 
-<p>Linux Ubuntu on the other hand was the simplest to setup and use, even if you have Secure Boot enabled only VirtualBox installation had extra steps to install signed driver.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mkdir</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
+</span><span class="n">cd</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
+</span><span class="n">curl.exe</span><span class="w"> </span><span class="nt">-L</span><span class="w"> </span><span class="nt">-o</span><span class="w"> </span><span class="nx">impish-server-cloudimg-amd64-root.tar.xz</span><span class="w"> </span><span class="nx">https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64-root.tar.xz</span><span class="w">
+</span><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="nx">ubuntu</span><span class="w"> </span><span class="nx">c:/wsl/ubuntu2110</span><span class="w"> </span><span class="nx">c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz</span><span class="w">
+</span></code></pre></div></div>
 
-<p><img src="/assets/images/devops/success-ubuntu.png" alt="DevOps Bootstrap Success Mac" /></p>
+<p>Now you have a ubuntu image in your WSL, you can restart Windows Terminal and it will appear as a new option.</p>
 
-<p>Also during this update autocomplete was added to DevOps bootstrap!</p>
+<h3 id="config-ubuntu">Config Ubuntu</h3>
 
-<p><a href="https://asciinema.org/a/3GrVPCGnClzzQQW9MWWqpZ9Vt"><img src="https://asciinema.org/a/3GrVPCGnClzzQQW9MWWqpZ9Vt.png" alt="asciicast" /></a></p>
+<p>Because we did not use MS apx the new ubuntu has only root user, best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal and in it run the following commands. Change user name and password as you like when prompted.</p>
 
-<p>As always let us know what you think.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adduser <span class="nt">-d</span> /home/maxbarrass <span class="nt">-m</span> maxbarrass
+passwd maxbarrass
+addgroup maxbarrass <span class="nb">sudo
+</span>usermod <span class="nt">-aG</span> <span class="nb">sudo </span>maxbarrass
+</code></pre></div></div>
+
+<h3 id="update-windows-terminal-profile">Update Windows Terminal Profile</h3>
+
+<p>Now that you have a new user in your ubuntu you can update your Windows Terminal profile to use the new user.</p>
+
+<p>This should be in the Command line for your ubuntu profile:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wsl.exe -d ubuntu -u maxbarrass
+</code></pre></div></div>
+
+<h3 id="install-docker-in-ubuntu">Install docker in Ubuntu</h3>
+
+<p>Create a new script <code class="language-plaintext highlighter-rouge">nano instal-docker.sh</code> with following content and run it. This will install docker and docker-compose, as well as add docker service start to you profile. This way when you open your ubuntu it will ensure that docker is running.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># update the package manager and install some prerequisites (all of these aren't technically required)</span>
+<span class="nb">sudo </span>apt-get update <span class="nt">-y</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> apt-transport-https ca-certificates curl software-properties-common libssl-dev libffi-dev git wget nano
+
+<span class="c"># create a group named docker and add yourself to it</span>
+<span class="c">#   so that we don't have to type sudo docker every time</span>
+<span class="c">#   note you will need to logout and login before this takes affect (which we do later)</span>
+<span class="nb">sudo </span>groupadd docker
+<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
+
+<span class="c"># add Docker key and repo</span>
+curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+<span class="nb">sudo </span>add-apt-repository <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> stable"</span> <span class="nt">-y</span>
+
+<span class="c"># (optional) add kubectl key and repo</span>
+curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-key.gpg | <span class="nb">sudo </span>apt-key add -
+<span class="nb">echo</span> <span class="s2">"deb https://apt.kubernetes.io/ kubernetes-xenial main"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/kubernetes.list
+
+<span class="c"># update the package manager with the new repos</span>
+<span class="nb">sudo </span>apt-get update
+
+<span class="c"># upgrade the distro</span>
+<span class="nb">sudo </span>apt-get upgrade <span class="nt">-y</span>
+<span class="nb">sudo </span>apt-get autoremove <span class="nt">-y</span>
+
+<span class="c"># install docker</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce containerd.io
+
+<span class="c"># (optional) install kubectl</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> kubectl
+
+<span class="c"># (optional) install latest version of docker compose</span>
+<span class="nb">sudo </span>curl <span class="nt">-sSL</span> https://github.com/docker/compose/releases/download/v<span class="sb">`</span>curl <span class="nt">-s</span> https://github.com/docker/compose/tags | <span class="nb">grep</span> <span class="s2">"compose/releases/tag"</span> | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="sb">`</span>/docker-compose-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-s</span> | <span class="nb">tr</span> <span class="s1">'[:upper:]'</span> <span class="s1">'[:lower:]'</span><span class="sb">`</span>-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-m</span><span class="sb">`</span> <span class="nt">-o</span> /usr/local/bin/docker-compose 
+<span class="nb">sudo chmod</span> +x /usr/local/bin/docker-compose
+
+<span class="nb">touch</span> /etc/docker/daemon.json
+
+<span class="nb">tee</span> <span class="nt">-a</span> /etc/docker/daemon.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+{
+  "iptables": false
+}
+</span><span class="no">EOF
+
+</span><span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
+</code></pre></div></div>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>Hope you enjoyed this guide. If you have any questions or comments feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>
 
         
       </section>
@@ -443,9 +516,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
-    
-      <a href="/tags/update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/tags/docker-desktop" class="page__taxonomy-item" rel="tag">docker-desktop</a>
     
     </span>
   </p>
@@ -470,7 +541,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-14">March 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-02-01">February 1, 2022</time></p>
 
 
       </footer>
@@ -480,23 +551,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=DevOps+Automation%20https%3A%2F%2Faem.design%2Fblog%2F2017%2F07%2F04%2Fdevops-automation" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Good+Bye+Docker+Desktop%20https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F01%2Fgoodbye-docker-desktop" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2017%2F07%2F04%2Fdevops-automation" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F01%2Fgoodbye-docker-desktop" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2017%2F07%2F04%2Fdevops-automation" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F01%2Fgoodbye-docker-desktop" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/2017/06/28/automation-testing" class="pagination--pager" title="Automation Testing and Human Reporting
+      <a href="/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" class="pagination--pager" title="How to add property and author a component programmatically?
 ">Previous</a>
     
     
-      <a href="/blog/2017/12/06/touch-ui-migration" class="pagination--pager" title="Touch UI Migration
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -519,46 +589,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2022/02/01/goodbye-docker-desktop" rel="permalink">Good Bye Docker Desktop
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">You were great while you lasted1
-</p>
-  </article>
-</div>
-
         
           
 
@@ -627,7 +657,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          7 minute read
+          6 minute read
         
       </span>
     
@@ -675,6 +705,46 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/03/16/aem-sdk-jdk11" rel="permalink">AEM SDK and JDK11
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!
 </p>
   </article>
 </div>
@@ -800,8 +870,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/blog/2017/07/04/devops-automation";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/2017/07/04/devops-automation"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2022/02/01/goodbye-docker-desktop";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2022/02/01/goodbye-docker-desktop"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

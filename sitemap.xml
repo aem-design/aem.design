@@ -221,6 +221,10 @@
 <lastmod>2022-01-19T14:03:53+11:00</lastmod>
 </url>
 <url>
+<loc>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</loc>
+<lastmod>2022-02-01T13:54:11+11:00</lastmod>
+</url>
+<url>
 <loc>https://aem.design/about/</loc>
 <lastmod>2021-03-14T13:37:45+11:00</lastmod>
 </url>
@@ -355,6 +359,9 @@
 </url>
 <url>
 <loc>https://aem.design/tags/data/</loc>
+</url>
+<url>
+<loc>https://aem.design/tags/docker-desktop/</loc>
 </url>
 <url>
 <loc>https://aem.design/categories/blog/</loc>

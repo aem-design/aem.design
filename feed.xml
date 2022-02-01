@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-01-19T14:08:16+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">How to add property and author a component programmatically?</title><link href="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="alternate" type="text/html" title="How to add property and author a component programmatically?" /><published>2022-01-19T00:00:00+11:00</published><updated>2022-01-19T14:03:53+11:00</updated><id>https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically</id><content type="html" xml:base="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically"><![CDATA[<h2 id="updatating-aem-content-programmatically">Updatating AEM Content programmatically?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-02-01T13:59:23+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Good Bye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Good Bye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-02-01T13:54:11+11:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>As you all know docker desktop WAS a great tool for managing your docker images, up untill it became a thing of the past. It drove it self of the cliff with paid subsription. Using git wuth docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it and maybe there is a usecase for them, but in a pipeline driven world, you can’t really use them.</p>
+
+<p>So this brings this journey to a cross road do you build a VM and run docker engine and docker-compose in there or do you run this nativley. If you are on linux/unix you probbaly alright. On windows however best experience would be attained though Powershell Core7, WSL2 and Windows Terminal. Go ahead and install these on you will never look back. Alos while you at it stop using CYGWIN to do this you are making your life hard.</p>
+
+<p>Now that you have tools from the future installed lets proceed to the next steps</p>
+
+<h2 id="wsl-install-ubuntu">WSL Install Ubuntu</h2>
+
+<p>This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead so using Ubuntu is best option. (long story post to follow).</p>
+
+<h3 id="wsl-download-and-import-ubuntu">Wsl download and Import ubuntu</h3>
+
+<p>Open up Powershell core and run followig commands.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mkdir</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
+</span><span class="n">cd</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
+</span><span class="n">curl.exe</span><span class="w"> </span><span class="nt">-L</span><span class="w"> </span><span class="nt">-o</span><span class="w"> </span><span class="nx">impish-server-cloudimg-amd64-root.tar.xz</span><span class="w"> </span><span class="nx">https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64-root.tar.xz</span><span class="w">
+</span><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="nx">ubuntu</span><span class="w"> </span><span class="nx">c:/wsl/ubuntu2110</span><span class="w"> </span><span class="nx">c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now you have a ubuntu image in your WSL, you can restart Windows Terminal and it will appear as a new option.</p>
+
+<h3 id="config-ubuntu">Config Ubuntu</h3>
+
+<p>Because we did not use MS apx the new ubuntu has only root user, best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal and in it run the following commands. Change user name and password as you like when prompted.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adduser <span class="nt">-d</span> /home/maxbarrass <span class="nt">-m</span> maxbarrass
+passwd maxbarrass
+addgroup maxbarrass <span class="nb">sudo
+</span>usermod <span class="nt">-aG</span> <span class="nb">sudo </span>maxbarrass
+</code></pre></div></div>
+
+<h3 id="update-windows-terminal-profile">Update Windows Terminal Profile</h3>
+
+<p>Now that you have a new user in your ubuntu you can update your Windows Terminal profile to use the new user.</p>
+
+<p>This should be in the Command line for your ubuntu profile:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wsl.exe -d ubuntu -u maxbarrass
+</code></pre></div></div>
+
+<h3 id="install-docker-in-ubuntu">Install docker in Ubuntu</h3>
+
+<p>Create a new script <code class="language-plaintext highlighter-rouge">nano instal-docker.sh</code> with following content and run it. This will install docker and docker-compose, as well as add docker service start to you profile. This way when you open your ubuntu it will ensure that docker is running.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># update the package manager and install some prerequisites (all of these aren't technically required)</span>
+<span class="nb">sudo </span>apt-get update <span class="nt">-y</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> apt-transport-https ca-certificates curl software-properties-common libssl-dev libffi-dev git wget nano
+
+<span class="c"># create a group named docker and add yourself to it</span>
+<span class="c">#   so that we don't have to type sudo docker every time</span>
+<span class="c">#   note you will need to logout and login before this takes affect (which we do later)</span>
+<span class="nb">sudo </span>groupadd docker
+<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
+
+<span class="c"># add Docker key and repo</span>
+curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+<span class="nb">sudo </span>add-apt-repository <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> stable"</span> <span class="nt">-y</span>
+
+<span class="c"># (optional) add kubectl key and repo</span>
+curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-key.gpg | <span class="nb">sudo </span>apt-key add -
+<span class="nb">echo</span> <span class="s2">"deb https://apt.kubernetes.io/ kubernetes-xenial main"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/kubernetes.list
+
+<span class="c"># update the package manager with the new repos</span>
+<span class="nb">sudo </span>apt-get update
+
+<span class="c"># upgrade the distro</span>
+<span class="nb">sudo </span>apt-get upgrade <span class="nt">-y</span>
+<span class="nb">sudo </span>apt-get autoremove <span class="nt">-y</span>
+
+<span class="c"># install docker</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce containerd.io
+
+<span class="c"># (optional) install kubectl</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> kubectl
+
+<span class="c"># (optional) install latest version of docker compose</span>
+<span class="nb">sudo </span>curl <span class="nt">-sSL</span> https://github.com/docker/compose/releases/download/v<span class="sb">`</span>curl <span class="nt">-s</span> https://github.com/docker/compose/tags | <span class="nb">grep</span> <span class="s2">"compose/releases/tag"</span> | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="sb">`</span>/docker-compose-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-s</span> | <span class="nb">tr</span> <span class="s1">'[:upper:]'</span> <span class="s1">'[:lower:]'</span><span class="sb">`</span>-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-m</span><span class="sb">`</span> <span class="nt">-o</span> /usr/local/bin/docker-compose 
+<span class="nb">sudo chmod</span> +x /usr/local/bin/docker-compose
+
+<span class="nb">touch</span> /etc/docker/daemon.json
+
+<span class="nb">tee</span> <span class="nt">-a</span> /etc/docker/daemon.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+{
+  "iptables": false
+}
+</span><span class="no">EOF
+
+</span><span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
+</code></pre></div></div>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>Hope you enjoyed this guide. If you have any questions or comments feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="docker-desktop" /><summary type="html"><![CDATA[You were great while you lasted1]]></summary></entry><entry><title type="html">How to add property and author a component programmatically?</title><link href="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="alternate" type="text/html" title="How to add property and author a component programmatically?" /><published>2022-01-19T00:00:00+11:00</published><updated>2022-01-19T14:03:53+11:00</updated><id>https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically</id><content type="html" xml:base="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically"><![CDATA[<h2 id="updatating-aem-content-programmatically">Updatating AEM Content programmatically?</h2>
 
 <p>By far the easiest method of updating your AEM content programmatically is to use <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/on-deploy-scripts/index.html">ACS On-Deploy Script</a></p>
 
@@ -1099,90 +1194,4 @@ Two configurations have to be done. GraphQL client configuration and CIF catalog
 <p>Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
 <img src="/assets/images/aem-magento-integration/Product-Shoe.png" alt="Binding" /></p>
 
-<p>Thank you.</p>]]></content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Integrate AEM with Magento to us eCommerce functionality!]]></summary></entry><entry><title type="html">AEM Framework for Multi-Tenant Environments.</title><link href="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments" rel="alternate" type="text/html" title="AEM Framework for Multi-Tenant Environments." /><published>2020-01-12T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments</id><content type="html" xml:base="https://aem.design/blog/2020/01/12/aem-framework-for-multi-tenant-environments"><![CDATA[<h1 id="introduction">Introduction</h1>
-
-<p>AEM.Design is about identifying best practices and patterns that should be embedded and used a starting point for creating solutions for AEM. Our approach is to combine these best practices and patterns into the open-source framework that can accelerate projects and provide a pathway for sharing knowledge with the community in a consumable production-ready framework. A lot of articles detail individual knowledge fragments that at times useful on their own but do not provide a clear direction for end-use. We have tried to create a consolidated reference end-to-end approach with AEM.design framework and tools.</p>
-
-<p>This initiative aims at collating best practices and patterns that are proven to be useful on projects. It aims to leverage best practices not only from AEM knowledge base but also leverage best of the best from Front End, Automation Testing, DevOps and another related enablement tech. The aim of this initiative to provide a framework that can fit into existing solution practices without mandating a particular process.</p>
-
-<p>All of the code is located in GitHub, Docker Hub, SonarCloud and published to Maven central.</p>
-
-<p>Best place to start with this framework is to try out the Docker Bundle that has the framework and demo of all of the components. You can find how to get started here: https://aem.design/blog/2019/08/30/docker-aem-bundle</p>
-
-<p>Our archetype project is aimed to generate a new tenant project that has all of the components required to run the AEM implementation project. It including automation tests, site showcase, frontend code implementation and component overrides tailored to you tenant name and project.</p>
-
-<p>If you have any questions on particular issues you can raise issues in GitHub for repos there are a few of them.</p>
-
-<p>Creating and managing an environment for Multi-Tenants requires considerable upfront planning. Starting AEM project is easy, and you can feel a great sense of velocity early on. Although your initial velocity will make you feel comfortable, this might not last and avoid future pitfalls is hard once you have released to production. To avoid pitfalls of the future means that you will need to be aware of some of the pitfalls you might encounter upfront, and this is very hard to convey and predict.</p>
-
-<p>To protect projects from encountering technical pitfalls in the future, it’s recommended to follow several product best practices. A sheer number of best practices and patterns is overwhelming, and it’s tough for new entrants to appreciate all of the suggested practices. We found that establishing a set of goals and principles early on helps to provide a project with a pathway to success.</p>
-
-<p>Technical patterns are easily avoided by leveraging frameworks that seek to embed knowledge into a useful framework. Providing input into business processes is a more complicated endeavour due to the way the project can be executed. From our experience, teams need to aim to establish a common design language which is used to communicate requirements and create an efficient delivery process that builds trust in the tools being used. This requires having open dialogue at the start of the project to ensure everyone is on the same page and are willing to commit to trusting automation process.</p>
-
-<p>Following sections outline some of the elements of knowledge that should be kept in mind when establishing a project for a single site or multi-tenant sites.</p>
-
-<h1 id="business-approach">Business approach</h1>
-
-<p>Be very transparent with the whole team, and every person needs to understand that they will all be required to login into AEM and use it, PMs and steak holders included, after all, it’s their future digital platform. Everyone must learn the basic terminology of AEM and Design Language that will be used to describe requirements, this avoids confusion for everyone, and everyone should be encouraging peers to use correct language.</p>
-
-<ol>
-  <li>Select primary Business Analyst to run project knowledge transfer, this will be your primary conduit</li>
-  <li>The project team focus is primarily on Authoring Experience, as this what will enable authors to create the visual experiences they want</li>
-  <li>Create a common Design Language to ensure designers and BA’s lead the conversation of explaining how designs are authored in AEM, not in some other external concepts</li>
-  <li>Establish a religious training for all end-users of AEM</li>
-  <li>Create a showcase of you chosen components and walk everyone (including stakeholders) thought it, showcase must be used for functional tests, so it’s not a throwaway</li>
-  <li>Establish a common knowledge repository for sharing knowledge while AEM project is running, use Confluence as it’s most accessible, do not treat this knowledge base as a dumping ground of notes, treat it like a knowledge book for the future. This space is for people to see what you have built not read endless meeting notes, all admin related content should not be primary focus for the space</li>
-  <li>Establish a author training site that will be updated by Authors and BAs, this should be like any other tenant</li>
-  <li>Delay all modification to core Authoring Experience, use YAGNI banner especially if everyone is new to AEM</li>
-  <li>Component that appears in multiples experiences(pages) and show same data structure but different visual presentation are variant of same component.</li>
-  <li>Focus on identifying Unique Experiences and Unique components Variants that make up those Unique Experiences.</li>
-  <li>Ensure analytics is discussed as Definition of Ready for each component.</li>
-  <li>Focus on content taxonomies to ensure content structure can scale from the start in DAM, Content Fragments, Experience Fragments, Tags, Forms and Site Pages. Each site should be in its own tenant folder with additional contextual segmentation that   should apply for each type of content.</li>
-  <li>Site Content must always be in Region/Language structure with primary Country and Language as default, essentially your site must be multi languish compatible from the start.</li>
-  <li>Do not let Information Architecture dictate site Content Architecture</li>
-  <li>All legacy SEO ideas and practices (anything that does not talk about microdata in page and components) could be tested using Functional Automation Tests using the Build in AEM Hobes framework. Doing this will allows authors to test their content when they create it. If it can’t be automatically tested, it’s not a requirement; it’s 2020 excuses don’t apply so to drop that requirement if it can’t be tested.</li>
-  <li>Acceptance Criteria and Acceptance tests must be part of Definition of Ready for DEV</li>
-  <li>Automation testing is not optional, and it’s the only way to verify Definition of Ready.</li>
-</ol>
-
-<h1 id="technology-approach">Technology Approach</h1>
-
-<p>For single and Multi-Tenant Projects consider that each site is a “tenant” not a sling workspace tenant but more of a virtual tenant used to segregate content from each site. This addition provides a method for security policies to be applied as users create content, as well as provide a clean separation of content and application code is required, especially as you are working of a single component codebase.</p>
-
-<ol>
-  <li>Create a showcase with your chosen components which are maintained Developers throughout development and Testers when helping to test</li>
-  <li>Focus on Functional Automation Testing for all components with Authoring (does dialog work), Publishing (does it interact in publish) and Screenshot (does it look right) perspectives. Automation test suit is for the team not for selected few it does not have to be pretty is need to be quick to adopt and allow testing other web services, Selenium still works.</li>
-  <li>Leverage Docker containers to ensure you are running consistent versions of services across all environments and especially Developers desktops, see Operations/Docker project</li>
-  <li>Run AEM with Segment and Datastore separates from the start</li>
-  <li>Leverage external ESB tool for API dev, eg ApacheNifi, try not to write API’s in AEM, external API tools can template/translate requests into direct Sling API request.</li>
-  <li>Offload processing to Kubernetes container farm to leverage containers.</li>
-  <li>Use overlays for each component per each site, as you will be using multiple framework eventually, this will allow you so substitute/update components in the future.</li>
-  <li>Segregate content of each “tenant” into individual sites; this pattern also applies to a number of locations where content is created by authors</li>
-  <li>Ensure Pipelines for build and deploy are established as soon as git and repos are created.</li>
-  <li>Ensure dispatchers and present for Author and Publish instances</li>
-  <li>Ensure that Frontend code is package as a stand-alone package and Page Client Libs are used to include in Templates, see Support/Compose module.</li>
-  <li>Leverage VLT tool to export and backup content from prod and import into Development environments as required, packages don’t work for large content farms</li>
-  <li>Leverage Ansible to persists logic for environment configuration, see Operations/Deploy and Operations/Ansible-Roles project.</li>
-  <li>Ensure dispatcher config is in code and in a Docker container, see Docker-Dispatcher repo</li>
-  <li>Do not allow manual modification of services/servers via console etc follow Configuration as Code for all infrastructure and services, especially servers, preferably run Centos Atomic edition which will force Docker usage, see Operations/VM project for how to generate Centos Atomic VMs appliances.</li>
-  <li>Leverage Content Fragments for structured content, use templated component to present that content.</li>
-  <li>Leverage Experience Fragments for building reusable Page Sections.</li>
-  <li>Do not build footer and header as massive components, instead create experience fragments and add them to Site Root page and inherit it thought the tree.</li>
-  <li>Ensure Analytics content can be updated by authors</li>
-  <li>Use Data Layer spec to output analytics content in page header</li>
-  <li>Use Data Layer spec to manage all fields that will be output by components and use for analytics</li>
-  <li>Do not implement any components that use any inline javascript for Analytics, no matter what.</li>
-  <li>Ensure each component has a unique ID attribute</li>
-  <li>Ensure each component you output is easily distinguishable from other stuff AEM adds, AEM.Design uses Boolean attribute “component”</li>
-  <li>Use lists for re-using content for presentation, look at Generic Details and List components for reference, they provide dynamic field specific templating and expose of component content without dumping all of the content on the page. Hiding 48 out of 50 fields of a component content is poor design, output only content you need, see Component Variant and List Badge patterns.</li>
-  <li>Separate config into a separate package and use run-modes</li>
-  <li>Separate authoring experience updates into a separate package</li>
-  <li>Use ACS Commons tools and check them before you build new components.</li>
-  <li>When using components from frameworks consider the impact on authoring experience, different frameworks have different authoring possibilities, with some making Authoring very Front End heavy without enabling Authors.</li>
-</ol>
-
-<p>This is a non-exhaustive list, but it should be a good start starting point.</p>
-
-<p>As always, we welcome contributions this list, let us know by leaving a comment or better yet raise an issue in the repo.</p>
-
-<p>Share this on your favourite network if you find this useful.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="knowledge" /><category term="sharing" /><category term="multi-tenant" /><category term="framework" /><summary type="html"><![CDATA[Notes to get you started creating a Multi-Tenant Environments on AEM]]></summary></entry></feed>
+<p>Thank you.</p>]]></content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Integrate AEM with Magento to us eCommerce functionality!]]></summary></entry></feed>
