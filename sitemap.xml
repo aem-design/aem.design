@@ -222,7 +222,11 @@
 </url>
 <url>
 <loc>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</loc>
-<lastmod>2022-02-02T01:12:56+11:00</lastmod>
+<lastmod>2022-02-07T00:37:32+11:00</lastmod>
+</url>
+<url>
+<loc>https://aem.design/blog/2022/02/06/goodbye-centos</loc>
+<lastmod>2022-02-07T00:37:32+11:00</lastmod>
 </url>
 <url>
 <loc>https://aem.design/about/</loc>
@@ -362,6 +366,9 @@
 </url>
 <url>
 <loc>https://aem.design/tags/docker-desktop/</loc>
+</url>
+<url>
+<loc>https://aem.design/tags/centos/</loc>
 </url>
 <url>
 <loc>https://aem.design/categories/blog/</loc>

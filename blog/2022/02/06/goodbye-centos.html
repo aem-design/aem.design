@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Goodbye Docker Desktop - AEM.Design</title>
-<meta name="description" content="You were great while you lasted!">
+<!-- begin _includes/seo.html --><title>Goodbye Centos - AEM.Design</title>
+<meta name="description" content="You were great while the free ride lasted!">
 
 
   <meta name="author" content="Max Barrass">
@@ -22,21 +22,21 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Goodbye Docker Desktop">
-<meta property="og:url" content="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">
+<meta property="og:title" content="Goodbye Centos">
+<meta property="og:url" content="https://aem.design/blog/2022/02/06/goodbye-centos">
 
 
-  <meta property="og:description" content="You were great while you lasted!">
-
-
-
-  <meta property="og:image" content="https://aem.design/assets/images/goodbye/goodbye-docker-desktop.png">
+  <meta property="og:description" content="You were great while the free ride lasted!">
 
 
 
+  <meta property="og:image" content="https://aem.design/assets/images/goodbye/goodbye-centos.png">
 
 
-  <meta property="article:published_time" content="2022-02-01T00:00:00+11:00">
+
+
+
+  <meta property="article:published_time" content="2022-02-06T00:00:00+11:00">
 
 
 
@@ -49,7 +49,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">
+<link rel="canonical" href="https://aem.design/blog/2022/02/06/goodbye-centos">
 
 
 
@@ -230,18 +230,18 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: url('/assets/images/goodbye/goodbye-docker-desktop.png');"
+  style=" background-image: url('/assets/images/goodbye/goodbye-centos.png');"
 >
   
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Goodbye Docker Desktop
+          Goodbye Centos
 
         
       </h1>
       
-        <p class="page__lead">You were great while you lasted!
+        <p class="page__lead">You were great while the free ride lasted!
 </p>
       
       
@@ -258,7 +258,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          1 minute read
         
       </span>
     
@@ -420,9 +420,9 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Goodbye Docker Desktop">
-    <meta itemprop="description" content="You were great while you lasted!">
-    <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
+    <meta itemprop="headline" content="Goodbye Centos">
+    <meta itemprop="description" content="You were great while the free ride lasted!">
+    <meta itemprop="datePublished" content="2022-02-06T00:00:00+11:00">
     <meta itemprop="dateModified" content="2022-02-07T00:37:32+11:00">
 
     <div class="page__inner-wrap">
@@ -430,104 +430,33 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
+        <p>Centos is no more! You already know that. The founder of Kurtzer, who started Centos more than 16 years ago, was shocked just as much. Centos was a great gap filler between Fedora and RHEL. You had the best of both worlds, but you could use it for development and then roll your apps straight to RHEL if you need enterprise support.</p>
 
-<p>But as you all know, docker desktop WAS a great tool for running docker on your desktop, up until it became a thing of the past. It drove itself off the cliff with paid subscription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can’t use it at work, why would you use it at home? After all, you are what you practice, and you are what you use. Consistency of tools is critical to developers.</p>
+<p>What does this mean for AEM? Well, it means all of the containers essentially will need to be updated to use something else. You can’t use Centos, so the next best thing would be … Debian. Yes, Ubuntu is a good contender, but you won’t be able to run AEM Forms on it; tldr, Ubuntu does not have 32bit support.</p>
 
-<p>There are many alternatives to the docker desktop stack, but let’s not throw docker simplicity out the window yet. Obviously, Kube and Helm is the destination, but let’s take small steps. For DevOps, using git with docker-compose gives you all the power of git and docker. Yes team behind Docker Desktop have added a lot of front end features to it, and maybe there is a use case for them, but in a pipeline driven world, you can’t use them. You don’t use docker desktop in production so keeping rest of the stack the same would be a good idea.</p>
+<p>Old containers will keep working, but slowly, all new updates would need to be rolled on the new Debian images that are available right now. Go ahead check them to see what you think. You can also check out the <a href="https://hub.docker.com/u/aemdesign/">AEM.Design Docker Hub</a> for the latest images.</p>
 
-<p>So this brings this journey to a crossroads. Do you build a VM and run the docker engine and docker-compose in there, or do you run this semi-natively? If you are on Linux/Unix you are alright; you can google your way out. On windows, however best experience would be attained through Powershell Core7, WSL2 and Windows Terminal. Go ahead try these on; you will never look back! Also, while you are at it, stop using CYGWIN to do this; you are making your life harder than you have to. :P</p>
+<p>Here, for example, the latest AEM 6.5 with SP 11:</p>
 
-<p>Now that you have tools from the future installed, lets proceed to the next steps</p>
+<div class="code-copy-header">
+  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 
-<h2 id="wsl-install-ubuntu">WSL Install Ubuntu</h2>
-
-<p>This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead, so using Ubuntu is the best option we have. (long story post to follow).</p>
-
-<h3 id="wsl-download-and-import-ubuntu">Wsl download and Import ubuntu</h3>
-
-<p>Open up Powershell core and run the followig commands.</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mkdir</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
-</span><span class="n">cd</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
-</span><span class="n">curl.exe</span><span class="w"> </span><span class="nt">-L</span><span class="w"> </span><span class="nt">-o</span><span class="w"> </span><span class="nx">impish-server-cloudimg-amd64-root.tar.xz</span><span class="w"> </span><span class="nx">https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64-root.tar.xz</span><span class="w">
-</span><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="nx">ubuntu</span><span class="w"> </span><span class="nx">c:/wsl/ubuntu2110</span><span class="w"> </span><span class="nx">c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author6511</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.11.0-jdk11</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now you have a ubuntu image in your WSL, you can restart Windows Terminal, and it will appear as a new option.</p>
+<p>And as an extra bonus, if you prefer to use this on your M1 Mac, here is the same command again with the ARM suffix in the tag:</p>
 
-<h3 id="config-ubuntu">Config Ubuntu</h3>
+<div class="code-copy-header">
+  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 
-<p>Because we did not use MS apx, the new Ubuntu has only a root user; best approach is to add a new user to your liking. Run the new ubuntu terminal in Windows Terminal, and in it run the following commands. (Change user name and password as you like when prompted.)</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adduser <span class="nt">-d</span> /home/maxbarrass <span class="nt">-m</span> maxbarrass
-passwd maxbarrass
-addgroup maxbarrass <span class="nb">sudo
-</span>usermod <span class="nt">-aG</span> <span class="nb">sudo </span>maxbarrass
-</code></pre></div></div>
-
-<h3 id="update-windows-terminal-profile">Update Windows Terminal Profile</h3>
-
-<p>Now that you have a new user in your Ubuntu, you can update your Windows Terminal profile to use the new user.</p>
-
-<p>This should be in the Command line for your ubuntu profile:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wsl.exe -d ubuntu -u maxbarrass
-</code></pre></div></div>
-
-<h3 id="install-docker-in-ubuntu">Install docker in Ubuntu</h3>
-
-<p>Create a new script <code class="language-plaintext highlighter-rouge">nano instal-docker.sh</code> with the following content and run it. This will install docker and docker-compose, as well as add docker service start to your <code class="language-plaintext highlighter-rouge">.profile</code>. This way, when you open your Ubuntu, it will ensure that docker is running.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># update the package manager and install some prerequisites (all of these aren't technically required)</span>
-<span class="nb">sudo </span>apt-get update <span class="nt">-y</span>
-<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> apt-transport-https ca-certificates curl software-properties-common libssl-dev libffi-dev git wget nano
-
-<span class="c"># create a group named docker and add yourself to it</span>
-<span class="c">#   so that we don't have to type sudo docker every time</span>
-<span class="c">#   note you will need to logout and login before this takes affect (which we do later)</span>
-<span class="nb">sudo </span>groupadd docker
-<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
-
-<span class="c"># add Docker key and repo</span>
-curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
-<span class="nb">sudo </span>add-apt-repository <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> stable"</span> <span class="nt">-y</span>
-
-<span class="c"># (optional) add kubectl key and repo</span>
-curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-key.gpg | <span class="nb">sudo </span>apt-key add -
-<span class="nb">echo</span> <span class="s2">"deb https://apt.kubernetes.io/ kubernetes-xenial main"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/kubernetes.list
-
-<span class="c"># update the package manager with the new repos</span>
-<span class="nb">sudo </span>apt-get update
-
-<span class="c"># upgrade the distro</span>
-<span class="nb">sudo </span>apt-get upgrade <span class="nt">-y</span>
-<span class="nb">sudo </span>apt-get autoremove <span class="nt">-y</span>
-
-<span class="c"># install docker</span>
-<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce containerd.io
-
-<span class="c"># (optional) install kubectl</span>
-<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> kubectl
-
-<span class="c"># (optional) install latest version of docker compose</span>
-<span class="nb">sudo </span>curl <span class="nt">-sSL</span> https://github.com/docker/compose/releases/download/v<span class="sb">`</span>curl <span class="nt">-s</span> https://github.com/docker/compose/tags | <span class="nb">grep</span> <span class="s2">"compose/releases/tag"</span> | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="sb">`</span>/docker-compose-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-s</span> | <span class="nb">tr</span> <span class="s1">'[:upper:]'</span> <span class="s1">'[:lower:]'</span><span class="sb">`</span>-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-m</span><span class="sb">`</span> <span class="nt">-o</span> /usr/local/bin/docker-compose 
-<span class="nb">sudo chmod</span> +x /usr/local/bin/docker-compose
-
-<span class="nb">touch</span> /etc/docker/daemon.json
-
-<span class="nb">tee</span> <span class="nt">-a</span> /etc/docker/daemon.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
-{
-  "iptables": false
-}
-</span><span class="no">EOF
-
-</span><span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
-</code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author6511</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.11.0-jdk11-arm</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="thank-you">Thank you</h3>
 
-<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+<p>I hope you will find the new ARM images useful. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
 <p>Let me know what you think and don’t forget to tell your friends.</p>
 
@@ -546,7 +475,7 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/docker-desktop" class="page__taxonomy-item" rel="tag">docker-desktop</a>
+      <a href="/tags/centos" class="page__taxonomy-item" rel="tag">centos</a>
     
     </span>
   </p>
@@ -581,23 +510,22 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Goodbye+Docker+Desktop%20https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F01%2Fgoodbye-docker-desktop" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Goodbye+Centos%20https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F06%2Fgoodbye-centos" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F01%2Fgoodbye-docker-desktop" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F06%2Fgoodbye-centos" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F01%2Fgoodbye-docker-desktop" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F06%2Fgoodbye-centos" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" class="pagination--pager" title="How to add property and author a component programmatically?
+      <a href="/blog/2022/02/01/goodbye-docker-desktop" class="pagination--pager" title="Goodbye Docker Desktop
 ">Previous</a>
     
     
-      <a href="/blog/2022/02/06/goodbye-centos" class="pagination--pager" title="Goodbye Centos
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -630,7 +558,7 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/2022/02/06/goodbye-centos" rel="permalink">Goodbye Centos
+        <a href="/blog/2022/02/01/goodbye-docker-desktop" rel="permalink">Goodbye Docker Desktop
 </a>
       
     </h2>
@@ -648,14 +576,14 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          4 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">You were great while the free ride lasted!
+    <p class="archive__item-excerpt" itemprop="description">You were great while you lasted!
 </p>
   </article>
 </div>
@@ -901,8 +829,8 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/blog/2022/02/01/goodbye-docker-desktop";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/2022/02/01/goodbye-docker-desktop"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2022/02/06/goodbye-centos";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2022/02/06/goodbye-centos"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-02-02T01:17:25+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Good Bye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Good Bye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-02-02T01:12:56+11:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-02-07T00:41:59+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Goodbye Centos</title><link href="https://aem.design/blog/2022/02/06/goodbye-centos" rel="alternate" type="text/html" title="Goodbye Centos" /><published>2022-02-06T00:00:00+11:00</published><updated>2022-02-07T00:37:32+11:00</updated><id>https://aem.design/blog/2022/02/06/goodbye-centos</id><content type="html" xml:base="https://aem.design/blog/2022/02/06/goodbye-centos"><![CDATA[<p>Centos is no more! You already know that. The founder of Kurtzer, who started Centos more than 16 years ago, was shocked just as much. Centos was a great gap filler between Fedora and RHEL. You had the best of both worlds, but you could use it for development and then roll your apps straight to RHEL if you need enterprise support.</p>
+
+<p>What does this mean for AEM? Well, it means all of the containers essentially will need to be updated to use something else. You can’t use Centos, so the next best thing would be … Debian. Yes, Ubuntu is a good contender, but you won’t be able to run AEM Forms on it; tldr, Ubuntu does not have 32bit support.</p>
+
+<p>Old containers will keep working, but slowly, all new updates would need to be rolled on the new Debian images that are available right now. Go ahead check them to see what you think. You can also check out the <a href="https://hub.docker.com/u/aemdesign/">AEM.Design Docker Hub</a> for the latest images.</p>
+
+<p>Here, for example, the latest AEM 6.5 with SP 11:</p>
+
+<div class="code-copy-header">
+  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author6511</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.11.0-jdk11</span><span class="w">
+</span></code></pre></div></div>
+
+<p>And as an extra bonus, if you prefer to use this on your M1 Mac, here is the same command again with the ARM suffix in the tag:</p>
+
+<div class="code-copy-header">
+  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author6511</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.11.0-jdk11-arm</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you will find the new ARM images useful. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="centos" /><summary type="html"><![CDATA[You were great while the free ride lasted!]]></summary></entry><entry><title type="html">Goodbye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Goodbye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-02-07T00:37:32+11:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
 
 <p>But as you all know, docker desktop WAS a great tool for running docker on your desktop, up until it became a thing of the past. It drove itself off the cliff with paid subscription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can’t use it at work, why would you use it at home? After all, you are what you practice, and you are what you use. Consistency of tools is critical to developers.</p>
 
@@ -1100,102 +1128,4 @@ To add this missing entry do this:</p>
 
 <p>There is a whole array of documentation available at your favourite site in the <a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html">Experience Manager Cloud Manager Help</a> section, explore the new capability that is at your disposal and review official docs if you get stuck.</p>
 
-<p>As always if you want more drop us a line, checkout the code and submit some issues if you find any.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html"><![CDATA[This is the End Game and Adobe has it, a non-definitive perspective!]]></summary></entry><entry><title type="html">AEM Magento Integration 😍🚀🔭</title><link href="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM Magento Integration 😍🚀🔭" /><published>2020-02-01T00:37:00+11:00</published><updated>2021-04-26T11:04:40+10:00</updated><id>https://aem.design/blog/2020/03/06/aem-magento-integration</id><content type="html" xml:base="https://aem.design/blog/2020/03/06/aem-magento-integration%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD"><![CDATA[<h2 id="introduction">Introduction</h2>
-
-<p>AEM when integrated with an eCommerce provider provides a great experience for online shopping functionalities.</p>
-
-<p>eCommerce functionality is inherent in AEM which shows from demo sites like we retail.
-As AEM provides very perfect handling of content like authoring and publishing and managing assets, integrating it with eCommerce system provides a perfect way to build a robust eCommerce site.</p>
-
-<p>AEM connects with eCommerce providers, Like SAP Commerce, Salesforce, Magento and more. AEM provides specific eCommerce frameworks to connect to eCommerce providers.
-In this blog we are going to see how AEM connects to Magento eCommerce. There are two ways to connect to an eCommerce provider Adobe IO or Commerce Integration Framework for a provider.
-Because AEM provides a Commerce Integration Framework connector to connect to Magento, we will be using that. CIF uses GraphQL queries to talk to Magento and bring data.</p>
-
-<p>Note: To connect to eCommerce providers other than Magento we need to go through Adobe IO. For more info visit. : https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/faq.html</p>
-
-<p>Let’s jump into the steps to implement CIF now.</p>
-
-<p>The commerce integration framework can be found at below locations. Adobe provides production ready components also which can be used.</p>
-
-<ul>
-  <li><a href="https://github.com/adobe/aem-core-cif-components">AEM CIF components</a></li>
-  <li><a href="https://github.com/adobe/commerce-cif-connector">AEM- CIF connector and authoring tools</a></li>
-</ul>
-
-<p>Build the CIF connector framework or add in your dependencies. Once installed in AEM we can get option to configure the integration properties.
-Two configurations have to be done. GraphQL client configuration and CIF catalog Magento configuration.</p>
-
-<p>Below are the steps where we have configured these.</p>
-
-<h3 id="cif-graphql-client-configuration-factory">CIF GraphQL Client Configuration Factory</h3>
-
-<p>Add GraphQL service – https://magento-hostname/graphql</p>
-
-<p><img src="/assets/images/aem-magento-integration/graphql-client-configuration.png" alt="GraphQL client configuration" /></p>
-
-<h3 id="cif-catalog-magento-graphql-configuration-factory">CIF Catalog Magento GraphQL Configuration Factory</h3>
-<p><img src="/assets/images/aem-magento-integration/cif-magento-graphql-configuration.png" alt="CIF magento graphql configuration" /></p>
-
-<p>Once configured Test the connection in postman, using below query. Results depend on correct products configuration in Magento also.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-	category(id: 2) {
-		id, name, url_path, product_count, children_count, children {
-			id, name, url_path, product_count, children_count, children {
-				id, name, url_path, product_count, children_count, children {
-					id, name, url_path, product_count, children_count, children {
-						id, name, url_path, product_count, children_count
-					}
-				}
-			}
-		}
-	}
-}
-</code></pre></div></div>
-
-<p>The response must return results with exact numbers. A sample result is below</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-	"data": {
-		"category": {
-			"id": 2,
-			"name": "Default Category",
-			"url_path": null,
-			"product_count": 7,
-			"children_count": "3",
-			"children": [{
-				"id": 5,
-				"name": "Mens",
-				"url_path": "mens-shirts",
-				"product_count": 2,
-				"children_count": "1",
-				"children": [{
-					"id": 6,
-					"name": "Footwear",
-					"url_path": "mens-shirts\/footwear",
-					"product_count": 1,
-					"children_count": "0",
-					"children": []
-				}]
-			}, {
-				"id": 4,
-				"name": "SubCategory01",
-				"url_path": "subcategory01",
-				"product_count": 2,
-				"children_count": "0",
-				"children": []
-			}]
-		}
-	}
-}
-</code></pre></div></div>
-
-<p>Now it’s time to create binding in AEM Commerce. This will fetch us the products from Magento to use anywhere or in commerce components.</p>
-
-<p>Below image describes the binding configuration.
-<img src="/assets/images/aem-magento-integration/magento-binding.png" alt="Binding" /></p>
-
-<p>Once binding is successfully done, results can be seen in AEM ecommerce. The below image shows results in AEM ecommerce after successful binding with Magento.
-<img src="/assets/images/aem-magento-integration/Product-Shoe.png" alt="Binding" /></p>
-
-<p>Thank you.</p>]]></content><author><name>Saket Mishra</name><email>saket.mishra.kr@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Integrate AEM with Magento to us eCommerce functionality!]]></summary></entry></feed>
+<p>As always if you want more drop us a line, checkout the code and submit some issues if you find any.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html"><![CDATA[This is the End Game and Adobe has it, a non-definitive perspective!]]></summary></entry></feed>
