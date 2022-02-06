@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /blog/2022/02/01/goodbye-docker-desktop
-title:  "Good Bye Docker Desktop"
+title:  "Goodbye Docker Desktop"
 excerpt: "You were great while you lasted!"
 date:   2022-02-01 00:00:00:00 +1000
 author: max@aem.design
@@ -9,6 +9,8 @@ categories:
 - blog
 tags:
 - docker-desktop
+header:
+    overlay_image: /assets/images/goodbye/goodbye-docker-desktop.png
 ---
 
 First of all, if it wasn't for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.
