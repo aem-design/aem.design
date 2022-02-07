@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Touch UI Test - AEM.Design</title>
-<meta name="description" content="End of the Year is a few days away!">
+<!-- begin _includes/seo.html --><title>Docker Compose and Deploy Stacks 🍔😘 - AEM.Design</title>
+<meta name="description" content="How to use docker compose like a pro!">
 
 
   <meta name="author" content="Max Barrass">
@@ -22,34 +22,34 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Touch UI Test">
-<meta property="og:url" content="https://aem.design/blog/2017/12/29/touch-ui-test">
+<meta property="og:title" content="Docker Compose and Deploy Stacks 🍔😘">
+<meta property="og:url" content="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98">
 
 
-  <meta property="og:description" content="End of the Year is a few days away!">
-
-
-
-  <meta property="og:image" content="https://aem.design/assets/images/screenshots/homepage-small.png">
+  <meta property="og:description" content="How to use docker compose like a pro!">
 
 
 
-
-
-  <meta property="article:published_time" content="2017-12-29T18:22:00+11:00">
-
-
-
-  <meta property="article:modified_time" content="2021-03-14T01:50:42+11:00">
+  <meta property="og:image" content="https://aem.design/assets/images/docker/docker-compose-stack.png">
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-02-08T00:37:00+11:00">
+
+
+
+  <meta property="article:modified_time" content="2022-02-08T08:14:14+11:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://aem.design/blog/2017/12/29/touch-ui-test">
+
+<link rel="canonical" href="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98">
 
 
 
@@ -221,6 +221,58 @@
 
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/docker/docker-compose-stack.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Docker Compose and Deploy Stacks 🍔😘
+
+        
+      </h1>
+      
+        <p class="page__lead">How to use docker compose like a pro!
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
 
 
 
@@ -368,61 +420,89 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Touch UI Test">
-    <meta itemprop="description" content="End of the Year is a few days away!">
-    <meta itemprop="datePublished" content="2017-12-29T18:22:00+11:00">
-    <meta itemprop="dateModified" content="2021-03-14T01:50:42+11:00">
+    <meta itemprop="headline" content="Docker Compose and Deploy Stacks 🍔😘">
+    <meta itemprop="description" content="How to use docker compose like a pro!">
+    <meta itemprop="datePublished" content="2022-02-08T00:37:00+11:00">
+    <meta itemprop="dateModified" content="2022-02-08T08:14:14+11:00">
 
     <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Touch UI Test
-</h1>
-          
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-        </header>
       
 
       <section class="page__content" itemprop="text">
         
-        <p>End of the Year is a few days away!</p>
+        <p>Following up on the articles <a href="/blog/2019/09/04/aem-and-docker">AEM and Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>, lets pull all that knowledge together and talk about how to deploy AEM stacks to developers using Docker Compose. There are many ways to bring a stack to developers machines, but the simplest way is to use Docker Compose.</p>
 
-<p>It’s was great feeling to bring the Touch UI Migration so close to the end of the year!</p>
+<p>Additionally, when using Docker Compose, you will understand whether your deployment architecture is complex and which parts are critical; this will provide you with some feedback to clean things up.</p>
 
-<p>But it’s almost as exciting as completing the Touch UI Testing of exact same components that just have been migrated!</p>
+<h2 id="docker-compose-experience">Docker Compose Experience</h2>
 
-<p><img src="/assets/images/testing/touch-ui-testing.png" alt="TouchUI Testing" /></p>
+<p>Docker Compose requires you to have one <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file in your project root. This file is a YAML file that describes the deployment of your stack. In simple scenarios, you can just have one file, and it will be enough; for most scenarios having a structure set up for growth is going to be beneficial long term. When a developer clones your repo all they need to do is to run <code class="language-plaintext highlighter-rouge">docker compose up</code>, and the stack will be deployed. Once it’s running, they open their browser and go to <code class="language-plaintext highlighter-rouge">http://localhost</code>, and they will land on stack console:</p>
 
-<p>Testing utils and all Specs have been migrated from Classic UI to TouchUI.</p>
+<p><img src="/assets/images/docker/traefik-stack-console.png" alt="Traefik Stack Console" /></p>
 
-<p>Additionally PhantomJS has been depreciated in favor of Headless Chrome!!</p>
+<p>This simple console can be updated in any way required to convey context and provide any relevant information and links to developers working on the project. This is a straightforward way to surface a lot of documentation in a usable manner.</p>
 
-<p>As you all know development of PhantomJS has been abandoned in favour of Chrome Headless. This comes as a welcome move as lots of latest JS and CSS features where hard to test using PhantomJS.</p>
+<h2 id="docker-compose-stack-details">Docker Compose Stack Details</h2>
 
-<p>This is another awesome milestone to be carried as a great base for upcoming projects in 2018!</p>
+<p>Let’s take a deeper look at the details; here is an example of a simple deployment you can see the source here <a href="https://github.com/aem-design/aemdesign-aem-support/blob/master/docker-compose.yml">docker-compose.yml</a>. This docker compose file has the following services:</p>
 
-<p>Happy New Year to all!!! See you all next year!!!</p>
+<ul>
+  <li>nginx - developer console, provides a developer-friendly console to visualise all of their services and provide shortcuts to all relevant consoles.</li>
+  <li>createcert - a service that creates a self-signed certificate for the AEM instance.</li>
+  <li>createcertpkcs12 - a service that creates a self-signed certificate that can be installed into the browser.</li>
+  <li>traefik - a service that provides a reverse proxy to the AEM instance.</li>
+  <li>seleniumhub - a service that provides a hub for selenium.</li>
+  <li>selenium-node-chrome - a service that provides a selenium node for chrome.</li>
+  <li>author - a primary author service.</li>
+  <li>author-deploy-core - a service that deploys the AEM core to author instance.</li>
+  <li>author-deploy-support - a service that deploys the AEM support to author instance.</li>
+  <li>publish - a publish instance service.</li>
+  <li>publish-deploy-core - a service that deploys the AEM core to publish instance.</li>
+  <li>publish-deploy-support - a service that deploys the AEM support to publish instance.</li>
+  <li>dispatcher - a dispatcher service.</li>
+  <li>testing - this is meant to run when there is a aemdesign-parent repo, so when you are developing locally.</li>
+  <li>automationtest - this meant to run in aemdesign-aem-support repo pipeline.</li>
+  <li>automationtestprep - this meant to run in aemdesign-aem-support repo pipeline, will download the latest core and install local support packages.</li>
+  <li>testingcheck - a service that check if test automation is working.</li>
+</ul>
 
-<p>PS. Look forward to our <a href="http://www.jecis.com/">JECIS</a> integration coming early next year!!! We are going to use <a href="http://www.jecis.com/">JECIS Framework</a> to deliver eCommerce capability blueprint to your projects!!!</p>
+<p>These services can be activated all at once or individually, you can run <code class="language-plaintext highlighter-rouge">docker compose up traekfik nginx</code> to get only the developer console on <code class="language-plaintext highlighter-rouge">http://localhost</code>. Some of the services have dependencies on others, so you can see the order in which they are activated. Some services are optional and can be activated when required using profile activation <code class="language-plaintext highlighter-rouge">docker compose up -p dodeploy author-deploy-core</code>.</p>
+
+<p>This example I’ve provided uses the older <code class="language-plaintext highlighter-rouge">2.4</code> version of docker compose that supports the <code class="language-plaintext highlighter-rouge">EXTENDS</code> keyword:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">extends</span><span class="pi">:</span>
+  <span class="na">file</span><span class="pi">:</span> <span class="s">./docker/aem/docker-compose.yml</span>
+  <span class="na">service</span><span class="pi">:</span> <span class="s">author-deploy-support</span>
+</code></pre></div></div>
+
+<p>This <code class="language-plaintext highlighter-rouge">EXTENDS</code> keyword allows you to pull together predefined docker compose files from a better-organised structure.</p>
+
+<p>Having a well-organised docker folder with a subfolder for all services will ensure that you can have a single file that can be used to deploy all of your services. This also allows you to have all of the relevant per service configurations isolated and not mixed in the same file. Here is an example structure of a docker folder, <a href="https://github.com/aem-design/aemdesign-aem-support/tree/master/docker">source is here</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker
+├── aem
+│   └── docker-compose.yml
+├── common
+│   ├── config-tz.yml
+├── nginx
+│   └── docker-compose.yml
+├── selenium
+│   └── docker-compose.yml
+├── testing
+│   ├── docker-compose.yml
+└── traefik
+    └── docker-compose.yml
+</code></pre></div></div>
+
+<p>If you check out the <a href="https://github.com/aem-design/aemdesign-aem-support/tree/master/docker">github link</a> you will find a number of relevant config files in each service folder. Furthermore, as you add new services, it will be easy to follow this pattern to keep things neat and tidy.</p>
+
+<p>In later versions of docker compose, see <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">compose-file-v3</a>, you can’t use <code class="language-plaintext highlighter-rouge">EXTENDS</code> keyword and you need to pass all of the required service <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> files when running <code class="language-plaintext highlighter-rouge">docker compose up</code> command. This can be simply abstracted into a start script here is an example of how to do it <a href="https://github.com/wildone/synology-docker/blob/main/start.ps1">start.ps1</a>. This is a PowerShell script that will run <code class="language-plaintext highlighter-rouge">docker compose up</code> command for all services activated from <code class="language-plaintext highlighter-rouge">start-services.conf</code> file. In addition, that script leverages <code class="language-plaintext highlighter-rouge">.env</code> file to keep all of your environment variables in one place for easy maintenance, see example <a href="https://github.com/wildone/synology-docker/blob/main/.env">.env</a> file. You can read more about <a href="https://github.com/wildone/synology-docker/blob/main/.env">environment files</a> on official docs.</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you will find using docker compose will being a smile to your face {insert home alone 2 smile}. As always if you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>
 
         
       </section>
@@ -439,9 +519,15 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/testing" class="page__taxonomy-item" rel="tag">testing</a><span class="sep">, </span>
+      <a href="/tags/aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
     
-      <a href="/tags/update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/tags/automation" class="page__taxonomy-item" rel="tag">automation</a><span class="sep">, </span>
+    
+      <a href="/tags/devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      <a href="/tags/docker" class="page__taxonomy-item" rel="tag">docker</a><span class="sep">, </span>
+    
+      <a href="/tags/docker-compose" class="page__taxonomy-item" rel="tag">docker-compose</a>
     
     </span>
   </p>
@@ -466,7 +552,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-14">March 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-02-08">February 8, 2022</time></p>
 
 
       </footer>
@@ -476,23 +562,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Touch+UI+Test%20https%3A%2F%2Faem.design%2Fblog%2F2017%2F12%2F29%2Ftouch-ui-test" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Docker+Compose+and+Deploy+Stacks+%F0%9F%8D%94%F0%9F%98%98%20https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F08%2Fdocker-compose-and-deploy-stacks%25F0%259F%258D%2594%25F0%259F%2598%2598" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2017%2F12%2F29%2Ftouch-ui-test" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F08%2Fdocker-compose-and-deploy-stacks%25F0%259F%258D%2594%25F0%259F%2598%2598" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2017%2F12%2F29%2Ftouch-ui-test" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2022%2F02%2F08%2Fdocker-compose-and-deploy-stacks%25F0%259F%258D%2594%25F0%259F%2598%2598" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/2017/12/06/touch-ui-migration" class="pagination--pager" title="Touch UI Migration
+      <a href="/blog/2022/02/06/goodbye-centos" class="pagination--pager" title="Goodbye Centos
 ">Previous</a>
     
     
-      <a href="/blog/2019/01/01/2018-came-and-went" class="pagination--pager" title="Touch UI Test
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -515,46 +600,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="permalink">Docker Compose and Deploy Stacks 🍔😘
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">How to use docker compose like a pro!
-</p>
-  </article>
-</div>
-
         
           
 
@@ -671,6 +716,46 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">ACS On-Deploy is the answer!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2021/09/10/spa-headless-widgets-and-aem" rel="permalink">SPA, Headless, Widgets and AEM?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When to use these and what they achieve?
 </p>
   </article>
 </div>
@@ -796,8 +881,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/blog/2017/12/29/touch-ui-test";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/2017/12/29/touch-ui-tests"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2022/02/08/docker-compose"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

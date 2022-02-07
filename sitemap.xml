@@ -229,6 +229,10 @@
 <lastmod>2022-02-07T00:37:32+11:00</lastmod>
 </url>
 <url>
+<loc>https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98</loc>
+<lastmod>2022-02-08T08:14:14+11:00</lastmod>
+</url>
+<url>
 <loc>https://aem.design/about/</loc>
 <lastmod>2021-03-14T13:37:45+11:00</lastmod>
 </url>
@@ -369,6 +373,9 @@
 </url>
 <url>
 <loc>https://aem.design/tags/centos/</loc>
+</url>
+<url>
+<loc>https://aem.design/tags/docker-compose/</loc>
 </url>
 <url>
 <loc>https://aem.design/categories/blog/</loc>

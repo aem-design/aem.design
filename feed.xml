@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-02-07T00:41:59+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Goodbye Centos</title><link href="https://aem.design/blog/2022/02/06/goodbye-centos" rel="alternate" type="text/html" title="Goodbye Centos" /><published>2022-02-06T00:00:00+11:00</published><updated>2022-02-07T00:37:32+11:00</updated><id>https://aem.design/blog/2022/02/06/goodbye-centos</id><content type="html" xml:base="https://aem.design/blog/2022/02/06/goodbye-centos"><![CDATA[<p>Centos is no more! You already know that. The founder of Kurtzer, who started Centos more than 16 years ago, was shocked just as much. Centos was a great gap filler between Fedora and RHEL. You had the best of both worlds, but you could use it for development and then roll your apps straight to RHEL if you need enterprise support.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-02-08T08:18:21+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Compose and Deploy Stacks 🍔😘</title><link href="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="alternate" type="text/html" title="Docker Compose and Deploy Stacks 🍔😘" /><published>2022-02-08T00:37:00+11:00</published><updated>2022-02-08T08:14:14+11:00</updated><id>https://aem.design/blog/2022/02/08/docker-compose</id><content type="html" xml:base="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98"><![CDATA[<p>Following up on the articles <a href="/blog/2019/09/04/aem-and-docker">AEM and Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>, lets pull all that knowledge together and talk about how to deploy AEM stacks to developers using Docker Compose. There are many ways to bring a stack to developers machines, but the simplest way is to use Docker Compose.</p>
+
+<p>Additionally, when using Docker Compose, you will understand whether your deployment architecture is complex and which parts are critical; this will provide you with some feedback to clean things up.</p>
+
+<h2 id="docker-compose-experience">Docker Compose Experience</h2>
+
+<p>Docker Compose requires you to have one <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file in your project root. This file is a YAML file that describes the deployment of your stack. In simple scenarios, you can just have one file, and it will be enough; for most scenarios having a structure set up for growth is going to be beneficial long term. When a developer clones your repo all they need to do is to run <code class="language-plaintext highlighter-rouge">docker compose up</code>, and the stack will be deployed. Once it’s running, they open their browser and go to <code class="language-plaintext highlighter-rouge">http://localhost</code>, and they will land on stack console:</p>
+
+<p><img src="/assets/images/docker/traefik-stack-console.png" alt="Traefik Stack Console" /></p>
+
+<p>This simple console can be updated in any way required to convey context and provide any relevant information and links to developers working on the project. This is a straightforward way to surface a lot of documentation in a usable manner.</p>
+
+<h2 id="docker-compose-stack-details">Docker Compose Stack Details</h2>
+
+<p>Let’s take a deeper look at the details; here is an example of a simple deployment you can see the source here <a href="https://github.com/aem-design/aemdesign-aem-support/blob/master/docker-compose.yml">docker-compose.yml</a>. This docker compose file has the following services:</p>
+
+<ul>
+  <li>nginx - developer console, provides a developer-friendly console to visualise all of their services and provide shortcuts to all relevant consoles.</li>
+  <li>createcert - a service that creates a self-signed certificate for the AEM instance.</li>
+  <li>createcertpkcs12 - a service that creates a self-signed certificate that can be installed into the browser.</li>
+  <li>traefik - a service that provides a reverse proxy to the AEM instance.</li>
+  <li>seleniumhub - a service that provides a hub for selenium.</li>
+  <li>selenium-node-chrome - a service that provides a selenium node for chrome.</li>
+  <li>author - a primary author service.</li>
+  <li>author-deploy-core - a service that deploys the AEM core to author instance.</li>
+  <li>author-deploy-support - a service that deploys the AEM support to author instance.</li>
+  <li>publish - a publish instance service.</li>
+  <li>publish-deploy-core - a service that deploys the AEM core to publish instance.</li>
+  <li>publish-deploy-support - a service that deploys the AEM support to publish instance.</li>
+  <li>dispatcher - a dispatcher service.</li>
+  <li>testing - this is meant to run when there is a aemdesign-parent repo, so when you are developing locally.</li>
+  <li>automationtest - this meant to run in aemdesign-aem-support repo pipeline.</li>
+  <li>automationtestprep - this meant to run in aemdesign-aem-support repo pipeline, will download the latest core and install local support packages.</li>
+  <li>testingcheck - a service that check if test automation is working.</li>
+</ul>
+
+<p>These services can be activated all at once or individually, you can run <code class="language-plaintext highlighter-rouge">docker compose up traekfik nginx</code> to get only the developer console on <code class="language-plaintext highlighter-rouge">http://localhost</code>. Some of the services have dependencies on others, so you can see the order in which they are activated. Some services are optional and can be activated when required using profile activation <code class="language-plaintext highlighter-rouge">docker compose up -p dodeploy author-deploy-core</code>.</p>
+
+<p>This example I’ve provided uses the older <code class="language-plaintext highlighter-rouge">2.4</code> version of docker compose that supports the <code class="language-plaintext highlighter-rouge">EXTENDS</code> keyword:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">extends</span><span class="pi">:</span>
+  <span class="na">file</span><span class="pi">:</span> <span class="s">./docker/aem/docker-compose.yml</span>
+  <span class="na">service</span><span class="pi">:</span> <span class="s">author-deploy-support</span>
+</code></pre></div></div>
+
+<p>This <code class="language-plaintext highlighter-rouge">EXTENDS</code> keyword allows you to pull together predefined docker compose files from a better-organised structure.</p>
+
+<p>Having a well-organised docker folder with a subfolder for all services will ensure that you can have a single file that can be used to deploy all of your services. This also allows you to have all of the relevant per service configurations isolated and not mixed in the same file. Here is an example structure of a docker folder, <a href="https://github.com/aem-design/aemdesign-aem-support/tree/master/docker">source is here</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker
+├── aem
+│   └── docker-compose.yml
+├── common
+│   ├── config-tz.yml
+├── nginx
+│   └── docker-compose.yml
+├── selenium
+│   └── docker-compose.yml
+├── testing
+│   ├── docker-compose.yml
+└── traefik
+    └── docker-compose.yml
+</code></pre></div></div>
+
+<p>If you check out the <a href="https://github.com/aem-design/aemdesign-aem-support/tree/master/docker">github link</a> you will find a number of relevant config files in each service folder. Furthermore, as you add new services, it will be easy to follow this pattern to keep things neat and tidy.</p>
+
+<p>In later versions of docker compose, see <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">compose-file-v3</a>, you can’t use <code class="language-plaintext highlighter-rouge">EXTENDS</code> keyword and you need to pass all of the required service <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> files when running <code class="language-plaintext highlighter-rouge">docker compose up</code> command. This can be simply abstracted into a start script here is an example of how to do it <a href="https://github.com/wildone/synology-docker/blob/main/start.ps1">start.ps1</a>. This is a PowerShell script that will run <code class="language-plaintext highlighter-rouge">docker compose up</code> command for all services activated from <code class="language-plaintext highlighter-rouge">start-services.conf</code> file. In addition, that script leverages <code class="language-plaintext highlighter-rouge">.env</code> file to keep all of your environment variables in one place for easy maintenance, see example <a href="https://github.com/wildone/synology-docker/blob/main/.env">.env</a> file. You can read more about <a href="https://github.com/wildone/synology-docker/blob/main/.env">environment files</a> on official docs.</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you will find using docker compose will being a smile to your face {insert home alone 2 smile}. As always if you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="docker-compose" /><summary type="html"><![CDATA[How to use docker compose like a pro!]]></summary></entry><entry><title type="html">Goodbye Centos</title><link href="https://aem.design/blog/2022/02/06/goodbye-centos" rel="alternate" type="text/html" title="Goodbye Centos" /><published>2022-02-06T00:00:00+11:00</published><updated>2022-02-07T00:37:32+11:00</updated><id>https://aem.design/blog/2022/02/06/goodbye-centos</id><content type="html" xml:base="https://aem.design/blog/2022/02/06/goodbye-centos"><![CDATA[<p>Centos is no more! You already know that. The founder of Kurtzer, who started Centos more than 16 years ago, was shocked just as much. Centos was a great gap filler between Fedora and RHEL. You had the best of both worlds, but you could use it for development and then roll your apps straight to RHEL if you need enterprise support.</p>
 
 <p>What does this mean for AEM? Well, it means all of the containers essentially will need to be updated to use something else. You can’t use Centos, so the next best thing would be … Debian. Yes, Ubuntu is a good contender, but you won’t be able to run AEM Forms on it; tldr, Ubuntu does not have 32bit support.</p>
 
@@ -794,338 +866,4 @@ To add this missing entry do this:</p>
 
 <p>All you need to do now is to run this command in the directory where you have your code and start compiling like a boss.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.]]></summary></entry><entry><title type="html">AEM SaaS Hands On 😍🚀🔭</title><link href="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD" rel="alternate" type="text/html" title="AEM SaaS Hands On 😍🚀🔭" /><published>2020-02-01T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/02/01/aem-saas-hands-on</id><content type="html" xml:base="https://aem.design/blog/2020/02/01/aem-saas-hands-on%F0%9F%98%8D%F0%9F%9A%80%F0%9F%94%AD"><![CDATA[<div class="sticky">
-    <aside class="sidebar__right">
-<nav class="toc">
-      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-<ul class="toc__menu" id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#aem-saas-author-hand-on" id="markdown-toc-aem-saas-author-hand-on">AEM SaaS Author Hand On</a>    <ul>
-      <li><a href="#environments" id="markdown-toc-environments">Environments</a></li>
-      <li><a href="#pipeline" id="markdown-toc-pipeline">Pipeline</a></li>
-    </ul>
-  </li>
-  <li><a href="#aem-saas-pipelines-breakdown" id="markdown-toc-aem-saas-pipelines-breakdown">AEM SaaS Pipelines Breakdown</a>    <ul>
-      <li><a href="#validation" id="markdown-toc-validation">Validation</a></li>
-      <li><a href="#build--unit-testing" id="markdown-toc-build--unit-testing">Build &amp; Unit Testing</a></li>
-      <li><a href="#code-scanning" id="markdown-toc-code-scanning">Code Scanning</a></li>
-      <li><a href="#build-images" id="markdown-toc-build-images">Build Images</a></li>
-      <li><a href="#deploy-to-dev" id="markdown-toc-deploy-to-dev">Deploy to Dev</a></li>
-    </ul>
-  </li>
-  <li><a href="#aem-saas-pipelines-whats-missing" id="markdown-toc-aem-saas-pipelines-whats-missing">AEM SaaS Pipelines What’s missing</a>    <ul>
-      <li><a href="#git-peer-review-workflow" id="markdown-toc-git-peer-review-workflow">Git Peer Review Workflow</a></li>
-      <li><a href="#automated-functional-testing" id="markdown-toc-automated-functional-testing">Automated Functional testing</a></li>
-      <li><a href="#no-git-lfs" id="markdown-toc-no-git-lfs">No Git LFS</a></li>
-      <li><a href="#no-felix-console" id="markdown-toc-no-felix-console">No Felix Console</a></li>
-    </ul>
-  </li>
-  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul>
-
-    </nav>
-</aside>
-</div>
-
-<h1 id="introduction">Introduction</h1>
-
-<p>If <a href="/blog/2019/10/20/enter-the-github-actions">Github Actions</a> was entry into End Game, latest Adobe AEM SaaS offering is the outcome of an End Game in another dimension, where Adobe is the clear victor! This stealthy engineering masterpiece is a true example of how great experience can provide so much, that words can’t describe the feeling.</p>
-
-<p>Adobes new offering it’s a true testament to engineering and a huge demonstration to all vendors in this space, on how to do things that make a difference. Not often you get your hands on a piece of SaaS software where you open the console and see something that takes your breath away. Your world is turned, and you whisper to yourself this can’t be true, it can’t be that easy.</p>
-
-<p><strong><em>Well folk, it is!</em></strong></p>
-
-<p>Latest offering from Adobe demonstrates their commitment on Experiences and not only for End Users but also for Developers.</p>
-
-<p>This new offering is the Kubernetes powered, container infused, sling application building behemoth, breathing CI/CD life into your projects with ease!</p>
-
-<p>You can find plenty post and materials about tech behind the platform, but this post is about the Experience! We want to see show off the new Cloud Manager experience. This post should provide you with inspiration to jump onto the CI/CD experience that Adobe have gifted upon us!</p>
-
-<p>So, without any further ado let’s jump straight to it.</p>
-
-<h1 id="aem-saas-author-hand-on">AEM SaaS Author Hand On</h1>
-
-<p>To start playing with your Cloud Manager experience you will need to access it thought your Adobe Experience portal, this will be provided for you by Adobe but for now you can follow our blog to get the insight and prepare you to roll-out your first project.</p>
-
-<p>First off you need to login to Adobe Experience Platform, this will allow you not only to login into AEC using your Adobe account but also provides same access to all AEM instances in the Cloud Manager! Which is amazing and so on SSO trend of 2020! Login screen is similar to the all of the login screens Adobe has been slowly introducing in last few years.</p>
-
-<p><img src="/assets/images/adobe-aec/1-login.png" alt="Adobe SSO Login Page" /></p>
-
-<p>You can still use shared local admin accounts (you get one you share with Adobe) but it’s not something you should do in AEC and at all, for many painful reasons.</p>
-
-<p>Once you have logged in you will be redirected to the AEC dashboard.</p>
-
-<p><img src="/assets/images/adobe-aec/2-adobe-experience-cloud-overview.png" alt="AEM Adobe Experience Cloud Dashboard" /></p>
-
-<p>When you click the Experience Manager icon you should see Cloud Manager card with Launch link.</p>
-
-<p><img src="/assets/images/adobe-aec/2-adobe-experience-cloud-ams-cloudmanager.png" alt="AEM Adobe Experience Cloud Manager Launch" /></p>
-
-<p>Clicking Launch on Cloud Manager card will lead you at AEC Program Overview page.</p>
-
-<p><img src="/assets/images/adobe-aec/4-aec-program-console.png" alt="AEC - Cloud Manager - Program Overview " /></p>
-
-<p>This console is your command centre for your environments and associated pipelines. From here you can control your environments, download logs, create and action pipelines. From now on this is the engine of your project!</p>
-
-<p><img src="/assets/images/adobe-aec/5-aec-program-console-manage.png" alt="AEC - Cloud Manager - Environments" /></p>
-
-<p>First thing you will notice is the large banner across the top, this is your production status panel, it will report to you how your Production pipeline is going.</p>
-
-<p>Just under that you will see two sections Environments and Pipelines.</p>
-
-<h2 id="environments">Environments</h2>
-
-<p>Environments section allow you to check status of your environments, update and create new environments, download environment logs, access new environments, all of the features readily available and tucked away in the ellipsis (<code class="language-plaintext highlighter-rouge">...</code>) revealing a simple menu with only but primary experiences you are looking for. Additionally, when you click the Details button in this section you will be taken to a details screen that will show you</p>
-
-<p><img src="/assets/images/adobe-aec/4-aec-program-console-environments-details.png" alt="AEC - Cloud Manager - Environments Details" /></p>
-
-<p>Available Configuration is tied to your account and point allocated for environments. You will only be able to have environments that have been assigned to you by Adobe. Spinning up and tearing down of the environments is as simple as clicking a submenu item on the environment.</p>
-
-<h2 id="pipeline">Pipeline</h2>
-
-<p>Pipeline section allow you to create, update and run pipelines and this is broken down into Production and Non-Production. Manage Git button shows you a dialog that points you to the Adobe Git repo you will need to use when committing code.</p>
-
-<p>Although environments will be your initial focus it will very quickly switch to the Pipelines which you will spend most of your time watching. 😍</p>
-
-<p>So, let’s deep dive on the pipeline and what we can decipher from it’s logs.</p>
-
-<h1 id="aem-saas-pipelines-breakdown">AEM SaaS Pipelines Breakdown</h1>
-
-<p>Adobe pipeline offer is simple, it provides a dream pipeline process where you start with Adobe hosted Git Repo and fork into Quality or Deploy pipeline process.</p>
-
-<p>This is a simple methodology and it seem to work as it saves a bunch of time on a project. All the team need to do is just get their code into the repo and everything is done for them, that has not existed with this ease until now.</p>
-
-<p><img src="/assets/images/adobe-aec/7-aec-program-non-prod-pipeline-execution-complete.png" alt="AEM Saas Program Console" /></p>
-
-<p>As you can tell from the image the pipeline is divided into following stages</p>
-
-<ul>
-  <li>Validation - initial verify of your repo?</li>
-  <li>Build &amp; Unit Testing - maven build and test</li>
-  <li>Code Scanning - SonarQube evaluation</li>
-  <li>Build Images - Docker and Sling app build process</li>
-  <li>Deploy to Dev - Docker release and package install</li>
-</ul>
-
-<p>This is similar process for PROD but with extra testing and approval steps.</p>
-
-<p>As you can see the Non-Prod Deploy pipeline breakdown is simple so now let’s look what is happening under covers, let’s talk about notable things that can be observed from the logs.</p>
-
-<h2 id="validation">Validation</h2>
-<p>No logs available for this but “Your Pipeline has been verified against a set of sanity checks.” could mean a lot of things, but it runs very fast so guessing it’s aim is just to check you have a Git repo with valid pom.xml that could be compiled, that could be a good start.</p>
-
-<p>This step takes about 5min to run from our tests.</p>
-
-<h2 id="build--unit-testing">Build &amp; Unit Testing</h2>
-
-<p>In “build_maven_build.log” you can see <code class="language-plaintext highlighter-rouge">[BUILD] Running maven build command(s)</code> line and judging by what happens after that simple <code class="language-plaintext highlighter-rouge">mvn package</code> command is used as it compiles, tests and packages all modules in you project.</p>
-
-<p>This step runs for about 5min and it would depend on your package and test content. It’s not clear from the logs if the artifacts are cached at this step or after code scan.</p>
-
-<h2 id="code-scanning">Code Scanning</h2>
-
-<p>This is where magic is starting to come into play. First of you get a nice review summary screen that shows you what the damage of your latest code cram, and it’s cool way of summarising underlying tools!</p>
-
-<p><img src="/assets/images/adobe-aec/7-aec-program-non-prod-pipeline-execution-complete-codescan.png" alt="AEM Saas Pipleine CodeScan Result" /></p>
-
-<p>In addition to this you get to see a CSV that shows you things that you need to fix.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>File Location</th>
-      <th>Line Number</th>
-      <th>Issue</th>
-      <th>Type</th>
-      <th>Severity</th>
-      <th>Effort</th>
-      <th>Rule</th>
-      <th>Tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/install is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/components/template/cloudconfig/addthisconnect/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/components/lists/searchlist/v2/searchlist/cq:dialog/content/items/layoutTab/items/column/items/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/global/dialog/touch/badge/content/items/badgeConfigTab/items/column/items/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/components/template/cloudconfig/googleanalytics/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/components/media/image/v2/image/cq:editConfig/cq:inplaceEditing/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-    <tr>
-      <td>design.aem:aemdesign-aem-common:2.0.618</td>
-      <td>0</td>
-      <td>Node /apps/aemdesign/components/template/cloudconfig/googlemap/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</td>
-      <td>Bug</td>
-      <td>Major</td>
-      <td> </td>
-      <td>ConfigAndInstallShouldOnlyContainOsgiNodes</td>
-      <td>aem</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><em>PS. this is the complete list of issues that we got for first deploy of AEM.Design to Adobe SaaS offering.</em></p>
-
-<p>Just looking at this the reported Severity seems to be very opinionated and super conservative. Having a readme file in your <code class="language-plaintext highlighter-rouge">/apps/aemdesign/install</code> folder does not make it a Major defect, but this it probably just splitting hairs at this point and removing that file is trivial.</p>
-
-<p>Errors such as <code class="language-plaintext highlighter-rouge">/apps/aemdesign/components/template/cloudconfig/addthisconnect/config is an OSGi config or install path which contains non-OSGi-related children that will not be visible to non-administrative users.</code> seem to fail the blank <code class="language-plaintext highlighter-rouge">config</code> node name rule and yes this is Major once again.</p>
-
-<p>These trivial issues will get some great solution in time as this is a great process to put in place for all AEM project from the start. Many AEM project will benefit from establishing initial baseline and would provide a clear for quality path.</p>
-
-<p>This step takes about 5min to run, this would depend on amount of code you throw at it.</p>
-
-<h2 id="build-images">Build Images</h2>
-
-<p>This phase is responsible for generating two brand new Docker images that has all of your new code embedded into it. First image will contain all of your project contents and second image will be a final merged version of your project with latest AEM base image.</p>
-
-<p>Essentially process builds a custom CRX-Quickstart with your features(converted packages) embedded into it from the start, this does mean that you will not be able to download or delete the packages using CRX/DE and with added benefit of separating these code package from actual content in your repository.</p>
-
-<p><img src="/assets/images/adobe-aec/11-aem-saas-crxde-packages.png" alt="AEM Saas CRX/DE Packages" /></p>
-
-<p>The logs show standard Docker build process with bunch of parameters being passed to the Docker build process. Namely the build process relies on Packages that were built in previous steps these are passed as a URL list which are downloaded and converted to <a href="https://github.com/apache/sling-org-apache-sling-feature">Sling Features</a> using tool similar to <a href="https://github.com/apache/sling-org-apache-sling-feature-cpconverter">sling-org-apache-sling-feature-cpconverter</a>.</p>
-
-<p>The process also creates a list of packages that are have content to be installed into repository, this list is used in deploy step.</p>
-
-<p>All the packages once converted get store into <code class="language-plaintext highlighter-rouge">src/main/features/generated-author</code> with relevant JSON files describing features in <code class="language-plaintext highlighter-rouge">src/main/features/generated/001_sew-aem-common.json</code>. After this a maven build process is executed to compile your features into latest version (at the time of writing 6.6.0-V17414) of AEM Quickstart. Adobe has indicated that they are moving towards daily releases so this means that this process will pick up latest version of AEM when it’s available.</p>
-
-<p>After this conversion and merger of AEM sling features, AEM image is started as container to initialise it’s segment store. Once the instance is initialising it’s stopped and Apache Jackrabbit Oak maintenance is executed, first checkpoint then compact. Once this is done both docker images are uploaded to Adobes Docker Image Repository. And this same process repeats for Publish images changing runmode=publish in the process.  At the end of this process which takes around 10-15 min to run you end up with Author and Publish images sizing at 4GB each.</p>
-
-<h2 id="deploy-to-dev">Deploy to Dev</h2>
-
-<p>Deploy phase starts with downloading content packages that were isolated in previous phase. Followed by starting and waiting for Author instance, at which is tries to install downloaded packages into the instance and stop the instance on completion.</p>
-
-<p>After this next process start the author and runs a bunch of bash scripts, that enable features, nodestore, blobstore, logging, set admin password validate and link license key. After this AEM is started once again and once ready is stopped and Oak Indexes are regenerated.</p>
-
-<p>After this 10+ min step that instance is started again and marked as available for use, which is not recoded in logs and must be an extra step outside of the pipeline.</p>
-
-<p>As you can see this is straight forward pipeline that just works. Lets discuss the obvious question that is at the top our mind right about now. What’s missing?</p>
-
-<h1 id="aem-saas-pipelines-whats-missing">AEM SaaS Pipelines What’s missing</h1>
-
-<p>Well as this is hosted on AEM there will be a few CI/CD limitations. Limitations are good as they provide less distraction and an opportunity to improve. Here are the things that we find missing so far, they are not deal breakers but good to keep on the back of your mind.</p>
-
-<h2 id="git-peer-review-workflow">Git Peer Review Workflow</h2>
-
-<p>Adobe Git is only a URL to which you push your code, these days all development should revolve around Pull Request Approval process. Covering benefits of this is not required as they are covered in great depth in many articles.</p>
-
-<p>To enable this process to happen on your projects you will need to use external Git repo and manage code reviews there before you publish this final code into Adobe Git.</p>
-
-<p>This is a small inconvenience and it’s readily fixed seeing as all companies these days have a form of Git and in cases where that’s not the case, GitHub, Bitbucket and Gitlab all support this process for free. Additionally, these tools have built in pipeline tools that will help you to push code to Adobe Git.</p>
-
-<h2 id="automated-functional-testing">Automated Functional testing</h2>
-
-<p>Screenshot testing using Selenium or other testing tools is not in and you would need to cater for that yourselves. Most obvious reason for this as there is no one way of doing this and everyone does what they need for their situation.</p>
-
-<p>Additionally, current Deploy pipelines are fixed to a specific flow which you cannot change. This means that in cases where you need to do automated functional testing you would need to do this using external pipeline.</p>
-
-<p>Potentially you could just run your automation test tool of choice manually against a Dev instance in the Adobe environment. But in cases where you would like this to be automated you would have followed another approach.</p>
-
-<p>One approach could be is to still have external Git repo and a pipeline that could build and test code and on success push it to Adobe Git for release to Dev cycle. This would be an ok mechanism as you could do this free on GitHub using containers see <a href="https://aem-design.github.io/aemdesign-aem-support-output/">Exhibit 1</a> that runs in GitHub Actions pipeline. Plus, you would get PR ability.</p>
-
-<h2 id="no-git-lfs">No Git LFS</h2>
-
-<p>If you are using Git Lfs you going to need to revert to plain git as there is not Git Lfs in Adobe’s Git and you will end up publishing pointers to your images into AEM.</p>
-
-<h2 id="no-felix-console">No Felix Console</h2>
-
-<p>There is no Felix Console, but there is a brand-new custom Developers Console that provides very limited tools that you might use.</p>
-
-<p><img src="/assets/images/adobe-aec/12-developer-console-status.png" alt="AEM New Developer Console" /></p>
-
-<p>Standard Felix console does have a lot of features and some can cause a few issues so it’s no surprise it’s not available and have been replaced with a tool that allows you download that for review.</p>
-
-<p>Here are some of the available screens, Status screen will be your main go-to console to download content of some frequently used Felix console.</p>
-
-<style>
-    .image-gallery {overflow: auto; margin-left: -1%!important;}
-    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
-    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
-    .image-gallery li a img {width: 100%; display: block;}
-</style>
-
-<ul class="image-gallery">
-    <li>
-        <a href="/assets/images/adobe-aec/developerconsole/12-developer-console-java-packages.png" title="12-developer-console-java-packages"><img src="https://images.weserv.nl/?url=aem.design/assets/images/adobe-aec/developerconsole/12-developer-console-java-packages.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="12-developer-console-java-packages" title="12-developer-console-java-packages" /><span>12-developer-console-java-packages</span></a>
-    </li>
-
-    <li>
-        <a href="/assets/images/adobe-aec/developerconsole/12-developer-console-queries.png" title="12-developer-console-queries"><img src="https://images.weserv.nl/?url=aem.design/assets/images/adobe-aec/developerconsole/12-developer-console-queries.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="12-developer-console-queries" title="12-developer-console-queries" /><span>12-developer-console-queries</span></a>
-    </li>
-
-    <li>
-        <a href="/assets/images/adobe-aec/developerconsole/12-developer-console-servlets.png" title="12-developer-console-servlets"><img src="https://images.weserv.nl/?url=aem.design/assets/images/adobe-aec/developerconsole/12-developer-console-servlets.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="12-developer-console-servlets" title="12-developer-console-servlets" /><span>12-developer-console-servlets</span></a>
-    </li>
-
-    <li>
-        <a href="/assets/images/adobe-aec/developerconsole/12-developer-console-status-download-logs.png" title="12-developer-console-status-download-logs"><img src="https://images.weserv.nl/?url=aem.design/assets/images/adobe-aec/developerconsole/12-developer-console-status-download-logs.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="12-developer-console-status-download-logs" title="12-developer-console-status-download-logs" /><span>12-developer-console-status-download-logs</span></a>
-    </li>
-
-</ul>
-
-<h1 id="conclusion">Conclusion</h1>
-
-<p>As this is an Adobe’s work in progress and the masterpiece is not finished yet, it’s expected that new features will be added as adoption grows.</p>
-
-<p>It will not take you long to get used to all the options and you will soon be longing for this simplicity in everything. Alternatives experiences to this are far more complicated and although they are fun to create, they can divert your attention and that you need not to do anymore!</p>
-
-<p>From development perspective there are a lot of features that you will not see migrated which is a good thing, as Adobe’s engineers have a good handle on what is used and it’s usefulness beyond just being there part of a legacy.</p>
-
-<p>So, we hope you have had just enough content to give you a quick overview and excite you to jump on board.</p>
-
-<p>There is a whole array of documentation available at your favourite site in the <a href="https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html">Experience Manager Cloud Manager Help</a> section, explore the new capability that is at your disposal and review official docs if you get stuck.</p>
-
-<p>As always if you want more drop us a line, checkout the code and submit some issues if you find any.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="saas" /><category term="knowledge" /><category term="sharing" /><category term="handson" /><summary type="html"><![CDATA[This is the End Game and Adobe has it, a non-definitive perspective!]]></summary></entry></feed>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.]]></summary></entry></feed>
