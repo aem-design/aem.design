@@ -101,16 +101,29 @@ sudo apt-get install -y kubectl
 sudo curl -sSL https://github.com/docker/compose/releases/download/v`curl -s https://github.com/docker/compose/tags | grep "compose/releases/tag" | sed -r 's|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p' | head -n 1`/docker-compose-`uname -s | tr '[:upper:]' '[:lower:]'`-`uname -m` -o /usr/local/bin/docker-compose 
 sudo chmod +x /usr/local/bin/docker-compose
 
+# ensure docker does not use iptabels
 touch /etc/docker/daemon.json
-
 tee -a /etc/docker/daemon.json <<EOF
 {
   "iptables": false
 }
 EOF
 
+# auto start docker on boot
+echo "Starting docker service" 
 echo "sudo service docker start" >> ~/.profile
+
+# mount host drives to root /c/ etc.
+touch /etc/wsl.conf
+tee -a /etc/wsl.conf <<EOF
+[automount]
+root = /
+options = "metadata"
+EOF
+
 ```
+
+Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run `docker ps` to see if docker is running.
 
 ### Thank you
 
