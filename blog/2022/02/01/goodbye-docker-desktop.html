@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-02-07T00:37:32+11:00">
+  <meta property="article:modified_time" content="2022-02-08T12:58:36+11:00">
 
 
 
@@ -423,7 +423,7 @@
     <meta itemprop="headline" content="Goodbye Docker Desktop">
     <meta itemprop="description" content="You were great while you lasted!">
     <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
-    <meta itemprop="dateModified" content="2022-02-07T00:37:32+11:00">
+    <meta itemprop="dateModified" content="2022-02-08T12:58:36+11:00">
 
     <div class="page__inner-wrap">
       
@@ -514,16 +514,29 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 <span class="nb">sudo </span>curl <span class="nt">-sSL</span> https://github.com/docker/compose/releases/download/v<span class="sb">`</span>curl <span class="nt">-s</span> https://github.com/docker/compose/tags | <span class="nb">grep</span> <span class="s2">"compose/releases/tag"</span> | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="sb">`</span>/docker-compose-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-s</span> | <span class="nb">tr</span> <span class="s1">'[:upper:]'</span> <span class="s1">'[:lower:]'</span><span class="sb">`</span>-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-m</span><span class="sb">`</span> <span class="nt">-o</span> /usr/local/bin/docker-compose 
 <span class="nb">sudo chmod</span> +x /usr/local/bin/docker-compose
 
+<span class="c"># ensure docker does not use iptabels</span>
 <span class="nb">touch</span> /etc/docker/daemon.json
-
 <span class="nb">tee</span> <span class="nt">-a</span> /etc/docker/daemon.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
 {
   "iptables": false
 }
 </span><span class="no">EOF
 
-</span><span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
-</code></pre></div></div>
+</span><span class="c"># auto start docker on boot</span>
+<span class="nb">echo</span> <span class="s2">"Starting docker service"</span> 
+<span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
+
+<span class="c"># mount host drives to root /c/ etc.</span>
+<span class="nb">touch</span> /etc/wsl.conf
+<span class="nb">tee</span> <span class="nt">-a</span> /etc/wsl.conf <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+[automount]
+root = /
+options = "metadata"
+</span><span class="no">EOF
+
+</span></code></pre></div></div>
+
+<p>Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run <code class="language-plaintext highlighter-rouge">docker ps</code> to see if docker is running.</p>
 
 <h3 id="thank-you">Thank you</h3>
 
@@ -571,7 +584,7 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-02-07">February 7, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-02-08">February 8, 2022</time></p>
 
 
       </footer>
