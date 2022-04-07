@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-02-08T12:58:36+11:00">
+  <meta property="article:modified_time" content="2022-04-07T12:44:05+10:00">
 
 
 
@@ -423,7 +423,7 @@
     <meta itemprop="headline" content="Goodbye Docker Desktop">
     <meta itemprop="description" content="You were great while you lasted!">
     <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
-    <meta itemprop="dateModified" content="2022-02-08T12:58:36+11:00">
+    <meta itemprop="dateModified" content="2022-04-07T12:44:05+10:00">
 
     <div class="page__inner-wrap">
       
@@ -534,7 +534,9 @@ root = /
 options = "metadata"
 </span><span class="no">EOF
 
-</span></code></pre></div></div>
+</span><span class="c">#allow your account to sudo without password</span>
+<span class="nb">sudo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span><span class="o">&gt;</span>/etc/sudoers
+</code></pre></div></div>
 
 <p>Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run <code class="language-plaintext highlighter-rouge">docker ps</code> to see if docker is running.</p>
 
@@ -584,7 +586,7 @@ options = "metadata"
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-02-08">February 8, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-04-07">April 7, 2022</time></p>
 
 
       </footer>
