@@ -121,6 +121,8 @@ root = /
 options = "metadata"
 EOF
 
+#allow your account to sudo without password
+sudo echo "$USER ALL=(ALL) NOPASSWD:ALL">/etc/sudoers
 ```
 
 Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run `docker ps` to see if docker is running.
