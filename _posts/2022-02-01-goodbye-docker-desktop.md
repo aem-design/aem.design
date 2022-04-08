@@ -38,6 +38,19 @@ curl.exe -L -o impish-server-cloudimg-amd64-root.tar.xz https://cloud-images.ubu
 wsl --import ubuntu c:/wsl/ubuntu2110 c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz
 ```
 
+Alternatively you can try this method:
+
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl.exe --set-default-version 2
+
+
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --install --distribution Ubuntu
+wsl --install --distribution Debian
+```
+
 Now you have a ubuntu image in your WSL, you can restart Windows Terminal, and it will appear as a new option.
 
 ### Config Ubuntu
