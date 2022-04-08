@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-04-07T12:44:05+10:00">
+  <meta property="article:modified_time" content="2022-04-08T17:16:34+10:00">
 
 
 
@@ -423,7 +423,7 @@
     <meta itemprop="headline" content="Goodbye Docker Desktop">
     <meta itemprop="description" content="You were great while you lasted!">
     <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
-    <meta itemprop="dateModified" content="2022-04-07T12:44:05+10:00">
+    <meta itemprop="dateModified" content="2022-04-08T17:16:34+10:00">
 
     <div class="page__inner-wrap">
       
@@ -453,6 +453,18 @@
 </span><span class="n">curl.exe</span><span class="w"> </span><span class="nt">-L</span><span class="w"> </span><span class="nt">-o</span><span class="w"> </span><span class="nx">impish-server-cloudimg-amd64-root.tar.xz</span><span class="w"> </span><span class="nx">https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64-root.tar.xz</span><span class="w">
 </span><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="nx">ubuntu</span><span class="w"> </span><span class="nx">c:/wsl/ubuntu2110</span><span class="w"> </span><span class="nx">c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz</span><span class="w">
 </span></code></pre></div></div>
+
+<p>Alternatively you can try this method:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl.exe --set-default-version 2
+
+
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --install --distribution Ubuntu
+wsl --install --distribution Debian
+</code></pre></div></div>
 
 <p>Now you have a ubuntu image in your WSL, you can restart Windows Terminal, and it will appear as a new option.</p>
 
@@ -586,7 +598,7 @@ options = "metadata"
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-04-07">April 7, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-04-08">April 8, 2022</time></p>
 
 
       </footer>
