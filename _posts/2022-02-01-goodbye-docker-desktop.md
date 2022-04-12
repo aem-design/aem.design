@@ -62,6 +62,7 @@ adduser -d /home/maxbarrass -m maxbarrass
 passwd maxbarrass
 addgroup maxbarrass sudo
 usermod -aG sudo maxbarrass
+sudo echo "$USER ALL=(ALL) NOPASSWD:ALL">>/etc/sudoers
 ```
 
 ### Update Windows Terminal Profile
@@ -115,8 +116,8 @@ sudo curl -sSL https://github.com/docker/compose/releases/download/v`curl -s htt
 sudo chmod +x /usr/local/bin/docker-compose
 
 # ensure docker does not use iptabels
-touch /etc/docker/daemon.json
-tee -a /etc/docker/daemon.json <<EOF
+sudo touch /etc/docker/daemon.json
+sudo tee -a /etc/docker/daemon.json <<EOF
 {
   "iptables": false
 }
@@ -127,15 +128,15 @@ echo "Starting docker service"
 echo "sudo service docker start" >> ~/.profile
 
 # mount host drives to root /c/ etc.
-touch /etc/wsl.conf
-tee -a /etc/wsl.conf <<EOF
+sudo touch /etc/wsl.conf
+sudo tee -a /etc/wsl.conf <<EOF
 [automount]
 root = /
 options = "metadata"
 EOF
 
 #allow your account to sudo without password
-sudo echo "$USER ALL=(ALL) NOPASSWD:ALL">/etc/sudoers
+sudo echo "$USER ALL=(ALL) NOPASSWD:ALL">>/etc/sudoers
 ```
 
 Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run `docker ps` to see if docker is running.
