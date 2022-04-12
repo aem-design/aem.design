@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-04-08T17:16:34+10:00">
+  <meta property="article:modified_time" content="2022-04-12T11:20:53+10:00">
 
 
 
@@ -423,7 +423,7 @@
     <meta itemprop="headline" content="Goodbye Docker Desktop">
     <meta itemprop="description" content="You were great while you lasted!">
     <meta itemprop="datePublished" content="2022-02-01T00:00:00+11:00">
-    <meta itemprop="dateModified" content="2022-04-08T17:16:34+10:00">
+    <meta itemprop="dateModified" content="2022-04-12T11:20:53+10:00">
 
     <div class="page__inner-wrap">
       
@@ -476,6 +476,7 @@ wsl --install --distribution Debian
 passwd maxbarrass
 addgroup maxbarrass <span class="nb">sudo
 </span>usermod <span class="nt">-aG</span> <span class="nb">sudo </span>maxbarrass
+<span class="nb">sudo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span><span class="o">&gt;&gt;</span>/etc/sudoers
 </code></pre></div></div>
 
 <h3 id="update-windows-terminal-profile">Update Windows Terminal Profile</h3>
@@ -527,8 +528,8 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 <span class="nb">sudo chmod</span> +x /usr/local/bin/docker-compose
 
 <span class="c"># ensure docker does not use iptabels</span>
-<span class="nb">touch</span> /etc/docker/daemon.json
-<span class="nb">tee</span> <span class="nt">-a</span> /etc/docker/daemon.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+<span class="nb">sudo touch</span> /etc/docker/daemon.json
+<span class="nb">sudo tee</span> <span class="nt">-a</span> /etc/docker/daemon.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
 {
   "iptables": false
 }
@@ -539,15 +540,15 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 <span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
 
 <span class="c"># mount host drives to root /c/ etc.</span>
-<span class="nb">touch</span> /etc/wsl.conf
-<span class="nb">tee</span> <span class="nt">-a</span> /etc/wsl.conf <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+<span class="nb">sudo touch</span> /etc/wsl.conf
+<span class="nb">sudo tee</span> <span class="nt">-a</span> /etc/wsl.conf <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
 [automount]
 root = /
 options = "metadata"
 </span><span class="no">EOF
 
 </span><span class="c">#allow your account to sudo without password</span>
-<span class="nb">sudo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span><span class="o">&gt;</span>/etc/sudoers
+<span class="nb">sudo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span><span class="o">&gt;&gt;</span>/etc/sudoers
 </code></pre></div></div>
 
 <p>Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run <code class="language-plaintext highlighter-rouge">docker ps</code> to see if docker is running.</p>
@@ -598,7 +599,7 @@ options = "metadata"
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-04-08">April 8, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-04-12">April 12, 2022</time></p>
 
 
       </footer>
