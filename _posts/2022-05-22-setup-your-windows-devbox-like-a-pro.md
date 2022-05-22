@@ -84,11 +84,9 @@ To get the best out of your shell, you need to set up some environment variables
 2. Add new Variable `JAVA_HOME` point to `C:\Program Files\Java\jdk1.8.0_301`.
 3. Add new Variable `M2_HOME` point to `C:\software\apache-maven-3.8.4` (where you installed maven) 
 4. Under the `System Variables` select `Path` then click `Edit`
-![Alt text](images/system-environment-variables.png?raw=true "System Environment Variables")
 5. Under the `System Variables` click `New` and add the following:
   * **Variable name:** JAVA_HOME
   * **Variable value:** C:\Program Files\Java\jdk1.8.0_301
-  ![Alt text](images/java-environment-variables.png?raw=true "JAVA Environment Variables")
 6. Add the following new paths:
   * `%JAVA_HOME%\bin` this will allow you to run java
   * `%M2_HOME%\bin` this will allow you to run maven
