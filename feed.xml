@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-04-16T00:18:01+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Compose and Deploy Stacks 🍔😘</title><link href="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="alternate" type="text/html" title="Docker Compose and Deploy Stacks 🍔😘" /><published>2022-02-08T00:37:00+11:00</published><updated>2022-02-08T08:14:14+11:00</updated><id>https://aem.design/blog/2022/02/08/docker-compose</id><content type="html" xml:base="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98"><![CDATA[<p>Following up on the articles <a href="/blog/2019/09/04/aem-and-docker">AEM and Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>, lets pull all that knowledge together and talk about how to deploy AEM stacks to developers using Docker Compose. There are many ways to bring a stack to developers machines, but the simplest way is to use Docker Compose.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-05-22T21:08:40+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2022-05-22T21:03:05+10:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
+
+<p>Let’s now look at some base config you can start with when setting up you dev box for dev! Let us focus only on the base windows setup, which can be used as a foundation for any tooling specialisation.</p>
+
+<p>If you are a developer, a frontend dev, backend dev, full stack or just want to know what should I have no my windows dev box as a starting point, then this article is for you.</p>
+
+<p>For the best experience with Windows, before you begin experimenting and installing all sorts of tools, you are going to need some basics.</p>
+
+<h3 id="get-some-soft">Get some soft!</h3>
+
+<p>First off, you will need some proper tools to use on Windows for development. These should be at the top of your list.</p>
+
+<ul>
+  <li><a href="https://github.com/PowerShell/PowerShell/releases">Powershell Core 7</a> - This will give you a usable shell</li>
+  <li><a href="https://github.com/microsoft/terminal/releases">Windows Terminal</a> - This will give you a usable terminal</li>
+  <li><a href="https://code.visualstudio.com/Download">Visual Studio Code</a></li>
+  <li><a href="https://www.jetbrains.com/idea/download/#section=windows">IntelliJ Community</a></li>
+  <li><a href="https://git-scm.com/download/win">Git for windows</a></li>
+  <li><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">Oracle JDK</a></li>
+  <li><a href="https://maven.apache.org/download.cgi">Apache Maven</a></li>
+  <li><a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe">Sublime Text</a></li>
+  <li><a href="https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe">Python</a></li>
+  <li><a href="https://nodejs.org/dist/v18.2.0/node-v18.2.0-x64.msi">Node JS</a></li>
+</ul>
+
+<p>If you cannot use Docker Desktop, you can just <a href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">setup Docker in WSL</a> and run it using your impressive <a href="https://github.com/microsoft/terminal/releases">Windows Terminal</a>!</p>
+
+<p>Once you have these tools set up, you should be able to contribute to most code projects.</p>
+
+<p>Before you run off and get busy with code, you need to verify and do some windows config updates, these are not so obvious, but you will encounter these at some point.</p>
+
+<h2 id="enable-long-file-path-names-in-windows">Enable Long File Path Names in Windows</h2>
+
+<p>Then you going to have to enable Windows Long file names.</p>
+
+<ol>
+  <li>Open up Windows Terminal as Administrator.</li>
+  <li>Run the following command:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 0x1 /f
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies" /v LongPathsEnabled /t REG_DWORD /d 0x1 /f
+</code></pre></div></div>
+
+<ol>
+  <li>Test if settings have been applied</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg query "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem"
+reg query "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies"
+</code></pre></div></div>
+
+<h2 id="enable-long-file-path-names-in-git">Enable Long File Path Names in Git</h2>
+
+<p>Now you are going to have to tell Git to use long file names, just in case it won’t do it by default.</p>
+
+<ol>
+  <li>Open up Windows Terminal as Administrator.</li>
+  <li>Run the following command:
+<code class="language-plaintext highlighter-rouge">git config --system core.longpaths true</code></li>
+</ol>
+
+<p>Now you can happily clone Linux/Unix repos that have very long paths!</p>
+
+<h3 id="setup-environment-varibles">Setup Environment Varibles</h3>
+
+<p>To get the best out of your shell, you need to set up some environment variables that will give you access to</p>
+
+<ol>
+  <li>Run <code class="language-plaintext highlighter-rouge">sysdm.cpl</code> as Administrator and on the Advanced tab, click <code class="language-plaintext highlighter-rouge">Environment Variables</code>.</li>
+  <li>Add new Variable <code class="language-plaintext highlighter-rouge">JAVA_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\Program Files\Java\jdk1.8.0_301</code>.</li>
+  <li>Add new Variable <code class="language-plaintext highlighter-rouge">M2_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\software\apache-maven-3.8.4</code> (where you installed maven)</li>
+  <li>Under the <code class="language-plaintext highlighter-rouge">System Variables</code> select <code class="language-plaintext highlighter-rouge">Path</code> then click <code class="language-plaintext highlighter-rouge">Edit</code></li>
+  <li>Under the <code class="language-plaintext highlighter-rouge">System Variables</code> click <code class="language-plaintext highlighter-rouge">New</code> and add the following:
+    <ul>
+      <li><strong>Variable name:</strong> JAVA_HOME</li>
+      <li><strong>Variable value:</strong> C:\Program Files\Java\jdk1.8.0_301</li>
+    </ul>
+  </li>
+  <li>Add the following new paths:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">%JAVA_HOME%\bin</code> this will allow you to run java</li>
+      <li><code class="language-plaintext highlighter-rouge">%M2_HOME%\bin</code> this will allow you to run maven</li>
+      <li><code class="language-plaintext highlighter-rouge">C:\Program Files\Git\usr\bin</code> this will allow you to run various Linux commands, <code class="language-plaintext highlighter-rouge">sed</code>, <code class="language-plaintext highlighter-rouge">awk</code>, <code class="language-plaintext highlighter-rouge">grep</code> etc</li>
+    </ul>
+  </li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Ok</code> to all the remaining dialogue boxes to save all the changes</li>
+  <li>Verify java is installed by opening Windows Terminal and running <code class="language-plaintext highlighter-rouge">java -version</code> - you should see a Java JDK version if all went well</li>
+</ol>
+
+<p>After this, you should have the following paths in your command line path:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%M2_HOME%\bin
+%JAVA_HOME%\bin
+C:\Program Files\Git\usr\bin
+</code></pre></div></div>
+
+<h3 id="configure-docker">Configure Docker</h3>
+
+<p>Create <code class="language-plaintext highlighter-rouge">.wslconfig</code> in <code class="language-plaintext highlighter-rouge">~/</code> with the following content.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[wsl2]
+memory=6GB
+</code></pre></div></div>
+
+<p>This will ensure that WSL will not use up all of your resources. See more on <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config">Advanced settings configuration in WSL</a>.</p>
+
+<p>Once you reboot, your WSL should behave, and you will be able to use it with nice tools! Let me know what else you think should be on the list!</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="wsl" /><category term="windows" /><summary type="html"><![CDATA[Config and Tools for Windows that will help you !]]></summary></entry><entry><title type="html">Docker Compose and Deploy Stacks 🍔😘</title><link href="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="alternate" type="text/html" title="Docker Compose and Deploy Stacks 🍔😘" /><published>2022-02-08T00:37:00+11:00</published><updated>2022-02-08T08:14:14+11:00</updated><id>https://aem.design/blog/2022/02/08/docker-compose</id><content type="html" xml:base="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98"><![CDATA[<p>Following up on the articles <a href="/blog/2019/09/04/aem-and-docker">AEM and Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>, lets pull all that knowledge together and talk about how to deploy AEM stacks to developers using Docker Compose. There are many ways to bring a stack to developers machines, but the simplest way is to use Docker Compose.</p>
 
 <p>Additionally, when using Docker Compose, you will understand whether your deployment architecture is complex and which parts are critical; this will provide you with some feedback to clean things up.</p>
 
@@ -859,39 +972,4 @@ To add this missing entry do this:</p>
 
 <p>Hopefully, after this, your custom workflow step will work, if you are stuck, look at some examples in <a href="https://github.com/aem-design/aemdesign-aem-core/tree/develop/aemdesign-aem-services/src/main/java/design/aem/workflow/process">aemdesign-aem-services/../workflow/process</a>.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="structure" /><category term="bugs-maybe" /><summary type="html"><![CDATA[When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.]]></summary></entry><entry><title type="html">Using Docker to Build Code</title><link href="https://aem.design/blog/2020/07/24/using-docker-to-build-code" rel="alternate" type="text/html" title="Using Docker to Build Code" /><published>2020-07-24T23:37:00+10:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2020/07/24/using-docker-to-build-code</id><content type="html" xml:base="https://aem.design/blog/2020/07/24/using-docker-to-build-code"><![CDATA[<p>When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.</p>
-
-<p>Using Docker to build your code is so easy even your friend will think you are cool when you tell them about it.  The most amazing thing that you don’t even need to write any Docker images, there are so many ready-to-go buildpack containers out there you can easily pick up something that you need.</p>
-
-<p>Here is an example of a container we use to do pipeline build and its very suitable for compiling your project on your local desktop. This container is a Centos 7 Jave Build Pack which means that it comes preconfigured with a majority of tools that are needed to compile our projects.</p>
-
-<p>This container comes with Jave, NPM and RVM, and you can take a look at the contents of the <a href="https://github.com/aem-design/docker-centos-java-buildpack/blob/master/Dockerfile">dockerfile</a>.</p>
-
-<p>In power Shell:</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">-it</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nv">${PWD}</span><span class="p">:</span><span class="nx">/build/source</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nv">${HOME}</span><span class="nx">/.m2:/build/.m2</span><span class="w"> </span><span class="nt">--net</span><span class="o">=</span><span class="n">host</span><span class="w"> </span><span class="nx">aemdesign/centos-java-buildpack</span><span class="w"> </span><span class="nx">/bin/bash</span><span class="w"> </span><span class="nt">--login</span><span class="w">
-</span></code></pre></div></div>
-
-<p>In Bash:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">-v</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/build/source <span class="nt">-v</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/.m2:/build/.m2 <span class="nt">--net</span><span class="o">=</span>host aemdesign/centos-java-buildpack /bin/bash <span class="nt">--login</span>
-</code></pre></div></div>
-
-<p>Let’s break this command down.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">-it</code> means run interactive terminal</li>
-  <li><code class="language-plaintext highlighter-rouge">-v ${PWD}:/build/source</code> map current path into container at path <code class="language-plaintext highlighter-rouge">/build/source</code>
-    <ul>
-      <li>in Powershell ${PWD} is same as <code class="language-plaintext highlighter-rouge">pwd</code> in bash</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">-v ${HOME}/.m2:/build/.m2</code> map your Maven cache folder into the container to reuse your already downloaded jars</li>
-  <li><code class="language-plaintext highlighter-rouge">--net=host</code> allow container to access your desktop localhost</li>
-  <li><code class="language-plaintext highlighter-rouge">amdesign/centos-java-buildpack</code> image to use</li>
-  <li><code class="language-plaintext highlighter-rouge">/bin/bash --login</code> run bash and perform login to ensure all of the start-up profile scripts are executed</li>
-</ul>
-
-<p>All you need to do now is to run this command in the directory where you have your code and start compiling like a boss.</p>
-
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[When you have been working for a long time on a codebase, you don’t tend to test if your code can be compiled on other machines. Most of the time, it means that it won’t. But when you have Docker on your side, your dispair would be a one short docker command line deep.]]></summary></entry></feed>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="structure" /><category term="bugs-maybe" /><summary type="html"><![CDATA[When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.]]></summary></entry></feed>

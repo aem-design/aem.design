@@ -233,6 +233,10 @@
 <lastmod>2022-02-08T08:14:14+11:00</lastmod>
 </url>
 <url>
+<loc>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7</loc>
+<lastmod>2022-05-22T21:03:05+10:00</lastmod>
+</url>
+<url>
 <loc>https://aem.design/about/</loc>
 <lastmod>2021-03-14T13:37:45+11:00</lastmod>
 </url>
@@ -376,6 +380,12 @@
 </url>
 <url>
 <loc>https://aem.design/tags/docker-compose/</loc>
+</url>
+<url>
+<loc>https://aem.design/tags/wsl/</loc>
+</url>
+<url>
+<loc>https://aem.design/tags/windows/</loc>
 </url>
 <url>
 <loc>https://aem.design/categories/blog/</loc>

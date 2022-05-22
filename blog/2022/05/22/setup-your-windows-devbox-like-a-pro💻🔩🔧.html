@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Creating Custom Workflow Step - AEM.Design</title>
-<meta name="description" content="When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.">
+<!-- begin _includes/seo.html --><title>Setup Your Windows Devbox Like a Pro 💻🔩🔧 - AEM.Design</title>
+<meta name="description" content="Config and Tools for Windows that will help you !">
 
 
   <meta name="author" content="Max Barrass">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="AEM.Design">
-<meta property="og:title" content="Creating Custom Workflow Step">
-<meta property="og:url" content="https://aem.design/blog/2021/01/18/creating-custom-workflow-step">
+<meta property="og:title" content="Setup Your Windows Devbox Like a Pro 💻🔩🔧">
+<meta property="og:url" content="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7">
 
 
-  <meta property="og:description" content="When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.">
+  <meta property="og:description" content="Config and Tools for Windows that will help you !">
 
 
 
@@ -36,11 +36,11 @@
 
 
 
-  <meta property="article:published_time" content="2021-01-18T00:37:00+11:00">
+  <meta property="article:published_time" content="2022-05-22T00:37:00+10:00">
 
 
 
-  <meta property="article:modified_time" content="2021-03-14T01:50:42+11:00">
+  <meta property="article:modified_time" content="2022-05-22T21:03:05+10:00">
 
 
 
@@ -49,7 +49,7 @@
   
 
 
-<link rel="canonical" href="https://aem.design/blog/2021/01/18/creating-custom-workflow-step">
+<link rel="canonical" href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7">
 
 
 
@@ -368,15 +368,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Creating Custom Workflow Step">
-    <meta itemprop="description" content="When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.You will first encounter this when you don’t see your service appear in the process list on the dialog.And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why.You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.">
-    <meta itemprop="datePublished" content="2021-01-18T00:37:00+11:00">
-    <meta itemprop="dateModified" content="2021-03-14T01:50:42+11:00">
+    <meta itemprop="headline" content="Setup Your Windows Devbox Like a Pro 💻🔩🔧">
+    <meta itemprop="description" content="Config and Tools for Windows that will help you !">
+    <meta itemprop="datePublished" content="2022-05-22T00:37:00+10:00">
+    <meta itemprop="dateModified" content="2022-05-22T21:03:05+10:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Creating Custom Workflow Step
+          <h1 id="page-title" class="page__title" itemprop="headline">Setup Your Windows Devbox Like a Pro 💻🔩🔧
 </h1>
           
 
@@ -392,7 +392,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          3 minute read
         
       </span>
     
@@ -404,39 +404,120 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
-You will first encounter this when you don’t see your service appear in the process list on the dialog.
-And once you verify the data source that feeds that dropdown at <a href="http://localhost:4502/libs/cq/workflow/content/console/process.json">http://localhost:4502/libs/cq/workflow/content/console/process.json</a> you will wonder why.
-You may also see errors like this <code class="language-plaintext highlighter-rouge">Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label}</code> that could just tell you your class is missing property <code class="language-plaintext highlighter-rouge">process.label</code>.</p>
+        <p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
 
-<p>Now that you know, you add this property to your class and your class appear in the list, here is an example of how to add it:</p>
+<p>Let’s now look at some base config you can start with when setting up you dev box for dev! Let us focus only on the base windows setup, which can be used as a foundation for any tooling specialisation.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span><span class="o">(</span>
-    <span class="n">immediate</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
-    <span class="n">service</span> <span class="o">=</span> <span class="nc">WorkflowProcess</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
-    <span class="n">property</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"process.label=Content Fragment Page Generator"</span> <span class="o">}</span>
-    <span class="o">)</span>
-</code></pre></div></div>
+<p>If you are a developer, a frontend dev, backend dev, full stack or just want to know what should I have no my windows dev box as a starting point, then this article is for you.</p>
 
-<p>Also while debugging this, you may find some other errors polluting your docker logs.</p>
+<p>For the best experience with Windows, before you begin experimenting and installing all sorts of tools, you are going to need some basics.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The activate method has thrown an exception (java.lang.IllegalStateException: org.apache.sling.api.resource.LoginException: Cannot derive user name for bundle com.adobe.acs.acs-aem-commons-bundle [553] and sub service workflowpackagemanager-service
-</code></pre></div></div>
+<h3 id="get-some-soft">Get some soft!</h3>
 
-<p>To fix this, all you need to do is add missing service mapping mentioned in the message.
-You should be able to replicate this by restarting your missing component at eg <a href="http://localhost:4502/system/console/components/design.aem.workflow.process.ContentFragmentPageGenerator">http://localhost:4502/system/console/components/design.aem.workflow.process.ContentFragmentPageGenerator</a>.
-In example above missing use name is <code class="language-plaintext highlighter-rouge">workflowpackagemanager-service</code> and bundle is <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle</code>.
-To add this missing entry do this:</p>
+<p>First off, you will need some proper tools to use on Windows for development. These should be at the top of your list.</p>
 
 <ul>
-  <li>open <a href="http://localhost:4502/system/console/configMgr/">http://localhost:4502/system/console/configMgr/</a></li>
-  <li>search for <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle</code> look for mapping in <code class="language-plaintext highlighter-rouge">Apache Sling Service User Mapper Service Amendment</code></li>
-  <li>add or update blank entry with <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle:workflowpackagemanager-service=workflow-process-service</code></li>
+  <li><a href="https://github.com/PowerShell/PowerShell/releases">Powershell Core 7</a> - This will give you a usable shell</li>
+  <li><a href="https://github.com/microsoft/terminal/releases">Windows Terminal</a> - This will give you a usable terminal</li>
+  <li><a href="https://code.visualstudio.com/Download">Visual Studio Code</a></li>
+  <li><a href="https://www.jetbrains.com/idea/download/#section=windows">IntelliJ Community</a></li>
+  <li><a href="https://git-scm.com/download/win">Git for windows</a></li>
+  <li><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">Oracle JDK</a></li>
+  <li><a href="https://maven.apache.org/download.cgi">Apache Maven</a></li>
+  <li><a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe">Sublime Text</a></li>
+  <li><a href="https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe">Python</a></li>
+  <li><a href="https://nodejs.org/dist/v18.2.0/node-v18.2.0-x64.msi">Node JS</a></li>
 </ul>
 
-<p>Hopefully, after this, your custom workflow step will work, if you are stuck, look at some examples in <a href="https://github.com/aem-design/aemdesign-aem-core/tree/develop/aemdesign-aem-services/src/main/java/design/aem/workflow/process">aemdesign-aem-services/../workflow/process</a>.</p>
+<p>If you cannot use Docker Desktop, you can just <a href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">setup Docker in WSL</a> and run it using your impressive <a href="https://github.com/microsoft/terminal/releases">Windows Terminal</a>!</p>
 
-<p>Don’t forget to tell your friends.</p>
+<p>Once you have these tools set up, you should be able to contribute to most code projects.</p>
+
+<p>Before you run off and get busy with code, you need to verify and do some windows config updates, these are not so obvious, but you will encounter these at some point.</p>
+
+<h2 id="enable-long-file-path-names-in-windows">Enable Long File Path Names in Windows</h2>
+
+<p>Then you going to have to enable Windows Long file names.</p>
+
+<ol>
+  <li>Open up Windows Terminal as Administrator.</li>
+  <li>Run the following command:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 0x1 /f
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies" /v LongPathsEnabled /t REG_DWORD /d 0x1 /f
+</code></pre></div></div>
+
+<ol>
+  <li>Test if settings have been applied</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg query "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem"
+reg query "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies"
+</code></pre></div></div>
+
+<h2 id="enable-long-file-path-names-in-git">Enable Long File Path Names in Git</h2>
+
+<p>Now you are going to have to tell Git to use long file names, just in case it won’t do it by default.</p>
+
+<ol>
+  <li>Open up Windows Terminal as Administrator.</li>
+  <li>Run the following command:
+<code class="language-plaintext highlighter-rouge">git config --system core.longpaths true</code></li>
+</ol>
+
+<p>Now you can happily clone Linux/Unix repos that have very long paths!</p>
+
+<h3 id="setup-environment-varibles">Setup Environment Varibles</h3>
+
+<p>To get the best out of your shell, you need to set up some environment variables that will give you access to</p>
+
+<ol>
+  <li>Run <code class="language-plaintext highlighter-rouge">sysdm.cpl</code> as Administrator and on the Advanced tab, click <code class="language-plaintext highlighter-rouge">Environment Variables</code>.</li>
+  <li>Add new Variable <code class="language-plaintext highlighter-rouge">JAVA_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\Program Files\Java\jdk1.8.0_301</code>.</li>
+  <li>Add new Variable <code class="language-plaintext highlighter-rouge">M2_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\software\apache-maven-3.8.4</code> (where you installed maven)</li>
+  <li>Under the <code class="language-plaintext highlighter-rouge">System Variables</code> select <code class="language-plaintext highlighter-rouge">Path</code> then click <code class="language-plaintext highlighter-rouge">Edit</code></li>
+  <li>Under the <code class="language-plaintext highlighter-rouge">System Variables</code> click <code class="language-plaintext highlighter-rouge">New</code> and add the following:
+    <ul>
+      <li><strong>Variable name:</strong> JAVA_HOME</li>
+      <li><strong>Variable value:</strong> C:\Program Files\Java\jdk1.8.0_301</li>
+    </ul>
+  </li>
+  <li>Add the following new paths:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">%JAVA_HOME%\bin</code> this will allow you to run java</li>
+      <li><code class="language-plaintext highlighter-rouge">%M2_HOME%\bin</code> this will allow you to run maven</li>
+      <li><code class="language-plaintext highlighter-rouge">C:\Program Files\Git\usr\bin</code> this will allow you to run various Linux commands, <code class="language-plaintext highlighter-rouge">sed</code>, <code class="language-plaintext highlighter-rouge">awk</code>, <code class="language-plaintext highlighter-rouge">grep</code> etc</li>
+    </ul>
+  </li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Ok</code> to all the remaining dialogue boxes to save all the changes</li>
+  <li>Verify java is installed by opening Windows Terminal and running <code class="language-plaintext highlighter-rouge">java -version</code> - you should see a Java JDK version if all went well</li>
+</ol>
+
+<p>After this, you should have the following paths in your command line path:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%M2_HOME%\bin
+%JAVA_HOME%\bin
+C:\Program Files\Git\usr\bin
+</code></pre></div></div>
+
+<h3 id="configure-docker">Configure Docker</h3>
+
+<p>Create <code class="language-plaintext highlighter-rouge">.wslconfig</code> in <code class="language-plaintext highlighter-rouge">~/</code> with the following content.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[wsl2]
+memory=6GB
+</code></pre></div></div>
+
+<p>This will ensure that WSL will not use up all of your resources. See more on <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config">Advanced settings configuration in WSL</a>.</p>
+
+<p>Once you reboot, your WSL should behave, and you will be able to use it with nice tools! Let me know what else you think should be on the list!</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>
 
         
       </section>
@@ -455,11 +536,15 @@ To add this missing entry do this:</p>
     
       <a href="/tags/aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
     
-      <a href="/tags/bugs-maybe" class="page__taxonomy-item" rel="tag">bugs-maybe</a><span class="sep">, </span>
-    
       <a href="/tags/devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
     
-      <a href="/tags/structure" class="page__taxonomy-item" rel="tag">structure</a>
+      <a href="/tags/docker" class="page__taxonomy-item" rel="tag">docker</a><span class="sep">, </span>
+    
+      <a href="/tags/docker-compose" class="page__taxonomy-item" rel="tag">docker-compose</a><span class="sep">, </span>
+    
+      <a href="/tags/windows" class="page__taxonomy-item" rel="tag">windows</a><span class="sep">, </span>
+    
+      <a href="/tags/wsl" class="page__taxonomy-item" rel="tag">wsl</a>
     
     </span>
   </p>
@@ -484,7 +569,7 @@ To add this missing entry do this:</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-14">March 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-05-22">May 22, 2022</time></p>
 
 
       </footer>
@@ -494,23 +579,22 @@ To add this missing entry do this:</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Creating+Custom+Workflow+Step%20https%3A%2F%2Faem.design%2Fblog%2F2021%2F01%2F18%2Fcreating-custom-workflow-step" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Setup+Your+Windows+Devbox+Like+a+Pro+%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7%20https%3A%2F%2Faem.design%2Fblog%2F2022%2F05%2F22%2Fsetup-your-windows-devbox-like-a-pro%25F0%259F%2592%25BB%25F0%259F%2594%25A9%25F0%259F%2594%25A7" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2021%2F01%2F18%2Fcreating-custom-workflow-step" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2022%2F05%2F22%2Fsetup-your-windows-devbox-like-a-pro%25F0%259F%2592%25BB%25F0%259F%2594%25A9%25F0%259F%2594%25A7" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2021%2F01%2F18%2Fcreating-custom-workflow-step" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2022%2F05%2F22%2Fsetup-your-windows-devbox-like-a-pro%25F0%259F%2592%25BB%25F0%259F%2594%25A9%25F0%259F%2594%25A7" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/2020/07/24/using-docker-to-build-code" class="pagination--pager" title="Using Docker to Build Code
+      <a href="/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" class="pagination--pager" title="Docker Compose and Deploy Stacks 🍔😘
 ">Previous</a>
     
     
-      <a href="/blog/2021/01/21/automation-testing-for-aem-dialogs" class="pagination--pager" title="Automation Testing For AEM Dialogs
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -533,46 +617,6 @@ To add this missing entry do this:</p>
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="permalink">Setup Your Windows Devbox Like a Pro 💻🔩🔧
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Config and Tools for Windows that will help you !
-</p>
-  </article>
-</div>
-
         
           
 
@@ -689,6 +733,46 @@ To add this missing entry do this:</p>
 
 
     <p class="archive__item-excerpt" itemprop="description">You were great while you lasted!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="permalink">How to add property and author a component programmatically?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">ACS On-Deploy is the answer!
 </p>
   </article>
 </div>
@@ -814,8 +898,8 @@ To add this missing entry do this:</p>
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://aem.design/blog/2021/01/18/creating-custom-workflow-step";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/2021/01/18/creating-custom-workflow-step"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2022/05/22/setup-your-windows-devbox-like-a-pro"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
