@@ -30,16 +30,16 @@ For the best experience with Windows, before you begin experimenting and install
 
 First off, you will need some proper tools to use on Windows for development. These should be at the top of your list.
 
-* [Powershell Core 7](https://github.com/PowerShell/PowerShell/releases) - This will give you a usable shell
-* [Windows Terminal](https://github.com/microsoft/terminal/releases) - This will give you a usable terminal
-* [Visual Studio Code](https://code.visualstudio.com/Download)
-* [IntelliJ Community](https://www.jetbrains.com/idea/download/#section=windows)
-* [Git for windows](https://git-scm.com/download/win)
-* [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
-* [Apache Maven](https://maven.apache.org/download.cgi)
-* [Sublime Text](https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe)
-* [Python](https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe)
-* [Node JS](https://nodejs.org/dist/v18.2.0/node-v18.2.0-x64.msi)
+* [Powershell Core 7](https://github.com/PowerShell/PowerShell/releases) - This will give you a usable cross platform shell
+* [Windows Terminal](https://github.com/microsoft/terminal/releases) - This will give you definitive terminal on windows
+* [Visual Studio Code](https://code.visualstudio.com/Download) - Best IDE these days
+* [IntelliJ Community](https://www.jetbrains.com/idea/download/#section=windows) - Best Java IDE these days
+* [Git for windows](https://git-scm.com/download/win) - Latest git
+* [Oracle JDK 8](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) and [Oracle JDK 8](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) - You can download both and install and switch using your paths or java config tool
+* [Apache Maven](https://maven.apache.org/download.cgi) - Needed to compile maven projects
+* [Sublime Text](https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe) - Will allow you to edit files quickly
+* [Python](https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe) - Run python scripts
+* [Node JS](https://nodejs.org/dist/v18.2.0/node-v18.2.0-x64.msi) - Run node js app
 
 If you cannot use Docker Desktop, you can just [setup Docker in WSL](https://aem.design/blog/2022/02/01/goodbye-docker-desktop) and run it using your impressive [Windows Terminal](https://github.com/microsoft/terminal/releases)!
 
