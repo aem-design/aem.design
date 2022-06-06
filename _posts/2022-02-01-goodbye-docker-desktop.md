@@ -77,7 +77,7 @@ You can run this in your Ubuntu terminal:
 Or create a new script `nano install-docker.sh` with the following content and run it `sudo ./install-docker.sh ${USER}`. This will install docker and docker-compose, as well as add docker service start to your `.profile`. This way, when you open your Ubuntu, it will ensure that docker is running.
 
 ```bash
-{% flexible_include ../assets/scripts/install-docker-wsl.sh %}
+{% include_absolute ../assets/scripts/install-docker-wsl.sh %}
 ```
 
 Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run `docker ps` to see if docker is running.

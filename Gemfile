@@ -13,7 +13,6 @@ gem "jekyll"
 gem "nokogiri"
 gem "ffi"
 gem "i18n"
-gem "jekyll_plugin_logger"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minimal-mistakes-jekyll", ">= 4.22.0"
@@ -35,5 +34,4 @@ group :jekyll_plugins do
    gem 'jekyll-last-modified-at'
    gem 'jekyll-algolia'
    gem 'jekyll-archives'
-   gem 'jekyll_flexible_include'
 end
