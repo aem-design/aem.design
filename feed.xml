@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-05-24T10:30:55+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2022-05-24T10:27:04+10:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-06-07T01:54:59+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2022-05-24T10:27:04+10:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
 
 <p>Let’s now look at some base config you can start with when setting up you dev box for dev! Let us focus only on the base windows setup, which can be used as a foundation for any tooling specialisation.</p>
 
@@ -211,7 +211,7 @@ memory=6GB
 
 <p>I hope you will find the new ARM images useful. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
-<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="centos" /><summary type="html"><![CDATA[You were great while the free ride lasted!]]></summary></entry><entry><title type="html">Goodbye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Goodbye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-04-12T11:20:53+10:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="centos" /><summary type="html"><![CDATA[You were great while the free ride lasted!]]></summary></entry><entry><title type="html">Goodbye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Goodbye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-06-07T01:51:05+10:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
 
 <p>But as you all know, docker desktop WAS a great tool for running docker on your desktop, up until it became a thing of the past. It drove itself off the cliff with paid subscription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can’t use it at work, why would you use it at home? After all, you are what you practice, and you are what you use. Consistency of tools is critical to developers.</p>
 
@@ -227,15 +227,7 @@ memory=6GB
 
 <h3 id="wsl-download-and-import-ubuntu">Wsl download and Import ubuntu</h3>
 
-<p>Open up Powershell core and run the followig commands.</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mkdir</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
-</span><span class="n">cd</span><span class="w"> </span><span class="nx">c:/wsl</span><span class="w">
-</span><span class="n">curl.exe</span><span class="w"> </span><span class="nt">-L</span><span class="w"> </span><span class="nt">-o</span><span class="w"> </span><span class="nx">impish-server-cloudimg-amd64-root.tar.xz</span><span class="w"> </span><span class="nx">https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64-root.tar.xz</span><span class="w">
-</span><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="nx">ubuntu</span><span class="w"> </span><span class="nx">c:/wsl/ubuntu2110</span><span class="w"> </span><span class="nx">c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Alternatively you can try this method:</p>
+<p>Open up Powershell core and run the following commands.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -257,7 +249,7 @@ wsl --install --distribution Debian
 passwd maxbarrass
 addgroup maxbarrass <span class="nb">sudo
 </span>usermod <span class="nt">-aG</span> <span class="nb">sudo </span>maxbarrass
-<span class="nb">sudo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span><span class="o">&gt;&gt;</span>/etc/sudoers
+<span class="nb">echo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span> | <span class="nb">sudo tee</span> <span class="nt">-a</span> /etc/apt/sources.list
 </code></pre></div></div>
 
 <h3 id="update-windows-terminal-profile">Update Windows Terminal Profile</h3>
@@ -271,9 +263,19 @@ addgroup maxbarrass <span class="nb">sudo
 
 <h3 id="install-docker-in-ubuntu">Install docker in Ubuntu</h3>
 
-<p>Create a new script <code class="language-plaintext highlighter-rouge">nano instal-docker.sh</code> with the following content and run it. This will install docker and docker-compose, as well as add docker service start to your <code class="language-plaintext highlighter-rouge">.profile</code>. This way, when you open your Ubuntu, it will ensure that docker is running.</p>
+<p>You can run this in your Ubuntu terminal:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># update the package manager and install some prerequisites (all of these aren't technically required)</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/aem-design/aem.design/master/assets/scripts/install-docker-wsl.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Or create a new script <code class="language-plaintext highlighter-rouge">nano install-docker.sh</code> with the following content and run it <code class="language-plaintext highlighter-rouge">sudo ./install-docker.sh ${USER}</code>. This will install docker and docker-compose, as well as add docker service start to your <code class="language-plaintext highlighter-rouge">.profile</code>. This way, when you open your Ubuntu, it will ensure that docker is running.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c">#allow your account to sudo without password</span>
+<span class="nb">echo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span> | <span class="nb">sudo tee</span> <span class="nt">-a</span> /etc/sudoers
+
+<span class="c"># update the package manager and install some prerequisites (all of these aren't technically required)</span>
 <span class="nb">sudo </span>apt-get update <span class="nt">-y</span>
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> apt-transport-https ca-certificates curl software-properties-common libssl-dev libffi-dev git wget nano
 
@@ -281,13 +283,13 @@ addgroup maxbarrass <span class="nb">sudo
 <span class="c">#   so that we don't have to type sudo docker every time</span>
 <span class="c">#   note you will need to logout and login before this takes affect (which we do later)</span>
 <span class="nb">sudo </span>groupadd docker
-<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
+<span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span>
 
 <span class="c"># add Docker key and repo</span>
 curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
 <span class="nb">sudo </span>add-apt-repository <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> stable"</span> <span class="nt">-y</span>
 
-<span class="c"># (optional) add kubectl key and repo</span>
+<span class="c"># add kubectl key and repo</span>
 curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-key.gpg | <span class="nb">sudo </span>apt-key add -
 <span class="nb">echo</span> <span class="s2">"deb https://apt.kubernetes.io/ kubernetes-xenial main"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/kubernetes.list
 
@@ -301,11 +303,11 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 <span class="c"># install docker</span>
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce containerd.io
 
-<span class="c"># (optional) install kubectl</span>
+<span class="c"># install kubectl</span>
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> kubectl
 
-<span class="c"># (optional) install latest version of docker compose</span>
-<span class="nb">sudo </span>curl <span class="nt">-sSL</span> https://github.com/docker/compose/releases/download/v<span class="sb">`</span>curl <span class="nt">-s</span> https://github.com/docker/compose/tags | <span class="nb">grep</span> <span class="s2">"compose/releases/tag"</span> | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="sb">`</span>/docker-compose-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-s</span> | <span class="nb">tr</span> <span class="s1">'[:upper:]'</span> <span class="s1">'[:lower:]'</span><span class="sb">`</span>-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-m</span><span class="sb">`</span> <span class="nt">-o</span> /usr/local/bin/docker-compose 
+<span class="c"># install latest version of docker compose</span>
+<span class="nb">sudo </span>curl <span class="nt">-sSL</span> https://github.com/docker/compose/releases/download/v<span class="sb">`</span>curl <span class="nt">-s</span> https://github.com/docker/compose/tags | <span class="nb">grep</span> <span class="s2">"compose/releases/tag"</span> | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="sb">`</span>/docker-compose-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-s</span> | <span class="nb">tr</span> <span class="s1">'[:upper:]'</span> <span class="s1">'[:lower:]'</span><span class="sb">`</span>-<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-m</span><span class="sb">`</span> <span class="nt">-o</span> /usr/local/bin/docker-compose
 <span class="nb">sudo chmod</span> +x /usr/local/bin/docker-compose
 
 <span class="c"># ensure docker does not use iptabels</span>
@@ -317,7 +319,7 @@ curl <span class="nt">-s</span> https://packages.cloud.google.com/apt/doc/apt-ke
 </span><span class="no">EOF
 
 </span><span class="c"># auto start docker on boot</span>
-<span class="nb">echo</span> <span class="s2">"Starting docker service"</span> 
+<span class="nb">echo</span> <span class="s2">"Starting docker service"</span>
 <span class="nb">echo</span> <span class="s2">"sudo service docker start"</span> <span class="o">&gt;&gt;</span> ~/.profile
 
 <span class="c"># mount host drives to root /c/ etc.</span>
@@ -328,9 +330,7 @@ root = /
 options = "metadata"
 </span><span class="no">EOF
 
-</span><span class="c">#allow your account to sudo without password</span>
-<span class="nb">sudo echo</span> <span class="s2">"</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL) NOPASSWD:ALL"</span><span class="o">&gt;&gt;</span>/etc/sudoers
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run <code class="language-plaintext highlighter-rouge">docker ps</code> to see if docker is running.</p>
 
