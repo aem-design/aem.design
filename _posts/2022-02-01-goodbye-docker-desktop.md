@@ -29,16 +29,7 @@ This is a ubuntu guide, same as Docker Desktop, Centos ecosystem is dead, so usi
 
 ### Wsl download and Import ubuntu
 
-Open up Powershell core and run the followig commands.
-
-```powershell
-mkdir c:/wsl
-cd c:/wsl
-curl.exe -L -o impish-server-cloudimg-amd64-root.tar.xz https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-amd64-root.tar.xz
-wsl --import ubuntu c:/wsl/ubuntu2110 c:/projects/wsl/impish-server-cloudimg-amd64-wsl.rootfs.tar.gz
-```
-
-Alternatively you can try this method:
+Open up Powershell core and run the following commands.
 
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -62,7 +53,7 @@ adduser -d /home/maxbarrass -m maxbarrass
 passwd maxbarrass
 addgroup maxbarrass sudo
 usermod -aG sudo maxbarrass
-sudo echo "$USER ALL=(ALL) NOPASSWD:ALL">>/etc/sudoers
+echo echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/apt/sources.list
 ```
 
 ### Update Windows Terminal Profile
@@ -77,66 +68,16 @@ wsl.exe -d ubuntu -u maxbarrass
 
 ### Install docker in Ubuntu
 
-Create a new script `nano instal-docker.sh` with the following content and run it. This will install docker and docker-compose, as well as add docker service start to your `.profile`. This way, when you open your Ubuntu, it will ensure that docker is running.
+You can run this in your Ubuntu terminal:
 
 ```bash
-# update the package manager and install some prerequisites (all of these aren't technically required)
-sudo apt-get update -y
-sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common libssl-dev libffi-dev git wget nano
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aem-design/aem.design/master/assets/scripts/install-docker-wsl.sh)"
+```
 
-# create a group named docker and add yourself to it
-#   so that we don't have to type sudo docker every time
-#   note you will need to logout and login before this takes affect (which we do later)
-sudo groupadd docker
-sudo usermod -aG docker ${USER}
+Or create a new script `nano install-docker.sh` with the following content and run it `sudo ./install-docker.sh ${USER}`. This will install docker and docker-compose, as well as add docker service start to your `.profile`. This way, when you open your Ubuntu, it will ensure that docker is running.
 
-# add Docker key and repo
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
-
-# (optional) add kubectl key and repo
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-
-# update the package manager with the new repos
-sudo apt-get update
-
-# upgrade the distro
-sudo apt-get upgrade -y
-sudo apt-get autoremove -y
-
-# install docker
-sudo apt-get install -y docker-ce containerd.io
-
-# (optional) install kubectl
-sudo apt-get install -y kubectl
-
-# (optional) install latest version of docker compose
-sudo curl -sSL https://github.com/docker/compose/releases/download/v`curl -s https://github.com/docker/compose/tags | grep "compose/releases/tag" | sed -r 's|.*([0-9]+\.[0-9]+\.[0-9]+).*|\1|p' | head -n 1`/docker-compose-`uname -s | tr '[:upper:]' '[:lower:]'`-`uname -m` -o /usr/local/bin/docker-compose 
-sudo chmod +x /usr/local/bin/docker-compose
-
-# ensure docker does not use iptabels
-sudo touch /etc/docker/daemon.json
-sudo tee -a /etc/docker/daemon.json <<EOF
-{
-  "iptables": false
-}
-EOF
-
-# auto start docker on boot
-echo "Starting docker service" 
-echo "sudo service docker start" >> ~/.profile
-
-# mount host drives to root /c/ etc.
-sudo touch /etc/wsl.conf
-sudo tee -a /etc/wsl.conf <<EOF
-[automount]
-root = /
-options = "metadata"
-EOF
-
-#allow your account to sudo without password
-sudo echo "$USER ALL=(ALL) NOPASSWD:ALL">>/etc/sudoers
+```bash
+{% include_relative ../assets/scripts/install-docker-wsl.sh %}
 ```
 
 Reboot, open windows terminal and open bash prompt. You should be prompted for password to start docker. After that you can run `docker ps` to see if docker is running.
