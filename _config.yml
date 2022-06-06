@@ -256,7 +256,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-last-modified-at
   - jekyll-archives
-  - flexible_include
+  - jekyll_flexible_include
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -268,7 +268,7 @@ whitelist:
   - jekyll-redirect-from
   - jekyll-include-cache
   - jekyll-last-modified-at
-  - flexible_include
+  - jekyll_flexible_include
 
 
 # Archives
