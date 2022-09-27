@@ -26,7 +26,7 @@ jobs:
           sudo apt-get install libcurl4-openssl-dev libxslt-dev libxml2-dev
       - uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.x' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
+          ruby-version: '3.x' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
       - name: build
         run: |
           export LANG=en_US.UTF-8
