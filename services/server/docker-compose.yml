@@ -1,0 +1,110 @@
+version: "3.8"
+
+
+services:
+
+  server:
+    image: jekyll/builder
+    restart: always
+    hostname: "server"
+    privileged: true
+    environment:
+      - JEKYLL_ENV=production
+      - DOMAIN_URL=${DOMAIN_URL}
+      - GIT_REPO=${GIT_REPO}
+      - TRAEFIK_URL=${TRAEFIK_URL}
+      - PUBLIC_URL=${PUBLIC_URL}
+      - SITE_TITLE=${SITE_TITLE}
+      - SITE_DESCRIPTION=${SITE_DESCRIPTION}
+      - GIT_USER=${GIT_USER}
+      - EMAIL=${EMAIL}
+      - SERVER_LIVERELOAD_PORT=${SERVER_LIVERELOAD_PORT}
+      - SERVER_PORT=${SERVER_PORT}
+      - SERVER_URL=${SERVER_URL}
+    command: bash -c "envsubst < _config.txt > _configenv.yml && npm install -g sass && bundle update && bundler install && jekyll serve --config _config.yml,_configenv.yml --watch --force-polling --force_polling --incremental --future --profile --trace --verbose --host 0.0.0.0 --port ${SERVER_PORT} --livereload --livereload_port ${SERVER_LIVERELOAD_PORT}"
+    labels:
+      traefik.frontend.priority: 1
+      traefik.enable: true
+      traefik.http.routers.gvfn.rule: "Host(`${SERVER_HOST}`)"
+      traefik.http.routers.gvfn.entrypoints: web
+      traefik.http.routers.gvfn_https.rule: "Host(`${SERVER_HOST}`)"
+      traefik.http.routers.gvfn_https.tls: true
+      traefik.http.routers.gvfn_https.entrypoints: websecure
+      traefik.http.services.gvfn.loadbalancer.passHostHeader: true
+      traefik.http.services.gvfn.loadbalancer.server.port: ${SERVER_PORT}
+    volumes:
+      - ${SERVER_CONTENT_PATH}:/srv/jekyll
+    ports:
+      - ${SERVER_LIVERELOAD_PORT}:${SERVER_LIVERELOAD_PORT}
+    networks:
+      internal:
+        aliases:
+          - ${SERVER_SUBDOMAIN_NAME}
+          - ${SERVER_SUBDOMAIN_NAME}.${DOMAIN_NAME}
+
+  # server:
+  #   image: aemdesign/java-buildpack:jdk11
+  #   restart: always
+  #   working_dir: /content
+  #   hostname: "server"
+  #   command: "bash -c -l /build/source/docker-serve.sh"
+  #   labels:
+  #     traefik.frontend.priority: 1
+  #     traefik.enable: true
+  #     traefik.http.routers.gvfn.rule: "Host(`${SERVER_HOST}`)"
+  #     traefik.http.routers.gvfn.entrypoints: web
+  #     traefik.http.routers.gvfn_https.rule: "Host(`${SERVER_HOST}`)"
+  #     traefik.http.routers.gvfn_https.tls: true
+  #     traefik.http.routers.gvfn_https.entrypoints: websecure
+  #     traefik.http.services.gvfn.loadbalancer.passHostHeader: true
+  #     traefik.http.services.gvfn.loadbalancer.server.port: 4000
+  #   environment:
+  #     - LANG=en_US.UTF-8
+  #     - PORT=4000
+  #     - PORT_LIVERELOAD=35129
+  #     - TZ=${GLOBAL_TZ}
+  #   volumes:
+  #     - ${SERVER_CONTENT_PATH}:/build/source
+  #   networks:
+  #     internal:
+  #       aliases:
+  #         - ${SERVER_SUBDOMAIN_NAME}
+  #         - ${SERVER_SUBDOMAIN_NAME}.${DOMAIN_NAME}
+
+  webp-create:
+    image: aemdesign/java-buildpack:jdk11
+    working_dir: /content
+    hostname: "webp-create"
+    command: "bash -c -l /build/source/docker-webp.sh"
+    environment:
+      - LANG=en_US.UTF-8
+      - MODE=CREATE
+      - TZ=${GLOBAL_TZ}
+    volumes:
+      - ${SERVER_CONTENT_PATH}:/build/source
+    profiles:
+      - webp
+    networks:
+      - internal
+
+  webp-update:
+    image: aemdesign/java-buildpack:jdk11
+    working_dir: /content
+    hostname: "webp-update"
+    command: "bash -c -l /build/source/docker-webp.sh"
+    environment:
+      - LANG=en_US.UTF-8
+      - MODE=UPDATE
+      - TZ=${GLOBAL_TZ}
+    volumes:
+      - ${SERVER_CONTENT_PATH}:/build/source
+    profiles:
+      - webp
+    networks:
+      - internal
+
+networks:
+  internal:
+
+volumes:
+  data:

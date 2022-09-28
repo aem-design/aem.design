@@ -6,10 +6,10 @@ Jekyll::Hooks.register :site, :post_write do |site|
     :check_img_http => true,
     :disable_external => true,
     :report_invalid_tags => true,
-    :assume_extension => true,
+    :assume_extension => ".html",
     :allow_hash_href => true,
     :verbose => true,
-    :internal_domains => ["localhost:8100"],
+    :internal_domains => ["localhost:8100","localhost:8111"],
     :root_dir => "_site",
     :url_ignore => [
       /.*#data=.*/,

@@ -197,6 +197,11 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - services
+  - "*.sh"
+  - "docker-*"
+  - .idea
+  - .github
 keep_files:
   - .git
   - .svn
