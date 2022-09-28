@@ -29,4 +29,4 @@ This is another awesome milestone to be carried as a great base for upcoming pro
 
 Happy New Year to all!!! See you all next year!!!
 
-PS. Look forward to our [JECIS](http://www.jecis.com/) integration coming early next year!!! We are going to use [JECIS Framework](http://www.jecis.com/) to deliver eCommerce capability blueprint to your projects!!!
+PS. Look forward to our [JECIS](https://www.jecis.com/) integration coming early next year!!! We are going to use [JECIS Framework](https://www.jecis.com/) to deliver eCommerce capability blueprint to your projects!!!
