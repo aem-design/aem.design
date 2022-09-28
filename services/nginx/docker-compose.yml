@@ -17,6 +17,7 @@ services:
       - SERVER_SITE_LIVERELOAD_PORT=${SERVER_LIVERELOAD_PORT}
       - SERVER_SITE_PORT=${SERVER_PORT}
       - SERVER_SITE_URL=${SERVER_URL}
+      - SITE_LOGO=${SITE_LOGO}
     command: bash -c "envsubst < _config.txt > _configenv.yml && npm install -g sass && bundle update && bundler install && jekyll build --config _config.yml,_configenv.yml --watch --force-polling --force_polling --incremental --future"
     volumes:
       - "${NGINX_CONTENT_PATH}:/srv/jekyll"

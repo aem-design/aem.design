@@ -20,7 +20,7 @@ layout: page
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><img src="logos/governance.foundation.png" alt="{{ site.env.SITE_TITLE}}" class="logo"></th>
+      <th scope="row"><img src="{{ site.env.SITE_LOGO }}" alt="{{ site.env.SITE_TITLE}}" class="logo"></th>
       <td>Project Dashboard</td>
       <td>this page</td>
       <td><a target="_blank" class="btn btn-primary" href="{{ site.env.DOMAIN_URL }}">Open</a>
@@ -28,7 +28,7 @@ layout: page
       <td></td>
     </tr>
     <tr>
-      <th scope="row"><img src="logos/governance.foundation.png" alt="{{ site.env.SITE_TITLE}}" class="logo"></th>
+      <th scope="row"><img src="{{ site.env.SITE_LOGO }}" alt="{{ site.env.SITE_TITLE}}" class="logo"></th>
       <td>Local</td>
       <td>development instance</td>
       <td><a target="_blank" class="btn btn-primary" href="{{ site.env.SERVER_SITE_URL }}">Open</a>
@@ -43,10 +43,10 @@ layout: page
       <td>8080</td>
     </tr>
     <tr>
-      <th scope="row"><img src="logos/governance.foundation.png" alt="{{ site.env.SITE_TITLE}}"  class="logo"></th>
-      <td>Governance.Foundation</td>
+      <th scope="row"><img src="{{ site.env.SITE_LOGO }}" alt="{{ site.env.SITE_TITLE}}"  class="logo"></th>
+      <td>{{ site.env.SITE_TITLE }}</td>
       <td>public version</td>
-      <td><a target="_blank" class="btn btn-primary" href="{{ site.env.PUBLIC_URL }}">governance.foundation</a>
+      <td><a target="_blank" class="btn btn-primary" href="{{ site.env.PUBLIC_URL }}">{{ site.env.SITE_TITLE }}</a>
       </td>
       <td></td>
     </tr>
