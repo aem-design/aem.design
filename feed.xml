@@ -1,4 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-06-07T01:54:59+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2022-05-24T10:27:04+10:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-09-28T20:54:34+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">WebSight CMS Exclusive Preview</title><link href="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview" rel="alternate" type="text/html" title="WebSight CMS Exclusive Preview" /><published>2022-09-27T00:00:00+10:00</published><updated>2022-09-28T20:49:53+10:00</updated><id>https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview</id><content type="html" xml:base="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>It is always a pleasure to be part of something new and upcoming. So when I was invited to be part of an exclusive preview of a soon-to-be-released open source <a href="https://www.websight.io/">WebSight CMS</a>, I could not resist.</p>
+
+<p><img src="/assets/images/websight/Login.png" alt="success" /></p>
+
+<p>I’ve been keeping an eye on new entrants to the Sling bases CMS for over a decade, and finally, <a href="https://www.websight.io/">WebSight CMS</a> has entered the space and bringing new capabilities to the table. Big shout out to the WebSight team and <a href="https://www.linkedin.com/in/michalcukierman/">Michał Cukierman</a> for working on this for several years and bringing an open-source offering to the community. You can check out the GitHub repo for the community version at  <a href="https://github.com/websight-io/starter">https://github.com/websight-io/starter</a>.</p>
+
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+
+<ul class="image-gallery">
+    <li>
+        <a href="/assets/images/websight/spaces/Spaces-Create-Properties.png" title="Spaces-Create-Properties"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/spaces/Spaces-Create-Properties.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Spaces-Create-Properties" title="Spaces-Create-Properties" /><span>Spaces-Create-Properties</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/spaces/Spaces-Create-Template.png" title="Spaces-Create-Template"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/spaces/Spaces-Create-Template.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Spaces-Create-Template" title="Spaces-Create-Template" /><span>Spaces-Create-Template</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/spaces/Spaces-Managment.png" title="Spaces-Managment"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/spaces/Spaces-Managment.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Spaces-Managment" title="Spaces-Managment" /><span>Spaces-Managment</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/spaces/Spaces.png" title="Spaces"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/spaces/Spaces.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Spaces" title="Spaces" /><span>Spaces</span></a>
+    </li>
+
+</ul>
+
+<h2 id="capabilities">Capabilities</h2>
+
+<p>These days the standard capabilities of CMS platforms are almost all but become feature complete. But there is still room for the cleanliness of experience and simplicity to be attained for the average author. This is where WebSight is making its play. Instead of going out and trying to reinvent how a great Enterprise CMS platform should not be built, it leverages the proven pattern that allows the team at WebSight to focus on Author experience and enterprise features that make a difference.</p>
+
+<p>WebSight CMS has hit the ground running by leveraging the same stack as Adobe AEM, Apache Sling CMS and Peregrine CMS, to name a few. Leveraging technology is one thing, but WebSigh CMS’s team has the contenders covered in terms of author user experience.</p>
+
+<p><img src="/assets/images/websight/page-editor/Page-Editor.png" alt="success" /></p>
+
+<p>WebSigh CMS covers the following pillars Sling CMS users expect:
+Spaces - for managing sites
+Pages - author site hierarchy and edit pages
+Assets - manage assets</p>
+
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+
+<ul class="image-gallery">
+    <li>
+        <a href="/assets/images/websight/pages-and-assets/Assets.png" title="Assets"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/pages-and-assets/Assets.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Assets" title="Assets" /><span>Assets</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/pages-and-assets/Page-Actions-Page.png" title="Page-Actions-Page"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/pages-and-assets/Page-Actions-Page.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Actions-Page" title="Page-Actions-Page" /><span>Page-Actions-Page</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/pages-and-assets/Page-Actions-Selection.png" title="Page-Actions-Selection"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/pages-and-assets/Page-Actions-Selection.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Actions-Selection" title="Page-Actions-Selection" /><span>Page-Actions-Selection</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/pages-and-assets/Page-Metadata.png" title="Page-Metadata"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/pages-and-assets/Page-Metadata.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Metadata" title="Page-Metadata" /><span>Page-Metadata</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/pages-and-assets/Page-Properties.png" title="Page-Properties"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/pages-and-assets/Page-Properties.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Properties" title="Page-Properties" /><span>Page-Properties</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/pages-and-assets/Pages.png" title="Pages"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/pages-and-assets/Pages.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Pages" title="Pages" /><span>Pages</span></a>
+    </li>
+
+</ul>
+
+<p>Additionally, there are several administrative functions that allow management of Content, Users and Groups, and other admin tools that allow performing administrative tasks to meet many needs:
+Packages - manage packages (Package manager for AEM users)
+Resource Browser (CRX/DE for AEM users)
+User Management
+Groovy Console - great OOTB addition allowing you to do just about anything in the backend.
+Swagger Browser - amazing to see this as OOTB as it greatly streamlines any UI extension development, where you need to guess and reverse engineer this in other platforms.</p>
+
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+
+<ul class="image-gallery">
+    <li>
+        <a href="/assets/images/websight/admin/Admin-Functions.png" title="Admin-Functions"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Admin-Functions.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Admin-Functions" title="Admin-Functions" /><span>Admin-Functions</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Groovy-Console.png" title="Groovy-Console"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Groovy-Console.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Groovy-Console" title="Groovy-Console" /><span>Groovy-Console</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Package-Manager-Package-Actions.png" title="Package-Manager-Package-Actions"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Package-Manager-Package-Actions.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Package-Manager-Package-Actions" title="Package-Manager-Package-Actions" /><span>Package-Manager-Package-Actions</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Package-Manager-Package-Install-Dialog.png" title="Package-Manager-Package-Install-Dialog"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Package-Manager-Package-Install-Dialog.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Package-Manager-Package-Install-Dialog" title="Package-Manager-Package-Install-Dialog" /><span>Package-Manager-Package-Install-Dialog</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Package-Manager-Package-Schedule-Actions.png" title="Package-Manager-Package-Schedule-Actions"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Package-Manager-Package-Schedule-Actions.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Package-Manager-Package-Schedule-Actions" title="Package-Manager-Package-Schedule-Actions" /><span>Package-Manager-Package-Schedule-Actions</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Package-Manager-Package-Schedule.png" title="Package-Manager-Package-Schedule"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Package-Manager-Package-Schedule.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Package-Manager-Package-Schedule" title="Package-Manager-Package-Schedule" /><span>Package-Manager-Package-Schedule</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Package-Manager.png" title="Package-Manager"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Package-Manager.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Package-Manager" title="Package-Manager" /><span>Package-Manager</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Resource-Browser.png" title="Resource-Browser"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Resource-Browser.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Resource-Browser" title="Resource-Browser" /><span>Resource-Browser</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Swagger-Browser-Execute.png" title="Swagger-Browser-Execute"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Swagger-Browser-Execute.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Swagger-Browser-Execute" title="Swagger-Browser-Execute" /><span>Swagger-Browser-Execute</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/Swagger-Browser.png" title="Swagger-Browser"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/Swagger-Browser.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Swagger-Browser" title="Swagger-Browser" /><span>Swagger-Browser</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/User-Manager-User-Edit.png" title="User-Manager-User-Edit"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/User-Manager-User-Edit.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="User-Manager-User-Edit" title="User-Manager-User-Edit" /><span>User-Manager-User-Edit</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/admin/User-Manager.png" title="User-Manager"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/admin/User-Manager.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="User-Manager" title="User-Manager" /><span>User-Manager</span></a>
+    </li>
+
+</ul>
+
+<h2 id="undercovers">Undercovers</h2>
+
+<p>Undercovers WebSight CMS runs on Apache Sling stack but uses Mongo OOTB and a welcome NGINX replacement for Apache/Dispatcher combo. It’s fantastic to see a native docker setup; docker has been a must for any project for the last ten years, and it’s a great step towards adoption as it removes all barriers to getting started.</p>
+
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+
+<ul class="image-gallery">
+    <li>
+        <a href="/assets/images/websight/undercovers/Felix-Console.png" title="Felix-Console"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/undercovers/Felix-Console.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Felix-Console" title="Felix-Console" /><span>Felix-Console</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/undercovers/UnderCovers.png" title="UnderCovers"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/undercovers/UnderCovers.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="UnderCovers" title="UnderCovers" /><span>UnderCovers</span></a>
+    </li>
+
+</ul>
+
+<h2 id="page-authoring">Page Authoring</h2>
+
+<p>As a deep AEM user, I deeply respect the inspiration from Adobe AEM experience with the number of authoring features that are a must for my authoring needs.</p>
+
+<style>
+    .image-gallery {overflow: auto; margin-left: -1%!important;}
+    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    .image-gallery li a {text-align: center; text-decoration: none!important; color: #777;}
+    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+    .image-gallery li a img {width: 100%; display: block;}
+</style>
+
+<ul class="image-gallery">
+    <li>
+        <a href="/assets/images/websight/page-editor/Page-Editor-Assets.png" title="Page-Editor-Assets"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/page-editor/Page-Editor-Assets.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Editor-Assets" title="Page-Editor-Assets" /><span>Page-Editor-Assets</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/page-editor/Page-Editor-Component-Actions.png" title="Page-Editor-Component-Actions"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/page-editor/Page-Editor-Component-Actions.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Editor-Component-Actions" title="Page-Editor-Component-Actions" /><span>Page-Editor-Component-Actions</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/page-editor/Page-Editor-Component-Dialog.png" title="Page-Editor-Component-Dialog"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/page-editor/Page-Editor-Component-Dialog.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Editor-Component-Dialog" title="Page-Editor-Component-Dialog" /><span>Page-Editor-Component-Dialog</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/page-editor/Page-Editor-Content-Tree.png" title="Page-Editor-Content-Tree"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/page-editor/Page-Editor-Content-Tree.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Editor-Content-Tree" title="Page-Editor-Content-Tree" /><span>Page-Editor-Content-Tree</span></a>
+    </li>
+
+    <li>
+        <a href="/assets/images/websight/page-editor/Page-Editor.png" title="Page-Editor"><img src="https://images.weserv.nl/?url=aem.design/assets/images/websight/page-editor/Page-Editor.png&amp;w=300&amp;h=300&amp;output=png&amp;q=50&amp;t=square" alt="Page-Editor" title="Page-Editor" /><span>Page-Editor</span></a>
+    </li>
+
+</ul>
+
+<p>In addition to inspiration, the team behind WebSight has added subtle improvements to the authoring experience. A nice touch to add grouping to the list of components breaks up what is usually a monotone list. Separating the components list into Layout and Components (I would have called this Content) is a great separation of concern and provides additional grouping for authoring logic.</p>
+
+<p><img src="/assets/images/websight/page-editor/Page-Editor-Content-Tree.png" alt="success" /></p>
+
+<h2 id="wishlist">Wishlist</h2>
+
+<p>What’s missing in the open source preview version as of my review, and I am sure it will make it here eventually? This is more of a wishlist that would further round out the feature set:</p>
+
+<ul>
+  <li>Asset metadata - the ability to add metadata for Assets and author metadata dialog; developing this will enable this feature to be used in content fragments experiences as well.</li>
+  <li>Content Fragments - this would provide a consistent way of managing data and could allow pages to be driven through content fragments. I have implemented this on AEM.</li>
+  <li>ClientLibs - it’s a very, very underrated and underutilised capability, and it provides actual modularity that is yet to be attained in the FED world.</li>
+</ul>
+
+<p>These and everything else can be built on this already great package.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>WebSight CMS is a great new entrant with many opportunities; it’s great to see how Sling CMS can be leveraged for a great effect! So feel free to drop a star on their repos <a href="https://www.websight.io/">WebSight CMS</a> and shout it out on your favourite socials. Until next time!</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="websight-cms" /><category term="docker" /><category term="docker-compose" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2022-05-24T10:27:04+10:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
 
 <p>Let’s now look at some base config you can start with when setting up you dev box for dev! Let us focus only on the base windows setup, which can be used as a foundation for any tooling specialisation.</p>
 
@@ -111,7 +336,7 @@ memory=6GB
 
 <p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
-<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="wsl" /><category term="windows" /><summary type="html"><![CDATA[Config and Tools for Windows that will help you !]]></summary></entry><entry><title type="html">Docker Compose and Deploy Stacks 🍔😘</title><link href="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="alternate" type="text/html" title="Docker Compose and Deploy Stacks 🍔😘" /><published>2022-02-08T00:37:00+11:00</published><updated>2022-02-08T08:14:14+11:00</updated><id>https://aem.design/blog/2022/02/08/docker-compose</id><content type="html" xml:base="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98"><![CDATA[<p>Following up on the articles <a href="/blog/2019/09/04/aem-and-docker">AEM and Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>, lets pull all that knowledge together and talk about how to deploy AEM stacks to developers using Docker Compose. There are many ways to bring a stack to developers machines, but the simplest way is to use Docker Compose.</p>
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="wsl" /><category term="windows" /><summary type="html"><![CDATA[Config and Tools for Windows that will help you !]]></summary></entry><entry><title type="html">Docker Compose and Deploy Stacks 🍔😘</title><link href="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="alternate" type="text/html" title="Docker Compose and Deploy Stacks 🍔😘" /><published>2022-02-08T00:37:00+11:00</published><updated>2022-02-08T08:14:14+11:00</updated><id>https://aem.design/blog/2022/02/08/docker-compose</id><content type="html" xml:base="https://aem.design/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98"><![CDATA[<p>Following up on the articles <a href="/blog/2019/09/04/aem-and-docker">AEM and Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a>, lets pull all that knowledge together and talk about how to deploy AEM stacks to developers using Docker Compose. There are many ways to bring a stack to developers machines, but the simplest way is to use Docker Compose.</p>
 
 <p>Additionally, when using Docker Compose, you will understand whether your deployment architecture is complex and which parts are critical; this will provide you with some feedback to clean things up.</p>
 
@@ -183,7 +408,7 @@ memory=6GB
 
 <p>I hope you will find using docker compose will being a smile to your face {insert home alone 2 smile}. As always if you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
-<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="docker-compose" /><summary type="html"><![CDATA[How to use docker compose like a pro!]]></summary></entry><entry><title type="html">Goodbye Centos</title><link href="https://aem.design/blog/2022/02/06/goodbye-centos" rel="alternate" type="text/html" title="Goodbye Centos" /><published>2022-02-06T00:00:00+11:00</published><updated>2022-02-07T00:37:32+11:00</updated><id>https://aem.design/blog/2022/02/06/goodbye-centos</id><content type="html" xml:base="https://aem.design/blog/2022/02/06/goodbye-centos"><![CDATA[<p>Centos is no more! You already know that. The founder of Kurtzer, who started Centos more than 16 years ago, was shocked just as much. Centos was a great gap filler between Fedora and RHEL. You had the best of both worlds, but you could use it for development and then roll your apps straight to RHEL if you need enterprise support.</p>
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="automation" /><category term="docker-compose" /><summary type="html"><![CDATA[How to use docker compose like a pro!]]></summary></entry><entry><title type="html">Goodbye Centos</title><link href="https://aem.design/blog/2022/02/06/goodbye-centos" rel="alternate" type="text/html" title="Goodbye Centos" /><published>2022-02-06T00:00:00+11:00</published><updated>2022-02-07T00:37:32+11:00</updated><id>https://aem.design/blog/2022/02/06/goodbye-centos</id><content type="html" xml:base="https://aem.design/blog/2022/02/06/goodbye-centos"><![CDATA[<p>Centos is no more! You already know that. The founder of Kurtzer, who started Centos more than 16 years ago, was shocked just as much. Centos was a great gap filler between Fedora and RHEL. You had the best of both worlds, but you could use it for development and then roll your apps straight to RHEL if you need enterprise support.</p>
 
 <p>What does this mean for AEM? Well, it means all of the containers essentially will need to be updated to use something else. You can’t use Centos, so the next best thing would be … Debian. Yes, Ubuntu is a good contender, but you won’t be able to run AEM Forms on it; tldr, Ubuntu does not have 32bit support.</p>
 
@@ -211,7 +436,7 @@ memory=6GB
 
 <p>I hope you will find the new ARM images useful. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
-<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="centos" /><summary type="html"><![CDATA[You were great while the free ride lasted!]]></summary></entry><entry><title type="html">Goodbye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Goodbye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-06-07T01:51:05+10:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="centos" /><summary type="html"><![CDATA[You were great while the free ride lasted!]]></summary></entry><entry><title type="html">Goodbye Docker Desktop</title><link href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop" rel="alternate" type="text/html" title="Goodbye Docker Desktop" /><published>2022-02-01T00:00:00+11:00</published><updated>2022-06-07T01:51:05+10:00</updated><id>https://aem.design/blog/2022/02/01/goodbye-docker-desktop</id><content type="html" xml:base="https://aem.design/blog/2022/02/01/goodbye-docker-desktop"><![CDATA[<p>First of all, if it wasn’t for docker, the technology landscape would be very different today. Thank you, docker and the team behind it! I do feel that some technologies that come out as open-source and force other vendors to show their cards. Docker single-handled changed the way a lot of things are done in software development; this is probably an understatement, as it is amazing! I feel that the docker team is doing a great job and I hope this will continue.</p>
 
 <p>But as you all know, docker desktop WAS a great tool for running docker on your desktop, up until it became a thing of the past. It drove itself off the cliff with paid subscription. Most corporate companies will think long and hard before purchasing docker desktop licences. So if you can’t use it at work, why would you use it at home? After all, you are what you practice, and you are what you use. Consistency of tools is critical to developers.</p>
 
@@ -338,7 +563,7 @@ options = "metadata"
 
 <p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
-<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="docker-desktop" /><summary type="html"><![CDATA[You were great while you lasted!]]></summary></entry><entry><title type="html">How to add property and author a component programmatically?</title><link href="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="alternate" type="text/html" title="How to add property and author a component programmatically?" /><published>2022-01-19T00:00:00+11:00</published><updated>2022-01-19T14:03:53+11:00</updated><id>https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically</id><content type="html" xml:base="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically"><![CDATA[<h2 id="updatating-aem-content-programmatically">Updatating AEM Content programmatically?</h2>
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="docker-desktop" /><summary type="html"><![CDATA[You were great while you lasted!]]></summary></entry><entry><title type="html">How to add property and author a component programmatically?</title><link href="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically" rel="alternate" type="text/html" title="How to add property and author a component programmatically?" /><published>2022-01-19T00:00:00+11:00</published><updated>2022-01-19T14:03:53+11:00</updated><id>https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically</id><content type="html" xml:base="https://aem.design/blog/2022/01/19/how-to-add-property-and-author-a-component-programmatically"><![CDATA[<h2 id="updatating-aem-content-programmatically">Updatating AEM Content programmatically?</h2>
 
 <p>By far the easiest method of updating your AEM content programmatically is to use <a href="https://adobe-consulting-services.github.io/acs-aem-commons/features/on-deploy-scripts/index.html">ACS On-Deploy Script</a></p>
 
@@ -514,7 +739,7 @@ options = "metadata"
 
 <p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design">https://github.com/aem-design</a> and through Maven central.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="aem" /><category term="ondeploy" /><category term="acs" /><category term="data" /><category term="patterns" /><summary type="html"><![CDATA[ACS On-Deploy is the answer!]]></summary></entry><entry><title type="html">SPA, Headless, Widgets and AEM?</title><link href="https://aem.design/blog/2021/09/10/spa-headless-widgets-and-aem" rel="alternate" type="text/html" title="SPA, Headless, Widgets and AEM?" /><published>2021-09-10T00:00:00+10:00</published><updated>2021-09-10T17:35:40+10:00</updated><id>https://aem.design/blog/2021/09/10/spa-widgets-and-aem</id><content type="html" xml:base="https://aem.design/blog/2021/09/10/spa-headless-widgets-and-aem"><![CDATA[<p>There are many ways to build the web; most of the ways can be implemented in AEM, which one works best is going to depend on your authors. What the authors are willing to author, how involved do they get with content, and how involved do they want to get with crafting experiences? Once you answer, these questions the solution will pop out. The following should provide an overview of available options and arm you with information to make a choice.</p>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="aem" /><category term="ondeploy" /><category term="acs" /><category term="data" /><category term="patterns" /><summary type="html"><![CDATA[ACS On-Deploy is the answer!]]></summary></entry><entry><title type="html">SPA, Headless, Widgets and AEM?</title><link href="https://aem.design/blog/2021/09/10/spa-headless-widgets-and-aem" rel="alternate" type="text/html" title="SPA, Headless, Widgets and AEM?" /><published>2021-09-10T00:00:00+10:00</published><updated>2021-09-10T17:35:40+10:00</updated><id>https://aem.design/blog/2021/09/10/spa-widgets-and-aem</id><content type="html" xml:base="https://aem.design/blog/2021/09/10/spa-headless-widgets-and-aem"><![CDATA[<p>There are many ways to build the web; most of the ways can be implemented in AEM, which one works best is going to depend on your authors. What the authors are willing to author, how involved do they get with content, and how involved do they want to get with crafting experiences? Once you answer, these questions the solution will pop out. The following should provide an overview of available options and arm you with information to make a choice.</p>
 
 <h2 id="spa-headless-add-widgets-patterns-in-aem">SPA, Headless add Widgets patterns in AEM</h2>
 
@@ -710,7 +935,7 @@ Widgets in Page - small targeted components that are added to pages to create ex
 
 <p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design">https://github.com/aem-design</a> and through Maven central.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="aem" /><category term="spa" /><category term="headless" /><category term="widgets" /><category term="knowledge" /><category term="patterns" /><summary type="html"><![CDATA[When to use these and what they achieve?]]></summary></entry><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-09-21T16:35:10+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="aem" /><category term="spa" /><category term="headless" /><category term="widgets" /><category term="knowledge" /><category term="patterns" /><summary type="html"><![CDATA[When to use these and what they achieve?]]></summary></entry><entry><title type="html">AEM Akamai Cache flush Agent 😍</title><link href="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent" rel="alternate" type="text/html" title="AEM Akamai Cache flush Agent 😍" /><published>2021-04-25T00:00:00+10:00</published><updated>2021-09-21T16:35:10+10:00</updated><id>https://aem.design/blog/2021/04/25/creating-akamai-flush-agent</id><content type="html" xml:base="https://aem.design/blog/2021/04/25/creating-akamai-flush-agent"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>After the first hit to the page in aem and HTML response received for first time from publish instance will get cached on Akamai level.</p>
 
@@ -866,7 +1091,7 @@ You should see “Replication test succeeded”</p>
 
 <p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design">https://github.com/aem-design</a>.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!]]></summary></entry><entry><title type="html">Automation Testing For AEM Dialogs</title><link href="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="alternate" type="text/html" title="Automation Testing For AEM Dialogs" /><published>2021-01-21T00:37:00+11:00</published><updated>2021-04-27T02:36:37+10:00</updated><id>https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs</id><content type="html" xml:base="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs"><![CDATA[<p>Automation testing is an absolute mandatory and covered in <a href="/blog/2017/06/28/automation-testing">Automation Testing and Human Reporting</a> and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.</p>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!]]></summary></entry><entry><title type="html">Automation Testing For AEM Dialogs</title><link href="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="alternate" type="text/html" title="Automation Testing For AEM Dialogs" /><published>2021-01-21T00:37:00+11:00</published><updated>2021-04-27T02:36:37+10:00</updated><id>https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs</id><content type="html" xml:base="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs"><![CDATA[<p>Automation testing is an absolute mandatory and covered in <a href="/blog/2017/06/28/automation-testing">Automation Testing and Human Reporting</a> and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.</p>
 
 <p>Over the last few years, AEM Automation Testing for AEM Dialog has been getting more focus, and I have been asked by many how to do this easily. The current approach leverages existing AEM Editor experience to view and load dialogs so that they can be tested. One of the improvements that have been asked can that be made faster so that actual pages do not require loading, so that spec execution speed improves.</p>
 
@@ -940,36 +1165,4 @@ You should see “Replication test succeeded”</p>
 
 <p>As you can see this pattern will allow you to test AEM Dialogs especially if you are into making customised controls, if you are stuck, look at some examples in <a href="https://github.com/aem-design/aemdesign-aem-support/blob/clean-up-compose-project/aemdesign-testing/src/test/groovy/specs/component/details/genericdetails/GenericDetailsAuthorDialogSpec.groovy">GenericDetailsAuthorDialogSpec.groovy</a>.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="testing" /><category term="automation-testing" /><summary type="html"><![CDATA[Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.]]></summary></entry><entry><title type="html">Creating Custom Workflow Step</title><link href="https://aem.design/blog/2021/01/18/creating-custom-workflow-step" rel="alternate" type="text/html" title="Creating Custom Workflow Step" /><published>2021-01-18T00:37:00+11:00</published><updated>2021-03-14T01:50:42+11:00</updated><id>https://aem.design/blog/2021/01/18/creating-custom-workflow-step</id><content type="html" xml:base="https://aem.design/blog/2021/01/18/creating-custom-workflow-step"><![CDATA[<p>When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step.
-You will first encounter this when you don’t see your service appear in the process list on the dialog.
-And once you verify the data source that feeds that dropdown at <a href="http://localhost:4502/libs/cq/workflow/content/console/process.json">http://localhost:4502/libs/cq/workflow/content/console/process.json</a> you will wonder why.
-You may also see errors like this <code class="language-plaintext highlighter-rouge">Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label}</code> that could just tell you your class is missing property <code class="language-plaintext highlighter-rouge">process.label</code>.</p>
-
-<p>Now that you know, you add this property to your class and your class appear in the list, here is an example of how to add it:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span><span class="o">(</span>
-    <span class="n">immediate</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span>
-    <span class="n">service</span> <span class="o">=</span> <span class="nc">WorkflowProcess</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
-    <span class="n">property</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"process.label=Content Fragment Page Generator"</span> <span class="o">}</span>
-    <span class="o">)</span>
-</code></pre></div></div>
-
-<p>Also while debugging this, you may find some other errors polluting your docker logs.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The activate method has thrown an exception (java.lang.IllegalStateException: org.apache.sling.api.resource.LoginException: Cannot derive user name for bundle com.adobe.acs.acs-aem-commons-bundle [553] and sub service workflowpackagemanager-service
-</code></pre></div></div>
-
-<p>To fix this, all you need to do is add missing service mapping mentioned in the message.
-You should be able to replicate this by restarting your missing component at eg <a href="http://localhost:4502/system/console/components/design.aem.workflow.process.ContentFragmentPageGenerator">http://localhost:4502/system/console/components/design.aem.workflow.process.ContentFragmentPageGenerator</a>.
-In example above missing use name is <code class="language-plaintext highlighter-rouge">workflowpackagemanager-service</code> and bundle is <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle</code>.
-To add this missing entry do this:</p>
-
-<ul>
-  <li>open <a href="http://localhost:4502/system/console/configMgr/">http://localhost:4502/system/console/configMgr/</a></li>
-  <li>search for <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle</code> look for mapping in <code class="language-plaintext highlighter-rouge">Apache Sling Service User Mapper Service Amendment</code></li>
-  <li>add or update blank entry with <code class="language-plaintext highlighter-rouge">com.adobe.acs.acs-aem-commons-bundle:workflowpackagemanager-service=workflow-process-service</code></li>
-</ul>
-
-<p>Hopefully, after this, your custom workflow step will work, if you are stuck, look at some examples in <a href="https://github.com/aem-design/aemdesign-aem-core/tree/develop/aemdesign-aem-services/src/main/java/design/aem/workflow/process">aemdesign-aem-services/../workflow/process</a>.</p>
-
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>http://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="structure" /><category term="bugs-maybe" /><summary type="html"><![CDATA[When writing custom workflow services, you may find yourself not seeing your service being recognised by the Process Step. You will first encounter this when you don’t see your service appear in the process list on the dialog. And once you verify the data source that feeds that dropdown at http://localhost:4502/libs/cq/workflow/content/console/process.json you will wonder why. You may also see errors like this Could not find service for service reference {YOUR WORKFLOW STEP CLASS PATH} with label {no label} that could just tell you your class is missing property process.label.]]></summary></entry></feed>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="testing" /><category term="automation-testing" /><summary type="html"><![CDATA[Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.]]></summary></entry></feed>
