@@ -16,7 +16,7 @@ AEM.Design blog
 
 You can update this repo using your favorite IDE or use a web based editor
 
-* [Prose.io - AEM.Design](http://prose.io/#aem-design/aem.design/tree/master)
+* [Prose.io - AEM.Design](https://prose.io/#aem-design/aem.design/tree/master)
 
 ## Markdown Cheatsheet
 
@@ -26,7 +26,7 @@ When creating pages in this repo use the markdown syntax, you can find syntax he
 
 ## Icons
 
-Icons can be selected form here [Fontawesome](http://fontawesome.io/icons/)
+Icons can be selected form here [Fontawesome](https://fontawesome.io/icons/)
 
 
 ## Getting Started

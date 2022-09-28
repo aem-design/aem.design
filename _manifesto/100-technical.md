@@ -246,7 +246,7 @@ $("div[data-picture]", context).each(function () {
 
 Sling allows ability to automate content creation, deletion and updates.
 
-Sling API Manipulation Manual : [http://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html](http://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)
+Sling API Manipulation Manual : [https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)
 
 ## Import UTF Characters using Sling
 

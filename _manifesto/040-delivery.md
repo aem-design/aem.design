@@ -72,7 +72,7 @@ NOTE: Adding new items to this list should be communicated and designed thorough
 
 ## Sling Selectors
 
-[Apache Sling](http://sling.apache.org/) is at the core of AEM, it enables all the authoring and content serving functions. Here is the high level overview of the framework:
+[Apache Sling](https://sling.apache.org/) is at the core of AEM, it enables all the authoring and content serving functions. Here is the high level overview of the framework:
 
 * REST based web framework
 * Content-driven, using a JCR content repository
@@ -80,7 +80,7 @@ NOTE: Adding new items to this list should be communicated and designed thorough
 * Scripting inside, multiple languages (JSP, server-side javascript, Scala, etc.)
 * Apache Open Source project
 
-Sling selectors should be used to pass parameters specific to rendering and not content filtering. ([reference](http://docs.adobe.com/docs/en/cq/current/developing/the_basics.html))
+Sling selectors should be used to pass parameters specific to rendering and not content filtering. ([reference](https://docs.adobe.com/docs/en/cq/current/developing/the_basics.html))
 
 If selectors are used for content filtering, then you are allowing unlimited number of URLs for a particular piece of content. This opens up opportunity for DDOS attacks in two ways:
 

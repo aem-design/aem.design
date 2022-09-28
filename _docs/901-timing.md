@@ -12,8 +12,8 @@ Click here for a [sample output](/component-timing/#data=H4sIAAAAAAAAALVZ227bOBD
 
 {% raw %}
 
-<script type="text/javascript" src="//rawgit.com/nodeca/pako/master/dist/pako.js"></script>
-<script type="text/javascript" src="//www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://rawgit.com/nodeca/pako/master/dist/pako.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <div id="chart_div"></div>
 
 <script>

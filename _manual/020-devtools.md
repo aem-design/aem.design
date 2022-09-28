@@ -22,7 +22,7 @@ Maven manages the build lifecycle for the AEM content packages, service bundles 
 
 The content package projects uses 'content-package-maven-plugin' to create a CRX content package.
 
- The project was originally created using the 'CQ Project Maven Archetype' ([http://www.cqblueprints.com/setup/maven.html](http://www.cqblueprints.com/setup/maven.html)).
+ The project was originally created using the 'CQ Project Maven Archetype' ([https://www.cqblueprints.com/setup/maven.html](https://www.cqblueprints.com/setup/maven.html)).
 
 The AEM project contains 4 child modules:
 

@@ -37,7 +37,7 @@ Further information on Git Flow can be found here:
 
 [https://www.atlassian.com/git/tutorials/comparing-workflows#!workflow-gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows#!workflow-gitflow)
 
-[http://nvie.com/posts/a-successful-git-branching-model/](http://nvie.com/posts/a-successful-git-branching-model/)
+[https://nvie.com/posts/a-successful-git-branching-model/](https://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Testing Environments
 

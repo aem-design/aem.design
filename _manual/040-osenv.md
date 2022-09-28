@@ -135,7 +135,7 @@ The high level process for updating a Docker image is as follows:
 
     2. Update the variable in the group vars (*group_vars/[group_name]/vars.yml*) to update the servers belonging to the group. For example, AEM authors, publishers and processing groups are running the same Docker image.
 
-    3. Update the group vars for services in an environment (*inventory/[environment_name]*). Create a group var using the group suffix ':vars' (reference: [http://docs.ansible.com/ansible/latest/intro_inventory.html#group-variables](http://docs.ansible.com/ansible/latest/intro_inventory.html#group-variables)). Limit the use of this approach as it is best to promote Docker images from one environment to the next environment.
+    3. Update the group vars for services in an environment (*inventory/[environment_name]*). Create a group var using the group suffix ':vars' (reference: [https://docs.ansible.com/ansible/latest/intro_inventory.html#group-variables](https://docs.ansible.com/ansible/latest/intro_inventory.html#group-variables)). Limit the use of this approach as it is best to promote Docker images from one environment to the next environment.
 
 4. Commit the changes to the repository.
 

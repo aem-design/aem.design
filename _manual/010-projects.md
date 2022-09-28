@@ -28,17 +28,17 @@ The following sections will highlight their key design decisions and their imple
 
 The aemdesign-deploy project is a **server automation** project using Ansible to deploy and configure services. The project also contains scripted operational tasks for maintaining the operating system and services..
 
-Before proceeding, this section contains content with assumed Ansible knowledge. Recommended starting points are '*[Intro to Playbook*s](http://docs.ansible.com/ansible/latest/playbooks_intro.html)' (NOTE:  http://docs.ansible.com/ansible/latest/playbooks_intro.html) and *'**[Intro to Inventorie*s](http://docs.ansible.com/ansible/latest/intro_inventory.html)*'* (NOTE:  http://docs.ansible.com/ansible/latest/intro_inventory.html) in the Ansible online documentation.
+Before proceeding, this section contains content with assumed Ansible knowledge. Recommended starting points are '*[Intro to Playbook*s](https://docs.ansible.com/ansible/latest/playbooks_intro.html)' (NOTE:  https://docs.ansible.com/ansible/latest/playbooks_intro.html) and *'**[Intro to Inventorie*s](https://docs.ansible.com/ansible/latest/intro_inventory.html)*'* (NOTE:  https://docs.ansible.com/ansible/latest/intro_inventory.html) in the Ansible online documentation.
 
 This project is implemented with the following features and their concepts are required to maintain the project:
 
-1. Roles ([http://docs.ansible.com/ansible/latest/playbooks_roles.html](http://docs.ansible.com/ansible/latest/playbooks_roles.html))
+1. Roles ([https://docs.ansible.com/ansible/latest/playbooks_roles.html](https://docs.ansible.com/ansible/latest/playbooks_roles.html))
 
-2. Tags ([http://docs.ansible.com/ansible/latest/playbooks_tags.html](http://docs.ansible.com/ansible/latest/playbooks_tags.html))
+2. Tags ([https://docs.ansible.com/ansible/latest/playbooks_tags.html](https://docs.ansible.com/ansible/latest/playbooks_tags.html))
 
-3. Variables ([http://docs.ansible.com/ansible/latest/playbooks_variables.html](http://docs.ansible.com/ansible/latest/playbooks_variables.html))
+3. Variables ([https://docs.ansible.com/ansible/latest/playbooks_variables.html](https://docs.ansible.com/ansible/latest/playbooks_variables.html))
 
-Additional topics on Ansible, can be found in the [online documentation](http://docs.ansible.com/ansible/latest/index.html).
+Additional topics on Ansible, can be found in the [online documentation](https://docs.ansible.com/ansible/latest/index.html).
 
 The aemdesign-deploy project is implemented using the standard Ansible layout. Anyone familiar with Ansible should also be familiar with this implementation layout.
 
@@ -325,7 +325,7 @@ The **_template_file_*** *build configuration files can be found in the project'
 
 3. Update the **_iso_url_*** variable *to path of the ISO:
 
-    3.1  from "iso_url": "http://ftp.swin.edu.au/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso",
+    3.1  from "iso_url": "https://ftp.swin.edu.au/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso",
 
     3.2. to "iso_url": "http/iso/your-iso-name.iso"
 

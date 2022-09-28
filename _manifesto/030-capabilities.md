@@ -16,7 +16,7 @@ Please note that images depicted in this section are from AEM6.
 
 ## Tags
 
-[Tags](http://docs.adobe.com/docs/en/cq/current/wcm/tag_admin.html) must be used to classify content within CMS. Tags structured in namespaces provide a flexible and extendable layer when designing [metadata](http://docs.adobe.com/docs/en/aem/6-0/administer/content/assets/metadata.html) for assets and content. The OOB components associated with Tags provide simple and effective authoring experience and should be used to drive Authoring Experience where Lists and Arbitrary Structures are required on dialogs. Management of Tags in AEM allows ability for the Business users to extend their content experience without needing to update code.
+[Tags](https://docs.adobe.com/docs/en/cq/current/wcm/tag_admin.html) must be used to classify content within CMS. Tags structured in namespaces provide a flexible and extendable layer when designing [metadata](https://docs.adobe.com/docs/en/aem/6-0/administer/content/assets/metadata.html) for assets and content. The OOB components associated with Tags provide simple and effective authoring experience and should be used to drive Authoring Experience where Lists and Arbitrary Structures are required on dialogs. Management of Tags in AEM allows ability for the Business users to extend their content experience without needing to update code.
 
 ![image alt text](/assets/images/manifesto/capabilities-tags.png)
 

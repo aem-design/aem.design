@@ -47,4 +47,4 @@ When using Landing pages in AEM a Design Importer mechanism can be used to impor
 
 ![image alt text](/assets/images/manifesto/content-design-importer.png)
 
-More Info :[ AEM Landing Pages](https://docs.adobe.com/docs/en/aem/6-3/author/personalization/campaigns/landingpages.html) and[ Extending and Configuring the Design Importer for Landing Pages](http://docs.adobe.com/docs/en/aem/6-3/administer/personalization/campaigns/extending-the-design-importer-for-landingpages.html)
+More Info :[ AEM Landing Pages](https://docs.adobe.com/docs/en/aem/6-3/author/personalization/campaigns/landingpages.html) and[ Extending and Configuring the Design Importer for Landing Pages](https://docs.adobe.com/docs/en/aem/6-3/administer/personalization/campaigns/extending-the-design-importer-for-landingpages.html)
