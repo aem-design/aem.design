@@ -36,7 +36,7 @@
 
 
 
-  <meta property="article:published_time" content="2022-09-28T21:04:50+10:00">
+  <meta property="article:published_time" content="2023-04-05T12:12:48+10:00">
 
 
 
@@ -422,7 +422,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Technical Conventions">
     <meta itemprop="description" content="Simple to understand, easy to follow.">
-    <meta itemprop="datePublished" content="2022-09-28T21:04:50+10:00">
+    <meta itemprop="datePublished" content="2023-04-05T12:12:48+10:00">
     <meta itemprop="dateModified" content="2022-09-28T20:37:16+10:00">
 
     <div class="page__inner-wrap">
@@ -492,23 +492,23 @@
 <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="p">{};</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nx">$</span><span class="p">;</span>
 
-<span class="p">;(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
+<span class="p">;(</span><span class="nf">function </span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
 
     <span class="dl">"</span><span class="s2">use strict</span><span class="dl">"</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">_version</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">0.1</span><span class="dl">"</span><span class="p">;</span>
 
-    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">_version</span><span class="p">;</span>
     <span class="p">};</span>
 
     <span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">HTTP</span><span class="p">;</span>
 
-    <span class="nx">$</span><span class="p">.</span><span class="nx">ajaxSetup</span><span class="p">({</span> <span class="c1">// necessary global modifications for ajax calls</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nf">ajaxSetup</span><span class="p">({</span> <span class="c1">// necessary global modifications for ajax calls</span>
         <span class="na">statusCode</span><span class="p">:</span> <span class="p">{</span>
             <span class="mi">403</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">getResponseHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">X-Reason</span><span class="dl">"</span><span class="p">)</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">Authentication Failed</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">if </span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nf">getResponseHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">X-Reason</span><span class="dl">"</span><span class="p">)</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">Authentication Failed</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
                     <span class="c1">// login session expired: redirect to login page</span>
-                    <span class="nx">http</span><span class="p">.</span><span class="nx">handleLoginRedirect</span><span class="p">();</span>
+                    <span class="nx">http</span><span class="p">.</span><span class="nf">handleLoginRedirect</span><span class="p">();</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -528,7 +528,7 @@
 <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span> <span class="o">||</span> <span class="p">{};</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">log</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">log</span> <span class="o">||</span> <span class="p">{};</span>
 
-<span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
+<span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
 
     <span class="c1">//"use strict";</span>
     <span class="kd">var</span> <span class="nx">_version</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">0.1</span><span class="dl">"</span><span class="p">;</span>
@@ -536,7 +536,7 @@
         <span class="na">enableLog</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">}</span>
 
-    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">_version</span><span class="p">;</span>
     <span class="p">};</span>
 
@@ -549,22 +549,22 @@
     <span class="p">}</span>
 
 
-    <span class="nx">ns</span><span class="p">.</span><span class="nx">log</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">log</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">console</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">location</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">href</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nf">if </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">console</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="nx">location</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">href</span><span class="dl">'</span><span class="p">);</span>
 
             <span class="kd">var</span> <span class="nx">traceStack</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">printStackTrace</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">function</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">traceStack</span> <span class="o">=</span> <span class="nx">printStackTrace</span><span class="p">();</span>
+            <span class="nf">if </span><span class="p">(</span><span class="k">typeof</span> <span class="nx">printStackTrace</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">function</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">traceStack</span> <span class="o">=</span> <span class="nf">printStackTrace</span><span class="p">();</span>
             <span class="p">}</span>
             <span class="kd">var</span> <span class="nx">debug</span> <span class="o">=</span> <span class="p">{</span>
                 <span class="dl">"</span><span class="s2">caller</span><span class="dl">"</span><span class="p">:</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">caller</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">traceStack</span><span class="dl">"</span><span class="p">:</span> <span class="nx">traceStack</span>
             <span class="p">};</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">enableLog</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="nx">url</span><span class="p">,</span><span class="nx">data</span><span class="p">,</span><span class="nx">debug</span><span class="p">]);</span>
+            <span class="nf">if </span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">enableLog</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">([</span><span class="nx">url</span><span class="p">,</span><span class="nx">data</span><span class="p">,</span><span class="nx">debug</span><span class="p">]);</span>
             <span class="p">}</span>
         <span class="p">}</span>
 
@@ -589,12 +589,12 @@ behaviour.js
 
 <span class="p">;(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">searchBox</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">[data-modules='Search']</span><span class="dl">"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nf">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">[data-modules='Search']</span><span class="dl">"</span><span class="p">).</span><span class="nf">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-            <span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-            <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading search box</span><span class="dl">"</span><span class="p">);</span>
-            <span class="nx">searchBox</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">base</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">base</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+            <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading search box</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">searchBox</span><span class="p">.</span><span class="nf">init</span><span class="p">(</span><span class="nx">base</span><span class="p">);</span>
 
         <span class="p">});</span>
     <span class="p">});</span>
@@ -611,12 +611,12 @@ behaviour.js
 <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span> <span class="o">||</span> <span class="p">{};</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">searchBox</span> <span class="o">=</span> <span class="nx">AEMDESIGN</span><span class="p">.</span><span class="nx">components</span><span class="p">.</span><span class="nx">searchBox</span> <span class="o">||</span> <span class="p">{};</span>
 
-<span class="p">;(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
+<span class="p">;(</span><span class="nf">function </span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ko</span><span class="p">,</span> <span class="nx">ns</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//add additional dependencies</span>
 
     <span class="dl">"</span><span class="s2">use strict</span><span class="dl">"</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">_version</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">0.1</span><span class="dl">"</span><span class="p">;</span>
 
-    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">_version</span><span class="p">;</span>
     <span class="p">};</span>
 
@@ -672,26 +672,26 @@ behaviour.js
 
 <p>location: <code class="language-plaintext highlighter-rouge">/apps/aemdesign/content/image/clientslibs/js/functions.js</code></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">div[data-picture]</span><span class="dl">"</span><span class="p">,</span> <span class="nx">context</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">div[data-picture]</span><span class="dl">"</span><span class="p">,</span> <span class="nx">context</span><span class="p">).</span><span class="nf">each</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">currentPicture</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">matches</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">div[data-media]</span><span class="dl">"</span><span class="p">,</span> <span class="nx">currentPicture</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">media</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-media</span><span class="dl">"</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">media</span> <span class="o">||</span> <span class="p">(</span> <span class="nx">w</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">&amp;&amp;</span> <span class="nx">w</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="nx">media</span><span class="p">).</span><span class="nx">matches</span> <span class="p">))</span> <span class="p">{</span>
-            <span class="nx">matches</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">div[data-media]</span><span class="dl">"</span><span class="p">,</span> <span class="nx">currentPicture</span><span class="p">).</span><span class="nf">each</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">media</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-media</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nx">media</span> <span class="o">||</span> <span class="p">(</span> <span class="nx">w</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">&amp;&amp;</span> <span class="nx">w</span><span class="p">.</span><span class="nf">matchMedia</span><span class="p">(</span><span class="nx">media</span><span class="p">).</span><span class="nx">matches</span> <span class="p">))</span> <span class="p">{</span>
+            <span class="nx">matches</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">});</span>
 
-    <span class="kd">var</span> <span class="nx">$picImg</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">img</span><span class="dl">"</span><span class="p">,</span> <span class="nx">currentPicture</span><span class="p">).</span><span class="nx">first</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">$picImg</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">img</span><span class="dl">"</span><span class="p">,</span> <span class="nx">currentPicture</span><span class="p">).</span><span class="nf">first</span><span class="p">();</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">$picImg</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">$currentPicture</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">currentPicture</span><span class="p">);</span>
-            <span class="nx">$picImg</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">&lt;img /&gt;</span><span class="dl">"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">alt</span><span class="dl">"</span><span class="p">,</span> <span class="nx">$currentPicture</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-alt</span><span class="dl">"</span><span class="p">)).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">$currentPicture</span><span class="p">);</span>
+    <span class="nf">if </span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">if </span><span class="p">(</span><span class="nx">$picImg</span><span class="p">.</span><span class="nf">size</span><span class="p">()</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">$currentPicture</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="nx">currentPicture</span><span class="p">);</span>
+            <span class="nx">$picImg</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">&lt;img /&gt;</span><span class="dl">"</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">alt</span><span class="dl">"</span><span class="p">,</span> <span class="nx">$currentPicture</span><span class="p">.</span><span class="nf">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-alt</span><span class="dl">"</span><span class="p">)).</span><span class="nf">appendTo</span><span class="p">(</span><span class="nx">$currentPicture</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="nx">$picImg</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">matches</span><span class="p">.</span><span class="nx">pop</span><span class="p">().</span><span class="nx">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-src</span><span class="dl">"</span><span class="p">));</span>
+        <span class="nx">$picImg</span><span class="p">.</span><span class="nf">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">matches</span><span class="p">.</span><span class="nf">pop</span><span class="p">().</span><span class="nf">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-src</span><span class="dl">"</span><span class="p">));</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">$picImg</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="nx">$picImg</span><span class="p">.</span><span class="nf">remove</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">});</span>
 </code></pre></div></div>
@@ -765,6 +765,46 @@ behaviour.js
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Docker Dispatcher SDK 🔧💪😎👍
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Test your AEM SaaS Dispatcher like a pro!
+</p>
+  </article>
+</div>
+
         
           
 
@@ -886,46 +926,6 @@ behaviour.js
 </div>
 
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/blog/2022/02/06/goodbye-centos" rel="permalink">Goodbye Centos
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">You were great while the free ride lasted!
-</p>
-  </article>
-</div>
-
-        
       </div>
     </div>
   
@@ -982,7 +982,7 @@ behaviour.js
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2022 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2023 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

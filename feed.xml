@@ -1,4 +1,224 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2022-09-28T21:04:50+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">WebSight CMS Exclusive Preview</title><link href="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview" rel="alternate" type="text/html" title="WebSight CMS Exclusive Preview" /><published>2022-09-27T00:00:00+10:00</published><updated>2022-09-28T20:49:53+10:00</updated><id>https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview</id><content type="html" xml:base="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2023-04-05T12:12:48+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Dispatcher SDK 🔧💪😎👍</title><link href="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Docker Dispatcher SDK 🔧💪😎👍" /><published>2023-04-05T00:37:00+10:00</published><updated>2023-04-05T12:11:15+10:00</updated><id>https://aem.design/blog/2023/04/05/docker-dispatcher-sdk</id><content type="html" xml:base="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D"><![CDATA[<p>This article is a follow up to series of articles on docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>.</p>
+
+<p>Now that we have a solid foundation on how to build and test docker containers we can move on to the next step and that is to build a docker container that will allow us to test our AEM Dispatcher configuration.</p>
+
+<h2 id="dispatcher-sdk">Dispatcher SDK</h2>
+
+<p>Dispatcher SDK is shipped by Adobe though <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/dispatcher-sdk.html?lang=en#overview">Adobe Experience Manager as a Cloud Service SDK</a> and it is a docker container that allows you to test your dispatcher configuration.</p>
+
+<p>The only non-starter with this container is that it is not available on docker hub and you need to build it yourself manually 👎💩.</p>
+
+<p>Running a container to test your dispatcher configuration must be as simple as running following command:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">-it</span><span class="w"> </span><span class="nt">--rm</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nv">${PWD}</span><span class="nx">/dispatcher/src:/mnt/dev/src</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">dispatcher</span><span class="w"> </span><span class="nt">-p</span><span class="w"> </span><span class="nx">8080:80</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="nx">AEM_PORT</span><span class="o">=</span><span class="mi">4503</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="n">AEM_HOST</span><span class="o">=</span><span class="n">host.docker.internal</span><span class="w"> </span><span class="nx">aemdesign/dispatcher-sdk</span><span class="w">
+</span></code></pre></div></div>
+
+<p>or on Linux</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="nt">-v</span> <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/dispatcher/src:/mnt/dev/src <span class="nt">--name</span> dispatcher <span class="nt">-p</span> 8080:80 <span class="nt">-e</span> <span class="nv">AEM_PORT</span><span class="o">=</span>4503 <span class="nt">-e</span> <span class="nv">AEM_HOST</span><span class="o">=</span>host.docker.internal aemdesign/dispatcher-sdk
+</code></pre></div></div>
+
+<p>This will map source from your dispatcher configuration to the container and start the container. Additionally it will expose port 8080 on your host machine and map it to port 80 on the container. Furthermore in the console output you will output of the validation of your dispatcher configuration. This is critical to make sure that your dispatcher configuration is valid and will work as expected once you push this to Adobe Cloud Manager. This dispatcher image has debug set to trace so you will see all the details of how your dispatcher rule apply.</p>
+
+<p>You can checkout the source for this container here <a href="https://github.com/aem-design/docker-dispatcher-sdk">aem-design/docker-dispatcher-sdk</a>. Feel free to contribute to this project.</p>
+
+<h2 id="integrating-with-aem">Integrating with AEM</h2>
+
+<p>To integrate this with AEM you need to make sure that you have a dispatcher configuration that is valid and that you can run it locally. Once you have that you can use the following docker-compose file to start your AEM instance and the dispatcher SDK.</p>
+
+<p>This is should be your typical AEM docker-compose file with the addition of the dispatcher SDK container. This allows your team to use same configuration for local development and testing. This will also allow testing of SSL configurations and other dispatcher configurations that are not possible to test locally universaly across all type of OS. This allows you to test same way on all OS’s.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.9"</span>
+
+<span class="na">services</span><span class="pi">:</span>
+
+  <span class="na">author</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">aemdesign/aem:sdk-2023.3.11382</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">author</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">curl -u admin:admin --header Referer:localhost --silent --connect-timeout 5 --max-time 5 http://localhost:8080/system/console/bundles.json | grep -q \"state\":\"Installed\" &amp;&amp; exit 1 || exit </span><span class="m">0</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">1s</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">4502:8080</span>
+      <span class="pi">-</span> <span class="s">30303:58242</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,localdev,nosamplecontent</span>
+      <span class="pi">-</span> <span class="s">AEM_JVM_OPTS=-server -Xms248m -Xmx4524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:58242</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-data:/aem/crx-quickstart/repository</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontened to match the last. otherwise it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.author.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`author.localhost`)"</span>
+      <span class="na">traefik.http.routers.author.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.author_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`author.localhost`)"</span>
+      <span class="na">traefik.http.routers.author_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.author_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.author.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-network</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+
+  <span class="na">publish</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">aemdesign/aem:sdk-2023.3.11382</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">publish</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">curl -u admin:admin --header Referer:localhost --silent --connect-timeout 5 --max-time 5 http://localhost:8080/system/console/bundles.json | grep -q \"state\":\"Installed\" &amp;&amp; exit 1 || exit </span><span class="m">0</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">30s</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">4503:8080</span>
+      <span class="pi">-</span> <span class="s">30304:58242</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,localdev,nosamplecontent</span>
+      <span class="pi">-</span> <span class="s">AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:58242</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontend to match the last. otherwise, it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.publish.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`publish.localhost`)"</span>
+      <span class="na">traefik.http.routers.publish.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.publish_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`publish.localhost`)"</span>
+      <span class="na">traefik.http.routers.publish_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.publish_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.publish.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-data:/aem/crx-quickstart/repository</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+
+  <span class="na">dispatcher</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">aemdesign/dispatcher-sdk</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">dispatcher</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">8081:80</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">AEM_PORT=4503</span>
+      <span class="pi">-</span> <span class="s">AEM_HOST=host.docker.internal</span>
+      <span class="pi">-</span> <span class="s">DISP_LOG_LEVEL=trace1</span> <span class="c1">#debug</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontend to match the last. otherwise, it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dispatcher.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`dispatcher.localhost`)"</span>
+      <span class="na">traefik.http.routers.dispatcher.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.dispatcher_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`dispatcher.localhost`)"</span>
+      <span class="na">traefik.http.routers.dispatcher_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dispatcher_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.dispatcher.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./dispatcher/src/:/mnt/dev/src/</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+
+  <span class="c1"># b -(https)-&gt; t(cert) -(http)-&gt; d -(http)-&gt; p</span>
+  <span class="na">traefik</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">traefik</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ=Australia/Sydney</span>
+    <span class="na">security_opt</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">no-new-privileges:true</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s2">"</span><span class="s">always"</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--log.level=ERROR"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--accesslog=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.insecure=true"</span> <span class="c1"># Don't do that in production!</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.dashboard=true"</span> <span class="c1"># Don't do that in production!</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker.exposedbydefault=false"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--global.sendAnonymousUsage=true"</span>
+
+
+      <span class="c1"># Entrypoints for HTTP, HTTPS, and NX (TCP + UDP)</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.address=:80"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.address=:443"</span>
+
+      <span class="c1"># Manual keys</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.file.directory=/etc/traefik/dynamic_conf"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.file.watch=true"</span>
+
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dashboard.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`traefik.localhost`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(PathPrefix(`/api`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">PathPrefix(`/dashboard`))"</span>
+      <span class="na">traefik.http.routers.dashboard.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.routers.dashboard.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dashboard.service</span><span class="pi">:</span> <span class="s">api@internal</span>
+
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">80:80"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">443:443"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:8080"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock:ro</span>
+      <span class="c1"># Persist certificates, so we can restart as often as needed</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/certs:/letsencrypt</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/config/dynamic:/etc/traefik/dynamic_conf/conf.yml:ro</span>
+
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="na">createcert</span><span class="pi">:</span>
+        <span class="na">condition</span><span class="pi">:</span> <span class="s">service_completed_successfully</span>
+
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-network</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+
+  <span class="na">createcert</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">aemdesign/mkcert:latest</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ=Australia/Sydney</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">test</span><span class="nv"> </span><span class="s">-f</span><span class="nv"> </span><span class="s">mkcert.key</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">exit</span><span class="nv"> </span><span class="s">0;</span><span class="nv"> </span><span class="s">mkcert</span><span class="nv"> </span><span class="s">-install</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">mkcert</span><span class="nv"> </span><span class="s">-key-file</span><span class="nv"> </span><span class="s">mkcert.key</span><span class="nv"> </span><span class="s">-cert-file</span><span class="nv"> </span><span class="s">mkcert.pem</span><span class="nv"> </span><span class="s">-client</span><span class="nv"> </span><span class="s">author.localhost</span><span class="nv"> </span><span class="s">publish.localhost</span><span class="nv"> </span><span class="s">dispatcher.localhost</span><span class="nv"> </span><span class="s">localhost</span><span class="nv"> </span><span class="s">127.0.0.1</span><span class="nv"> </span><span class="s">::1</span><span class="nv"> </span><span class="s">aem-local.peppermoney.com.au</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">openssl</span><span class="nv"> </span><span class="s">pkcs12</span><span class="nv"> </span><span class="s">-export</span><span class="nv"> </span><span class="s">-out</span><span class="nv"> </span><span class="s">mkcert.pfx</span><span class="nv"> </span><span class="s">-in</span><span class="nv"> </span><span class="s">mkcert.pem</span><span class="nv"> </span><span class="s">-inkey</span><span class="nv"> </span><span class="s">mkcert.key</span><span class="nv"> </span><span class="s">-certfile</span><span class="nv"> </span><span class="s">rootCA.pem</span><span class="nv"> </span><span class="s">-passout</span><span class="nv"> </span><span class="s">pass:123"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/certs:/certs</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">default</span><span class="pi">:</span>
+  <span class="na">internal</span><span class="pi">:</span>
+  <span class="na">author-network</span><span class="pi">:</span>
+  <span class="na">publish-network</span><span class="pi">:</span>
+  <span class="na">dispatcher-network</span><span class="pi">:</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">author-data</span><span class="pi">:</span>
+  <span class="na">publish-data</span><span class="pi">:</span>
+  <span class="na">dispatcher-data</span><span class="pi">:</span>
+</code></pre></div></div>
+
+<p>This will create the following containers:</p>
+
+<ul>
+  <li>author - author instance available on port 4502, <a href="http://author.localhost">http://author.localhost</a> and <a href="https://author.localhost">https://author.localhost</a></li>
+  <li>publish - publish instance available on port 4503, <a href="http://publish.localhost">http://publish.localhost</a> and <a href="https://publish.localhost">https://publish.localhost</a></li>
+  <li>dispatcher - dispatcher instance available on port 8081, <a href="http://dispatcher.localhost">http://dispatcher.localhost</a> and <a href="https://dispatcher.localhost">https://dispatcher.localhost</a></li>
+  <li>traefik - traefik dashboard available on port 8080 and <a href="http://traefik.localhost:8080/dashboard/#/">http://traefik.localhost:8080/dashboard/#/</a></li>
+  <li>createcert - creates the certificates for the traefik instance this provides all of the SSL certificates for the other containers</li>
+</ul>
+
+<p>Hope this helps.</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="wsl" /><category term="windows" /><summary type="html"><![CDATA[Test your AEM SaaS Dispatcher like a pro!]]></summary></entry><entry><title type="html">WebSight CMS Exclusive Preview</title><link href="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview" rel="alternate" type="text/html" title="WebSight CMS Exclusive Preview" /><published>2022-09-27T00:00:00+10:00</published><updated>2022-09-28T20:49:53+10:00</updated><id>https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview</id><content type="html" xml:base="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>It is always a pleasure to be part of something new and upcoming. So when I was invited to be part of an exclusive preview of a soon-to-be-released open source <a href="https://www.websight.io/">WebSight CMS</a>, I could not resist.</p>
 
@@ -1091,78 +1311,4 @@ You should see “Replication test succeeded”</p>
 
 <p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design">https://github.com/aem-design</a>.</p>
 
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!]]></summary></entry><entry><title type="html">Automation Testing For AEM Dialogs</title><link href="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs" rel="alternate" type="text/html" title="Automation Testing For AEM Dialogs" /><published>2021-01-21T00:37:00+11:00</published><updated>2021-04-27T02:36:37+10:00</updated><id>https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs</id><content type="html" xml:base="https://aem.design/blog/2021/01/21/automation-testing-for-aem-dialogs"><![CDATA[<p>Automation testing is an absolute mandatory and covered in <a href="/blog/2017/06/28/automation-testing">Automation Testing and Human Reporting</a> and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.</p>
-
-<p>Over the last few years, AEM Automation Testing for AEM Dialog has been getting more focus, and I have been asked by many how to do this easily. The current approach leverages existing AEM Editor experience to view and load dialogs so that they can be tested. One of the improvements that have been asked can that be made faster so that actual pages do not require loading, so that spec execution speed improves.</p>
-
-<p>AEM being a gem of capabilities has this covered, and with little effort, we can leverage this to really create powerful specs that test component dialogues as a user would use them. The key to this is understanding how AEM loads component dialogs and the data they represent. Fortunately this pattern very simple using sling.</p>
-
-<ul>
-  <li>First you need a path to a dialog (<code class="language-plaintext highlighter-rouge">/apps/aemdesign/components/details/generic-details/v1/generic-details/_cq_dialog.html</code>) this path is a component that takes as a parameter as a path to the component dialog should show and update.</li>
-  <li>Second you need a content path (<code class="language-plaintext highlighter-rouge">/content/aemdesign-showcase/au/en/component/details/generic-details/jcr:content/article/par/contentblock7/par/genericdetails</code>) which dialog should update. This is simply any path that dialog will use for reading and wirting.</li>
-  <li>Third you combine these into a url you can use for automation <code class="language-plaintext highlighter-rouge">http://localhost:4512/mnt/override/apps/aemdesign/components/details/generic-details/v1/generic-details/_cq_dialog.html/content/aemdesign-showcase/au/en/component/details/generic-details/jcr:content/article/par/contentblock7/par/genericdetails</code></li>
-</ul>
-
-<p>And that’s it! Now you can write any tests around this URL. Taking this knowledge a spec can be updated to allow testing AEM Dialog with ease and without loading whole pages!</p>
-
-<p>Here is a reference AEM component dialog spec that tests of the tabs that appear on the component have the right content appearing. This is done simply by taking a screenshot of the dialog’s page.</p>
-
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">specs.component.details.genericdetails</span>
-
-<span class="kn">import</span> <span class="nn">spock.lang.Stepwise</span>
-<span class="kn">import</span> <span class="nn">support.AuthorDialogSpec</span>
-
-<span class="nd">@Stepwise</span>
-<span class="kd">class</span> <span class="nc">GenericDetailsAuthorDialogSpec</span> <span class="kd">extends</span> <span class="n">AuthorDialogSpec</span> <span class="o">{</span>
-
-    <span class="n">String</span> <span class="n">pathPage</span> <span class="o">=</span> <span class="s2">"components/details"</span>
-    <span class="n">String</span> <span class="n">pathSite</span> <span class="o">=</span> <span class="s2">"mnt/override/apps/aemdesign"</span>
-    <span class="n">String</span> <span class="n">language</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="n">String</span> <span class="n">componentPath</span> <span class="o">=</span> <span class="s2">"generic-details/v1/generic-details/_cq_dialog"</span>
-    <span class="n">String</span> <span class="n">pageExtensionSuffix</span> <span class="o">=</span> <span class="s2">"/content/aemdesign-showcase/au/en/component/details/generic-details/jcr:content/article/par/contentblock7/par/genericdetails"</span>
-
-    <span class="kt">def</span> <span class="nf">setupSpec</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">loginAsAdmin</span><span class="o">()</span>
-    <span class="o">}</span>
-
-    <span class="kt">def</span> <span class="nf">cleanupSpec</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">analyzeLog</span><span class="o">()</span>
-    <span class="o">}</span>
-
-    <span class="kt">def</span> <span class="s2">"Dialog of Component with Content"</span><span class="o">()</span> <span class="o">{</span>
-
-        <span class="nl">given:</span> <span class="s2">"Component dialog exist"</span>
-        <span class="kt">def</span> <span class="n">selector</span> <span class="o">=</span> <span class="s2">"coral-dialog"</span>
-
-        <span class="nl">when:</span> <span class="s2">"I open dialog with content"</span>
-        <span class="n">go</span> <span class="s2">"/${pathSite}/${pathPage}/${componentPath}${pageExtension}${pageExtensionSuffix}"</span>
-
-        <span class="nl">then:</span> <span class="s2">"The component dialog should render"</span>
-        <span class="n">waitFor</span> <span class="o">{</span> <span class="n">$</span><span class="o">(</span><span class="n">selector</span><span class="o">)</span> <span class="o">}</span>
-
-        <span class="nl">and:</span> <span class="s2">"Dialog should be able to open"</span>
-        <span class="n">showDialogDirect</span><span class="o">()</span>
-        <span class="n">report</span><span class="o">(</span><span class="s2">"Dialog should be able to open"</span><span class="o">)</span>
-
-        <span class="nl">when:</span> <span class="s2">"When I select Layout tab"</span>
-        <span class="n">selectDialogTab</span><span class="o">(</span><span class="s2">"Layout"</span><span class="o">)</span>
-        <span class="n">waitFor</span> <span class="o">{</span> <span class="n">tabSelected</span><span class="o">(</span><span class="s2">"Layout"</span><span class="o">)</span> <span class="o">}</span>
-        <span class="n">report</span><span class="o">(</span><span class="s2">"Layout tab selected"</span><span class="o">)</span>
-
-        <span class="nl">then:</span> <span class="s2">"Then it should have the Custom Layout options selected and matching configuration options"</span>
-        <span class="n">designRefFull</span><span class="o">(</span><span class="n">selector</span><span class="o">,</span> <span class="s2">"tab-layout"</span><span class="o">)</span>
-
-        <span class="nl">where:</span>
-        <span class="n">viewport</span> <span class="o">&lt;&lt;</span> <span class="n">getDialogViewPort</span><span class="o">()</span>
-
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Once you run this spec you will get an excellent report that will help you determine if the dialog works as you expected it.</p>
-
-<p><img src="/assets/images/automation-testing/dialog-test/generic-details-author-dialog.png" alt="Automation Testing Report - Generic Details" /></p>
-
-<p>As you can see this pattern will allow you to test AEM Dialogs especially if you are into making customised controls, if you are stuck, look at some examples in <a href="https://github.com/aem-design/aemdesign-aem-support/blob/clean-up-compose-project/aemdesign-testing/src/test/groovy/specs/component/details/genericdetails/GenericDetailsAuthorDialogSpec.groovy">GenericDetailsAuthorDialogSpec.groovy</a>.</p>
-
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="testing" /><category term="automation-testing" /><summary type="html"><![CDATA[Automation testing is an absolute mandatory and covered in Automation Testing and Human Reporting and demonstrates a viable, usable AEM Automated Testing approach and does not make the automated testing suite a development only agenda.]]></summary></entry></feed>
+<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!]]></summary></entry></feed>
