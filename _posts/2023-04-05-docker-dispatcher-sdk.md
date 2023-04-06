@@ -208,7 +208,7 @@ services:
     environment:
       - TZ=Australia/Sydney
     command:
-      - "test -f mkcert.key && exit 0; mkcert -install && mkcert -key-file mkcert.key -cert-file mkcert.pem -client author.localhost publish.localhost dispatcher.localhost localhost 127.0.0.1 ::1 aem-local.peppermoney.com.au && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123"
+      - "test -f mkcert.key && exit 0; mkcert -install && mkcert -key-file mkcert.key -cert-file mkcert.pem -client author.localhost publish.localhost dispatcher.localhost localhost 127.0.0.1 ::1 local.aem.design && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123"
     volumes:
       - ./services/traefik/certs:/certs
 
