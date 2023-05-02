@@ -11,7 +11,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
     :verbose => true,
     :internal_domains => ["localhost:8100","localhost:8111", "localhost"],
     :root_dir => "_site",
-    :ignore_urls => [
+    :url_ignore => [
       /#data=/,
       /localhost/,
       /192.168/,
