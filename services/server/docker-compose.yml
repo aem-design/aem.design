@@ -22,6 +22,7 @@ services:
       - SERVER_PORT=${SERVER_PORT}
       - SERVER_URL=${SERVER_URL}
       - SITE_LOGO=${SITE_LOGO}
+      - LANG=en_US.UTF-8
     command: bash -c "envsubst < _config.txt > _configenv.yml && npm install -g sass && bundle update && bundler install && jekyll serve --config _config.yml,_configenv.yml --watch --force-polling --force_polling --incremental --future --profile --trace --verbose --host 0.0.0.0 --port ${SERVER_PORT} --livereload --livereload_port ${SERVER_LIVERELOAD_PORT}"
     labels:
       traefik.frontend.priority: 1
