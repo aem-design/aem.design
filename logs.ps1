@@ -21,7 +21,7 @@ $PLATFORM=$PSVersionTable.Platform
 $CONFIG_ENV = (Get-Content ".env" -Raw | ConvertFrom-StringData)
 $PORT=$CONFIG_ENV.TRAEFIK_HTTP_PORT
 
-$DOCKER_COMMAND="docker-compose --env-file .env --file docker-compose.yml --file ${SERVICES} up -d ${SERVICE_NAME}"
+$DOCKER_COMMAND="docker-compose --env-file .env --file docker-compose.yml --file ${SERVICES} logs -f ${SERVICE_NAME}"
 
 if ( [string]::IsNullOrEmpty(${SERVICE_NAME}) ) {
 
