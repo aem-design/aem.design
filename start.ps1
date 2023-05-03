@@ -31,6 +31,8 @@ if ( [string]::IsNullOrEmpty(${SERVICE_NAME}) ) {
     $OPEN_COMMAND="explorer"
   }
 
+  Start-Sleep 10
+  
   printSubSectionStart "Open Console at $HOST_URL"
 
   Invoke-Expression "${OPEN_COMMAND} ${HOST_URL}"

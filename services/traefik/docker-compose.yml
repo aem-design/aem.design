@@ -47,11 +47,15 @@ services:
     labels:
       traefik.frontend.priority: 1
       traefik.enable: true
-      traefik.http.routers.dashboard.rule: "Host(`${TRAEFIK_HOST}`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))"
-      traefik.http.routers.dashboard.entrypoints: websecure
-      traefik.http.routers.dashboard.tls: true
-      traefik.http.routers.dashboard.service: api@internal
-      # traefik.http.services.traefik.loadbalancer.passHostHeader: true
+      traefik.http.routers.traefikdashboard.rule: "Host(`${TRAEFIK_HOST}`) && ( PathPrefix(`/api`) || PathPrefix(`/dashboard`) )"
+      traefik.http.routers.traefikdashboard.entrypoints: web
+      traefik.http.routers.traefikdashboard.service: api@internal
+      traefik.http.routers.traefikdashboard_https.rule: "Host(`${TRAEFIK_HOST}`) && ( PathPrefix(`/api`) || PathPrefix(`/dashboard`) )"
+      traefik.http.routers.traefikdashboard_https.entrypoints: websecure
+      traefik.http.routers.traefikdashboard_https.tls: true
+      traefik.http.routers.traefikdashboard_https.service: api@internal
+      traefik.http.services.traefikdashboard.loadbalancer.server.port: 8080
+      traefik.http.services.traefikdashboard.loadbalancer.passHostHeader: true
 
 
       # # Global Redirect HTTP to HTTPS
@@ -64,41 +68,20 @@ services:
       - TZ=${GLOBAL_TZ}
     depends_on:
       - "createcert"
-      - "createcertpkcs12"
     networks:
       internal:
         aliases:
           - ${TRAEFIK_SUBDOMAIN_NAME}
           - ${TRAEFIK_SUBDOMAIN_NAME}.${DOMAIN_NAME}
 
-  # will only do this when files are not there
   createcert:
-    image: brunopadz/mkcert-docker:1.0
-    working_dir: /root/.local/share/mkcert
-    command:
-      - /bin/sh
-      - -c
-      - "test ! -f mkcert.key && mkcert -install && mkcert -key-file mkcert.key -cert-file mkcert.pem -client ${TRAEFIK_CERT_DOMAINS}"
-    volumes:
-      - ${TRAEFIK_CERTIFICATE_PATH}:/root/.local/share/mkcert
+    image: ${CERTS_IMAGE}
     environment:
       - TZ=${GLOBAL_TZ}
-
-  # will only do this when files are not there
-  createcertpkcs12:
-    image: frapsoft/openssl
-    working_dir: /export
-    entrypoint: ""
     command:
-      - /bin/ash
-      - -c
-      - "sleep 10 && test ! -f mkcert.pfx && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:${TRAEFIK_CERT_KEYPASS}"
+      - "${CERTS_COMMAND}"
     volumes:
-      - ${TRAEFIK_CERTIFICATE_PATH}:/export
-    depends_on:
-      - "createcert"
-    environment:
-      - TZ=${GLOBAL_TZ}
+      - ${TRAEFIK_CERTIFICATE_PATH}:/certs
 
 networks:
   internal:

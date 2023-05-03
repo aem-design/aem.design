@@ -11,10 +11,16 @@ Jekyll::Hooks.register :site, :post_write do |site|
     :verbose => true,
     :internal_domains => ["localhost:8100","localhost:8111", "localhost"],
     :root_dir => "_site",
-    :url_ignore => [
+    :ignore_urls => [
       /#data=/,
       /localhost/,
+      /localhost:4502/,
+      /localhost:4503/,
+      /author.localhost/,
+      /publish.localhost/,
+      /0.0.0.0/,
       /192.168/,
+      /\/manifesto\//
     ],
     :extension => ".html",
     :log_level => :debug,

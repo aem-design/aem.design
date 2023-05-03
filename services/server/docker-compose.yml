@@ -27,15 +27,15 @@ services:
     labels:
       traefik.frontend.priority: 1
       traefik.enable: true
-      traefik.http.routers.gvfn.rule: "Host(`${SERVER_HOST}`)"
-      traefik.http.routers.gvfn.entrypoints: web
-      traefik.http.routers.gvfn_https.rule: "Host(`${SERVER_HOST}`)"
-      traefik.http.routers.gvfn_https.tls: true
-      traefik.http.routers.gvfn_https.entrypoints: websecure
-      traefik.http.services.gvfn.loadbalancer.passHostHeader: true
-      traefik.http.services.gvfn.loadbalancer.server.port: ${SERVER_PORT}
+      traefik.http.routers.aemdesign.rule: "Host(`${SERVER_HOST}`)"
+      traefik.http.routers.aemdesign.entrypoints: web
+      traefik.http.routers.aemdesign_https.rule: "Host(`${SERVER_HOST}`)"
+      traefik.http.routers.aemdesign_https.tls: true
+      traefik.http.routers.aemdesign_https.entrypoints: websecure
+      traefik.http.services.aemdesign.loadbalancer.passHostHeader: true
+      traefik.http.services.aemdesign.loadbalancer.server.port: ${SERVER_PORT}
     volumes:
-      - ${SERVER_CONTENT_PATH}:/srv/jekyll
+      - ${SERVER_CONTENT_PATH}:/srv/jekyll:rw
     ports:
       - ${SERVER_LIVERELOAD_PORT}:${SERVER_LIVERELOAD_PORT}
     networks:
@@ -53,13 +53,13 @@ services:
   #   labels:
   #     traefik.frontend.priority: 1
   #     traefik.enable: true
-  #     traefik.http.routers.gvfn.rule: "Host(`${SERVER_HOST}`)"
-  #     traefik.http.routers.gvfn.entrypoints: web
-  #     traefik.http.routers.gvfn_https.rule: "Host(`${SERVER_HOST}`)"
-  #     traefik.http.routers.gvfn_https.tls: true
-  #     traefik.http.routers.gvfn_https.entrypoints: websecure
-  #     traefik.http.services.gvfn.loadbalancer.passHostHeader: true
-  #     traefik.http.services.gvfn.loadbalancer.server.port: 4000
+  #     traefik.http.routers.aemdesign.rule: "Host(`${SERVER_HOST}`)"
+  #     traefik.http.routers.aemdesign.entrypoints: web
+  #     traefik.http.routers.aemdesign_https.rule: "Host(`${SERVER_HOST}`)"
+  #     traefik.http.routers.aemdesign_https.tls: true
+  #     traefik.http.routers.aemdesign_https.entrypoints: websecure
+  #     traefik.http.services.aemdesign.loadbalancer.passHostHeader: true
+  #     traefik.http.services.aemdesign.loadbalancer.server.port: 4000
   #   environment:
   #     - LANG=en_US.UTF-8
   #     - PORT=4000

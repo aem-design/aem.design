@@ -29,6 +29,7 @@ fi
 # install ruby-devel
 apt-get install -y ruby-dev
 
+gem install sass-embedded -v 1.62.1
 gem install i18n jekyll bundler jemoji nokogiri -n /usr/local/bin
 
 bundle install
