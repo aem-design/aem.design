@@ -16,6 +16,8 @@ tags:
   - windows
 redirect_from:
   - /blog/2023/05/03/aem-saas-like-a-champion
+header:
+  overlay_image: /assets/images/aem-saas-like-a-champion/dashboard.png
 ---
 
 {% include toc_sticky.html %}
@@ -503,7 +505,7 @@ This guide is not focused on how to use the Jekyll site generator works, as you 
 
 You will also find that this dashboard pattern is implemented in this repo. Here is a screenshot of the dashboard page for this repo.
 
-![Dashboard](/assets/images/aem-saas-like-a-champion/dashboard.png)
+![Dashboard](/assets/images/aem-saas-like-a-champion/dashboard2.png)
 
 So you can copy and apply this pattern to your other projects as well.
 
