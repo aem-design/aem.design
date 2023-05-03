@@ -1,0 +1,1330 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>AEM SaaS Like a Champion ❤️🏆🚀 - AEM.Design</title>
+<meta name="description" content="Setup your AEM SaaS project like a champion with docker and docker-compose.">
+
+
+  <meta name="author" content="Max Barrass">
+  
+  <meta property="article:author" content="Max Barrass">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_AU">
+<meta property="og:site_name" content="AEM.Design">
+<meta property="og:title" content="AEM SaaS Like a Champion ❤️🏆🚀">
+<meta property="og:url" content="https://aem.design/blog/2023/05/03/aem-saas-like-a-champion">
+
+
+  <meta property="og:description" content="Setup your AEM SaaS project like a champion with docker and docker-compose.">
+
+
+
+  <meta property="og:image" content="https://aem.design/assets/images/screenshots/homepage-small.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-05T00:37:00+10:00">
+
+
+
+  <meta property="article:modified_time" content="2023-05-03T15:54:38+10:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://aem.design/blog/2023/05/03/aem-saas-like-a-champion">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Organization",
+      "url": "https://aem.design/",
+      "logo": "https://aem.design/assets/images/screenshots/homepage-small.png"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+  
+    <script src="/assets/scripts/lightbox.js"></script>
+  
+    <script src="/assets/scripts/code-copy.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:image" content="https://aem.design/assets/images/screenshots/homepage-small.png">
+
+
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  
+    <link rel="stylesheet" href="/assets/styles/head.css">
+  
+    <link rel="stylesheet" href="/assets/styles/tiny-slider.css">
+  
+    <link rel="stylesheet" href="/assets/styles/code-copy.css">
+  
+
+
+<!-- adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6707033742178132"
+     crossorigin="anonymous"></script>
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-logo" href="/"><img src="/assets/images/logo/aem-design2.png" alt="site logo"></a>
+        
+        <a class="site-title" href="/"><span class="title">AEM.Design</span>
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a target="" href="https://github.com/aem-design">GitHub</a>
+            </li><li class="masthead__menu-item">
+              <a target="_blank" href="https://gitter.im/aem-design/Lobby">Chat</a>
+            </li><li class="masthead__menu-item">
+              <a target="" href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a target="" href="/quick-start-guide/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a target="" href="/manifesto/">Manifesto</a>
+            </li><li class="masthead__menu-item">
+              <a target="" href="/manual/">Manual</a>
+            </li><li class="masthead__menu-item">
+              <a target="" href="/archives/">Archives</a>
+            </li><li class="masthead__menu-item">
+              <a target="" href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<style>
+#site-nav .site-title {
+  width: 150px;
+  line-height: 1em;
+  border-left: 4px rgba(255,179,107) solid;
+  padding-left: .5em;
+  font-style: italic;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+#site-nav .site-title .site-subtitle {
+  display: none;
+}
+</style>
+
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/maxbarrass4.jpg" alt="Max Barrass" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Max Barrass</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Founder</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+        <li>
+          <a href="https://maxbarrass.com" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:max@aem.design">
+            <meta itemprop="email" content="max@aem.design" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/wildone" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+<li>
+  Sponsor
+</li>
+
+
+<li>
+  <a href="https://github.com/sponsors/wildone" itemprop="sameAs">
+    <i class="fa fa-heart" aria-hidden="true"></i> Github
+  </a>
+</li>
+
+
+
+
+
+
+
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="AEM SaaS Like a Champion ❤️🏆🚀">
+    <meta itemprop="description" content="Setup your AEM SaaS project like a champion with docker and docker-compose.">
+    <meta itemprop="datePublished" content="2023-04-05T00:37:00+10:00">
+    <meta itemprop="dateModified" content="2023-05-03T15:54:38+10:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">AEM SaaS Like a Champion ❤️🏆🚀
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          11 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="sticky">
+    <aside class="sidebar__right">
+<nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#aem-project-services" id="markdown-toc-aem-project-services">AEM Project Services</a>    <ul>
+      <li><a href="#leveling-up-your-aem-saas-project" id="markdown-toc-leveling-up-your-aem-saas-project">Leveling up your AEM SaaS project</a></li>
+      <li><a href="#core-services" id="markdown-toc-core-services">Core Services</a></li>
+      <li><a href="#proxy-service" id="markdown-toc-proxy-service">Proxy Service</a></li>
+      <li><a href="#dashboard-service" id="markdown-toc-dashboard-service">Dashboard Service</a></li>
+      <li><a href="#dashboard-build-service" id="markdown-toc-dashboard-build-service">Dashboard Build Service</a>        <ul>
+          <li><a href="#environment-configuration" id="markdown-toc-environment-configuration">Environment Configuration</a></li>
+          <li><a href="#project-config" id="markdown-toc-project-config">Project Config</a></li>
+          <li><a href="#console-config" id="markdown-toc-console-config">Console Config</a></li>
+          <li><a href="#page-and-showcase-links" id="markdown-toc-page-and-showcase-links">Page and Showcase Links</a></li>
+          <li><a href="#environment-link" id="markdown-toc-environment-link">Environment Link</a></li>
+          <li><a href="#git-config" id="markdown-toc-git-config">Git Config</a></li>
+        </ul>
+      </li>
+      <li><a href="#dashboard-service-example" id="markdown-toc-dashboard-service-example">Dashboard Service Example</a></li>
+      <li><a href="#another-example" id="markdown-toc-another-example">Another Example</a></li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+      <li><a href="#thank-you" id="markdown-toc-thank-you">Thank you</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </nav>
+</aside>
+</div>
+
+<p>This article is a follow-up to a series of articles on Docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Containers Everywhere</a>, <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>, and <a href="/blog/2023/04/05/docker-dispatcher-sdk">Docker Dispatcher SDK 🔧💪😎👍</a>. Further building on the solid foundation, it’s time to add services that will allow you to provide value to each existing and new member.</p>
+
+<h2 id="aem-project-services">AEM Project Services</h2>
+
+<p>In the last most recent article <a href="/blog/2023/04/05/docker-dispatcher-sdk">Docker Dispatcher SDK 🔧💪😎👍</a>, we looked at a docker-compose file that allowed us to create a dispatcher container. This compose file was configured to work with the author and publish containers. This is a great start, and now we can add additional services that you have been missing all this time.</p>
+
+<h3 id="leveling-up-your-aem-saas-project">Leveling up your AEM SaaS project</h3>
+
+<p>TL;DR The best way to showcase this is to level up a freshly generated AEM SaaS project using Adobe’s <a href="https://github.com/aem-design/aem-project-archetype">AEM Project Archetype</a>. You can find instructions on how to generate a project from scratch using Adobe’s <a href="https://github.com/aem-design/aem-project-archetype">AEM Project Archetype</a> in the section <a href="https://github.com/aem-design/aemdesign-project-services#generate-this-project">Generate This Project</a>.</p>
+
+<p>If you already use the Adobe SaaS archetype, clone <code class="language-plaintext highlighter-rouge">https://github.com/aem-design/aemdesign-project-services.git</code> and can copy relevant files from the project to yours. Here is a list of files you want to copy and merge where into an existing project:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- .env (environment variables auto loaded by functions.ps1)
+- .gitignore (git ignore file)
+- deploy-apps.ps1 (only deplopy apps module)
+- deploy.all.ps1 (deploy all packages as single package to author and publish)
+- deploy.frontend.ps1 (only deploy apps and frontend module)
+- deploy.ps1 (deploy script)
+- dev-token.json (json file with your Adobe IMS token)
+- docker-compose.yaml (docker compose file)
+- functions.ps1 (helper functions)
+- install_packages.ps1 (auto install packages to author and publish using package.ps1)
+- local-token.txt (text file with admin:admin in base64)
+- package-install.txt (list of packages to auto install)
+- package.ps1 (papckage install script)
+- push-develop.ps1 (pushes to adobe saas remote develop branch)
+- README.md (additional information about the project)
+- reset.ps1 (resets the project by deleting all volumes and containers)
+- start.ps1 (starts the doscker stack)
+</code></pre></div></div>
+
+<h3 id="core-services">Core Services</h3>
+
+<p>Before we get started, let’s take a look at the new docker-compose file you must have on your AEM SaaS project. If you are not doing this, then you are missing out on a lot of love!!! ❤️❤️❤️</p>
+
+<p>So far, we have these core services:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">author</code> - author instance available on port 4502,  <a href="https://author.localhost">https://author.localhost</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">publish</code> - publish instance available on port 4503, <a href="https://publish.localhost">https://publish.localhost</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">dispatcher</code> - dispatcher instance available on port 8081, <a href="https://dispatcher.localhost">https://dispatcher.localhost</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">traefik</code> - traefik dashboard, <a href="https://traefik.localhost/dashboard">https://traefik.localhost/dashboard</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">createcert</code> - creates the certificates for the Traefik instance; this provides all of the SSL certificates for the other containers.</li>
+</ul>
+
+<p>This stack creates base author, publish, and dispatcher services that we can use to deploy our AEM SaaS project. In addition, <code class="language-plaintext highlighter-rouge">traefik</code> and <code class="language-plaintext highlighter-rouge">createcert</code> services are used to provide domain routing and SSL certificates for the stack.</p>
+
+<p>Here is the relevant config for these services; you can see the completed docker-compose file here <a href="https://github.com/aem-design/aemdesign-project-services/blob/main/docker-compose.yaml">aemdesign-project-services</a>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.9"</span>
+
+<span class="na">services</span><span class="pi">:</span>
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># AUTHOR START</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># update query limit http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dsettings%2Ctype%3DQueryEngineSettings</span>
+  <span class="na">author</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${AUTHOR_IMAGE}</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">author</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">curl -u admin:admin --header Referer:localhost --silent --connect-timeout 5 --max-time 5 http://localhost:8080/system/console/bundles.json | grep -q \"state\":\"Installed\" &amp;&amp; exit 1 || exit </span><span class="m">0</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">1s</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${AUTHOR_PORT}:8080</span>
+      <span class="pi">-</span> <span class="s">${AUTHOR_DEBUG_PORT}:58242</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev,dynamicmedia_scene7,nosamplecontent</span>
+      <span class="pi">-</span> <span class="s">AEM_JVM_OPTS=-server -Xms248m -Xmx4524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:58242</span>
+      <span class="pi">-</span> <span class="s">AEM_PROXY_HOST=proxy</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-data:/aem/crx-quickstart/repository</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontened to match the last. otherwise it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.author.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${AUTHOR_HOST}`)"</span>
+      <span class="na">traefik.http.routers.author.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.author_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${AUTHOR_HOST}`)"</span>
+      <span class="na">traefik.http.routers.author_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.author_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.author.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">traefik.http.services.author.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mongo-network</span>
+      <span class="pi">-</span> <span class="s">author-network</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># AUTHOR END</span>
+  <span class="c1">##########################################################</span>
+
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># PUBLISH START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">publish</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${PUBLISH_IMAGE}</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">publish</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">curl -u admin:admin --header Referer:localhost --silent --connect-timeout 5 --max-time 5 http://localhost:8080/system/console/bundles.json | grep -q \"state\":\"Installed\" &amp;&amp; exit 1 || exit </span><span class="m">0</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">30s</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${PUBLISH_PORT}:8080</span>
+      <span class="pi">-</span> <span class="s">${PUBLISH_DEBUG_PORT}:58242</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,dev,dynamicmedia_scene7,nosamplecontent</span>
+      <span class="pi">-</span> <span class="s">AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:58242</span>
+      <span class="pi">-</span> <span class="s">AEM_PROXY_HOST=proxy</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontend to match the last. otherwise, it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">2</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.publish.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${PUBLISH_HOST}`)"</span>
+      <span class="na">traefik.http.routers.publish.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.publish_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${PUBLISH_HOST}`)"</span>
+      <span class="na">traefik.http.routers.publish_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.publish_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.publish.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">traefik.http.services.publish.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-data:/aem/crx-quickstart/repository</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># PUBLISH END</span>
+  <span class="c1">##########################################################</span>
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># DISPATCHER START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">dispatcher</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${DISPATCHER_IMAGE}</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">dispatcher</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${DISPATCHER_PORT}:80</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">AEM_PORT=8080</span>
+      <span class="pi">-</span> <span class="s">AEM_HOST=publish</span>
+      <span class="pi">-</span> <span class="s">DISP_LOG_LEVEL=trace1</span> <span class="c1">#debug</span>
+      <span class="pi">-</span> <span class="s">ENVIRONMENT_TYPE=LOCAL</span>
+      <span class="pi">-</span> <span class="s">AEM_PROXY_HOST=proxy</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontend to match the last. otherwise, it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dispatcher.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">HostRegexp(`${DISPATCHER_HOST}`,</span><span class="nv"> </span><span class="s">`{subdomain:[a-z]+}.${DISPATCHER_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dispatcher.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.dispatcher_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">HostRegexp(`${DISPATCHER_HOST}`,</span><span class="nv"> </span><span class="s">`{subdomain:[a-z]+}.${DISPATCHER_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dispatcher_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dispatcher_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.dispatcher.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./dispatcher/src/:/mnt/dev/src/</span>
+      <span class="pi">-</span> <span class="s">./dispatcher/scripts/fix-symlinks.sh:/docker_entrypoint.d/zzz-fix-symlinks.sh</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">proxy</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># DISPATCHER END</span>
+  <span class="c1">##########################################################</span>
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># TRAEFIK START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">traefik</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${TRAEFIK_IMAGE}</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">traefik</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+    <span class="na">security_opt</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">no-new-privileges:true</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--log.level=${TRAEFIK_LOG_LEVEL}"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--accesslog=${TRAEFIK_ACCESS_LOG}"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.insecure=true"</span> <span class="c1"># Don't do that in production!</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.dashboard=true"</span> <span class="c1"># Don't do that in production!</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker.exposedbydefault=false"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--global.sendAnonymousUsage=true"</span>
+
+
+      <span class="c1"># Entrypoints for HTTP, HTTPS, and NX (TCP + UDP)</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.address=:${TRAEFIK_PORT_HTTP}"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.address=:${TRAEFIK_PORT_HTTPS}"</span>
+      <span class="c1"># - "--entrypoints.mongo.address=:${MONGO_PORT}"</span>
+      <span class="c1"># - "--entrypoints.traefik.address=:${TRAEFIK_PORT_DASHBOARD}"</span>
+      <span class="c1"># - "--entrypoints.web.http.redirections.entryPoint.to=websecure"</span>
+      <span class="c1"># - "--entrypoints.web.http.redirections.entryPoint.permanent=true"</span>
+
+      <span class="c1"># Manual keys</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.file.directory=/etc/traefik/dynamic_conf"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.file.watch=true"</span>
+
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.traefikdashboard.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${TRAEFIK_HOST}`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(</span><span class="nv"> </span><span class="s">PathPrefix(`/api`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">PathPrefix(`/dashboard`)</span><span class="nv"> </span><span class="s">)"</span>
+      <span class="na">traefik.http.routers.traefikdashboard.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.traefikdashboard.service</span><span class="pi">:</span> <span class="s">api@internal</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${TRAEFIK_HOST}`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(</span><span class="nv"> </span><span class="s">PathPrefix(`/api`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">PathPrefix(`/dashboard`)</span><span class="nv"> </span><span class="s">)"</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.service</span><span class="pi">:</span> <span class="s">api@internal</span>
+      <span class="na">traefik.http.services.traefikdashboard.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">8080</span>
+
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${TRAEFIK_PORT_HTTP}:80</span>
+      <span class="pi">-</span> <span class="s">${TRAEFIK_PORT_HTTPS}:443</span>
+      <span class="pi">-</span> <span class="s">${TRAEFIK_PORT_DASHBOARD}:8080</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock:ro</span>
+      <span class="c1"># Persist certificates, so we can restart as often as needed</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/certs:/letsencrypt</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/config/config.yml:/etc/traefik/dynamic_conf/conf.yml:ro</span>
+
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="na">createcert</span><span class="pi">:</span>
+        <span class="na">condition</span><span class="pi">:</span> <span class="s">service_completed_successfully</span>
+
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-network</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+
+  <span class="na">createcert</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${CERTS_IMAGE}</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">${CERTS_COMMAND}"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/certs:/certs</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># TRAEFIK END</span>
+  <span class="c1">##########################################################</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">default</span><span class="pi">:</span>
+  <span class="na">internal</span><span class="pi">:</span>
+  <span class="na">author-network</span><span class="pi">:</span>
+  <span class="na">publish-network</span><span class="pi">:</span>
+  <span class="na">dispatcher-network</span><span class="pi">:</span>
+  <span class="na">mongo-network</span><span class="pi">:</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">author-data</span><span class="pi">:</span>
+  <span class="na">authormongo-data</span><span class="pi">:</span>
+  <span class="na">publish-data</span><span class="pi">:</span>
+  <span class="na">dispatcher-data</span><span class="pi">:</span>
+
+</code></pre></div></div>
+
+<p>And as you can see by now, we have many services with links and configuration options that provide a lot of value. These services and their configuration also mean there is much more to remember and teach new team members. To make this easier, we can add a few more benefits to take your AEM SaaS project to the next level. Your head is already spinning, but don’t worry; it will spin more from excitement once you see the final outcome! 😎</p>
+
+<h3 id="proxy-service">Proxy Service</h3>
+
+<p>First, let’s add the missing proxy service that will allow us to further make our Docker setup a Swiss army knife!
+Now, this will allow you to set up those pesky reverse proxy rules that we all love! But this also will allow you to test all those OSGI configs <code class="language-plaintext highlighter-rouge">$[env:AEM_PROXY_HOST;default=proxy.tunnel]</code> that you have been setting up in your AEM projects. This will allow you to test them locally, as there isn’t any official way to do this otherwise. You will find <code class="language-plaintext highlighter-rouge">AEM_PROXY_HOST=proxy</code> added to the <code class="language-plaintext highlighter-rouge">environment</code> config for Author and Publish services.</p>
+
+<h3 id="dashboard-service">Dashboard Service</h3>
+
+<p>Now that we have all these glorious core services, the obvious question is how to document all these links and make them relevant to each service and useful to each person using this. Well, the answer is simple, we add a custom Dashboard generator to do this for us. Let’s add dashboard services to our docker-compose file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">##########################################################</span>
+  <span class="c1"># DASHBOARD START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">dashboardbuild</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${DASHBOARD_BUILD_IMAGE}</span>
+    <span class="na">privileged</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">JEKYLL_ENV=production</span>
+      <span class="pi">-</span> <span class="s">DOMAIN_URL</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ADOBE</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ICON</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_TITLE</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ADOBE_ICON</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ADOBE_TITLE</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_URL</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_PORT_HTTP</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_PORT_HTTPS</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_PORT_DASHBOARD</span>
+      <span class="pi">-</span> <span class="s">PROXY_URL</span>
+      <span class="pi">-</span> <span class="s">MONGOUI_URL</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_URL</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_PORT</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_DEBUG_PORT</span>
+      <span class="pi">-</span> <span class="s">PUBLISH_URL</span>
+      <span class="pi">-</span> <span class="s">PUBLISH_PORT</span>
+      <span class="pi">-</span> <span class="s">PUBLISH_DEBUG_PORT</span>
+      <span class="pi">-</span> <span class="s">DISPATCHER_URL</span>
+      <span class="pi">-</span> <span class="s">DASHBOARD_URL</span>
+      <span class="pi">-</span> <span class="s">DISPATCHER_HOST</span>
+      <span class="pi">-</span> <span class="s">PAGE_LINKS</span>
+      <span class="pi">-</span> <span class="s">SHOWCASE_LINKS</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_LINKS</span>
+      <span class="pi">-</span> <span class="s">CONSOLE_LINKS</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="s">bash /srv/jekyll/build.sh</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${DASHBOARD_CONTENT_PATH}:/srv/jekyll:rw</span>
+
+  <span class="na">dashboard</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${DASHBOARD_IMAGE}</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">working_dir</span><span class="pi">:</span> <span class="s">/content</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">dashboard</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik</span>
+      <span class="pi">-</span> <span class="s">dashboardbuild</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dashboard.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${DASHBOARD_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dashboard.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.dashboard_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${DASHBOARD_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dashboard_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dashboard_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.dashboard.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">80</span>
+      <span class="na">traefik.http.services.dashboard.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${DASHBOARD_CONTENT_PATH}/_site:/content</span>
+      <span class="pi">-</span> <span class="s">${DASHBOARD_CONFIG_FILE}:/etc/nginx/nginx.conf</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># DASHBOARD END</span>
+  <span class="c1">##########################################################</span>
+</code></pre></div></div>
+
+<h3 id="dashboard-build-service">Dashboard Build Service</h3>
+
+<p>The service <code class="language-plaintext highlighter-rouge">dashboardbuild</code> is used to build Jekyll content and <code class="language-plaintext highlighter-rouge">dashboard</code> service is used to serve the content.</p>
+
+<p>This service will be responsible for generating a dashboard html and assets so that we can serve it from a simple Nginx server. This service will use a Jekyll template to generate the dashboard. This template is located in the <code class="language-plaintext highlighter-rouge">./services/dashboard/content</code> folder. This service uses environment variables to ensure minimal duplication and hardcoding is being added to the dashboard. Environment variables will also allow you to reuse your dashboard config on other projects. If you stick to the default values, you will not need to change anything. But if you do need to change anything, you can do so by updating the <a href="https://github.com/aem-design/aemdesign-project-services/blob/main/.env">.env</a> file at the root of your project.</p>
+
+<p>As you can see, <code class="language-plaintext highlighter-rouge">dashboardbuild</code> service heavily uses your environment variables to configure all of the services. This is done to make it easy to configure and use. Let’s look at the environment variables that are used to configure the dashboard.</p>
+
+<h4 id="environment-configuration">Environment Configuration</h4>
+
+<p>The following configurations should be updated for your project. These configurations are used on the dashboard page to display the project information.</p>
+
+<p>You can get all this information from the Adobe Developer or Adobe Experience consoles.</p>
+
+<h4 id="project-config">Project Config</h4>
+
+<p>This configuration is used to construct project URLs in the <a href="#console-config">Console Config</a> section.</p>
+
+<pre><code class="language-dotenv">ADOBE_PROGRAM_ID="99999"
+ADOBE_PROGRAM_REGION_ID="99999"
+ADOBE_PROGRAM_ENVIRONMENT_PROD_ID="999991"
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_ID="999992"
+ADOBE_PROGRAM_ENVIRONMENT_DEV_ID="999993"
+ADOBE_PROGRAM_NAME="aemdesign"
+ADOBE_PROGRAM_LOCATION="AEMDESIGN-p${ADOBE_PROGRAM_ID}-${ADOBE_PROGRAM_REGION_ID}"
+ADOBE_PROGRAM_TITLE="AEM.Design"
+ADOBE_PROGRAM_DESCRIPTION="AEM.Design"
+ADOBE_PROGRAM_URL="https://aem.design"
+</code></pre>
+
+<h4 id="console-config">Console Config</h4>
+
+<p>These are the console links for the project; they are displayed on the dashboard page and will enable you to quickly navigate to the console pages for the project.</p>
+
+<pre><code class="language-dotenv"># Console Config
+ADOBE_CONSOLE_EXPERIENCE_URL="https://experience.adobe.com/#/@${ADOBE_PROGRAM_NAME}/cloud-manager/environments.html/program/${ADOBE_PROGRAM_ID}"
+ADOBE_CONSOLE_EXPERIENCE_URL_ICON="fab fa-adobe"
+ADOBE_CONSOLE_EXPERIENCE_URL_TITLE="Cloud Manager"
+
+ADOBE_CONSOLE_DEVELOPER_URL="https://developer.adobe.com/console/home"
+ADOBE_CONSOLE_DEVELOPER_URL_ICON="fab fa-adobe"
+ADOBE_CONSOLE_DEVELOPER_URL_TITLE="Developer Console"
+
+ADOBE_CONSOLE_ADMIN_URL="https://adminconsole.adobe.com/"
+ADOBE_CONSOLE_ADMIN_URL_ICON="fab fa-adobe"
+ADOBE_CONSOLE_ADMIN_URL_TITLE="Admin Console"
+
+# format: &lt;URL&gt;|&lt;TITLE&gt;|&lt;ICON&gt;
+CONSOLE_LINKS="${ADOBE_CONSOLE_EXPERIENCE_URL}|${ADOBE_CONSOLE_EXPERIENCE_URL_TITLE}|${ADOBE_CONSOLE_EXPERIENCE_URL_ICON},${ADOBE_CONSOLE_DEVELOPER_URL}|${ADOBE_CONSOLE_DEVELOPER_URL_TITLE}|${ADOBE_CONSOLE_DEVELOPER_URL_ICON},${ADOBE_CONSOLE_ADMIN_URL}|${ADOBE_CONSOLE_ADMIN_URL_TITLE}|${ADOBE_CONSOLE_ADMIN_URL_ICON}"
+</code></pre>
+
+<h4 id="page-and-showcase-links">Page and Showcase Links</h4>
+
+<p>When developing or testing the project, you typically want to navigate to the home page or showcase page. This allows you to configure any commonly used quick links. Update <code class="language-plaintext highlighter-rouge">PAGE_LINKS</code> with a link you want to use on a regular basis.</p>
+
+<p>Typically you would want to add links to each homepage for every site you will be working on. Furthermore, you should have a sister showcase site for each of your live sites; updating <code class="language-plaintext highlighter-rouge">SHOWCASE_LINKS</code> will add an additional row of links matching your <code class="language-plaintext highlighter-rouge">PAGE_LINKS</code> links.</p>
+
+<p>These links are displayed on the dashboard page.</p>
+
+<pre><code class="language-dotenv"># format: &lt;URL&gt;|&lt;TITLE&gt;|&lt;ICON&gt;|&lt;DISPATCHER SUBDOMAIN&gt;
+PAGE_LINKS="/content/aemdesign/home.html|AEM.Design - Home|fa fa-globe|aemdesign"
+SHOWCASE_LINKS="/content/aemdesign-showcase.html/|AEM.Design - Showcase|fa-globe|aemdesign"
+</code></pre>
+
+<h4 id="environment-link">Environment Link</h4>
+
+<p>These are the environment links for the project, and they are displayed on the dashboard page, which will enable you to quickly navigate to the environment pages for the project. By default, this is configured to basic PROD, STAGE, and DEV environments. Update this to match all of your provisioned environments.</p>
+
+<pre><code class="language-dotenv">
+ADOBE_PROGRAM_ENVIRONMENT_PROD_URL="https://author-p${ADOBE_PROGRAM_ID}-e${ADOBE_PROGRAM_ENVIRONMENT_PROD_ID}.adobeaemcloud.com/"
+ADOBE_PROGRAM_ENVIRONMENT_PROD_TITLE="Prod"
+ADOBE_PROGRAM_ENVIRONMENT_PROD_ICON="fa fa-globe"
+
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_URL="https://author-p${ADOBE_PROGRAM_ID}-e${ADOBE_PROGRAM_ENVIRONMENT_STAGE_ID}.adobeaemcloud.com/"
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_TITLE="Stage"
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_ICON="fa fa-globe"
+
+ADOBE_PROGRAM_ENVIRONMENT_DEV_URL="https://author-p${ADOBE_PROGRAM_ID}-e${ADOBE_PROGRAM_ENVIRONMENT_DEV_ID}.adobeaemcloud.com/"
+ADOBE_PROGRAM_ENVIRONMENT_DEV_TITLE="Dev"
+ADOBE_PROGRAM_ENVIRONMENT_DEV_ICON="fa fa-globe"
+
+# format: &lt;URL&gt;|&lt;TITLE&gt;|&lt;ICON&gt;
+AUTHOR_LINKS="${ADOBE_PROGRAM_ENVIRONMENT_PROD_URL}|${ADOBE_PROGRAM_ENVIRONMENT_PROD_TITLE}|${ADOBE_PROGRAM_ENVIRONMENT_PROD_ICON},${ADOBE_PROGRAM_ENVIRONMENT_STAGE_URL}|${ADOBE_PROGRAM_ENVIRONMENT_STAGE_TITLE}|${ADOBE_PROGRAM_ENVIRONMENT_STAGE_ICON},${ADOBE_PROGRAM_ENVIRONMENT_DEV_URL}|${ADOBE_PROGRAM_ENVIRONMENT_DEV_TITLE}|${ADOBE_PROGRAM_ENVIRONMENT_DEV_ICON}"
+
+</code></pre>
+
+<h4 id="git-config">Git Config</h4>
+
+<p>This configuration is used for Git links.</p>
+
+<pre><code class="language-dotenv"># Git Config
+#GIT_REPO_AUTH="&lt;username&gt;:&lt;password&gt;@"  # set this in your terminal
+GIT_REPO_AUTH=""
+GIT_REPO="https://${GIT_REPO_AUTH}github.com/aem-design/aemdesign-project-services.git"
+GIT_REPO_ICON="fa-github" #fa-github,fa-bitbucket
+GIT_REPO_TITLE="Github"
+#GIT_REPO_ADOBE_AUTH="&lt;username&gt;:&lt;password&gt;@" # set this in your terminal
+GIT_REPO_ADOBE_AUTH=""
+GIT_REPO_ADOBE="https://${GIT_REPO_ADOBE_AUTH}git.cloudmanager.adobe.com/${ADOBE_PROGRAM_NAME}/${ADOBE_PROGRAM_LOCATION}/ "
+GIT_REPO_ADOBE_ICON="fa-adobe"
+GIT_REPO_ADOBE_TITLE="Adobe Git"
+</code></pre>
+
+<h3 id="dashboard-service-example">Dashboard Service Example</h3>
+
+<p>Now that we can generate our dashboard page, we can serve it using a simple Nginx server. This service will use a <code class="language-plaintext highlighter-rouge">./services/dashboard/config/nginx.conf</code> file to configure the Nginx server and load the contents from <code class="language-plaintext highlighter-rouge">./services/dashboard/content/_site</code> folder. This service will be available at <code class="language-plaintext highlighter-rouge">https://dashboard.localhost</code> if you do not change the default values.</p>
+
+<p>To give you an idea of what this will look like, here is a screenshot of the dashboard page.</p>
+
+<p><img src="/assets/images/aem-saas-like-a-champion/dashboard.png" alt="Dashboard" /></p>
+
+<p>As you can see, this is a simple page that will allow you to navigate to all the services that we have set up. This will also allow you to add additional links as needed and have a single place to manage and share them with your team or remind yourself in not so distant future. To update this dashboard page, you will need to update the <code class="language-plaintext highlighter-rouge">./services/dashboard/content/index.md</code> file. This file is a markdown file, it’s used by Jekyll to generate the resulting HTML page that will be served by Nginx on <a href="https://dashboad.localhost">https://dashboad.localhost</a>.</p>
+
+<h3 id="another-example">Another Example</h3>
+
+<p>This guide is not focused on how to use the Jekyll site generator works, as you should be able to tap into its <a href="https://jekyllrb.com/">documentation site</a> for further help. This site is also built using Jekyll, so you can check what is possible using Jekyll in its repo <a href="https://github.com/aem-design/aem.design">https://github.com/aem-design/aem.design</a>.</p>
+
+<p>You will also find that this dashboard pattern is implemented in this repo. Here is a screenshot of the dashboard page for this repo.</p>
+
+<p><img src="/assets/images/aem-saas-like-a-champion/dashboard.png" alt="Dashboard" /></p>
+
+<p>So you can copy and apply this pattern to your other projects as well.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>I hope you will find this guide useful and will be able to apply it to your projects. This method persists all knowledge within the project repo with an elegant presentation of an alternative reality of a wild west of bookmarks and hidden confluence pages.</p>
+
+<p>If you want to test out this setup for yourself, you can clone <a href="https://github.com/aem-design/aemdesign-project-services">aemdesign-project-services</a> repository and run the <code class="language-plaintext highlighter-rouge">./start.ps1</code> command to see it in action. This will start all the services and open the dashboard page at <code class="language-plaintext highlighter-rouge">https://dashboard.localhost</code>.</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/aem" class="page__taxonomy-item" rel="tag">aem</a><span class="sep">, </span>
+    
+      <a href="/tags/best-practices" class="page__taxonomy-item" rel="tag">best-practices</a><span class="sep">, </span>
+    
+      <a href="/tags/devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      <a href="/tags/docker" class="page__taxonomy-item" rel="tag">docker</a><span class="sep">, </span>
+    
+      <a href="/tags/docker-compose" class="page__taxonomy-item" rel="tag">docker-compose</a><span class="sep">, </span>
+    
+      <a href="/tags/windows" class="page__taxonomy-item" rel="tag">windows</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/blog" class="page__taxonomy-item" rel="tag">blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-05-03">May 3, 2023</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=AEM+SaaS+Like+a+Champion+%E2%9D%A4%EF%B8%8F%F0%9F%8F%86%F0%9F%9A%80%20https%3A%2F%2Faem.design%2Fblog%2F2023%2F05%2F03%2Faem-saas-like-a-champion" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2023%2F05%2F03%2Faem-saas-like-a-champion" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2023%2F05%2F03%2Faem-saas-like-a-champion" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" class="pagination--pager" title="Docker Dispatcher SDK 🔧💪😎👍
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a Comment</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="permalink">Docker Dispatcher SDK 🔧💪😎👍
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Test your AEM SaaS Dispatcher like a pro!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/09/27/websight-cms-exclusive-preview" rel="permalink">WebSight CMS Exclusive Preview
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="permalink">Setup Your Windows Devbox Like a Pro 💻🔩🔧
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Config and Tools for Windows that will help you !
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/2022/02/08/docker-compose-and-deploy-stacks%F0%9F%8D%94%F0%9F%98%98" rel="permalink">Docker Compose and Deploy Stacks 🍔😘
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How to use docker compose like a pro!
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+    <label class="sr-only" for="cse-search-input-box-id">
+      Enter your search term...
+    </label>
+    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results">
+    <gcse:searchresults-only></gcse:searchresults-only>
+  </div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<script>
+  (function () {
+    var cx = '004447691990096211192:ourol5vhlpw';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+  function googleCustomSearchExecute() {
+    var input = document.getElementById('cse-search-input-box-id');
+    var element = google.search.cse.element.getElement('searchresults-only0');
+    if (input.value == '') {
+      element.clearAllResults();
+    } else {
+      element.execute(input.value);
+    }
+    return false;
+  }
+
+  
+    $(document).ready(function () {
+      $('input#cse-search-input-box-id').on('keyup', function () {
+        googleCustomSearchExecute();
+      });
+    });
+  
+</script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-90746663-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://aem.design/blog/2023/05/03/aem-saas-like-a-champion";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/blog/2023/05/03/aem-saas-like-a-champion"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://aem-design.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

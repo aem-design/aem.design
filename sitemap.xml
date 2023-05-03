@@ -245,6 +245,10 @@
 <lastmod>2023-04-06T10:25:36+10:00</lastmod>
 </url>
 <url>
+<loc>https://aem.design/blog/2023/05/03/aem-saas-like-a-champion</loc>
+<lastmod>2023-05-03T15:54:38+10:00</lastmod>
+</url>
+<url>
 <loc>https://aem.design/about/</loc>
 <lastmod>2021-03-14T13:37:45+11:00</lastmod>
 </url>
@@ -399,6 +403,9 @@
 <loc>https://aem.design/tags/websight-cms/</loc>
 </url>
 <url>
+<loc>https://aem.design/tags/best-practices/</loc>
+</url>
+<url>
 <loc>https://aem.design/categories/blog/</loc>
 </url>
 <url>
@@ -514,5 +521,8 @@
 </url>
 <url>
 <loc>https://aem.design/tag/websight-cms/</loc>
+</url>
+<url>
+<loc>https://aem.design/tag/best-practices/</loc>
 </url>
 </urlset>

@@ -21,7 +21,7 @@ $PLATFORM=$PSVersionTable.Platform
 $CONFIG_ENV = (Get-Content ".env" -Raw | ConvertFrom-StringData)
 $PORT=$CONFIG_ENV.TRAEFIK_HTTP_PORT
 
-$DOCKER_COMMAND="docker-compose --env-file .env --file docker-compose.yml --file ${SERVICES} up ${SERVICE_NAME}"
+$DOCKER_COMMAND="docker-compose --env-file .env --file docker-compose.yml --file ${SERVICES} up -d ${SERVICE_NAME}"
 
 if ( [string]::IsNullOrEmpty(${SERVICE_NAME}) ) {
 
@@ -31,6 +31,8 @@ if ( [string]::IsNullOrEmpty(${SERVICE_NAME}) ) {
     $OPEN_COMMAND="explorer"
   }
 
+  Start-Sleep 10
+  
   printSubSectionStart "Open Console at $HOST_URL"
 
   Invoke-Expression "${OPEN_COMMAND} ${HOST_URL}"

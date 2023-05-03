@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2023-04-06T10:27:28+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Dispatcher SDK 🔧💪😎👍</title><link href="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Docker Dispatcher SDK 🔧💪😎👍" /><published>2023-04-05T00:37:00+10:00</published><updated>2023-04-06T10:25:36+10:00</updated><id>https://aem.design/blog/2023/04/05/docker-dispatcher-sdk</id><content type="html" xml:base="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D"><![CDATA[<p>This article is a follow up to series of articles on docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2023-05-03T15:56:05+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Dispatcher SDK 🔧💪😎👍</title><link href="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Docker Dispatcher SDK 🔧💪😎👍" /><published>2023-04-05T00:37:00+10:00</published><updated>2023-04-06T10:25:36+10:00</updated><id>https://aem.design/blog/2023/04/05/docker-dispatcher-sdk</id><content type="html" xml:base="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D"><![CDATA[<p>This article is a follow up to series of articles on docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>.</p>
 
 <p>Now that we have a solid foundation on how to build and test docker containers we can move on to the next step and that is to build a docker container that will allow us to test our AEM Dispatcher configuration.</p>
 
@@ -218,7 +218,529 @@
 
 <p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
 
-<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="wsl" /><category term="windows" /><summary type="html"><![CDATA[Test your AEM SaaS Dispatcher like a pro!]]></summary></entry><entry><title type="html">WebSight CMS Exclusive Preview</title><link href="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview" rel="alternate" type="text/html" title="WebSight CMS Exclusive Preview" /><published>2022-09-27T00:00:00+10:00</published><updated>2022-09-28T20:49:53+10:00</updated><id>https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview</id><content type="html" xml:base="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="wsl" /><category term="windows" /><summary type="html"><![CDATA[Test your AEM SaaS Dispatcher like a pro!]]></summary></entry><entry><title type="html">AEM SaaS Like a Champion ❤️🏆🚀</title><link href="https://aem.design/blog/2023/05/03/aem-saas-like-a-champion" rel="alternate" type="text/html" title="AEM SaaS Like a Champion ❤️🏆🚀" /><published>2023-04-05T00:37:00+10:00</published><updated>2023-05-03T15:54:38+10:00</updated><id>https://aem.design/blog/2023/05/03/aem-saas-like-a-champion</id><content type="html" xml:base="https://aem.design/blog/2023/05/03/aem-saas-like-a-champion"><![CDATA[<div class="sticky">
+    <aside class="sidebar__right">
+<nav class="toc">
+      <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#aem-project-services" id="markdown-toc-aem-project-services">AEM Project Services</a>    <ul>
+      <li><a href="#leveling-up-your-aem-saas-project" id="markdown-toc-leveling-up-your-aem-saas-project">Leveling up your AEM SaaS project</a></li>
+      <li><a href="#core-services" id="markdown-toc-core-services">Core Services</a></li>
+      <li><a href="#proxy-service" id="markdown-toc-proxy-service">Proxy Service</a></li>
+      <li><a href="#dashboard-service" id="markdown-toc-dashboard-service">Dashboard Service</a></li>
+      <li><a href="#dashboard-build-service" id="markdown-toc-dashboard-build-service">Dashboard Build Service</a>        <ul>
+          <li><a href="#environment-configuration" id="markdown-toc-environment-configuration">Environment Configuration</a></li>
+          <li><a href="#project-config" id="markdown-toc-project-config">Project Config</a></li>
+          <li><a href="#console-config" id="markdown-toc-console-config">Console Config</a></li>
+          <li><a href="#page-and-showcase-links" id="markdown-toc-page-and-showcase-links">Page and Showcase Links</a></li>
+          <li><a href="#environment-link" id="markdown-toc-environment-link">Environment Link</a></li>
+          <li><a href="#git-config" id="markdown-toc-git-config">Git Config</a></li>
+        </ul>
+      </li>
+      <li><a href="#dashboard-service-example" id="markdown-toc-dashboard-service-example">Dashboard Service Example</a></li>
+      <li><a href="#another-example" id="markdown-toc-another-example">Another Example</a></li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+      <li><a href="#thank-you" id="markdown-toc-thank-you">Thank you</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </nav>
+</aside>
+</div>
+
+<p>This article is a follow-up to a series of articles on Docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker</a>, <a href="/blog/2019/07/01/docker-containers-everywhere">Containers Everywhere</a>, <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>, and <a href="/blog/2023/04/05/docker-dispatcher-sdk">Docker Dispatcher SDK 🔧💪😎👍</a>. Further building on the solid foundation, it’s time to add services that will allow you to provide value to each existing and new member.</p>
+
+<h2 id="aem-project-services">AEM Project Services</h2>
+
+<p>In the last most recent article <a href="/blog/2023/04/05/docker-dispatcher-sdk">Docker Dispatcher SDK 🔧💪😎👍</a>, we looked at a docker-compose file that allowed us to create a dispatcher container. This compose file was configured to work with the author and publish containers. This is a great start, and now we can add additional services that you have been missing all this time.</p>
+
+<h3 id="leveling-up-your-aem-saas-project">Leveling up your AEM SaaS project</h3>
+
+<p>TL;DR The best way to showcase this is to level up a freshly generated AEM SaaS project using Adobe’s <a href="https://github.com/aem-design/aem-project-archetype">AEM Project Archetype</a>. You can find instructions on how to generate a project from scratch using Adobe’s <a href="https://github.com/aem-design/aem-project-archetype">AEM Project Archetype</a> in the section <a href="https://github.com/aem-design/aemdesign-project-services#generate-this-project">Generate This Project</a>.</p>
+
+<p>If you already use the Adobe SaaS archetype, clone <code class="language-plaintext highlighter-rouge">https://github.com/aem-design/aemdesign-project-services.git</code> and can copy relevant files from the project to yours. Here is a list of files you want to copy and merge where into an existing project:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- .env (environment variables auto loaded by functions.ps1)
+- .gitignore (git ignore file)
+- deploy-apps.ps1 (only deplopy apps module)
+- deploy.all.ps1 (deploy all packages as single package to author and publish)
+- deploy.frontend.ps1 (only deploy apps and frontend module)
+- deploy.ps1 (deploy script)
+- dev-token.json (json file with your Adobe IMS token)
+- docker-compose.yaml (docker compose file)
+- functions.ps1 (helper functions)
+- install_packages.ps1 (auto install packages to author and publish using package.ps1)
+- local-token.txt (text file with admin:admin in base64)
+- package-install.txt (list of packages to auto install)
+- package.ps1 (papckage install script)
+- push-develop.ps1 (pushes to adobe saas remote develop branch)
+- README.md (additional information about the project)
+- reset.ps1 (resets the project by deleting all volumes and containers)
+- start.ps1 (starts the doscker stack)
+</code></pre></div></div>
+
+<h3 id="core-services">Core Services</h3>
+
+<p>Before we get started, let’s take a look at the new docker-compose file you must have on your AEM SaaS project. If you are not doing this, then you are missing out on a lot of love!!! ❤️❤️❤️</p>
+
+<p>So far, we have these core services:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">author</code> - author instance available on port 4502,  <a href="https://author.localhost">https://author.localhost</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">publish</code> - publish instance available on port 4503, <a href="https://publish.localhost">https://publish.localhost</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">dispatcher</code> - dispatcher instance available on port 8081, <a href="https://dispatcher.localhost">https://dispatcher.localhost</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">traefik</code> - traefik dashboard, <a href="https://traefik.localhost/dashboard">https://traefik.localhost/dashboard</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">createcert</code> - creates the certificates for the Traefik instance; this provides all of the SSL certificates for the other containers.</li>
+</ul>
+
+<p>This stack creates base author, publish, and dispatcher services that we can use to deploy our AEM SaaS project. In addition, <code class="language-plaintext highlighter-rouge">traefik</code> and <code class="language-plaintext highlighter-rouge">createcert</code> services are used to provide domain routing and SSL certificates for the stack.</p>
+
+<p>Here is the relevant config for these services; you can see the completed docker-compose file here <a href="https://github.com/aem-design/aemdesign-project-services/blob/main/docker-compose.yaml">aemdesign-project-services</a>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.9"</span>
+
+<span class="na">services</span><span class="pi">:</span>
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># AUTHOR START</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># update query limit http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dsettings%2Ctype%3DQueryEngineSettings</span>
+  <span class="na">author</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${AUTHOR_IMAGE}</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">author</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">curl -u admin:admin --header Referer:localhost --silent --connect-timeout 5 --max-time 5 http://localhost:8080/system/console/bundles.json | grep -q \"state\":\"Installed\" &amp;&amp; exit 1 || exit </span><span class="m">0</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">1s</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${AUTHOR_PORT}:8080</span>
+      <span class="pi">-</span> <span class="s">${AUTHOR_DEBUG_PORT}:58242</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,dev,dynamicmedia_scene7,nosamplecontent</span>
+      <span class="pi">-</span> <span class="s">AEM_JVM_OPTS=-server -Xms248m -Xmx4524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:58242</span>
+      <span class="pi">-</span> <span class="s">AEM_PROXY_HOST=proxy</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-data:/aem/crx-quickstart/repository</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontened to match the last. otherwise it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.author.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${AUTHOR_HOST}`)"</span>
+      <span class="na">traefik.http.routers.author.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.author_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${AUTHOR_HOST}`)"</span>
+      <span class="na">traefik.http.routers.author_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.author_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.author.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">traefik.http.services.author.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mongo-network</span>
+      <span class="pi">-</span> <span class="s">author-network</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># AUTHOR END</span>
+  <span class="c1">##########################################################</span>
+
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># PUBLISH START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">publish</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${PUBLISH_IMAGE}</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">publish</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">curl -u admin:admin --header Referer:localhost --silent --connect-timeout 5 --max-time 5 http://localhost:8080/system/console/bundles.json | grep -q \"state\":\"Installed\" &amp;&amp; exit 1 || exit </span><span class="m">0</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">30s</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${PUBLISH_PORT}:8080</span>
+      <span class="pi">-</span> <span class="s">${PUBLISH_DEBUG_PORT}:58242</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">AEM_RUNMODE=-Dsling.run.modes=publish,crx3,crx3tar,dev,dynamicmedia_scene7,nosamplecontent</span>
+      <span class="pi">-</span> <span class="s">AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:58242</span>
+      <span class="pi">-</span> <span class="s">AEM_PROXY_HOST=proxy</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontend to match the last. otherwise, it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">2</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.publish.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${PUBLISH_HOST}`)"</span>
+      <span class="na">traefik.http.routers.publish.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.publish_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${PUBLISH_HOST}`)"</span>
+      <span class="na">traefik.http.routers.publish_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.publish_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.publish.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">traefik.http.services.publish.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-data:/aem/crx-quickstart/repository</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># PUBLISH END</span>
+  <span class="c1">##########################################################</span>
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># DISPATCHER START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">dispatcher</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${DISPATCHER_IMAGE}</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">dispatcher</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${DISPATCHER_PORT}:80</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">AEM_PORT=8080</span>
+      <span class="pi">-</span> <span class="s">AEM_HOST=publish</span>
+      <span class="pi">-</span> <span class="s">DISP_LOG_LEVEL=trace1</span> <span class="c1">#debug</span>
+      <span class="pi">-</span> <span class="s">ENVIRONMENT_TYPE=LOCAL</span>
+      <span class="pi">-</span> <span class="s">AEM_PROXY_HOST=proxy</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="c1"># note that you want this frontend to match the last. otherwise, it will match login.${HOST_DOMAIN}"</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dispatcher.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">HostRegexp(`${DISPATCHER_HOST}`,</span><span class="nv"> </span><span class="s">`{subdomain:[a-z]+}.${DISPATCHER_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dispatcher.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.dispatcher_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">HostRegexp(`${DISPATCHER_HOST}`,</span><span class="nv"> </span><span class="s">`{subdomain:[a-z]+}.${DISPATCHER_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dispatcher_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dispatcher_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.dispatcher.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./dispatcher/src/:/mnt/dev/src/</span>
+      <span class="pi">-</span> <span class="s">./dispatcher/scripts/fix-symlinks.sh:/docker_entrypoint.d/zzz-fix-symlinks.sh</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">proxy</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># DISPATCHER END</span>
+  <span class="c1">##########################################################</span>
+
+  <span class="c1">##########################################################</span>
+  <span class="c1"># TRAEFIK START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">traefik</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${TRAEFIK_IMAGE}</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">traefik</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+    <span class="na">security_opt</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">no-new-privileges:true</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--log.level=${TRAEFIK_LOG_LEVEL}"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--accesslog=${TRAEFIK_ACCESS_LOG}"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.insecure=true"</span> <span class="c1"># Don't do that in production!</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--api.dashboard=true"</span> <span class="c1"># Don't do that in production!</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker=true"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.docker.exposedbydefault=false"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--global.sendAnonymousUsage=true"</span>
+
+
+      <span class="c1"># Entrypoints for HTTP, HTTPS, and NX (TCP + UDP)</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.web.address=:${TRAEFIK_PORT_HTTP}"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--entrypoints.websecure.address=:${TRAEFIK_PORT_HTTPS}"</span>
+      <span class="c1"># - "--entrypoints.mongo.address=:${MONGO_PORT}"</span>
+      <span class="c1"># - "--entrypoints.traefik.address=:${TRAEFIK_PORT_DASHBOARD}"</span>
+      <span class="c1"># - "--entrypoints.web.http.redirections.entryPoint.to=websecure"</span>
+      <span class="c1"># - "--entrypoints.web.http.redirections.entryPoint.permanent=true"</span>
+
+      <span class="c1"># Manual keys</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.file.directory=/etc/traefik/dynamic_conf"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">--providers.file.watch=true"</span>
+
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.traefikdashboard.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${TRAEFIK_HOST}`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(</span><span class="nv"> </span><span class="s">PathPrefix(`/api`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">PathPrefix(`/dashboard`)</span><span class="nv"> </span><span class="s">)"</span>
+      <span class="na">traefik.http.routers.traefikdashboard.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.traefikdashboard.service</span><span class="pi">:</span> <span class="s">api@internal</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${TRAEFIK_HOST}`)</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">(</span><span class="nv"> </span><span class="s">PathPrefix(`/api`)</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">PathPrefix(`/dashboard`)</span><span class="nv"> </span><span class="s">)"</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.traefikdashboard_https.service</span><span class="pi">:</span> <span class="s">api@internal</span>
+      <span class="na">traefik.http.services.traefikdashboard.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">8080</span>
+
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${TRAEFIK_PORT_HTTP}:80</span>
+      <span class="pi">-</span> <span class="s">${TRAEFIK_PORT_HTTPS}:443</span>
+      <span class="pi">-</span> <span class="s">${TRAEFIK_PORT_DASHBOARD}:8080</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock:ro</span>
+      <span class="c1"># Persist certificates, so we can restart as often as needed</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/certs:/letsencrypt</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/config/config.yml:/etc/traefik/dynamic_conf/conf.yml:ro</span>
+
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="na">createcert</span><span class="pi">:</span>
+        <span class="na">condition</span><span class="pi">:</span> <span class="s">service_completed_successfully</span>
+
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">author-network</span>
+      <span class="pi">-</span> <span class="s">publish-network</span>
+      <span class="pi">-</span> <span class="s">dispatcher-network</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+      <span class="pi">-</span> <span class="s">default</span>
+
+  <span class="na">createcert</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${CERTS_IMAGE}</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">${CERTS_COMMAND}"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./services/traefik/certs:/certs</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># TRAEFIK END</span>
+  <span class="c1">##########################################################</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">default</span><span class="pi">:</span>
+  <span class="na">internal</span><span class="pi">:</span>
+  <span class="na">author-network</span><span class="pi">:</span>
+  <span class="na">publish-network</span><span class="pi">:</span>
+  <span class="na">dispatcher-network</span><span class="pi">:</span>
+  <span class="na">mongo-network</span><span class="pi">:</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">author-data</span><span class="pi">:</span>
+  <span class="na">authormongo-data</span><span class="pi">:</span>
+  <span class="na">publish-data</span><span class="pi">:</span>
+  <span class="na">dispatcher-data</span><span class="pi">:</span>
+
+</code></pre></div></div>
+
+<p>And as you can see by now, we have many services with links and configuration options that provide a lot of value. These services and their configuration also mean there is much more to remember and teach new team members. To make this easier, we can add a few more benefits to take your AEM SaaS project to the next level. Your head is already spinning, but don’t worry; it will spin more from excitement once you see the final outcome! 😎</p>
+
+<h3 id="proxy-service">Proxy Service</h3>
+
+<p>First, let’s add the missing proxy service that will allow us to further make our Docker setup a Swiss army knife!
+Now, this will allow you to set up those pesky reverse proxy rules that we all love! But this also will allow you to test all those OSGI configs <code class="language-plaintext highlighter-rouge">$[env:AEM_PROXY_HOST;default=proxy.tunnel]</code> that you have been setting up in your AEM projects. This will allow you to test them locally, as there isn’t any official way to do this otherwise. You will find <code class="language-plaintext highlighter-rouge">AEM_PROXY_HOST=proxy</code> added to the <code class="language-plaintext highlighter-rouge">environment</code> config for Author and Publish services.</p>
+
+<h3 id="dashboard-service">Dashboard Service</h3>
+
+<p>Now that we have all these glorious core services, the obvious question is how to document all these links and make them relevant to each service and useful to each person using this. Well, the answer is simple, we add a custom Dashboard generator to do this for us. Let’s add dashboard services to our docker-compose file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">##########################################################</span>
+  <span class="c1"># DASHBOARD START</span>
+  <span class="c1">##########################################################</span>
+  <span class="na">dashboardbuild</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${DASHBOARD_BUILD_IMAGE}</span>
+    <span class="na">privileged</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+      <span class="pi">-</span> <span class="s">JEKYLL_ENV=production</span>
+      <span class="pi">-</span> <span class="s">DOMAIN_URL</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ADOBE</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ICON</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_TITLE</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ADOBE_ICON</span>
+      <span class="pi">-</span> <span class="s">GIT_REPO_ADOBE_TITLE</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_URL</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_PORT_HTTP</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_PORT_HTTPS</span>
+      <span class="pi">-</span> <span class="s">TRAEFIK_PORT_DASHBOARD</span>
+      <span class="pi">-</span> <span class="s">PROXY_URL</span>
+      <span class="pi">-</span> <span class="s">MONGOUI_URL</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_URL</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_PORT</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_DEBUG_PORT</span>
+      <span class="pi">-</span> <span class="s">PUBLISH_URL</span>
+      <span class="pi">-</span> <span class="s">PUBLISH_PORT</span>
+      <span class="pi">-</span> <span class="s">PUBLISH_DEBUG_PORT</span>
+      <span class="pi">-</span> <span class="s">DISPATCHER_URL</span>
+      <span class="pi">-</span> <span class="s">DASHBOARD_URL</span>
+      <span class="pi">-</span> <span class="s">DISPATCHER_HOST</span>
+      <span class="pi">-</span> <span class="s">PAGE_LINKS</span>
+      <span class="pi">-</span> <span class="s">SHOWCASE_LINKS</span>
+      <span class="pi">-</span> <span class="s">AUTHOR_LINKS</span>
+      <span class="pi">-</span> <span class="s">CONSOLE_LINKS</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="s">bash /srv/jekyll/build.sh</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${DASHBOARD_CONTENT_PATH}:/srv/jekyll:rw</span>
+
+  <span class="na">dashboard</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">${DASHBOARD_IMAGE}</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">working_dir</span><span class="pi">:</span> <span class="s">/content</span>
+    <span class="na">hostname</span><span class="pi">:</span> <span class="s">dashboard</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">traefik</span>
+      <span class="pi">-</span> <span class="s">dashboardbuild</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">traefik.frontend.priority</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">traefik.enable</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dashboard.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${DASHBOARD_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dashboard.entrypoints</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">traefik.http.routers.dashboard_https.rule</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Host(`${DASHBOARD_HOST}`)"</span>
+      <span class="na">traefik.http.routers.dashboard_https.tls</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">traefik.http.routers.dashboard_https.entrypoints</span><span class="pi">:</span> <span class="s">websecure</span>
+      <span class="na">traefik.http.services.dashboard.loadbalancer.server.port</span><span class="pi">:</span> <span class="m">80</span>
+      <span class="na">traefik.http.services.dashboard.loadbalancer.passHostHeader</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">${DASHBOARD_CONTENT_PATH}/_site:/content</span>
+      <span class="pi">-</span> <span class="s">${DASHBOARD_CONFIG_FILE}:/etc/nginx/nginx.conf</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">TZ</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">internal</span>
+  <span class="c1">##########################################################</span>
+  <span class="c1"># DASHBOARD END</span>
+  <span class="c1">##########################################################</span>
+</code></pre></div></div>
+
+<h3 id="dashboard-build-service">Dashboard Build Service</h3>
+
+<p>The service <code class="language-plaintext highlighter-rouge">dashboardbuild</code> is used to build Jekyll content and <code class="language-plaintext highlighter-rouge">dashboard</code> service is used to serve the content.</p>
+
+<p>This service will be responsible for generating a dashboard html and assets so that we can serve it from a simple Nginx server. This service will use a Jekyll template to generate the dashboard. This template is located in the <code class="language-plaintext highlighter-rouge">./services/dashboard/content</code> folder. This service uses environment variables to ensure minimal duplication and hardcoding is being added to the dashboard. Environment variables will also allow you to reuse your dashboard config on other projects. If you stick to the default values, you will not need to change anything. But if you do need to change anything, you can do so by updating the <a href="https://github.com/aem-design/aemdesign-project-services/blob/main/.env">.env</a> file at the root of your project.</p>
+
+<p>As you can see, <code class="language-plaintext highlighter-rouge">dashboardbuild</code> service heavily uses your environment variables to configure all of the services. This is done to make it easy to configure and use. Let’s look at the environment variables that are used to configure the dashboard.</p>
+
+<h4 id="environment-configuration">Environment Configuration</h4>
+
+<p>The following configurations should be updated for your project. These configurations are used on the dashboard page to display the project information.</p>
+
+<p>You can get all this information from the Adobe Developer or Adobe Experience consoles.</p>
+
+<h4 id="project-config">Project Config</h4>
+
+<p>This configuration is used to construct project URLs in the <a href="#console-config">Console Config</a> section.</p>
+
+<pre><code class="language-dotenv">ADOBE_PROGRAM_ID="99999"
+ADOBE_PROGRAM_REGION_ID="99999"
+ADOBE_PROGRAM_ENVIRONMENT_PROD_ID="999991"
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_ID="999992"
+ADOBE_PROGRAM_ENVIRONMENT_DEV_ID="999993"
+ADOBE_PROGRAM_NAME="aemdesign"
+ADOBE_PROGRAM_LOCATION="AEMDESIGN-p${ADOBE_PROGRAM_ID}-${ADOBE_PROGRAM_REGION_ID}"
+ADOBE_PROGRAM_TITLE="AEM.Design"
+ADOBE_PROGRAM_DESCRIPTION="AEM.Design"
+ADOBE_PROGRAM_URL="https://aem.design"
+</code></pre>
+
+<h4 id="console-config">Console Config</h4>
+
+<p>These are the console links for the project; they are displayed on the dashboard page and will enable you to quickly navigate to the console pages for the project.</p>
+
+<pre><code class="language-dotenv"># Console Config
+ADOBE_CONSOLE_EXPERIENCE_URL="https://experience.adobe.com/#/@${ADOBE_PROGRAM_NAME}/cloud-manager/environments.html/program/${ADOBE_PROGRAM_ID}"
+ADOBE_CONSOLE_EXPERIENCE_URL_ICON="fab fa-adobe"
+ADOBE_CONSOLE_EXPERIENCE_URL_TITLE="Cloud Manager"
+
+ADOBE_CONSOLE_DEVELOPER_URL="https://developer.adobe.com/console/home"
+ADOBE_CONSOLE_DEVELOPER_URL_ICON="fab fa-adobe"
+ADOBE_CONSOLE_DEVELOPER_URL_TITLE="Developer Console"
+
+ADOBE_CONSOLE_ADMIN_URL="https://adminconsole.adobe.com/"
+ADOBE_CONSOLE_ADMIN_URL_ICON="fab fa-adobe"
+ADOBE_CONSOLE_ADMIN_URL_TITLE="Admin Console"
+
+# format: &lt;URL&gt;|&lt;TITLE&gt;|&lt;ICON&gt;
+CONSOLE_LINKS="${ADOBE_CONSOLE_EXPERIENCE_URL}|${ADOBE_CONSOLE_EXPERIENCE_URL_TITLE}|${ADOBE_CONSOLE_EXPERIENCE_URL_ICON},${ADOBE_CONSOLE_DEVELOPER_URL}|${ADOBE_CONSOLE_DEVELOPER_URL_TITLE}|${ADOBE_CONSOLE_DEVELOPER_URL_ICON},${ADOBE_CONSOLE_ADMIN_URL}|${ADOBE_CONSOLE_ADMIN_URL_TITLE}|${ADOBE_CONSOLE_ADMIN_URL_ICON}"
+</code></pre>
+
+<h4 id="page-and-showcase-links">Page and Showcase Links</h4>
+
+<p>When developing or testing the project, you typically want to navigate to the home page or showcase page. This allows you to configure any commonly used quick links. Update <code class="language-plaintext highlighter-rouge">PAGE_LINKS</code> with a link you want to use on a regular basis.</p>
+
+<p>Typically you would want to add links to each homepage for every site you will be working on. Furthermore, you should have a sister showcase site for each of your live sites; updating <code class="language-plaintext highlighter-rouge">SHOWCASE_LINKS</code> will add an additional row of links matching your <code class="language-plaintext highlighter-rouge">PAGE_LINKS</code> links.</p>
+
+<p>These links are displayed on the dashboard page.</p>
+
+<pre><code class="language-dotenv"># format: &lt;URL&gt;|&lt;TITLE&gt;|&lt;ICON&gt;|&lt;DISPATCHER SUBDOMAIN&gt;
+PAGE_LINKS="/content/aemdesign/home.html|AEM.Design - Home|fa fa-globe|aemdesign"
+SHOWCASE_LINKS="/content/aemdesign-showcase.html/|AEM.Design - Showcase|fa-globe|aemdesign"
+</code></pre>
+
+<h4 id="environment-link">Environment Link</h4>
+
+<p>These are the environment links for the project, and they are displayed on the dashboard page, which will enable you to quickly navigate to the environment pages for the project. By default, this is configured to basic PROD, STAGE, and DEV environments. Update this to match all of your provisioned environments.</p>
+
+<pre><code class="language-dotenv">
+ADOBE_PROGRAM_ENVIRONMENT_PROD_URL="https://author-p${ADOBE_PROGRAM_ID}-e${ADOBE_PROGRAM_ENVIRONMENT_PROD_ID}.adobeaemcloud.com/"
+ADOBE_PROGRAM_ENVIRONMENT_PROD_TITLE="Prod"
+ADOBE_PROGRAM_ENVIRONMENT_PROD_ICON="fa fa-globe"
+
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_URL="https://author-p${ADOBE_PROGRAM_ID}-e${ADOBE_PROGRAM_ENVIRONMENT_STAGE_ID}.adobeaemcloud.com/"
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_TITLE="Stage"
+ADOBE_PROGRAM_ENVIRONMENT_STAGE_ICON="fa fa-globe"
+
+ADOBE_PROGRAM_ENVIRONMENT_DEV_URL="https://author-p${ADOBE_PROGRAM_ID}-e${ADOBE_PROGRAM_ENVIRONMENT_DEV_ID}.adobeaemcloud.com/"
+ADOBE_PROGRAM_ENVIRONMENT_DEV_TITLE="Dev"
+ADOBE_PROGRAM_ENVIRONMENT_DEV_ICON="fa fa-globe"
+
+# format: &lt;URL&gt;|&lt;TITLE&gt;|&lt;ICON&gt;
+AUTHOR_LINKS="${ADOBE_PROGRAM_ENVIRONMENT_PROD_URL}|${ADOBE_PROGRAM_ENVIRONMENT_PROD_TITLE}|${ADOBE_PROGRAM_ENVIRONMENT_PROD_ICON},${ADOBE_PROGRAM_ENVIRONMENT_STAGE_URL}|${ADOBE_PROGRAM_ENVIRONMENT_STAGE_TITLE}|${ADOBE_PROGRAM_ENVIRONMENT_STAGE_ICON},${ADOBE_PROGRAM_ENVIRONMENT_DEV_URL}|${ADOBE_PROGRAM_ENVIRONMENT_DEV_TITLE}|${ADOBE_PROGRAM_ENVIRONMENT_DEV_ICON}"
+
+</code></pre>
+
+<h4 id="git-config">Git Config</h4>
+
+<p>This configuration is used for Git links.</p>
+
+<pre><code class="language-dotenv"># Git Config
+#GIT_REPO_AUTH="&lt;username&gt;:&lt;password&gt;@"  # set this in your terminal
+GIT_REPO_AUTH=""
+GIT_REPO="https://${GIT_REPO_AUTH}github.com/aem-design/aemdesign-project-services.git"
+GIT_REPO_ICON="fa-github" #fa-github,fa-bitbucket
+GIT_REPO_TITLE="Github"
+#GIT_REPO_ADOBE_AUTH="&lt;username&gt;:&lt;password&gt;@" # set this in your terminal
+GIT_REPO_ADOBE_AUTH=""
+GIT_REPO_ADOBE="https://${GIT_REPO_ADOBE_AUTH}git.cloudmanager.adobe.com/${ADOBE_PROGRAM_NAME}/${ADOBE_PROGRAM_LOCATION}/ "
+GIT_REPO_ADOBE_ICON="fa-adobe"
+GIT_REPO_ADOBE_TITLE="Adobe Git"
+</code></pre>
+
+<h3 id="dashboard-service-example">Dashboard Service Example</h3>
+
+<p>Now that we can generate our dashboard page, we can serve it using a simple Nginx server. This service will use a <code class="language-plaintext highlighter-rouge">./services/dashboard/config/nginx.conf</code> file to configure the Nginx server and load the contents from <code class="language-plaintext highlighter-rouge">./services/dashboard/content/_site</code> folder. This service will be available at <code class="language-plaintext highlighter-rouge">https://dashboard.localhost</code> if you do not change the default values.</p>
+
+<p>To give you an idea of what this will look like, here is a screenshot of the dashboard page.</p>
+
+<p><img src="/assets/images/aem-saas-like-a-champion/dashboard.png" alt="Dashboard" /></p>
+
+<p>As you can see, this is a simple page that will allow you to navigate to all the services that we have set up. This will also allow you to add additional links as needed and have a single place to manage and share them with your team or remind yourself in not so distant future. To update this dashboard page, you will need to update the <code class="language-plaintext highlighter-rouge">./services/dashboard/content/index.md</code> file. This file is a markdown file, it’s used by Jekyll to generate the resulting HTML page that will be served by Nginx on <a href="https://dashboad.localhost">https://dashboad.localhost</a>.</p>
+
+<h3 id="another-example">Another Example</h3>
+
+<p>This guide is not focused on how to use the Jekyll site generator works, as you should be able to tap into its <a href="https://jekyllrb.com/">documentation site</a> for further help. This site is also built using Jekyll, so you can check what is possible using Jekyll in its repo <a href="https://github.com/aem-design/aem.design">https://github.com/aem-design/aem.design</a>.</p>
+
+<p>You will also find that this dashboard pattern is implemented in this repo. Here is a screenshot of the dashboard page for this repo.</p>
+
+<p><img src="/assets/images/aem-saas-like-a-champion/dashboard.png" alt="Dashboard" /></p>
+
+<p>So you can copy and apply this pattern to your other projects as well.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>I hope you will find this guide useful and will be able to apply it to your projects. This method persists all knowledge within the project repo with an elegant presentation of an alternative reality of a wild west of bookmarks and hidden confluence pages.</p>
+
+<p>If you want to test out this setup for yourself, you can clone <a href="https://github.com/aem-design/aemdesign-project-services">aemdesign-project-services</a> repository and run the <code class="language-plaintext highlighter-rouge">./start.ps1</code> command to see it in action. This will start all the services and open the dashboard page at <code class="language-plaintext highlighter-rouge">https://dashboard.localhost</code>.</p>
+
+<h3 id="thank-you">Thank you</h3>
+
+<p>I hope you enjoyed this guide. If you have any questions or comments, feel free to contact me. I will be happy to help.</p>
+
+<p>Let me know what you think and don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><category term="docker-compose" /><category term="best-practices" /><category term="windows" /><summary type="html"><![CDATA[Setup your AEM SaaS project like a champion with docker and docker-compose.]]></summary></entry><entry><title type="html">WebSight CMS Exclusive Preview</title><link href="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview" rel="alternate" type="text/html" title="WebSight CMS Exclusive Preview" /><published>2022-09-27T00:00:00+10:00</published><updated>2022-09-28T20:49:53+10:00</updated><id>https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview</id><content type="html" xml:base="https://aem.design/blog/2022/09/27/websight-cms-exclusive-preview"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>It is always a pleasure to be part of something new and upcoming. So when I was invited to be part of an exclusive preview of a soon-to-be-released open source <a href="https://www.websight.io/">WebSight CMS</a>, I could not resist.</p>
 
@@ -1249,66 +1771,4 @@ You should see “Replication test succeeded”</p>
 
 <p>Feel free to reach out to us if you have any questions and don’t forget to tell your friends.</p>
 
-<h3 id="thank-you">Thank you</h3>]]></content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html"><![CDATA[Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent]]></summary></entry><entry><title type="html">AEM SDK and JDK11</title><link href="https://aem.design/blog/2021/03/16/aem-sdk-jdk11" rel="alternate" type="text/html" title="AEM SDK and JDK11" /><published>2021-03-16T23:37:00+11:00</published><updated>2021-12-22T10:23:36+11:00</updated><id>https://aem.design/blog/2021/03/16/aem-sdk-jdk11</id><content type="html" xml:base="https://aem.design/blog/2021/03/16/aem-sdk-jdk11"><![CDATA[<p>Building on the previous work <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a>, <a href="/blog/2019/09/04/aem-and-docker😍😘">AEM and Docker 😍😘</a> and <a href="/blog/2019/08/30/docker-aem-bundle">Docker AEM Bundle</a> its time to bring AEM SDK and JDK11 into life!</p>
-
-<p>If you take a look <a href="https://hub.docker.com/r/aemdesign/aem">docker hub</a> and <a href="https://github.com/aem-design/docker-aem">docker-aem</a> branches you will find a couple of new additions that you will find helpful.</p>
-
-<p>JDK11 version of AEM 6.5 and AEM SDK version is now ready for use!</p>
-
-<h3 id="running-aem-jdk-11-in-docker">Running AEM JDK 11 in Docker</h3>
-
-<p>To start author AEM 6.5 with SP10 on JDK11 run the following:</p>
-
-<div class="code-copy-header">
-  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
-</div>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">author655</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:6.5.10.0-jdk11</span><span class="w">
-</span></code></pre></div></div>
-
-<p>To start author AEM SDK version 2021.10.5958 run the following:</p>
-
-<div class="code-copy-header">
-  <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
-</div>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">docker</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nt">--name</span><span class="w"> </span><span class="nx">authorsdk2021105958</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"TZ=Australia/Sydney"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_RUNMODE=-Dsling.run.modes=author,crx3,crx3tar,forms,localdev"</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"AEM_JVM_OPTS=-server -Xms248m -Xmx1524m -XX:MaxDirectMemorySize=256M -XX:+CMSClassUnloadingEnabled -Djava.awt.headless=true -Dorg.apache.felix.http.host=0.0.0.0 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=58242,suspend=n -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning"</span><span class="w"> </span><span class="nt">-p4502</span><span class="p">:</span><span class="nx">8080</span><span class="w"> </span><span class="nt">-p30303</span><span class="p">:</span><span class="nx">58242</span><span class="w"> </span><span class="nt">-d</span><span class="w"> </span><span class="nx">aemdesign/aem:sdk-2021.10.5958</span><span class="w">
-</span></code></pre></div></div>
-
-<p>To make all this possible following Docker image chain has been updated:</p>
-
-<ul>
-  <li><a href="https://github.com/aem-design/docker-aem/tree/jdk11">aemdesign/aem:jdk11</a> - AEM Quickstart content
-    <ul>
-      <li><a href="https://github.com/aem-design/docker-aem-base/tree/jdk11">aemdesign/aem-base:jdk11</a> - AEM linux dependencies
-        <ul>
-          <li><a href="https://github.com/aem-design/docker-java-ffmpeg/tree/jdk11">aemdesign/java-ffmpeg:jdk11</a> - provides ImageMagic and FFMpeg libraries
-            <ul>
-              <li><a href="https://github.com/aem-design/docker-oracle-jdk/tree/jdk11">aemdesign/oracle-jdk:jdk11</a> - provides a an oracle jdk
-                <ul>
-                  <li><a href="https://github.com/aem-design/docker-centos-tini/tree/centos8">aemdesign/centos-tini:centos8</a> - provides a base for all java apps</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>In addition to these pipelines have been updated to allow Docker Image squash experimental option to ensure all images have the smallest amount of layers.</p>
-
-<p>Additionally, centos build pack has been updated to JDK 11 and Centos 8 with all the swiss army knife tools one expects.</p>
-
-<ul>
-  <li><a href="https://github.com/aem-design/docker-centos-java-buildpack/tree/jdk11">aemdesign/centos-java-buildpack:jdk11</a></li>
-</ul>
-
-<h3 id="thank-you">Thank you</h3>
-
-<p>Please checkout the docker hub <a href="https://hub.docker.com/r/aemdesign/aem">aemdesign/aem</a> for further details.</p>
-
-<p>If you would like to contribute or fork the code, you can get it on GitHub <a href="https://github.com/aem-design">https://github.com/aem-design</a>.</p>
-
-<p>Don’t forget to tell your friends.</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="docker" /><summary type="html"><![CDATA[Building on the previous work Docker Containers Everywhere, AEM and Docker 😍😘 and Docker AEM Bundle its time to bring AEM SDK and JDK11 into life!]]></summary></entry></feed>
+<h3 id="thank-you">Thank you</h3>]]></content><author><name>Seenivasa Ragavan Soundar Rajan</name><email>mailtoragavan.be@gmail.com</email></author><category term="blog" /><category term="devops" /><category term="aem" /><category term="akamai" /><category term="knowledge" /><category term="sharing" /><summary type="html"><![CDATA[Why should we bother DevOps to clear Akamai Cache when you can do it yourself using flush agent]]></summary></entry></feed>
