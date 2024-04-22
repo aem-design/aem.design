@@ -84,6 +84,6 @@ Once you run this spec you will get an excellent report that will help you deter
 
 ![Automation Testing Report - Generic Details](/assets/images/automation-testing/dialog-test/generic-details-author-dialog.png)
 
-As you can see this pattern will allow you to test AEM Dialogs especially if you are into making customised controls, if you are stuck, look at some examples in [GenericDetailsAuthorDialogSpec.groovy](https://github.com/aem-design/aemdesign-aem-support/blob/clean-up-compose-project/aemdesign-testing/src/test/groovy/specs/component/details/genericdetails/GenericDetailsAuthorDialogSpec.groovy).
+As you can see this pattern will allow you to test AEM Dialogs especially if you are into making customised controls, if you are stuck, look at some examples in [GenericDetailsAuthorDialogSpec.groovy](https://github.com/aem-design/aemdesign-aem-support/blob/develop/aemdesign-testing/src/test/groovy/specs/component/details/genericdetails/GenericDetailsAuthorDialogSpec.groovy).
 
 Don't forget to tell your friends.
