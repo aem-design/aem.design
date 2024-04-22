@@ -126,38 +126,78 @@ behaviour.js
 location: ```/apps/aemdesign/componentX/clientslibs/js/behaviour.js```
 
 ```javascript
-//searchBox - behaviour
+//componentX - behaviour
 
-;(function($, _, ko, searchBox, window, undefined) { //add additional dependencies
+window.AEMDESIGN = window.AEMDESIGN || {};
+window.AEMDESIGN.components = AEMDESIGN.components || {};
+window.AEMDESIGN.components.componentX = AEMDESIGN.components.componentX || {};
 
-    $(document).ready(function() {
-        $("[data-modules='Search']").each(function() {
+;(function($, _, ko, componentXNs, window, undefined) { //add additional dependencies
 
-            var base = $(this);
-            AEMDESIGN.log.log("loading search box");
-            searchBox.init(base);
+    function onDocumentReady() {
 
+        console.group("loading componentX");
+
+        //init component on all found instances
+        var elements = document.querySelectorAll(ns.selector);
+        for (var i = 0; i < elements.length; i++) {
+            componentXNs.init($(elements[i]));
+        }
+
+        //init component on all future instances when they are added to the DOM
+        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+        var body = document.querySelector("body");
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                // needed for IE
+                var nodesArray = [].slice.call(mutation.addedNodes);
+                if (nodesArray.length > 0) {
+                    nodesArray.forEach(function(addedNode) {
+                        if (addedNode.querySelectorAll) {
+                            var elementsArray = [].slice.call(addedNode.querySelectorAll(ns.selector));
+                            elementsArray.forEach(function(element) {
+                                componentXNs.init($(element));
+                            });
+                        }
+                    });
+                }
+            });
         });
-    });
 
+        observer.observe(body, {
+            subtree: true,
+            childList: true,
+            characterData: true
+        });
 
-})(AEMDESIGN.jQuery, _, ko,  AEMDESIGN.components.searchBox, this); //pass in additional dependencies
+        console.groupEnd();
+    }
+
+    if (document.readyState !== "loading") {
+        onDocumentReady();
+    } else {
+        document.addEventListener("DOMContentLoaded", onDocumentReady);
+    }
+
+})(AEMDESIGN.jQuery, _, ko,  AEMDESIGN.components.componentX, this); //pass in additional dependencies
 ```
 
 
 location: ```/apps/aemdesign/componentX/clientslibs/js/functions.js```
 
 ```javascript
-//searchBox - functions
+//componentX - functions
 
 window.AEMDESIGN = window.AEMDESIGN || {};
 window.AEMDESIGN.components = AEMDESIGN.components || {};
-window.AEMDESIGN.components.searchBox = AEMDESIGN.components.searchBox || {};
+window.AEMDESIGN.components.componentX = AEMDESIGN.components.componentX || {};
 
 ;(function ($, _, ko, ns, window, undefined) { //add additional dependencies
 
     "use strict";
     var _version = "0.1";
+
+    ns.selector = "[data-modules='componentX']";
 
     ns.version = function () {
         return _version;
@@ -168,7 +208,7 @@ window.AEMDESIGN.components.searchBox = AEMDESIGN.components.searchBox || {};
         return $el; //chaining
     };
 
-})(AEMDESIGN.jQuery,_,ko, AEMDESIGN.components.searchBox, this); //pass in additional dependencies
+})(AEMDESIGN.jQuery,_,ko, AEMDESIGN.components.componentX, this); //pass in additional dependencies
 ```
 
 ## Sample Health Check
