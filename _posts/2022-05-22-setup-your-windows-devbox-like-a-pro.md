@@ -40,8 +40,30 @@ First off, you will need some proper tools to use on Windows for development. Th
 * [Sublime Text](https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe) - Will allow you to edit files quickly
 * [Python](https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe) - Run python scripts
 * [Node JS](https://nodejs.org/dist/v18.2.0/node-v18.2.0-x64.msi) - Run node js app
+* [GPG](https://www.gpg4win.org/download.html) - `winget install -e --id GnuPG.Gpg4win` - Needed for signing commits
+* [Docker Desktop](https://www.docker.com/products/docker-desktop) - Needed for running containers
 
 If you cannot use Docker Desktop, you can just [setup Docker in WSL](https://aem.design/blog/2022/02/01/goodbye-docker-desktop) and run it using your impressive [Windows Terminal](https://github.com/microsoft/terminal/releases)!
+
+One-liner for all mentioned tools:
+
+```bash
+winget install -e --id Microsoft.PowerShell
+winget install -e --id Microsoft.WindowsTerminal
+winget install -e --id Microsoft.VisualStudioCode
+winget install -e --id JetBrains.IntelliJIDEA.Community
+winget install -e --id Microsoft.Git
+winget install -e --id Oracle.JavaRuntimeEnvironment
+winget install -e --id ojdkbuild.openjdk.11.jdk
+winget install -e --id Oracle.JDK.17
+winget install -e --id SublimeHQ.SublimeText.4
+winget install -e --id Python.Python.3.10
+winget install -e --id CoreyButler.NVMforWindow
+winget install -e --id GnuPG.Gpg4win
+winget install -e --id Docker.DockerDesktop
+curl https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip -o apache-maven-3.9.9-bin.zip
+unzip apache-maven-3.9.9-bin.zip -d c:\apps\apache\
+```
 
 Once you have these tools set up, you should be able to contribute to most code projects.
 
@@ -49,7 +71,7 @@ Before you run off and get busy with code, you need to verify and do some window
 
 ## Enable Long File Path Names in Windows
 
-Then you going to have to enable Windows Long file names. 
+Then you going to have to enable Windows Long file names.
 
 1. Open up Windows Terminal as Administrator.
 2. Run the following command:
@@ -82,7 +104,7 @@ To get the best out of your shell, you need to set up some environment variables
 
 1. Run `sysdm.cpl` as Administrator and on the Advanced tab, click `Environment Variables`.
 2. Add new Variable `JAVA_HOME` point to `C:\Program Files\Java\jdk1.8.0_301`.
-3. Add new Variable `M2_HOME` point to `C:\software\apache-maven-3.8.4` (where you installed maven) 
+3. Add new Variable `M2_HOME` point to `C:\apps\apache\apache-maven-3.9.9` (where you installed maven) 
 4. Under the `System Variables` select `Path` then click `Edit`
 5. Under the `System Variables` click `New` and add the following:
   * **Variable name:** JAVA_HOME
@@ -102,11 +124,59 @@ After this, you should have the following paths in your command line path:
 C:\Program Files\Git\usr\bin
 ```
 
+### Fix your git config
+
+Commit like a pro with the following git config:
+
+```bash
+git config --global core.autocrlf false
+git config --global core.eol lf
+git config --global core.longpaths true
+```
+
+Setup your user and email:
+
+```bash
+git config --global user.name "{your account name}"
+git config --global user.email {email}
+```
+
+### Setup GPG
+
+Setup GPG signing:
+
+```bash
+git config --global user.signingkey {your public gpg key}
+git config --global commit.gpgsign true
+```
+
+Extend you ttl for GPG cache and disable tty for GPG:
+
+```bash
+echo 'no-tty' >> ~/.gnupg/gpg.conf
+echo 'default-cache-ttl 34560000' >> ~/.gnupg/gpg-agent.conf
+echo 'maximum-cache-ttl 34560000' >> ~/.gnupg/gpg-agent.conf
+```
+
+Test your GPG setup:
+
+```bash
+gpg --list-secret-keys --keyid-format LONG
+echo "test" | gpg --clearsig
+```
+
+If you are on linux, start the gpg-agent:
+
+```bash
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+```
+
 ### Configure Docker
 
 Create `.wslconfig` in `~/` with the following content.
 
-```
+```conf
 [wsl2]
 memory=6GB
 ```
