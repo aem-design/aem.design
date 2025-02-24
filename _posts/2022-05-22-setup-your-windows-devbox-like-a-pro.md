@@ -58,7 +58,7 @@ winget install -e --id ojdkbuild.openjdk.11.jdk
 winget install -e --id Oracle.JDK.17
 winget install -e --id SublimeHQ.SublimeText.4
 winget install -e --id Python.Python.3.10
-winget install -e --id CoreyButler.NVMforWindow
+winget install -e --id CoreyButler.NVMforWindow --source winget --silent --accept-package-agreements --accept-source-agreements
 winget install -e --id GnuPG.Gpg4win
 winget install -e --id Docker.DockerDesktop
 curl https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip -o apache-maven-3.9.9-bin.zip
