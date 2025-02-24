@@ -1,11 +1,12 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-AU" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -54,16 +55,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Organization",
-      "url": "https://aem.design/",
-      "logo": "https://aem.design/assets/images/screenshots/homepage-small.png"
-    
-  }
-</script>
+
 
 
   <meta name="google-site-verification" content="nf9xOwPPG8xVZpd1iJm4vjRvG64E2SvgcuXbWH5DGTA" />
@@ -78,19 +70,17 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AEM.Design Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
+<script type="text/javascript">
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
   
@@ -150,10 +140,6 @@
     <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
   </ul>
 </nav>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
 
     
 
@@ -224,28 +210,30 @@
 
 
 
+
+
 <div id="main" role="main">
   
   <div class="sidebar sticky">
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
     <div class="author__avatar">
-      
-        <img src="/assets/images/profile/maxbarrass4.jpg" alt="Max Barrass" itemprop="image">
-      
+      <a href="https://aem.design/">
+        <img src="/assets/images/profile/maxbarrass4.jpg" alt="Max Barrass" itemprop="image" class="u-photo">
+      </a>
     </div>
   
 
   <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://aem.design/" itemprop="url">Max Barrass</a>
+    </h3>
     
-      <h3 class="author__name" itemprop="name">Max Barrass</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
+      <div class="author__bio p-note" itemprop="description">
         <p>Founder</p>
 
       </div>
@@ -261,7 +249,7 @@
 
       
         <li>
-          <a href="https://maxbarrass.com" itemprop="url">
+          <a href="https://maxbarrass.com" itemprop="url" rel="me">
             <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span>
           </a>
         </li>
@@ -269,7 +257,7 @@
 
       
         <li>
-          <a href="mailto:max@aem.design">
+          <a href="mailto:max@aem.design" rel="me" class="u-email">
             <meta itemprop="email" content="max@aem.design" />
             <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
           </a>
@@ -280,7 +268,7 @@
 
       
         <li>
-          <a href="https://twitter.com/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://twitter.com/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer me">
             <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
           </a>
         </li>
@@ -290,7 +278,7 @@
 
       
         <li>
-          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://www.linkedin.com/in/maxbarrass" itemprop="sameAs" rel="nofollow noopener noreferrer me">
             <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
           </a>
         </li>
@@ -306,7 +294,7 @@
 
       
         <li>
-          <a href="https://github.com/wildone" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://github.com/wildone" itemprop="sameAs" rel="nofollow noopener noreferrer me">
             <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
           </a>
         </li>
@@ -376,8 +364,10 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Open source is for feedback
-</h1>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://aem.design/blog/2019/06/05/open-source-is-for-feedback" itemprop="url">Open source is for feedback
+</a>
+          </h1>
           
 
   <p class="page__meta">
@@ -744,7 +734,7 @@ We do open source to encourage sharing of great things that can be done in AEM.<
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/tags/update" class="page__taxonomy-item p-category" rel="tag">update</a>
     
     </span>
   </p>
@@ -761,7 +751,7 @@ We do open source to encourage sharing of great things that can be done in AEM.<
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/blog" class="page__taxonomy-item" rel="tag">blog</a>
+      <a href="/categories/blog" class="page__taxonomy-item p-category" rel="tag">blog</a>
     
     </span>
   </p>
@@ -769,8 +759,7 @@ We do open source to encourage sharing of great things that can be done in AEM.<
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-14">March 14, 2021</time></p>
-
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-03-14">March 14, 2021</time></p>
 
       </footer>
 
@@ -783,7 +772,7 @@ We do open source to encourage sharing of great things that can be done in AEM.<
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faem.design%2Fblog%2F2019%2F06%2F05%2Fopen-source-is-for-feedback" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faem.design%2Fblog%2F2019%2F06%2F05%2Fopen-source-is-for-feedback" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aem.design/blog/2019/06/05/open-source-is-for-feedback" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -815,11 +804,14 @@ We do open source to encourage sharing of great things that can be done in AEM.<
 
   
   
-    <div class="page__related">
-      <h4 class="page__related-title">You May Also Enjoy</h4>
-      <div class="grid__wrapper">
-        
-          
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
 
 
 
@@ -858,8 +850,9 @@ We do open source to encourage sharing of great things that can be done in AEM.<
   </article>
 </div>
 
-        
-          
+    
+      
+      
 
 
 
@@ -898,8 +891,9 @@ We do open source to encourage sharing of great things that can be done in AEM.<
   </article>
 </div>
 
-        
-          
+    
+      
+      
 
 
 
@@ -938,8 +932,9 @@ We do open source to encourage sharing of great things that can be done in AEM.<
   </article>
 </div>
 
-        
-          
+    
+      
+      
 
 
 
@@ -966,7 +961,7 @@ We do open source to encourage sharing of great things that can be done in AEM.<
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          4 minute read
         
       </span>
     
@@ -978,18 +973,20 @@ We do open source to encourage sharing of great things that can be done in AEM.<
   </article>
 </div>
 
-        
-      </div>
-    </div>
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id">
+        <div class="search-content__inner-wrap"><form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" role="search">
     <label class="sr-only" for="cse-search-input-box-id">
       Enter your search term...
     </label>
@@ -1035,7 +1032,7 @@ We do open source to encourage sharing of great things that can be done in AEM.<
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 AEM.Design. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 <a href="https://aem.design">AEM.Design</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1113,7 +1110,6 @@ We do open source to encourage sharing of great things that can be done in AEM.<
 
 
   
-
 
 
 

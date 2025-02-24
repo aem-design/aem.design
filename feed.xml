@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2024-04-22T14:18:47+10:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Dispatcher SDK 🔧💪😎👍</title><link href="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Docker Dispatcher SDK 🔧💪😎👍" /><published>2023-04-05T00:37:00+10:00</published><updated>2023-04-06T10:25:36+10:00</updated><id>https://aem.design/blog/2023/04/05/docker-dispatcher-sdk</id><content type="html" xml:base="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D"><![CDATA[<p>This article is a follow up to series of articles on docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aem.design/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aem.design/" rel="alternate" type="text/html" /><updated>2025-02-24T15:51:37+11:00</updated><id>https://aem.design/feed.xml</id><title type="html">AEM.Design</title><subtitle>An amazing website.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;Email&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-envelope-square&quot;}, {&quot;label&quot;=&gt;&quot;Website&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-link&quot;}, {&quot;label&quot;=&gt;&quot;Twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-twitter-square&quot;}, {&quot;label&quot;=&gt;&quot;Facebook&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-facebook-square&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;}, {&quot;label&quot;=&gt;&quot;Instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-instagram&quot;}]}</name></author><entry><title type="html">Docker Dispatcher SDK 🔧💪😎👍</title><link href="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D" rel="alternate" type="text/html" title="Docker Dispatcher SDK 🔧💪😎👍" /><published>2023-04-05T00:37:00+10:00</published><updated>2023-04-06T10:25:36+10:00</updated><id>https://aem.design/blog/2023/04/05/docker-dispatcher-sdk</id><content type="html" xml:base="https://aem.design/blog/2023/04/05/docker-dispatcher-sdk%F0%9F%94%A7%F0%9F%92%AA%F0%9F%98%8E%F0%9F%91%8D"><![CDATA[<p>This article is a follow up to series of articles on docker <a href="/blog/2019/07/01/docker-containers-everywhere">Docker Containers Everywhere</a> and <a href="/blog/2019/07/05/docker-automation-testing">Docker Automation Testing</a>.</p>
 
 <p>Now that we have a solid foundation on how to build and test docker containers we can move on to the next step and that is to build a docker container that will allow us to test our AEM Dispatcher configuration.</p>
 
@@ -965,7 +965,7 @@ Swagger Browser - amazing to see this as OOTB as it greatly streamlines any UI e
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>WebSight CMS is a great new entrant with many opportunities; it’s great to see how Sling CMS can be leveraged for a great effect! So feel free to drop a star on their repos <a href="https://www.websight.io/">WebSight CMS</a> and shout it out on your favourite socials. Until next time!</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="websight-cms" /><category term="docker" /><category term="docker-compose" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2022-05-24T10:27:04+10:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
+<p>WebSight CMS is a great new entrant with many opportunities; it’s great to see how Sling CMS can be leveraged for a great effect! So feel free to drop a star on their repos <a href="https://www.websight.io/">WebSight CMS</a> and shout it out on your favourite socials. Until next time!</p>]]></content><author><name>Max Barrass</name><email>max@aem.design</email><uri>https://maxbarrass.com</uri></author><category term="blog" /><category term="websight-cms" /><category term="docker" /><category term="docker-compose" /><summary type="html"><![CDATA[Introduction]]></summary></entry><entry><title type="html">Setup Your Windows Devbox Like a Pro 💻🔩🔧</title><link href="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7" rel="alternate" type="text/html" title="Setup Your Windows Devbox Like a Pro 💻🔩🔧" /><published>2022-05-22T00:37:00+10:00</published><updated>2025-02-24T15:49:14+11:00</updated><id>https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro</id><content type="html" xml:base="https://aem.design/blog/2022/05/22/setup-your-windows-devbox-like-a-pro%F0%9F%92%BB%F0%9F%94%A9%F0%9F%94%A7"><![CDATA[<p>This article follows the previous one where we have cried our <a href="/blog/2022/02/01/goodbye-docker-desktop">Goodbyes to Docker Destop</a> 😭.</p>
 
 <p>Let’s now look at some base config you can start with when setting up you dev box for dev! Let us focus only on the base windows setup, which can be used as a foundation for any tooling specialisation.</p>
 
@@ -988,9 +988,30 @@ Swagger Browser - amazing to see this as OOTB as it greatly streamlines any UI e
   <li><a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe">Sublime Text</a> - Will allow you to edit files quickly</li>
   <li><a href="https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe">Python</a> - Run python scripts</li>
   <li><a href="https://nodejs.org/dist/v18.2.0/node-v18.2.0-x64.msi">Node JS</a> - Run node js app</li>
+  <li><a href="https://www.gpg4win.org/download.html">GPG</a> - <code class="language-plaintext highlighter-rouge">winget install -e --id GnuPG.Gpg4win</code> - Needed for signing commits</li>
+  <li><a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> - Needed for running containers</li>
 </ul>
 
 <p>If you cannot use Docker Desktop, you can just <a href="https://aem.design/blog/2022/02/01/goodbye-docker-desktop">setup Docker in WSL</a> and run it using your impressive <a href="https://github.com/microsoft/terminal/releases">Windows Terminal</a>!</p>
+
+<p>One-liner for all mentioned tools:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Microsoft.PowerShell
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Microsoft.WindowsTerminal
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Microsoft.VisualStudioCode
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> JetBrains.IntelliJIDEA.Community
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Microsoft.Git
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Oracle.JavaRuntimeEnvironment
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> ojdkbuild.openjdk.11.jdk
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Oracle.JDK.17
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> SublimeHQ.SublimeText.4
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Python.Python.3.10
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> CoreyButler.NVMforWindow
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> GnuPG.Gpg4win
+winget <span class="nb">install</span> <span class="nt">-e</span> <span class="nt">--id</span> Docker.DockerDesktop
+curl https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip <span class="nt">-o</span> apache-maven-3.9.9-bin.zip
+unzip apache-maven-3.9.9-bin.zip <span class="nt">-d</span> c:<span class="se">\a</span>pps<span class="se">\a</span>pache<span class="se">\</span>
+</code></pre></div></div>
 
 <p>Once you have these tools set up, you should be able to contribute to most code projects.</p>
 
@@ -1036,7 +1057,7 @@ reg query "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies"
 <ol>
   <li>Run <code class="language-plaintext highlighter-rouge">sysdm.cpl</code> as Administrator and on the Advanced tab, click <code class="language-plaintext highlighter-rouge">Environment Variables</code>.</li>
   <li>Add new Variable <code class="language-plaintext highlighter-rouge">JAVA_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\Program Files\Java\jdk1.8.0_301</code>.</li>
-  <li>Add new Variable <code class="language-plaintext highlighter-rouge">M2_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\software\apache-maven-3.8.4</code> (where you installed maven)</li>
+  <li>Add new Variable <code class="language-plaintext highlighter-rouge">M2_HOME</code> point to <code class="language-plaintext highlighter-rouge">C:\apps\apache\apache-maven-3.9.9</code> (where you installed maven)</li>
   <li>Under the <code class="language-plaintext highlighter-rouge">System Variables</code> select <code class="language-plaintext highlighter-rouge">Path</code> then click <code class="language-plaintext highlighter-rouge">Edit</code></li>
   <li>Under the <code class="language-plaintext highlighter-rouge">System Variables</code> click <code class="language-plaintext highlighter-rouge">New</code> and add the following:
     <ul>
@@ -1062,12 +1083,54 @@ reg query "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Policies"
 C:\Program Files\Git\usr\bin
 </code></pre></div></div>
 
+<h3 id="fix-your-git-config">Fix your git config</h3>
+
+<p>Commit like a pro with the following git config:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> core.autocrlf <span class="nb">false
+</span>git config <span class="nt">--global</span> core.eol lf
+git config <span class="nt">--global</span> core.longpaths <span class="nb">true</span>
+</code></pre></div></div>
+
+<p>Setup your user and email:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"{your account name}"</span>
+git config <span class="nt">--global</span> user.email <span class="o">{</span>email<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="setup-gpg">Setup GPG</h3>
+
+<p>Setup GPG signing:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.signingkey <span class="o">{</span>your public gpg key<span class="o">}</span>
+git config <span class="nt">--global</span> commit.gpgsign <span class="nb">true</span>
+</code></pre></div></div>
+
+<p>Extend you ttl for GPG cache and disable tty for GPG:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'no-tty'</span> <span class="o">&gt;&gt;</span> ~/.gnupg/gpg.conf
+<span class="nb">echo</span> <span class="s1">'default-cache-ttl 34560000'</span> <span class="o">&gt;&gt;</span> ~/.gnupg/gpg-agent.conf
+<span class="nb">echo</span> <span class="s1">'maximum-cache-ttl 34560000'</span> <span class="o">&gt;&gt;</span> ~/.gnupg/gpg-agent.conf
+</code></pre></div></div>
+
+<p>Test your GPG setup:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--list-secret-keys</span> <span class="nt">--keyid-format</span> LONG
+<span class="nb">echo</span> <span class="s2">"test"</span> | gpg <span class="nt">--clearsig</span>
+</code></pre></div></div>
+
+<p>If you are on linux, start the gpg-agent:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">GPG_TTY</span><span class="o">=</span><span class="si">$(</span><span class="nb">tty</span><span class="si">)</span>
+gpgconf <span class="nt">--launch</span> gpg-agent
+</code></pre></div></div>
+
 <h3 id="configure-docker">Configure Docker</h3>
 
 <p>Create <code class="language-plaintext highlighter-rouge">.wslconfig</code> in <code class="language-plaintext highlighter-rouge">~/</code> with the following content.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[wsl2]
-memory=6GB
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[<span class="n">wsl2</span>]
+<span class="n">memory</span>=<span class="m">6</span><span class="n">GB</span>
 </code></pre></div></div>
 
 <p>This will ensure that WSL will not use up all of your resources. See more on <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config">Advanced settings configuration in WSL</a>.</p>
